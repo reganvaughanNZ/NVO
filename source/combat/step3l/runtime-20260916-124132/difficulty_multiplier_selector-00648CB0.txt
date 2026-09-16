@@ -1,0 +1,65 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3l\runtime-20260916-124132\difficulty_multiplier_selector-00648CB0.obj
+
+File Type: COFF OBJECT
+
+  00648CB0: 55                 push        ebp
+  00648CB1: 8B EC              mov         ebp,esp
+  00648CB3: 83 EC 0C           sub         esp,0Ch
+  00648CB6: D9 E8              fld1
+  00648CB8: D9 5D FC           fstp        dword ptr [ebp-4]
+  00648CBB: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00648CBE: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00648CC1: 83 7D F8 10        cmp         dword ptr [ebp-8],10h
+  00648CC5: 74 08              je          00648CCF
+  00648CC7: 83 7D F8 18        cmp         dword ptr [ebp-8],18h
+  00648CCB: 74 3C              je          00648D09
+  00648CCD: EB 4E              jmp         00648D1D
+  00648CCF: 0F B6 4D 10        movzx       ecx,byte ptr [ebp+10h]
+  00648CD3: 85 C9              test        ecx,ecx
+  00648CD5: 74 16              je          00648CED
+  00648CD7: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  00648CDA: 8B 0C 95 10 B3 19  mov         ecx,dword ptr [edx*4+0119B310h]
+            01
+  00648CE1: E8 3A B1 DB FF     call        00403E20
+  00648CE6: D9 00              fld         dword ptr [eax]
+  00648CE8: D9 5D F4           fstp        dword ptr [ebp-0Ch]
+  00648CEB: EB 14              jmp         00648D01
+  00648CED: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00648CF0: 8B 0C 85 24 B3 19  mov         ecx,dword ptr [eax*4+0119B324h]
+            01
+  00648CF7: E8 24 B1 DB FF     call        00403E20
+  00648CFC: D9 00              fld         dword ptr [eax]
+  00648CFE: D9 5D F4           fstp        dword ptr [ebp-0Ch]
+  00648D01: D9 45 F4           fld         dword ptr [ebp-0Ch]
+  00648D04: D9 5D FC           fstp        dword ptr [ebp-4]
+  00648D07: EB 14              jmp         00648D1D
+  00648D09: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00648D0C: 8B 0C 8D 38 B3 19  mov         ecx,dword ptr [ecx*4+0119B338h]
+            01
+  00648D13: E8 08 B1 DB FF     call        00403E20
+  00648D18: D9 00              fld         dword ptr [eax]
+  00648D1A: D9 5D FC           fstp        dword ptr [ebp-4]
+  00648D1D: D9 45 FC           fld         dword ptr [ebp-4]
+  00648D20: 8B E5              mov         esp,ebp
+  00648D22: 5D                 pop         ebp
+  00648D23: C3                 ret
+  00648D24: CC                 int         3
+  00648D25: CC                 int         3
+  00648D26: CC                 int         3
+  00648D27: CC                 int         3
+  00648D28: CC                 int         3
+  00648D29: CC                 int         3
+  00648D2A: CC                 int         3
+  00648D2B: CC                 int         3
+  00648D2C: CC                 int         3
+  00648D2D: CC                 int         3
+  00648D2E: CC                 int         3
+  00648D2F: CC                 int         3
+
+  Summary
+
+          80 .text

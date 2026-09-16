@@ -1,0 +1,272 @@
+{
+  "archived_log": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step2\\captures\\2026-09-14-2802886d34.log",
+  "sha256": "2802886d345a835d80b6a0ccc2452d44668a0c16b505a6f1cb6469ec37734537",
+  "events": {
+    "CREATE": 120,
+    "HIT": 59,
+    "IMPACT": 119,
+    "EXPLOSION": 2
+  },
+  "first": 1,
+  "last": 300,
+  "sequence_contiguous": true,
+  "limit_reached": true,
+  "hit_directions": {
+    "from_player": 32,
+    "to_player": 27
+  },
+  "weapons": {
+    "000001F4": {
+      "HIT": 4
+    },
+    "00004335": {
+      "CREATE": 7,
+      "HIT": 7,
+      "IMPACT": 7
+    },
+    "00004337": {
+      "HIT": 3
+    },
+    "00004351": {
+      "HIT": 7
+    },
+    "0008F216": {
+      "CREATE": 13,
+      "HIT": 4,
+      "IMPACT": 13
+    },
+    "000BA0F3": {
+      "CREATE": 2,
+      "IMPACT": 2,
+      "HIT": 3
+    },
+    "000E393B": {
+      "CREATE": 42,
+      "HIT": 8,
+      "IMPACT": 42
+    },
+    "000E9C3B": {
+      "CREATE": 8,
+      "HIT": 5,
+      "IMPACT": 8
+    },
+    "07000813": {
+      "CREATE": 17,
+      "IMPACT": 17,
+      "HIT": 6
+    },
+    "0700084E": {
+      "CREATE": 31,
+      "IMPACT": 30,
+      "HIT": 12
+    }
+  },
+  "regions": {
+    "1": 17,
+    "0": 19,
+    "3": 8,
+    "-1": 4,
+    "10": 3,
+    "7": 3,
+    "5": 5
+  },
+  "resolved_forms": {
+    "FalloutNV.esm": [
+      {
+        "id": "000001F4",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "Fists"
+      },
+      {
+        "id": "00004335",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapLaserPistol",
+        "FULL": "Laser Pistol"
+      },
+      {
+        "id": "00004337",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapLeadPipe",
+        "FULL": "Lead Pipe"
+      },
+      {
+        "id": "00004351",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapSledgehammer",
+        "FULL": "Sledgehammer"
+      },
+      {
+        "id": "0008F216",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapNV357Revolver",
+        "FULL": ".357 Magnum Revolver"
+      },
+      {
+        "id": "000BA0F3",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapNVDynamite",
+        "FULL": "Dynamite"
+      },
+      {
+        "id": "000E393B",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapNVSingleShotgun",
+        "FULL": "Single Shotgun"
+      },
+      {
+        "id": "000E9C3B",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapNVServiceRifle",
+        "FULL": "Service Rifle"
+      },
+      {
+        "id": "001429CF",
+        "kind": "AMMO",
+        "file": "FalloutNV.esm",
+        "EDID": "Ammo127mm",
+        "FULL": "12.7mm Round"
+      },
+      {
+        "id": "000E86F2",
+        "kind": "AMMO",
+        "file": "FalloutNV.esm",
+        "EDID": "Ammo20Ga",
+        "FULL": "20 Gauge Round"
+      },
+      {
+        "id": "0008ED02",
+        "kind": "AMMO",
+        "file": "FalloutNV.esm",
+        "EDID": "Ammo357Magnum",
+        "FULL": ".357 Magnum Round"
+      },
+      {
+        "id": "00020772",
+        "kind": "AMMO",
+        "file": "FalloutNV.esm",
+        "EDID": "AmmoSmallEnergyCell",
+        "FULL": "Energy Cell"
+      },
+      {
+        "id": "00004240",
+        "kind": "AMMO",
+        "file": "FalloutNV.esm",
+        "EDID": "Ammo556mm",
+        "FULL": "5.56mm Round"
+      },
+      {
+        "id": "00000007",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "Player"
+      },
+      {
+        "id": "000E5958",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "QJChompsLewis",
+        "FULL": "Chomps Lewis"
+      },
+      {
+        "id": "000E59E9",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "QJWorkerAAM01",
+        "FULL": "Quarry Worker"
+      },
+      {
+        "id": "000E59EA",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "QJWorkerCM01",
+        "FULL": "Quarry Worker"
+      },
+      {
+        "id": "000E856A",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "QJWorkerCM02",
+        "FULL": "Quarry Worker"
+      },
+      {
+        "id": "000E8576",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "QJWorkerCM03",
+        "FULL": "Quarry Worker"
+      },
+      {
+        "id": "0011A8D8",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "BCPrivateKowalski",
+        "FULL": "Private Kowalski"
+      },
+      {
+        "id": "000E5E4F",
+        "kind": "CREA",
+        "file": "FalloutNV.esm",
+        "EDID": "QJSnuffles",
+        "FULL": "Snuffles"
+      },
+      {
+        "id": "0000426D",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "556mmRifleBulletProjectile",
+        "FULL": "5.56mm Rifle Bullet"
+      },
+      {
+        "id": "00014B0F",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "BeamLaserProjectile",
+        "FULL": "Laser Beam"
+      },
+      {
+        "id": "0003BF07",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "BuckshotProjectile",
+        "FULL": "Buckshot"
+      },
+      {
+        "id": "0008F20C",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "357CalPistolBulletProjectile",
+        "FULL": ".357 Pistol Bullet"
+      },
+      {
+        "id": "000E3F03",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "NVDynamiteFragProjectile",
+        "FULL": "Lit Dynamite"
+      },
+      {
+        "id": "0012114F",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "556mmPistolBulletProjectile",
+        "FULL": "5.56mm Pistol Bullet"
+      },
+      {
+        "id": "0017A2C6",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "AutoTracerProjectile",
+        "FULL": "Rifle Bullet"
+      }
+    ],
+    "NVO.esm": []
+  }
+}

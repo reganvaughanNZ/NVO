@@ -1,0 +1,103 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c\runtime-20260915-121307\timescale.obj
+
+File Type: COFF OBJECT
+
+  00716440: 55                 push        ebp
+  00716441: 8B EC              mov         ebp,esp
+  00716443: D9 05 A0 C3 1A 01  fld         dword ptr ds:[011AC3A0h]
+  00716449: 5D                 pop         ebp
+  0071644A: C3                 ret
+  0071644B: CC                 int         3
+  0071644C: CC                 int         3
+  0071644D: CC                 int         3
+  0071644E: CC                 int         3
+  0071644F: CC                 int         3
+  00716450: 55                 push        ebp
+  00716451: 8B EC              mov         ebp,esp
+  00716453: 83 EC 14           sub         esp,14h
+  00716456: 89 4D EC           mov         dword ptr [ebp-14h],ecx
+  00716459: 8B 45 EC           mov         eax,dword ptr [ebp-14h]
+  0071645C: 8B 88 64 01 00 00  mov         ecx,dword ptr [eax+00000164h]
+  00716462: 8B 51 10           mov         edx,dword ptr [ecx+10h]
+  00716465: 89 55 FC           mov         dword ptr [ebp-4],edx
+  00716468: 83 7D FC 00        cmp         dword ptr [ebp-4],0
+  0071646C: 74 23              je          00716491
+  0071646E: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00716471: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00716474: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00716477: 8B 51 10           mov         edx,dword ptr [ecx+10h]
+  0071647A: 89 55 FC           mov         dword ptr [ebp-4],edx
+  0071647D: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00716480: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  00716483: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00716486: 51                 push        ecx
+  00716487: E8 A4 AB CE FF     call        00401030
+  0071648C: 83 C4 04           add         esp,4
+  0071648F: EB D7              jmp         00716468
+  00716491: 8B 55 EC           mov         edx,dword ptr [ebp-14h]
+  00716494: 8B 82 64 01 00 00  mov         eax,dword ptr [edx+00000164h]
+  0071649A: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  0071649D: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  007164A0: 51                 push        ecx
+  007164A1: E8 8A AB CE FF     call        00401030
+  007164A6: 83 C4 04           add         esp,4
+  007164A9: 8B 55 EC           mov         edx,dword ptr [ebp-14h]
+  007164AC: C7 82 64 01 00 00  mov         dword ptr [edx+00000164h],0
+            00 00 00 00
+  007164B6: 8B E5              mov         esp,ebp
+  007164B8: 5D                 pop         ebp
+  007164B9: C3                 ret
+  007164BA: CC                 int         3
+  007164BB: CC                 int         3
+  007164BC: CC                 int         3
+  007164BD: CC                 int         3
+  007164BE: CC                 int         3
+  007164BF: CC                 int         3
+  007164C0: 55                 push        ebp
+  007164C1: 8B EC              mov         ebp,esp
+  007164C3: 6A FF              push        0FFFFFFFFh
+  007164C5: 68 F3 81 F0 00     push        0F081F3h
+  007164CA: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  007164D0: 50                 push        eax
+  007164D1: 83 EC 14           sub         esp,14h
+  007164D4: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  007164D9: 33 C5              xor         eax,ebp
+  007164DB: 50                 push        eax
+  007164DC: 8D 45 F4           lea         eax,[ebp-0Ch]
+  007164DF: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  007164E5: 68 5A 14 00 00     push        145Ah
+  007164EA: 68 50 EF 06 01     push        106EF50h
+  007164EF: 6A 01              push        1
+  007164F1: 6A 0D              push        0Dh
+  007164F3: 8D 4D F0           lea         ecx,[ebp-10h]
+  007164F6: E8 B5 E9 CE FF     call        00404EB0
+  007164FB: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  00716502: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00716505: 50                 push        eax
+  00716506: E8 C5 00 00 00     call        007165D0
+  0071650B: 83 C4 04           add         esp,4
+  0071650E: 6A 14              push        14h
+  00716510: E8 EB AA CE FF     call        00401000
+  00716515: 83 C4 04           add         esp,4
+  00716518: 89 45 E4           mov         dword ptr [ebp-1Ch],eax
+  0071651B: C6 45 FC 01        mov         byte ptr [ebp-4],1
+  0071651F: 83 7D E4 00        cmp         dword ptr [ebp-1Ch],0
+  00716523: 74 0D              je          00716532
+  00716525: 8B 4D E4           mov         ecx,dword ptr [ebp-1Ch]
+  00716528: E8 73 43 FF FF     call        0070A8A0
+  0071652D: 89 45 E0           mov         dword ptr [ebp-20h],eax
+  00716530: EB 07              jmp         00716539
+  00716532: C7 45 E0 00 00 00  mov         dword ptr [ebp-20h],0
+            00
+  00716539: 8B 4D E0           mov         ecx,dword ptr [ebp-20h]
+  0071653C: 89 4D E8           mov         dword ptr [ebp-18h],ecx
+  0071653F: C6
+
+  Summary
+
+         100 .text

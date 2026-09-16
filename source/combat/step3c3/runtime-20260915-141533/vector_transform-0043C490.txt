@@ -1,0 +1,151 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c3\runtime-20260915-141533\vector_transform-0043C490.obj
+
+File Type: COFF OBJECT
+
+  0043C490: 55                 push        ebp
+  0043C491: 8B EC              mov         ebp,esp
+  0043C493: 51                 push        ecx
+  0043C494: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0043C497: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0043C49A: 83 C0 58           add         eax,58h
+  0043C49D: 8B E5              mov         esp,ebp
+  0043C49F: 5D                 pop         ebp
+  0043C4A0: C3                 ret
+  0043C4A1: CC                 int         3
+  0043C4A2: CC                 int         3
+  0043C4A3: CC                 int         3
+  0043C4A4: CC                 int         3
+  0043C4A5: CC                 int         3
+  0043C4A6: CC                 int         3
+  0043C4A7: CC                 int         3
+  0043C4A8: CC                 int         3
+  0043C4A9: CC                 int         3
+  0043C4AA: CC                 int         3
+  0043C4AB: CC                 int         3
+  0043C4AC: CC                 int         3
+  0043C4AD: CC                 int         3
+  0043C4AE: CC                 int         3
+  0043C4AF: CC                 int         3
+  0043C4B0: 55                 push        ebp
+  0043C4B1: 8B EC              mov         ebp,esp
+  0043C4B3: A1 48 47 1F 01     mov         eax,dword ptr ds:[011F4748h]
+  0043C4B8: 5D                 pop         ebp
+  0043C4B9: C3                 ret
+  0043C4BA: CC                 int         3
+  0043C4BB: CC                 int         3
+  0043C4BC: CC                 int         3
+  0043C4BD: CC                 int         3
+  0043C4BE: CC                 int         3
+  0043C4BF: CC                 int         3
+  0043C4C0: 55                 push        ebp
+  0043C4C1: 8B EC              mov         ebp,esp
+  0043C4C3: 6A 00              push        0
+  0043C4C5: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  0043C4C8: E8 03 EC 22 00     call        0066B0D0
+  0043C4CD: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  0043C4D0: 50                 push        eax
+  0043C4D1: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  0043C4D4: 51                 push        ecx
+  0043C4D5: 8B 0D 68 44 1F 01  mov         ecx,dword ptr ds:[011F4468h]
+  0043C4DB: E8 10 00 00 00     call        0043C4F0
+  0043C4E0: 5D                 pop         ebp
+  0043C4E1: C3                 ret
+  0043C4E2: CC                 int         3
+  0043C4E3: CC                 int         3
+  0043C4E4: CC                 int         3
+  0043C4E5: CC                 int         3
+  0043C4E6: CC                 int         3
+  0043C4E7: CC                 int         3
+  0043C4E8: CC                 int         3
+  0043C4E9: CC                 int         3
+  0043C4EA: CC                 int         3
+  0043C4EB: CC                 int         3
+  0043C4EC: CC                 int         3
+  0043C4ED: CC                 int         3
+  0043C4EE: CC                 int         3
+  0043C4EF: CC                 int         3
+  0043C4F0: 55                 push        ebp
+  0043C4F1: 8B EC              mov         ebp,esp
+  0043C4F3: 83 EC 08           sub         esp,8
+  0043C4F6: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  0043C4F9: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0043C4FC: 50                 push        eax
+  0043C4FD: E8 2E 00 00 00     call        0043C530
+  0043C502: 83 C4 04           add         esp,4
+  0043C505: 89 45 FC           mov         dword ptr [ebp-4],eax
+  0043C508: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  0043C50B: 51                 push        ecx
+  0043C50C: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  0043C50F: 52                 push        edx
+  0043C510: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0043C513: 50                 push        eax
+  0043C514: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  0043C517: E8 44 55 62 00     call        00A61A60
+  0043C51C: 8B E5              mov         esp,ebp
+  0043C51E: 5D                 pop         ebp
+  0043C51F: C2 08 00           ret         8
+  0043C522: CC                 int         3
+  0043C523: CC                 int         3
+  0043C524: CC                 int         3
+  0043C525: CC                 int         3
+  0043C526: CC                 int         3
+  0043C527: CC                 int         3
+  0043C528: CC                 int         3
+  0043C529: CC                 int         3
+  0043C52A: CC                 int         3
+  0043C52B: CC                 int         3
+  0043C52C: CC                 int         3
+  0043C52D: CC                 int         3
+  0043C52E: CC                 int         3
+  0043C52F: CC                 int         3
+  0043C530: 55                 push        ebp
+  0043C531: 8B EC              mov         ebp,esp
+  0043C533: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0043C536: C1 E8 04           shr         eax,4
+  0043C539: 33 D2              xor         edx,edx
+  0043C53B: B9 E9 03 00 00     mov         ecx,3E9h
+  0043C540: F7 F1              div         eax,ecx
+  0043C542: 8B C2              mov         eax,edx
+  0043C544: 5D                 pop         ebp
+  0043C545: C3                 ret
+  0043C546: CC                 int         3
+  0043C547: CC                 int         3
+  0043C548: CC                 int         3
+  0043C549: CC                 int         3
+  0043C54A: CC                 int         3
+  0043C54B: CC                 int         3
+  0043C54C: CC                 int         3
+  0043C54D: CC                 int         3
+  0043C54E: CC                 int         3
+  0043C54F: CC                 int         3
+  0043C550: 55                 push        ebp
+  0043C551: 8B EC              mov         ebp,esp
+  0043C553: 51                 push        ecx
+  0043C554: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0043C557: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0043C55A: E8 D1 1F 00 00     call        0043E530
+  0043C55F: 0F B6 C0           movzx       eax,al
+  0043C562: 85 C0              test        eax,eax
+  0043C564: 75 5C              jne         0043C5C2
+  0043C566: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0043C569: 83 C1 30           add         ecx,30h
+  0043C56C: E8 DF CE 11 00     call        00559450
+  0043C571: 85 C0              test        eax,eax
+  0043C573: 74 4D              je          0043C5C2
+  0043C575: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0043C578: E8 03 F4 11 00     call        0055B980
+  0043C57D: 85 C0              test        eax,eax
+  0043C57F: 74 1F              je          0043C5A0
+  0043C581: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0043C584: E8 F7 F3 11 00     call        0055B980
+  0043C589: 50                 push        eax
+  0043C58A: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0043C58D: 83 C1 30           add         ecx,30h
+
+  Summary
+
+         100 .text

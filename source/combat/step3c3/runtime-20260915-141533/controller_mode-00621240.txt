@@ -1,0 +1,120 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c3\runtime-20260915-141533\controller_mode-00621240.obj
+
+File Type: COFF OBJECT
+
+  00621240: 55                 push        ebp
+  00621241: 8B EC              mov         ebp,esp
+  00621243: 51                 push        ecx
+  00621244: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00621247: 68 00 08 00 00     push        800h
+  0062124C: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0062124F: 81 C1 10 04 00 00  add         ecx,410h
+  00621255: E8 16 00 00 00     call        00621270
+  0062125A: F7 D8              neg         eax
+  0062125C: 1B C0              sbb         eax,eax
+  0062125E: F7 D8              neg         eax
+  00621260: 8B E5              mov         esp,ebp
+  00621262: 5D                 pop         ebp
+  00621263: C3                 ret
+  00621264: CC                 int         3
+  00621265: CC                 int         3
+  00621266: CC                 int         3
+  00621267: CC                 int         3
+  00621268: CC                 int         3
+  00621269: CC                 int         3
+  0062126A: CC                 int         3
+  0062126B: CC                 int         3
+  0062126C: CC                 int         3
+  0062126D: CC                 int         3
+  0062126E: CC                 int         3
+  0062126F: CC                 int         3
+  00621270: 55                 push        ebp
+  00621271: 8B EC              mov         ebp,esp
+  00621273: 51                 push        ecx
+  00621274: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00621277: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0062127A: 8B 40 04           mov         eax,dword ptr [eax+4]
+  0062127D: 23 45 08           and         eax,dword ptr [ebp+8]
+  00621280: 8B E5              mov         esp,ebp
+  00621282: 5D                 pop         ebp
+  00621283: C2 04 00           ret         4
+  00621286: CC                 int         3
+  00621287: CC                 int         3
+  00621288: CC                 int         3
+  00621289: CC                 int         3
+  0062128A: CC                 int         3
+  0062128B: CC                 int         3
+  0062128C: CC                 int         3
+  0062128D: CC                 int         3
+  0062128E: CC                 int         3
+  0062128F: CC                 int         3
+  00621290: 55                 push        ebp
+  00621291: 8B EC              mov         ebp,esp
+  00621293: 51                 push        ecx
+  00621294: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00621297: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0062129A: E8 21 03 06 00     call        006815C0
+  0062129F: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  006212A2: D9 05 4C DA 04 01  fld         dword ptr ds:[0104DA4Ch]
+  006212A8: D9 58 10           fstp        dword ptr [eax+10h]
+  006212AB: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  006212AE: D9 05 4C DA 04 01  fld         dword ptr ds:[0104DA4Ch]
+  006212B4: D9 59 14           fstp        dword ptr [ecx+14h]
+  006212B7: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  006212BA: 8B E5              mov         esp,ebp
+  006212BC: 5D                 pop         ebp
+  006212BD: C3                 ret
+  006212BE: CC                 int         3
+  006212BF: CC                 int         3
+  006212C0: 55                 push        ebp
+  006212C1: 8B EC              mov         ebp,esp
+  006212C3: 83 EC 0C           sub         esp,0Ch
+  006212C6: 56                 push        esi
+  006212C7: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  006212CA: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  006212CD: 50                 push        eax
+  006212CE: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  006212D1: E8 CA 6E 00 00     call        006281A0
+  006212D6: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  006212D9: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  006212DC: 8B 42 20           mov         eax,dword ptr [edx+20h]
+  006212DF: 89 41 20           mov         dword ptr [ecx+20h],eax
+  006212E2: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  006212E5: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  006212E8: 8B 42 24           mov         eax,dword ptr [edx+24h]
+  006212EB: 89 41 24           mov         dword ptr [ecx+24h],eax
+  006212EE: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  006212F5: EB 09              jmp         00621300
+  006212F7: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  006212FA: 83 C1 01           add         ecx,1
+  006212FD: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00621300: 83 7D FC 08        cmp         dword ptr [ebp-4],8
+  00621304: 73 16              jae         0062131C
+  00621306: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00621309: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  0062130C: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0062130F: 8B 75 08           mov         esi,dword ptr [ebp+8]
+  00621312: 8B 4C 8E 28        mov         ecx,dword ptr [esi+ecx*4+28h]
+  00621316: 89 4C 90 28        mov         dword ptr [eax+edx*4+28h],ecx
+  0062131A: EB DB              jmp         006212F7
+  0062131C: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  0062131F: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00621322: 8B 48 48           mov         ecx,dword ptr [eax+48h]
+  00621325: 89 4A 48           mov         dword ptr [edx+48h],ecx
+  00621328: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  0062132B: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0062132E: 8B 48 4C           mov         ecx,dword ptr [eax+4Ch]
+  00621331: 89 4A 4C           mov         dword ptr [edx+4Ch],ecx
+  00621334: C7 45 F8 00 00 00  mov         dword ptr [ebp-8],0
+            00
+  0062133B: EB 09              jmp         00621346
+  0062133D: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+
+  Summary
+
+         100 .text

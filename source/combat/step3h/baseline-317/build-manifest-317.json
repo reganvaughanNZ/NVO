@@ -1,0 +1,30 @@
+{
+  "packet": "3G2",
+  "version": "0.3.17",
+  "plugin_version": 317,
+  "status": "Installed; user317 diagnostic confirmation pending",
+  "requires_existing_packet": "3G1",
+  "build_output": "out\\build-2341-20217",
+  "native_rebuilt": true,
+  "installed_files": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "ad962a694f90bf22ac452cd23ba8772d83bd6752854760d5453bd76c76634d33"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "3be15b4ca78f1d067588eb79a4d30ad6a7fb50cd2c72e159cae178c394a140a4"
+    }
+  ],
+  "installer_plan_sha256": "0bc408513f6a3b9fae9392c25c48f487db71217b2661c7aa647a30474c0b3556",
+  "new_dependencies": [],
+  "new_native_hooks": 0,
+  "record_changes": 0,
+  "configuration_changes": 0,
+  "range_or_flight_rules_changed": false,
+  "max_extra_detail_rows_per_load": 416,
+  "damage_replacement": false,
+  "gameplay_tested": false,
+  "installed_by_assistant": true,
+  "installation_receipt": "Installation/INSTALL-3G2.md"
+}

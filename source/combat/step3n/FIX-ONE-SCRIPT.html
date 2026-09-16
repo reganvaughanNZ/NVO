@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NVO 3N - One script to finish</title>
+<style>:root{color-scheme:dark}body{max-width:780px;margin:40px auto;padding:0 24px;background:#111b18;color:#e2e9dd;font:18px/1.6 system-ui}h1{font-size:30px}button{font:600 18px system-ui;padding:15px 22px;background:#c3dfaa;color:#122115;border:0;border-radius:6px;cursor:pointer}textarea{box-sizing:border-box;width:100%;height:255px;background:#0b1410;color:#dce9d8;padding:14px;font:15px/1.5 monospace}li{margin:12px 0}#status{min-height:1.6em}code{color:#c3dfaa}</style>
+<h1>One script to finish Packet 3N</h1>
+<p>The other three scripts and the Baron description saved correctly. <b>ALTRichKidHit still contains the original damage code.</b> This replacement makes the old callback harmless while preserving its saved references and variables.</p>
+<ol><li>Close New Vegas. Load <b>NVO.esm as the active file</b> in GECK Extender.</li><li>Open <b>Gameplay → Edit Scripts → Script → Open → ALTRichKidHit</b>. Select the existing original, not New or a DUPLICATE. Keep Script Type <b>Object</b>.</li><li>Click Copy below, select all of that script's source, and paste. Compile/save the script.</li><li>Save <b>NVO.esm</b> from the main GECK window, close GECK, and reply <b>SAVED</b>.</li></ol>
+<button id="copy" type="button">Copy complete ALTRichKidHit</button><p id="status" role="status"></p><textarea id="script" readonly aria-label="Complete ALTRichKidHit source">scn	ALTRichKidHit
+
+ref rTarget
+ref rAttacker
+float iCaps
+
+
+begin Function {rTarget, rAttacker}
+    return
+end
+</textarea>
+<p>No other records need editing and no combat test is needed yet. NVO damage replacement remains disabled.</p>
+<script>document.getElementById('copy').addEventListener('click',async()=>{const t=document.getElementById('script'),status=document.getElementById('status');try{await navigator.clipboard.writeText(t.value);status.textContent='Copied. Paste over the entire existing ALTRichKidHit script.';}catch(e){t.focus();t.select();status.textContent=document.execCommand('copy')?'Copied. Paste over the entire existing ALTRichKidHit script.':'Source selected. Press Ctrl+C to copy.';}});</script></html>

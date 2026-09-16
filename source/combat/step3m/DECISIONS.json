@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-16",
+  "packet": "3M",
+  "approved_by_user": [
+    "prepare_armour_input_and_modifier_contract",
+    "retire_baron_caps_damage_not_migrate",
+    "plasma_laser_and_other_projectiles_required_in_final_system"
+  ],
+  "queued_later": [
+    "consistent_review_of_all_backgrounds",
+    "choose_baron_replacement_benefit"
+  ],
+  "proposed_not_activated": [
+    "neutral_difficulty_damage_GMSTs",
+    "resource_AI_recovery_difficulty_presets"
+  ],
+  "runtime_changes": [],
+  "next_requires_user_go_ahead": "3N disabled resolver plus complete Baron retirement scripts"
+}

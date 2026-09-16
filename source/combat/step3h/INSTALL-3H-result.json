@@ -1,0 +1,22 @@
+{
+  "status": "installed",
+  "packet": "3H",
+  "version": 318,
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3H-20260915-235606-6b7a5abb",
+  "closed_processes": [],
+  "archived_removed": 0,
+  "replaced": 2,
+  "installed": [
+    {
+      "sha256": "6f53637f281243bbc9e1d2566adf6cc850e8bee5cf7c70299ca03709891455f6",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll"
+    },
+    {
+      "sha256": "292ee2664af3a68298b4229a2665778a79124fafcfccb69d6501db7a9e89ee64",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb"
+    }
+  ],
+  "protected_files_verified": 53,
+  "game_relaunched": false,
+  "gameplay_tested": false
+}

@@ -1,0 +1,85 @@
+{
+  "captures": [
+    {
+      "capture": "3B3A-VATS",
+      "sha256": "2e0346c2642c2e3e8dbb9a6a02f515fceb9533431c81627f8205cb65b6851ec8",
+      "timing_rows": 36,
+      "moving_rows": 4,
+      "lifetime_next_update_pairs": 20,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 0,
+      "max_parent_dt_error_s": 0,
+      "movement_clock_pairs": 0,
+      "movement_equals_parent": 0,
+      "baseline_roundtrips": 0,
+      "max_baseline_relative_error": 0,
+      "unpaired_due_to_timing_cap": [],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    },
+    {
+      "capture": "3G2",
+      "sha256": "5c4e764753b73c258a176e4270b5b5bdbf8255ac6d35c097daa259cf89fcca63",
+      "timing_rows": 57,
+      "moving_rows": 41,
+      "lifetime_next_update_pairs": 49,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 49,
+      "max_parent_dt_error_s": 0.0,
+      "movement_clock_pairs": 49,
+      "movement_equals_parent": 49,
+      "baseline_roundtrips": 8,
+      "max_baseline_relative_error": 2.6839444000614776e-09,
+      "unpaired_due_to_timing_cap": [],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    },
+    {
+      "capture": "3Q",
+      "sha256": "37821ee73c001055b279fc56af83b8c57471ccefc16caac7e8e9a83fbde30b64",
+      "timing_rows": 226,
+      "moving_rows": 204,
+      "lifetime_next_update_pairs": 214,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 214,
+      "max_parent_dt_error_s": 0.0,
+      "movement_clock_pairs": 215,
+      "movement_equals_parent": 215,
+      "baseline_roundtrips": 12,
+      "max_baseline_relative_error": 3.5802231179715704e-09,
+      "unpaired_due_to_timing_cap": [
+        {
+          "session": 1,
+          "lifetime": 1,
+          "line": 807,
+          "reason": "timing_observer_capped"
+        }
+      ],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    },
+    {
+      "capture": "3R",
+      "sha256": "5e0d186d6c99525ffb8ecc472fd63634fa7d9b2f22386492ff654196b14cc73a",
+      "timing_rows": 201,
+      "moving_rows": 192,
+      "lifetime_next_update_pairs": 192,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 192,
+      "max_parent_dt_error_s": 0.0,
+      "movement_clock_pairs": 192,
+      "movement_equals_parent": 192,
+      "baseline_roundtrips": 9,
+      "max_baseline_relative_error": 3.615411192647855e-09,
+      "unpaired_due_to_timing_cap": [],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    }
+  ],
+  "cpp_checks": {
+    "checks_passed": 1741,
+    "logged_applied_steps_replayed": 427,
+    "max_speed_error_mps": 9.41800408327e-07,
+    "max_distance_error_units": 7.41699159335e-06,
+    "max_vertical_error_units": 6.76606575212e-07,
+    "max_partition_position_error_m": 6.94677305143e-06,
+    "max_partition_speed_error_mps": 1.27871066485e-05,
+    "game_loaded": false
+  }
+}

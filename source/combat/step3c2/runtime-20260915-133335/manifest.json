@@ -1,0 +1,152 @@
+{
+  "captured_at": "2026-09-15T13:33:35.5529964+12:00",
+  "pid": 22300,
+  "process_start_utc": "2026-09-15T01:26:24.6390587Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "files": [
+    {
+      "sha256": "15409f8ce26191c82bb32e38db5f18c030108b93cb118ebfa64425d1cdabe370",
+      "address": "004169A0",
+      "bytes": 128,
+      "filename": "sincos-004169A0.bin",
+      "name": "sincos"
+    },
+    {
+      "sha256": "62a1232823706d86eb9c5416e50f173c27e576f7e6864085de65e7112d373e81",
+      "address": "008D0360",
+      "bytes": 64,
+      "filename": "projectile_virtual-008D0360.bin",
+      "name": "projectile_virtual"
+    },
+    {
+      "sha256": "e65e52dd38977bf668825f0c9d6d6ecd4a45d8a4df572117398c9a11f5785e00",
+      "address": "00ACBB70",
+      "bytes": 64,
+      "filename": "sit_state-00ACBB70.bin",
+      "name": "sit_state"
+    },
+    {
+      "sha256": "9d13cc0da199521269ec8b1dd43b9aa3724ca4f85f2e5b395a3d5b7193bb70bc",
+      "address": "005722C0",
+      "bytes": 256,
+      "filename": "has_health-005722C0.bin",
+      "name": "has_health"
+    },
+    {
+      "sha256": "c19bea5235a5d1783b1fb61dc2597b864d8fdfc4162cb5c7ddd25b2e8a001fcb",
+      "address": "009306D0",
+      "bytes": 256,
+      "filename": "mobile_process-009306D0.bin",
+      "name": "mobile_process"
+    },
+    {
+      "sha256": "797a3fab11045b58ce7ac98075fd477c3808fbbe3dc843703e1a9c3e37b022a1",
+      "address": "00931D70",
+      "bytes": 256,
+      "filename": "pitch_getter-00931D70.bin",
+      "name": "pitch_getter"
+    },
+    {
+      "sha256": "afcdc1f900746e28efe3f67f86d3d006532d9eb37c467e9e2cfe7a740785c9ec",
+      "address": "0080F790",
+      "bytes": 512,
+      "filename": "heading_getter-0080F790.bin",
+      "name": "heading_getter"
+    },
+    {
+      "sha256": "2e776cd8784f157e48adbf207d8f1a3dc9336445bfc8dc0b82787a9ce0b68741",
+      "address": "00430830",
+      "bytes": 64,
+      "filename": "rotation_getter-00430830.bin",
+      "name": "rotation_getter"
+    },
+    {
+      "sha256": "f94119182978ce851469f60882763ee3a6a8f3fc21200b628b29dfaf4de59678",
+      "address": "00524AC0",
+      "bytes": 256,
+      "filename": "pitch_matrix-00524AC0.bin",
+      "name": "pitch_matrix"
+    },
+    {
+      "sha256": "bf62d827018cdba7d7eb7ca9bca6af6e84cd7038b184f5f4327e48d10284eaea",
+      "address": "0063C8A0",
+      "bytes": 96,
+      "filename": "vector_add-0063C8A0.bin",
+      "name": "vector_add"
+    },
+    {
+      "sha256": "d64443cd251dcee8ae4cdd35d45498ff0a780a7c1e7a424bb3dd1b6bc70c4263",
+      "address": "008A6300",
+      "bytes": 256,
+      "filename": "generic_caller-008A6300.bin",
+      "name": "generic_caller"
+    },
+    {
+      "sha256": "915b48d122886b66de84b31d190baa3a3aef684ce8926d7c04a479f2e9b0eb75",
+      "address": "0108FA44",
+      "bytes": 1024,
+      "filename": "missile_vtable-0108FA44.bin",
+      "name": "missile_vtable"
+    },
+    {
+      "sha256": "ba5dbef9f82f355c288ed5427cf650d914d414dcaee9a12f0975a5b3ec6529c2",
+      "address": "009669C0",
+      "bytes": 512,
+      "filename": "speed-009669C0.bin",
+      "name": "speed"
+    },
+    {
+      "sha256": "7a4902f24c242ec15477951c028ecc6f6ea7e1f168f91c43d288f04ef01abb9b",
+      "address": "00416870",
+      "bytes": 256,
+      "filename": "vector_constructor-00416870.bin",
+      "name": "vector_constructor"
+    },
+    {
+      "sha256": "68395025f6b7b4125c2b3c0e21283f9a8403a084738908c93532bbef142cfd5f",
+      "address": "0092F260",
+      "bytes": 5152,
+      "filename": "movement-0092F260.bin",
+      "name": "movement"
+    },
+    {
+      "sha256": "2c54e7dd700af2e484b2dc94c8a2e770fabc7fae145d9fb54049c738b460f891",
+      "address": "004B4500",
+      "bytes": 176,
+      "filename": "matrix_vector-004B4500.bin",
+      "name": "matrix_vector"
+    },
+    {
+      "sha256": "08894d158fac547d174a9489df9ce3c4834042b0d11f1ca6a1b814e4e5a9637f",
+      "address": "004A0C90",
+      "bytes": 768,
+      "filename": "rotation_matrix-004A0C90.bin",
+      "name": "rotation_matrix"
+    },
+    {
+      "sha256": "845bdd7f84bdb1f6c4d050eea9df7d6b0f5636f95b9b2e95cc6cea93b0bd161c",
+      "address": "00716440",
+      "bytes": 256,
+      "filename": "timescale-00716440.bin",
+      "name": "timescale"
+    },
+    {
+      "sha256": "277542c95d38b91cda811870fa3fe9d86eb01bf33c5aacb28826e41ea496b0e1",
+      "address": "009B8030",
+      "bytes": 2160,
+      "filename": "projectile_update-009B8030.bin",
+      "name": "projectile_update"
+    },
+    {
+      "sha256": "c0be90ab82991a2bd002bbe08b536816bb32724f632aa01fe35401e4ed6edd13",
+      "address": "009BF300",
+      "bytes": 368,
+      "filename": "projectile_move-009BF300.bin",
+      "name": "projectile_move"
+    }
+  ],
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false
+}

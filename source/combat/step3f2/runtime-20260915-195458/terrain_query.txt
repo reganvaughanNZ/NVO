@@ -1,0 +1,499 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3f2\runtime-20260915-195458\terrain_query.obj
+
+File Type: COFF OBJECT
+
+  004572E0: 55                 push        ebp
+  004572E1: 8B EC              mov         ebp,esp
+  004572E3: 83 EC 10           sub         esp,10h
+  004572E6: 89 4D F0           mov         dword ptr [ebp-10h],ecx
+  004572E9: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004572EC: 51                 push        ecx
+  004572ED: D9 00              fld         dword ptr [eax]
+  004572EF: D9 1C 24           fstp        dword ptr [esp]
+  004572F2: E8 99 FA FA FF     call        00406D90
+  004572F7: 83 C4 04           add         esp,4
+  004572FA: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  004572FD: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00457300: 51                 push        ecx
+  00457301: D9 41 04           fld         dword ptr [ecx+4]
+  00457304: D9 1C 24           fstp        dword ptr [esp]
+  00457307: E8 84 FA FA FF     call        00406D90
+  0045730C: 83 C4 04           add         esp,4
+  0045730F: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00457312: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00457315: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045731B: 79 08              jns         00457325
+  0045731D: 4A                 dec         edx
+  0045731E: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457324: 42                 inc         edx
+  00457325: 85 D2              test        edx,edx
+  00457327: 75 1A              jne         00457343
+  00457329: DB 45 F4           fild        dword ptr [ebp-0Ch]
+  0045732C: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0045732F: D9 00              fld         dword ptr [eax]
+  00457331: DE D9              fcompp
+  00457333: DF E0              fnstsw      ax
+  00457335: F6 C4 05           test        ah,5
+  00457338: 7A 09              jp          00457343
+  0045733A: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0045733D: 83 E9 01           sub         ecx,1
+  00457340: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  00457343: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00457346: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045734C: 79 08              jns         00457356
+  0045734E: 4A                 dec         edx
+  0045734F: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457355: 42                 inc         edx
+  00457356: 85 D2              test        edx,edx
+  00457358: 75 1B              jne         00457375
+  0045735A: DB 45 F8           fild        dword ptr [ebp-8]
+  0045735D: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00457360: D9 40 04           fld         dword ptr [eax+4]
+  00457363: DE D9              fcompp
+  00457365: DF E0              fnstsw      ax
+  00457367: F6 C4 05           test        ah,5
+  0045736A: 7A 09              jp          00457375
+  0045736C: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  0045736F: 83 E9 01           sub         ecx,1
+  00457372: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  00457375: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00457378: C1 FA 0C           sar         edx,0Ch
+  0045737B: 89 55 F4           mov         dword ptr [ebp-0Ch],edx
+  0045737E: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00457381: C1 F8 0C           sar         eax,0Ch
+  00457384: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00457387: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  0045738A: D9 05 24 78 01 01  fld         dword ptr ds:[01017824h]
+  00457390: D9 19              fstp        dword ptr [ecx]
+  00457392: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00457395: 52                 push        edx
+  00457396: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  00457399: 50                 push        eax
+  0045739A: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0045739D: E8 5E A5 FF FF     call        00451900
+  004573A2: 89 45 FC           mov         dword ptr [ebp-4],eax
+  004573A5: 83 7D FC 00        cmp         dword ptr [ebp-4],0
+  004573A9: 74 31              je          004573DC
+  004573AB: 6A 00              push        0
+  004573AD: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004573B0: 51                 push        ecx
+  004573B1: 8B 0D 10 EA 1D 01  mov         ecx,dword ptr ds:[011DEA10h]
+  004573B7: E8 24 9E FF FF     call        004511E0
+  004573BC: 0F B6 D0           movzx       edx,al
+  004573BF: 85 D2              test        edx,edx
+  004573C1: 74 19              je          004573DC
+  004573C3: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  004573C6: 50                 push        eax
+  004573C7: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  004573CA: 51                 push        ecx
+  004573CB: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004573CE: E8 DD FB 0E 00     call        00546FB0
+  004573D3: 8B C8              mov         ecx,eax
+  004573D5: E8 A6 7D 0E 00     call        0053F180
+  004573DA: EB 02              jmp         004573DE
+  004573DC: 32 C0              xor         al,al
+  004573DE: 8B E5              mov         esp,ebp
+  004573E0: 5D                 pop         ebp
+  004573E1: C2 08 00           ret         8
+  004573E4: CC                 int         3
+  004573E5: CC                 int         3
+  004573E6: CC                 int         3
+  004573E7: CC                 int         3
+  004573E8: CC                 int         3
+  004573E9: CC                 int         3
+  004573EA: CC                 int         3
+  004573EB: CC                 int         3
+  004573EC: CC                 int         3
+  004573ED: CC                 int         3
+  004573EE: CC                 int         3
+  004573EF: CC                 int         3
+  004573F0: 55                 push        ebp
+  004573F1: 8B EC              mov         ebp,esp
+  004573F3: 83 EC 10           sub         esp,10h
+  004573F6: 89 4D F0           mov         dword ptr [ebp-10h],ecx
+  004573F9: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004573FC: 51                 push        ecx
+  004573FD: D9 00              fld         dword ptr [eax]
+  004573FF: D9 1C 24           fstp        dword ptr [esp]
+  00457402: E8 89 F9 FA FF     call        00406D90
+  00457407: 83 C4 04           add         esp,4
+  0045740A: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  0045740D: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00457410: 51                 push        ecx
+  00457411: D9 41 04           fld         dword ptr [ecx+4]
+  00457414: D9 1C 24           fstp        dword ptr [esp]
+  00457417: E8 74 F9 FA FF     call        00406D90
+  0045741C: 83 C4 04           add         esp,4
+  0045741F: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00457422: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00457425: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045742B: 79 08              jns         00457435
+  0045742D: 4A                 dec         edx
+  0045742E: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457434: 42                 inc         edx
+  00457435: 85 D2              test        edx,edx
+  00457437: 75 1A              jne         00457453
+  00457439: DB 45 F4           fild        dword ptr [ebp-0Ch]
+  0045743C: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0045743F: D9 00              fld         dword ptr [eax]
+  00457441: DE D9              fcompp
+  00457443: DF E0              fnstsw      ax
+  00457445: F6 C4 05           test        ah,5
+  00457448: 7A 09              jp          00457453
+  0045744A: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0045744D: 83 E9 01           sub         ecx,1
+  00457450: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  00457453: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00457456: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045745C: 79 08              jns         00457466
+  0045745E: 4A                 dec         edx
+  0045745F: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457465: 42                 inc         edx
+  00457466: 85 D2              test        edx,edx
+  00457468: 75 1B              jne         00457485
+  0045746A: DB 45 F8           fild        dword ptr [ebp-8]
+  0045746D: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00457470: D9 40 04           fld         dword ptr [eax+4]
+  00457473: DE D9              fcompp
+  00457475: DF E0              fnstsw      ax
+  00457477: F6 C4 05           test        ah,5
+  0045747A: 7A 09              jp          00457485
+  0045747C: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  0045747F: 83 E9 01           sub         ecx,1
+  00457482: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  00457485: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00457488: C1 FA 0C           sar         edx,0Ch
+  0045748B: 89 55 F4           mov         dword ptr [ebp-0Ch],edx
+  0045748E: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00457491: C1 F8 0C           sar         eax,0Ch
+  00457494: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00457497: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  0045749A: 8B 15 6C 42 1F 01  mov         edx,dword ptr ds:[011F426Ch]
+  004574A0: 89 11              mov         dword ptr [ecx],edx
+  004574A2: A1 70 42 1F 01     mov         eax,dword ptr ds:[011F4270h]
+  004574A7: 89 41 04           mov         dword ptr [ecx+4],eax
+  004574AA: 8B 15 74 42 1F 01  mov         edx,dword ptr ds:[011F4274h]
+  004574B0: 89 51 08           mov         dword ptr [ecx+8],edx
+  004574B3: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  004574B6: D9 E8              fld1
+  004574B8: D9 58 08           fstp        dword ptr [eax+8]
+  004574BB: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  004574BE: 51                 push        ecx
+  004574BF: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  004574C2: 52                 push        edx
+  004574C3: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  004574C6: E8 35 A4 FF FF     call        00451900
+  004574CB: 89 45 FC           mov         dword ptr [ebp-4],eax
+  004574CE: 83 7D FC 00        cmp         dword ptr [ebp-4],0
+  004574D2: 74 35              je          00457509
+  004574D4: 6A 00              push        0
+  004574D6: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004574D9: 50                 push        eax
+  004574DA: 8B 0D 10 EA 1D 01  mov         ecx,dword ptr ds:[011DEA10h]
+  004574E0: E8 FB 9C FF FF     call        004511E0
+  004574E5: 0F B6 C8           movzx       ecx,al
+  004574E8: 85 C9              test        ecx,ecx
+  004574EA: 74 1D              je          00457509
+  004574EC: 8B 55 10           mov         edx,dword ptr [ebp+10h]
+  004574EF: 52                 push        edx
+  004574F0: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  004574F3: 50                 push        eax
+  004574F4: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  004574F7: 51                 push        ecx
+  004574F8: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004574FB: E8 B0 FA 0E 00     call        00546FB0
+  00457500: 8B C8              mov         ecx,eax
+  00457502: E8 D9 5D 0E 00     call        0053D2E0
+  00457507: EB 02              jmp         0045750B
+  00457509: 32 C0              xor         al,al
+  0045750B: 8B E5              mov         esp,ebp
+  0045750D: 5D                 pop         ebp
+  0045750E: C2 0C 00           ret         0Ch
+  00457511: CC                 int         3
+  00457512: CC                 int         3
+  00457513: CC                 int         3
+  00457514: CC                 int         3
+  00457515: CC                 int         3
+  00457516: CC                 int         3
+  00457517: CC                 int         3
+  00457518: CC                 int         3
+  00457519: CC                 int         3
+  0045751A: CC                 int         3
+  0045751B: CC                 int         3
+  0045751C: CC                 int         3
+  0045751D: CC                 int         3
+  0045751E: CC                 int         3
+  0045751F: CC                 int         3
+  00457520: 55                 push        ebp
+  00457521: 8B EC              mov         ebp,esp
+  00457523: 83 EC 10           sub         esp,10h
+  00457526: 89 4D F0           mov         dword ptr [ebp-10h],ecx
+  00457529: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0045752C: 51                 push        ecx
+  0045752D: D9 00              fld         dword ptr [eax]
+  0045752F: D9 1C 24           fstp        dword ptr [esp]
+  00457532: E8 59 F8 FA FF     call        00406D90
+  00457537: 83 C4 04           add         esp,4
+  0045753A: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  0045753D: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00457540: 51                 push        ecx
+  00457541: D9 41 04           fld         dword ptr [ecx+4]
+  00457544: D9 1C 24           fstp        dword ptr [esp]
+  00457547: E8 44 F8 FA FF     call        00406D90
+  0045754C: 83 C4 04           add         esp,4
+  0045754F: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00457552: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00457555: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045755B: 79 08              jns         00457565
+  0045755D: 4A                 dec         edx
+  0045755E: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457564: 42                 inc         edx
+  00457565: 85 D2              test        edx,edx
+  00457567: 75 1A              jne         00457583
+  00457569: DB 45 F4           fild        dword ptr [ebp-0Ch]
+  0045756C: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0045756F: D9 00              fld         dword ptr [eax]
+  00457571: DE D9              fcompp
+  00457573: DF E0              fnstsw      ax
+  00457575: F6 C4 05           test        ah,5
+  00457578: 7A 09              jp          00457583
+  0045757A: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0045757D: 83 E9 01           sub         ecx,1
+  00457580: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  00457583: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00457586: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045758C: 79 08              jns         00457596
+  0045758E: 4A                 dec         edx
+  0045758F: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457595: 42                 inc         edx
+  00457596: 85 D2              test        edx,edx
+  00457598: 75 1B              jne         004575B5
+  0045759A: DB 45 F8           fild        dword ptr [ebp-8]
+  0045759D: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004575A0: D9 40 04           fld         dword ptr [eax+4]
+  004575A3: DE D9              fcompp
+  004575A5: DF E0              fnstsw      ax
+  004575A7: F6 C4 05           test        ah,5
+  004575AA: 7A 09              jp          004575B5
+  004575AC: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  004575AF: 83 E9 01           sub         ecx,1
+  004575B2: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  004575B5: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  004575B8: C1 FA 0C           sar         edx,0Ch
+  004575BB: 89 55 F4           mov         dword ptr [ebp-0Ch],edx
+  004575BE: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  004575C1: C1 F8 0C           sar         eax,0Ch
+  004575C4: 89 45 F8           mov         dword ptr [ebp-8],eax
+  004575C7: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  004575CA: 51                 push        ecx
+  004575CB: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  004575CE: 52                 push        edx
+  004575CF: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  004575D2: E8 29 A3 FF FF     call        00451900
+  004575D7: 89 45 FC           mov         dword ptr [ebp-4],eax
+  004575DA: 83 7D FC 00        cmp         dword ptr [ebp-4],0
+  004575DE: 74 31              je          00457611
+  004575E0: 6A 00              push        0
+  004575E2: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004575E5: 50                 push        eax
+  004575E6: 8B 0D 10 EA 1D 01  mov         ecx,dword ptr ds:[011DEA10h]
+  004575EC: E8 EF 9B FF FF     call        004511E0
+  004575F1: 0F B6 C8           movzx       ecx,al
+  004575F4: 85 C9              test        ecx,ecx
+  004575F6: 74 19              je          00457611
+  004575F8: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  004575FB: 52                 push        edx
+  004575FC: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004575FF: 50                 push        eax
+  00457600: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00457603: E8 A8 F9 0E 00     call        00546FB0
+  00457608: 8B C8              mov         ecx,eax
+  0045760A: E8 61 7F 0E 00     call        0053F570
+  0045760F: EB 02              jmp         00457613
+  00457611: 32 C0              xor         al,al
+  00457613: 8B E5              mov         esp,ebp
+  00457615: 5D                 pop         ebp
+  00457616: C2 08 00           ret         8
+  00457619: CC                 int         3
+  0045761A: CC                 int         3
+  0045761B: CC                 int         3
+  0045761C: CC                 int         3
+  0045761D: CC                 int         3
+  0045761E: CC                 int         3
+  0045761F: CC                 int         3
+  00457620: 55                 push        ebp
+  00457621: 8B EC              mov         ebp,esp
+  00457623: 83 EC 10           sub         esp,10h
+  00457626: 89 4D F0           mov         dword ptr [ebp-10h],ecx
+  00457629: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0045762C: 51                 push        ecx
+  0045762D: D9 00              fld         dword ptr [eax]
+  0045762F: D9 1C 24           fstp        dword ptr [esp]
+  00457632: E8 59 F7 FA FF     call        00406D90
+  00457637: 83 C4 04           add         esp,4
+  0045763A: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  0045763D: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00457640: 51                 push        ecx
+  00457641: D9 41 04           fld         dword ptr [ecx+4]
+  00457644: D9 1C 24           fstp        dword ptr [esp]
+  00457647: E8 44 F7 FA FF     call        00406D90
+  0045764C: 83 C4 04           add         esp,4
+  0045764F: 89 45 F8           mov         dword ptr [ebp-8],eax
+  00457652: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00457655: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045765B: 79 08              jns         00457665
+  0045765D: 4A                 dec         edx
+  0045765E: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457664: 42                 inc         edx
+  00457665: 85 D2              test        edx,edx
+  00457667: 75 1A              jne         00457683
+  00457669: DB 45 F4           fild        dword ptr [ebp-0Ch]
+  0045766C: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0045766F: D9 00              fld         dword ptr [eax]
+  00457671: DE D9              fcompp
+  00457673: DF E0              fnstsw      ax
+  00457675: F6 C4 05           test        ah,5
+  00457678: 7A 09              jp          00457683
+  0045767A: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0045767D: 83 E9 01           sub         ecx,1
+  00457680: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  00457683: 8B 55 F8           mov         edx,dword ptr [ebp-8]
+  00457686: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  0045768C: 79 08              jns         00457696
+  0045768E: 4A                 dec         edx
+  0045768F: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  00457695: 42                 inc         edx
+  00457696: 85 D2              test        edx,edx
+  00457698: 75 1B              jne         004576B5
+  0045769A: DB 45 F8           fild        dword ptr [ebp-8]
+  0045769D: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004576A0: D9 40 04           fld         dword ptr [eax+4]
+  004576A3: DE D9              fcompp
+  004576A5: DF E0              fnstsw      ax
+  004576A7: F6 C4 05           test        ah,5
+  004576AA: 7A 09              jp          004576B5
+  004576AC: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  004576AF: 83 E9 01           sub         ecx,1
+  004576B2: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  004576B5: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  004576B8: C1 FA 0C           sar         edx,0Ch
+  004576BB: 89 55 F4           mov         dword ptr [ebp-0Ch],edx
+  004576BE: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  004576C1: C1 F8 0C           sar         eax,0Ch
+  004576C4: 89 45 F8           mov         dword ptr [ebp-8],eax
+  004576C7: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  004576CA: 51                 push        ecx
+  004576CB: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  004576CE: 52                 push        edx
+  004576CF: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  004576D2: E8 29 A2 FF FF     call        00451900
+  004576D7: 89 45 FC           mov         dword ptr [ebp-4],eax
+  004576DA: 83 7D FC 00        cmp         dword ptr [ebp-4],0
+  004576DE: 74 2D              je          0045770D
+  004576E0: 6A 00              push        0
+  004576E2: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004576E5: 50                 push        eax
+  004576E6: 8B 0D 10 EA 1D 01  mov         ecx,dword ptr ds:[011DEA10h]
+  004576EC: E8 EF 9A FF FF     call        004511E0
+  004576F1: 0F B6 C8           movzx       ecx,al
+  004576F4: 85 C9              test        ecx,ecx
+  004576F6: 74 15              je          0045770D
+  004576F8: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  004576FB: 52                 push        edx
+  004576FC: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004576FF: E8 AC F8 0E 00     call        00546FB0
+  00457704: 8B C8              mov         ecx,eax
+  00457706: E8 D5 79 0E 00     call        0053F0E0
+  0045770B: EB 02              jmp         0045770F
+  0045770D: 33 C0              xor         eax,eax
+  0045770F: 8B E5              mov         esp,ebp
+  00457711: 5D                 pop         ebp
+  00457712: C2 04 00           ret         4
+  00457715: CC                 int         3
+  00457716: CC                 int         3
+  00457717: CC                 int         3
+  00457718: CC                 int         3
+  00457719: CC                 int         3
+  0045771A: CC                 int         3
+  0045771B: CC                 int         3
+  0045771C: CC                 int         3
+  0045771D: CC                 int         3
+  0045771E: CC                 int         3
+  0045771F: CC                 int         3
+  00457720: 55                 push        ebp
+  00457721: 8B EC              mov         ebp,esp
+  00457723: 83 EC 24           sub         esp,24h
+  00457726: 89 4D DC           mov         dword ptr [ebp-24h],ecx
+  00457729: C7 45 F4 00 00 00  mov         dword ptr [ebp-0Ch],0
+            00
+  00457730: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00457733: 51                 push        ecx
+  00457734: D9 00              fld         dword ptr [eax]
+  00457736: D9 1C 24           fstp        dword ptr [esp]
+  00457739: E8 52 F6 FA FF     call        00406D90
+  0045773E: 83 C4 04           add         esp,4
+  00457741: 89 45 FC           mov         dword ptr [ebp-4],eax
+  00457744: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00457747: 51                 push        ecx
+  00457748: D9 41 04           fld         dword ptr [ecx+4]
+  0045774B: D9 1C 24           fstp        dword ptr [esp]
+  0045774E: E8 3D F6 FA FF     call        00406D90
+  00457753: 83 C4 04           add         esp,4
+  00457756: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  00457759: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  0045775C: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  00457762: 79 08              jns         0045776C
+  00457764: 4A                 dec         edx
+  00457765: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  0045776B: 42                 inc         edx
+  0045776C: 85 D2              test        edx,edx
+  0045776E: 75 1A              jne         0045778A
+  00457770: DB 45 FC           fild        dword ptr [ebp-4]
+  00457773: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00457776: D9 00              fld         dword ptr [eax]
+  00457778: DE D9              fcompp
+  0045777A: DF E0              fnstsw      ax
+  0045777C: F6 C4 05           test        ah,5
+  0045777F: 7A 09              jp          0045778A
+  00457781: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00457784: 83 E9 01           sub         ecx,1
+  00457787: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0045778A: 8B 55 F0           mov         edx,dword ptr [ebp-10h]
+  0045778D: 81 E2 FF 0F 00 80  and         edx,80000FFFh
+  00457793: 79 08              jns         0045779D
+  00457795: 4A                 dec         edx
+  00457796: 81 CA 00 F0 FF FF  or          edx,0FFFFF000h
+  0045779C: 42                 inc         edx
+  0045779D: 85 D2              test        edx,edx
+  0045779F: 75 1B              jne         004577BC
+  004577A1: DB 45 F0           fild        dword ptr [ebp-10h]
+  004577A4: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004577A7: D9 40 04           fld         dword ptr [eax+4]
+  004577AA: DE D9              fcompp
+  004577AC: DF E0              fnstsw      ax
+  004577AE: F6 C4 05           test        ah,5
+  004577B1: 7A 09              jp          004577BC
+  004577B3: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  004577B6: 83 E9 01           sub         ecx,1
+  004577B9: 89 4D F0           mov         dword ptr [ebp-10h],ecx
+  004577BC: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  004577BF: 81 E2 7F 00 00 80  and         edx,8000007Fh
+  004577C5: 79 05              jns         004577CC
+  004577C7: 4A                 dec         edx
+  004577C8: 83 CA 80           or          edx,0FFFFFF80h
+  004577CB: 42                 inc         edx
+  004577CC: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004577CF: 2B C2              sub         eax,edx
+  004577D1: 89 45 EC           mov         dword ptr [ebp-14h],eax
+  004577D4: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  004577D7: 81 E1 7F 00 00 80  and         ecx,8000007Fh
+  004577DD: 79 05              jns         004577E4
+  004577DF: 49                 dec         ecx
+
+  Summary
+
+         500 .text

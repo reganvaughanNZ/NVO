@@ -1,0 +1,27 @@
+scn	ALTRichKidHit
+
+ref rTarget
+ref rAttacker
+float iCaps
+
+
+begin Function {rTarget, rAttacker}
+	
+	iCaps = player.getitemcount caps001
+	iCaps *= 0.001
+	iCaps = Floor iCaps
+	;print $iCaps
+	;print $rTarget.getav health
+	if rTarget.GetDead
+		;print "dead"
+		return
+	elseif iCaps > rTarget.getav health
+		rTarget.kill rAttacker
+		;print "kill"
+	else
+		rTarget.damageav health iCaps
+		;print "damage"
+	endif
+	;print "test"
+
+end

@@ -1,0 +1,22 @@
+{
+  "source_review": "ShowOff destruction calls DispatchEvent before returning into projectile-free code. xNVSE DispatchEvent selects deferIfOutsideMainThread=false. Shared callback counters/retirement must not depend on caller TLS. No claim about arbitrary third-party replacement dispatchers.",
+  "sources": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\Events\\ShowOffEvents.h",
+      "sha256": "5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.cpp",
+      "sha256": "e1ae0e4223c2b69ca40eacf414584185cdff8ef037d052e855ef1bab9de7c991"
+    }
+  ],
+  "compiled_bridge_unchanged_from_303": true,
+  "legacy_modules_byte_identical": [
+    "CurrentHit",
+    "NativeObserver",
+    "DamageEvents",
+    "NativeLog",
+    "FlightPreview"
+  ],
+  "gameplay_tested": false
+}

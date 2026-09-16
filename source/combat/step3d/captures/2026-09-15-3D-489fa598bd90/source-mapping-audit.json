@@ -1,0 +1,77 @@
+{
+  "base_esm_sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b",
+  "weapon_projectiles_from_DNAM_offset_36": [
+    {
+      "weapon": "000E3778",
+      "edid": "WeapNV9mmPistol",
+      "projectile": "0008F20F"
+    },
+    {
+      "weapon": "00004333",
+      "edid": "WeapHuntingRifle",
+      "projectile": "0008F20A"
+    },
+    {
+      "weapon": "0008F217",
+      "edid": "WeapNV9mmSubmachineGun",
+      "projectile": "0017A2C6"
+    },
+    {
+      "weapon": "000E9C3B",
+      "edid": "WeapNVServiceRifle",
+      "projectile": "0000426D"
+    }
+  ],
+  "source_projectiles": [
+    {
+      "form": "0008F20F",
+      "fields": {
+        "EDID": "396d6d42756c6c657450726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "396d6d2042756c6c657400",
+        "MODL": "70726f6a656374696c65735c396d6d70726f6a656374696c652e4e494600",
+        "DATA": "89000100000040400000b94600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a04000000000000000000000000000000000000000000000000000000000",
+        "NAM1": "656666656374735c4d757a7a6c65466c61736865735c68616e6467756e6d757a7a6c65666c61736830312e6e696600",
+        "VNAM": "01000000"
+      }
+    },
+    {
+      "form": "0017A2C6",
+      "fields": {
+        "EDID": "4175746f54726163657250726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "5269666c652042756c6c657400",
+        "MODL": "50726f6a656374696c65735c3736326d6d50726f6a656374696c652e4e494600",
+        "DATA": "8d0001000000000000c0da4500401c4600000000e91d03000000003f000000000000000000000000318701000ad7233d0000003f0000a0400000000000000000000000000000000000000000000000000000803f",
+        "NAM1": "456666656374735c4d757a7a6c65466c61736865735c4d696e6967756e4d757a7a6c65466c61736830312e4e494600",
+        "VNAM": "01000000"
+      }
+    }
+  ],
+  "differing_DATA_byte_offsets": [
+    0,
+    6,
+    7,
+    9,
+    10,
+    11,
+    27,
+    82,
+    83
+  ],
+  "impact_target": {
+    "ref": "001055E0",
+    "kind": "REFR",
+    "base": "0010243E",
+    "base_kind": "STAT",
+    "base_edid": "NVProspectorSaloon"
+  },
+  "donor_sha256": "d71fe28f1262dec7a0f2086f06b243168d74a3f11d8b57cd8b7b8127c9506e3d",
+  "donor_cartridge_rows": [
+    {
+      "line": 231,
+      "text": "@FalloutNV.esm:08F20F\t\t\t1\t0.155\t115\t\t0.355\t453\t\t0.4\t\t0.6\t\t37\t\t; 919-M882"
+    }
+  ],
+  "correction_required": "Use actual SMG projectile 17A2C6 for exact source matching and cloning; retain standard 9mm cartridge tuning from donor 08F20F row. Preserve actual original model and other data fields. Audit weapon DNAM projectile identity separately from donor cartridge key."
+}

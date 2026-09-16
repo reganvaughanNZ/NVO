@@ -1,0 +1,59 @@
+{
+  "workspace": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO",
+  "game_root": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas",
+  "packet": "3B1",
+  "version": 301,
+  "created": "2026-09-15T09:27:52.865921",
+  "files": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "action": "install",
+      "sha256": "cea7097b58bbcfc11d4cf32465ac2add91837a70b2506545b8e77af84bcc1fb4",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B1-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "source_sha256": "064630e921e62911678d5e459b74839025404b31dd7dafd0588ea82f4cfdb2c3",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "action": "install",
+      "sha256": "d7609d238203584a18496be441938488563ea6e7cccf4d0fa0ca6386678686e6",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B1-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "source_sha256": "1474aeedb6a8accc3729167afc454ecc88a46ed3c1d41904981e73e6f01ca070",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPreview.ini",
+      "action": "install",
+      "sha256": null,
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B1-Compiled\\Data\\NVSE\\Plugins\\NVOFlightPreview.ini",
+      "source_sha256": "213997f62df0c0c5b3a02f11c51e84b40a89ae4fe71aca8da434cc23f03f95dc",
+      "log_may_change_until_game_exits": false
+    }
+  ],
+  "protected_assets": [
+    "Data/NVO.esm",
+    "Data/NVO.bsa",
+    "Data/NVO.override",
+    "Data/Config/ALTStartConfig.ini"
+  ],
+  "preserve_log_copy": [
+    "NVOCombatCore.log",
+    "nvse.log",
+    "jip_ln_nvse.log"
+  ],
+  "empty_directories": [],
+  "dependency_preconditions": [
+    {
+      "path": "Data/NVSE/Plugins/itr-nvse.dll",
+      "sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c"
+    },
+    {
+      "path": "Data/NVSE/Plugins/jip_nvse.dll",
+      "sha256": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4"
+    },
+    {
+      "path": "Data/NVSE/Plugins/ShowOffNVSE.dll",
+      "sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e"
+    }
+  ]
+}

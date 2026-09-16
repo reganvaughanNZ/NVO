@@ -1,0 +1,103 @@
+{
+  "captured_at": "2026-09-16T10:00:50.9174099+12:00",
+  "pid": 7024,
+  "process_start_utc": "2026-09-15T22:00:09.0945274Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "files": [
+    {
+      "address": "0089A760",
+      "sha256": "fe7630d6076ac3fe6e19827eb79c00d9e4a128081fd5db48222221f5cd78d515",
+      "filename": "hitme-0089A760.bin",
+      "name": "hitme",
+      "bytes": 6144
+    },
+    {
+      "address": "00881130",
+      "sha256": "9ed01748d77856fb280d1e43a0dbcf19b9aa75ec8bd642d0fc75621d2902b984",
+      "filename": "character_damage-00881130.bin",
+      "name": "character_damage",
+      "bytes": 1280
+    },
+    {
+      "address": "008D49F0",
+      "sha256": "f64ec47c41e730f0cb0ae804652a49287d124a3c3db6fdbe63d2cee088d36724",
+      "filename": "creature_damage-008D49F0.bin",
+      "name": "creature_damage",
+      "bytes": 1280
+    },
+    {
+      "address": "0093B7A0",
+      "sha256": "38f2b660894c3a61dc97117d250542f02190e90f0aedf0ddacd0aaab0e253350",
+      "filename": "player_damage-0093B7A0.bin",
+      "name": "player_damage",
+      "bytes": 1792
+    },
+    {
+      "address": "008805F0",
+      "sha256": "1ab08eb7dc5c8e84fb64bf3ab425efa47aebd3a8fdc2384feb03bebd1416c372",
+      "filename": "character_getav-008805F0.bin",
+      "name": "character_getav",
+      "bytes": 384
+    },
+    {
+      "address": "008D4870",
+      "sha256": "c05714048d70daf9537c5f9dd78514eb50c34ded25a084318d2105ce2e32b365",
+      "filename": "creature_getav-008D4870.bin",
+      "name": "creature_getav",
+      "bytes": 384
+    },
+    {
+      "address": "0093ACB0",
+      "sha256": "19d02de56b5b8dfe2306c09bf34a9dd746dd6942a776a3eded7fe7d50647d8be",
+      "filename": "player_getav-0093ACB0.bin",
+      "name": "player_getav",
+      "bytes": 384
+    },
+    {
+      "address": "008B0D70",
+      "sha256": "9b57ee246458460085769e1e04210fa6d2c74d4895f4663e70182b19e358a56c",
+      "filename": "npc_damage_modifier-008B0D70.bin",
+      "name": "npc_damage_modifier",
+      "bytes": 1280
+    },
+    {
+      "address": "0094C490",
+      "sha256": "43575d8367aab5b16836adfe3cd9aaad640a49dd21c9178fbf616d4f6aaeea3f",
+      "filename": "player_damage_modifier-0094C490.bin",
+      "name": "player_damage_modifier",
+      "bytes": 1280
+    },
+    {
+      "address": "0066E900",
+      "sha256": "16f1a7340f6b5549ca61cd1097767ed464d14900ba479cc9407baa4bde1287e4",
+      "filename": "av_notify-0066E900.bin",
+      "name": "av_notify",
+      "bytes": 4096
+    },
+    {
+      "address": "010869A4",
+      "sha256": "c580a29cbbe2f53c3a6f3b0266b440e0bd71782bf958fe8ecabab9ae7a7ba997",
+      "filename": "character_tables-010869A4.bin",
+      "name": "character_tables",
+      "bytes": 1280
+    },
+    {
+      "address": "01086FE4",
+      "sha256": "cd1f068dc45d7b82e7d3ea6842cee041f7d4a0b09d497c75dcf970ac2b9bab37",
+      "filename": "creature_tables-01086FE4.bin",
+      "name": "creature_tables",
+      "bytes": 1280
+    },
+    {
+      "address": "0108A974",
+      "sha256": "2b238ee998d9a2cfa3e320446d0e4a3817655f7a6826e2fc19ef9045d7f097d3",
+      "filename": "player_tables-0108A974.bin",
+      "name": "player_tables",
+      "bytes": 1280
+    }
+  ],
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false
+}

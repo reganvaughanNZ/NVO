@@ -1,0 +1,29 @@
+{
+  "packet": "3G2",
+  "capture_sha256": "9a54c6410f44628130ff1e4db97af2a85184eb2422a9c288d5956983116f7bcf",
+  "user_update": "VATS head aim may have missed and struck torso; hypothesis, not verified outcome.",
+  "provenance": [
+    {
+      "path": "C:/Users/regan/Desktop/NVO Mod References (Open Source)/JIP-LN-NVSE-main/nvse/GameProcess.h",
+      "start": 45,
+      "end": 67,
+      "sha256": "9d544e263d3cbf592815194b3db00d20330f55ee024126c92404ccef709d5fb2"
+    },
+    {
+      "path": "C:/Users/regan/Desktop/NVO Mod References (Open Source)/JIP-LN-NVSE-main/internal/hooks.h",
+      "start": 2286,
+      "end": 2325,
+      "sha256": "2b37a24379dea9b4bed1482d657e1c04ac9d03cc5828da4f6caf8d3cdce6e0f3"
+    },
+    {
+      "path": "C:/Users/regan/Desktop/NVO Mod References (Open Source)/ShowOff-NVSE-main/SHOWOFF-NVSE/internal/decoding.h",
+      "start": 574,
+      "end": 581,
+      "sha256": "8d930cdf470d3e924007d9f066607bfc6c821ae5c33b2733b6517e0696ed3c66"
+    }
+  ],
+  "resolved_rule": "unknown; distinct input/contact provenance only",
+  "hit_observer": "existing JIP CopyHitData input, before original tail-call",
+  "new_hooks": 0,
+  "damage_replacement": false
+}

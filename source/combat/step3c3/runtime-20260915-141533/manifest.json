@@ -1,0 +1,75 @@
+{
+  "captured_at": "2026-09-15T14:15:33.3876189+12:00",
+  "pid": 1516,
+  "process_start_utc": "2026-09-15T02:13:50.2621055Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "files": [
+    {
+      "name": "controller_move",
+      "filename": "controller_move-00C70B60.bin",
+      "sha256": "863ab417a02b01f1bbe159653ed9697d94fb02adf6ef02372116ee1fcd4d7f74",
+      "bytes": 5632,
+      "address": "00C70B60"
+    },
+    {
+      "name": "movement",
+      "filename": "movement-0092F260.bin",
+      "sha256": "8bbb4b068af63b965a4c51fee4d69f7a9abc62f43ed198c69275b67278b05c80",
+      "bytes": 5152,
+      "address": "0092F260"
+    },
+    {
+      "name": "projectile_move",
+      "filename": "projectile_move-009BF300.bin",
+      "sha256": "fd3bd986e7970ac1f1be42fbdd959be55861c5b889ecb40ab129bce6014a1a60",
+      "bytes": 368,
+      "address": "009BF300"
+    },
+    {
+      "name": "movement_thread",
+      "filename": "movement_thread-009304A0.bin",
+      "sha256": "8383e3e86cf59642210ccaef52bd7ff037649f1c544bab168d48ab13cdeca3b0",
+      "bytes": 768,
+      "address": "009304A0"
+    },
+    {
+      "name": "controller_mode",
+      "filename": "controller_mode-00621240.bin",
+      "sha256": "96bd4dffb8cb6f23bea915cf6f6f29d3c2da60c8053f88d68c924bebba55a86c",
+      "bytes": 256,
+      "address": "00621240"
+    },
+    {
+      "name": "vector_transform",
+      "filename": "vector_transform-0043C490.bin",
+      "sha256": "f7109399828b7d7544d14aaf721223e2f3e489bf5d61eabd0fb78f8560207b7d",
+      "bytes": 256,
+      "address": "0043C490"
+    },
+    {
+      "name": "transform_point",
+      "filename": "transform_point-00439E90.bin",
+      "sha256": "6b95028fcd9fac3c3e690265b9717aaac93b19e5c99793674402a805f2327529",
+      "bytes": 256,
+      "address": "00439E90"
+    },
+    {
+      "name": "is_actor",
+      "filename": "is_actor-0047C850.bin",
+      "sha256": "33d2ca5811d715d4d906f10b262b06e560ad97797de799b801aa961e4fe600a0",
+      "bytes": 64,
+      "address": "0047C850"
+    },
+    {
+      "name": "missile_vtable",
+      "filename": "missile_vtable-0108FA44.bin",
+      "sha256": "bcda4f5662aa32ad15979d944fa0330014f2f0be63609cb4444c6cca9b94fc42",
+      "bytes": 1024,
+      "address": "0108FA44"
+    }
+  ],
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false
+}

@@ -1,0 +1,40 @@
+{
+  "FalloutNV.esm": [],
+  "DeadMoney.esm": [
+    "FalloutNV.esm"
+  ],
+  "HonestHearts.esm": [
+    "FalloutNV.esm"
+  ],
+  "OldWorldBlues.esm": [
+    "FalloutNV.esm"
+  ],
+  "LonesomeRoad.esm": [
+    "FalloutNV.esm"
+  ],
+  "GunRunnersArsenal.esm": [
+    "FalloutNV.esm"
+  ],
+  "ClassicPack.esm": [
+    "FalloutNV.esm"
+  ],
+  "MercenaryPack.esm": [
+    "FalloutNV.esm"
+  ],
+  "TribalPack.esm": [
+    "FalloutNV.esm"
+  ],
+  "CaravanPack.esm": [
+    "FalloutNV.esm"
+  ],
+  "NVO.esm": [
+    "FalloutNV.esm",
+    "DeadMoney.esm",
+    "HonestHearts.esm",
+    "LonesomeRoad.esm",
+    "OldWorldBlues.esm"
+  ],
+  "NVOFlightPilot.esp": [
+    "FalloutNV.esm"
+  ]
+}

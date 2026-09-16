@@ -1,0 +1,128 @@
+{
+  "schema": 1,
+  "status": "reference_only_no_installed_reader",
+  "damage_replacement": false,
+  "units": {
+    "mass": "kg",
+    "length": "m",
+    "velocity": "m/s",
+    "kinetic_energy": "J",
+    "fictional_energy_payload": "authored_NVO_dose_units",
+    "time": "simulated_game_seconds"
+  },
+  "source": {
+    "path": "source\\combat\\step3a\\NVO-Flight-Pilot.json",
+    "sha256": "a1cbc26838d325edb9a2ebc08ff406708c28081f396c53e41713d7e30ae684c8",
+    "donor_archive": "BallistX-70341-5-4-1712065466.rar"
+  },
+  "profiles": [
+    {
+      "id": "9mm-pistol-standard",
+      "family": "kinetic_single",
+      "match": {
+        "weapon": "FalloutNV.esm:0E3778",
+        "ammunition": "FalloutNV.esm:08ED03",
+        "projectile_base": "FalloutNV.esm:08F20F",
+        "policy": "All three must match the live shot. Otherwise preserve engine behaviour."
+      },
+      "enabled": false,
+      "mass_kg": 0.007451874649999999,
+      "diameter_m": 0.009016999999999999,
+      "construction": null,
+      "material_response_curve": null,
+      "injury_conversion_curve": null,
+      "impact_velocity_mps": null,
+      "runtime_unit_calibration": "pending",
+      "contact_authority": "pending",
+      "provenance": {
+        "cartridge": {
+          "member": "Config/BallistX/Data/CartridgeData.cfg",
+          "line": 231,
+          "original_row": "@FalloutNV.esm:08F20F\t\t\t1\t0.155\t115\t\t0.355\t453\t\t0.4\t\t0.6\t\t37\t\t; 919-M882"
+        },
+        "weapon": {
+          "member": "Config/BallistX/Data/WeaponData.cfg",
+          "line": 10,
+          "original_row": "@FalloutNV.esm:0E3778\t\t\t\t4.7\t\t1.6\t\t12.0\t; 9mm Pistol\t\t\t\t\t\t; 919-M882, 15m, Browning Hi-Power"
+        }
+      },
+      "note": "Source-backed donor tuning; not an activated armour/damage profile"
+    },
+    {
+      "id": "hunting-rifle-standard-308",
+      "family": "kinetic_single",
+      "match": {
+        "weapon": "FalloutNV.esm:004333",
+        "ammunition": "FalloutNV.esm:06B53C",
+        "projectile_base": "FalloutNV.esm:08F20A",
+        "policy": "All three must match the live shot. Otherwise preserve engine behaviour."
+      },
+      "enabled": false,
+      "mass_kg": 0.00952543977,
+      "diameter_m": 0.007823199999999999,
+      "construction": null,
+      "material_response_curve": null,
+      "injury_conversion_curve": null,
+      "impact_velocity_mps": null,
+      "runtime_unit_calibration": "pending",
+      "contact_authority": "pending",
+      "provenance": {
+        "cartridge": {
+          "member": "Config/BallistX/Data/CartridgeData.cfg",
+          "line": 196,
+          "original_row": "@FalloutNV.esm:08F20A\t\t\t7\t0.209\t147\t\t0.308\t1012\t2.1\t\t0.6\t\t67\t\t; 762-M80"
+        },
+        "weapon": {
+          "member": "Config/BallistX/Data/WeaponData.cfg",
+          "line": 30,
+          "original_row": "@FalloutNV.esm:004333\t\t\t\t22.0\t2.8\t\t1.31\t; Hunting Rifle\t\t\t\t\t\t; 762-Mk316, 100m, Winchester Model 70"
+        }
+      },
+      "note": "Source-backed donor tuning; not an activated armour/damage profile"
+    },
+    {
+      "id": "laser-template",
+      "family": "laser",
+      "enabled": false,
+      "match": null,
+      "material_response_curve": null,
+      "injury_conversion_curve": null,
+      "pulse_dose_nvo_units": null,
+      "range_delivery_curve": null,
+      "note": "Intentionally incomplete; must reject runtime activation"
+    },
+    {
+      "id": "plasma-template",
+      "family": "plasma",
+      "enabled": false,
+      "match": null,
+      "material_response_curve": null,
+      "injury_conversion_curve": null,
+      "payload_dose_nvo_units": null,
+      "travel_decay_curve": null,
+      "note": "Intentionally incomplete; must reject runtime activation"
+    },
+    {
+      "id": "flame-template",
+      "family": "flame",
+      "enabled": false,
+      "match": null,
+      "material_response_curve": null,
+      "injury_conversion_curve": null,
+      "dose_rate_nvo_units_per_game_second": null,
+      "exposure_interval_adapter": null,
+      "note": "Intentionally incomplete; must reject runtime activation"
+    },
+    {
+      "id": "explosive-template",
+      "family": "explosive",
+      "enabled": false,
+      "match": null,
+      "material_response_curve": null,
+      "injury_conversion_curve": null,
+      "blast_exposure_profile": null,
+      "component_identity_adapter": null,
+      "note": "Intentionally incomplete; must reject runtime activation"
+    }
+  ]
+}

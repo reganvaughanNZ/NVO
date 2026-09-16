@@ -1,0 +1,5 @@
+# AUTHORING EXAMPLE ONLY. Deliberately invalid placeholders. Do not install.
+# Use a verified owning plugin and local ID; body and helmet need distinct records.
+NVO_ARMOUR_COVERAGE_V1
+NVO.esm|BODYID|1|BODYMASK|unknown|unknown|unknown|unknown|unknown|unknown
+NVO.esm|HELMID|1|HELMMASK|unknown|unknown|unknown|unknown|unknown|unknown

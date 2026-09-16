@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "archive": "source\\combat\\step3e\\captures\\2026-09-15-3E-9a8b6287ee09\\NVOCombatCore.log",
+  "sha256": "9a8b6287ee098f0037562c30a85e349e658efac6a7b8ccb746a8c422b0a8e0ba",
+  "bytes": 198093,
+  "lines": 851,
+  "last_write_local": "2026-09-15T18:26:03.203285+12:00",
+  "user_context": "Test finished. User says second .44 VATS hit was a miss; changed distance. Do not assume every post-reload shot hit an actor."
+}

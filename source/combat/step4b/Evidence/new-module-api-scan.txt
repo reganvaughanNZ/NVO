@@ -1,0 +1,5 @@
+FILES_SCANNED=4
+MATCHES=2
+EXPECTED_ONLY_COMPILE_TIME_SHADOW_FLAG=1
+C:\Users\regan\Documents\ChatGPT\NVO\native\NVOCombatCore\src\ArmourSnapshotReader.cpp|512|static_assert(!nvo::armour::reader::kCallsShadowAdapter);
+C:\Users\regan\Documents\ChatGPT\NVO\native\NVOCombatCore\include\ArmourSnapshotReader.hpp|79|constexpr bool kCallsShadowAdapter = false;

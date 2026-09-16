@@ -1,0 +1,87 @@
+{
+  "esm_sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d",
+  "id_note": "File-local master prefix, not runtime load-order FormID; use original Editor ID in GECK",
+  "compiled_runtime_retirement": false,
+  "scripts": [
+    {
+      "editor_id": "ALTQscript",
+      "file_local_form": "05002900",
+      "source": "scn ALTQscript\r\n\r\nstring_var sVeronicLoc\r\n\r\nref rTurnInItem\r\nint iTurnInValue\r\nint nvoReservedSlot4\r\nref rRef\r\n\r\nint bBlock\r\n\r\nint iState\r\n\r\nint nvoReservedSlot8\r\nint nvoReservedSlot9\r\nint iScience\r\nint iUpdate\r\n\r\nstring_var sMajorKnight\r\nint ModOverridingIndex\r\nstring_var modName\r\n\r\nbegin gamemode\r\n\tif getgameloaded == 0\r\n\t\treturn\r\n\telse\r\n\t\tif GetNVSEVersion < 6\r\n\t\t    Return\r\n\t\telseif GetNVSEVersion == 6\r\n\t\t    if GetNVSERevision < 3\r\n\t\t        Return\r\n\t\t    endif\r\n\t\tendif\r\n\t\tif IsPluginInstalled \"JIP LN NVSE\" == 0\r\n\t\t    if IsPluginInstalled \"JIP NVSE Plugin\" == 0\r\n\t\t        Return\r\n\t\t    endif\r\n\t\tendif\r\n\t\tif IsPluginInstalled \"JohnnyGuitarNVSE\" == 0\r\n\t\t    Return\r\n\t\tendif\r\n\t\tif IsPluginInstalled \"ShowOffNVSE Plugin\" == 0\r\n\t\t    Return\r\n\t\tendif\r\n\r\n\t\tif getgamerestarted\r\n\t\t\tIf ismodloaded \"Better Character Creation.esm\"\r\n\t\t\t\tPrintC \"Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues.\"\r\n\t\t\tElseIf Eval IsFormOverridden VCG00\r\n\t\t\t\tSet ModOverridingIndex to GetFormOverrideIndex VCG00\r\n\t\t\t\tLet modName := GetModName ModOverridingIndex 1\r\n\t\t\t\tPrintC \"The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.\" modName\r\n\t\t\t\tsv_destruct modName\r\n\t\t\tElseIf Eval IsFormOverridden VCG01\r\n\t\t\t\tSet ModOverridingIndex to GetFormOverrideIndex VCG01\r\n\t\t\t\tLet modName := GetModName ModOverridingIndex 1\r\n\t\t\t\tPrintC \"The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.\" modName\r\n\t\t\t\tsv_destruct modName\r\n\t\t\tElseif ismodloaded \"YUP - Base Game + All DLC.esm\" && GetModIndex \"YUP - Base Game + All DLC.esm\" > GetModIndex \"NVO.esm\"\r\n\t\t\t\tPrintC \"WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues.\"\r\n\t\t\tendif\r\n\r\n\t\t\tSetPerkFlag WildWasteland 1 0\r\n\r\n\t\t\tLNSetName $sVeronicLoc VDialogueVeronicaVeronicaTopic000\r\n\t\t\tif eval Sv_Length sMajorKnight != -1\r\n\t\t\t\tLNSetName $sMajorKnight vMojavevMOMajorKnightTopic019\r\n\t\t\tendif\r\n\t\t\tDialogResponseAddRelatedTopic 0015E575 ALTBoSTop 1 0\r\n\t\t\tDialogResponseAddRelatedTopic 000E2F71 ALTBoSTop 1 0\r\n\r\n\t\t\tDialogResponseAddRelatedTopic 000E3608 ALTFoAHelios 1 0\r\n\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC01MQ00 100\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC02MQ00 100\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC03MQ00 100\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC04MQ00 100\r\n\r\n\t\t\tif ALTBackground == 12\r\n\t\t\t\tLNSetName \"How did the Three Families defeat us?\" VMS45VRRCPapaKhanTopic016\r\n\t\t\t\tLNSetName \"Can you tell me about our tribe?\" PapaKhanKhans\r\n\t\t\t\tLNSetName \"Just trying to do my part for the tribe.\" vFreeformSloanQJMelissaTopic017\r\n\t\t\t\tLNSetName \"Have a look at this book. Our tribe is nothing but a bunch of thugs, aping the glories of the past.\" VMS45VRRCPapaKhanTopic013\r\n\t\t\t\tLNSetName \"Have a look at this book. If you want to see what our tribe could be, read about the Mongol Empire.\" VMS45VRRCPapaKhanTopic011\r\n\t\t\t\tLNSetName \"We don't need to look outward, mighty Khan. Our tribe is proud and strong - we should claim our own glory!\" VMS45VRRCPapaKhanTopic003\r\n\t\t\t\tLNSetName \"What great legacy do the Great Khans have? Our tribe is nothing but ghosts and martyrs.\" VMS45VRRCPapaKhanTopic009\r\n\t\t\telseif ALTBackground == 14\r\n\t\t\t\tLNSetName \"Can you tell me more about Novac?\" JeannieCrawfordWhereAmI\r\n\t\t\t\tLNSetName \"I just moved into town. Pleasure to meet you.\" MannyVargasWhoAreYou\r\n\t\t\t\tLNSetName \"I just moved into town, and I wanted to introduce myself.\" CraigBooneMeetingNewPeople\r\n\t\t\t\tLNSetName \"Is this any way to treat your new neighbor?\" CraigBooneDoesntAffectMe\r\n\t\t\t\tLNSetName \"I just moved into town, and I wanted to introduce myself.\" AliceMcBrideIntro\r\n\t\t\t\tLNSetName \"Yep, I just moved into the neighborhood.\" CraigBooneYes\r\n\t\t\telseif ALTBackground == 16\r\n\t\t\t\tLNSetName \"Why can't every man in Freeside join the Kings?\" VFreeformFreesideVFSTheKingTopic065\r\n\t\t\telseif ALTBackground == 22\r\n\t\t\t\tSetFactionFlags VWastelandNVBanditViperFaction 256\r\n\t\t\telseif ALTBackground == 21\r\n\t\t\t\tSetFactionFlags VJackalsGangFaction 256\r\n\t\t\telseif ALTBackground == 31\r\n\t\t\t\tForEachInList ALTEggList ({rRef} => SetValueAlt rRef ((GetValue rRef)*2))\r\n\t\t\telseif ALTBackground == 35\r\n\t\t\t\tLNSetName \"I'm happy to help.\" VFreeformFreesideFSJulieFarkasTopic004\r\n\t\t\telseif ALTBackground == 38\r\n\t\t\t\tif ismodloaded \"NukaExpansionUltFNV.esm\"\r\n\t\t\t\t\tcall ALTNukaExpansionPatcher\r\n\t\t\t\tendif\r\n\t\t\t\tSetOnUseAidItemEventHandler ALTNukaDrinkEvent 1 ALTNukaList\r\n\t\t\telseif ALTBackground == 41\r\n\t\t\t\tSetFactionFlags VCrCoyoteFaction 256\r\n\t\t\t\tSetFactionFlags NVDLC02CrCoyoteFaction 256\r\n\t\t\t\tForEachInList ALTCoyoteList ({rRef} => call ALTSetFlagUDF rRef 1 5 1)\r\n\t\t\telseif ALTBackground == 49\r\n\t\t\t\tLNSetName \"How long have you worked for the Gun Runners?\" vDialogueGunRunnerNVIsaacTopic000\r\n\t\t\tendif\r\n\t\tendif\r\n\r\n\t\tif iUpdate == 0\r\n\t\t\tSetEssential GSSunnySmiles 0\r\n\t\t\tSetEssential GSCheyenne 0\r\n\r\n\t\t\tSetCellOwnership GSDocMitchellHouse DocMitchell\r\n\r\n\t\t\tiUpdate = 1\r\n\t\telseif iUpdate == 1\r\n\t\t\tMcMurphyREF.disable\r\n\t\t\tJessupREF.disable\r\n\t\t\tiUpdate = 2\r\n\t\telseif iUpdate == 2\r\n\t\t\tif ALTGO == 0 && MannyVargasREF.GetItemCount VMQ01NoteObject > 0\r\n\t\t\t\tMannyVargasREF.removeitem VMQ01NoteObject 1\r\n\t\t\tendif\r\n\t\t\tiUpdate = 3\r\n\t\tendif\r\n\r\n\t\tif ALTBackground == 3\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTGamblerPreActEvent 0::(GetListForms ALTGamblerTablesList) 1::Player 2::1\r\n\t\telseif ALTBackground == 21\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTViperActivateEvent 0::(GetListForms ALTViperLeaderList) 1::Player 2::1\r\n\t\telseif ALTBackground == 22\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTJackalActivateEvent 0::(GetListForms ALTJackalLeaderList) 1::Player 2::1\r\n\t\telseif ALTBackground == 44\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnAdd\" ALTCapEvent 1::Caps001 2::player\r\n\t\telseif ALTBackground == 47\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTLonewolfActivateEvent 0::(GetListForms ALTLoneWolfRadioList) 1::Player 2::1\r\n\t\telseif ALTBackground == 53\r\n\t\t\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 1::Player\r\n\t\t\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 2::Player\r\n\t\tendif\r\n\tendif\r\nend",
+      "compiled_bytes": 3821,
+      "compiled_sha256": "d96c69ce5cd87a6d873efa3b9f5be47a9d0be909c455831b3fc2b8bd3cdf5470",
+      "retirement_applied": false
+    },
+    {
+      "editor_id": "ALTRichKidHit",
+      "file_local_form": "050074CA",
+      "source": "scn\tALTRichKidHit\r\n\r\nref rTarget\r\nref rAttacker\r\nfloat iCaps\r\n\r\n\r\nbegin Function {rTarget, rAttacker}\r\n\t\r\n\tiCaps = player.getitemcount caps001\r\n\tiCaps *= 0.001\r\n\tiCaps = Floor iCaps\r\n\t;print $iCaps\r\n\t;print $rTarget.getav health\r\n\tif rTarget.GetDead\r\n\t\t;print \"dead\"\r\n\t\treturn\r\n\telseif iCaps > rTarget.getav health\r\n\t\trTarget.kill rAttacker\r\n\t\t;print \"kill\"\r\n\telse\r\n\t\trTarget.damageav health iCaps\r\n\t\t;print \"damage\"\r\n\tendif\r\n\t;print \"test\"\r\n\r\nend",
+      "compiled_bytes": 188,
+      "compiled_sha256": "1721ec8df9baba5c82f4c7b010bea6cbfa2a1fe1e5fb97cb9e000e2ae736938f",
+      "retirement_applied": false
+    },
+    {
+      "editor_id": "ALTBackRichKidUDF",
+      "file_local_form": "050122A2",
+      "source": "scn ALTBackRichKidUDF\r\n\r\nbegin Function {}\r\n\tALTStartQ.iWealth = 5\r\n\tALTQ.sMajorKnight = \"Rancher.\"\r\n\tALTQ.sVeronicLoc = \"The Big Circle.\"\r\n\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 1::Player\r\n\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 2::Player\r\n\tPlayer.additemalt CowboyHat01 1 65 1 1\r\n\tPlayer.additemalt OutfitGambler01 1 65 1 1\r\n\tPlayer.additem caps001 5000 1\r\n\tIf ismodloaded \"Simple Open Freeside.esm\"\r\n\t\tALTStartQ.rMarker = ALTRichKidMarkerFreesideOpen\r\n\tElse\r\n\t\tALTStartQ.rMarker = ALTRichKidMarker\r\n\tEndIf\r\n\r\n\tLListClear ALTStartingGearGuns\r\n\tLListAddForm ALTStartingGearGuns WithAmmoNV357RevolverLoot 1 1 0.0\r\n\tLListAddForm ALTStartingGearGuns Ammo357Magnum 1 30 1.0\r\nend",
+      "compiled_bytes": 404,
+      "compiled_sha256": "67667f85c49ae603950723acc1c31ecbb4d1e6481abab12152465beefc4a0588",
+      "retirement_applied": false
+    }
+  ],
+  "source_references": [
+    {
+      "editor_id": "ALTQscript",
+      "file_local_form": "05002900",
+      "lines": [
+        {
+          "number": 147,
+          "text": "\t\t\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 1::Player"
+        },
+        {
+          "number": 148,
+          "text": "\t\t\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 2::Player"
+        }
+      ]
+    },
+    {
+      "editor_id": "ALTRichKidHit",
+      "file_local_form": "050074CA",
+      "lines": [
+        {
+          "number": 1,
+          "text": "scn\tALTRichKidHit"
+        }
+      ]
+    },
+    {
+      "editor_id": "ALTBackRichKidUDF",
+      "file_local_form": "050122A2",
+      "lines": [
+        {
+          "number": 7,
+          "text": "\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 1::Player"
+        },
+        {
+          "number": 8,
+          "text": "\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 2::Player"
+        }
+      ]
+    }
+  ],
+  "descriptions": [
+    {
+      "type": "MESG",
+      "editor_id": "ALTRichKid",
+      "file_local_form": "050074CD",
+      "field": "FULL",
+      "text": "Brahmin Baron"
+    },
+    {
+      "type": "MESG",
+      "editor_id": "ALTRichKid",
+      "file_local_form": "050074CD",
+      "field": "DESC",
+      "text": "You're a wealthy Brahmin Baron, and you've ventured to Vegas in search of gambling and cheap thrills. As you step into Freeside, it's clear this is the kind of place where you need to guard your caps. Being wealthy has its perks, but you're well aware that a fat purse can draw unwanted attention.\r\n\r\n+ Start the game with a lot caps\r\n+ The more caps you have in your inventory, the greater the damage you deal.\r\n- Conversely, the more caps you hold, \r\nthe more damage you take."
+    }
+  ]
+}

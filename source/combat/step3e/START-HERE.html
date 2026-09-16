@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO Combat Packet 3E</title>
+<style>body{background:#101713;color:#e6f0e8;font:18px/1.6 system-ui;max-width:850px;margin:45px auto;padding:0 24px}h1{line-height:1.2}button{font:inherit;background:#a9ddaf;border:0;border-radius:6px;padding:12px 22px;cursor:pointer}code{color:#b7e7c0}li{margin-bottom:14px}.box{border:1px solid #497450;border-radius:8px;padding:20px}a{color:#bbe8c2}#status{min-height:1.5em}</style>
+<h1>NVO Combat Packet 3E</h1>
+<p><strong>10mm Pistol · .357 Magnum Revolver · .44 Magnum Revolver</strong></p>
+<p>This packet adds standard-ammunition flight profiles for these three weapons. Your previous weapon checks remain accepted. Keep <strong>NVO.esm and NVOFlightPilot.esp active</strong>. No GECK work or compilation is needed.</p>
+<div class="box"><h2>Get the test kit</h2><p>Load your prepared test save and wait three seconds. Open the game console and run:</p><p><code id="cmd">bat NVOFlightKit3E</code></p><button id="copy" type="button">Copy kit command</button><p id="status" role="status"></p><p>Three weapons and 100 standard rounds for each. Each run adds another kit. Use standard ammunition and the ordinary weapon names above.</p></div>
+<h2>Your four-shot check</h2>
+<ol>
+<li>Choose a distant solid target with a clear line of fire, roughly <strong>100 metres</strong> if practical. The distance used for your successful 3D1 scenery shots is suitable.</li>
+<li>Outside VATS, fire <strong>one 10mm Pistol shot, one .357 Magnum Revolver shot and one .44 Magnum Revolver shot</strong>, pausing between weapons.</li>
+<li><strong>Reload once</strong>, wait three seconds and regrant the kit only if needed. Fire <strong>one .44 Magnum Revolver shot in VATS at a distant live enemy</strong> with a clear line of fire. If no suitable target is available, report that instead of repeating setup.</li>
+<li><strong>Exit and report completion.</strong> I will read NVOCombatCore.log beside FalloutNV.exe. Wait for review before another launch overwrites it. Mention if the first load was setup.</li>
+</ol>
+<p>God mode is fine. No old-weapon retest, video or stress test is needed. If flight reports unavailable or firing fails, stop and report it.</p>
+<p>The DLL remains <strong>build 311</strong> and the log header still says phase 3D. This update changes records and configuration. Damage replacement remains disabled; special-ammunition profiles come separately.</p>
+<p><a href="README.md">Full instructions and reversal</a> · <a href="Installation/INSTALL-3E.md">Installation receipt</a> · <a href="Installation/IMPLEMENTATION.md">Implementation details</a></p>
+<script>document.getElementById('copy').onclick=async()=>{const text='bat NVOFlightKit3E';let ok=false;try{await navigator.clipboard.writeText(text);ok=true}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}document.getElementById('status').textContent=ok?'Copied. Paste into the New Vegas console.':'Select and copy the command shown above.'}</script>
+</html>

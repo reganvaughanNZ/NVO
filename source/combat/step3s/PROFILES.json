@@ -1,0 +1,74 @@
+{
+  "packet": "3S",
+  "runtime_loaded": false,
+  "donor_archive": {
+    "archive": "BallistX-70341-5-4-1712065466.rar",
+    "sha256": "d71fe28f1262dec7a0f2086f06b243168d74a3f11d8b57cd8b7b8127c9506e3d",
+    "members": {
+      "Config/BallistX/Data/CartridgeData.cfg": {
+        "sha256": "39faae1822635acc24e2f73079e0854cd0e6ab522a63cfa7e8dde23d2e3f0444",
+        "size_bytes": 17990
+      },
+      "Config/BallistX/Data/WeaponData.cfg": {
+        "sha256": "af5afb007c83992240793ff796cbc53f6f03ad6653f646cf754c0f4e24224c9e",
+        "size_bytes": 16443
+      },
+      "Config/BallistX/Help.txt": {
+        "sha256": "a04b7116fee8b09a25dd80bf3daa9f6b27d66001abf59cb266e151a104587900",
+        "size_bytes": 2904
+      },
+      "Config/BallistX/Functions/G1_DragFunction.cfg": {
+        "sha256": "dde83fb459d5d046c67e86ee081521f22dbbe8396e3b1a6a4dec0e3b8f75aa1c",
+        "size_bytes": 656
+      },
+      "Config/BallistX/Functions/G7_DragFunction.cfg": {
+        "sha256": "a8aa90c8e000cec3fc80c5b7dde976509ad1ae2f1c980e172a37648bae40b27a",
+        "size_bytes": 656
+      }
+    },
+    "base_record_file": {
+      "name": "FalloutNV.esm",
+      "sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b",
+      "scope": "Record identity/type only. Not a winning-override or runtime projectile selection audit."
+    }
+  },
+  "unit_source": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b9",
+  "profiles": [
+    {
+      "id": "9mm-pistol-standard",
+      "match": {
+        "weapon": "FalloutNV.esm:0E3778",
+        "ammunition": "FalloutNV.esm:08ED03",
+        "projectile_base": "FalloutNV.esm:08F20F",
+        "policy": "All three must match the live shot. Otherwise preserve engine behaviour."
+      },
+      "mass_grains": 115.0,
+      "mass_kg": 0.007451874649999999,
+      "diameter_inches": 0.355,
+      "diameter_m": 0.009016999999999999,
+      "donor_row": {
+        "member": "Config/BallistX/Data/CartridgeData.cfg",
+        "line": 231,
+        "original_row": "@FalloutNV.esm:08F20F\t\t\t1\t0.155\t115\t\t0.355\t453\t\t0.4\t\t0.6\t\t37\t\t; 919-M882"
+      }
+    },
+    {
+      "id": "hunting-rifle-standard-308",
+      "match": {
+        "weapon": "FalloutNV.esm:004333",
+        "ammunition": "FalloutNV.esm:06B53C",
+        "projectile_base": "FalloutNV.esm:08F20A",
+        "policy": "All three must match the live shot. Otherwise preserve engine behaviour."
+      },
+      "mass_grains": 147.0,
+      "mass_kg": 0.00952543977,
+      "diameter_inches": 0.308,
+      "diameter_m": 0.007823199999999999,
+      "donor_row": {
+        "member": "Config/BallistX/Data/CartridgeData.cfg",
+        "line": 196,
+        "original_row": "@FalloutNV.esm:08F20A\t\t\t7\t0.209\t147\t\t0.308\t1012\t2.1\t\t0.6\t\t67\t\t; 762-M80"
+      }
+    }
+  ]
+}

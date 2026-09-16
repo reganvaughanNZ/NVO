@@ -1,0 +1,26 @@
+{
+  "packet": "3C2",
+  "version": 307,
+  "status": "compiled source; runtime pending",
+  "movement_call": "009BF411",
+  "movement_target": "0092F260",
+  "accounting_call": "009BF461",
+  "accounting_target": "009C4E60",
+  "old_generic_matrix_hook_removed": true,
+  "direction": "Rz(heading +2C) * Rx(pitch +24), local +Y forward; nonzero rotation Y unsupported",
+  "first_segment": "unchanged, automatic direction baseline",
+  "subsequent_segments": "inverse rotated RK4 world displacement, followed by actual-displacement comparison",
+  "first_segment_does_not_verify_entire_basis": true,
+  "captures": [
+    {
+      "path": "source\\combat\\step3c2\\runtime-20260915-132934\\manifest.json",
+      "sha256": "a2f3c969b018fb94e780feffbd96f60d8dc2c90dedd3113f5c7236e439ebafa3",
+      "code_redistributed": false
+    },
+    {
+      "path": "source\\combat\\step3c2\\runtime-20260915-133335\\manifest.json",
+      "sha256": "cc2181a548c85235fe54cc533b7b87db302770d19e20116863639cfd92c6c3b9",
+      "code_redistributed": false
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVO Combat Packet 4A — Offline Armour Shadow Adapter</title>
+  <style>
+    body { max-width: 880px; margin: 40px auto; padding: 0 24px; background: #111815; color: #d9e7df; font: 18px/1.55 Segoe UI, sans-serif; }
+    h1, h2 { color: #9fe0ba; } .hold { border-left: 5px solid #e1aa4b; padding: 12px 18px; background: #202018; }
+    a { color: #8ecbff; } code { color: #f0d58a; } li { margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h1>NVO Combat Packet 4A</h1>
+  <p><strong>Offline armour shadow adapter. Nothing in this packet is installed into New Vegas.</strong></p>
+  <p>The adapter converts fully verified evidence into a read-only call to the existing pure armour model. Unknown armour does not become bare skin, conflicting regions do not become torso, and a speed interval does not become an exact impact speed.</p>
+  <div class="hold"><strong>Damage remains on HOLD.</strong> There are no gameplay writes, hooks, engine readers, production armour profiles, or runtime integration.</div>
+  <h2>Verification</h2>
+  <ul>
+    <li>48 shadow-adapter checks passed.</li>
+    <li>45 existing armour-model checks passed.</li>
+    <li>Standalone x86 builds completed with warnings treated as errors.</li>
+    <li>No gameplay test is required.</li>
+  </ul>
+  <p>Read <a href="CONTRACT.md">CONTRACT.md</a> for the evidence rules and <a href="BUILD-RESULT.md">BUILD-RESULT.md</a> for the build outcome.</p>
+  <p>A separately approved Step 4B would investigate the guarded engine-side equipped-armour snapshot reader while keeping all damage writes disabled.</p>
+</body>
+</html>

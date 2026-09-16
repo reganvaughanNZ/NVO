@@ -1,0 +1,126 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c\runtime-20260915-121307\rotation.obj
+
+File Type: COFF OBJECT
+
+  00575830: 55                 push        ebp
+  00575831: 8B EC              mov         ebp,esp
+  00575833: 83 EC 44           sub         esp,44h
+  00575836: 89 4D BC           mov         dword ptr [ebp-44h],ecx
+  00575839: C6 45 E3 00        mov         byte ptr [ebp-1Dh],0
+  0057583D: A1 6C 42 1F 01     mov         eax,dword ptr ds:[011F426Ch]
+  00575842: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  00575845: 8B 0D 70 42 1F 01  mov         ecx,dword ptr ds:[011F4270h]
+  0057584B: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  0057584E: 8B 15 74 42 1F 01  mov         edx,dword ptr ds:[011F4274h]
+  00575854: 89 55 F8           mov         dword ptr [ebp-8],edx
+  00575857: A1 6C 42 1F 01     mov         eax,dword ptr ds:[011F426Ch]
+  0057585C: 89 45 E4           mov         dword ptr [ebp-1Ch],eax
+  0057585F: 8B 0D 70 42 1F 01  mov         ecx,dword ptr ds:[011F4270h]
+  00575865: 89 4D E8           mov         dword ptr [ebp-18h],ecx
+  00575868: 8B 15 74 42 1F 01  mov         edx,dword ptr ds:[011F4274h]
+  0057586E: 89 55 EC           mov         dword ptr [ebp-14h],edx
+  00575871: 83 3D 38 DF 1D 01  cmp         dword ptr ds:[011DDF38h],0
+            00
+  00575878: 0F 84 1A 01 00 00  je          00575998
+  0057587E: 8B 0D 38 DF 1D 01  mov         ecx,dword ptr ds:[011DDF38h]
+  00575884: E8 87 75 EB FF     call        0042CE10
+  00575889: 0F B6 C0           movzx       eax,al
+  0057588C: 85 C0              test        eax,eax
+  0057588E: 0F 84 04 01 00 00  je          00575998
+  00575894: C6 45 E2 00        mov         byte ptr [ebp-1Eh],0
+  00575898: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  0057589B: D9 01              fld         dword ptr [ecx]
+  0057589D: DC 1D B0 31 02 01  fcomp       qword ptr ds:[010231B0h]
+  005758A3: DF E0              fnstsw      ax
+  005758A5: F6 C4 44           test        ah,44h
+  005758A8: 0F 8B B0 00 00 00  jnp         0057595E
+  005758AE: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  005758B1: D9 02              fld         dword ptr [edx]
+  005758B3: DC 1D B0 41 02 01  fcomp       qword ptr ds:[010241B0h]
+  005758B9: DF E0              fnstsw      ax
+  005758BB: F6 C4 44           test        ah,44h
+  005758BE: 0F 8B 9A 00 00 00  jnp         0057595E
+  005758C4: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  005758C7: D9 40 04           fld         dword ptr [eax+4]
+  005758CA: DC 1D B0 31 02 01  fcomp       qword ptr ds:[010231B0h]
+  005758D0: DF E0              fnstsw      ax
+  005758D2: F6 C4 44           test        ah,44h
+  005758D5: 0F 8B 83 00 00 00  jnp         0057595E
+  005758DB: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  005758DE: D9 41 04           fld         dword ptr [ecx+4]
+  005758E1: DC 1D B0 41 02 01  fcomp       qword ptr ds:[010241B0h]
+  005758E7: DF E0              fnstsw      ax
+  005758E9: F6 C4 44           test        ah,44h
+  005758EC: 7B 70              jnp         0057595E
+  005758EE: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  005758F1: D9 42 08           fld         dword ptr [edx+8]
+  005758F4: DC 1D B0 31 02 01  fcomp       qword ptr ds:[010231B0h]
+  005758FA: DF E0              fnstsw      ax
+  005758FC: F6 C4 44           test        ah,44h
+  005758FF: 7B 5D              jnp         0057595E
+  00575901: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00575904: D9 40 08           fld         dword ptr [eax+8]
+  00575907: DC 1D B0 41 02 01  fcomp       qword ptr ds:[010241B0h]
+  0057590D: DF E0              fnstsw      ax
+  0057590F: F6 C4 44           test        ah,44h
+  00575912: 7B 4A              jnp         0057595E
+  00575914: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00575917: D9 01              fld         dword ptr [ecx]
+  00575919: DC 1D D0 0E 03 01  fcomp       qword ptr ds:[01030ED0h]
+  0057591F: DF E0              fnstsw      ax
+  00575921: F6 C4 05           test        ah,5
+  00575924: 7A 38              jp          0057595E
+  00575926: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  00575929: D9 02              fld         dword ptr [edx]
+  0057592B: DC 1D C8 0E 03 01  fcomp       qword ptr ds:[01030EC8h]
+  00575931: DF E0              fnstsw      ax
+  00575933: F6 C4 41           test        ah,41h
+  00575936: 75 26              jne         0057595E
+  00575938: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0057593B: D9 40 04           fld         dword ptr [eax+4]
+  0057593E: DC 1D D0 0E 03 01  fcomp       qword ptr ds:[01030ED0h]
+  00575944: DF E0              fnstsw      ax
+  00575946: F6 C4 05           test        ah,5
+  00575949: 7A 13              jp          0057595E
+  0057594B: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  0057594E: D9 41 04           fld         dword ptr [ecx+4]
+  00575951: DC 1D C8 0E 03 01  fcomp       qword ptr ds:[01030EC8h]
+  00575957: DF E0              fnstsw      ax
+  00575959: F6 C4 41           test        ah,41h
+  0057595C: 74 35              je          00575993
+  0057595E: C7 45 DC 00 00 00  mov         dword ptr [ebp-24h],0
+            00
+  00575965: 6A 00              push        0
+  00575967: 8D 55 DC           lea         edx,[ebp-24h]
+  0057596A: 52                 push        edx
+  0057596B: 8D 45 E4           lea         eax,[ebp-1Ch]
+  0057596E: 50                 push        eax
+  0057596F: 8D 4D F0           lea         ecx,[ebp-10h]
+  00575972: 51                 push        ecx
+  00575973: 8B 55 BC           mov         edx,dword ptr [ebp-44h]
+  00575976: 8B 02              mov         eax,dword ptr [edx]
+  00575978: 8B 4D BC           mov         ecx,dword ptr [ebp-44h]
+  0057597B: 8B 90 38 01 00 00  mov         edx,dword ptr [eax+00000138h]
+  00575981: FF D2              call        edx
+  00575983: D9 45 F8           fld         dword ptr [ebp-8]
+  00575986: DC 05 58 07 02 01  fadd        qword ptr ds:[01020758h]
+  0057598C: D9 5D F8           fstp        dword ptr [ebp-8]
+  0057598F: C6 45 E3 01        mov         byte ptr [ebp-1Dh],1
+  00575993: E9 99 00 00 00     jmp         00575A31
+  00575998: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0057599B: D9 00              fld         dword ptr [eax]
+  0057599D: DC 1D D0 0E 03 01  fcomp       qword ptr ds:[01030ED0h]
+  005759A3: DF E0              fnstsw      ax
+  005759A5: F6 C4 41           test        ah,41h
+  005759A8: 74 38              je          005759E2
+  005759AA: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  005759AD: D9 01              fld         dword ptr [ecx]
+  005759AF: DC
+
+  Summary
+
+         180 .text

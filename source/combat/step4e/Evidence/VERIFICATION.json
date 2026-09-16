@@ -1,0 +1,64 @@
+{
+  "packet": "4E",
+  "status": "PREPARED_OFFLINE",
+  "new_runtime_dependencies": [],
+  "runtime_version_unchanged": 327,
+  "game_files_changed": false,
+  "game_launched": false,
+  "geck_required": false,
+  "playtest_required_for_identical_export": false,
+  "live_keyword_import": false,
+  "keyword_framework_installed": false,
+  "donor_implementation_copied": false,
+  "installed_files_verified": 15,
+  "native_source_files_unchanged": 111,
+  "rd_absent": true,
+  "shipped_runtime_file": {
+    "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step4e\\generated\\NVOArmourCoverage.tsv",
+    "bytes": 259,
+    "sha256": "0e25e3aafbd0aadf52fb58fb38b19cb079280d96006b0ee84f927fdd860973aa"
+  },
+  "installed_runtime_same_bytes": true,
+  "authoring_checks": "PASS 54 resolution/export checks; 5 recorded4D coverage rows; no game activity",
+  "native_consumer_checks": "PASS 19 checks through production327 parser/classifier; standalone x86; no game launch",
+  "replayed_4d_rows": 5,
+  "native_consumer_sources": [
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatCore\\include\\ArmourCoverageConfig.hpp",
+      "bytes": 889,
+      "sha256": "743c6266ee8c6897e6aff08502726b3c2ae6b29647294ff9283b8edf9fa14d9a"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatCore\\src\\ArmourCoverageConfig.cpp",
+      "bytes": 3191,
+      "sha256": "a0c889f69e8eb3d069bc78249433887813980cd7db617a16ad319e783eb27d98"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatModel\\CoverageProfiles.hpp",
+      "bytes": 3705,
+      "sha256": "17be67d8154c25cd8cbad43b8e00de21b6a794af492c2fdd4ec4434a1860f29f"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatModel\\CoverageProfiles.cpp",
+      "bytes": 5671,
+      "sha256": "8076636bd4d0f99b33323df325cd499e6907dc1a1e68e4398bcc9d5ac165c8e8"
+    }
+  ],
+  "donor_source_read": {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\functions_jip\\jip_fn_miscellaneous.h",
+    "bytes": 39568,
+    "sha256": "a05d325ec11c93712e9feeb7a201564cc92a297ef0777b6d674d15329bfead41"
+  },
+  "keyword_archive_reference": {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\KEYWORDS-83088-1-01-1695964898 (1).7z",
+    "bytes": 4975,
+    "sha256": "38bc17cdade9e32db208805019220bba1e72b744dbe869c43bfcff96c6483cd8"
+  },
+  "archive_contents_reviewed": false,
+  "limitations": [
+    "NVO authoring tags only; no live JIP/KEYWORDS lookup or automatic mod discovery.",
+    "Custom fixture IDs are synthetic and not installed.",
+    "No material strength, hit-surface authority, damage or stagger implementation.",
+    "No runtime stress benchmark for expanded catalogues."
+  ]
+}

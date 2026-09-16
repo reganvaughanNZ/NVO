@@ -1,0 +1,92 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-132934\generic_caller.obj
+
+File Type: COFF OBJECT
+
+  008A6300: D9 5D EC           fstp        dword ptr [ebp-14h]
+  008A6303: 8B 55 AC           mov         edx,dword ptr [ebp-54h]
+  008A6306: 83 7A 68 00        cmp         dword ptr [edx+68h],0
+  008A630A: 74 0B              je          008A6317
+  008A630C: 8B 4D AC           mov         ecx,dword ptr [ebp-54h]
+  008A630F: E8 BC A3 08 00     call        009306D0
+  008A6314: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  008A6317: 8B 45 AC           mov         eax,dword ptr [ebp-54h]
+  008A631A: 83 78 64 00        cmp         dword ptr [eax+64h],0
+  008A631E: 75 07              jne         008A6327
+  008A6320: 33 C0              xor         eax,eax
+  008A6322: E9 E8 02 00 00     jmp         008A660F
+  008A6327: 8B 4D 10           mov         ecx,dword ptr [ebp+10h]
+  008A632A: 51                 push        ecx
+  008A632B: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  008A632E: 52                 push        edx
+  008A632F: 51                 push        ecx
+  008A6330: D9 45 08           fld         dword ptr [ebp+8]
+  008A6333: D9 1C 24           fstp        dword ptr [esp]
+  008A6336: 8B 4D AC           mov         ecx,dword ptr [ebp-54h]
+  008A6339: E8 22 8F 08 00     call        0092F260
+  008A633E: 89 45 E8           mov         dword ptr [ebp-18h],eax
+  008A6341: 83 7D E8 00        cmp         dword ptr [ebp-18h],0
+  008A6345: 0F 84 C1 02 00 00  je          008A660C
+  008A634B: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  008A634E: E8 8D 6B FD FF     call        0087CEE0
+  008A6353: 0F B6 C0           movzx       eax,al
+  008A6356: 85 C0              test        eax,eax
+  008A6358: 0F 84 AE 02 00 00  je          008A660C
+  008A635E: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  008A6361: E8 EA A1 3C 00     call        00C70550
+  008A6366: D9 5D E4           fstp        dword ptr [ebp-1Ch]
+  008A6369: B9 94 FF 1C 01     mov         ecx,11CFF94h
+  008A636E: E8 AD DA B5 FF     call        00403E20
+  008A6373: D9 45 E4           fld         dword ptr [ebp-1Ch]
+  008A6376: D9 00              fld         dword ptr [eax]
+  008A6378: DE D9              fcompp
+  008A637A: DF E0              fnstsw      ax
+  008A637C: F6 C4 05           test        ah,5
+  008A637F: 0F 8A 87 02 00 00  jp          008A660C
+  008A6385: B9 94 FF 1C 01     mov         ecx,11CFF94h
+  008A638A: E8 91 DA B5 FF     call        00403E20
+  008A638F: D9 45 E4           fld         dword ptr [ebp-1Ch]
+  008A6392: D8 20              fsub        dword ptr [eax]
+  008A6394: D9 5D E0           fstp        dword ptr [ebp-20h]
+  008A6397: B9 10 14 1D 01     mov         ecx,11D1410h
+  008A639C: E8 7F DA B5 FF     call        00403E20
+  008A63A1: 8B F0              mov         esi,eax
+  008A63A3: B9 20 0D 1D 01     mov         ecx,11D0D20h
+  008A63A8: E8 73 DA B5 FF     call        00403E20
+  008A63AD: 51                 push        ecx
+  008A63AE: D9 00              fld         dword ptr [eax]
+  008A63B0: D9 1C 24           fstp        dword ptr [esp]
+  008A63B3: 51                 push        ecx
+  008A63B4: D9 45 E0           fld         dword ptr [ebp-20h]
+  008A63B7: D9 1C 24           fstp        dword ptr [esp]
+  008A63BA: E8 71 6D C3 FF     call        004DD130
+  008A63BF: 83 C4 08           add         esp,8
+  008A63C2: D8 0E              fmul        dword ptr [esi]
+  008A63C4: D9 5D D8           fstp        dword ptr [ebp-28h]
+  008A63C7: 8B 4D AC           mov         ecx,dword ptr [ebp-54h]
+  008A63CA: E8 11 1E B7 FF     call        004181E0
+  008A63CF: 89 45 DC           mov         dword ptr [ebp-24h],eax
+  008A63D2: 83 7D DC 00        cmp         dword ptr [ebp-24h],0
+  008A63D6: 74 14              je          008A63EC
+  008A63D8: 8B 4D DC           mov         ecx,dword ptr [ebp-24h]
+  008A63DB: E8 60 A8 D4 FF     call        005F0C40
+  008A63E0: 0F B6 C8           movzx       ecx,al
+  008A63E3: 85 C9              test        ecx,ecx
+  008A63E5: 74 05              je          008A63EC
+  008A63E7: D9 EE              fldz
+  008A63E9: D9 5D D8           fstp        dword ptr [ebp-28h]
+  008A63EC: E9 39 75 D6 0A     jmp         0B60D92A
+  008A63F1: 90                 nop
+  008A63F2: 90                 nop
+  008A63F3: 90                 nop
+  008A63F4: 90                 nop
+  008A63F5: DF E0              fnstsw      ax
+  008A63F7: F6 C4 41           test        ah,41h
+  008A63FA: 0F 85 0C 02 00 00  jne         008A660C
+
+  Summary
+
+         100 .text

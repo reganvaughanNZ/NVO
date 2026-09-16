@@ -1,0 +1,79 @@
+{
+  "packet": "3H",
+  "native_version": 318,
+  "capture": {
+    "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+    "sha256": "e8d6c57f37f94a6ef93975ebede002bcea145824d5a8aff85e3ab2024d2968f5",
+    "bytes": 46550,
+    "last_write_ns": 1789473686439162300,
+    "last_write_local": "2026-09-16T00:01:26.439162+12:00",
+    "captured_utc": "2026-09-15T12:08:58.606421+00:00",
+    "stable_two_reads": true,
+    "user_report": "Finish as instructed",
+    "prescribed_test": "One ordinary Hunting Rifle standard .308 torso hit, one short-range VATS head-selected hit, reload once, one unarmed punch, then normal exit.",
+    "interpretation": "User reports completion. Firing mode and aim intent are inferred from prescribed sequence; the log reports actual hit context, not VATS aim selection. Provider return is not a committed-damage acknowledgement."
+  },
+  "checkpoint": "PASS for the prescribed entry/copy/return diagnostic",
+  "pre_damage_gate": "HOLD",
+  "damage_replacement": false,
+  "checks": [
+    {
+      "tx": 1,
+      "session": 1,
+      "lifetime": 1,
+      "region": 0,
+      "input_health": 52.0,
+      "requested_health_delta": -104.0,
+      "requested_to_input_magnitude": 2.0,
+      "entry_line": 60,
+      "copy_line": 64,
+      "return_line": 73,
+      "stages_in_order": true,
+      "exact_pointer_copy": true,
+      "actual_hp_loss": "unverified"
+    },
+    {
+      "tx": 2,
+      "session": 1,
+      "lifetime": 2,
+      "region": 1,
+      "input_health": 104.0,
+      "requested_health_delta": -208.0,
+      "requested_to_input_magnitude": 2.0,
+      "entry_line": 110,
+      "copy_line": 114,
+      "return_line": 123,
+      "stages_in_order": true,
+      "exact_pointer_copy": true,
+      "actual_hp_loss": "unverified"
+    },
+    {
+      "tx": 3,
+      "session": 2,
+      "lifetime": 0,
+      "region": 0,
+      "input_health": 2.75,
+      "requested_health_delta": -5.5,
+      "requested_to_input_magnitude": 2.0,
+      "entry_line": 175,
+      "copy_line": 179,
+      "return_line": 185,
+      "stages_in_order": true,
+      "exact_pointer_copy": true,
+      "actual_hp_loss": "unverified"
+    }
+  ],
+  "loaded_sessions": 2,
+  "reloads": 1,
+  "normal_exit_logged": true,
+  "live_route": "0089A738, main thread only",
+  "flight_scope": "Both bullet contacts occurred in the first unchanged engine segment; no NVO applied movement or impact-speed candidate was exercised.",
+  "limits": [
+    "No final committed health or limb loss is measured.",
+    "VATS firing mode and aim intent are inferred from test instructions; actual recorded regions are corroborated.",
+    "Other five hook sites, nested/off-thread calls, log exhaustion, NPC-to-player and NPC-to-NPC coverage were not exercised by this live test. Prior offline probe evidence remains distinct.",
+    "Zero errors applies to the observed summaries, not universal engine safety."
+  ],
+  "next_proposal": "Separate foundation record repair: actual startup scripts and dependency checks, deliberate RD Player ownership preserving user health GMSTs and required references, and a documented migration/exclusion plan for the Brahmin Baron extra damage owner. Ask before preparing.",
+  "game_changes_this_review": 0
+}

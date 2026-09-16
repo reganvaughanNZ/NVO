@@ -1,0 +1,13 @@
+# Native 323 / Packet 3R focused follow-up
+
+Scope: controlled saturation of the real physics pool and observation of capacity rollback/cleanup. Not a new full audit. Frozen Ultra pre-damage HOLD remains.
+
+The original pool, capacity constant, creation wrapper, selection validation, integration equations, movement bridges and damage observer code remain unchanged. Probe calls use the existing physics lock. Inert Reserved tickets have no Track metadata or game-object pointers. Arming requires an empty pool and the player's standard 9mm SMG profile; it occurs once per process. A real Reserve failure remains a failure after synthetic tickets are released, so the caller still rolls back its lifecycle ticket and forwards the supplied base. No retry silently converts the refused shot into a private projectile. Only the next call may use restored capacity.
+
+Release calls Cancel on probe-owned tickets only. Used counts and the latest actual ticket's phase/identity are compared while holding the lock. An inconsistency latches the existing process fault. Sixteen successful attempts without overlap end the probe, and session reset releases any remaining inert tickets before clearing production storage. Logging does not control these transitions. Reset does not rearm the probe. No engine calls, new lock ordering, source attribution changes or damage writes are introduced.
+
+18 Win32 checks pass against the same helper and pool: full refusal, active-ticket preservation, later reuse, double release, deferred arming, early flight retirement, process-once cancellation and stale reset. Both configurations compile with zero warnings and matching DLL/PDB; normal binary excludes probe-arm code and reports disabled. Diagnostic binary reports enabled. Source diff confirms only the intended integration/build/metadata files changed; new helper/tests are delivered with source. Existing 54 checks are not claimed rerun. No game or DLL executed by the assistant.
+
+Runtime must prove actual refusal, lifecycle rollback, unchanged forwarded stock base, surviving flight, later normal admissions and zero occupancy after reload/exit. Expected capacity refusal is not a process fault. Routine logs are bounded. Unknown or synchronously destroyed stock results must be reported accurately; do not manufacture a paired/living result. A missing overlap is incomplete evidence, not a pass.
+
+This does not simulate the CPU cost of 128 real bullets, prove lifecycle-pool saturation or cover exceptions/reentrancy/other threads. The probe is excluded by default and is to be removed from the installed build after the user checkpoint and authorization. Contact energy, damage authority, anatomy and physiology remain separate work.

@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "archive": "source\\combat\\step3g\\captures\\2026-09-15-3G-018ec6d9b0b6\\NVOCombatCore.log",
+  "sha256": "018ec6d9b0b6ee5c81e4a417e14057895bc4ce1fa18aa3c2096c4386183fee15",
+  "bytes": 204414,
+  "lines": 841,
+  "last_write_local": "2026-09-15T21:52:02.847128+12:00",
+  "user_context": "Shots 1 and 2 were as instructed. User is only confident the final shot landed: maximum-range VATS headshot kill. One more shot may have hit between shot 3 and the final shot. Do not treat uncertain shots as confirmed actor hits."
+}

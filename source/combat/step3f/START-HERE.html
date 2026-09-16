@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO Combat Packet 3F</title>
+<style>body{background:#101713;color:#e6f0e8;font:18px/1.6 system-ui;max-width:850px;margin:45px auto;padding:0 24px}h1{line-height:1.2}button{font:inherit;background:#a9ddaf;border:0;border-radius:6px;padding:12px 22px;cursor:pointer}code{color:#b7e7c0}li{margin-bottom:14px}.box{border:1px solid #497450;border-radius:8px;padding:20px}a{color:#bbe8c2}#status{min-height:1.5em}</style>
+<h1>NVO Combat Packet 3F</h1>
+<p><strong>Hunting Rifle · Standard .308 · AP · HP</strong></p>
+<p>Check that NVO follows the loaded ammunition when you switch rounds and load a save. Keep <strong>NVO.esm and NVOFlightPilot.esp active</strong>. No GECK work or compilation is needed.</p>
+<div class="box"><h2>Get the test kit</h2><p>Load your prepared test save and wait three seconds. Open the game console and run:</p><p><code id="cmd">bat NVOFlightKit3F</code></p><button id="copy" type="button">Copy kit command</button><p id="status" role="status"></p><p>One ordinary Hunting Rifle and 40 rounds each of standard .308, AP and HP. Each run adds another kit.</p></div>
+<h2>Your five-shot check</h2>
+<ol>
+<li>Use the Hunting Rifle from the kit and a distant solid target with clear line of fire. Your previous successful distance is suitable, roughly <strong>100 metres</strong> if practical.</li>
+<li>Outside VATS, fire <strong>standard → AP → HP → standard</strong>: one shot with each selection. Use your normal ammo-switch control, let the animation finish and check the ammo label each time. Avoid JSP Hand Load.</li>
+<li>Switch to <strong>HP</strong>, let the switch finish, and <strong>make a test save</strong>. Load that save once, wait three seconds and check that HP is still selected. If it changed, report that before selecting HP again.</li>
+<li>Fire <strong>one HP shot in VATS at a distant live enemy</strong> with clear line of fire. Mention if it misses.</li>
+<li><strong>Exit and report completion.</strong> I will read NVOCombatCore.log beside FalloutNV.exe. Mention setup loads or extra shots. Wait for review before another launch overwrites it.</li>
+</ol>
+<p>God mode is fine. No old-weapon retest, video or stress test is needed. If flight reports unavailable or firing fails, stop and report it.</p>
+<p>All three rounds deliberately share the accepted .308 flight settings for this check. Their existing damage effects remain active. NVO armour and damage replacement are still disabled.</p>
+<p>The DLL stays <strong>build 311 / phase3D</strong>; this update loads <strong>11 profiles</strong>.</p>
+<p><a href="README.md">Full instructions and reversal</a> · <a href="Installation/INSTALL-3F.md">Installation receipt</a> · <a href="Installation/IMPLEMENTATION.md">Implementation details</a></p>
+<script>document.getElementById('copy').onclick=async()=>{const text=document.getElementById('cmd').textContent;let ok=false;try{await navigator.clipboard.writeText(text);ok=true}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}document.getElementById('status').textContent=ok?'Copied. Paste into the New Vegas console.':'Select and copy the command shown above.'}</script>
+</html>

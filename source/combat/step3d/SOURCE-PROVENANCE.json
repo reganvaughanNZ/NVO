@@ -1,0 +1,34 @@
+[
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\PluginAPI.h",
+    "sha256": "bc07f783fd90425e192dbbc026a48aa73f1639983b0267aeb24a43a5a5e191f9"
+  },
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.h",
+    "sha256": "bc46915405299d1854a94e016a9ec718d47462090359748d0a48e82fa8a633cf"
+  },
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.cpp",
+    "sha256": "e1ae0e4223c2b69ca40eacf414584185cdff8ef037d052e855ef1bab9de7c991"
+  },
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.cpp",
+    "sha256": "5e53ea3e3b997174f96b8fc48c63c582e857329fc339a094f64680a8928404b3"
+  },
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.h",
+    "sha256": "96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8"
+  },
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameData.h",
+    "sha256": "c7ac149cbb70bb740e7fb074550d86fe0d50e254473f3c57bea2e021e2767848"
+  },
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameProcess.h",
+    "sha256": "9d544e263d3cbf592815194b3db00d20330f55ee024126c92404ccef709d5fb2"
+  },
+  {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\Events\\ShowOffEvents.h",
+    "sha256": "5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270"
+  }
+]

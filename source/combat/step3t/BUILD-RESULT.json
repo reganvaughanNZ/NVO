@@ -1,0 +1,11 @@
+{
+  "packet": "3T",
+  "machine": "PE32 x86",
+  "warnings": 0,
+  "errors": 0,
+  "production_integrator_replayed_steps": 427,
+  "matched_parent_clock_updates": 455,
+  "lifetime_predictions": 475,
+  "game_writes": false,
+  "installed_version": 323
+}

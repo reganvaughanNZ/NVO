@@ -1,0 +1,15 @@
+{
+  "runtime_capture": "source\\combat\\step3f2\\runtime-20260915-195715",
+  "query_address": "004572E0",
+  "query_length": 260,
+  "query_sha256": "d673492e3b79315274fd6e9ac3d159eda440150a3c247ef16f8b50369b5b5e4a",
+  "query_fnv64": "467D34370ECFAF82",
+  "default_z": -2048,
+  "default_fnv64": "4D25317F9DCD9EB6",
+  "threshold": 30,
+  "threshold_fnv64": "A8031C3227732F3B",
+  "new_site": "00930150",
+  "original_bytes": "E88B71B2FF",
+  "mechanism": "Engine ignores bool failure and clamps candidate Z to default terrain height when delta >30.",
+  "proof_limit": "Instruction path established. Specific playtest failure cause awaits corrective callback and accounting correlation."
+}

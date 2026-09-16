@@ -1,0 +1,41 @@
+{
+  "baseline_sha256": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d",
+  "pre_clean_sha256": "aa730bb8d3d099a7b75e01606738fabf4f480cecf64b4fc584eba0c539cfba47",
+  "migrated": [
+    {
+      "kind": "SCPT",
+      "editor_id": "NVOCombatBootstrapScript",
+      "origin": "RD.esm:000DBE",
+      "destination": "NVO.esm:01941A",
+      "compiled_script_unchanged": true
+    },
+    {
+      "kind": "QUST",
+      "editor_id": "NVOCombatBootstrapScriptQ",
+      "origin": "RD.esm:000DBF",
+      "destination": "NVO.esm:01941B",
+      "compiled_script_unchanged": false
+    }
+  ],
+  "official_dlc_to_keep_active": [
+    "FalloutNV.esm",
+    "CaravanPack.esm",
+    "DeadMoney.esm",
+    "HonestHearts.esm",
+    "OldWorldBlues.esm",
+    "LonesomeRoad.esm",
+    "ClassicPack.esm",
+    "GunRunnersArsenal.esm",
+    "MercenaryPack.esm",
+    "TribalPack.esm"
+  ],
+  "existing_records_preserved": true,
+  "master_cleanup": "Completed by official xEdit 4.1.5f SortAndClean; installed and RD archived. See RD-REMOVAL-AUDIT.json and INSTALL-RECEIPT.json.",
+  "discarded_rd_records": [
+    "Player override",
+    "PlayerHelp",
+    "ReganGear",
+    "Regan perk",
+    "PowerArmorTraining override"
+  ]
+}

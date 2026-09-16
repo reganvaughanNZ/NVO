@@ -1,0 +1,47 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-132934\rotation_getter.obj
+
+File Type: COFF OBJECT
+
+  00430830: 55                 push        ebp
+  00430831: 8B EC              mov         ebp,esp
+  00430833: 51                 push        ecx
+  00430834: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00430837: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0043083A: 83 C0 24           add         eax,24h
+  0043083D: 8B E5              mov         esp,ebp
+  0043083F: 5D                 pop         ebp
+  00430840: C3                 ret
+  00430841: CC                 int         3
+  00430842: CC                 int         3
+  00430843: CC                 int         3
+  00430844: CC                 int         3
+  00430845: CC                 int         3
+  00430846: CC                 int         3
+  00430847: CC                 int         3
+  00430848: CC                 int         3
+  00430849: CC                 int         3
+  0043084A: CC                 int         3
+  0043084B: CC                 int         3
+  0043084C: CC                 int         3
+  0043084D: CC                 int         3
+  0043084E: CC                 int         3
+  0043084F: CC                 int         3
+  00430850: 55                 push        ebp
+  00430851: 8B EC              mov         ebp,esp
+  00430853: 83 EC 08           sub         esp,8
+  00430856: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  00430859: 6A 00              push        0
+  0043085B: 68 10 4B 18 01     push        1184B10h
+  00430860: 68 2C 3B 18 01     push        1183B2Ch
+  00430865: 6A 00              push        0
+  00430867: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0043086A: 50                 push        eax
+  0043086B: E8 8B 3B A9 00     call        00EC43FB
+
+  Summary
+
+          40 .text

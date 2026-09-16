@@ -1,0 +1,27 @@
+{
+  "captured_utc": "2026-09-16T10:40:18.471907+00:00",
+  "packet_installed": false,
+  "statement": "Read-only baseline captured during packet preparation; no installed file was changed.",
+  "files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "bytes": 348160,
+      "sha256": "963a6f51f8f3539c66f2503d2615eb6aff2849e7d1eb4911e7467059a5c76fce"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "bytes": 4608000,
+      "sha256": "d39a19ccd39c5d06e36285dbe83168fb8d0982763ae801755424142abdcf96e4"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+      "bytes": 452260,
+      "sha256": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVOFlightPilot.esp",
+      "bytes": 7140,
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    }
+  ]
+}

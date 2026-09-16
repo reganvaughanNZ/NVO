@@ -1,0 +1,54 @@
+{
+  "capture": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3k\\runtime-20260916-100050",
+  "manifest_sha256": "02a17b45f503843d4232a442ac72ae4e76acd5d1272c527136419b2925150b7e",
+  "captured_shared_dispatch": "0AF64C1B",
+  "guards": [
+    {
+      "address": "008805F0",
+      "bytes": 112,
+      "fnv64": "FD0D114824EA2671"
+    },
+    {
+      "address": "008D4870",
+      "bytes": 40,
+      "fnv64": "F4BC9B1B5BDC11EB"
+    },
+    {
+      "address": "0093ACB0",
+      "bytes": 116,
+      "fnv64": "8CB96846C8C4A12B"
+    },
+    {
+      "address": "008B0D70",
+      "bytes": 63,
+      "fnv64": "134ED48F7FDDC6A4"
+    },
+    {
+      "address": "0094C490",
+      "bytes": 33,
+      "fnv64": "FC46469D1D94BA9F"
+    },
+    {
+      "address": "008D4A80",
+      "bytes": 47,
+      "fnv64": "76EDC6351FE233E6"
+    },
+    {
+      "address": "00881130",
+      "bytes": 32,
+      "fnv64": "991AB6792C361497"
+    },
+    {
+      "address": "008D49F0",
+      "bytes": 32,
+      "fnv64": "6F61B282616FE7BA"
+    },
+    {
+      "address": "0093B7A0",
+      "bytes": 32,
+      "fnv64": "32CE7109A53A83CC"
+    }
+  ],
+  "scope": "Complete directly called getters/remapper; original damage entry prefixes only. Existing downstream hooks are preserved, not exhaustively fingerprinted.",
+  "terminal_damage_rule_verified": false
+}

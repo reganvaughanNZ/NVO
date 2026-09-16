@@ -1,0 +1,10 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "archive": "source\\combat\\step3f1\\captures\\2026-09-15-3F1-77ebadbd30fd\\NVOCombatCore.log",
+  "sha256": "77ebadbd30fd811b74b5c72e088cce8429c6f6845c846420d2e5515a110ffdc2",
+  "bytes": 272028,
+  "lines": 1163,
+  "last_write_local": "2026-09-15T19:40:24.881254+12:00",
+  "user_context": "Shots 1-3 missed. Shot 4 hit although intended to miss. Next was close-range HP VATS, last farther-away HP VATS.",
+  "user_clarification": "Shot 3 specifically was a missed VATS shot. Continue."
+}

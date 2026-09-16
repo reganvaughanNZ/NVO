@@ -1,0 +1,197 @@
+{
+  "game_root": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas",
+  "workspace": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO",
+  "packet": "2B3",
+  "version": 202,
+  "created": "2026-09-14T22:59:34.079667",
+  "files": [
+    {
+      "path": "Data/Config/NVOCombatDiagnostics.ini",
+      "action": "archive_remove",
+      "sha256": "e8c6c20b6ed3ef8532558f74e5d7012685badb4440e1ff82fef5442805ff2913",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/scripts/ln_NVOCombatDiagnostics.txt",
+      "action": "archive_remove",
+      "sha256": "4b94ec735b8f85197a564bae80621e3bb40c53b7d873f2529763e10ac544935d",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnActorHit.txt",
+      "action": "archive_remove",
+      "sha256": "567e08376d4fd70f61fc5b5176ff63c6dd1135dc0412c53939426ce401a3ec35",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnExplosionHit.txt",
+      "action": "archive_remove",
+      "sha256": "8152588ba6f8b1a36e53b7f8613a6c53facea952df6e7c172113d15567b9a9b3",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnProjectileCreate.txt",
+      "action": "archive_remove",
+      "sha256": "e429841a87674112fd9ebf5ac80604d8cb82df85691246a36d585d6d737cf5aa",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnProjectileImpact.txt",
+      "action": "archive_remove",
+      "sha256": "95f8dfcef88ac0a5fbfae82d207f8b8e55e81e9d6566091cce9330238c8298bc",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/WriteEvent.txt",
+      "action": "archive_remove",
+      "sha256": "80fed7a4d8eb7813d7346f62005ad2e93ce963fbb86a13c8af380a9079731507",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOriginProfile.txt",
+      "action": "archive_remove",
+      "sha256": "2bf3eee845d521bc326b1c4faa4ac42b4c74fcd07633ed285563a2cecefd49e1",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_CreateJobOffer.txt",
+      "action": "archive_remove",
+      "sha256": "ba77bd8cb29c1688da072c8be37a68564844a3c87a92ce96c9321f5c352b2ad5",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_EmitImpactFeedback.txt",
+      "action": "archive_remove",
+      "sha256": "ca45917670da602b2db3ab1bae330cb46dd919cb7055662e4063aef8f26cb6aa",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_FinalizeAltStartCourier.txt",
+      "action": "archive_remove",
+      "sha256": "6780a40a2e319f517e4ab4224534faca4d60ac27922dc64768acdf1ec7a76dae",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitAltStartBridge.txt",
+      "action": "archive_remove",
+      "sha256": "b27d3046e84a102af4fa7c81652ae93266de31dc913b291a3490d46ce9dc18de",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitFeedback.txt",
+      "action": "archive_remove",
+      "sha256": "b2b27c31ea9b4eea8a2df043d6de35b997719954e6ceedf571f5cd153295ef12",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitSandbox.txt",
+      "action": "archive_remove",
+      "sha256": "37bb9648aa10b440817ab36fff3611b03c71f5f798ab42dc41bbd6c2726c4467",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnAltStartCourierStage.txt",
+      "action": "archive_remove",
+      "sha256": "5f569412224566ed943f8b8d7228269d42086dfd98bd2e2403947e50dc8db4fc",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnCivicPreActivate.txt",
+      "action": "archive_remove",
+      "sha256": "2f2df975b3fe3b92f22446b52febd71f28633bcab8c0afdfee1bc8fb103cb185",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_RecordCivicMemory.txt",
+      "action": "archive_remove",
+      "sha256": "ba6443f983650001540f598580e81c3a1195382d95b98a8eecf7333f6328edcd",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_RecordTacticalImpact.txt",
+      "action": "archive_remove",
+      "sha256": "aa9dd42e94b5a5e5535ceb27977c5eb3fa0abbaf1ea7f07ad1a9bee7745103e1",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_RegisterCivicRole.txt",
+      "action": "archive_remove",
+      "sha256": "50fcca3aa86fbf780bb7924972a903ed59e8bc924fec1e4a3ec52ce2160ec68c",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveCivicOutcome.txt",
+      "action": "archive_remove",
+      "sha256": "67d278a4e03ef7e45fa55270db542a4bbc25e834e88e77db917039af05dba5d5",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_SetCivicNeed.txt",
+      "action": "archive_remove",
+      "sha256": "d196c477fafb8c5729c46f0a7e4382783b1101e92becfd3b8d7fc7483fd69738",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombat/NVO_TacticalMemoryExpire.txt",
+      "action": "archive_remove",
+      "sha256": "a30ed67c7db015a4b4a9a11c367e899c42ea7c8292fa778c5ceca83a87233d1a",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/Config/NVOCombat/Sandbox.ini",
+      "action": "archive_remove",
+      "sha256": "2bb3ed7fc68dfb62d453d6d9c771cdfdf65bebbce7a628ff5d1c4b10e866c497",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombat.log",
+      "action": "archive_remove",
+      "sha256": "42fc40a7cf74864a00622792e52f3db280c4778952020888d72eb6ceedbb825b",
+      "log_may_change_until_game_exits": true
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatDiagnostics.log",
+      "action": "archive_remove",
+      "sha256": "42ad938906055b20294e322464fd05dc1a509c919814403cd30ea67475a3f5b4",
+      "log_may_change_until_game_exits": true
+    },
+    {
+      "path": "NVOCombatCore.log",
+      "action": "archive_remove",
+      "sha256": "81267b2eb573f973322cc9fb1d8e20d9c3b51a1c83a74122952e62f046cafbc7",
+      "log_may_change_until_game_exits": true
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "action": "install",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-2B3-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "source_sha256": "befcede7a6faec5032ea333bb0ae8a1777d78aeb01620e4ee65aa1699ed975b0",
+      "sha256": "25ee44e6bb967a9d3850cbd4cbb4b831520743b1f3970baa786c128dec876f26",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "action": "install",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-2B3-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "source_sha256": "cf0d20b2a21c2ca52701bd86feb349f847bc733992a540b5a02387699187e792",
+      "sha256": null,
+      "log_may_change_until_game_exits": false
+    }
+  ],
+  "empty_directories": [
+    "Data/NVSE/user_defined_functions/NVOCombatDiagnostics",
+    "Data/NVSE/user_defined_functions/NVOCombat",
+    "Data/Config/NVOCombat"
+  ],
+  "protected_assets": [
+    "Data/NVO.esm",
+    "Data/NVO.bsa",
+    "Data/NVO.override",
+    "Data/Config/ALTStartConfig.ini"
+  ],
+  "preserve_log_copy": [
+    "nvse.log",
+    "jip_ln_nvse.log"
+  ],
+  "basis": "User explicitly authorized removing superseded NVO NVSE files, installing current packet, and closing FalloutNV. Seven old 2A files from its manifest; 15 legacy UDFs and Sandbox.ini have no external callers in the inspected loose files and installed non-Bethesda plugins. NVO.bsa contains Alternate Start assets only. No unrelated extender or ESM removal."
+}

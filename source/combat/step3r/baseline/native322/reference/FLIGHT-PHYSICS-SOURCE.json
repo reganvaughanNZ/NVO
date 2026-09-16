@@ -1,0 +1,50 @@
+{
+  "packet": "3C",
+  "capture": "source\\combat\\step3c\\runtime-20260915-121449",
+  "fingerprints": [
+    {
+      "name": "movement",
+      "address": "0092F260",
+      "size": 4668,
+      "fnv1a64": "DEFD795E42FB0C4E",
+      "sha256": "2f529066f3635f5fafc7515f9ae0351e88545fc1844ee1af59ddf0592b6398c2"
+    },
+    {
+      "name": "matrix_vector",
+      "address": "004B4500",
+      "size": 172,
+      "fnv1a64": "21E78198D3719E46",
+      "sha256": "24e18e7bce4e0fb66ef31cfbb407c56dcc3c58416d468086d150a19d80a9dfdc"
+    },
+    {
+      "name": "rotation_matrix",
+      "address": "004A0C90",
+      "size": 768,
+      "fnv1a64": "EC266DFC1B55BBDC",
+      "sha256": "08894d158fac547d174a9489df9ce3c4834042b0d11f1ca6a1b814e4e5a9637f"
+    },
+    {
+      "name": "projectile_move",
+      "address": "009BF300",
+      "size": 364,
+      "fnv1a64": "0267E4DCAFB26157",
+      "sha256": "1e7280c26db1ea89981c8031897b951bb5a1a4bd1685a3d52ac8db7d21bf6e44"
+    },
+    {
+      "name": "projectile_update",
+      "address": "009B8030",
+      "size": 2149,
+      "fnv1a64": "A1B80FE6DF917F84",
+      "sha256": "0bd5eec023bdcf30d26ed05a221bbdaa1b224e513598d61443c515f51fa3b3b7"
+    }
+  ],
+  "donor": "BallistX 5.4",
+  "donor_archive_sha256": "d71fe28f1262dec7a0f2086f06b243168d74a3f11d8b57cd8b7b8127c9506e3d",
+  "tables_source": "source/combat/step3a/NVO-Flight-Pilot.json",
+  "adaptations": [
+    "G1/G7 linear interpolation",
+    "RK4 gravity and drag",
+    "no donor damage/deletion/roll-state code"
+  ],
+  "guard_normalization": "Only this DLL-owned five-byte CALL is normalized for subsequent capture guards."
+}

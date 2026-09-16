@@ -1,0 +1,2098 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "sha256": "47c325b5c29b19a7a008f19119a99c8a3d5e40c2c3e6a741da731c32a7c3e144",
+  "size_bytes": 21461,
+  "source_mtime_local": "2026-09-15T09:34:08.879611",
+  "archive": "source\\combat\\step3b1\\captures\\2026-09-15-3B1-47c325b5c29b",
+  "user_report": "I fired the weapons and reloaded the game then reloaded",
+  "summary": {
+    "1": {
+      "provider_rows": 8,
+      "creates": 2,
+      "impacts": 2,
+      "destroys": 2,
+      "preview_rows": 2,
+      "travel_rows": 4,
+      "profiles": {
+        "9mm-pistol-standard": {
+          "shots": 2,
+          "source_ids": [
+            "00000014"
+          ],
+          "base_flags": [
+            "0089"
+          ],
+          "speed_setting_units_per_s": [
+            "23680"
+          ],
+          "setting_mps_assuming_donor_scale": [
+            "338.286"
+          ],
+          "muzzle_preview_mps": [
+            "387.109"
+          ],
+          "gravity_setting": [
+            "3"
+          ]
+        }
+      },
+      "controls": {
+        "SUMMARY": [
+          {
+            "session": "1",
+            "reason": "pre_load_game",
+            "rows": "8",
+            "create": "2",
+            "impact": "2",
+            "destroy": "2",
+            "hit_notice": "1",
+            "weapon_notice": "1",
+            "blast": "0",
+            "unmatched": "0",
+            "reused_live_address": "0",
+            "overflow": "0",
+            "read_failures": "0",
+            "open_lifetimes": "0",
+            "line_number": 31,
+            "text": "SUMMARY session=1 reason=pre_load_game rows=8 create=2 impact=2 destroy=2 hit_notice=1 weapon_notice=1 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+          }
+        ],
+        "CURRENT_HIT_SUMMARY": [
+          {
+            "session": "1",
+            "reason": "pre_load_game",
+            "contexts": "0",
+            "invalid_contexts": "0",
+            "linked_lifetimes": "0",
+            "known_ammo": "0",
+            "damage_applications": "unverified",
+            "line_number": 32,
+            "text": "CURRENT_HIT_SUMMARY session=1 reason=pre_load_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified"
+          }
+        ],
+        "FLIGHT_PREVIEW_SUMMARY": [
+          {
+            "session": "1",
+            "reason": "pre_load_game",
+            "seen": "2",
+            "matched": "2",
+            "skipped": "0",
+            "read_failures": "0",
+            "identity_mismatches": "0",
+            "create_rows": "2",
+            "impact_rows": "2",
+            "destroy_rows": "2",
+            "open_samples": "0",
+            "flight_writes": "0",
+            "damage_writes": "0",
+            "line_number": 33,
+            "text": "FLIGHT_PREVIEW_SUMMARY session=1 reason=pre_load_game seen=2 matched=2 skipped=0 read_failures=0 identity_mismatches=0 create_rows=2 impact_rows=2 destroy_rows=2 open_samples=0 flight_writes=0 damage_writes=0"
+          }
+        ],
+        "DAMAGE_EVENT_SUMMARY": [
+          {
+            "session": "1",
+            "reason": "pre_load_game",
+            "hit_callbacks": "0",
+            "hit_rows": "0",
+            "health_callbacks": "0",
+            "health_rows": "0",
+            "invalid": "0",
+            "damage_replacement": "0",
+            "damage_applications": "unverified",
+            "line_number": 34,
+            "text": "DAMAGE_EVENT_SUMMARY session=1 reason=pre_load_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+          }
+        ],
+        "FLIGHT_PREVIEW_READY": [
+          {
+            "session": "1",
+            "profiles": "2",
+            "max_matches": "32",
+            "config": "NVOFlightPreview.ini",
+            "donor_units_per_metre": "70",
+            "unit_scale_verified": "0",
+            "temperature_k": "288.15",
+            "flight_writes": "0",
+            "damage_writes": "0",
+            "line_number": 13,
+            "text": "FLIGHT_PREVIEW_READY session=1 profiles=2 max_matches=32 config=NVOFlightPreview.ini donor_units_per_metre=70 unit_scale_verified=0 temperature_k=288.15 flight_writes=0 damage_writes=0"
+          }
+        ],
+        "FLIGHT_OWNER_AUDIT": [
+          {
+            "session": "1",
+            "ballistx_plugin_loaded": "0",
+            "ballistx_ammo_plugin_loaded": "0",
+            "pbb_loose_loader_present": "0",
+            "cbd_loose_loader_present": "0",
+            "scope": "loaded_names_and_loose_paths",
+            "execution_or_bsa_audit": "unverified",
+            "future_flight_authority": "disabled",
+            "line_number": 12,
+            "text": "FLIGHT_OWNER_AUDIT session=1 ballistx_plugin_loaded=0 ballistx_ammo_plugin_loaded=0 pbb_loose_loader_present=0 cbd_loose_loader_present=0 scope=loaded_names_and_loose_paths execution_or_bsa_audit=unverified future_flight_authority=disabled"
+          }
+        ]
+      }
+    },
+    "2": {
+      "provider_rows": 11,
+      "creates": 3,
+      "impacts": 3,
+      "destroys": 3,
+      "preview_rows": 3,
+      "travel_rows": 6,
+      "profiles": {
+        "9mm-pistol-standard": {
+          "shots": 1,
+          "source_ids": [
+            "00000014"
+          ],
+          "base_flags": [
+            "0089"
+          ],
+          "speed_setting_units_per_s": [
+            "23680"
+          ],
+          "setting_mps_assuming_donor_scale": [
+            "338.286"
+          ],
+          "muzzle_preview_mps": [
+            "387.109"
+          ],
+          "gravity_setting": [
+            "3"
+          ]
+        },
+        "hunting-rifle-standard-308": {
+          "shots": 2,
+          "source_ids": [
+            "00000014"
+          ],
+          "base_flags": [
+            "028D"
+          ],
+          "speed_setting_units_per_s": [
+            "53000"
+          ],
+          "setting_mps_assuming_donor_scale": [
+            "757.143"
+          ],
+          "muzzle_preview_mps": [
+            "849.771"
+          ],
+          "gravity_setting": [
+            "0.3"
+          ]
+        }
+      },
+      "controls": {
+        "SUMMARY": [
+          {
+            "session": "2",
+            "reason": "pre_load_game",
+            "rows": "11",
+            "create": "3",
+            "impact": "3",
+            "destroy": "3",
+            "hit_notice": "1",
+            "weapon_notice": "1",
+            "blast": "0",
+            "unmatched": "0",
+            "reused_live_address": "0",
+            "overflow": "0",
+            "read_failures": "0",
+            "open_lifetimes": "0",
+            "line_number": 64,
+            "text": "SUMMARY session=2 reason=pre_load_game rows=11 create=3 impact=3 destroy=3 hit_notice=1 weapon_notice=1 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+          }
+        ],
+        "CURRENT_HIT_SUMMARY": [
+          {
+            "session": "2",
+            "reason": "pre_load_game",
+            "contexts": "0",
+            "invalid_contexts": "0",
+            "linked_lifetimes": "0",
+            "known_ammo": "0",
+            "damage_applications": "unverified",
+            "line_number": 65,
+            "text": "CURRENT_HIT_SUMMARY session=2 reason=pre_load_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified"
+          }
+        ],
+        "FLIGHT_PREVIEW_SUMMARY": [
+          {
+            "session": "2",
+            "reason": "pre_load_game",
+            "seen": "3",
+            "matched": "3",
+            "skipped": "0",
+            "read_failures": "0",
+            "identity_mismatches": "0",
+            "create_rows": "3",
+            "impact_rows": "3",
+            "destroy_rows": "3",
+            "open_samples": "0",
+            "flight_writes": "0",
+            "damage_writes": "0",
+            "line_number": 66,
+            "text": "FLIGHT_PREVIEW_SUMMARY session=2 reason=pre_load_game seen=3 matched=3 skipped=0 read_failures=0 identity_mismatches=0 create_rows=3 impact_rows=3 destroy_rows=3 open_samples=0 flight_writes=0 damage_writes=0"
+          }
+        ],
+        "DAMAGE_EVENT_SUMMARY": [
+          {
+            "session": "2",
+            "reason": "pre_load_game",
+            "hit_callbacks": "0",
+            "hit_rows": "0",
+            "health_callbacks": "0",
+            "health_rows": "0",
+            "invalid": "0",
+            "damage_replacement": "0",
+            "damage_applications": "unverified",
+            "line_number": 67,
+            "text": "DAMAGE_EVENT_SUMMARY session=2 reason=pre_load_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+          }
+        ],
+        "FLIGHT_PREVIEW_READY": [
+          {
+            "session": "2",
+            "profiles": "2",
+            "max_matches": "32",
+            "config": "NVOFlightPreview.ini",
+            "donor_units_per_metre": "70",
+            "unit_scale_verified": "0",
+            "temperature_k": "288.15",
+            "flight_writes": "0",
+            "damage_writes": "0",
+            "line_number": 40,
+            "text": "FLIGHT_PREVIEW_READY session=2 profiles=2 max_matches=32 config=NVOFlightPreview.ini donor_units_per_metre=70 unit_scale_verified=0 temperature_k=288.15 flight_writes=0 damage_writes=0"
+          }
+        ],
+        "FLIGHT_OWNER_AUDIT": [
+          {
+            "session": "2",
+            "ballistx_plugin_loaded": "0",
+            "ballistx_ammo_plugin_loaded": "0",
+            "pbb_loose_loader_present": "0",
+            "cbd_loose_loader_present": "0",
+            "scope": "loaded_names_and_loose_paths",
+            "execution_or_bsa_audit": "unverified",
+            "future_flight_authority": "disabled",
+            "line_number": 39,
+            "text": "FLIGHT_OWNER_AUDIT session=2 ballistx_plugin_loaded=0 ballistx_ammo_plugin_loaded=0 pbb_loose_loader_present=0 cbd_loose_loader_present=0 scope=loaded_names_and_loose_paths execution_or_bsa_audit=unverified future_flight_authority=disabled"
+          }
+        ]
+      }
+    },
+    "3": {
+      "provider_rows": 15,
+      "creates": 5,
+      "impacts": 5,
+      "destroys": 5,
+      "preview_rows": 5,
+      "travel_rows": 10,
+      "profiles": {
+        "hunting-rifle-standard-308": {
+          "shots": 2,
+          "source_ids": [
+            "00000014"
+          ],
+          "base_flags": [
+            "028D"
+          ],
+          "speed_setting_units_per_s": [
+            "53000"
+          ],
+          "setting_mps_assuming_donor_scale": [
+            "757.143"
+          ],
+          "muzzle_preview_mps": [
+            "849.771"
+          ],
+          "gravity_setting": [
+            "0.3"
+          ]
+        },
+        "9mm-pistol-standard": {
+          "shots": 3,
+          "source_ids": [
+            "00000014"
+          ],
+          "base_flags": [
+            "0089"
+          ],
+          "speed_setting_units_per_s": [
+            "23680"
+          ],
+          "setting_mps_assuming_donor_scale": [
+            "338.286"
+          ],
+          "muzzle_preview_mps": [
+            "387.109"
+          ],
+          "gravity_setting": [
+            "3"
+          ]
+        }
+      },
+      "controls": {
+        "SUMMARY": [
+          {
+            "session": "3",
+            "reason": "exit_game",
+            "rows": "15",
+            "create": "5",
+            "impact": "5",
+            "destroy": "5",
+            "hit_notice": "0",
+            "weapon_notice": "0",
+            "blast": "0",
+            "unmatched": "0",
+            "reused_live_address": "0",
+            "overflow": "0",
+            "read_failures": "0",
+            "open_lifetimes": "0",
+            "line_number": 107,
+            "text": "SUMMARY session=3 reason=exit_game rows=15 create=5 impact=5 destroy=5 hit_notice=0 weapon_notice=0 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+          }
+        ],
+        "CURRENT_HIT_SUMMARY": [
+          {
+            "session": "3",
+            "reason": "exit_game",
+            "contexts": "0",
+            "invalid_contexts": "0",
+            "linked_lifetimes": "0",
+            "known_ammo": "0",
+            "damage_applications": "unverified",
+            "line_number": 108,
+            "text": "CURRENT_HIT_SUMMARY session=3 reason=exit_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified"
+          }
+        ],
+        "FLIGHT_PREVIEW_SUMMARY": [
+          {
+            "session": "3",
+            "reason": "exit_game",
+            "seen": "5",
+            "matched": "5",
+            "skipped": "0",
+            "read_failures": "0",
+            "identity_mismatches": "0",
+            "create_rows": "5",
+            "impact_rows": "5",
+            "destroy_rows": "5",
+            "open_samples": "0",
+            "flight_writes": "0",
+            "damage_writes": "0",
+            "line_number": 109,
+            "text": "FLIGHT_PREVIEW_SUMMARY session=3 reason=exit_game seen=5 matched=5 skipped=0 read_failures=0 identity_mismatches=0 create_rows=5 impact_rows=5 destroy_rows=5 open_samples=0 flight_writes=0 damage_writes=0"
+          }
+        ],
+        "DAMAGE_EVENT_SUMMARY": [
+          {
+            "session": "3",
+            "reason": "exit_game",
+            "hit_callbacks": "0",
+            "hit_rows": "0",
+            "health_callbacks": "0",
+            "health_rows": "0",
+            "invalid": "0",
+            "damage_replacement": "0",
+            "damage_applications": "unverified",
+            "line_number": 110,
+            "text": "DAMAGE_EVENT_SUMMARY session=3 reason=exit_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+          }
+        ],
+        "FLIGHT_PREVIEW_READY": [
+          {
+            "session": "3",
+            "profiles": "2",
+            "max_matches": "32",
+            "config": "NVOFlightPreview.ini",
+            "donor_units_per_metre": "70",
+            "unit_scale_verified": "0",
+            "temperature_k": "288.15",
+            "flight_writes": "0",
+            "damage_writes": "0",
+            "line_number": 73,
+            "text": "FLIGHT_PREVIEW_READY session=3 profiles=2 max_matches=32 config=NVOFlightPreview.ini donor_units_per_metre=70 unit_scale_verified=0 temperature_k=288.15 flight_writes=0 damage_writes=0"
+          }
+        ],
+        "FLIGHT_OWNER_AUDIT": [
+          {
+            "session": "3",
+            "ballistx_plugin_loaded": "0",
+            "ballistx_ammo_plugin_loaded": "0",
+            "pbb_loose_loader_present": "0",
+            "cbd_loose_loader_present": "0",
+            "scope": "loaded_names_and_loose_paths",
+            "execution_or_bsa_audit": "unverified",
+            "future_flight_authority": "disabled",
+            "line_number": 72,
+            "text": "FLIGHT_OWNER_AUDIT session=3 ballistx_plugin_loaded=0 ballistx_ammo_plugin_loaded=0 pbb_loose_loader_present=0 cbd_loose_loader_present=0 scope=loaded_names_and_loose_paths execution_or_bsa_audit=unverified future_flight_authority=disabled"
+          }
+        ]
+      }
+    }
+  },
+  "streams": {
+    "NVOCombatCore": [
+      {
+        "phase": "3B1",
+        "native_events": "1",
+        "current_hit_observer_pending": "1",
+        "itr_damage_events_pending": "1",
+        "flight_preview": "1",
+        "flight_writes": "0",
+        "hit_hooks": "0",
+        "damage_replacement": "0",
+        "line_number": 1,
+        "text": "NVOCombatCore 0.3.1 | phase=3B1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_writes=0 | hit_hooks=0 | damage_replacement=0"
+      }
+    ],
+    "QUERY": [
+      {
+        "runtime": "0x040020D0",
+        "xnvse": "0x06040080",
+        "editor": "0",
+        "line_number": 2,
+        "text": "QUERY runtime=0x040020D0 xnvse=0x06040080 editor=0"
+      }
+    ],
+    "LOAD": [
+      {
+        "registered": "1",
+        "messaging": "4",
+        "hit_hooks": "0",
+        "damage_replacement": "0",
+        "line_number": 3,
+        "text": "LOAD registered=1 messaging=4 hit_hooks=0 damage_replacement=0"
+      }
+    ],
+    "LIFECYCLE": [
+      {
+        "line_number": 4,
+        "text": "LIFECYCLE post_load_plugins"
+      },
+      {
+        "line_number": 5,
+        "text": "LIFECYCLE post_post_load_plugins"
+      },
+      {
+        "line_number": 6,
+        "text": "LIFECYCLE deferred_init"
+      },
+      {
+        "line_number": 7,
+        "text": "LIFECYCLE pre_load_game"
+      },
+      {
+        "line_number": 8,
+        "text": "LIFECYCLE load_game"
+      },
+      {
+        "success": "1",
+        "session": "1",
+        "line_number": 9,
+        "text": "LIFECYCLE post_load_game success=1 session=1"
+      },
+      {
+        "line_number": 35,
+        "text": "LIFECYCLE pre_load_game"
+      },
+      {
+        "line_number": 36,
+        "text": "LIFECYCLE load_game"
+      },
+      {
+        "success": "1",
+        "session": "2",
+        "line_number": 37,
+        "text": "LIFECYCLE post_load_game success=1 session=2"
+      },
+      {
+        "line_number": 68,
+        "text": "LIFECYCLE pre_load_game"
+      },
+      {
+        "line_number": 69,
+        "text": "LIFECYCLE load_game"
+      },
+      {
+        "success": "1",
+        "session": "3",
+        "line_number": 70,
+        "text": "LIFECYCLE post_load_game success=1 session=3"
+      },
+      {
+        "line_number": 111,
+        "text": "LIFECYCLE exit_game"
+      }
+    ],
+    "CURRENT_HIT_READY": [
+      {
+        "provider": "JIP5730",
+        "phase": "copy_input",
+        "vtable_slots": "2",
+        "original_tail_calls": "1",
+        "ammo_layout_verified": "1",
+        "damage_replacement": "0",
+        "line_number": 10,
+        "text": "CURRENT_HIT_READY provider=JIP5730 phase=copy_input vtable_slots=2 original_tail_calls=1 ammo_layout_verified=1 damage_replacement=0"
+      }
+    ],
+    "CAPTURE": [
+      {
+        "session": "1",
+        "reason": "post_load_game",
+        "handlers": "6",
+        "max_events": "600",
+        "current_hit_observer": "1",
+        "max_contexts": "200",
+        "engine_damage_hooks": "0",
+        "damage_replacement": "0",
+        "line_number": 11,
+        "text": "CAPTURE session=1 reason=post_load_game handlers=6 max_events=600 current_hit_observer=1 max_contexts=200 engine_damage_hooks=0 damage_replacement=0"
+      },
+      {
+        "session": "2",
+        "reason": "post_load_game",
+        "handlers": "6",
+        "max_events": "600",
+        "current_hit_observer": "1",
+        "max_contexts": "200",
+        "engine_damage_hooks": "0",
+        "damage_replacement": "0",
+        "line_number": 38,
+        "text": "CAPTURE session=2 reason=post_load_game handlers=6 max_events=600 current_hit_observer=1 max_contexts=200 engine_damage_hooks=0 damage_replacement=0"
+      },
+      {
+        "session": "3",
+        "reason": "post_load_game",
+        "handlers": "6",
+        "max_events": "600",
+        "current_hit_observer": "1",
+        "max_contexts": "200",
+        "engine_damage_hooks": "0",
+        "damage_replacement": "0",
+        "line_number": 71,
+        "text": "CAPTURE session=3 reason=post_load_game handlers=6 max_events=600 current_hit_observer=1 max_contexts=200 engine_damage_hooks=0 damage_replacement=0"
+      }
+    ],
+    "FLIGHT_OWNER_AUDIT": [
+      {
+        "session": "1",
+        "ballistx_plugin_loaded": "0",
+        "ballistx_ammo_plugin_loaded": "0",
+        "pbb_loose_loader_present": "0",
+        "cbd_loose_loader_present": "0",
+        "scope": "loaded_names_and_loose_paths",
+        "execution_or_bsa_audit": "unverified",
+        "future_flight_authority": "disabled",
+        "line_number": 12,
+        "text": "FLIGHT_OWNER_AUDIT session=1 ballistx_plugin_loaded=0 ballistx_ammo_plugin_loaded=0 pbb_loose_loader_present=0 cbd_loose_loader_present=0 scope=loaded_names_and_loose_paths execution_or_bsa_audit=unverified future_flight_authority=disabled"
+      },
+      {
+        "session": "2",
+        "ballistx_plugin_loaded": "0",
+        "ballistx_ammo_plugin_loaded": "0",
+        "pbb_loose_loader_present": "0",
+        "cbd_loose_loader_present": "0",
+        "scope": "loaded_names_and_loose_paths",
+        "execution_or_bsa_audit": "unverified",
+        "future_flight_authority": "disabled",
+        "line_number": 39,
+        "text": "FLIGHT_OWNER_AUDIT session=2 ballistx_plugin_loaded=0 ballistx_ammo_plugin_loaded=0 pbb_loose_loader_present=0 cbd_loose_loader_present=0 scope=loaded_names_and_loose_paths execution_or_bsa_audit=unverified future_flight_authority=disabled"
+      },
+      {
+        "session": "3",
+        "ballistx_plugin_loaded": "0",
+        "ballistx_ammo_plugin_loaded": "0",
+        "pbb_loose_loader_present": "0",
+        "cbd_loose_loader_present": "0",
+        "scope": "loaded_names_and_loose_paths",
+        "execution_or_bsa_audit": "unverified",
+        "future_flight_authority": "disabled",
+        "line_number": 72,
+        "text": "FLIGHT_OWNER_AUDIT session=3 ballistx_plugin_loaded=0 ballistx_ammo_plugin_loaded=0 pbb_loose_loader_present=0 cbd_loose_loader_present=0 scope=loaded_names_and_loose_paths execution_or_bsa_audit=unverified future_flight_authority=disabled"
+      }
+    ],
+    "FLIGHT_PREVIEW_READY": [
+      {
+        "session": "1",
+        "profiles": "2",
+        "max_matches": "32",
+        "config": "NVOFlightPreview.ini",
+        "donor_units_per_metre": "70",
+        "unit_scale_verified": "0",
+        "temperature_k": "288.15",
+        "flight_writes": "0",
+        "damage_writes": "0",
+        "line_number": 13,
+        "text": "FLIGHT_PREVIEW_READY session=1 profiles=2 max_matches=32 config=NVOFlightPreview.ini donor_units_per_metre=70 unit_scale_verified=0 temperature_k=288.15 flight_writes=0 damage_writes=0"
+      },
+      {
+        "session": "2",
+        "profiles": "2",
+        "max_matches": "32",
+        "config": "NVOFlightPreview.ini",
+        "donor_units_per_metre": "70",
+        "unit_scale_verified": "0",
+        "temperature_k": "288.15",
+        "flight_writes": "0",
+        "damage_writes": "0",
+        "line_number": 40,
+        "text": "FLIGHT_PREVIEW_READY session=2 profiles=2 max_matches=32 config=NVOFlightPreview.ini donor_units_per_metre=70 unit_scale_verified=0 temperature_k=288.15 flight_writes=0 damage_writes=0"
+      },
+      {
+        "session": "3",
+        "profiles": "2",
+        "max_matches": "32",
+        "config": "NVOFlightPreview.ini",
+        "donor_units_per_metre": "70",
+        "unit_scale_verified": "0",
+        "temperature_k": "288.15",
+        "flight_writes": "0",
+        "damage_writes": "0",
+        "line_number": 73,
+        "text": "FLIGHT_PREVIEW_READY session=3 profiles=2 max_matches=32 config=NVOFlightPreview.ini donor_units_per_metre=70 unit_scale_verified=0 temperature_k=288.15 flight_writes=0 damage_writes=0"
+      }
+    ],
+    "FLIGHT_PROFILE": [
+      {
+        "session": "1",
+        "profile": "9mm-pistol-standard",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "maximum_mps": "453",
+        "barrel_in": "4.7",
+        "peak_travel_in": "0.4",
+        "muzzle_preview_mps": "387.109",
+        "live_match": "pending",
+        "line_number": 14,
+        "text": "FLIGHT_PROFILE session=1 profile=9mm-pistol-standard weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F maximum_mps=453 barrel_in=4.7 peak_travel_in=0.4 muzzle_preview_mps=387.109 live_match=pending"
+      },
+      {
+        "session": "1",
+        "profile": "hunting-rifle-standard-308",
+        "weapon": "00004333",
+        "ammo": "0006B53C",
+        "projectile_base": "0008F20A",
+        "maximum_mps": "1012",
+        "barrel_in": "22",
+        "peak_travel_in": "2.1",
+        "muzzle_preview_mps": "849.771",
+        "live_match": "pending",
+        "line_number": 15,
+        "text": "FLIGHT_PROFILE session=1 profile=hunting-rifle-standard-308 weapon=00004333 ammo=0006B53C projectile_base=0008F20A maximum_mps=1012 barrel_in=22 peak_travel_in=2.1 muzzle_preview_mps=849.771 live_match=pending"
+      },
+      {
+        "session": "2",
+        "profile": "9mm-pistol-standard",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "maximum_mps": "453",
+        "barrel_in": "4.7",
+        "peak_travel_in": "0.4",
+        "muzzle_preview_mps": "387.109",
+        "live_match": "pending",
+        "line_number": 41,
+        "text": "FLIGHT_PROFILE session=2 profile=9mm-pistol-standard weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F maximum_mps=453 barrel_in=4.7 peak_travel_in=0.4 muzzle_preview_mps=387.109 live_match=pending"
+      },
+      {
+        "session": "2",
+        "profile": "hunting-rifle-standard-308",
+        "weapon": "00004333",
+        "ammo": "0006B53C",
+        "projectile_base": "0008F20A",
+        "maximum_mps": "1012",
+        "barrel_in": "22",
+        "peak_travel_in": "2.1",
+        "muzzle_preview_mps": "849.771",
+        "live_match": "pending",
+        "line_number": 42,
+        "text": "FLIGHT_PROFILE session=2 profile=hunting-rifle-standard-308 weapon=00004333 ammo=0006B53C projectile_base=0008F20A maximum_mps=1012 barrel_in=22 peak_travel_in=2.1 muzzle_preview_mps=849.771 live_match=pending"
+      },
+      {
+        "session": "3",
+        "profile": "9mm-pistol-standard",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "maximum_mps": "453",
+        "barrel_in": "4.7",
+        "peak_travel_in": "0.4",
+        "muzzle_preview_mps": "387.109",
+        "live_match": "pending",
+        "line_number": 74,
+        "text": "FLIGHT_PROFILE session=3 profile=9mm-pistol-standard weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F maximum_mps=453 barrel_in=4.7 peak_travel_in=0.4 muzzle_preview_mps=387.109 live_match=pending"
+      },
+      {
+        "session": "3",
+        "profile": "hunting-rifle-standard-308",
+        "weapon": "00004333",
+        "ammo": "0006B53C",
+        "projectile_base": "0008F20A",
+        "maximum_mps": "1012",
+        "barrel_in": "22",
+        "peak_travel_in": "2.1",
+        "muzzle_preview_mps": "849.771",
+        "live_match": "pending",
+        "line_number": 75,
+        "text": "FLIGHT_PROFILE session=3 profile=hunting-rifle-standard-308 weapon=00004333 ammo=0006B53C projectile_base=0008F20A maximum_mps=1012 barrel_in=22 peak_travel_in=2.1 muzzle_preview_mps=849.771 live_match=pending"
+      }
+    ],
+    "DAMAGE_EVENTS_READY": [
+      {
+        "session": "1",
+        "reason": "post_load_game",
+        "provider": "ITR20202",
+        "handlers": "2",
+        "hit_limit": "200",
+        "health_limit": "200",
+        "observer_writes": "0",
+        "provider_emission": "unverified",
+        "line_number": 16,
+        "text": "DAMAGE_EVENTS_READY session=1 reason=post_load_game provider=ITR20202 handlers=2 hit_limit=200 health_limit=200 observer_writes=0 provider_emission=unverified"
+      },
+      {
+        "session": "2",
+        "reason": "post_load_game",
+        "provider": "ITR20202",
+        "handlers": "2",
+        "hit_limit": "200",
+        "health_limit": "200",
+        "observer_writes": "0",
+        "provider_emission": "unverified",
+        "line_number": 43,
+        "text": "DAMAGE_EVENTS_READY session=2 reason=post_load_game provider=ITR20202 handlers=2 hit_limit=200 health_limit=200 observer_writes=0 provider_emission=unverified"
+      },
+      {
+        "session": "3",
+        "reason": "post_load_game",
+        "provider": "ITR20202",
+        "handlers": "2",
+        "hit_limit": "200",
+        "health_limit": "200",
+        "observer_writes": "0",
+        "provider_emission": "unverified",
+        "line_number": 76,
+        "text": "DAMAGE_EVENTS_READY session=3 reason=post_load_game provider=ITR20202 handlers=2 hit_limit=200 health_limit=200 observer_writes=0 provider_emission=unverified"
+      }
+    ],
+    "EVENT": [
+      {
+        "session": "1",
+        "seq": "1",
+        "lifetime": "1",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0008ED03",
+        "ammo_known": "1",
+        "line_number": 17,
+        "text": "EVENT session=1 seq=1 CREATE lifetime=1 projectile=FF001972 source=00000014 weapon=000E3778 tracked=1 replaced=0 ammo=0008ED03 ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "1",
+        "seq": "2",
+        "target": "00176D81",
+        "attacker": "FF001972",
+        "coalesced": "1",
+        "current_hit_context": "0",
+        "line_number": 19,
+        "text": "EVENT session=1 seq=2 HIT_NOTICE target=00176D81 attacker=FF001972 coalesced=1 current_hit_context=0",
+        "event": "HIT_NOTICE"
+      },
+      {
+        "session": "1",
+        "seq": "3",
+        "target": "00176D81",
+        "hit_object": "000E3778",
+        "form_type": "28",
+        "coalesced": "1",
+        "current_hit_context": "0",
+        "line_number": 20,
+        "text": "EVENT session=1 seq=3 HIT_OBJECT_NOTICE target=00176D81 hit_object=000E3778 form_type=28 coalesced=1 current_hit_context=0",
+        "event": "HIT_OBJECT_NOTICE"
+      },
+      {
+        "session": "1",
+        "seq": "4",
+        "lifetime": "1",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "target": "00176D81",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "000E3778",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 21,
+        "text": "EVENT session=1 seq=4 IMPACT lifetime=1 projectile=FF001972 source=00000014 weapon=000E3778 target=00176D81 matched=1 impact_index=1 origin_source=00000014 origin_weapon=000E3778 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "1",
+        "seq": "5",
+        "lifetime": "1",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 23,
+        "text": "EVENT session=1 seq=5 DESTROY lifetime=1 projectile=FF001972 source=00000014 weapon=000E3778 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "1",
+        "seq": "6",
+        "lifetime": "2",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0008ED03",
+        "ammo_known": "1",
+        "line_number": 25,
+        "text": "EVENT session=1 seq=6 CREATE lifetime=2 projectile=FF001972 source=00000014 weapon=000E3778 tracked=1 replaced=0 ammo=0008ED03 ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "1",
+        "seq": "7",
+        "lifetime": "2",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "000E3778",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 27,
+        "text": "EVENT session=1 seq=7 IMPACT lifetime=2 projectile=FF001972 source=00000014 weapon=000E3778 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=000E3778 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "1",
+        "seq": "8",
+        "lifetime": "2",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 29,
+        "text": "EVENT session=1 seq=8 DESTROY lifetime=2 projectile=FF001972 source=00000014 weapon=000E3778 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "2",
+        "seq": "1",
+        "lifetime": "3",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0008ED03",
+        "ammo_known": "1",
+        "line_number": 44,
+        "text": "EVENT session=2 seq=1 CREATE lifetime=3 projectile=FF001737 source=00000014 weapon=000E3778 tracked=1 replaced=0 ammo=0008ED03 ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "2",
+        "seq": "2",
+        "lifetime": "3",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "000E3778",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 46,
+        "text": "EVENT session=2 seq=2 IMPACT lifetime=3 projectile=FF001737 source=00000014 weapon=000E3778 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=000E3778 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "2",
+        "seq": "3",
+        "lifetime": "3",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 48,
+        "text": "EVENT session=2 seq=3 DESTROY lifetime=3 projectile=FF001737 source=00000014 weapon=000E3778 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "2",
+        "seq": "4",
+        "lifetime": "4",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0006B53C",
+        "ammo_known": "1",
+        "line_number": 50,
+        "text": "EVENT session=2 seq=4 CREATE lifetime=4 projectile=FF001737 source=00000014 weapon=00004333 tracked=1 replaced=0 ammo=0006B53C ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "2",
+        "seq": "5",
+        "target": "00176D81",
+        "attacker": "FF001737",
+        "coalesced": "1",
+        "current_hit_context": "0",
+        "line_number": 52,
+        "text": "EVENT session=2 seq=5 HIT_NOTICE target=00176D81 attacker=FF001737 coalesced=1 current_hit_context=0",
+        "event": "HIT_NOTICE"
+      },
+      {
+        "session": "2",
+        "seq": "6",
+        "target": "00176D81",
+        "hit_object": "00004333",
+        "form_type": "28",
+        "coalesced": "1",
+        "current_hit_context": "0",
+        "line_number": 53,
+        "text": "EVENT session=2 seq=6 HIT_OBJECT_NOTICE target=00176D81 hit_object=00004333 form_type=28 coalesced=1 current_hit_context=0",
+        "event": "HIT_OBJECT_NOTICE"
+      },
+      {
+        "session": "2",
+        "seq": "7",
+        "lifetime": "4",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "target": "00176D81",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "00004333",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 54,
+        "text": "EVENT session=2 seq=7 IMPACT lifetime=4 projectile=FF001737 source=00000014 weapon=00004333 target=00176D81 matched=1 impact_index=1 origin_source=00000014 origin_weapon=00004333 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "2",
+        "seq": "8",
+        "lifetime": "4",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 56,
+        "text": "EVENT session=2 seq=8 DESTROY lifetime=4 projectile=FF001737 source=00000014 weapon=00004333 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "2",
+        "seq": "9",
+        "lifetime": "5",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0006B53C",
+        "ammo_known": "1",
+        "line_number": 58,
+        "text": "EVENT session=2 seq=9 CREATE lifetime=5 projectile=FF001737 source=00000014 weapon=00004333 tracked=1 replaced=0 ammo=0006B53C ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "2",
+        "seq": "10",
+        "lifetime": "5",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "00004333",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 60,
+        "text": "EVENT session=2 seq=10 IMPACT lifetime=5 projectile=FF001737 source=00000014 weapon=00004333 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=00004333 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "2",
+        "seq": "11",
+        "lifetime": "5",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 62,
+        "text": "EVENT session=2 seq=11 DESTROY lifetime=5 projectile=FF001737 source=00000014 weapon=00004333 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "3",
+        "seq": "1",
+        "lifetime": "6",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0006B53C",
+        "ammo_known": "1",
+        "line_number": 77,
+        "text": "EVENT session=3 seq=1 CREATE lifetime=6 projectile=FF001738 source=00000014 weapon=00004333 tracked=1 replaced=0 ammo=0006B53C ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "3",
+        "seq": "2",
+        "lifetime": "6",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "00004333",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 79,
+        "text": "EVENT session=3 seq=2 IMPACT lifetime=6 projectile=FF001738 source=00000014 weapon=00004333 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=00004333 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "3",
+        "seq": "3",
+        "lifetime": "6",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 81,
+        "text": "EVENT session=3 seq=3 DESTROY lifetime=6 projectile=FF001738 source=00000014 weapon=00004333 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "3",
+        "seq": "4",
+        "lifetime": "7",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0006B53C",
+        "ammo_known": "1",
+        "line_number": 83,
+        "text": "EVENT session=3 seq=4 CREATE lifetime=7 projectile=FF001738 source=00000014 weapon=00004333 tracked=1 replaced=0 ammo=0006B53C ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "3",
+        "seq": "5",
+        "lifetime": "7",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "00004333",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 85,
+        "text": "EVENT session=3 seq=5 IMPACT lifetime=7 projectile=FF001738 source=00000014 weapon=00004333 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=00004333 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "3",
+        "seq": "6",
+        "lifetime": "7",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 87,
+        "text": "EVENT session=3 seq=6 DESTROY lifetime=7 projectile=FF001738 source=00000014 weapon=00004333 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "3",
+        "seq": "7",
+        "lifetime": "8",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0008ED03",
+        "ammo_known": "1",
+        "line_number": 89,
+        "text": "EVENT session=3 seq=7 CREATE lifetime=8 projectile=FF001738 source=00000014 weapon=000E3778 tracked=1 replaced=0 ammo=0008ED03 ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "3",
+        "seq": "8",
+        "lifetime": "8",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "000E3778",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 91,
+        "text": "EVENT session=3 seq=8 IMPACT lifetime=8 projectile=FF001738 source=00000014 weapon=000E3778 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=000E3778 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "3",
+        "seq": "9",
+        "lifetime": "8",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 93,
+        "text": "EVENT session=3 seq=9 DESTROY lifetime=8 projectile=FF001738 source=00000014 weapon=000E3778 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "3",
+        "seq": "10",
+        "lifetime": "9",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0008ED03",
+        "ammo_known": "1",
+        "line_number": 95,
+        "text": "EVENT session=3 seq=10 CREATE lifetime=9 projectile=FF001738 source=00000014 weapon=000E3778 tracked=1 replaced=0 ammo=0008ED03 ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "3",
+        "seq": "11",
+        "lifetime": "9",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "000E3778",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 97,
+        "text": "EVENT session=3 seq=11 IMPACT lifetime=9 projectile=FF001738 source=00000014 weapon=000E3778 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=000E3778 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "3",
+        "seq": "12",
+        "lifetime": "9",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 99,
+        "text": "EVENT session=3 seq=12 DESTROY lifetime=9 projectile=FF001738 source=00000014 weapon=000E3778 matched=1 impacts=1",
+        "event": "DESTROY"
+      },
+      {
+        "session": "3",
+        "seq": "13",
+        "lifetime": "10",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "tracked": "1",
+        "replaced": "0",
+        "ammo": "0008ED03",
+        "ammo_known": "1",
+        "line_number": 101,
+        "text": "EVENT session=3 seq=13 CREATE lifetime=10 projectile=FF001738 source=00000014 weapon=000E3778 tracked=1 replaced=0 ammo=0008ED03 ammo_known=1",
+        "event": "CREATE"
+      },
+      {
+        "session": "3",
+        "seq": "14",
+        "lifetime": "10",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "target": "00000000",
+        "matched": "1",
+        "impact_index": "1",
+        "origin_source": "00000014",
+        "origin_weapon": "000E3778",
+        "region": "unknown",
+        "damage": "unknown",
+        "line_number": 103,
+        "text": "EVENT session=3 seq=14 IMPACT lifetime=10 projectile=FF001738 source=00000014 weapon=000E3778 target=00000000 matched=1 impact_index=1 origin_source=00000014 origin_weapon=000E3778 region=unknown damage=unknown",
+        "event": "IMPACT"
+      },
+      {
+        "session": "3",
+        "seq": "15",
+        "lifetime": "10",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "matched": "1",
+        "impacts": "1",
+        "line_number": 105,
+        "text": "EVENT session=3 seq=15 DESTROY lifetime=10 projectile=FF001738 source=00000014 weapon=000E3778 matched=1 impacts=1",
+        "event": "DESTROY"
+      }
+    ],
+    "FLIGHT_PREVIEW": [
+      {
+        "session": "1",
+        "lifetime": "1",
+        "profile": "9mm-pistol-standard",
+        "phase": "create",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "base_flags": "0089",
+        "hitscan": "1",
+        "gravity_setting": "3",
+        "range_setting": "10000",
+        "base_speed_setting": "23680",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "23680",
+        "speed_setting_mps_assuming_donor_scale": "338.286",
+        "muzzle_preview_mps": "387.109",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 18,
+        "text": "FLIGHT_PREVIEW session=1 lifetime=1 profile=9mm-pistol-standard phase=create projectile=FF001972 source=00000014 weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F base_flags=0089 hitscan=1 gravity_setting=3 range_setting=10000 base_speed_setting=23680 speed_multiplier=1 speed_setting_units_per_s=23680 speed_setting_mps_assuming_donor_scale=338.286 muzzle_preview_mps=387.109 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "1",
+        "lifetime": "2",
+        "profile": "9mm-pistol-standard",
+        "phase": "create",
+        "projectile": "FF001972",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "base_flags": "0089",
+        "hitscan": "1",
+        "gravity_setting": "3",
+        "range_setting": "10000",
+        "base_speed_setting": "23680",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "23680",
+        "speed_setting_mps_assuming_donor_scale": "338.286",
+        "muzzle_preview_mps": "387.109",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 26,
+        "text": "FLIGHT_PREVIEW session=1 lifetime=2 profile=9mm-pistol-standard phase=create projectile=FF001972 source=00000014 weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F base_flags=0089 hitscan=1 gravity_setting=3 range_setting=10000 base_speed_setting=23680 speed_multiplier=1 speed_setting_units_per_s=23680 speed_setting_mps_assuming_donor_scale=338.286 muzzle_preview_mps=387.109 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "3",
+        "profile": "9mm-pistol-standard",
+        "phase": "create",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "base_flags": "0089",
+        "hitscan": "1",
+        "gravity_setting": "3",
+        "range_setting": "10000",
+        "base_speed_setting": "23680",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "23680",
+        "speed_setting_mps_assuming_donor_scale": "338.286",
+        "muzzle_preview_mps": "387.109",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 45,
+        "text": "FLIGHT_PREVIEW session=2 lifetime=3 profile=9mm-pistol-standard phase=create projectile=FF001737 source=00000014 weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F base_flags=0089 hitscan=1 gravity_setting=3 range_setting=10000 base_speed_setting=23680 speed_multiplier=1 speed_setting_units_per_s=23680 speed_setting_mps_assuming_donor_scale=338.286 muzzle_preview_mps=387.109 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "4",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "create",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "ammo": "0006B53C",
+        "projectile_base": "0008F20A",
+        "base_flags": "028D",
+        "hitscan": "1",
+        "gravity_setting": "0.3",
+        "range_setting": "53000",
+        "base_speed_setting": "53000",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "53000",
+        "speed_setting_mps_assuming_donor_scale": "757.143",
+        "muzzle_preview_mps": "849.771",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 51,
+        "text": "FLIGHT_PREVIEW session=2 lifetime=4 profile=hunting-rifle-standard-308 phase=create projectile=FF001737 source=00000014 weapon=00004333 ammo=0006B53C projectile_base=0008F20A base_flags=028D hitscan=1 gravity_setting=0.3 range_setting=53000 base_speed_setting=53000 speed_multiplier=1 speed_setting_units_per_s=53000 speed_setting_mps_assuming_donor_scale=757.143 muzzle_preview_mps=849.771 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "5",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "create",
+        "projectile": "FF001737",
+        "source": "00000014",
+        "weapon": "00004333",
+        "ammo": "0006B53C",
+        "projectile_base": "0008F20A",
+        "base_flags": "028D",
+        "hitscan": "1",
+        "gravity_setting": "0.3",
+        "range_setting": "53000",
+        "base_speed_setting": "53000",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "53000",
+        "speed_setting_mps_assuming_donor_scale": "757.143",
+        "muzzle_preview_mps": "849.771",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 59,
+        "text": "FLIGHT_PREVIEW session=2 lifetime=5 profile=hunting-rifle-standard-308 phase=create projectile=FF001737 source=00000014 weapon=00004333 ammo=0006B53C projectile_base=0008F20A base_flags=028D hitscan=1 gravity_setting=0.3 range_setting=53000 base_speed_setting=53000 speed_multiplier=1 speed_setting_units_per_s=53000 speed_setting_mps_assuming_donor_scale=757.143 muzzle_preview_mps=849.771 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "6",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "create",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "ammo": "0006B53C",
+        "projectile_base": "0008F20A",
+        "base_flags": "028D",
+        "hitscan": "1",
+        "gravity_setting": "0.3",
+        "range_setting": "53000",
+        "base_speed_setting": "53000",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "53000",
+        "speed_setting_mps_assuming_donor_scale": "757.143",
+        "muzzle_preview_mps": "849.771",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 78,
+        "text": "FLIGHT_PREVIEW session=3 lifetime=6 profile=hunting-rifle-standard-308 phase=create projectile=FF001738 source=00000014 weapon=00004333 ammo=0006B53C projectile_base=0008F20A base_flags=028D hitscan=1 gravity_setting=0.3 range_setting=53000 base_speed_setting=53000 speed_multiplier=1 speed_setting_units_per_s=53000 speed_setting_mps_assuming_donor_scale=757.143 muzzle_preview_mps=849.771 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "7",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "create",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "00004333",
+        "ammo": "0006B53C",
+        "projectile_base": "0008F20A",
+        "base_flags": "028D",
+        "hitscan": "1",
+        "gravity_setting": "0.3",
+        "range_setting": "53000",
+        "base_speed_setting": "53000",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "53000",
+        "speed_setting_mps_assuming_donor_scale": "757.143",
+        "muzzle_preview_mps": "849.771",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 84,
+        "text": "FLIGHT_PREVIEW session=3 lifetime=7 profile=hunting-rifle-standard-308 phase=create projectile=FF001738 source=00000014 weapon=00004333 ammo=0006B53C projectile_base=0008F20A base_flags=028D hitscan=1 gravity_setting=0.3 range_setting=53000 base_speed_setting=53000 speed_multiplier=1 speed_setting_units_per_s=53000 speed_setting_mps_assuming_donor_scale=757.143 muzzle_preview_mps=849.771 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "8",
+        "profile": "9mm-pistol-standard",
+        "phase": "create",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "base_flags": "0089",
+        "hitscan": "1",
+        "gravity_setting": "3",
+        "range_setting": "10000",
+        "base_speed_setting": "23680",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "23680",
+        "speed_setting_mps_assuming_donor_scale": "338.286",
+        "muzzle_preview_mps": "387.109",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 90,
+        "text": "FLIGHT_PREVIEW session=3 lifetime=8 profile=9mm-pistol-standard phase=create projectile=FF001738 source=00000014 weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F base_flags=0089 hitscan=1 gravity_setting=3 range_setting=10000 base_speed_setting=23680 speed_multiplier=1 speed_setting_units_per_s=23680 speed_setting_mps_assuming_donor_scale=338.286 muzzle_preview_mps=387.109 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "9",
+        "profile": "9mm-pistol-standard",
+        "phase": "create",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "base_flags": "0089",
+        "hitscan": "1",
+        "gravity_setting": "3",
+        "range_setting": "10000",
+        "base_speed_setting": "23680",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "23680",
+        "speed_setting_mps_assuming_donor_scale": "338.286",
+        "muzzle_preview_mps": "387.109",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 96,
+        "text": "FLIGHT_PREVIEW session=3 lifetime=9 profile=9mm-pistol-standard phase=create projectile=FF001738 source=00000014 weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F base_flags=0089 hitscan=1 gravity_setting=3 range_setting=10000 base_speed_setting=23680 speed_multiplier=1 speed_setting_units_per_s=23680 speed_setting_mps_assuming_donor_scale=338.286 muzzle_preview_mps=387.109 life_s=0 travel_units=0 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "10",
+        "profile": "9mm-pistol-standard",
+        "phase": "create",
+        "projectile": "FF001738",
+        "source": "00000014",
+        "weapon": "000E3778",
+        "ammo": "0008ED03",
+        "projectile_base": "0008F20F",
+        "base_flags": "0089",
+        "hitscan": "1",
+        "gravity_setting": "3",
+        "range_setting": "10000",
+        "base_speed_setting": "23680",
+        "speed_multiplier": "1",
+        "speed_setting_units_per_s": "23680",
+        "speed_setting_mps_assuming_donor_scale": "338.286",
+        "muzzle_preview_mps": "387.109",
+        "life_s": "0",
+        "travel_units": "0",
+        "flight_writes": "0",
+        "line_number": 102,
+        "text": "FLIGHT_PREVIEW session=3 lifetime=10 profile=9mm-pistol-standard phase=create projectile=FF001738 source=00000014 weapon=000E3778 ammo=0008ED03 projectile_base=0008F20F base_flags=0089 hitscan=1 gravity_setting=3 range_setting=10000 base_speed_setting=23680 speed_multiplier=1 speed_setting_units_per_s=23680 speed_setting_mps_assuming_donor_scale=338.286 muzzle_preview_mps=387.109 life_s=0 travel_units=0 flight_writes=0"
+      }
+    ],
+    "FLIGHT_TRAVEL": [
+      {
+        "session": "1",
+        "lifetime": "1",
+        "profile": "9mm-pistol-standard",
+        "phase": "impact",
+        "life_delta_s": "0.031",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 22,
+        "text": "FLIGHT_TRAVEL session=1 lifetime=1 profile=9mm-pistol-standard phase=impact life_delta_s=0.031 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "1",
+        "lifetime": "1",
+        "profile": "9mm-pistol-standard",
+        "phase": "destroy",
+        "life_delta_s": "0.031",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 24,
+        "text": "FLIGHT_TRAVEL session=1 lifetime=1 profile=9mm-pistol-standard phase=destroy life_delta_s=0.031 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "1",
+        "lifetime": "2",
+        "profile": "9mm-pistol-standard",
+        "phase": "impact",
+        "life_delta_s": "0.078",
+        "travel_delta_units": "1468.16",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 28,
+        "text": "FLIGHT_TRAVEL session=1 lifetime=2 profile=9mm-pistol-standard phase=impact life_delta_s=0.078 travel_delta_units=1468.16 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "1",
+        "lifetime": "2",
+        "profile": "9mm-pistol-standard",
+        "phase": "destroy",
+        "life_delta_s": "0.078",
+        "travel_delta_units": "1468.16",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 30,
+        "text": "FLIGHT_TRAVEL session=1 lifetime=2 profile=9mm-pistol-standard phase=destroy life_delta_s=0.078 travel_delta_units=1468.16 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "3",
+        "profile": "9mm-pistol-standard",
+        "phase": "impact",
+        "life_delta_s": "0.062",
+        "travel_delta_units": "1089.28",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 47,
+        "text": "FLIGHT_TRAVEL session=2 lifetime=3 profile=9mm-pistol-standard phase=impact life_delta_s=0.062 travel_delta_units=1089.28 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "3",
+        "profile": "9mm-pistol-standard",
+        "phase": "destroy",
+        "life_delta_s": "0.062",
+        "travel_delta_units": "1089.28",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 49,
+        "text": "FLIGHT_TRAVEL session=2 lifetime=3 profile=9mm-pistol-standard phase=destroy life_delta_s=0.062 travel_delta_units=1089.28 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "4",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "impact",
+        "life_delta_s": "0.015",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 55,
+        "text": "FLIGHT_TRAVEL session=2 lifetime=4 profile=hunting-rifle-standard-308 phase=impact life_delta_s=0.015 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "4",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "destroy",
+        "life_delta_s": "0.015",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 57,
+        "text": "FLIGHT_TRAVEL session=2 lifetime=4 profile=hunting-rifle-standard-308 phase=destroy life_delta_s=0.015 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "5",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "impact",
+        "life_delta_s": "0.015",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 61,
+        "text": "FLIGHT_TRAVEL session=2 lifetime=5 profile=hunting-rifle-standard-308 phase=impact life_delta_s=0.015 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "2",
+        "lifetime": "5",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "destroy",
+        "life_delta_s": "0.015",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 63,
+        "text": "FLIGHT_TRAVEL session=2 lifetime=5 profile=hunting-rifle-standard-308 phase=destroy life_delta_s=0.015 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "6",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "impact",
+        "life_delta_s": "0.032",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 80,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=6 profile=hunting-rifle-standard-308 phase=impact life_delta_s=0.032 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "6",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "destroy",
+        "life_delta_s": "0.032",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 82,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=6 profile=hunting-rifle-standard-308 phase=destroy life_delta_s=0.032 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "7",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "impact",
+        "life_delta_s": "0.016",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 86,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=7 profile=hunting-rifle-standard-308 phase=impact life_delta_s=0.016 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "7",
+        "profile": "hunting-rifle-standard-308",
+        "phase": "destroy",
+        "life_delta_s": "0.016",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 88,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=7 profile=hunting-rifle-standard-308 phase=destroy life_delta_s=0.016 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "8",
+        "profile": "9mm-pistol-standard",
+        "phase": "impact",
+        "life_delta_s": "0.032",
+        "travel_delta_units": "378.878",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 92,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=8 profile=9mm-pistol-standard phase=impact life_delta_s=0.032 travel_delta_units=378.878 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "8",
+        "profile": "9mm-pistol-standard",
+        "phase": "destroy",
+        "life_delta_s": "0.032",
+        "travel_delta_units": "378.878",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 94,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=8 profile=9mm-pistol-standard phase=destroy life_delta_s=0.032 travel_delta_units=378.878 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "9",
+        "profile": "9mm-pistol-standard",
+        "phase": "impact",
+        "life_delta_s": "0.031",
+        "travel_delta_units": "355.202",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 98,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=9 profile=9mm-pistol-standard phase=impact life_delta_s=0.031 travel_delta_units=355.202 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "9",
+        "profile": "9mm-pistol-standard",
+        "phase": "destroy",
+        "life_delta_s": "0.031",
+        "travel_delta_units": "355.202",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 100,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=9 profile=9mm-pistol-standard phase=destroy life_delta_s=0.031 travel_delta_units=355.202 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "10",
+        "profile": "9mm-pistol-standard",
+        "phase": "impact",
+        "life_delta_s": "0.016",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 104,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=10 profile=9mm-pistol-standard phase=impact life_delta_s=0.016 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      },
+      {
+        "session": "3",
+        "lifetime": "10",
+        "profile": "9mm-pistol-standard",
+        "phase": "destroy",
+        "life_delta_s": "0.016",
+        "travel_delta_units": "0",
+        "hitscan": "1",
+        "mean_speed_valid": "0",
+        "mean_travel_units_per_s": "-1",
+        "mean_travel_mps_assuming_donor_scale": "-1",
+        "source": "engine_counters",
+        "not_muzzle_measurement": "1",
+        "flight_writes": "0",
+        "line_number": 106,
+        "text": "FLIGHT_TRAVEL session=3 lifetime=10 profile=9mm-pistol-standard phase=destroy life_delta_s=0.016 travel_delta_units=0 hitscan=1 mean_speed_valid=0 mean_travel_units_per_s=-1 mean_travel_mps_assuming_donor_scale=-1 source=engine_counters not_muzzle_measurement=1 flight_writes=0"
+      }
+    ],
+    "SUMMARY": [
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "rows": "8",
+        "create": "2",
+        "impact": "2",
+        "destroy": "2",
+        "hit_notice": "1",
+        "weapon_notice": "1",
+        "blast": "0",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0",
+        "line_number": 31,
+        "text": "SUMMARY session=1 reason=pre_load_game rows=8 create=2 impact=2 destroy=2 hit_notice=1 weapon_notice=1 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+      },
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "rows": "11",
+        "create": "3",
+        "impact": "3",
+        "destroy": "3",
+        "hit_notice": "1",
+        "weapon_notice": "1",
+        "blast": "0",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0",
+        "line_number": 64,
+        "text": "SUMMARY session=2 reason=pre_load_game rows=11 create=3 impact=3 destroy=3 hit_notice=1 weapon_notice=1 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+      },
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "rows": "15",
+        "create": "5",
+        "impact": "5",
+        "destroy": "5",
+        "hit_notice": "0",
+        "weapon_notice": "0",
+        "blast": "0",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0",
+        "line_number": 107,
+        "text": "SUMMARY session=3 reason=exit_game rows=15 create=5 impact=5 destroy=5 hit_notice=0 weapon_notice=0 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+      }
+    ],
+    "CURRENT_HIT_SUMMARY": [
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "contexts": "0",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "0",
+        "known_ammo": "0",
+        "damage_applications": "unverified",
+        "line_number": 32,
+        "text": "CURRENT_HIT_SUMMARY session=1 reason=pre_load_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified"
+      },
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "contexts": "0",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "0",
+        "known_ammo": "0",
+        "damage_applications": "unverified",
+        "line_number": 65,
+        "text": "CURRENT_HIT_SUMMARY session=2 reason=pre_load_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified"
+      },
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "contexts": "0",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "0",
+        "known_ammo": "0",
+        "damage_applications": "unverified",
+        "line_number": 108,
+        "text": "CURRENT_HIT_SUMMARY session=3 reason=exit_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified"
+      }
+    ],
+    "FLIGHT_PREVIEW_SUMMARY": [
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "seen": "2",
+        "matched": "2",
+        "skipped": "0",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "2",
+        "impact_rows": "2",
+        "destroy_rows": "2",
+        "open_samples": "0",
+        "flight_writes": "0",
+        "damage_writes": "0",
+        "line_number": 33,
+        "text": "FLIGHT_PREVIEW_SUMMARY session=1 reason=pre_load_game seen=2 matched=2 skipped=0 read_failures=0 identity_mismatches=0 create_rows=2 impact_rows=2 destroy_rows=2 open_samples=0 flight_writes=0 damage_writes=0"
+      },
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "seen": "3",
+        "matched": "3",
+        "skipped": "0",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "3",
+        "impact_rows": "3",
+        "destroy_rows": "3",
+        "open_samples": "0",
+        "flight_writes": "0",
+        "damage_writes": "0",
+        "line_number": 66,
+        "text": "FLIGHT_PREVIEW_SUMMARY session=2 reason=pre_load_game seen=3 matched=3 skipped=0 read_failures=0 identity_mismatches=0 create_rows=3 impact_rows=3 destroy_rows=3 open_samples=0 flight_writes=0 damage_writes=0"
+      },
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "seen": "5",
+        "matched": "5",
+        "skipped": "0",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "5",
+        "impact_rows": "5",
+        "destroy_rows": "5",
+        "open_samples": "0",
+        "flight_writes": "0",
+        "damage_writes": "0",
+        "line_number": 109,
+        "text": "FLIGHT_PREVIEW_SUMMARY session=3 reason=exit_game seen=5 matched=5 skipped=0 read_failures=0 identity_mismatches=0 create_rows=5 impact_rows=5 destroy_rows=5 open_samples=0 flight_writes=0 damage_writes=0"
+      }
+    ],
+    "DAMAGE_EVENT_SUMMARY": [
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "hit_callbacks": "0",
+        "hit_rows": "0",
+        "health_callbacks": "0",
+        "health_rows": "0",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified",
+        "line_number": 34,
+        "text": "DAMAGE_EVENT_SUMMARY session=1 reason=pre_load_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+      },
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "hit_callbacks": "0",
+        "hit_rows": "0",
+        "health_callbacks": "0",
+        "health_rows": "0",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified",
+        "line_number": 67,
+        "text": "DAMAGE_EVENT_SUMMARY session=2 reason=pre_load_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+      },
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "hit_callbacks": "0",
+        "hit_rows": "0",
+        "health_callbacks": "0",
+        "health_rows": "0",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified",
+        "line_number": 110,
+        "text": "DAMAGE_EVENT_SUMMARY session=3 reason=exit_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+      }
+    ]
+  },
+  "faults": [],
+  "checks": [
+    "Stable source file while reading",
+    "3B1 header",
+    "Contiguous provider sequences per capture",
+    "Balanced creation/impact/destruction identities",
+    "Every preview matches its creation and explicit pilot IDs",
+    "Barrel-formula and setting-speed values agree within log rounding",
+    "Each match has one impact and one destroy travel row",
+    "Hitscan travel samples retain unavailable sentinel",
+    "No reported tracking/read/identity/observer faults"
+  ],
+  "review_outcome": {
+    "accepted": "3B1 pilot identities, preview arithmetic and same-process profile/cache reload checkpoint",
+    "totals": {
+      "9mm_projectiles": 6,
+      "hunting_rifle_projectiles": 4,
+      "matched": 10,
+      "same_process_reloads": 2
+    },
+    "travel_measurement": "All pilot bases report hitscan=1; all 20 travel samples correctly remain unavailable. No physical flight or unit calibration pass.",
+    "runtime_changes": "None during review; version 301 retained.",
+    "next_packet": "Controlled physical-flight pilot preparation requires user confirmation; damage authority remains disabled."
+  }
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "source\\combat\\step3f2\\runtime-20260915-195354\\movement-0092F260.bin",
+    "sha256": "bfd3056ab4642dbf930418afd937d0c6811bfd750030793598c35f1cf9d0e478",
+    "finding": "Z-only terrain clamp at 00930155..00930186, after query at00930150"
+  },
+  {
+    "path": "source\\combat\\step3b2\\timing-investigation\\runtime-20260915-102703\\projectile-code-009B7000.bin",
+    "sha256": "f6c95eb7e7ea3f5968770d6a8b807260f160e08ff2be6e085ade515376f3b452",
+    "finding": "Contact input copy and virtual32C callers; surface-point offset cause NOT established"
+  }
+]

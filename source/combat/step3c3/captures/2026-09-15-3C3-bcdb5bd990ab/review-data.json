@@ -1,0 +1,257 @@
+{
+  "log_sha256": "bcdb5bd990ab991e8c37ada27e9e0fa19c01d640bfc10becef4c3532cf2364be",
+  "bytes": 25836,
+  "lines": 110,
+  "archived_last_write": 1789439581.5765567,
+  "event_counts": {
+    "no_motion": 2,
+    "moving": 12,
+    "collision": 2
+  },
+  "comparisons": [
+    {
+      "session": 1,
+      "lifetime": 1,
+      "step": 0,
+      "phase": "baseline",
+      "input_readback": [
+        0.0,
+        1844.00305,
+        0.0
+      ],
+      "write_verified": 0,
+      "input_matches_boundary": true,
+      "input_matches_return": true,
+      "boundary_path": "position_commit",
+      "controller_present": 1,
+      "candidate_delta": [
+        1680.82031,
+        -752.312256,
+        -96.1054688
+      ],
+      "current_delta_before_commit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        1680.82031,
+        -752.312256,
+        -96.1054688
+      ],
+      "candidate_actual_difference": 0.0,
+      "full_rotation_prediction": [
+        1680.8146559767513,
+        -752.3119410581447,
+        -96.10454726174089
+      ],
+      "local_z_omission_prediction": [
+        1680.814655976751,
+        -752.3119410581447,
+        -96.10454726174089
+      ],
+      "omission_prediction_error": 0.005737281589355057,
+      "actual_verified": 1,
+      "full_intended_error": 0.00577360695,
+      "tolerance": 0.0757787203,
+      "interpretation": "Local-Z omission fits movement destination; exact internal controller operation is not yet identified."
+    },
+    {
+      "session": 1,
+      "lifetime": 1,
+      "step": 1,
+      "phase": "apply",
+      "input_readback": [
+        1.13686838e-13,
+        1822.80859,
+        -0.326874465
+      ],
+      "write_verified": 1,
+      "input_matches_boundary": true,
+      "input_matches_return": true,
+      "boundary_path": "position_commit",
+      "controller_present": 1,
+      "candidate_delta": [
+        1661.49219,
+        -743.665039,
+        -95.0
+      ],
+      "current_delta_before_commit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        1661.49219,
+        -743.665039,
+        -95.0
+      ],
+      "candidate_actual_difference": 0.0,
+      "full_rotation_prediction": [
+        1661.4802888053753,
+        -743.6581164118003,
+        -95.32637846243676
+      ],
+      "local_z_omission_prediction": [
+        1661.495838150765,
+        -743.6650761073091,
+        -94.99994823043394
+      ],
+      "omission_prediction_error": 0.003648706763299641,
+      "actual_verified": 0,
+      "full_intended_error": 0.326670058,
+      "tolerance": 0.0745144229,
+      "interpretation": "Local-Z omission fits movement destination; exact internal controller operation is not yet identified."
+    },
+    {
+      "session": 1,
+      "lifetime": 2,
+      "step": 0,
+      "phase": "baseline",
+      "input_readback": [
+        0.0,
+        840.026794,
+        0.0
+      ],
+      "write_verified": 0,
+      "input_matches_boundary": true,
+      "input_matches_return": true,
+      "boundary_path": "position_commit",
+      "controller_present": 1,
+      "candidate_delta": [
+        767.039062,
+        -338.497559,
+        -52.1757812
+      ],
+      "current_delta_before_commit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        767.039062,
+        -338.497559,
+        -52.1757812
+      ],
+      "candidate_actual_difference": 0.0,
+      "full_rotation_prediction": [
+        767.0346738058727,
+        -338.497394767916,
+        -52.17602469305795
+      ],
+      "local_z_omission_prediction": [
+        767.0346738058727,
+        -338.497394767916,
+        -52.17602469305795
+      ],
+      "omission_prediction_error": 0.00439801190827516,
+      "actual_verified": 1,
+      "full_intended_error": 0.00441565864,
+      "tolerance": 0.0557129144,
+      "interpretation": "Local-Z omission fits movement destination; exact internal controller operation is not yet identified."
+    },
+    {
+      "session": 1,
+      "lifetime": 2,
+      "step": 1,
+      "phase": "apply",
+      "input_readback": [
+        5.68434189e-14,
+        826.942932,
+        -0.325814515
+      ],
+      "write_verified": 1,
+      "input_matches_boundary": true,
+      "input_matches_return": true,
+      "boundary_path": "position_commit",
+      "controller_present": 1,
+      "candidate_delta": [
+        755.085938,
+        -333.225098,
+        -51.3632812
+      ],
+      "current_delta_before_commit": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actual_delta": [
+        755.085938,
+        -333.225098,
+        -51.3632812
+      ],
+      "candidate_actual_difference": 0.0,
+      "full_rotation_prediction": [
+        755.0691883238463,
+        -333.2169481321694,
+        -51.68854090904421
+      ],
+      "local_z_omission_prediction": [
+        755.0877027176016,
+        -333.225118654658,
+        -51.363355488136655
+      ],
+      "omission_prediction_error": 0.0017664013007522817,
+      "actual_verified": 0,
+      "full_intended_error": 0.325792362,
+      "tolerance": 0.0550677199,
+      "interpretation": "Local-Z omission fits movement destination; exact internal controller operation is not yet identified."
+    }
+  ],
+  "lifecycle": [
+    "LIFECYCLE post_load_plugins",
+    "LIFECYCLE post_post_load_plugins",
+    "LIFECYCLE deferred_init",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=1",
+    "LIFECYCLE exit_game"
+  ],
+  "summaries": [
+    "SUMMARY session=1 reason=exit_game rows=10 create=2 impact=2 destroy=2 hit_notice=2 weapon_notice=2 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0",
+    "CURRENT_HIT_SUMMARY session=1 reason=exit_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified",
+    "PHYSICS_SUMMARY session=1 reason=exit_game accepted=2 applied_steps=2 rejected=2 overflow=0 open=0 damage_replacement=0",
+    "PHYSICS_ROUTE_SUMMARY session=1 reason=exit_game move_entries_all=14 move_untracked=0 accounting_entries_all=14 accounting_untracked=0 baselines_verified=2 applied_verified=0 mismatches=2 accounting_unpaired=0 lives_without_update=0",
+    "FLIGHT_TIMING_SUMMARY session=1 reason=exit_game accepted=2 steps_logged=16 invalid=0 retired_during_update=0 other_thread_steps=16 overlap_lifetimes=0 thread_changes=0 nesting_limit=0 open=0 timing_writes=0 damage_writes=0",
+    "FLIGHT_PREVIEW_SUMMARY session=1 reason=exit_game seen=2 matched=2 skipped=0 read_failures=0 identity_mismatches=0 create_rows=2 impact_rows=2 destroy_rows=2 open_samples=0 preview_writes=0 damage_writes=0",
+    "DAMAGE_EVENT_SUMMARY session=1 reason=exit_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+  ],
+  "physics_shots": [
+    {
+      "session": "1",
+      "lifetime": "1",
+      "reason": "destroy",
+      "movement_entries": "4",
+      "accounting_entries": "4",
+      "baseline_verified": "1",
+      "steps": "1",
+      "verified_steps": "0",
+      "pending": "0",
+      "elapsed_s": "0",
+      "speed_mps": "849.770934",
+      "stopped": "1",
+      "commit_entries": "2",
+      "node_entries": "0"
+    },
+    {
+      "session": "1",
+      "lifetime": "2",
+      "reason": "destroy",
+      "movement_entries": "10",
+      "accounting_entries": "10",
+      "baseline_verified": "1",
+      "steps": "1",
+      "verified_steps": "0",
+      "pending": "0",
+      "elapsed_s": "0",
+      "speed_mps": "387.109096",
+      "stopped": "1",
+      "commit_entries": "2",
+      "node_entries": "0"
+    }
+  ],
+  "cap_reached": false,
+  "physics_accepted": false,
+  "boundary_diagnostic_accepted": true,
+  "game_modified": false
+}

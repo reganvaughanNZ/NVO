@@ -1,0 +1,29 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\GameData.h",
+      "bytes": 12873,
+      "sha256": "3716e2842658690f3108739701e2abec381f2094e840c3ed0b0d84c63ccbbd78"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\GameData.cpp",
+      "bytes": 1803,
+      "sha256": "ab7bd3332a051605f80b2492a446a4f66246ab80b7532ad6e7bb8901989d6dbe"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\GameForms.cpp",
+      "bytes": 21906,
+      "sha256": "7a3e697ba8235e3668f9813bdd2dbfe654b502677a1124bcd22578530a3e6397"
+    }
+  ],
+  "runtime": "FNV x86 standard loaded-mod table, guarded by existing validated runtime/JIP layout",
+  "offsets": {
+    "DataHandlerSlot": "0x011C3F2C",
+    "loadedModCount": "0x218",
+    "loadedMods": "0x21C",
+    "ModInfo.name": "0x20 length260",
+    "ModInfo.modIndex": "0x40C"
+  },
+  "form_identity": "GetModIndex uses FormID high byte; low24 bits local ID; FF unresolved",
+  "scope": "Owning-plugin identity only. No winning-override or asset fingerprint verification."
+}

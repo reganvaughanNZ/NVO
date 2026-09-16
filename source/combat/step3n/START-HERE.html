@@ -1,0 +1,263 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NVO · Packet 3N — Baron retirement</title>
+<style>:root{color-scheme:dark}body{max-width:920px;margin:40px auto;padding:0 24px;background:#111b18;color:#e2e9dd;font:17px/1.65 system-ui}h1{font-size:32px}h2{font-size:23px;color:#d0e1b7}a{color:#bcde9e}section,.notice{border:1px solid #455b49;background:#1a2a21;padding:22px;margin:24px 0;border-radius:8px}button{font:600 16px system-ui;padding:13px 20px;background:#c3dfaa;color:#122115;border:0;border-radius:5px;cursor:pointer}textarea{box-sizing:border-box;width:100%;height:280px;background:#0b1410;color:#dce9d8;padding:12px;font:13px/1.4 monospace}li{margin:10px 0}</style>
+<h1>Packet 3N: retire the Baron ability</h1>
+<p>The separate offline armour calculator compiled and passed <b>45 checks</b>. It is not in the game DLL and cannot change health. Its laser/plasma/flame/blast checks use synthetic profiles; live adapters and balance are still pending.</p>
+<div class="notice"><b>Your step now: four original scripts and one message description.</b> The fourth script only removes the obsolete ability text from the start preview. No combat test, new quest, new script record, Recompile All or DLL installation is needed.</div>
+<ol><li>Close New Vegas. Open GECK Extender and load <b>NVO.esm as the active file</b>.</li>
+<li>Use <b>Gameplay → Edit Scripts → Script → Open</b>. Select each exact original name below, without a DUPLICATE suffix. Do not use New.</li>
+<li>For each script, use its Copy button, select all source in GECK, paste and compile/save. Keep the stated script type. Existing reserved declarations are intentional.</li>
+<li>In the Object Window, find <b>Miscellaneous → Message → ALTRichKid</b> (display name Brahmin Baron). Keep the Editor ID and title. Replace only its message/description text with the final Copy button below. Click OK.</li>
+<li>Save <b>NVO.esm</b> in the main GECK window, close GECK and reply <b>SAVED</b>. I will verify the original records, compiled changes and variable slots before the next packet.</li></ol>
+<p>Backup already stored in the project: <a href="../../source/combat/step3n/baseline/NVO.esm">pre-edit NVO.esm</a>. If you have other unsaved GECK changes, save a separate copy before proceeding.</p>
+<section><h2>ALTRichKidHit</h2><p>Open the original Editor ID. Keep Script Type: <b>Object</b>. Replace the entire source, then compile/save.</p><button onclick="copyText('ALTRichKidHit',this)">Copy complete script</button> <a href="Scripts/ALTRichKidHit.txt">Open text</a><details><summary>Show full source</summary><textarea id="ALTRichKidHit" readonly>scn	ALTRichKidHit
+
+ref rTarget
+ref rAttacker
+float iCaps
+
+
+begin Function {rTarget, rAttacker}
+    return
+end
+</textarea></details></section><section><h2>ALTBackRichKidUDF</h2><p>Open the original Editor ID. Keep Script Type: <b>Object</b>. Replace the entire source, then compile/save.</p><button onclick="copyText('ALTBackRichKidUDF',this)">Copy complete script</button> <a href="Scripts/ALTBackRichKidUDF.txt">Open text</a><details><summary>Show full source</summary><textarea id="ALTBackRichKidUDF" readonly>scn ALTBackRichKidUDF
+
+begin Function {}
+	ALTStartQ.iWealth = 5
+	ALTQ.sMajorKnight = &quot;Rancher.&quot;
+	ALTQ.sVeronicLoc = &quot;The Big Circle.&quot;
+	RemoveEventHandler &quot;OnHit&quot; ALTRichKidHit
+	Player.additemalt CowboyHat01 1 65 1 1
+	Player.additemalt OutfitGambler01 1 65 1 1
+	Player.additem caps001 5000 1
+	If ismodloaded &quot;Simple Open Freeside.esm&quot;
+		ALTStartQ.rMarker = ALTRichKidMarkerFreesideOpen
+	Else
+		ALTStartQ.rMarker = ALTRichKidMarker
+	EndIf
+
+	LListClear ALTStartingGearGuns
+	LListAddForm ALTStartingGearGuns WithAmmoNV357RevolverLoot 1 1 0.0
+	LListAddForm ALTStartingGearGuns Ammo357Magnum 1 30 1.0
+end</textarea></details></section><section><h2>ALTQscript</h2><p>Open the original Editor ID. Keep Script Type: <b>Quest</b>. Replace the entire source, then compile/save.</p><button onclick="copyText('ALTQscript',this)">Copy complete script</button> <a href="Scripts/ALTQscript.txt">Open text</a><details><summary>Show full source</summary><textarea id="ALTQscript" readonly>scn ALTQscript
+
+string_var sVeronicLoc
+
+ref rTurnInItem
+int iTurnInValue
+int nvoReservedSlot4
+ref rRef
+
+int bBlock
+
+int iState
+
+int nvoReservedSlot8
+int nvoReservedSlot9
+int iScience
+int iUpdate
+
+string_var sMajorKnight
+int ModOverridingIndex
+string_var modName
+
+begin gamemode
+	if getgameloaded == 0
+		return
+	else
+		if GetNVSEVersion &lt; 6
+		    Return
+		elseif GetNVSEVersion == 6
+		    if GetNVSERevision &lt; 3
+		        Return
+		    endif
+		endif
+		RemoveEventHandler &quot;OnHit&quot; ALTRichKidHit
+
+		if IsPluginInstalled &quot;JIP LN NVSE&quot; == 0
+		    if IsPluginInstalled &quot;JIP NVSE Plugin&quot; == 0
+		        Return
+		    endif
+		endif
+		if IsPluginInstalled &quot;JohnnyGuitarNVSE&quot; == 0
+		    Return
+		endif
+		if IsPluginInstalled &quot;ShowOffNVSE Plugin&quot; == 0
+		    Return
+		endif
+
+		if getgamerestarted
+			If ismodloaded &quot;Better Character Creation.esm&quot;
+				PrintC &quot;Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues.&quot;
+			ElseIf Eval IsFormOverridden VCG00
+				Set ModOverridingIndex to GetFormOverrideIndex VCG00
+				Let modName := GetModName ModOverridingIndex 1
+				PrintC &quot;The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.&quot; modName
+				sv_destruct modName
+			ElseIf Eval IsFormOverridden VCG01
+				Set ModOverridingIndex to GetFormOverrideIndex VCG01
+				Let modName := GetModName ModOverridingIndex 1
+				PrintC &quot;The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.&quot; modName
+				sv_destruct modName
+			Elseif ismodloaded &quot;YUP - Base Game + All DLC.esm&quot; &amp;&amp; GetModIndex &quot;YUP - Base Game + All DLC.esm&quot; &gt; GetModIndex &quot;NVO.esm&quot;
+				PrintC &quot;WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues.&quot;
+			endif
+
+			SetPerkFlag WildWasteland 1 0
+
+			LNSetName $sVeronicLoc VDialogueVeronicaVeronicaTopic000
+			if eval Sv_Length sMajorKnight != -1
+				LNSetName $sMajorKnight vMojavevMOMajorKnightTopic019
+			endif
+			DialogResponseAddRelatedTopic 0015E575 ALTBoSTop 1 0
+			DialogResponseAddRelatedTopic 000E2F71 ALTBoSTop 1 0
+
+			DialogResponseAddRelatedTopic 000E3608 ALTFoAHelios 1 0
+
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC01MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC02MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC03MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC04MQ00 100
+
+			if ALTBackground == 12
+				LNSetName &quot;How did the Three Families defeat us?&quot; VMS45VRRCPapaKhanTopic016
+				LNSetName &quot;Can you tell me about our tribe?&quot; PapaKhanKhans
+				LNSetName &quot;Just trying to do my part for the tribe.&quot; vFreeformSloanQJMelissaTopic017
+				LNSetName &quot;Have a look at this book. Our tribe is nothing but a bunch of thugs, aping the glories of the past.&quot; VMS45VRRCPapaKhanTopic013
+				LNSetName &quot;Have a look at this book. If you want to see what our tribe could be, read about the Mongol Empire.&quot; VMS45VRRCPapaKhanTopic011
+				LNSetName &quot;We don&#x27;t need to look outward, mighty Khan. Our tribe is proud and strong - we should claim our own glory!&quot; VMS45VRRCPapaKhanTopic003
+				LNSetName &quot;What great legacy do the Great Khans have? Our tribe is nothing but ghosts and martyrs.&quot; VMS45VRRCPapaKhanTopic009
+			elseif ALTBackground == 14
+				LNSetName &quot;Can you tell me more about Novac?&quot; JeannieCrawfordWhereAmI
+				LNSetName &quot;I just moved into town. Pleasure to meet you.&quot; MannyVargasWhoAreYou
+				LNSetName &quot;I just moved into town, and I wanted to introduce myself.&quot; CraigBooneMeetingNewPeople
+				LNSetName &quot;Is this any way to treat your new neighbor?&quot; CraigBooneDoesntAffectMe
+				LNSetName &quot;I just moved into town, and I wanted to introduce myself.&quot; AliceMcBrideIntro
+				LNSetName &quot;Yep, I just moved into the neighborhood.&quot; CraigBooneYes
+			elseif ALTBackground == 16
+				LNSetName &quot;Why can&#x27;t every man in Freeside join the Kings?&quot; VFreeformFreesideVFSTheKingTopic065
+			elseif ALTBackground == 22
+				SetFactionFlags VWastelandNVBanditViperFaction 256
+			elseif ALTBackground == 21
+				SetFactionFlags VJackalsGangFaction 256
+			elseif ALTBackground == 31
+				ForEachInList ALTEggList ({rRef} =&gt; SetValueAlt rRef ((GetValue rRef)*2))
+			elseif ALTBackground == 35
+				LNSetName &quot;I&#x27;m happy to help.&quot; VFreeformFreesideFSJulieFarkasTopic004
+			elseif ALTBackground == 38
+				if ismodloaded &quot;NukaExpansionUltFNV.esm&quot;
+					call ALTNukaExpansionPatcher
+				endif
+				SetOnUseAidItemEventHandler ALTNukaDrinkEvent 1 ALTNukaList
+			elseif ALTBackground == 41
+				SetFactionFlags VCrCoyoteFaction 256
+				SetFactionFlags NVDLC02CrCoyoteFaction 256
+				ForEachInList ALTCoyoteList ({rRef} =&gt; call ALTSetFlagUDF rRef 1 5 1)
+			elseif ALTBackground == 49
+				LNSetName &quot;How long have you worked for the Gun Runners?&quot; vDialogueGunRunnerNVIsaacTopic000
+			endif
+		endif
+
+		if iUpdate == 0
+			SetEssential GSSunnySmiles 0
+			SetEssential GSCheyenne 0
+
+			SetCellOwnership GSDocMitchellHouse DocMitchell
+
+			iUpdate = 1
+		elseif iUpdate == 1
+			McMurphyREF.disable
+			JessupREF.disable
+			iUpdate = 2
+		elseif iUpdate == 2
+			if ALTGO == 0 &amp;&amp; MannyVargasREF.GetItemCount VMQ01NoteObject &gt; 0
+				MannyVargasREF.removeitem VMQ01NoteObject 1
+			endif
+			iUpdate = 3
+		endif
+
+		if ALTBackground == 3
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTGamblerPreActEvent 0::(GetListForms ALTGamblerTablesList) 1::Player 2::1
+		elseif ALTBackground == 21
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTViperActivateEvent 0::(GetListForms ALTViperLeaderList) 1::Player 2::1
+		elseif ALTBackground == 22
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTJackalActivateEvent 0::(GetListForms ALTJackalLeaderList) 1::Player 2::1
+		elseif ALTBackground == 44
+			SetEventHandlerAlt &quot;ShowOff:OnAdd&quot; ALTCapEvent 1::Caps001 2::player
+		elseif ALTBackground == 47
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTLonewolfActivateEvent 0::(GetListForms ALTLoneWolfRadioList) 1::Player 2::1
+		endif
+	endif
+end</textarea></details></section><section><h2>NVOStartPreview</h2><p>Open the original Editor ID. Keep Script Type: <b>Object</b>. Replace the entire source, then compile/save.</p><button onclick="copyText('NVOStartPreview',this)">Copy complete script</button> <a href="Scripts/NVOStartPreview.txt">Open text</a><details><summary>Show full source</summary><textarea id="NVOStartPreview" readonly>scn NVOStartPreview
+
+int iBackground
+int iHasNote
+ref rBackground
+string_var sText
+string_var sNote
+string_var sBreak
+
+begin function {iBackground}
+
+    let rBackground := ListGetNthForm ALTBackList iBackground
+    let sText := GetFormDescription rBackground
+    let sBreak := Sv_Construct &quot;%r%r&quot;
+    let sNote := &quot;&quot;
+    let iHasNote := 1
+
+    if iBackground == 0
+        let sNote := &quot;Your background is rolled after character creation. Its equipment and risks are unknown until then.&quot;
+    elseif iBackground == 7
+        let sNote := &quot;The Brotherhood is hostile. This start also changes Brotherhood quest progression.&quot;
+       elseif iBackground == 17
+        let sNote := &quot;Your Vault 13 armor starts at 45 condition out of 100. Your weathered pistol starts at 15.&quot;
+    elseif iBackground == 18
+        let sNote := &quot;Your tribal armor starts at 45 condition out of 100. Your broad machete starts at 35.&quot;
+    elseif iBackground == 19
+        let sNote := &quot;Your lightweight leather armor starts at 45 condition out of 100. Your caravan shotgun starts at 15.&quot;
+    elseif iBackground == 20
+        let sNote := &quot;Your lightweight metal armor starts at 45 condition out of 100. Your grenade rifle starts at 15.&quot;
+    elseif iBackground == 27
+        let sNote := &quot;Power Armor Training is included, but your Remnants helmet is broken. This start does not give a full power armor suit.&quot;
+    elseif iBackground == 29
+        let sNote := &quot;You begin with crippled limbs and lose 70 percent of your current health. Hostile robots make this a dangerous escape.&quot;
+    elseif iBackground == 31
+        let sNote := &quot;You begin at night with temporary Stealth Boy protection. The nearby deathclaws remain dangerous.&quot;
+    elseif iBackground == 34
+        let sNote := &quot;Your Desert Ranger armor and helmet both start at only 10 condition out of 100. Repairs will matter immediately.&quot;
+    elseif iBackground == 42
+        let sNote := &quot;Your starting SPECIAL budget is 36 instead of the usual 40. This is a disadvantaged start despite your coyote allies.&quot;
+    elseif iBackground == 43
+        let sNote := &quot;Your Ranger battle armor starts at only 20 condition out of 100. You also receive the Grunt perk.&quot;
+    elseif iBackground == 45
+        let sNote := &quot;Your alien blaster starts at 10 condition out of 100 with five cells. A quarter of trading caps are donated.&quot;
+    elseif iBackground == 53
+        let sNote := &quot;You receive a 5,000-cap grant. Your starting wealth helps you buy equipment and supplies.&quot;
+    elseif iBackground == 54
+        let sNote := &quot;This background starts hostile to numerous factions. Expect severe restrictions on safe travel and friendly settlements.&quot;
+    elseif iBackground == 55
+        let sNote := &quot;This starts the Dead Money adventure. The donor describes returning to the Mojave as restricted until you finish it.&quot;
+    elseif iBackground == 56
+        let sNote := &quot;This starts the Honest Hearts adventure. The donor describes returning to the Mojave as restricted until you finish the contract.&quot;
+    elseif iBackground == 57
+        let sNote := &quot;This starts the Old World Blues adventure. You must find your way out of Big MT before returning to the Mojave.&quot;
+    elseif iBackground == 58
+        let sNote := &quot;This starts the Lonesome Road adventure. The donor describes returning to the Mojave as restricted until you finish your business.&quot;
+    else
+        let iHasNote := 0
+    endif
+
+    if iHasNote == 1
+        let sText += sBreak + &quot;START DETAILS: &quot; + sNote
+    endif
+
+    let sText += sBreak + &quot;Additional weapons and supplies depend on your tagged skills.&quot;
+    let sText += sBreak + &quot;COURIER JOB: Optional. Sign up later at a Mojave Express flier.&quot;
+    SetFunctionValue sText
+
+end</textarea></details></section><section><h2>ALTRichKid — message description only</h2><button onclick="copyText('description',this)">Copy description</button><details><summary>Show description</summary><textarea id="description" readonly>You&#x27;re a wealthy Brahmin Baron, and you&#x27;ve ventured to Vegas in search of gambling and cheap thrills. As you step into Freeside, it&#x27;s clear this is the kind of place where you need to guard your caps. Being wealthy has its perks, but you&#x27;re well aware that a fat purse can draw unwanted attention.
+
++ Start with a 5,000-cap grant
+</textarea></details></section>
+<p>Wealth, starting equipment/location and other backgrounds are preserved. A replacement benefit and broader background review come later. The old function stays as a harmless compatibility record for saved references.</p>
+<p><a href="README.md">Technical notes and reversal</a> · <a href="MODEL-CHECKS.txt">Offline check results</a></p>
+<script>async function copyText(id,b){const t=document.getElementById(id);try{await navigator.clipboard.writeText(t.value);b.textContent='Copied';}catch(e){t.closest('details').open=true;t.focus();t.select();b.textContent=document.execCommand('copy')?'Copied':'Press Ctrl+C';}}</script></html>

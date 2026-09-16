@@ -1,0 +1,28 @@
+ref rSource
+ref rWeapon
+ref rProjectile
+ref rProjectileBase
+ref rAmmo
+ref rWriter
+string_var sLine
+
+; ShowOff calls ON the projectile. Parameters are source actor and weapon.
+begin function {rSource, rWeapon}
+    if eval (player.AuxVarGetFlt "*_NVODiagEnabled") == 0
+        return
+    endif
+    set rProjectile to GetSelfAlt
+    if IsFormValid rProjectile == 0
+        return
+    endif
+    set rProjectileBase to rProjectile.GetBaseObject
+    set rAmmo to 0
+    if IsFormValid rSource
+        set rAmmo to rSource.GetCurrentAmmo
+    endif
+
+    let sLine := sv_construct "CREATE projectile=%i projectile_base=%i source=%i weapon=%i ammo_at_create=%i" rProjectile rProjectileBase rSource rWeapon rAmmo
+    set rWriter to player.AuxVarGetRef "*_NVODiagWriter"
+    call rWriter sLine
+    sv_destruct sLine
+end

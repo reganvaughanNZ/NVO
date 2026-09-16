@@ -1,0 +1,47 @@
+{
+  "packet": "3O",
+  "status": "offline_checks_passed",
+  "checks": 47,
+  "installed_native_version": 320,
+  "damage_replacement": false,
+  "linked_into_game_dll": false,
+  "runtime_admission_verified": false,
+  "sources": [
+    {
+      "file": "ArmourModel.hpp",
+      "sha256": "5d1470e5649202f010f756377efd7f778c82f4efaca78fc7b1f24569c0ce0efa"
+    },
+    {
+      "file": "ArmourModel.cpp",
+      "sha256": "e2cdb3a954941b71909ab1e3875e91eea7fac1c9b05b12c77aec006e0b0f39e4"
+    },
+    {
+      "file": "AdmissionLedger.hpp",
+      "sha256": "f45ee534a675e3887a61d39e21684fcabfc1c84aecff99e37de96d3c312a4546"
+    },
+    {
+      "file": "AdmissionLedger.cpp",
+      "sha256": "7987290b3a0070fe069506546df604309aa7c15382ecacdd86b951e3a7d0a2f1"
+    },
+    {
+      "file": "admission_tests.cpp",
+      "sha256": "a29043c39bce07ae57456be4dac5b0c73ca2f9b763ab0e34d72d86794ab101f9"
+    },
+    {
+      "file": "run_admission_checks.cmd",
+      "sha256": "c4a2ff1fd44e7396808e6fe3caeeebb4c85a28ad101893370a3905e1d6d73b60"
+    },
+    {
+      "file": "AdmissionLedger.md",
+      "sha256": "2283e20715503402c333e5c4c886482cfffa388fa229bcff49e637b17dd67e59"
+    }
+  ],
+  "protected_assets": {
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVOFlightPilot.esp": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPhysics.ini": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPreview.ini": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.dll": "4826895e3954298de6c3ca5d6f56cd3a576434fda7a696e57572b646c833e664",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb": "4a652ab9c39158485a32bd3cb2f07a5d9e3921d479ac30689da2ba55c42ff354"
+  }
+}

@@ -1,0 +1,763 @@
+--- native321/CMakeLists.txt
++++ native322/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(NVOCombatCore VERSION 0.3.21 LANGUAGES CXX)
++project(NVOCombatCore VERSION 0.3.22 LANGUAGES CXX)
+ 
+ if(NOT WIN32 OR NOT MSVC)
+     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")
+--- native321/THIRD-PARTY-NOTICES.md
++++ native322/THIRD-PARTY-NOTICES.md
+@@ -17,3 +17,5 @@
+ Packet 3B1 also reads the xNVSE GameData loaded-mod layout and JIP projectile/base-form speed, gravity, lifetime and distance layouts. These source contracts are pinned in sdk-reference.json. BallistX donor data and the barrel-speed relation are credited separately in CREDITS-BALLISTX.md; no donor asset relicensing is asserted.
+ 
+ Packet 3P inspects ShowOff184 OnPreProjectileCreate::HandleEvent and its saved engine continuation. Newly authored NVO code atomically interposes the pinned in-memory continuation pointer for a diagnostic, forwards the inspected sixteen-word cdecl ABI unchanged, and correlates return/creation events. ShowOff source and deployed binary were used to establish that contract; no ShowOff implementation, DLL, PDB, or extracted disassembly is redistributed.
++
++Packet3Q moves NVO selection into that same pinned provider continuation, after bounded physics/lifecycle reservation. This is newly authored integration code; it changes only the per-call projectile-base argument when admitted. Corresponding source and the failure-policy limitations accompany the binary.
+--- native321/include\FlightPhysics.hpp
++++ native322/include\FlightPhysics.hpp
+@@ -1,5 +1,6 @@
+ #pragma once
+ #include <cstdint>
++#include "FlightAdmission.hpp"
+ 
+ namespace nvo::physics {
+ // Installs only during xNVSE deferred initialization, before a loaded capture.
+@@ -7,9 +8,11 @@
+ void BeginCapture(unsigned session) noexcept;
+ void Suspend(const char* reason) noexcept;
+ bool Ready(double units) noexcept;
+-void Track(void* projectile, unsigned long long serial, std::uint32_t source,
+-    std::uint32_t weapon, std::uint32_t ammo, std::uint32_t base, unsigned profile,
+-    unsigned dragModel, double ballisticCoefficient) noexcept;
++admission::Ticket Reserve(unsigned long long serial, const admission::Profile& profile) noexcept;
++bool Attach(admission::Ticket ticket, void* projectile, std::uint32_t ref) noexcept;
++bool Commit(admission::Ticket ticket) noexcept;
++bool Cancel(admission::Ticket ticket) noexcept;
++void Fault(admission::Ticket ticket) noexcept;
+ void Event(void* projectile, unsigned long long serial, bool destroyed) noexcept;
+ // Diagnostic input copied at the existing current-hit observer. No pointers
+ // retained and no candidate or body region is exposed as damage authority.
+--- native321/include\FlightPreview.hpp
++++ native322/include\FlightPreview.hpp
+@@ -7,11 +7,14 @@
+ // delegates private-pilot timing to FlightTiming, which owns one guarded slot.
+ namespace nvo::flight {
+ void BeginCapture(unsigned session, bool layoutReady, bool selectorReady) noexcept;
+-observer::FormResult* SelectProjectile(void* actor, void* projectileBase, void* weapon) noexcept;
++bool PrepareProjectile(void* actor, void* projectileBase, void* weapon, admission::Profile& profile) noexcept;
++bool ValidateCreation(void* projectile,const admission::Profile& profile, std::uint32_t source,
++    std::uint32_t weapon,std::uint32_t ammo) noexcept;
++void Selected(const admission::Profile& profile, unsigned long long serial) noexcept;
+ // Run the fixed console notice only after the parent observer releases its lock.
+ void EmitNotice(const nvse::ConsolePrefix* console) noexcept;
+ void Suspend(const char* reason) noexcept;
+ void Create(void* projectile, std::uint32_t source, std::uint32_t weapon,
+-    std::uint32_t ammo, unsigned long long lifetime, bool tracked) noexcept;
++    std::uint32_t ammo, unsigned long long lifetime, bool tracked, bool admitted) noexcept;
+ void EndSample(void* projectile, unsigned long long lifetime, bool destroyed) noexcept;
+ } // namespace nvo::flight
+--- native321/include\NativeObserver.hpp
++++ native322/include\NativeObserver.hpp
+@@ -2,6 +2,7 @@
+ #include <cstddef>
+ #include "CurrentHit.hpp"
+ #include "NvseBootstrapApi.hpp"
++#include "FlightAdmission.hpp"
+ 
+ namespace nvo::observer {
+ using Handler = void (__cdecl*)(void*, void*);
+@@ -30,6 +31,10 @@
+ void QueueCapture(const char* reason) noexcept;
+ void Tick() noexcept;
+ void Suspend(const char* reason) noexcept;
++// Called by the spawn wrapper outside its lock. No observer/physics lock is
++// held across the engine call; reservations are settled only by exact receipt.
++admission::Reservation ReserveSpawn(unsigned session, void* actor, void* base, void* weapon) noexcept;
++void FinishSpawn(const admission::Reservation& reservation, void* result, bool paired, bool cleanCancellation) noexcept;
+ void CurrentHit(const nvo::hit::Data* data, void* process, const void* caller) noexcept;
+ // Identity-only lookup for a synchronous pre-provider snapshot. Does not
+ // consume legacy context/log budgets and never dereferences a retained pointer.
+--- native321/include\SpawnBoundary.hpp
++++ native322/include\SpawnBoundary.hpp
+@@ -1,11 +1,12 @@
+ #pragma once
+ #include <cstdint>
++#include "FlightAdmission.hpp"
+ 
+ namespace nvo::spawn {
+-// Diagnostic only. A guarded provider continuation is forwarded exactly once;
+-// no projectile arguments, selection, flight or damage are changed here.
+-void BeginCapture(unsigned session, bool layoutReady) noexcept;
++// Reserves lifecycle + physics storage before changing only the base argument.
++// Unsupported paths keep their supplied projectile. No damage authority.
++bool BeginCapture(unsigned session, bool layoutReady) noexcept;
+ void Suspend(const char* reason) noexcept;
+-void Created(void* p, std::uint32_t ref, std::uint32_t source, std::uint32_t weapon) noexcept;
++admission::Reservation Created(void* p, std::uint32_t ref, std::uint32_t source, std::uint32_t weapon) noexcept;
+ void Destroyed(void* p) noexcept;
+ }
+--- native321/src\FlightPhysics.cpp
++++ native322/src\FlightPhysics.cpp
+@@ -33,6 +33,8 @@
+ double Length(Vec a) noexcept { return std::sqrt(a.x*a.x+a.y*a.y+a.z*a.z); }
+ struct Config { double units{}, gravity{}, density{}, sound{}; } gConfig;
+ struct Track {
++    nvo::admission::Ticket ticket{};
++    bool committed{};
+     void* p{}; U64 serial{}; U32 ref{}, source{}, weapon{}, base{}, ammo{};
+     unsigned profile{}, steps{}, movementEntries{}, accountingEntries{}, missingRouteReported{};
+     unsigned dragModel{};
+@@ -57,6 +59,8 @@
+     bool terrainAdjusted{};
+ };
+ Track gTracks[kCapacity]{};
++nvo::admission::Pool<kCapacity> gSlots;
++unsigned gReservations{},gCancellations{};
+ std::atomic<bool> gActive{false};
+ bool gInstalled{}, gAttempted{};
+ unsigned gSession{}, gAccepted{}, gApplied{}, gRejected{}, gOverflow{};
+@@ -99,7 +103,7 @@
+     __except(EXCEPTION_EXECUTE_HANDLER) { return false; }
+ }
+ Track* Find(void* p, U64 serial = 0) noexcept
+-{ for (auto& t : gTracks) if (t.serial && t.p == p && (!serial || t.serial == serial)) return &t; return nullptr; }
++{ if (!p) return nullptr; for (auto& t : gTracks) if (t.serial && t.p == p && (!serial || t.serial == serial)) return &t; return nullptr; }
+ void Summary(const Track& t, const char* reason) noexcept
+ {
+     if (t.logged) nvo::log::Write("PHYSICS_SHOT session=%u lifetime=%llu reason=%s movement_entries=%u accounting_entries=%u baseline_verified=%u steps=%u verified_steps=%u pending=%u elapsed_s=%.9g speed_mps=%.9g stopped=%u commit_entries=%u node_entries=%u controller_entries=%u controller_returns=%u controller_pending=%u reset_entries=%u reset_preserved=%u",
+@@ -116,7 +120,9 @@
+ {
+     if (t.stopped) return;
+     t.stopped=true; t.pending=false; ++gRejected;
+-    if (gRejected<=16) nvo::log::Write("PHYSICS_REJECT session=%u lifetime=%llu reason=%s subsequent_engine_movement=unchanged",gSession,t.serial,reason);
++    nvo::admission::Block(nvo::admission::Fault::Physics);
++    gSlots.Fault(t.ticket);
++    if (gRejected<=16) nvo::log::Write("PHYSICS_REJECT session=%u lifetime=%llu reason=%s process_admissions_blocked=1 further_NVO_updates_for_this_projectile=0 prior_changes_rolled_back=0 private_projectile_left_to_engine=1",gSession,t.serial,reason);
+ }
+ // NVO_3F1_DIAGNOSTICS_BEGIN
+ void LogDisplacementFailure(const Track& t, Vec measured, const float* pos,
+@@ -237,6 +243,7 @@
+     if (!t) { ++gMoveUntracked; return; }
+     ++t->movementEntries;
+     if (t->stopped) return;
++    if (!t->committed) { Reject(*t,"movement_before_creation_return"); return; }
+     if (t->pending) { Reject(*t,"missing_accounting_or_overlapping_call"); return; }
+     std::uintptr_t caller{},wrapper{},wrapperCaller{}; void *frameOwner{},*wrapperOwner{};
+     float dt{},frameDt{};
+@@ -1001,6 +1008,7 @@
+ {
+     const ErrorGuard error; const Lock lock;
+     gActive.store(false); gSession=session; gAccepted=gApplied=gRejected=gOverflow=0;
++    gReservations=gCancellations=0;
+     gMoveEntries=gAccountingEntries=gMoveUntracked=gAccountingUntracked=0;
+     gMissingRoute=gBaselines=gVerified=gMismatched=gUnpaired=0;
+     gResetEntries=gResetPreserved=0;
+@@ -1011,6 +1019,7 @@
+     ImpactReset();
+     // NVO_3F1_DIAGNOSTICS_END
+     for (auto& t:gTracks) t={};
++    gSlots.Reset();
+     const char* reason=ReadConfig();
+     if (!reason && (!gInstalled || !nvo::hit::ProjectileLayoutReady() || !Guard())) reason="unsupported_code_or_hook_ownership";
+     if (reason) { nvo::log::Write("PHYSICS_DISABLED session=%u reason=%s",session,reason); return; }
+@@ -1033,6 +1042,7 @@
+     const ErrorGuard error; const Lock lock;
+     if (gActive.exchange(false)) {
+         ImpactFinish(reason);
++        nvo::log::Write("PHYSICS_ADMISSION_SUMMARY session=%u reservations=%u committed=%u cancelled=%u capacity_refused=%u slots_held=%u process_fault=%u capacity=128",gSession,gReservations,gAccepted,gCancellations,gOverflow,gSlots.Used(),static_cast<unsigned>(admission::processFault.load()));
+         unsigned open=0; for (auto& t:gTracks) if (t.serial) { ++open; MissingRoute(t,reason); Summary(t,reason); }
+         nvo::log::Write("PHYSICS_TERRAIN_SUMMARY session=%u eligible_queries=%u failed_queries=%u corrected=%u verified=%u collision_excluded=%u log_write_failures=%u detail_limit=16 damage_replacement=0",gSession,gTerrainQueries,gTerrainFailed,gTerrainCorrected,gTerrainVerified,gTerrainCollisionExcluded,gTerrainLogFailures);
+         nvo::log::Write("PHYSICS_SUMMARY session=%u reason=%s accepted=%u applied_steps=%u rejected=%u overflow=%u open=%u damage_replacement=0",gSession,reason,gAccepted,gApplied,gRejected,gOverflow,open);
+@@ -1046,24 +1056,51 @@
+         // NVO_3F1_DIAGNOSTICS_END
+     }
+     for (auto& t:gTracks) t={};
+-}
+-void nvo::physics::Track(void* p,U64 serial,U32 source,U32 weapon,U32 ammo,U32 base,unsigned profile,
+-    unsigned dragModel,double ballisticCoefficient) noexcept
++    gSlots.Reset();
++}
++nvo::admission::Ticket nvo::physics::Reserve(U64 serial,const admission::Profile& p) noexcept
+ {
+     const ErrorGuard error; const Lock lock;
+-    if (!gActive.load() || !serial || !p || (dragModel!=1 && dragModel!=7)
+-        || !std::isfinite(ballisticCoefficient) || ballisticCoefficient<0.05 || ballisticCoefficient>2) return;
+-    if (auto* old=Find(p)) { Reject(*old,"identity_replaced"); *old={}; }
+-    nvo::hit::Form f{}; if (!nvo::hit::ReadForm(p,f) || !f.id) return;
+-    for (auto& t:gTracks) if (!t.serial) {
+-        t={}; t.p=p; t.serial=serial; t.ref=f.id; t.source=source; t.weapon=weapon; t.ammo=ammo; t.base=base; t.profile=profile;
+-        t.dragModel=dragModel; t.ballisticCoefficient=ballisticCoefficient;
+-        t.logged=gAccepted++<kLoggedLives;
+-        ImpactEnroll(t);
+-        if (t.logged) nvo::log::Write("PHYSICS_TRACK session=%u lifetime=%llu projectile=%08X weapon=%08X ammo=%08X base=%08X profile=%u drag_model=G%u bc=%.9g",gSession,serial,f.id,weapon,ammo,base,profile,dragModel,ballisticCoefficient);
+-        return;
+-    }
+-    if (++gOverflow<=4) nvo::log::Write("PHYSICS_REJECT session=%u lifetime=%llu reason=active_capacity original_engine_movement=1",gSession,serial);
++    if (!gActive.load() || admission::Blocked() || !serial || (p.dragModel!=1 && p.dragModel!=7)
++        || !std::isfinite(p.bc) || p.bc<0.05 || p.bc>2) return {};
++    const auto ticket=gSlots.Reserve();
++    if (!ticket) { ++gOverflow; return {}; }
++    auto& t=gTracks[ticket.slot]; t={};
++    t.ticket=ticket; t.serial=serial; t.source=p.source; t.weapon=p.weapon; t.ammo=p.ammo; t.base=p.base;
++    t.profile=p.index; t.dragModel=p.dragModel; t.ballisticCoefficient=p.bc;
++    ++gReservations;
++    return ticket;
++}
++bool nvo::physics::Attach(admission::Ticket ticket,void* p,U32 ref) noexcept
++{
++    const ErrorGuard error; const Lock lock;
++    if (!gActive.load() || !p || !ref || gSlots.State(ticket)!=admission::Phase::Reserved || Find(p)) return false;
++    if (!gSlots.Bind(ticket)) return false;
++    auto& t=gTracks[ticket.slot]; t.p=p; t.ref=ref;
++    return true;
++}
++bool nvo::physics::Commit(admission::Ticket ticket) noexcept
++{
++    const ErrorGuard error; const Lock lock;
++    if (!gActive.load() || gSlots.State(ticket)!=admission::Phase::Bound) return false;
++    auto& t=gTracks[ticket.slot];
++    if (!t.p || t.stopped || t.committed || !gSlots.Commit(ticket)) return false;
++    t.committed=true; t.logged=gAccepted++<kLoggedLives;
++    ImpactEnroll(t);
++    if (t.logged) nvo::log::Write("PHYSICS_TRACK session=%u lifetime=%llu projectile=%08X weapon=%08X ammo=%08X base=%08X profile=%u drag_model=G%u bc=%.9g admission=exact_return",gSession,t.serial,t.ref,t.weapon,t.ammo,t.base,t.profile,t.dragModel,t.ballisticCoefficient);
++    return true;
++}
++bool nvo::physics::Cancel(admission::Ticket ticket) noexcept
++{
++    const ErrorGuard error; const Lock lock;
++    if (!gSlots.Cancel(ticket)) return false;
++    gTracks[ticket.slot]={}; ++gCancellations; return true;
++}
++void nvo::physics::Fault(admission::Ticket ticket) noexcept
++{
++    const ErrorGuard error; const Lock lock;
++    if (!gSlots.Fault(ticket)) return;
++    auto& t=gTracks[ticket.slot]; t.stopped=true; t.pending=false;
+ }
+ void nvo::physics::Event(void* p,U64 serial,bool destroyed) noexcept
+ {
+@@ -1072,7 +1109,7 @@
+     if (auto* t=Find(p,serial)) {
+         ImpactEvent(*t,destroyed);
+         MissingRoute(*t,destroyed?"destroy":"impact");
+-        if (destroyed) { Summary(*t,"destroy"); *t={}; }
++        if (destroyed) { Summary(*t,"destroy"); gSlots.Destroy(t->ticket); *t={}; }
+         else if (!t->stopped) { Summary(*t,"impact"); t->stopped=true; }
+     }
+ }
+--- native321/src\FlightPreview.cpp
++++ native322/src\FlightPreview.cpp
+@@ -465,46 +465,62 @@
+         session, kitReady ? 1u : 0u);
+     nvo::timing::BeginCapture(session); nvo::physics::BeginCapture(session);
+     gSelectorReady=selectorReady && nvo::physics::Ready(gUnitsPerMetre);
+-    nvo::log::Write("FLIGHT_SELECTOR_READY session=%u ready=%u event_bound=%u thread=%u method=ShowOff_OnPreProjectileCreate shared_record_writes=0 stock_record_overrides=0 damage_replacement=0",
++    nvo::log::Write("FLIGHT_SELECTOR_READY session=%u ready=%u boundary_ready=%u thread=%u method=scoped_after_ShowOff_selection shared_record_writes=0 stock_record_overrides=0 damage_replacement=0",
+         session,gSelectorReady?1u:0u,selectorReady?1u:0u,gCaptureThread);
+     if (!gSelectorReady && !gWarned) { gWarned=true; gNoticePending.store(true); }
+ }
+-nvo::observer::FormResult* nvo::flight::SelectProjectile(void* actor,void* projectileBase,void* weapon) noexcept
+-{
+-    const ErrorGuard guard;
+-    if (!gActive || !gSelectorReady) return nullptr;
+-    // xNVSE's result slot is shared. Only return a form on the capture/main
+-    // thread; callbacks elsewhere retain the caller's original projectile.
+-    if (GetCurrentThreadId()!=gCaptureThread) { ++gSelectionOtherThread; return nullptr; }
++bool nvo::flight::PrepareProjectile(void* actor,void* projectileBase,void* weapon,admission::Profile& output) noexcept
++{
++    const ErrorGuard guard;
++    output={};
++    if (!gActive || !gSelectorReady || admission::Blocked()) return false;
++    if (GetCurrentThreadId()!=gCaptureThread) { ++gSelectionOtherThread; return false; }
+     nvo::hit::Form w{},a{},b{};
+-    if (!nvo::hit::ReadForm(weapon,w) || w.type!=0x28) return nullptr;
++    if (!nvo::hit::ReadForm(weapon,w) || w.type!=0x28) return false;
+     bool known=false;
+     for (unsigned i=0;i<gProfileCount;++i)
+-        if (gProfiles[i].selectOnFire && gProfiles[i].flightEnabled && gProfiles[i].weapon.resolved==w.id) known=true;
+-    if (!known) return nullptr;
++        if (gProfiles[i].flightEnabled && gProfiles[i].weapon.resolved==w.id) known=true;
++    if (!known) return false;
+     U32 ammo{};
+     if (!nvo::hit::ReadForm(actor,a) || (a.type!=0x3B && a.type!=0x3C)
+         || !nvo::hit::ReadForm(projectileBase,b) || b.type!=0x33 || !EquippedAmmo(actor,weapon,ammo)) {
+-        SelectionSkip("equipped_ammo_unavailable",w.id,ammo); return nullptr;
++        SelectionSkip("equipped_ammo_unavailable",w.id,ammo); return false;
+     }
+     for (unsigned i=0;i<gProfileCount;++i) {
+         auto& p=gProfiles[i];
+-        if (!p.selectOnFire || !p.flightEnabled || w.id!=p.weapon.resolved || ammo!=p.ammo.resolved
+-            || b.id!=p.original.resolved || projectileBase!=p.originalPointer) continue;
++        if (!p.flightEnabled || w.id!=p.weapon.resolved || ammo!=p.ammo.resolved) continue;
++        const auto expected=p.selectOnFire?p.original.resolved:p.projectile.resolved;
++        void* expectedPointer=p.selectOnFire?p.originalPointer:p.result.form;
++        if (b.id!=expected || projectileBase!=expectedPointer) continue;
+         unsigned char current[84]{},replacement[84]{}; nvo::hit::Form r{};
+         if (!nvo::physics::Ready(gUnitsPerMetre) || !nvo::hit::ReadForm(p.result.form,r)
+             || r.type!=0x33 || r.id!=p.projectile.resolved || !ReadAt(projectileBase,0x60,current)
+-            || !ReadAt(p.result.form,0x60,replacement) || std::memcmp(current,p.originalData,84)
++            || !ReadAt(p.result.form,0x60,replacement)
++            || std::memcmp(current,p.selectOnFire?p.originalData:p.replacementData,84)
+             || std::memcmp(replacement,p.replacementData,84)) {
+-            SelectionSkip("profile_changed_or_physics_unavailable",w.id,ammo); return nullptr;
++            SelectionSkip("profile_changed_or_physics_unavailable",w.id,ammo); return false;
+         }
+-        ++gSelected;
+-        if (gSelected<=32) nvo::log::Write("FLIGHT_SELECT session=%u selection=%u profile=%s source=%08X weapon=%08X ammo=%08X original=%08X replacement=%08X shared_record_writes=0 result_consumed=unverified",
+-            gSession,gSelected,p.name,a.id,w.id,ammo,b.id,r.id);
+-        return &p.result;
++        output={actor,weapon,p.result.form,a.id,w.id,ammo,r.id,b.id,i,p.dragModel,p.bc,p.result.form!=projectileBase};
++        return true;
+     }
+     SelectionSkip("ammo_or_projectile_not_profiled",w.id,ammo);
+-    return nullptr;
++    return false;
++}
++void nvo::flight::Selected(const admission::Profile& p,unsigned long long serial) noexcept
++{
++    const ErrorGuard guard;
++    ++gSelected;
++    if (gSelected<=32) nvo::log::Write("FLIGHT_SELECT session=%u selection=%u lifetime=%llu profile=%s source=%08X weapon=%08X ammo=%08X original=%08X replacement=%08X changed_base=%u reservation_before_selection=1 result_consumed=pending_return shared_record_writes=0",
++        gSession,gSelected,serial,gProfiles[p.index].name,p.source,p.weapon,p.ammo,p.original,p.base,p.changesBase?1u:0u);
++}
++bool nvo::flight::ValidateCreation(void* projectile,const admission::Profile& p,U32 source,U32 weapon,U32 ammo) noexcept
++{
++    const ErrorGuard guard;
++    Snapshot s{}; void *a{},*w{},*b{};
++    return gActive && source==p.source && weapon==p.weapon && ammo==p.ammo
++        && SnapshotOf(projectile,s) && s.ref && s.source==source && s.weapon==weapon && s.base==p.base
++        && ReadAt(projectile,0xFC,a) && a==p.actor && ReadAt(projectile,0xF8,w) && w==p.weaponPointer
++        && ReadAt(projectile,0x20,b) && b==p.projectile;
+ }
+ void nvo::flight::EmitNotice(const nvse::ConsolePrefix* console) noexcept
+ {
+@@ -532,7 +548,7 @@
+     gActive = false;
+     for (auto& s : gShots) s = {};
+ }
+-void nvo::flight::Create(void* projectile, U32 source, U32 weapon, U32 ammo, unsigned long long lifetime, bool tracked) noexcept
++void nvo::flight::Create(void* projectile, U32 source, U32 weapon, U32 ammo, unsigned long long lifetime, bool tracked, bool admitted) noexcept
+ {
+     const ErrorGuard guard;
+     if (!gActive) return;
+@@ -550,8 +566,6 @@
+     if (profile == gProfileCount) { Skip(ammo ? "ammo_or_projectile_not_profiled" : "ammo_unknown", weapon, ammo, state.base); return; }
+     ++gMatched;
+     const auto& p = gProfiles[profile];
+-    if (p.flightEnabled && nvo::physics::Ready(gUnitsPerMetre))
+-        nvo::physics::Track(projectile,lifetime,source,weapon,ammo,state.base,profile,p.dragModel,p.bc);
+     // At most the first 32 matches per capture get cached samples/log rows.
+     // Bookkeeping for existing samples continues after this cap.
+     if (gCreateRows >= gMaxShots) return;
+@@ -561,7 +575,7 @@
+     *slot = {lifetime, profile, state, false};
+     ++gCreateRows;
+     // Timing uses the same exact profile match, with the existing sample cap.
+-    if (p.flightEnabled && nvo::physics::Ready(gUnitsPerMetre))
++    if (admitted && p.flightEnabled && nvo::physics::Ready(gUnitsPerMetre))
+         nvo::timing::Track(projectile, lifetime, state.ref, source, weapon, ammo, state.base, state.time, state.distance);
+     const double settingSpeed = static_cast<double>(state.speed) * state.mult;
+     nvo::log::Write("FLIGHT_PREVIEW session=%u lifetime=%llu profile=%s phase=create projectile=%08X source=%08X weapon=%08X ammo=%08X projectile_base=%08X base_flags=%04X hitscan=%u gravity_setting=%.6g range_setting=%.6g base_speed_setting=%.6g speed_multiplier=%.6g speed_setting_units_per_s=%.6g speed_setting_mps_assuming_donor_scale=%.6g muzzle_preview_mps=%.6g life_s=%.6g travel_units=%.6g preview_writes=0",
+--- native321/src\NativeObserver.cpp
++++ native322/src\NativeObserver.cpp
+@@ -7,6 +7,7 @@
+ #include <cstdint>
+ #include <cstring>
+ #include <atomic>
++#include <limits>
+ 
+ namespace {
+ using U32 = std::uint32_t;
+@@ -32,14 +33,22 @@
+ unsigned gSession{}, gRows{}, gCreated{}, gImpacts{}, gDestroyed{}, gHits{}, gHitWith{}, gBlasts{};
+ unsigned gUnmatched{}, gReused{}, gOverflow{}, gReadFailures{};
+ unsigned long long gNextLifetime{};
++using nvo::admission::Phase;
++nvo::admission::Pool<kSlots> gLifeSlots;
++unsigned gReserved{},gCommitted{},gCancelled{},gAdmissionFailed{},gLifeRefused{},gPhysicsRefused{};
+ 
+ struct Life {
+     std::uintptr_t address{}; // identity only; never dereferenced after callback
+     U32 ref{}, source{}, weapon{}, ammo{};
+     unsigned long long serial{};
+     unsigned impacts{};
++    nvo::admission::Ticket ticket{};
+ };
+ Life gLives[kSlots]{};
++unsigned long long NextLifetime() noexcept {
++    if (gNextLifetime==(std::numeric_limits<unsigned long long>::max)()) return 0;
++    return ++gNextLifetime;
++}
+ 
+ // Read only live callback-supplied form IDs, not actors' saved lastHitData.
+ // TESForm::refID is at 0x0C for the supported runtime (pinned GameForms.h).
+@@ -84,6 +93,8 @@
+         gBlasts, gUnmatched, gReused, gOverflow, gReadFailures, live);
+     nvo::log::Write("CURRENT_HIT_SUMMARY session=%u reason=%s contexts=%u invalid_contexts=%u linked_lifetimes=%u known_ammo=%u damage_applications=unverified",
+         gSession, reason, gContexts, gContextFailures, gLinkedContexts, gAmmoContexts);
++    nvo::log::Write("FLIGHT_ADMISSION_SUMMARY session=%u reason=%s reserved=%u committed=%u cancelled=%u failed=%u lifecycle_refused=%u physics_refused=%u slots_held=%u process_fault=%u capacity=512 damage_replacement=0",
++        gSession,reason,gReserved,gCommitted,gCancelled,gAdmissionFailed,gLifeRefused,gPhysicsRefused,gLifeSlots.Used(),static_cast<unsigned>(nvo::admission::processFault.load()));
+ }
+ void FinishedRow() noexcept
+ {
+@@ -100,20 +111,34 @@
+     const Lock lock;
+     if (!gActive) return;
+     const U32 ref = Id(projectile), source = Id(Arg(params, 0)), weapon = Id(Arg(params, 1));
+-    nvo::spawn::Created(projectile,ref,source,weapon);
+-    const auto serial = ++gNextLifetime;
++    const auto reservation=nvo::spawn::Created(projectile,ref,source,weapon);
++    auto serial = reservation ? reservation.serial : NextLifetime();
+     Life* slot = nullptr;
+     bool replaced = false;
++    bool admitted = false;
++    nvo::admission::Ticket ticket{};
++    const U32 ammo = nvo::hit::ProjectileAmmo(projectile, gReadFailures);
+     if (projectile) {
+         for (auto& life : gLives) {
+             if (life.address == reinterpret_cast<std::uintptr_t>(projectile)) {
+-                slot = &life; replaced = true; ++gReused; break;
++                replaced = true; ++gReused; break;
+             }
+         }
+-        if (!slot) for (auto& life : gLives) if (!life.address) { slot = &life; break; }
+-    }
+-    const U32 ammo = nvo::hit::ProjectileAmmo(projectile, gReadFailures);
+-    if (slot) *slot = {reinterpret_cast<std::uintptr_t>(projectile), ref, source, weapon, ammo, serial, 0};
++        if (replaced) nvo::admission::Block(nvo::admission::Fault::Lifetime);
++        else if (reservation && reservation.session==gSession
++            && gLifeSlots.State(reservation.life)==Phase::Reserved
++            && nvo::flight::ValidateCreation(projectile,reservation.profile,source,weapon,ammo)) {
++            ticket=reservation.life;
++            if (gLifeSlots.Bind(ticket)) {
++                slot=&gLives[ticket.slot];
++                admitted=nvo::physics::Attach(reservation.physics,projectile,ref);
++            }
++        } else if (!reservation && serial && ref) {
++            ticket=gLifeSlots.Reserve();
++            if (ticket && gLifeSlots.Bind(ticket) && gLifeSlots.Commit(ticket)) slot=&gLives[ticket.slot];
++        }
++    }
++    if (slot) *slot = {reinterpret_cast<std::uintptr_t>(projectile), ref, source, weapon, ammo, serial, 0,ticket};
+     else ++gOverflow;
+     ++gCreated;
+     if (gRows < kMaxEvents) {
+@@ -121,7 +146,7 @@
+             gSession, gRows + 1, serial, ref, source, weapon, slot ? 1u : 0u, replaced ? 1u : 0u, ammo, ammo ? 1u : 0u);
+         FinishedRow();
+     }
+-    nvo::flight::Create(projectile, source, weapon, ammo, serial, slot != nullptr);
++    nvo::flight::Create(projectile, source, weapon, ammo, serial, slot != nullptr, admitted);
+ }
+ void __cdecl OnImpact(void* projectile, void* params) noexcept
+ {
+@@ -152,9 +177,9 @@
+     if (gRows < kMaxEvents) {
+         nvo::log::Write("EVENT session=%u seq=%u DESTROY lifetime=%llu projectile=%08X source=%08X weapon=%08X matched=%u impacts=%u",
+             gSession, gRows + 1, life ? life->serial : 0ull, ref, source, weapon, life ? 1u : 0u, life ? life->impacts : 0u);
+-        if (life) *life = {};
++        if (life) { gLifeSlots.Destroy(life->ticket); *life = {}; }
+         FinishedRow();
+-    } else if (life) *life = {};
++    } else if (life) { gLifeSlots.Destroy(life->ticket); *life = {}; }
+     nvo::flight::EndSample(projectile, serial, true);
+ }
+ void __cdecl OnBlast(void* explosion, void* params) noexcept
+@@ -190,14 +215,6 @@
+         gSession, gRows + 1, target, object.id, static_cast<unsigned>(object.type));
+     FinishedRow();
+ }
+-void __cdecl OnPreCreate(void* actor, void* params) noexcept
+-{
+-    const Lock lock;
+-    if (!gActive || !gApi || !gApi->SetNativeHandlerFunctionValue) return;
+-    if (auto* value=nvo::flight::SelectProjectile(actor,Arg(params,0),Arg(params,1)))
+-        gApi->SetNativeHandlerFunctionValue(*value);
+-}
+-constexpr char kPreCreate[]="ShowOff:OnPreProjectileCreate";
+ struct Binding { const char* name; nvo::observer::Handler handler; };
+ constexpr Binding kBindings[] = {
+     {"ShowOff:OnProjectileCreate", OnCreate},
+@@ -224,6 +241,7 @@
+     nvo::spawn::Suspend(reason);
+     nvo::flight::Suspend(reason);
+     for (auto& life : gLives) life = {};
++    gLifeSlots.Reset();
+ }
+ 
+ void nvo::observer::QueueCapture(const char* reason) noexcept
+@@ -245,9 +263,6 @@
+     }
+     // Event API calls must not occur while holding gLock: callbacks also use it.
+     // Remove only our own handlers, then bind once after load-time flushes finish.
+-    gApi->RemoveNativeEventHandler(kPreCreate,OnPreCreate);
+-    const bool selectorReady=gApi->SetNativeHandlerFunctionValue
+-        && gApi->SetNativeEventHandler(kPreCreate,OnPreCreate);
+     for (const auto& binding : kBindings)
+         gApi->RemoveNativeEventHandler(binding.name, binding.handler);
+     unsigned registered{};
+@@ -273,13 +288,15 @@
+     gRows = gCreated = gImpacts = gDestroyed = gHits = gHitWith = gBlasts = 0;
+     gUnmatched = gReused = gOverflow = gReadFailures = 0;
+     gContexts = gContextFailures = gLinkedContexts = gAmmoContexts = 0;
++    gReserved=gCommitted=gCancelled=gAdmissionFailed=gLifeRefused=gPhysicsRefused=0;
+     gContextsEnabled = contextsReady;
+     for (auto& life : gLives) life = {};
++    gLifeSlots.Reset();
+     gActive = true;
+     nvo::log::Write("CAPTURE session=%u reason=%s handlers=6 max_events=%u current_hit_observer=%u max_contexts=%u engine_damage_hooks=0 damage_replacement=0",
+         gSession, gReason, kMaxEvents, gContextsEnabled ? 1u : 0u, kMaxContexts);
++    const bool selectorReady=nvo::spawn::BeginCapture(gSession, contextsReady && nvo::hit::ProjectileLayoutReady());
+     nvo::flight::BeginCapture(gSession, contextsReady && nvo::hit::ProjectileLayoutReady(),selectorReady);
+-    nvo::spawn::BeginCapture(gSession, contextsReady && nvo::hit::ProjectileLayoutReady());
+     }
+     nvo::flight::EmitNotice(gConsole);
+ }
+@@ -342,3 +359,62 @@
+     if (!life || life->source != source || life->weapon != weapon) return {};
+     return {gSession, life->serial, life->ammo};
+ }
++
++nvo::admission::Reservation nvo::observer::ReserveSpawn(unsigned session,void* actor,void* base,void* weapon) noexcept
++{
++    const Lock lock;
++    admission::Reservation r{};
++    if (!gActive || session!=gSession || admission::Blocked()) return r;
++    if (!nvo::flight::PrepareProjectile(actor,base,weapon,r.profile)) return {};
++    r.life=gLifeSlots.Reserve();
++    if (!r.life) {
++        if (++gLifeRefused<=4) nvo::log::Write("FLIGHT_ADMISSION_REFUSED session=%u reason=lifecycle_capacity supplied_projectile_unchanged=1",gSession);
++        return {};
++    }
++    r.serial=NextLifetime(); r.session=gSession;
++    if (r.serial) r.physics=nvo::physics::Reserve(r.serial,r.profile);
++    if (!r.physics) {
++        gLifeSlots.Cancel(r.life);
++        if (++gPhysicsRefused<=4) nvo::log::Write("FLIGHT_ADMISSION_REFUSED session=%u reason=physics_capacity_or_guard supplied_projectile_unchanged=1",gSession);
++        return {};
++    }
++    gLives[r.life.slot]={};
++    gLives[r.life.slot].serial=r.serial; gLives[r.life.slot].ticket=r.life;
++    ++gReserved;
++    nvo::flight::Selected(r.profile,r.serial);
++    return r;
++}
++void nvo::observer::FinishSpawn(const admission::Reservation& r,void* result,bool paired,bool cleanCancellation) noexcept
++{
++    const Lock lock;
++    if (!r) return;
++    if (!gActive || gSession!=r.session) {
++        admission::Block(admission::Fault::StaleSession);
++        return; // Pool tokens changed on reset; never dereference/release a new occupant.
++    }
++    if (cleanCancellation) {
++        const bool life=gLifeSlots.Cancel(r.life);
++        const bool physics=nvo::physics::Cancel(r.physics);
++        if (life) gLives[r.life.slot]={};
++        if (life && physics) {
++            ++gCancelled;
++            if (gCancelled<=8) nvo::log::Write("FLIGHT_ADMISSION_CANCEL session=%u lifetime=%llu reason=no_object_returned both_reservations_released=1",gSession,r.serial);
++            return;
++        }
++    } else if (paired && gLifeSlots.State(r.life)==Phase::Bound) {
++        const auto& life=gLives[r.life.slot];
++        if (life.address==reinterpret_cast<std::uintptr_t>(result) && life.serial==r.serial && !life.impacts
++            && nvo::flight::ValidateCreation(result,r.profile,life.source,life.weapon,life.ammo)
++            && nvo::physics::Commit(r.physics) && gLifeSlots.Commit(r.life)) {
++            ++gCommitted;
++            if (gCommitted<=32) nvo::log::Write("FLIGHT_ADMISSION_COMMIT session=%u lifetime=%llu projectile=%08X exact_return=1 physics_and_lifecycle_owned=1",gSession,r.serial,life.ref);
++            return;
++        }
++    }
++    admission::Block(paired?admission::Fault::Binding:admission::Fault::Pairing);
++    gLifeSlots.Fault(r.life);
++    nvo::physics::Fault(r.physics);
++    ++gAdmissionFailed;
++    if (gAdmissionFailed<=8) nvo::log::Write("FLIGHT_ADMISSION_REJECT session=%u lifetime=%llu reason=post_selection_receipt_or_binding process_admissions_blocked=1 ownership_retained_until_destroy_or_session_reset=1 prior_changes_rolled_back=0 current_private_projectile_left_to_engine=1",
++        gSession,r.serial);
++}
+--- native321/src\Plugin.cpp
++++ native322/src\Plugin.cpp
+@@ -9,7 +9,7 @@
+ 
+ namespace {
+ constexpr char kPluginName[] = "NVOCombatCore";
+-constexpr std::uint32_t kPluginVersion = 321; // 0.3.21, packet 3P spawn-boundary diagnostic
++constexpr std::uint32_t kPluginVersion = 322; // 0.3.22, packet 3Q flight admission
+ constexpr bool kHitHooksImplemented = false;
+ constexpr bool kDamageReplacementEnabled = false;
+ bool gLoaded = false;
+@@ -24,8 +24,8 @@
+     gStartupBannerAttempted = true; // Set before calling out, including any reentrant callback.
+     gStartupBannerPending = false;
+     const bool submitted = gConsole && gConsole->version >= 2 && gConsole->RunScriptLine
+-        && gConsole->RunScriptLine("PrintC \"NVO [0.3.21] - The Mojave is yours.\"", nullptr);
+-    nvo::log::Write("STARTUP_BANNER version=0.3.21 submitted=%u once_per_process=1", submitted ? 1u : 0u);
++        && gConsole->RunScriptLine("PrintC \"NVO [0.3.22] - The Mojave is yours.\"", nullptr);
++    nvo::log::Write("STARTUP_BANNER version=0.3.22 submitted=%u once_per_process=1", submitted ? 1u : 0u);
+ }
+ 
+ bool SupportsHost(const nvo::nvse::InterfacePrefix* host) noexcept
+@@ -145,7 +145,7 @@
+         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
+         return false;
+     }
+-    nvo::log::Write("NVOCombatCore 0.3.21 | phase=3P | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
++    nvo::log::Write("NVOCombatCore 0.3.22 | phase=3Q | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
+     nvo::log::Write("QUERY runtime=0x%08X xnvse=0x%08X editor=%u",
+         host->runtimeVersion, host->nvseVersion, host->isEditor);
+     return true;
+--- native321/src\SpawnBoundary.cpp
++++ native322/src\SpawnBoundary.cpp
+@@ -1,6 +1,7 @@
+ #include "SpawnBoundary.hpp"
+ #include "SpawnCall.hpp"
+ #include "CurrentHit.hpp"
++#include "NativeObserver.hpp"
+ #include "NativeLog.hpp"
+ #include <Windows.h>
+ #include <intrin.h>
+@@ -29,8 +30,10 @@
+     Scope* parent{};
+     U64 epoch{}, call{};
+     unsigned depth{};
+-    bool observed{};
+-    Word base{}, source{}, weapon{};
++    bool observed{},eligible{};
++    unsigned session{};
++    nvo::admission::Reservation reservation{};
++    Word base{}, originalBase{}, source{}, weapon{};
+     Receipt receipt{};
+ };
+ thread_local Scope* gScope{}; // Always stack-owned; never retained after return.
+@@ -97,7 +100,8 @@
+     if (s.depth>kDepthLimit) { gAmbiguousChain=true; ++gCounts.overflow; return; }
+     if (reinterpret_cast<std::uintptr_t>(caller)!=reinterpret_cast<std::uintptr_t>(gProvider)+kReturnRva) return;
+     if (gNextCall==(std::numeric_limits<U64>::max)()) { gActive=false; return; }
+-    s.epoch=gEpoch; s.call=++gNextCall; s.observed=true;
++    s.epoch=gEpoch; s.call=++gNextCall; s.observed=true; s.session=gSession;
++    s.eligible=s.depth==1 && GetCurrentThreadId()==gCaptureThread;
+     ++gCounts.calls;
+     if (s.depth>1) ++gCounts.nested;
+     if (GetCurrentThreadId()!=gCaptureThread) ++gCounts.foreignThread;
+@@ -105,12 +109,12 @@
+     nvo::hit::ReadForm(reinterpret_cast<void*>(a[0]),b);
+     nvo::hit::ReadForm(reinterpret_cast<void*>(a[1]),actor);
+     nvo::hit::ReadForm(reinterpret_cast<void*>(a[3]),weapon);
+-    s.base=b.id; s.source=actor.id; s.weapon=weapon.id;
+-}
+-void End(Scope& s, void* result) noexcept {
+-    const ErrorGuard error; const Lock lock;
+-    if (!s.observed) return;
+-    if (!gActive || s.epoch!=gEpoch) { ++gCounts.stale; return; }
++    s.base=s.originalBase=b.id; s.source=actor.id; s.weapon=weapon.id;
++}
++bool End(Scope& s, void* result) noexcept {
++    const ErrorGuard error; const Lock lock;
++    if (!s.observed) return false;
++    if (!gActive || s.epoch!=gEpoch) { ++gCounts.stale; return false; }
+     nvo::hit::Form form{}, base{}; void* basePointer{};
+     // Do not dereference a returned address already reported destroyed, or an
+     // ambiguous/unobserved object. Pointer equality alone is not proof of life.
+@@ -125,28 +129,49 @@
+     else ++gCounts.mismatched;
+     if (gCounts.rows<kDetailLimit) {
+         ++gCounts.rows;
+-        if (!nvo::log::Write("SPAWN_BOUNDARY session=%u call=%llu depth=%u source=%08X weapon=%08X supplied_base=%08X returned_ref=%08X returned_base=%08X create_events=%u destroyed_inside=%u paired=%u returned_null=%u argument_writes=0 reservation_enabled=0 damage_replacement=0",
+-            gSession,s.call,s.depth,s.source,s.weapon,s.base,form.id,base.id,s.receipt.creates,s.receipt.destroys,paired?1u:0u,result?0u:1u)) ++gCounts.logFailures;
+-    }
++        if (!nvo::log::Write("SPAWN_BOUNDARY session=%u call=%llu depth=%u source=%08X weapon=%08X supplied_base=%08X forwarded_base=%08X returned_ref=%08X returned_base=%08X create_events=%u destroyed_inside=%u paired=%u returned_null=%u base_argument_changed=%u reserved=%u reservation_enabled=1 damage_replacement=0",
++            gSession,s.call,s.depth,s.source,s.weapon,s.originalBase,s.base,form.id,base.id,s.receipt.creates,s.receipt.destroys,paired?1u:0u,result?0u:1u,s.reservation && s.reservation.profile.changesBase?1u:0u,s.reservation?1u:0u)) ++gCounts.logFailures;
++    }
++    return paired;
++}
++void Prepare(Scope& s,Arguments& a) noexcept {
++    const ErrorGuard error;
++    if (!s.eligible) return;
++    s.reservation=nvo::observer::ReserveSpawn(s.session,reinterpret_cast<void*>(a[1]),reinterpret_cast<void*>(a[0]),reinterpret_cast<void*>(a[3]));
++    if (s.reservation) {
++        a[0]=static_cast<Word>(reinterpret_cast<std::uintptr_t>(s.reservation.profile.projectile));
++        s.base=s.reservation.profile.base;
++    }
++}
++void Settle(Scope& s,void* result,bool paired) noexcept {
++    const ErrorGuard error;
++    nvo::observer::FinishSpawn(s.reservation,result,paired,!result && !s.receipt.creates);
+ }
+ 
+ // Ordinary, verified x86 cdecl ABI, not a naked detour. The provider supplies
+-// 64 stack bytes and cleans them after this returns. Forward them once, bitwise.
++// 64 stack bytes and cleans them after this returns. Only argument0 may change
++// after dual reservation; the other fifteen words and return are bitwise preserved.
+ void* __cdecl Wrapper(Word a0,Word a1,Word a2,Word a3,Word a4,Word a5,Word a6,Word a7,
+     Word a8,Word a9,Word a10,Word a11,Word a12,Word a13,Word a14,Word a15) {
+-    const Arguments a={a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15};
++    Arguments a={a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15};
+     Scope s{}; s.parent=gScope; s.depth=s.parent?s.parent->depth+1:1;
+     if (!s.parent) gAmbiguousChain=false;
+     // An unobserved/over-depth nested scope still hides its parent's receipt.
+     gScope=&s;
+-    void* result{};
++    void* result{}; bool settled=false;
+     __try {
+         Begin(s,a,_ReturnAddress());
++        Prepare(s,a);
+         result=Forward(gOriginal,a);
+-        End(s,result);
++        const bool paired=End(s,result);
++        Settle(s,result,paired);
++        settled=true;
+     } __finally {
+         // Restore only our stack bookkeeping on normal or exceptional exit.
+         // Exceptions are not caught or converted into a successful spawn.
++        if (!settled && s.reservation) nvo::admission::Block(nvo::admission::Fault::Exception);
++        // Retain unknown in-flight ownership on exception. No locks or game
++        // calls here; lifecycle reset cleans bookkeeping, restart clears latch.
+         gScope=s.parent;
+     }
+     return result;
+@@ -178,28 +203,33 @@
+ }
+ }
+ 
+-void nvo::spawn::BeginCapture(unsigned session,bool layoutReady) noexcept {
++bool nvo::spawn::BeginCapture(unsigned session,bool layoutReady) noexcept {
+     const ErrorGuard error; const Lock lock;
+     gActive=false; gSession=session; gCounts={}; gCaptureThread=GetCurrentThreadId();
+-    if (gEpoch==(std::numeric_limits<U64>::max)()) return;
++    if (gEpoch==(std::numeric_limits<U64>::max)()) return false;
+     ++gEpoch;
+     if (!layoutReady || !Install()) {
+-        nvo::log::Write("SPAWN_BOUNDARY_DISABLED session=%u reason=%s existing_flight_unchanged=1 damage_replacement=0",session,layoutReady?gGuardReason:"projectile_layout"); return;
++        nvo::log::Write("SPAWN_BOUNDARY_DISABLED session=%u reason=%s private_selection_disabled=1 damage_replacement=0",session,layoutReady?gGuardReason:"projectile_layout"); return false;
+     }
+     gActive=true;
+-    nvo::log::Write("SPAWN_BOUNDARY_READY session=%u provider=ShowOff184 boundary=post_selection_pre_engine forwarded_stack_words=16 saved_target=009BCA60 depth_limit=8 detail_limit=16 execution_observed=0 reservation_enabled=0 damage_replacement=0",session);
++    nvo::log::Write("SPAWN_BOUNDARY_READY session=%u provider=ShowOff184 boundary=post_selection_pre_engine forwarded_stack_words=16 saved_target=009BCA60 depth_limit=8 detail_limit=16 execution_observed=0 reservation_enabled=1 damage_replacement=0",session);
++    return true;
+ }
+ void nvo::spawn::Suspend(const char* reason) noexcept {
+     const ErrorGuard error; const Lock lock;
+-    if (gActive) nvo::log::Write("SPAWN_BOUNDARY_SUMMARY session=%u reason=%s calls=%llu paired=%llu null_returns=%llu mismatched=%llu nested=%llu depth_overflow=%llu other_thread=%llu stale_returns=%llu unscoped_creates=%llu detail_rows=%llu log_failures=%llu reservation_enabled=0 damage_replacement=0",
++    if (gActive) nvo::log::Write("SPAWN_BOUNDARY_SUMMARY session=%u reason=%s calls=%llu paired=%llu null_returns=%llu mismatched=%llu nested=%llu depth_overflow=%llu other_thread=%llu stale_returns=%llu unscoped_creates=%llu detail_rows=%llu log_failures=%llu reservation_enabled=1 damage_replacement=0",
+         gSession,reason,gCounts.calls,gCounts.paired,gCounts.nullReturns,gCounts.mismatched,gCounts.nested,gCounts.overflow,gCounts.foreignThread,gCounts.stale,gCounts.unscoped,gCounts.rows,gCounts.logFailures);
+     gActive=false;
+ }
+-void nvo::spawn::Created(void* p,Word ref,Word source,Word weapon) noexcept {
+-    const ErrorGuard error; const Lock lock;
+-    if (!gActive) return;
+-    if (!gScope || !gScope->observed || gScope->epoch!=gEpoch) { ++gCounts.unscoped; return; }
++nvo::admission::Reservation nvo::spawn::Created(void* p,Word ref,Word source,Word weapon) noexcept {
++    const ErrorGuard error; const Lock lock;
++    if (!gActive) return {};
++    if (!gScope || !gScope->observed || gScope->epoch!=gEpoch) { ++gCounts.unscoped; return {}; }
+     gScope->receipt.Create(reinterpret_cast<std::uintptr_t>(p),ref,source,weapon);
++    const auto& r=gScope->reservation;
++    if (r && gScope->receipt.creates==1 && !gScope->receipt.destroys
++        && source==r.profile.source && weapon==r.profile.weapon) return r;
++    return {};
+ }
+ void nvo::spawn::Destroyed(void* p) noexcept {
+     const ErrorGuard error; const Lock lock;

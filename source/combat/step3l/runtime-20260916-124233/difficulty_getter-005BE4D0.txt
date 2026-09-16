@@ -1,0 +1,33 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3l\runtime-20260916-124233\difficulty_getter-005BE4D0.obj
+
+File Type: COFF OBJECT
+
+  005BE4D0: 55                 push        ebp
+  005BE4D1: 8B EC              mov         ebp,esp
+  005BE4D3: 51                 push        ecx
+  005BE4D4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  005BE4D7: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  005BE4DA: 8B 80 B8 07 00 00  mov         eax,dword ptr [eax+000007B8h]
+  005BE4E0: 8B E5              mov         esp,ebp
+  005BE4E2: 5D                 pop         ebp
+  005BE4E3: C3                 ret
+  005BE4E4: CC                 int         3
+  005BE4E5: CC                 int         3
+  005BE4E6: CC                 int         3
+  005BE4E7: CC                 int         3
+  005BE4E8: CC                 int         3
+  005BE4E9: CC                 int         3
+  005BE4EA: CC                 int         3
+  005BE4EB: CC                 int         3
+  005BE4EC: CC                 int         3
+  005BE4ED: CC                 int         3
+  005BE4EE: CC                 int         3
+  005BE4EF: CC                 int         3
+
+  Summary
+
+          20 .text

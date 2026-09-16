@@ -1,0 +1,202 @@
+{
+  "schema": 1,
+  "review": "ULTRA-317",
+  "date": "2026-09-15",
+  "review_status": "completed_bounded_current_foundation_audit",
+  "pre_damage_gate": "HOLD",
+  "native_version": 317,
+  "damage_replacement_enabled": false,
+  "critical_native_defects_confirmed": 0,
+  "source_fixes_builds_installs_or_gameplay_performed": false,
+  "hash_verification": {
+    "frozen_index": "source/combat/review/INDEX-317-ULTRA.json",
+    "frozen_index_sha256": "754c3e879a634faa4935045c0f0414393a46abd25ac0d5590e838bffd7de3d67",
+    "frozen_files_verified": 63,
+    "frozen_mismatches": 0,
+    "appendix_index": "source/combat/review/INDEX-317-DEPLOYED.json",
+    "appendix_index_sha256": "53b762e4250b7e2fc12d04ee2ff7d585e3704bb6331fcdf3d2721b8c54802272",
+    "appendix_files_verified": 10,
+    "appendix_mismatches": 0,
+    "relevant_sdk_source_pins_verified": 13,
+    "sdk_pin_mismatches": 0,
+    "deployed_protected_files_verified_by_root": 53,
+    "dll_sha256": "ad962a694f90bf22ac452cd23ba8772d83bd6752854760d5453bd76c76634d33",
+    "pdb_sha256": "3be15b4ca78f1d067588eb79a4d30ad6a7fb50cd2c72e159cae178c394a140a4",
+    "live_log_sha256": "5c4e764753b73c258a176e4270b5b5bdbf8255ac6d35c097daa259cf89fcca63"
+  },
+  "findings": [
+    {
+      "id": "317-01",
+      "severity": "high",
+      "classification": "confirmed_interface_gap_not_existing_damage_defect",
+      "confidence": "high",
+      "title": "Copy-input join is later than ITR pre-hit and public ITR args lack a full hit transaction",
+      "locations": [
+        {"path": "source/combat/step3g2/captures/2026-09-15-3G2-5c4e764753b7/NVOCombatCore.log", "lines": "713-722,816-825"},
+        {"path": "native/NVOCombatCore/src/NativeObserver.cpp", "lines": "284-321"},
+        {"path": "native/NVOCombatCore/src/DamageEvents.cpp", "lines": "62-94,98-122"},
+        {"path": "C:/Users/regan/Desktop/NVO Mod References (Open Source)/itr-nvse-master/itr-nvse/handlers/OnPreDamageHandler.cpp", "lines": "79-132,171-209"}
+      ],
+      "evidence": "Both317 actor hits emit pre-hit before CopyHitData/IMPACT_HIT, then pre-health, then ShowOff impact. ITR supplies one product scaling health/limb/fatigue, no projectile/ammo transaction, and bypasses documented producer cases.",
+      "consequence": "Late joins cannot feed the already-dispatched pre-hit event; proximity pairing or multiplying both streams can misattribute or double-scale future damage.",
+      "minimal_fix_or_check": "Specify and verify one guarded full-context boundary before relevant application, plus identity/terminal outcome, unsupported and recursion policy. Keep it read-only until established.",
+      "gate": "before_coordinated_damage_implementation",
+      "status": "open"
+    },
+    {
+      "id": "317-02",
+      "severity": "high",
+      "classification": "confirmed_conditional_ownership_conflict_for_future_replacement",
+      "confidence": "high_for_records_current_save_activation_unknown",
+      "title": "Brahmin Baron has a separate DamageAV/Kill hit path",
+      "locations": [
+        {"path": "source/combat/review/NVO.esm-ALTRichKidHit.txt", "lines": "8-24"},
+        {"path": "source/combat/review/NVO.esm-ALTBackRichKidUDF.txt", "lines": "7-8"},
+        {"path": "source/combat/review/NVO.esm-ALTQscript.txt", "lines": "132-134"}
+      ],
+      "evidence": "Required deployed NVO records register OnHit for player victim/attacker and separately damage or kill using carried caps.",
+      "consequence": "A future single damage owner would leave a second health-loss path enabled for this background unless explicitly migrated or excluded.",
+      "minimal_fix_or_check": "Trace and migrate this rule into the coordinated owner or explicitly exclude its background from the first activation; retire actual registrations when replacing it, preserving unrelated start behavior.",
+      "gate": "owner_disposition_before_implementation_runtime_resolution_before_activation",
+      "status": "open"
+    },
+    {
+      "id": "317-03",
+      "severity": "medium",
+      "classification": "confirmed_deployed_startup_defect",
+      "confidence": "high_for_record_and_source_live_console_emission_not_captured",
+      "title": "RD contains the old noisy bootstrap and old-only JIP check",
+      "locations": [
+        {"path": "source/combat/review/RD.esm-NVOCombatBootstrapScript.txt", "lines": "18-39,51-54,66-80"},
+        {"path": "source/combat/review/NVO.esm-ALTQscript.txt", "lines": "27-28"},
+        {"path": "source/combat/review/DEPLOYED-317-NOTES.md", "lines": "11"},
+        {"path": "source/combat/step1/REVIEW-1.md", "lines": "21-25"}
+      ],
+      "evidence": "RD start-enabled quest01000DBF references script01000DBE with compiledSCDA1230bytes. Extracted source prints successful status each load and checks only the obsolete JIP plugin name. ALTQ retains the same name check.",
+      "consequence": "Quiet startup is not complete and a present JIP can be reported missing; workspace TXT correction did not update these deployed records.",
+      "minimal_fix_or_check": "Repair and compile the actual record-backed scripts; preserve failure notices, verify exact record/compiled output and quiet normal startup in the eventual authorized repair packet.",
+      "gate": "foundation_repair_before_claiming_foundation_complete",
+      "status": "open"
+    },
+    {
+      "id": "317-04",
+      "severity": "medium",
+      "classification": "confirmed_inherited_record_divergence_intent_unresolved",
+      "confidence": "high_for_records_live_save_effect_not_established",
+      "title": "Required RD master supplies Player health/SPECIAL/inventory overrides",
+      "locations": [
+        {"path": "source/combat/review/PLAYER-OVERRIDES-317.json", "lines": "3-25"},
+        {"path": "source/combat/review/MASTER-CLOSURE-317.json", "lines": "4-15,53-78"},
+        {"path": "source/combat/review/DEPLOYED-317-NOTES.md", "lines": "12-15"}
+      ],
+      "evidence": "RD Player base health550/SPECIAL9 contrasts with FalloutNV health100/SPECIAL5 and adds ReganGear. NVO has no Player override and has five separate health GMSTs.",
+      "consequence": "The test/balance baseline inherits substantive RD records; filename activation alone missed this. Exact596HP or use of the Regan perk is not proved.",
+      "minimal_fix_or_check": "Deliberately isolate/migrate required RD references and explicitly retain or remove the Player override. Preserve user GMST settings and distinguish new-record outcomes from persisted save state.",
+      "gate": "before_damage_balance_not_before_read_only_contract_work",
+      "status": "open"
+    },
+    {
+      "id": "317-05",
+      "severity": "high",
+      "classification": "unsupported_physical_authority_and_missing_input_contract",
+      "confidence": "high",
+      "title": "No accepted317 actor speed, calibrated unit contract or runtime mass input",
+      "locations": [
+        {"path": "native/NVOCombatCore/src/FlightImpactModel.inl", "lines": "25-46"},
+        {"path": "native/NVOCombatCore/src/FlightPhysics.cpp", "lines": "260-281,426,442-444,1019"},
+        {"path": "native/NVOCombatCore/src/FlightPreview.cpp", "lines": "19-28,192-198"},
+        {"path": "source/combat/step3g2/REVIEW-1.md", "lines": "17-36"},
+        {"path": "native/NVOCombatCore/config/NVOFlightPhysics.ini", "lines": "5-8"}
+      ],
+      "evidence": "317actor offsets0.0955443553/0.0834210156 exceed tolerances0.0532188073/0.0532332973 despite valid endpoints. Four scenery estimates pass. Units70/metre remain uncalibrated; runtime profiles omit mass; baseline/immediate contact has no owned model.",
+      "consequence": "Energy/penetration would depend on missing or unsupported inputs if candidate absence were substituted by zero, last velocity or widened tolerance.",
+      "minimal_fix_or_check": "Define justified unit/time/tolerance/contact and first-segment policies; provide mass with units/provenance for initial scope. Preserve unavailable status. Validate only the necessary new model/producer interface.",
+      "gate": "input_contract_before_armour_implementation_authority_evidence_before_activation",
+      "status": "open"
+    },
+    {
+      "id": "317-06",
+      "severity": "high",
+      "classification": "unresolved_region_and_vats_semantics",
+      "confidence": "high_for_discrepancy_cause_unknown",
+      "title": "Contact region and ActorHitData region cannot yet be one armour authority",
+      "locations": [
+        {"path": "native/NVOCombatCore/src/FlightImpactJoin.inl", "lines": "34-55"},
+        {"path": "source/combat/step3g1/REVIEW-1.md", "lines": "27-31"},
+        {"path": "native/NVOCombatCore/reference/IMPACT-HIT-NOTES.md", "lines": "3-5"},
+        {"path": "C:/Users/regan/Desktop/NVO Mod References (Open Source)/JIP-LN-NVSE-main/internal/hooks.h", "lines": "2299-2319"},
+        {"path": "C:/Users/regan/Desktop/NVO Mod References (Open Source)/ShowOff-NVSE-main/SHOWOFF-NVSE/internal/decoding.h", "lines": "574-583"}
+      ],
+      "evidence": "316shot2 contact0 versus hit-data1 remains unresolved;317both actor regions agree but no explicit VATS/aim input is recorded. JIP copies supplied region and may invoke later critical callbacks.",
+      "consequence": "Choosing helmet/body or targeted anatomy from an assumed universal producer rule can apply protection to the wrong region.",
+      "minimal_fix_or_check": "Trace relevant region producers at the selected pre-application boundary, retain intended/contact/hit regions separately, define a supported body-region policy and unknown handling. Do not request a repeat simply to force agreement.",
+      "gate": "before_region_dependent_armour_authority",
+      "status": "open"
+    },
+    {
+      "id": "317-07",
+      "severity": "medium",
+      "classification": "confirmed_existing_pilot_fallback_limitation",
+      "confidence": "high_for_source_no317failure_observed",
+      "title": "Post-selection rejection/capacity loss does not restore stock flight",
+      "locations": [
+        {"path": "native/NVOCombatCore/src/FlightPreview.cpp", "lines": "280-287,499-508,549-560"},
+        {"path": "native/NVOCombatCore/src/FlightPhysics.cpp", "lines": "26,115-119,1050-1066"},
+        {"path": "source/combat/step3f/REVIEW-1.md", "lines": "37"}
+      ],
+      "evidence": "Private projectile is selected before Track admission, has gravity0/hitscan removed, and remains selected after track rejection or128active-slot exhaustion. No admission reservation exists.",
+      "consequence": "Fail-closed native edits can leave non-stock flight after selection; this is not a transparent return to original behavior or guaranteed continuity of integrated velocity.",
+      "minimal_fix_or_check": "Reserve admission before substitution where possible and define safe post-selection failure handling; keep guards/tolerances and record explicit unsupported outcome.",
+      "gate": "before_broad_flight_or_damage_activation",
+      "status": "open_accepted_as_limited_pilot_only"
+    },
+    {
+      "id": "317-08",
+      "severity": "medium",
+      "classification": "confirmed_diagnostic_boundary_future_implementation_requirement",
+      "confidence": "high",
+      "title": "Diagnostic lifetime/context/log caps cannot bound future gameplay authority",
+      "locations": [
+        {"path": "native/NVOCombatCore/src/NativeObserver.cpp", "lines": "13,284"},
+        {"path": "native/NVOCombatCore/src/FlightImpact.inl", "lines": "27,83-88"},
+        {"path": "native/NVOCombatCore/src/FlightImpactJoin.inl", "lines": "3,13-14"},
+        {"path": "native/NVOCombatCore/src/NativeLog.cpp", "lines": "13-14,79-97"}
+      ],
+      "evidence": "200current contexts,32admitted collision lives,64joins per load and7168detail/1024priority process rows deliberately limit diagnostics. Physics continues after log caps.",
+      "consequence": "Reusing diagnostic caches/callback early returns as a damage owner would silently stop processing gameplay after the budgets are exhausted.",
+      "minimal_fix_or_check": "Give application state independent bounded admission/retirement/overflow/reset and exactly-once semantics; verify diagnostic exhaustion does not alter outcomes. Keep logs bounded.",
+      "gate": "next_pre_application_interface_design",
+      "status": "open"
+    },
+    {
+      "id": "317-09",
+      "severity": "low",
+      "classification": "distribution_permission_evidence_gap_not_legal_determination",
+      "confidence": "high_for_notice_contents_scope_unresolved",
+      "title": "BallistX permission summary does not resolve compiled-table redistribution scope",
+      "locations": [
+        {"path": "native/NVOCombatCore/THIRD-PARTY-NOTICES.md", "lines": "3-5,15-17"},
+        {"path": "native/NVOCombatCore/CREDITS-BALLISTX.md", "lines": "5-9"},
+        {"path": "native/NVOCombatCore/include/FlightDragData.hpp", "lines": "1-9"},
+        {"path": "source/combat/step1/CREDITS.md", "lines": "5-11"}
+      ],
+      "evidence": "Native packet is declaredGPLv3, JIP/ITR notices retained, while donor summary records an asset sale restriction and selected donor tables are compiled into native data.",
+      "consequence": "A broad combined-distribution license claim is not established by attribution or the planning summary alone.",
+      "minimal_fix_or_check": "Retain notices and archive applicable permission text clarifying copied numeric data, or replace/separate disputed data before redistribution claims. No legal infringement conclusion and no block on private diagnostic work.",
+      "gate": "redistribution_only",
+      "status": "open"
+    }
+  ],
+  "retained_limits_not_new_defects": [
+    "Full pellet application, explosion-impact deduplication, robots, NPC-to-NPC, flame and all critical effects are not verified; exclude unsupported cases from initial activation or add only affected evidence.",
+    "HP ammo selection persistence remains separately unresolved; do not repeat the whole ammo cycle for this audit.",
+    "No hot unload is supported; hooks and timing continuations rely on process-lifetime module residency and synchronous inspected provider destruction.",
+    "No future wounds, medicine, persistent physiology, remaining weapon behavior, AI/morale or background balance implementation was required for this audit."
+  ],
+  "next_work_order": [
+    "Read-only/disabled full-context pre-application contract, reusing saved engine evidence; minimum new instrumentation only for a concrete unresolved source question.",
+    "Separate foundation record repair: quiet actual bootstrap, valid dependency checks, deliberate RD Player/master disposition, and conditional legacy damage-owner migration/exclusion.",
+    "Settle first supported model/region/mass/unknown contracts; then disabled armour/penetration/coordinated damage and targeted delta review; separate user-approved activation."
+  ],
+  "stopping_rule": "Current foundation audit complete. No new gameplay packet, implementation, full re-audit or activation automatically authorized by this report."
+}

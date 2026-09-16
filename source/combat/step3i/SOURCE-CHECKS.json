@@ -1,0 +1,30 @@
+{
+  "scripts": [
+    {
+      "script": "NVOCombatBootstrapScript",
+      "source_sha256": "45ef77e855efe02850b03728707f6c0fab615cf7cf4b28ad1a5e6c18cdb365b5",
+      "source_only": true,
+      "geck_compiled": false,
+      "full_replacement": true
+    },
+    {
+      "script": "ALTQscript",
+      "source_sha256": "0beb55fa265afbb44ee86411b38012b85da5673a16a5c0902b05d702e8044795",
+      "source_only": true,
+      "geck_compiled": false,
+      "full_replacement": true
+    },
+    {
+      "script": "ALTStartQscript",
+      "source_sha256": "47cb0d2e6700763791675124891ebbf333aaf53a8e56670106539e79375b2c1d",
+      "source_only": true,
+      "geck_compiled": false,
+      "full_replacement": true
+    }
+  ],
+  "gameplay_bodies_preserved": true,
+  "quiet_success": true,
+  "dependency_notices_owner": "NVOCombatBootstrapScript",
+  "dependency_reporting": "At first bootstrap execution per process only; presence state refreshes on each load.",
+  "compilation": "Pending user GECK compile; source checks do not prove compilation."
+}

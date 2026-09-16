@@ -1,0 +1,34 @@
+scn ALTMojaveExpressBoardScript
+
+ref rLambda
+int iButton
+string_var sFlier
+
+begin OnActivate
+    if ALTGO == 0
+        if IsActionRef Player
+            if Player.IsInCombat
+                MessageEx "You cannot read this flier while in combat."
+            else
+                let rLambda := (begin function {int iSignUpChoice}
+                    if iSignUpChoice == 0
+                        if ALTGO == 0
+                            DisablePlayerControls
+                            Imod FadeToBlack4sISFX
+                            set ALTGO to 1
+                            DocMitchellRef.EVP
+                            DocMitchellRef.MoveTo ALTDocMitchellChairRef
+                            CallAfterSeconds 3 ({} => Call ALTStartUDF)
+                        endif
+                    endif
+                end)
+
+                let sFlier := "^Mojave Express - Now Hiring^Take a delivery job and begin the Courier story."
+                let sFlier += " Signing up starts that story immediately."
+                let sFlier += " This job is optional. You can leave and return to a flier later."
+                let sFlier += "|Sign up - begin the Courier story|Leave"
+                MessageBoxExAlt rLambda "%z" sFlier
+            endif
+        endif
+    endif
+end

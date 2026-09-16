@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVO • Packet 3T • Distance and timing</title>
+<style>body{background:#111917;color:#e1eee8;font:18px/1.55 system-ui,sans-serif;max-width:830px;margin:50px auto;padding:0 24px}h1{line-height:1.15}h2{font-size:23px;color:#a4dbc3}a{color:#a4dbc3}.card{border:1px solid #476357;background:#1b2923;padding:20px 24px;border-radius:12px;margin:24px 0}.tag{color:#a4dbc3;font-size:15px}li{margin:10px 0}strong{color:white}</style>
+<p class="tag">NVO COMBAT • PACKET 3T • OFFLINE AUDIT</p>
+<h1>The projectile clock checks out.</h1>
+<p>NVO should keep its current distance convention and use the engine's incoming projectile timestep once. The inspected parent code applies its VATS timing adjustment before passing that value onward.</p>
+<div class="card"><strong>No playtest or installation needed.</strong><br>Your normal native323 / NVO 0.3.23 remains installed. No game files changed. Damage replacement stays off.</div>
+<h2>Completed with existing evidence</h2>
+<ul><li>455 paired updates use exactly the same timestep in NVO and the engine.</li><li>475 consecutive lifetime observations follow the engine's update order.</li><li>427 recorded movement steps reproduced through the current C++ integrator.</li><li>Different simulated-time partitions, analytic gravity and a wrong-clock example checked successfully.</li></ul>
+<p>This confirms the clock choice for the inspected path. It does not prove every VATS branch or instantaneous impact speed. One row remains explicitly unpaired because the timing log reached its limit.</p>
+<h2>Next, after your approval</h2>
+<p>Resolve close-range and other contacts that currently lack a usable impact-speed estimate. That is the remaining input gap before returning to armour calculations and damage authority.</p>
+<p><a href="README.md">Packet notes</a> · <a href="CONTRACT.md">Technical findings</a> · <a href="RESULT.json">Check results</a> · <a href="CREDITS-BALLISTX.md">Donor credits</a></p>
+</html>

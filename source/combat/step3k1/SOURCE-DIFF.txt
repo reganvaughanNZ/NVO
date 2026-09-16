@@ -1,0 +1,88 @@
+--- native319/src/Plugin.cpp
++++ native320/src/Plugin.cpp
+@@ -9,11 +9,24 @@
+ 
+ namespace {
+ constexpr char kPluginName[] = "NVOCombatCore";
+-constexpr std::uint32_t kPluginVersion = 319; // 0.3.19, packet 3K actor-value net observations
++constexpr std::uint32_t kPluginVersion = 320; // 0.3.20, packet 3K1 startup banner
+ constexpr bool kHitHooksImplemented = false;
+ constexpr bool kDamageReplacementEnabled = false;
+ bool gLoaded = false;
++const nvo::nvse::ConsolePrefix* gConsole = nullptr;
++bool gStartupBannerPending = false;
++bool gStartupBannerAttempted = false; // Process lifetime, never saved or reset on loads/menus.
+ unsigned gSession = 0;
++
++void EmitStartupBanner() noexcept
++{
++    if (!gStartupBannerPending || gStartupBannerAttempted) return;
++    gStartupBannerAttempted = true; // Set before calling out, including any reentrant callback.
++    gStartupBannerPending = false;
++    const bool submitted = gConsole && gConsole->version >= 2 && gConsole->RunScriptLine
++        && gConsole->RunScriptLine("PrintC \"NVO [0.3.20] - The Mojave is yours.\"", nullptr);
++    nvo::log::Write("STARTUP_BANNER version=0.3.20 submitted=%u once_per_process=1", submitted ? 1u : 0u);
++}
+ 
+ bool SupportsHost(const nvo::nvse::InterfacePrefix* host) noexcept
+ {
+@@ -41,6 +54,7 @@
+         nvo::physics::Initialize();
+         nvo::transaction::Initialize();
+         nvo::avobserve::Initialize();
++        gStartupBannerPending = !gStartupBannerAttempted;
+         break;
+     case MessageType::PreLoadGame:
+         nvo::avobserve::Suspend("pre_load_game");
+@@ -96,6 +110,8 @@
+         nvo::log::Write("LIFECYCLE exit_game");
+         break;
+     case MessageType::MainGameLoop:
++        // xNVSE dispatches this after all DeferredInit listeners (including JIP).
++        EmitStartupBanner();
+         nvo::observer::Tick();
+         nvo::damage::Tick();
+         nvo::transaction::Tick();
+@@ -129,7 +145,7 @@
+         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
+         return false;
+     }
+-    nvo::log::Write("NVOCombatCore 0.3.19 | phase=3K | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
++    nvo::log::Write("NVOCombatCore 0.3.20 | phase=3K1 | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
+     nvo::log::Write("QUERY runtime=0x%08X xnvse=0x%08X editor=%u",
+         host->runtimeVersion, host->nvseVersion, host->isEditor);
+     return true;
+@@ -160,10 +176,10 @@
+         nvo::log::Write("LOAD rejected: could not register NVSE lifecycle listener");
+         return false;
+     }
+-    nvo::observer::Initialize(static_cast<nvo::observer::EventApiPrefix*>(host->QueryInterface(8)),
+-        static_cast<nvo::nvse::ConsolePrefix*>(host->QueryInterface(1)));
++    gConsole = static_cast<nvo::nvse::ConsolePrefix*>(host->QueryInterface(1));
++    nvo::observer::Initialize(static_cast<nvo::observer::EventApiPrefix*>(host->QueryInterface(8)), gConsole);
+     nvo::damage::Initialize(static_cast<nvo::observer::EventApiPrefix*>(host->QueryInterface(8)),
+-        static_cast<nvo::nvse::ConsolePrefix*>(host->QueryInterface(1)));
++        gConsole);
+     gLoaded = true;
+     nvo::log::Write("LOAD registered=1 messaging=%u damage_hooks=0 damage_replacement=0",
+         messaging->version);
+--- native319/include/NvseBootstrapApi.hpp
++++ native320/include/NvseBootstrapApi.hpp
+@@ -53,7 +53,7 @@
+ };
+ 
+ // Public Console API v2+ prefix, queried as interface 1. Used only for a
+-// fixed console diagnostic after gameplay begins; never opens a message box.
++// fixed console lines after deferred initialization; never opens a message box.
+ struct ConsolePrefix {
+     std::uint32_t version;
+     bool (__cdecl* RunScriptLine)(const char*, void*);
+--- native319/CMakeLists.txt
++++ native320/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(NVOCombatCore VERSION 0.3.19 LANGUAGES CXX)
++project(NVOCombatCore VERSION 0.3.20 LANGUAGES CXX)
+ 
+ if(NOT WIN32 OR NOT MSVC)
+     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")

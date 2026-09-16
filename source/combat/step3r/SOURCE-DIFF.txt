@@ -1,0 +1,218 @@
+--- native322/BUILD.cmd
++++ native323/BUILD.cmd
+@@ -4,6 +4,8 @@
+ pushd "%~dp0"
+ if errorlevel 1 exit /b 1
+ set "NVO_PROJECT_DIR=%CD%"
++set "NVO_PROBE_DEFINE="
++if /I "%~2"=="--capacity-probe" set "NVO_PROBE_DEFINE=/DNVO_ADMISSION_CAPACITY_PROBE=1"
+ set "NVO_VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
+ set "NVO_VSINSTALL="
+ if not exist "%NVO_VSWHERE%" goto missing_tools
+@@ -28,7 +30,7 @@
+ pushd "%NVO_BUILD_DIR%"
+ if errorlevel 1 goto folder_error
+ echo Building NVOCombatCore. This does not install or run the DLL.
+-cl.exe /nologo /Bv /LD /MT /O2 /Zi /FdNVOCombatCore-compile.pdb /std:c++17 /EHsc /W4 /permissive- /DWIN32_LEAN_AND_MEAN /DNOMINMAX /I"%NVO_PROJECT_DIR%\include" "%NVO_PROJECT_DIR%\src\Plugin.cpp" "%NVO_PROJECT_DIR%\src\NativeLog.cpp" "%NVO_PROJECT_DIR%\src\NativeObserver.cpp" "%NVO_PROJECT_DIR%\src\CurrentHit.cpp" "%NVO_PROJECT_DIR%\src\DamageEvents.cpp" "%NVO_PROJECT_DIR%\src\HitTransaction.cpp" "%NVO_PROJECT_DIR%\src\ActorValueObserver.cpp" "%NVO_PROJECT_DIR%\src\FlightPreview.cpp" "%NVO_PROJECT_DIR%\src\FlightTiming.cpp" "%NVO_PROJECT_DIR%\src\FlightPhysics.cpp" "%NVO_PROJECT_DIR%\src\SpawnBoundary.cpp" /link /DEBUG:FULL /OPT:REF /OPT:ICF /PDB:NVOCombatCore.pdb /MACHINE:X86 /DEF:"%NVO_PROJECT_DIR%\src\Exports.def" /OUT:NVOCombatCore.dll /IMPLIB:NVOCombatCore.lib kernel32.lib >build.log 2>&1
++cl.exe /nologo /Bv /LD /MT /O2 /Zi /FdNVOCombatCore-compile.pdb /std:c++17 /EHsc /W4 /permissive- /DWIN32_LEAN_AND_MEAN /DNOMINMAX %NVO_PROBE_DEFINE% /I"%NVO_PROJECT_DIR%\include" "%NVO_PROJECT_DIR%\src\Plugin.cpp" "%NVO_PROJECT_DIR%\src\NativeLog.cpp" "%NVO_PROJECT_DIR%\src\NativeObserver.cpp" "%NVO_PROJECT_DIR%\src\CurrentHit.cpp" "%NVO_PROJECT_DIR%\src\DamageEvents.cpp" "%NVO_PROJECT_DIR%\src\HitTransaction.cpp" "%NVO_PROJECT_DIR%\src\ActorValueObserver.cpp" "%NVO_PROJECT_DIR%\src\FlightPreview.cpp" "%NVO_PROJECT_DIR%\src\FlightTiming.cpp" "%NVO_PROJECT_DIR%\src\FlightPhysics.cpp" "%NVO_PROJECT_DIR%\src\SpawnBoundary.cpp" /link /DEBUG:FULL /OPT:REF /OPT:ICF /PDB:NVOCombatCore.pdb /MACHINE:X86 /DEF:"%NVO_PROJECT_DIR%\src\Exports.def" /OUT:NVOCombatCore.dll /IMPLIB:NVOCombatCore.lib kernel32.lib >build.log 2>&1
+ set "NVO_BUILD_RESULT=%ERRORLEVEL%"
+ if not "%NVO_BUILD_RESULT%"=="0" goto compile_error
+ if not exist "NVOCombatCore.dll" goto compile_error
+--- native322/CMakeLists.txt
++++ native323/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(NVOCombatCore VERSION 0.3.22 LANGUAGES CXX)
++project(NVOCombatCore VERSION 0.3.23 LANGUAGES CXX)
+ 
+ if(NOT WIN32 OR NOT MSVC)
+     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")
+@@ -21,3 +21,8 @@
+ 
+ target_link_options(NVOCombatCore PRIVATE /DEBUG:FULL /OPT:REF /OPT:ICF)
+ 
++
++option(NVO_ADMISSION_CAPACITY_PROBE "One-shot diagnostic saturation of flight slots" OFF)
++if(NVO_ADMISSION_CAPACITY_PROBE)
++    target_compile_definitions(NVOCombatCore PRIVATE NVO_ADMISSION_CAPACITY_PROBE=1)
++endif()
+--- native322/THIRD-PARTY-NOTICES.md
++++ native323/THIRD-PARTY-NOTICES.md
+@@ -19,3 +19,5 @@
+ Packet 3P inspects ShowOff184 OnPreProjectileCreate::HandleEvent and its saved engine continuation. Newly authored NVO code atomically interposes the pinned in-memory continuation pointer for a diagnostic, forwards the inspected sixteen-word cdecl ABI unchanged, and correlates return/creation events. ShowOff source and deployed binary were used to establish that contract; no ShowOff implementation, DLL, PDB, or extracted disassembly is redistributed.
+ 
+ Packet3Q moves NVO selection into that same pinned provider continuation, after bounded physics/lifecycle reservation. This is newly authored integration code; it changes only the per-call projectile-base argument when admitted. Corresponding source and the failure-policy limitations accompany the binary.
++
++Packet 3R: the original diagnostic capacity-probe helper and ownership tests add no new donor code. Existing notices remain applicable.
+--- native322/src\FlightPhysics.cpp
++++ native323/src\FlightPhysics.cpp
+@@ -2,6 +2,9 @@
+ #include "FlightDragData.hpp"
+ #include "CurrentHit.hpp"
+ #include "NativeLog.hpp"
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++#include "FlightCapacityProbe.hpp"
++#endif
+ #include <Windows.h>
+ #include <atomic>
+ #include <cmath>
+@@ -64,6 +67,17 @@
+ std::atomic<bool> gActive{false};
+ bool gInstalled{}, gAttempted{};
+ unsigned gSession{}, gAccepted{}, gApplied{}, gRejected{}, gOverflow{};
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++nvo::admission::CapacityProbe<kCapacity> gCapacityProbe;
++void ReleaseCapacityProbe(const char* reason) noexcept {
++    if (!gCapacityProbe.Held()) return;
++    const auto r=gCapacityProbe.Release(gSlots);
++    if (!r.ok) nvo::admission::Block(nvo::admission::Fault::Physics);
++    nvo::log::Write("CAPACITY_PROBE_RELEASE session=%u reason=%s synthetic_held=%u synthetic_released=%u used_before=%u used_after=%u survivor_token=%llu survivor_phase_before=%u survivor_phase_after=%u preserved=%u process_once=1",
++        gSession,reason,r.held,r.released,r.before,r.after,r.survivor.id,
++        static_cast<unsigned>(r.survivorBefore),static_cast<unsigned>(r.survivorAfter),r.ok?1u:0u);
++}
++#endif
+ unsigned gMoveEntries{}, gAccountingEntries{}, gMoveUntracked{}, gAccountingUntracked{};
+ unsigned gMissingRoute{}, gBaselines{}, gVerified{}, gMismatched{}, gUnpaired{};
+ unsigned gResetEntries{}, gResetPreserved{};
+@@ -1007,6 +1021,9 @@
+ void nvo::physics::BeginCapture(unsigned session) noexcept
+ {
+     const ErrorGuard error; const Lock lock;
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++    ReleaseCapacityProbe("capture_reset");
++#endif
+     gActive.store(false); gSession=session; gAccepted=gApplied=gRejected=gOverflow=0;
+     gReservations=gCancellations=0;
+     gMoveEntries=gAccountingEntries=gMoveUntracked=gAccountingUntracked=0;
+@@ -1021,6 +1038,7 @@
+     for (auto& t:gTracks) t={};
+     gSlots.Reset();
+     const char* reason=ReadConfig();
++    nvo::log::Write("PHYSICS_POOL_RESET session=%u reason=capture_begin slots_held=%u",gSession,gSlots.Used());
+     if (!reason && (!gInstalled || !nvo::hit::ProjectileLayoutReady() || !Guard())) reason="unsupported_code_or_hook_ownership";
+     if (reason) { nvo::log::Write("PHYSICS_DISABLED session=%u reason=%s",session,reason); return; }
+     gActive.store(true,std::memory_order_release);
+@@ -1040,7 +1058,11 @@
+ void nvo::physics::Suspend(const char* reason) noexcept
+ {
+     const ErrorGuard error; const Lock lock;
+-    if (gActive.exchange(false)) {
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++    ReleaseCapacityProbe(reason);
++#endif
++    const bool wasActive=gActive.exchange(false);
++    if (wasActive) {
+         ImpactFinish(reason);
+         nvo::log::Write("PHYSICS_ADMISSION_SUMMARY session=%u reservations=%u committed=%u cancelled=%u capacity_refused=%u slots_held=%u process_fault=%u capacity=128",gSession,gReservations,gAccepted,gCancellations,gOverflow,gSlots.Used(),static_cast<unsigned>(admission::processFault.load()));
+         unsigned open=0; for (auto& t:gTracks) if (t.serial) { ++open; MissingRoute(t,reason); Summary(t,reason); }
+@@ -1057,14 +1079,41 @@
+     }
+     for (auto& t:gTracks) t={};
+     gSlots.Reset();
++    if (wasActive) nvo::log::Write("PHYSICS_POOL_RESET session=%u reason=%s slots_held=%u",gSession,reason,gSlots.Used());
+ }
+ nvo::admission::Ticket nvo::physics::Reserve(U64 serial,const admission::Profile& p) noexcept
+ {
+     const ErrorGuard error; const Lock lock;
+     if (!gActive.load() || admission::Blocked() || !serial || (p.dragModel!=1 && p.dragModel!=7)
+         || !std::isfinite(p.bc) || p.bc<0.05 || p.bc>2) return {};
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++    // Arm only for the player's standard 9mm SMG and an empty production pool.
++    if (!gCapacityProbe.Consumed() && p.source==0x14 && p.weapon==0x8F217
++        && p.ammo==0x8ED03 && p.changesBase && !gSlots.Used()) {
++        if (gCapacityProbe.Arm(gSlots)) {
++            nvo::log::Write("CAPACITY_PROBE_ARM session=%u synthetic_reserved=%u real_capacity=%u effective_free=1 weapon=%08X once_per_process=1 test_build=1",
++                gSession,gCapacityProbe.Held(),kCapacity,p.weapon);
++        } else {
++            admission::Block(admission::Fault::Physics);
++            nvo::log::Write("CAPACITY_PROBE_ABORT session=%u reason=arm_failed",gSession);
++            return {};
++        }
++    }
++    // Bound attempts even if every real shot retires before the next arrives.
++    if (gCapacityProbe.Held() && gCapacityProbe.Attempts()>=16) ReleaseCapacityProbe("attempt_limit");
++    if (admission::Blocked()) return {};
++#endif
+     const auto ticket=gSlots.Reserve();
+-    if (!ticket) { ++gOverflow; return {}; }
++    if (!ticket) {
++        ++gOverflow;
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++        ReleaseCapacityProbe("actual_pool_refusal");
++#endif
++        return {};
++    }
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++    gCapacityProbe.Note(ticket);
++#endif
+     auto& t=gTracks[ticket.slot]; t={};
+     t.ticket=ticket; t.serial=serial; t.source=p.source; t.weapon=p.weapon; t.ammo=p.ammo; t.base=p.base;
+     t.profile=p.index; t.dragModel=p.dragModel; t.ballisticCoefficient=p.bc;
+--- native322/src\NativeObserver.cpp
++++ native323/src\NativeObserver.cpp
+@@ -236,12 +236,14 @@
+ {
+     const Lock lock;
+     gPending.store(false);
+-    if (gActive) Summary(reason);
++    const bool wasActive=gActive;
++    if (wasActive) Summary(reason);
+     gActive = false;
+     nvo::spawn::Suspend(reason);
+     nvo::flight::Suspend(reason);
+     for (auto& life : gLives) life = {};
+     gLifeSlots.Reset();
++    if (wasActive) nvo::log::Write("LIFECYCLE_POOL_RESET session=%u reason=%s slots_held=%u",gSession,reason,gLifeSlots.Used());
+ }
+ 
+ void nvo::observer::QueueCapture(const char* reason) noexcept
+@@ -374,8 +376,11 @@
+     r.serial=NextLifetime(); r.session=gSession;
+     if (r.serial) r.physics=nvo::physics::Reserve(r.serial,r.profile);
+     if (!r.physics) {
+-        gLifeSlots.Cancel(r.life);
+-        if (++gPhysicsRefused<=4) nvo::log::Write("FLIGHT_ADMISSION_REFUSED session=%u reason=physics_capacity_or_guard supplied_projectile_unchanged=1",gSession);
++        const auto before=gLifeSlots.Used();
++        const bool cancelled=gLifeSlots.Cancel(r.life);
++        if (!cancelled) admission::Block(admission::Fault::Lifetime);
++        if (++gPhysicsRefused<=4) nvo::log::Write("FLIGHT_ADMISSION_REFUSED session=%u reason=physics_capacity_or_guard supplied_projectile_unchanged=1 lifecycle_rollback=%u slots_before=%u slots_after=%u weapon=%08X ammo=%08X",
++            gSession,cancelled?1u:0u,before,gLifeSlots.Used(),r.profile.weapon,r.profile.ammo);
+         return {};
+     }
+     gLives[r.life.slot]={};
+--- native322/src\Plugin.cpp
++++ native323/src\Plugin.cpp
+@@ -9,7 +9,7 @@
+ 
+ namespace {
+ constexpr char kPluginName[] = "NVOCombatCore";
+-constexpr std::uint32_t kPluginVersion = 322; // 0.3.22, packet 3Q flight admission
++constexpr std::uint32_t kPluginVersion = 323; // 0.3.23, packet 3R capacity checkpoint
+ constexpr bool kHitHooksImplemented = false;
+ constexpr bool kDamageReplacementEnabled = false;
+ bool gLoaded = false;
+@@ -24,8 +24,8 @@
+     gStartupBannerAttempted = true; // Set before calling out, including any reentrant callback.
+     gStartupBannerPending = false;
+     const bool submitted = gConsole && gConsole->version >= 2 && gConsole->RunScriptLine
+-        && gConsole->RunScriptLine("PrintC \"NVO [0.3.22] - The Mojave is yours.\"", nullptr);
+-    nvo::log::Write("STARTUP_BANNER version=0.3.22 submitted=%u once_per_process=1", submitted ? 1u : 0u);
++        && gConsole->RunScriptLine("PrintC \"NVO [0.3.23] - The Mojave is yours.\"", nullptr);
++    nvo::log::Write("STARTUP_BANNER version=0.3.23 submitted=%u once_per_process=1", submitted ? 1u : 0u);
+ }
+ 
+ bool SupportsHost(const nvo::nvse::InterfacePrefix* host) noexcept
+@@ -145,7 +145,12 @@
+         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
+         return false;
+     }
+-    nvo::log::Write("NVOCombatCore 0.3.22 | phase=3Q | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
++    nvo::log::Write("NVOCombatCore 0.3.23 | phase=3R | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
++#ifdef NVO_ADMISSION_CAPACITY_PROBE
++    nvo::log::Write("CAPACITY_PROBE_BUILD enabled=1 player_standard_9mm_smg_only=1 synthetic_slots=127 process_once=1 damage_replacement=0");
++#else
++    nvo::log::Write("CAPACITY_PROBE_BUILD enabled=0 production_capacity=128");
++#endif
+     nvo::log::Write("QUERY runtime=0x%08X xnvse=0x%08X editor=%u",
+         host->runtimeVersion, host->nvseVersion, host->isEditor);
+     return true;

@@ -1,0 +1,42 @@
+{
+  "packet": "4B-stress",
+  "native_version": 326,
+  "status": "Helpers installed; user test pending",
+  "native_changed": false,
+  "damage_replacement": false,
+  "distinct_misc_forms": 128,
+  "expected_shots": "About90 before reload; about5 after",
+  "inventory_limit_unchanged": 512,
+  "snapshot_limit_unchanged": 64,
+  "gameplay_tested": false,
+  "files": [
+    {
+      "path": "INSTALL-plan.json",
+      "sha256": "481c51596def61a5d56b515309084de44c20e6e60f458d6a3a779ba0251c5fb6"
+    },
+    {
+      "path": "INSTALL-result.json",
+      "sha256": "a7c5f6aafc23cde39d1063b8b60c9e213502ed6730f1b24f1ff9767db353e82b"
+    },
+    {
+      "path": "ITEM-PROVENANCE.json",
+      "sha256": "5b5568b03d7fa5ba97d77eb742e4271034bd74f0e2e747bb6d5a0187cf8cc4e7"
+    },
+    {
+      "path": "NVOStressKit4B.txt",
+      "sha256": "446c0e5b25e83ba7e9fa807cea04f794bc4b56d924098fdb56604d3ab90649ce"
+    },
+    {
+      "path": "NVOStressTarget4B.txt",
+      "sha256": "19fd0f7053e84dc89c55988fc3897b0b3d584398de7b48ac97412b640b530c84"
+    },
+    {
+      "path": "README.md",
+      "sha256": "26734f836aa81c142db848be449c15a2ce223b972169a59486cf98c691e77649"
+    },
+    {
+      "path": "START-HERE.html",
+      "sha256": "c752c56a64aec837860ef5357ca8e18de9d04c22d843395be7594acfd822e446"
+    }
+  ]
+}

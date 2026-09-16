@@ -1,0 +1,26 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\FalloutNV.esm",
+  "records": [
+    {
+      "type": "REFR",
+      "id": "001070C1",
+      "flags": "00008000",
+      "base": "000928F3",
+      "position_rotation": [
+        -67640.0,
+        -2280.0,
+        8104.0,
+        0.009141510352492332,
+        0.00258033350110054,
+        3.197530746459961
+      ]
+    },
+    {
+      "type": "STAT",
+      "id": "000928F3",
+      "flags": "08008200",
+      "EDID": "MobileHomeASNV",
+      "MODL": "vehicles\\MobileHomeASNV.nif"
+    }
+  ]
+}

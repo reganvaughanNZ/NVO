@@ -1,0 +1,93 @@
+--- baseline-313/FlightPreview.cpp
++++ native-314/FlightPreview.cpp
+@@ -33,12 +33,14 @@
+     unsigned short flags{}, type{};
+     float gravity{}, speed{}, range{}, mult{}, time{}, distance{};
+ };
+-struct Shot { unsigned long long serial{}; unsigned profile{}; Snapshot start{}; bool impacted{}; };
++struct RangeObservation { float range{}; U32 flags{}; unsigned char impacted{}; unsigned valid{}; };
++struct Shot { unsigned long long serial{}; unsigned profile{}; Snapshot start{}; bool impacted{}; RangeObservation launchRange{}; };
+ Profile gProfiles[kProfiles]{};
+ Mod gMods[255]{};
+ Shot gShots[kShots]{};
+ unsigned gProfileCount{}, gModCount{}, gSession{}, gMaxShots{}, gSeen{}, gMatched{}, gSkipped{};
+ unsigned gReadFailures{}, gMismatch{}, gCreateRows{}, gImpactRows{}, gDestroyRows{}, gSkipRows{};
++unsigned gRangeRows{}, gRangeReadFailures{}, gRangeLogFailures{};
+ double gUnitsPerMetre{};
+ bool gActive{}, gWarned{};
+ bool gSelectorReady{};
+@@ -360,6 +362,39 @@
+         && std::isfinite(s.time) && s.time >= 0 && s.time <= 1e7f
+         && std::isfinite(s.distance) && s.distance >= 0 && s.distance <= 1e12f;
+ }
++RangeObservation ReadRange(void* projectile) noexcept
++{
++    // Optional diagnostics only, after the existing lifetime/identity checks.
++    // D4 is fRange in Stewie/ITR and is seeded/multiplied in the saved engine
++    // route 009BDD10..009BDDC0. Do not use 14C: that field gates passing sound.
++    // A failed read never gates tracking, movement or existing event handling.
++    RangeObservation r{};
++    if (ReadAt(projectile, 0xD4, r.range) && std::isfinite(r.range) && r.range >= 0 && r.range <= 1e12f)
++        r.valid |= 1;
++    else r.range = 0;
++    if (ReadAt(projectile, 0xC8, r.flags)) r.valid |= 2;
++    if (ReadAt(projectile, 0x90, r.impacted)) r.valid |= 4;
++    return r;
++}
++void LogRange(const Shot& shot, const Snapshot& state, const RangeObservation& r, const char* phase) noexcept
++{
++    ++gRangeRows;
++    if (r.valid != 7) ++gRangeReadFailures;
++    const bool rangeKnown = (r.valid & 1) != 0;
++    const bool startKnown = (shot.launchRange.valid & 1) != 0;
++    const bool ratioKnown = rangeKnown && state.range > 0;
++    const double remaining = rangeKnown ? static_cast<double>(r.range) - state.distance : 0;
++    // First 32 matched lifetimes only, at create/first impact/destroy (<=96
++    // attempts/load). No per-frame rows and no added console message.
++    if (!nvo::log::Write("FLIGHT_RANGE session=%u lifetime=%llu phase=%s projectile=%08X source=%08X weapon=%08X ammo=%08X base=%08X valid_mask=%u base_range=%.9g instance_range=%.9g launch_valid_mask=%u launch_range=%.9g instance_to_base=%.9g ratio_known=%u range_changed=%u life_s=%.9g travel_units=%.9g range_minus_travel=%.9g range_reached=%u flags=%08X launch_flags=%08X impacted=%u impact_seen=%u cause=unverified observer_writes=0",
++        gSession, shot.serial, phase, state.ref, state.source, state.weapon, gProfiles[shot.profile].ammo.resolved, state.base,
++        r.valid, static_cast<double>(state.range), static_cast<double>(r.range), shot.launchRange.valid,
++        static_cast<double>(shot.launchRange.range), ratioKnown ? static_cast<double>(r.range) / state.range : 0,
++        ratioKnown ? 1u : 0u, rangeKnown && startKnown && r.range != shot.launchRange.range ? 1u : 0u,
++        static_cast<double>(state.time), static_cast<double>(state.distance), remaining,
++        rangeKnown && r.range > 0 && state.distance >= r.range ? 1u : 0u,
++        r.flags, shot.launchRange.flags, static_cast<unsigned>(r.impacted), shot.impacted ? 1u : 0u)) ++gRangeLogFailures;
++}
+ void Skip(const char* why, U32 weapon, U32 ammo, U32 base) noexcept
+ {
+     ++gSkipped;
+@@ -375,6 +410,7 @@
+     gActive = false; gSession = session;
+     gProfileCount = gModCount = gSeen = gMatched = gSkipped = gReadFailures = gMismatch = 0;
+     gCreateRows = gImpactRows = gDestroyRows = gSkipRows = 0;
++    gRangeRows = gRangeReadFailures = gRangeLogFailures = 0;
+     gSelected=gSelectionSkipped=gSelectionSkipRows=gSelectionOtherThread=0;
+     gSelectorReady=false; gCaptureThread=GetCurrentThreadId();
+     for (auto& p : gProfiles) p = {};
+@@ -496,6 +532,8 @@
+         for (const auto& s : gShots) if (s.serial) ++open;
+         nvo::log::Write("FLIGHT_PREVIEW_SUMMARY session=%u reason=%s seen=%u matched=%u skipped=%u read_failures=%u identity_mismatches=%u create_rows=%u impact_rows=%u destroy_rows=%u open_samples=%u preview_writes=0 damage_writes=0",
+             gSession, reason, gSeen, gMatched, gSkipped, gReadFailures, gMismatch, gCreateRows, gImpactRows, gDestroyRows, open);
++        nvo::log::Write("FLIGHT_RANGE_SUMMARY session=%u reason=%s observation_rows=%u optional_read_failures=%u log_write_failures=%u max_lifetimes=%u max_rows_per_lifetime=3 range_offset=00D4 sound_range_014C_excluded=1 observer_writes=0",
++            gSession, reason, gRangeRows, gRangeReadFailures, gRangeLogFailures, gMaxShots);
+     }
+     gActive = false;
+     for (auto& s : gShots) s = {};
+@@ -536,6 +574,8 @@
+         gSession, lifetime, p.name, state.ref, source, weapon, ammo, state.base, static_cast<unsigned>(state.flags), state.flags & 1 ? 1u : 0u,
+         static_cast<double>(state.gravity), static_cast<double>(state.range), static_cast<double>(state.speed), static_cast<double>(state.mult),
+         settingSpeed, settingSpeed / gUnitsPerMetre, p.muzzle, static_cast<double>(state.time), static_cast<double>(state.distance));
++    slot->launchRange = ReadRange(projectile);
++    LogRange(*slot, state, slot->launchRange, "create");
+ }
+ void nvo::flight::EndSample(void* projectile, unsigned long long lifetime, bool destroyed) noexcept
+ {
+@@ -561,6 +601,8 @@
+         nvo::log::Write("FLIGHT_TRAVEL session=%u lifetime=%llu profile=%s phase=%s life_delta_s=%.6g travel_delta_units=%.6g hitscan=%u mean_speed_valid=%u mean_travel_units_per_s=%.6g mean_travel_mps_assuming_donor_scale=%.6g source=engine_counters not_muzzle_measurement=1 preview_writes=0",
+             gSession, lifetime, gProfiles[shot->profile].name, destroyed ? "destroy" : "impact", dt, ds, state.flags & 1 ? 1u : 0u,
+             valid ? 1u : 0u, mean, valid ? mean / gUnitsPerMetre : -1);
++        const auto range = ReadRange(projectile);
++        LogRange(*shot, state, range, destroyed ? "destroy" : "impact");
+         if (destroyed) ++gDestroyRows; else ++gImpactRows;
+     }
+     if (destroyed) *shot = {}; else shot->impacted = true;

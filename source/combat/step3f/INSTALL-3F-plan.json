@@ -1,0 +1,76 @@
+{
+  "workspace": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO",
+  "game_root": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas",
+  "packet": "3F",
+  "version": 311,
+  "created": "2026-09-15",
+  "files": [
+    {
+      "path": "Data/NVOFlightPilot.esp",
+      "action": "install",
+      "sha256": "39802a9f7c702f3fc1d74b2703ea019c4a6f835945a4add13d8d5cf18d276249",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3F-Update\\Data\\NVOFlightPilot.esp",
+      "source_sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPreview.ini",
+      "action": "install",
+      "sha256": "9e344ee367774454e16e5cc37a9ffd2487de1f3fbf7f83bdeb6a0aec11d5b4d3",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3F-Update\\Data\\NVSE\\Plugins\\NVOFlightPreview.ini",
+      "source_sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "NVOFlightKit3F.txt",
+      "action": "install",
+      "sha256": null,
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3F-Update\\NVOFlightKit3F.txt",
+      "source_sha256": "387e095bb0a2a706a267378d584fb2e1fd7fbd1980e3c0c205ecd6f3ffa800f2",
+      "log_may_change_until_game_exits": false
+    }
+  ],
+  "protected_assets": [
+    "Data/NVO.esm",
+    "Data/NVO.bsa",
+    "Data/NVO.override",
+    "Data/Config/ALTStartConfig.ini",
+    "NVOFlightPilot.txt",
+    "NVOFlightKit.txt",
+    "NVOFlightKit3E.txt",
+    "Data/RD.esm"
+  ],
+  "preserve_log_copy": [
+    "NVOCombatCore.log",
+    "nvse.log",
+    "jip_ln_nvse.log"
+  ],
+  "empty_directories": [],
+  "dependency_preconditions": [
+    {
+      "path": "Data/NVSE/Plugins/itr-nvse.dll",
+      "sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c"
+    },
+    {
+      "path": "Data/NVSE/Plugins/jip_nvse.dll",
+      "sha256": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4"
+    },
+    {
+      "path": "Data/NVSE/Plugins/ShowOffNVSE.dll",
+      "sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "f91a5e6e363443a9a0ce0be6803cdb05b758122cb9e0486ad4805b5ebfb99255"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "fe6156cb49d988022317c4b117f4ae3d6b5034959c3a98473a65da249968560e"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    }
+  ],
+  "activation_preservation": "Installer reads and verifies the two fixed activation paths without writing them."
+}

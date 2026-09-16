@@ -1,0 +1,6 @@
+player.additem 0000434F 1
+player.additem 0008F216 1
+player.additem 0008F215 1
+player.additem 00004241 100
+player.additem 0008ED02 100
+player.additem 0002937E 100

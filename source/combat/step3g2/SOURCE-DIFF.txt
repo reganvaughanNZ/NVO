@@ -1,0 +1,215 @@
+--- native317/CMakeLists.txt
++++ native317/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(NVOCombatCore VERSION 0.3.16 LANGUAGES CXX)
++project(NVOCombatCore VERSION 0.3.17 LANGUAGES CXX)
+ 
+ if(NOT WIN32 OR NOT MSVC)
+     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")
+--- native317/include/FlightPhysics.hpp
++++ native317/include/FlightPhysics.hpp
+@@ -11,6 +11,17 @@
+     std::uint32_t weapon, std::uint32_t ammo, std::uint32_t base, unsigned profile,
+     unsigned dragModel, double ballisticCoefficient) noexcept;
+ void Event(void* projectile, unsigned long long serial, bool destroyed) noexcept;
++// Diagnostic input copied at the existing current-hit observer. No pointers
++// retained and no candidate or body region is exposed as damage authority.
++struct HitQuery {
++    unsigned session{}, context{};
++    unsigned long long lifetime{};
++    std::uint32_t projectile{}, source{}, target{}, weapon{}, ammo{};
++    int region{-1};
++    std::uint32_t flags{};
++    float position[3]{};
++};
++void ObserveHit(void* projectile,const HitQuery& query) noexcept;
+ // Normalizes only fully contained, byte-verified hooks owned by this module.
+ // Used by both physics and timing fingerprints; foreign changes are preserved/rejected.
+ bool NormalizeOwnedHooks(std::uintptr_t address, unsigned char* bytes, unsigned size) noexcept;
+--- native317/src/FlightImpact.inl
++++ native317/src/FlightImpact.inl
+@@ -15,6 +15,9 @@
+     U32 ref{}, source{}, weapon{}, ammo{}, base{};
+     unsigned step{}, dragModel{};
+     bool collisionCaptured{}, callbackReported{}, wrote{}, baselineVerified{};
++    bool modelCandidate{};
++    double modelTime{},modelSpeed{};
++    const char* modelStatus{"no_collision_sample"};
+     Vec start{}, expected{}, before{}, full{};
+     double dt{}, bc{}, tolerance{};
+     ImpactSample collision{};
+@@ -27,6 +30,7 @@
+ unsigned gImpactObserved{}, gImpactCandidates{}, gImpactUnavailable{}, gImpactReadFailures{};
+ unsigned gImpactCallbacks{}, gImpactCorrelated{}, gImpactUnpaired{}, gImpactLogFailures{};
+ unsigned gImpactDuplicateCollisions{}, gImpactDuplicateCallbacks{}, gImpactDestroyWithoutCallback{};
++void ResetImpactHits() noexcept;
+ 
+ bool ImpactVector(const void* p, unsigned offset, Vec& value) noexcept
+ {
+@@ -64,6 +68,7 @@
+ }
+ void ImpactReset() noexcept
+ {
++    ResetImpactHits();
+     for (auto& r:gImpactRecords) r={};
+     gImpactAdmitted=gImpactOmitted=gImpactBaselineContacts=0;
+     gImpactObserved=gImpactCandidates=gImpactUnavailable=gImpactReadFailures=0;
+@@ -102,6 +107,8 @@
+     if (s.valid!=31) ++gImpactReadFailures;
+     if (!r.wrote || !r.baselineVerified) ++gImpactBaselineContacts;
+     const auto m=EvaluateImpact(r,t);
++    r.modelCandidate=m.estimate; r.modelStatus=m.status;
++    r.modelTime=m.estimate?m.estimateTime:0; r.modelSpeed=m.estimate?m.estimateSpeed:0;
+     if (m.estimate) ++gImpactCandidates; else ++gImpactUnavailable;
+     if (!nvo::log::Write("IMPACT_STEP session=%u lifetime=%llu step=%u projectile=%08X source=%08X weapon=%08X ammo=%08X base=%08X target=%08X region=%d material=%u valid_mask=%u more_contacts=%u impacted=%u applied=%u baseline_verified=%u dt_s=%.9g speed_before_mps=%.9g proposed_full_step_mps=%.9g life_s=%.9g travel_units=%.9g observer_writes=0",
+         gSession,r.serial,r.step,r.ref,r.source,r.weapon,r.ammo,r.base,s.target,s.region,s.material,s.valid,s.more?1u:0u,
+@@ -134,7 +141,11 @@
+     ++gImpactCallbacks;
+     if (!r->collisionCaptured) {
+         ++gImpactUnpaired;
+-        if (!nvo::log::Write("IMPACT_CALLBACK session=%u lifetime=%llu status=no_collision_sample target=unknown contact_time_measured=0 speed_authority=0 observer_writes=0",gSession,t.serial)) ++gImpactLogFailures;
++        const auto early=ReadImpact(t);
++        if (early.valid!=15) ++gImpactReadFailures;
++        const bool immediate=early.valid==15 && !early.more && !t.movementEntries && !t.accountingEntries;
++        if (!nvo::log::Write("IMPACT_CALLBACK session=%u lifetime=%llu status=%s valid_mask=%u target=%08X region=%d movement_entries=%u accounting_entries=%u contact_time_measured=0 speed_authority=0 observer_writes=0",
++            gSession,t.serial,immediate?"pre_movement_contact":"no_collision_sample",early.valid,early.target,early.region,t.movementEntries,t.accountingEntries)) ++gImpactLogFailures;
+         return;
+     }
+     const auto s=ReadImpact(t);
+@@ -148,12 +159,15 @@
+         s.point.x,s.point.y,s.point.z,s.position.x,s.position.y,s.position.z,static_cast<double>(s.life),static_cast<double>(s.distance),
+         contactGap,static_cast<double>(s.life)-r->collision.life)) ++gImpactLogFailures;
+ }
++#include "FlightImpactJoin.inl"
++
+ void ImpactFinish(const char* reason) noexcept
+ {
++    SummarizeImpactHits(reason);
+     nvo::log::Write("IMPACT_SUMMARY session=%u reason=%s collision_samples=%u model_candidates=%u unavailable_candidates=%u optional_read_failures=%u impact_callbacks=%u correlated_callbacks=%u unpaired_callbacks=%u duplicate_collisions=%u duplicate_callbacks=%u destroy_without_callback=%u log_write_failures=%u max_lifetimes=%u speed_authority=0 damage_replacement=0 observer_writes=0",
+         gSession,reason,gImpactObserved,gImpactCandidates,gImpactUnavailable,gImpactReadFailures,gImpactCallbacks,gImpactCorrelated,gImpactUnpaired,
+         gImpactDuplicateCollisions,gImpactDuplicateCallbacks,gImpactDestroyWithoutCallback,gImpactLogFailures,kImpactLives);
+-    nvo::log::Write("IMPACT_COVERAGE_SUMMARY session=%u reason=%s admitted_lifetimes=%u omitted_lifetimes=%u baseline_contacts=%u max_lifetimes=%u max_extra_detail_rows=224 speed_authority=0 observer_writes=0",
++    nvo::log::Write("IMPACT_COVERAGE_SUMMARY session=%u reason=%s admitted_lifetimes=%u omitted_lifetimes=%u baseline_contacts=%u max_lifetimes=%u max_extra_detail_rows=416 speed_authority=0 observer_writes=0",
+         gSession,reason,gImpactAdmitted,gImpactOmitted,gImpactBaselineContacts,kImpactLives);
+     ImpactReset();
+ }
+--- native317/src/FlightPhysics.cpp
++++ native317/src/FlightPhysics.cpp
+@@ -1076,3 +1076,9 @@
+         else if (!t->stopped) { Summary(*t,"impact"); t->stopped=true; }
+     }
+ }
++void nvo::physics::ObserveHit(void* p,const HitQuery& query) noexcept
++{
++    const ErrorGuard error; const Lock lock;
++    if (!gActive.load() || query.session!=gSession || !query.lifetime) return;
++    ImpactHit(Find(p,query.lifetime),query);
++}
+--- native317/src/NativeObserver.cpp
++++ native317/src/NativeObserver.cpp
+@@ -1,6 +1,7 @@
+ #include "NativeObserver.hpp"
+ #include "NativeLog.hpp"
+ #include "FlightPreview.hpp"
++#include "FlightPhysics.hpp"
+ #include <Windows.h>
+ #include <cstdint>
+ #include <cstring>
+@@ -313,6 +314,12 @@
+             data.region, static_cast<double>(data.health), static_cast<double>(data.base), static_cast<double>(data.fatigue),
+             static_cast<double>(data.limb), static_cast<double>(data.armor), static_cast<double>(data.weaponDamage),
+             data.flags, data.flags & 0x2000 ? 1u : 0u, data.flags & 4 ? 1u : 0u, callerRva);
++        if (life) {
++            const nvo::physics::HitQuery query{gSession,gContexts,life->serial,
++                carrier.id,source.id,target.id,weapon.id,ammo,data.region,data.flags,
++                {data.position[0],data.position[1],data.position[2]}};
++            nvo::physics::ObserveHit(data.carrier,query);
++        }
+     }
+     if (gContexts == kMaxContexts) {
+         nvo::log::Write("CURRENT_HIT_LIMIT session=%u maximum=%u reload_to_capture_again=1", gSession, kMaxContexts);
+--- native317/src/Plugin.cpp
++++ native317/src/Plugin.cpp
+@@ -7,7 +7,7 @@
+ 
+ namespace {
+ constexpr char kPluginName[] = "NVOCombatCore";
+-constexpr std::uint32_t kPluginVersion = 316; // 0.3.16, packet 3G1 impact boundary diagnostics
++constexpr std::uint32_t kPluginVersion = 317; // 0.3.17, packet 3G2 paired hit diagnostics
+ constexpr bool kHitHooksImplemented = false;
+ constexpr bool kDamageReplacementEnabled = false;
+ bool gLoaded = false;
+@@ -111,7 +111,7 @@
+         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
+         return false;
+     }
+-    nvo::log::Write("NVOCombatCore 0.3.16 | phase=3G1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | hit_hooks=0 | damage_replacement=0");
++    nvo::log::Write("NVOCombatCore 0.3.17 | phase=3G2 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | hit_hooks=0 | damage_replacement=0");
+     nvo::log::Write("QUERY runtime=0x%08X xnvse=0x%08X editor=%u",
+         host->runtimeVersion, host->nvseVersion, host->isEditor);
+     return true;
+
+NEW FILE: FlightImpactJoin.inl
+// Existing observer -> physics -> logger lock order. Only copied hit scalars
+// and guarded live projectile reads; no engine callback, damage or Track write.
+constexpr unsigned kImpactHitLimit=64;
+unsigned gImpactHitSeen{},gImpactHitOmitted{},gImpactHitCandidates{},gImpactHitUnavailable{};
+unsigned gImpactHitRegionDifferences{},gImpactHitImmediate{},gImpactHitReads{},gImpactHitLogFailures{};
+void ResetImpactHits() noexcept
+{
+    gImpactHitSeen=gImpactHitOmitted=gImpactHitCandidates=gImpactHitUnavailable=0;
+    gImpactHitRegionDifferences=gImpactHitImmediate=gImpactHitReads=gImpactHitLogFailures=0;
+}
+void ImpactHit(const Track* t,const nvo::physics::HitQuery& q) noexcept
+{
+    if (gImpactHitSeen==kImpactHitLimit) { ++gImpactHitOmitted; return; }
+    ++gImpactHitSeen;
+    const auto* r=t?ImpactFind(t->serial):nullptr;
+    ImpactSample s{};
+    const char* status="untracked_profile";
+    bool paired=false,candidate=false;
+    const bool identity=t && t->serial==q.lifetime && t->ref==q.projectile && t->source==q.source
+        && t->weapon==q.weapon && q.ammo && t->ammo==q.ammo;
+    if (t && !identity) status="identity_mismatch";
+    else if (identity && !r) status="impact_capture_limit";
+    else if (identity) {
+        s=ReadImpact(*t);
+        if (s.valid!=15) { ++gImpactHitReads; status="contact_read_unavailable"; }
+        else if (s.more) status="multiple_contacts";
+        else if (s.target!=q.target) status="contact_target_differs";
+        else if (t->stopped || r->callbackReported) status="after_impact_callback";
+        else if (!r->collisionCaptured) {
+            const bool immediate=!t->movementEntries && !t->accountingEntries;
+            status=immediate?"pre_movement_contact":"no_collision_sample";
+            if (immediate) ++gImpactHitImmediate;
+        } else {
+            const bool stable=r->collision.valid==31 && !r->collision.more
+                && r->collision.target==s.target && r->collision.region==s.region
+                && Length(Add(s.point,Mul(r->collision.point,-1)))<=r->tolerance;
+            paired=stable;
+            candidate=paired && r->modelCandidate;
+            status=!stable?"collision_snapshot_changed":candidate?"paired_model_candidate":"paired_model_unavailable";
+        }
+    }
+    const bool contactValid=(s.valid&8)!=0;
+    const bool regionsKnown=identity && contactValid && !s.more && s.target==q.target
+        && s.region>=0 && q.region>=0;
+    const bool differs=regionsKnown && s.region!=q.region;
+    if (differs) ++gImpactHitRegionDifferences;
+    if (candidate) ++gImpactHitCandidates; else ++gImpactHitUnavailable;
+    bool hitPositionValid=true;
+    for (float value:q.position) if (!std::isfinite(value) || std::abs(value)>1e7f) hitPositionValid=false;
+    const Vec hitPosition=hitPositionValid?Vec{q.position[0],q.position[1],q.position[2]}:Vec{};
+    if (!nvo::log::Write("IMPACT_HIT session=%u context=%u lifetime=%llu phase=copy_input status=%s projectile=%08X source=%08X target=%08X weapon=%08X ammo=%08X hit_region=%d contact_region=%d contact_valid=%u regions_known=%u regions_differ=%u hit_flags=%08X observer_writes=0",
+        gSession,q.context,q.lifetime,status,q.projectile,q.source,q.target,q.weapon,q.ammo,q.region,s.region,contactValid?1u:0u,regionsKnown?1u:0u,differs?1u:0u,q.flags)) ++gImpactHitLogFailures;
+    if (!nvo::log::Write("IMPACT_HIT_MODEL session=%u context=%u lifetime=%llu collision_paired=%u candidate_available=%u model_status=%s candidate_speed_mps=%.9g candidate_time_s=%.9g callback_seen=%u contact_time_measured=0 speed_authority=0 region_authority=0 damage_replacement=0 observer_writes=0",
+        gSession,q.context,q.lifetime,paired?1u:0u,candidate?1u:0u,r?r->modelStatus:"unavailable",candidate?r->modelSpeed:0,candidate?r->modelTime:0,r && r->callbackReported?1u:0u)) ++gImpactHitLogFailures;
+    if (!nvo::log::Write("IMPACT_HIT_POSITION session=%u context=%u lifetime=%llu hit_position_valid=%u hit=(%.9g,%.9g,%.9g) contact_valid=%u contact=(%.9g,%.9g,%.9g) observer_writes=0",
+        gSession,q.context,q.lifetime,hitPositionValid?1u:0u,hitPosition.x,hitPosition.y,hitPosition.z,contactValid?1u:0u,s.point.x,s.point.y,s.point.z)) ++gImpactHitLogFailures;
+}
+void SummarizeImpactHits(const char* reason) noexcept
+{
+    nvo::log::Write("IMPACT_HIT_SUMMARY session=%u reason=%s queries=%u candidates=%u unavailable=%u region_differences=%u pre_movement_contacts=%u optional_read_failures=%u omitted_queries=%u log_write_failures=%u max_queries=%u speed_authority=0 region_authority=0 damage_replacement=0 observer_writes=0",
+        gSession,reason,gImpactHitSeen,gImpactHitCandidates,gImpactHitUnavailable,gImpactHitRegionDifferences,gImpactHitImmediate,gImpactHitReads,gImpactHitOmitted,gImpactHitLogFailures,kImpactHitLimit);
+}

@@ -1,0 +1,10 @@
+scn	ALTRichKidHit
+
+ref rTarget
+ref rAttacker
+float iCaps
+
+
+begin Function {rTarget, rAttacker}
+    return
+end

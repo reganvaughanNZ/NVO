@@ -1,0 +1,129 @@
+OnPreDamageHandler::Hook_DamageActorValue:
+  10034C1B: 55                 push        ebp
+  10034C1C: 8B EC              mov         ebp,esp
+  10034C1E: 51                 push        ecx
+  10034C1F: 56                 push        esi
+  10034C20: 57                 push        edi
+  10034C21: 8B F9              mov         edi,ecx
+  10034C23: 8B 17              mov         edx,dword ptr [edi]
+  10034C25: 81 FA 6C 6A 08 01  cmp         edx,1086A6Ch
+  10034C2B: 75 08              jne         10034C35
+  10034C2D: 8B 35 54 C7 07 10  mov         esi,dword ptr ds:[1007C754h]
+  10034C33: EB 47              jmp         10034C7C
+  10034C35: 81 FA AC 70 08 01  cmp         edx,10870ACh
+  10034C3B: 75 08              jne         10034C45
+  10034C3D: 8B 35 48 C7 07 10  mov         esi,dword ptr ds:[1007C748h]
+  10034C43: EB 37              jmp         10034C7C
+  10034C45: 81 FA 3C AA 08 01  cmp         edx,108AA3Ch
+  10034C4B: 74 29              je          10034C76
+  10034C4D: 3B 3D 3C EA 1D 01  cmp         edi,dword ptr ds:[11DEA3Ch]
+  10034C53: 74 21              je          10034C76
+  10034C55: 33 C9              xor         ecx,ecx
+  10034C57: BE 34 DB 07 10     mov         esi,1007DB34h
+  10034C5C: 41                 inc         ecx
+  10034C5D: 33 C0              xor         eax,eax
+  10034C5F: F0 0F B1 0E        lock cmpxchg dword ptr [esi],ecx
+  10034C63: 85 C0              test        eax,eax
+  10034C65: 75 C6              jne         10034C2D
+  10034C67: 52                 push        edx
+  10034C68: 68 58 A3 04 10     push        offset ??_C@_0EB@CLNDNLJK@OnPreHealthDamage?3?5unknown?5vtab@
+  10034C6D: E8 C5 DA FC FF     call        ?Log@@YAXPBDZZ
+  10034C72: 59                 pop         ecx
+  10034C73: 59                 pop         ecx
+  10034C74: EB B7              jmp         10034C2D
+  10034C76: 8B 35 38 C7 07 10  mov         esi,dword ptr ds:[1007C738h]
+  10034C7C: FF 15 44 E0 03 10  call        dword ptr [__imp__GetCurrentThreadId@0]
+  10034C82: 3B 05 4C C7 07 10  cmp         eax,dword ptr ds:[1007C74Ch]
+  10034C88: 74 1F              je          10034CA9
+  10034C8A: 85 F6              test        esi,esi
+  10034C8C: 74 15              je          10034CA3
+  10034C8E: F3 0F 10 4D 0C     movss       xmm1,dword ptr [ebp+0Ch]
+  10034C93: FF 75 10           push        dword ptr [ebp+10h]
+  10034C96: 51                 push        ecx
+  10034C97: F3 0F 11 0C 24     movss       dword ptr [esp],xmm1
+  10034C9C: 8B CF              mov         ecx,edi
+  10034C9E: FF 75 08           push        dword ptr [ebp+8]
+  10034CA1: FF D6              call        esi
+  10034CA3: 5F                 pop         edi
+  10034CA4: 5E                 pop         esi
+  10034CA5: C9                 leave
+  10034CA6: C2 0C 00           ret         0Ch
+  10034CA9: 83 7D 08 10        cmp         dword ptr [ebp+8],10h
+  10034CAD: F3 0F 10 4D 0C     movss       xmm1,dword ptr [ebp+0Ch]
+  10034CB2: 0F 85 FB 00 00 00  jne         10034DB3
+  10034CB8: 0F 57 C0           xorps       xmm0,xmm0
+  10034CBB: 0F 2F C8           comiss      xmm1,xmm0
+  10034CBE: 0F 83 EF 00 00 00  jae         10034DB3
+  10034CC4: 83 3D A0 2B 05 10  cmp         dword ptr ds:[10052BA0h],0
+            00
+  10034CCB: 0F 84 E2 00 00 00  je          10034DB3
+  10034CD1: A1 50 C7 07 10     mov         eax,dword ptr ds:[1007C750h]
+  10034CD6: 85 C0              test        eax,eax
+  10034CD8: 0F 85 D5 00 00 00  jne         10034DB3
+  10034CDE: 40                 inc         eax
+  10034CDF: F3 0F 11 4D 08     movss       dword ptr [ebp+8],xmm1
+  10034CE4: A3 50 C7 07 10     mov         dword ptr ds:[1007C750h],eax
+  10034CE9: 8D 45 FC           lea         eax,[ebp-4]
+  10034CEC: 50                 push        eax
+  10034CED: FF 75 08           push        dword ptr [ebp+8]
+  10034CF0: C7 45 FC 00 00 80  mov         dword ptr [ebp-4],3F800000h
+            3F
+  10034CF7: FF 75 10           push        dword ptr [ebp+10h]
+  10034CFA: 57                 push        edi
+  10034CFB: 57                 push        edi
+  10034CFC: 50                 push        eax
+  10034CFD: A1 F0 A6 06 10     mov         eax,dword ptr [?g_eventManagerInterface@@3PAUNVSEEventManagerInterface@@A]
+  10034D02: 68 77 4A 03 10     push        10034A77h
+  10034D07: 68 18 1B 04 10     push        10041B18h
+  10034D0C: FF 50 08           call        dword ptr [eax+8]
+  10034D0F: F3 0F 10 45 FC     movss       xmm0,dword ptr [ebp-4]
+  10034D14: 83 C4 20           add         esp,20h
+  10034D17: 0F 2E 05 FC B9 04  ucomiss     xmm0,dword ptr [__real@3f800000]
+            10
+  10034D1E: F3 0F 10 4D 0C     movss       xmm1,dword ptr [ebp+0Ch]
+  10034D23: 0F 28 D1           movaps      xmm2,xmm1
+  10034D26: F3 0F 11 4D 0C     movss       dword ptr [ebp+0Ch],xmm1
+  10034D2B: 9F                 lahf
+  10034D2C: F6 C4 44           test        ah,44h
+  10034D2F: 7B 1C              jnp         10034D4D
+  10034D31: 0F 57 D2           xorps       xmm2,xmm2
+  10034D34: 0F 2F D0           comiss      xmm2,xmm0
+  10034D37: 76 08              jbe         10034D41
+  10034D39: 0F 57 C0           xorps       xmm0,xmm0
+  10034D3C: F3 0F 11 45 FC     movss       dword ptr [ebp-4],xmm0
+  10034D41: 0F 28 D0           movaps      xmm2,xmm0
+  10034D44: F3 0F 59 D1        mulss       xmm2,xmm1
+  10034D48: F3 0F 11 55 0C     movss       dword ptr [ebp+0Ch],xmm2
+  10034D4D: 0F 2E D1           ucomiss     xmm2,xmm1
+  10034D50: 9F                 lahf
+  10034D51: F6 C4 44           test        ah,44h
+  10034D54: 7B 3F              jnp         10034D95
+  10034D56: 83 3D 44 C7 07 10  cmp         dword ptr ds:[1007C744h],5
+            05
+  10034D5D: 73 36              jae         10034D95
+  10034D5F: 0F 5A C0           cvtps2pd    xmm0,xmm0
+  10034D62: 57                 push        edi
+  10034D63: 83 EC 18           sub         esp,18h
+  10034D66: F2 0F 11 44 24 10  movsd       mmword ptr [esp+10h],xmm0
+  10034D6C: 0F 5A C2           cvtps2pd    xmm0,xmm2
+  10034D6F: F2 0F 11 44 24 08  movsd       mmword ptr [esp+8],xmm0
+  10034D75: 0F 5A C1           cvtps2pd    xmm0,xmm1
+  10034D78: F2 0F 11 04 24     movsd       mmword ptr [esp],xmm0
+  10034D7D: 68 20 A4 04 10     push        offset ??_C@_0DH@GPJFHCKK@OnPreHealthDamage?3?5delta?5?$CF?43f?5?9@
+  10034D82: E8 B0 D9 FC FF     call        ?Log@@YAXPBDZZ
+  10034D87: F3 0F 10 55 0C     movss       xmm2,dword ptr [ebp+0Ch]
+  10034D8C: 83 C4 20           add         esp,20h
+  10034D8F: FF 05 44 C7 07 10  inc         dword ptr ds:[1007C744h]
+  10034D95: 85 F6              test        esi,esi
+  10034D97: 74 0F              je          10034DA8
+  10034D99: FF 75 10           push        dword ptr [ebp+10h]
+  10034D9C: 51                 push        ecx
+  10034D9D: F3 0F 11 14 24     movss       dword ptr [esp],xmm2
+  10034DA2: 8B CF              mov         ecx,edi
+  10034DA4: 6A 10              push        10h
+  10034DA6: FF D6              call        esi
+  10034DA8: FF 0D 50 C7 07 10  dec         dword ptr ds:[1007C750h]
+  10034DAE: E9 F0 FE FF FF     jmp         10034CA3
+  10034DB3: 85 F6              test        esi,esi
+  10034DB5: 0F 84 E8 FE FF FF  je          10034CA3
+  10034DBB: E9 D3 FE FF FF     jmp         10034C93

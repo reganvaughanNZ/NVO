@@ -1,0 +1,26 @@
+{
+  "status": "installed",
+  "packet": "3F",
+  "version": 311,
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3F-20260915-185053-e97206fc",
+  "closed_processes": [],
+  "archived_removed": 0,
+  "replaced": 2,
+  "installed": [
+    {
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+      "path": "Data/NVOFlightPilot.esp"
+    },
+    {
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+      "path": "Data/NVSE/Plugins/NVOFlightPreview.ini"
+    },
+    {
+      "sha256": "387e095bb0a2a706a267378d584fb2e1fd7fbd1980e3c0c205ecd6f3ffa800f2",
+      "path": "NVOFlightKit3F.txt"
+    }
+  ],
+  "protected_files_verified": 52,
+  "game_relaunched": false,
+  "gameplay_tested": false
+}

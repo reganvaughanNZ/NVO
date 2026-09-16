@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NVO 3N1 — Baron check</title>
+<style>:root{color-scheme:dark}body{max-width:800px;margin:42px auto;padding:0 24px;background:#111b18;color:#e2e9dd;font:18px/1.65 system-ui}h1{font-size:32px}li{margin:15px 0}button{font:600 18px system-ui;padding:14px 22px;background:#c3dfaa;color:#122115;border:0;border-radius:6px;cursor:pointer}textarea{display:block;width:100%;box-sizing:border-box;height:54px;margin-top:16px;background:#0b1410;color:#e2e9dd;font:18px monospace;padding:12px}a{color:#c3dfaa}.note{border-left:3px solid #b7d29f;padding:12px 20px;background:#1a2a21}#status{min-height:1.7em}</style>
+<h1>Packet 3N1: finish the Baron check</h1>
+<p><b>Purpose:</b> confirm the retired ability cannot add damage and stays unregistered after reloading. No GECK work or shooting is needed.</p>
+<div class="note">Use a disposable new character. Keep god mode and immortal mode off. Native combat damage replacement remains disabled.</div>
+<ol><li>Launch New Vegas through your usual NVSE setup. Choose <b>New Game → Powerful → Brahmin Baron</b>. Use Quick Setup / level 1 and finish character creation. Keep the starting caps.</li>
+<li>Stand somewhere safe and wait <b>five seconds in gameplay</b>. Open the console and run the command below. Expect <b>“NVO Baron check: expected result recorded”</b>.</li>
+<li>Close the console. Make a separate manual test save, <b>reload it once</b>, wait five seconds in gameplay, then run the same command again.</li>
+<li>Quit the game and reply <b>Finished</b>. I will read the logs directly.</li></ol>
+<button id="copy">Copy test command</button><textarea id="command" readonly aria-label="Test console command">bat NVOBaronCheck</textarea><p id="status" role="status"></p>
+<p>If you see an error or <b>BLOCKED</b>, stop and report it. Do not use main-menu <code>coc</code> for this check: it skips the background setup we need to verify.</p>
+<p>Results: <code>Data/NVSE/Plugins/NVOBaronCheck.log</code> in your New Vegas folder. The two manual invocations append results; nothing runs automatically in gameplay.</p>
+<p><a href="README.md">Technical notes, limits and removal instructions</a></p>
+<script>document.getElementById('copy').addEventListener('click',async()=>{const t=document.getElementById('command'),s=document.getElementById('status');try{await navigator.clipboard.writeText(t.value);s.textContent='Copied';}catch(e){t.focus();t.select();s.textContent=document.execCommand('copy')?'Copied':'Press Ctrl+C';}});</script></html>

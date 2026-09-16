@@ -1,0 +1,9 @@
+{"lifetime":1,"status":"engine_baseline_contact","candidate":0,"time_s":0,"speed_mps":0,"model_gap":0,"tolerance":0.0725994371}
+{"lifetime":2,"status":"engine_baseline_contact","candidate":0,"time_s":0,"speed_mps":0,"model_gap":0,"tolerance":0.0528937582}
+{"lifetime":3,"status":"model_estimate_only","candidate":1,"time_s":0.00224852068446,"speed_mps":774.164839457,"model_gap":0.063388123377,"tolerance":0.0689800017}
+{"lifetime":4,"status":"model_estimate_only","candidate":1,"time_s":0.00200690899393,"speed_mps":774.300416195,"model_gap":0.0310071749418,"tolerance":0.0529499464}
+{"lifetime":5,"status":"model_estimate_only","candidate":1,"time_s":0.00449448171355,"speed_mps":808.333188298,"model_gap":0.0028859033144,"tolerance":0.0520852329}
+{"lifetime":6,"status":"model_estimate_only","candidate":1,"time_s":0.000802311724895,"speed_mps":774.96508201,"model_gap":0.0483304887756,"tolerance":0.0689933665}
+{"lifetime":7,"status":"model_estimate_only","candidate":1,"time_s":0.000553545502683,"speed_mps":775.108122306,"model_gap":0.0312879862308,"tolerance":0.0529671056}
+{"lifetime":8,"status":"model_estimate_only","candidate":1,"time_s":0.000767974139177,"speed_mps":774.983476459,"model_gap":0.0449779056308,"tolerance":0.0518996904}
+{"negative_guards":7,"later_lifetimes_through":32,"omitted":2,"cache_lifecycle_checks":true,"game_loaded":false}

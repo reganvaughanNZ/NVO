@@ -1,0 +1,33 @@
+{
+  "packet": "4B-stress",
+  "native_version": 326,
+  "game_root": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas",
+  "files": [
+    {
+      "path": "NVOStressKit4B.txt",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-4B-Stress-Check\\NVOStressKit4B.txt",
+      "sha256": "446c0e5b25e83ba7e9fa807cea04f794bc4b56d924098fdb56604d3ab90649ce"
+    },
+    {
+      "path": "NVOStressTarget4B.txt",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-4B-Stress-Check\\NVOStressTarget4B.txt",
+      "sha256": "19fd0f7053e84dc89c55988fc3897b0b3d584398de7b48ac97412b640b530c84"
+    }
+  ],
+  "protected": {
+    "Data/NVSE/Plugins/NVOCombatCore.dll": "3d5ff40c5c8ba418c0764cba55bd8595cfa1444396f4e814552210524094e13a",
+    "Data/NVSE/Plugins/NVOCombatCore.pdb": "9411d09fefe2e59fa50a891081592b81fbc9cc50602bee8951a04e706ac8d2a0",
+    "Data/NVSE/Plugins/ShowOffNVSE.dll": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e",
+    "Data/NVSE/Plugins/jip_nvse.dll": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4",
+    "Data/NVSE/Plugins/itr-nvse.dll": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c",
+    "Data/NVSE/Plugins/NVOFlightPhysics.ini": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac",
+    "Data/NVSE/Plugins/NVOFlightPreview.ini": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+    "Data/NVOFlightPilot.esp": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+    "Data/NVO.esm": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e",
+    "NVOFlightKit3F.txt": "387e095bb0a2a706a267378d584fb2e1fd7fbd1980e3c0c205ecd6f3ffa800f2",
+    "NVOArmourKit4B.txt": "693f9e1309431bcad59cf28db6b127f534f08393ba169ce193fb517895eabb24",
+    "NVOArmourTarget4B.txt": "dbdabb6d8cefcd3282913fb3d4896e385b7e39516cbcebeb1b457458b2411933"
+  },
+  "no_native_changes": true,
+  "damage_replacement": false
+}

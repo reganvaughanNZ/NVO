@@ -1,0 +1,1 @@
+PASS 452 checks; guarded x86 reader only, no game or DLL execution.

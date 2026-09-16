@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "archive": "source\\combat\\step3f3\\captures\\2026-09-15-3F3-3130ae056efd\\NVOCombatCore.log",
+  "sha256": "3130ae056efdf379d4720fb6b2837447fa9d8e600255860107fbe28c2c50ac0c",
+  "bytes": 535838,
+  "lines": 2262,
+  "last_write_local": "2026-09-15T21:23:37.881110+12:00",
+  "user_context": "User finished the test: fired a lot of VATS hits and a few misses at the start; no exact per-shot order supplied."
+}

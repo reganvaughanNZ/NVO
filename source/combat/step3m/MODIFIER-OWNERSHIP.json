@@ -1,0 +1,109 @@
+{
+  "schema": 1,
+  "status": "design_only",
+  "runtime_changes": false,
+  "modifiers": [
+    {
+      "id": "direct_health_limb_wear",
+      "current_owner": "engine",
+      "planned_disposition": "nvo_resolver_and_single_application_adapter",
+      "constraint": "Supported scope only; original path if rejected before writes; no replay after partial NVO application"
+    },
+    {
+      "id": "health_formula_gmsts",
+      "current_owner": "user_NVO_records",
+      "planned_disposition": "retain_user_NVO_records",
+      "constraint": "Maximum-health tuning remains independent of incident damage; no balance changes here"
+    },
+    {
+      "id": "difficulty_health_scaling",
+      "current_owner": "engine_receiver_based_table",
+      "planned_disposition": "proposed_neutral_GMSTs_plus_separate_NVO_presets",
+      "constraint": "Not applied; global neutralization changes unsupported attacks too and needs explicit policy/rollback"
+    },
+    {
+      "id": "vats_player_protection",
+      "current_owner": "existing_engine_or_provider",
+      "planned_disposition": "remove_extra_protection_for_supported_NVO_rules",
+      "constraint": "Exact consumer and full VATS path still need tracing; ten difficulty GMSTs do not settle it"
+    },
+    {
+      "id": "vanilla_DT_DR_and_minimum_damage_floor",
+      "current_owner": "engine_and_existing_perks",
+      "planned_disposition": "replace_for_admitted_components",
+      "constraint": "Do not calculate custom protection on top of an already-armour-reduced value; trace selected boundary"
+    },
+    {
+      "id": "location_multipliers",
+      "current_owner": "engine_body_part_rules",
+      "planned_disposition": "explicit_anatomy_profile",
+      "constraint": "Verified actual hit region only; requested VATS aim is not a substitute"
+    },
+    {
+      "id": "critical_health_and_damaging_effects",
+      "current_owner": "engine_and_perk_effects",
+      "planned_disposition": "classified_NVO_disposition",
+      "constraint": "No penetrating effect through a failed penetration decision; unknown damaging effect rejects replacement"
+    },
+    {
+      "id": "critical_visual_audio_effects",
+      "current_owner": "engine_presentation",
+      "planned_disposition": "retain_when_side_effect_free",
+      "constraint": "A visual callback is not permission for an extra health application"
+    },
+    {
+      "id": "ammo_damage_DT_DR_effects",
+      "current_owner": "engine_ammo_effects",
+      "planned_disposition": "explicit_construction_or_dose_profile_for_admitted_hits",
+      "constraint": "AP/HP/energy charge identities retained; do not apply both native profile and vanilla multiplier"
+    },
+    {
+      "id": "ammo_cost_weapon_wear_reload",
+      "current_owner": "engine",
+      "planned_disposition": "retain_except_explicitly_owned_components",
+      "constraint": "Ammo consumption is not projectile mass; future overcharge effects must not duplicate wear"
+    },
+    {
+      "id": "weapon_condition_proficiency_perks",
+      "current_owner": "engine_and_perk_rules",
+      "planned_disposition": "per_effect_disposition_required",
+      "constraint": "Preserve intended progression once; unresolved modifiers stay unsupported"
+    },
+    {
+      "id": "poison",
+      "current_owner": "engine_payload_or_effect",
+      "planned_disposition": "wound_payload_requires_penetration_other_exposure_separate",
+      "constraint": "Differentiate dart/coating from gas/contact exposure; no generic all-poison penetration rule"
+    },
+    {
+      "id": "blast_and_fragments",
+      "current_owner": "engine",
+      "planned_disposition": "separate_identified_components",
+      "constraint": "Never treat blast as another direct projectile; preserve source and victim application identity"
+    },
+    {
+      "id": "bleeding_and_burn_ticks",
+      "current_owner": "engine_or_donor_if_active",
+      "planned_disposition": "later_attributed_injury_service",
+      "constraint": "One continuing-effect owner; audit actual donor loaders before activation"
+    },
+    {
+      "id": "baron_caps_callback",
+      "current_owner": "ALTRichKidHit_and_two_registration_sites",
+      "planned_disposition": "retire_without_replacement_now",
+      "constraint": "Approved design; compiled callback and saved-session retirement pending; do not port mechanic"
+    },
+    {
+      "id": "flight_gravity_drag",
+      "current_owner": "limited_NVO_bullet_pilot_and_engine_other_families",
+      "planned_disposition": "family_specific_flight_owner",
+      "constraint": "Fix admission-before-substitution; no bullet flight applied to lasers/plasma/flame by type alone"
+    },
+    {
+      "id": "diagnostics",
+      "current_owner": "NVO_observers",
+      "planned_disposition": "observation_only",
+      "constraint": "Logging limits/failure cannot determine damage admission, identity or output"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+ActorValueObserver.cpp|&& (info.Protect&(PAGE_EXECUTE|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY));
+ActorValueObserver.cpp|if(!VirtualProtect(reinterpret_cast<void*>(kClasses[protectedCount].table+0x3AC),4,PAGE_READWRITE,&protection[protectedCount]))break;
+ActorValueObserver.cpp|if(!VirtualProtect(reinterpret_cast<void*>(kClasses[i].table+0x3AC),4,protection[i],&ignored))
+CurrentHit.cpp|constexpr std::uintptr_t kSlots[] = {0x1087FD8, 0x10897C0};
+CurrentHit.cpp|| PAGE_EXECUTE_READWRITE | PAGE_EXECUTE_WRITECOPY));
+CurrentHit.cpp|if (!VirtualProtect(reinterpret_cast<void*>(kSlots[0]), 4, PAGE_READWRITE, &oldProtection[0]))
+CurrentHit.cpp|if (!VirtualProtect(reinterpret_cast<void*>(kSlots[1]), 4, PAGE_READWRITE, &oldProtection[1])) {
+CurrentHit.cpp|VirtualProtect(reinterpret_cast<void*>(kSlots[0]), 4, oldProtection[0], &ignored);
+CurrentHit.cpp|reinterpret_cast<void* volatile*>(kSlots[i]), wrapper, original) == original;
+CurrentHit.cpp|InterlockedCompareExchangePointer(reinterpret_cast<void* volatile*>(kSlots[i]), original, wrapper);
+CurrentHit.cpp|if (!VirtualProtect(reinterpret_cast<void*>(kSlots[i]), 4, oldProtection[i], &ignored))
+FlightPhysics.cpp|constexpr std::uintptr_t kSite = 0x9BF461, kOriginal = 0x9C4E60, kVtable = 0x108FA44;
+FlightPhysics.cpp|if (!VirtualProtect(reinterpret_cast<void*>(p.start),p.span,PAGE_EXECUTE_READWRITE,&p.original)) break;
+FlightPhysics.cpp|if (!VirtualProtect(reinterpret_cast<void*>(p.start),p.span,p.original,&ignored)) restored=false;
+FlightPhysics.cpp|for (const auto& h:gHooks) std::memcpy(reinterpret_cast<void*>(h.site),h.patch,h.length);
+FlightPhysics.cpp|for (const auto& p:pages) if (!FlushInstructionCache(GetCurrentProcess(),reinterpret_cast<void*>(p.start),p.span)) ok=false;
+FlightPhysics.cpp|for (const auto& p:pages) if (!VirtualProtect(reinterpret_cast<void*>(p.start),p.span,p.original,&ignored)) ok=false;
+FlightPhysics.cpp|if (!VirtualProtect(reinterpret_cast<void*>(p.start),p.span,PAGE_EXECUTE_READWRITE,&ignored)) { restored=false; continue; }
+FlightPhysics.cpp|std::memcpy(reinterpret_cast<void*>(h.site),h.original,h.length);
+FlightPhysics.cpp|if (!FlushInstructionCache(GetCurrentProcess(),reinterpret_cast<void*>(p.start),p.span)) restored=false;
+FlightPhysics.cpp|if (!VirtualProtect(reinterpret_cast<void*>(p.start),p.span,p.original,&ignored)) restored=false;
+FlightTiming.cpp|if (!VirtualProtect(reinterpret_cast<void*>(kSlot), 4, PAGE_READWRITE, &old)) return false;
+FlightTiming.cpp|const bool restored = VirtualProtect(reinterpret_cast<void*>(kSlot), 4, old, &ignored) != 0;
+FlightTiming.cpp|VirtualProtect(reinterpret_cast<void*>(kSlot), 4, old, &ignored);
+HitTransaction.cpp|session,f.id,f.parent,gDepth,kSpecs[site].site,s.target.id,s.source.id,s.weapon.id,
+HitTransaction.cpp|caller==kSpecs[site].site+5u?1u:0u,f.tainted?1u:0u)) ++gLogFailures;
+HitTransaction.cpp|&& (info.Protect&(PAGE_EXECUTE|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY));
+HitTransaction.cpp|if (CallTarget(kSpecs[i].site)!=reinterpret_cast<U32>(kEntries[i])) return false;
+HitTransaction.cpp|if (!Executable(reinterpret_cast<void*>(kSpecs[i].site),game)
+HitTransaction.cpp||| !Executable(reinterpret_cast<void*>(kSpecs[i].site+4),game)
+HitTransaction.cpp||| CallTarget(kSpecs[i].site)!=base+kSpecs[i].rva)
+HitTransaction.cpp|gOriginal[i]=reinterpret_cast<void*>(base+kSpecs[i].rva);
+HitTransaction.cpp|if (!VirtualProtect(reinterpret_cast<void*>(kSpecs[protectedCount].site),5,PAGE_EXECUTE_READWRITE,&protection[protectedCount])) break;
+HitTransaction.cpp|if (CallTarget(kSpecs[i].site)!=reinterpret_cast<U32>(gOriginal[i])) ok=false;
+HitTransaction.cpp|const U32 rel=reinterpret_cast<U32>(kEntries[changed])-kSpecs[changed].site-5;
+HitTransaction.cpp|std::memcpy(reinterpret_cast<void*>(kSpecs[changed].site+1),&rel,4);
+HitTransaction.cpp|if (!FlushInstructionCache(GetCurrentProcess(),reinterpret_cast<void*>(kSpecs[changed].site),5)) { ++changed; ok=false;break; }
+HitTransaction.cpp|if (CallTarget(kSpecs[i].site)==reinterpret_cast<U32>(kEntries[i])) {
+HitTransaction.cpp|const U32 rel=reinterpret_cast<U32>(gOriginal[i])-kSpecs[i].site-5;
+HitTransaction.cpp|std::memcpy(reinterpret_cast<void*>(kSpecs[i].site+1),&rel,4);
+HitTransaction.cpp|FlushInstructionCache(GetCurrentProcess(),reinterpret_cast<void*>(kSpecs[i].site),5);
+HitTransaction.cpp|if (!VirtualProtect(reinterpret_cast<void*>(kSpecs[i].site),5,protection[i],&ignored))
+HitTransaction.cpp|nvo::log::Write("HIT_TX_PROTECTION_RESTORE_FAILED site=%08X",kSpecs[i].site);
+SpawnBoundary.cpp|return executable ? (info.Protect&(PAGE_EXECUTE|PAGE_EXECUTE_READ|PAGE_EXECUTE_READWRITE|PAGE_EXECUTE_WRITECOPY))!=0
+SpawnBoundary.cpp|: (info.Protect&(PAGE_READWRITE|PAGE_WRITECOPY))!=0;

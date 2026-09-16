@@ -1,0 +1,1733 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c3\runtime-20260915-141533\controller_move-00C70B60.obj
+
+File Type: COFF OBJECT
+
+  00C70B60: 56                 push        esi
+  00C70B61: 8B F1              mov         esi,ecx
+  00C70B63: 8D 8E E0 03 00 00  lea         ecx,[esi+000003E0h]
+  00C70B69: E8 92 8A 03 00     call        00CA9600
+  00C70B6E: 83 F8 02           cmp         eax,2
+  00C70B71: 0F 94 C0           sete        al
+  00C70B74: 80 7C 24 0C 00     cmp         byte ptr [esp+0Ch],0
+  00C70B79: 74 34              je          00C70BAF
+  00C70B7B: 84 C0              test        al,al
+  00C70B7D: 74 30              je          00C70BAF
+  00C70B7F: 8B 44 24 08        mov         eax,dword ptr [esp+8]
+  00C70B83: 8B 0D 6C 42 1F 01  mov         ecx,dword ptr ds:[011F426Ch]
+  00C70B89: 89 48 10           mov         dword ptr [eax+10h],ecx
+  00C70B8C: 8B 15 70 42 1F 01  mov         edx,dword ptr ds:[011F4270h]
+  00C70B92: 89 50 14           mov         dword ptr [eax+14h],edx
+  00C70B95: 8B 0D 74 42 1F 01  mov         ecx,dword ptr ds:[011F4274h]
+  00C70B9B: 89 48 18           mov         dword ptr [eax+18h],ecx
+  00C70B9E: 8B 16              mov         edx,dword ptr [esi]
+  00C70BA0: 50                 push        eax
+  00C70BA1: 8B 82 C8 00 00 00  mov         eax,dword ptr [edx+000000C8h]
+  00C70BA7: 8B CE              mov         ecx,esi
+  00C70BA9: FF D0              call        eax
+  00C70BAB: 5E                 pop         esi
+  00C70BAC: C2 08 00           ret         8
+  00C70BAF: 51                 push        ecx
+  00C70BB0: 8B 4C 24 0C        mov         ecx,dword ptr [esp+0Ch]
+  00C70BB4: D9 01              fld         dword ptr [ecx]
+  00C70BB6: 8B CE              mov         ecx,esi
+  00C70BB8: D9 1C 24           fstp        dword ptr [esp]
+  00C70BBB: E8 80 FD FF FF     call        00C70940
+  00C70BC0: 5E                 pop         esi
+  00C70BC1: C2 08 00           ret         8
+  00C70BC4: CC                 int         3
+  00C70BC5: CC                 int         3
+  00C70BC6: CC                 int         3
+  00C70BC7: CC                 int         3
+  00C70BC8: CC                 int         3
+  00C70BC9: CC                 int         3
+  00C70BCA: CC                 int         3
+  00C70BCB: CC                 int         3
+  00C70BCC: CC                 int         3
+  00C70BCD: CC                 int         3
+  00C70BCE: CC                 int         3
+  00C70BCF: CC                 int         3
+  00C70BD0: 53                 push        ebx
+  00C70BD1: 55                 push        ebp
+  00C70BD2: 56                 push        esi
+  00C70BD3: 57                 push        edi
+  00C70BD4: 8B F9              mov         edi,ecx
+  00C70BD6: 33 ED              xor         ebp,ebp
+  00C70BD8: 39 AF 4C 06 00 00  cmp         dword ptr [edi+0000064Ch],ebp
+  00C70BDE: 75 08              jne         00C70BE8
+  00C70BE0: 39 AF 48 06 00 00  cmp         dword ptr [edi+00000648h],ebp
+  00C70BE6: 74 6C              je          00C70C54
+  00C70BE8: 8B 9F 48 06 00 00  mov         ebx,dword ptr [edi+00000648h]
+  00C70BEE: 3B DD              cmp         ebx,ebp
+  00C70BF0: 74 28              je          00C70C1A
+  00C70BF2: 8B 33              mov         esi,dword ptr [ebx]
+  00C70BF4: 3B F5              cmp         esi,ebp
+  00C70BF6: 74 17              je          00C70C0F
+  00C70BF8: 8D 46 04           lea         eax,[esi+4]
+  00C70BFB: 50                 push        eax
+  00C70BFC: FF 15 C4 F1 FD 00  call        dword ptr ds:[00FDF1C4h]
+  00C70C02: 85 C0              test        eax,eax
+  00C70C04: 75 09              jne         00C70C0F
+  00C70C06: 8B 16              mov         edx,dword ptr [esi]
+  00C70C08: 8B 42 04           mov         eax,dword ptr [edx+4]
+  00C70C0B: 8B CE              mov         ecx,esi
+  00C70C0D: FF D0              call        eax
+  00C70C0F: 53                 push        ebx
+  00C70C10: B9 38 62 1F 01     mov         ecx,11F6238h
+  00C70C15: E8 46 34 E3 FF     call        00AA4060
+  00C70C1A: 8B B7 4C 06 00 00  mov         esi,dword ptr [edi+0000064Ch]
+  00C70C20: 3B F5              cmp         esi,ebp
+  00C70C22: 74 28              je          00C70C4C
+  00C70C24: 8B 4E 04           mov         ecx,dword ptr [esi+4]
+  00C70C27: 89 8F 4C 06 00 00  mov         dword ptr [edi+0000064Ch],ecx
+  00C70C2D: 8B 16              mov         edx,dword ptr [esi]
+  00C70C2F: 89 97 48 06 00 00  mov         dword ptr [edi+00000648h],edx
+  00C70C35: 8B CE              mov         ecx,esi
+  00C70C37: 89 6E 04           mov         dword ptr [esi+4],ebp
+  00C70C3A: E8 F1 D2 ED FF     call        00B4DF30
+  00C70C3F: 56                 push        esi
+  00C70C40: B9 38 62 1F 01     mov         ecx,11F6238h
+  00C70C45: E8 16 34 E3 FF     call        00AA4060
+  00C70C4A: EB 8C              jmp         00C70BD8
+  00C70C4C: 89 AF 48 06 00 00  mov         dword ptr [edi+00000648h],ebp
+  00C70C52: EB 84              jmp         00C70BD8
+  00C70C54: 5F                 pop         edi
+  00C70C55: 5E                 pop         esi
+  00C70C56: 5D                 pop         ebp
+  00C70C57: 5B                 pop         ebx
+  00C70C58: C3                 ret
+  00C70C59: CC                 int         3
+  00C70C5A: CC                 int         3
+  00C70C5B: CC                 int         3
+  00C70C5C: CC                 int         3
+  00C70C5D: CC                 int         3
+  00C70C5E: CC                 int         3
+  00C70C5F: CC                 int         3
+  00C70C60: 56                 push        esi
+  00C70C61: 8B F1              mov         esi,ecx
+  00C70C63: E8 58 F9 FF FF     call        00C705C0
+  00C70C68: F6 44 24 08 01     test        byte ptr [esp+8],1
+  00C70C6D: 74 17              je          00C70C86
+  00C70C6F: 85 F6              test        esi,esi
+  00C70C71: 74 13              je          00C70C86
+  00C70C73: 0F B6 46 FF        movzx       eax,byte ptr [esi-1]
+  00C70C77: 8B CE              mov         ecx,esi
+  00C70C79: 2B C8              sub         ecx,eax
+  00C70C7B: 51                 push        ecx
+  00C70C7C: B9 38 62 1F 01     mov         ecx,11F6238h
+  00C70C81: E8 DA 33 E3 FF     call        00AA4060
+  00C70C86: 8B C6              mov         eax,esi
+  00C70C88: 5E                 pop         esi
+  00C70C89: C2 04 00           ret         4
+  00C70C8C: CC                 int         3
+  00C70C8D: CC                 int         3
+  00C70C8E: CC                 int         3
+  00C70C8F: CC                 int         3
+  00C70C90: 53                 push        ebx
+  00C70C91: 56                 push        esi
+  00C70C92: 8B F1              mov         esi,ecx
+  00C70C94: 8B 4E 08           mov         ecx,dword ptr [esi+8]
+  00C70C97: 85 C9              test        ecx,ecx
+  00C70C99: 74 07              je          00C70CA2
+  00C70C9B: E8 E0 BC 03 00     call        00CAC980
+  00C70CA0: EB 02              jmp         00C70CA4
+  00C70CA2: 33 C0              xor         eax,eax
+  00C70CA4: 8B 40 08           mov         eax,dword ptr [eax+8]
+  00C70CA7: 85 C0              test        eax,eax
+  00C70CA9: 74 08              je          00C70CB3
+  00C70CAB: 8B 80 50 03 00 00  mov         eax,dword ptr [eax+00000350h]
+  00C70CB1: EB 02              jmp         00C70CB5
+  00C70CB3: 33 C0              xor         eax,eax
+  00C70CB5: 8B 5C 24 0C        mov         ebx,dword ptr [esp+0Ch]
+  00C70CB9: 3B C3              cmp         eax,ebx
+  00C70CBB: 0F 84 17 01 00 00  je          00C70DD8
+  00C70CC1: 85 C0              test        eax,eax
+  00C70CC3: 74 2F              je          00C70CF4
+  00C70CC5: 8B CE              mov         ecx,esi
+  00C70CC7: E8 B4 B9 03 00     call        00CAC680
+  00C70CCC: 8B 8E 94 05 00 00  mov         ecx,dword ptr [esi+00000594h]
+  00C70CD2: 85 C9              test        ecx,ecx
+  00C70CD4: 74 0A              je          00C70CE0
+  00C70CD6: 8B 01              mov         eax,dword ptr [ecx]
+  00C70CD8: 8B 90 A0 00 00 00  mov         edx,dword ptr [eax+000000A0h]
+  00C70CDE: FF D2              call        edx
+  00C70CE0: 8B 8E 98 05 00 00  mov         ecx,dword ptr [esi+00000598h]
+  00C70CE6: 85 C9              test        ecx,ecx
+  00C70CE8: 74 0A              je          00C70CF4
+  00C70CEA: 8B 01              mov         eax,dword ptr [ecx]
+  00C70CEC: 8B 90 A0 00 00 00  mov         edx,dword ptr [eax+000000A0h]
+  00C70CF2: FF D2              call        edx
+  00C70CF4: 8B 4E 08           mov         ecx,dword ptr [esi+8]
+  00C70CF7: 85 C9              test        ecx,ecx
+  00C70CF9: 74 0C              je          00C70D07
+  00C70CFB: E8 00 BC 03 00     call        00CAC900
+  00C70D00: C7 40 04 00 00 00  mov         dword ptr [eax+4],0
+            00
+  00C70D07: 85 DB              test        ebx,ebx
+  00C70D09: 0F 84 C9 00 00 00  je          00C70DD8
+  00C70D0F: 83 BE 94 05 00 00  cmp         dword ptr [esi+00000594h],0
+            00
+  00C70D16: 0F 84 A7 00 00 00  je          00C70DC3
+  00C70D1C: F6 86 14 04 00 00  test        byte ptr [esi+00000414h],1
+            01
+  00C70D23: 75 58              jne         00C70D7D
+  00C70D25: 8B 86 14 04 00 00  mov         eax,dword ptr [esi+00000414h]
+  00C70D2B: C1 E8 14           shr         eax,14h
+  00C70D2E: A8 01              test        al,1
+  00C70D30: 75 4B              jne         00C70D7D
+  00C70D32: D9 05 CC 7B 26 01  fld         dword ptr ds:[01267BCCh]
+  00C70D38: 51                 push        ecx
+  00C70D39: DC 0D 08 64 01 01  fmul        qword ptr ds:[01016408h]
+  00C70D3F: 8B CE              mov         ecx,esi
+  00C70D41: D9 5C 24 10        fstp        dword ptr [esp+10h]
+  00C70D45: D9 44 24 10        fld         dword ptr [esp+10h]
+  00C70D49: D9 1C 24           fstp        dword ptr [esp]
+  00C70D4C: E8 4F FB FF FF     call        00C708A0
+  00C70D51: D9 05 CC 7B 26 01  fld         dword ptr ds:[01267BCCh]
+  00C70D57: 51                 push        ecx
+  00C70D58: DC 0D 08 64 01 01  fmul        qword ptr ds:[01016408h]
+  00C70D5E: 8B CE              mov         ecx,esi
+  00C70D60: D9 5C 24 10        fstp        dword ptr [esp+10h]
+  00C70D64: D9 44 24 10        fld         dword ptr [esp+10h]
+  00C70D68: D9 1C 24           fstp        dword ptr [esp]
+  00C70D6B: E8 10 D4 FF FF     call        00C6E180
+  00C70D70: D9 EE              fldz
+  00C70D72: 51                 push        ecx
+  00C70D73: 8B CE              mov         ecx,esi
+  00C70D75: D9 1C 24           fstp        dword ptr [esp]
+  00C70D78: E8 23 FB FF FF     call        00C708A0
+  00C70D7D: 8B 8E 94 05 00 00  mov         ecx,dword ptr [esi+00000594h]
+  00C70D83: 8B 11              mov         edx,dword ptr [ecx]
+  00C70D85: 8B 82 9C 00 00 00  mov         eax,dword ptr [edx+0000009Ch]
+  00C70D8B: 57                 push        edi
+  00C70D8C: 53                 push        ebx
+  00C70D8D: FF D0              call        eax
+  00C70D8F: D9 05 AC 44 0C 01  fld         dword ptr ds:[010C44ACh]
+  00C70D95: 8B BE 94 05 00 00  mov         edi,dword ptr [esi+00000594h]
+  00C70D9B: 83 EC 10           sub         esp,10h
+  00C70D9E: D9 5C 24 0C        fstp        dword ptr [esp+0Ch]
+  00C70DA2: D9 EE              fldz
+  00C70DA4: D9 5C 24 08        fstp        dword ptr [esp+8]
+  00C70DA8: D9 E8              fld1
+  00C70DAA: D9 54 24 04        fst         dword ptr [esp+4]
+  00C70DAE: D9 1C 24           fstp        dword ptr [esp]
+  00C70DB1: E8 7A AD 03 00     call        00CABB30
+  00C70DB6: 83 C4 10           add         esp,10h
+  00C70DB9: 50                 push        eax
+  00C70DBA: 57                 push        edi
+  00C70DBB: 8B CB              mov         ecx,ebx
+  00C70DBD: E8 6E 80 FF FF     call        00C68E30
+  00C70DC2: 5F                 pop         edi
+  00C70DC3: 8B 8E 98 05 00 00  mov         ecx,dword ptr [esi+00000598h]
+  00C70DC9: 85 C9              test        ecx,ecx
+  00C70DCB: 74 0B              je          00C70DD8
+  00C70DCD: 8B 11              mov         edx,dword ptr [ecx]
+  00C70DCF: 8B 82 9C 00 00 00  mov         eax,dword ptr [edx+0000009Ch]
+  00C70DD5: 53                 push        ebx
+  00C70DD6: FF D0              call        eax
+  00C70DD8: 5E                 pop         esi
+  00C70DD9: 5B                 pop         ebx
+  00C70DDA: C2 04 00           ret         4
+  00C70DDD: CC                 int         3
+  00C70DDE: CC                 int         3
+  00C70DDF: CC                 int         3
+  00C70DE0: 55                 push        ebp
+  00C70DE1: 8B EC              mov         ebp,esp
+  00C70DE3: 83 E4 F0           and         esp,0FFFFFFF0h
+  00C70DE6: 6A FF              push        0FFFFFFFFh
+  00C70DE8: 68 80 0F F3 00     push        0F30F80h
+  00C70DED: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  00C70DF3: 50                 push        eax
+  00C70DF4: 83 EC 58           sub         esp,58h
+  00C70DF7: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  00C70DFC: 33 C4              xor         eax,esp
+  00C70DFE: 89 44 24 50        mov         dword ptr [esp+50h],eax
+  00C70E02: 53                 push        ebx
+  00C70E03: 56                 push        esi
+  00C70E04: 57                 push        edi
+  00C70E05: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  00C70E0A: 33 C4              xor         eax,esp
+  00C70E0C: 50                 push        eax
+  00C70E0D: 8D 44 24 68        lea         eax,[esp+68h]
+  00C70E11: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  00C70E17: A1 98 FD 26 01     mov         eax,dword ptr ds:[0126FD98h]
+  00C70E1C: 64 8B 0D 2C 00 00  mov         ecx,dword ptr fs:[0000002Ch]
+            00
+  00C70E23: 8B 3C 81           mov         edi,dword ptr [ecx+eax*4]
+  00C70E26: 8B 97 B4 02 00 00  mov         edx,dword ptr [edi+000002B4h]
+  00C70E2C: 89 54 24 28        mov         dword ptr [esp+28h],edx
+  00C70E30: C7 87 B4 02 00 00  mov         dword ptr [edi+000002B4h],10h
+            10 00 00 00
+  00C70E3A: D9 05 CC 7B 26 01  fld         dword ptr ds:[01267BCCh]
+  00C70E40: D8 4D 10           fmul        dword ptr [ebp+10h]
+  00C70E43: 33 DB              xor         ebx,ebx
+  00C70E45: 89 5C 24 70        mov         dword ptr [esp+70h],ebx
+  00C70E49: 89 5C 24 18        mov         dword ptr [esp+18h],ebx
+  00C70E4D: D9 5C 24 24        fstp        dword ptr [esp+24h]
+  00C70E51: 89 5C 24 1C        mov         dword ptr [esp+1Ch],ebx
+  00C70E55: C7 44 24 20 00 00  mov         dword ptr [esp+20h],80000000h
+            00 80
+  00C70E5D: C6 44 24 70 01     mov         byte ptr [esp+70h],1
+  00C70E62: E8 E9 48 01 00     call        00C85750
+  00C70E67: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C70E6A: 8B 44 24 20        mov         eax,dword ptr [esp+20h]
+  00C70E6E: 25 FF FF FF 3F     and         eax,3FFFFFFFh
+  00C70E73: 83 F8 12           cmp         eax,12h
+  00C70E76: 7D 1D              jge         00C70E95
+  00C70E78: 03 C0              add         eax,eax
+  00C70E7A: 83 F8 12           cmp         eax,12h
+  00C70E7D: 7F 05              jg          00C70E84
+  00C70E7F: B8 12 00 00 00     mov         eax,12h
+  00C70E84: 6A 10              push        10h
+  00C70E86: 50                 push        eax
+  00C70E87: 8D 44 24 20        lea         eax,[esp+20h]
+  00C70E8B: 50                 push        eax
+  00C70E8C: 51                 push        ecx
+  00C70E8D: E8 2E FA 01 00     call        00C908C0
+  00C70E92: 83 C4 10           add         esp,10h
+  00C70E95: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00C70E98: D9 00              fld         dword ptr [eax]
+  00C70E9A: D9 05 CC 7B 26 01  fld         dword ptr ds:[01267BCCh]
+  00C70EA0: D9 C0              fld         st(0)
+  00C70EA2: DE CA              fmulp       st(2),st
+  00C70EA4: D9 C9              fxch        st(1)
+  00C70EA6: D9 5C 24 34        fstp        dword ptr [esp+34h]
+  00C70EAA: D9 40 04           fld         dword ptr [eax+4]
+  00C70EAD: D8 C9              fmul        st,st(1)
+  00C70EAF: D9 5C 24 38        fstp        dword ptr [esp+38h]
+  00C70EB3: D8 48 08           fmul        dword ptr [eax+8]
+  00C70EB6: D9 5C 24 3C        fstp        dword ptr [esp+3Ch]
+  00C70EBA: D9 EE              fldz
+  00C70EBC: D9 5C 24 40        fstp        dword ptr [esp+40h]
+  00C70EC0: D9 44 24 3C        fld         dword ptr [esp+3Ch]
+  00C70EC4: D8 64 24 24        fsub        dword ptr [esp+24h]
+  00C70EC8: D9 5C 24 3C        fstp        dword ptr [esp+3Ch]
+  00C70ECC: E8 7F 48 01 00     call        00C85750
+  00C70ED1: 8B 54 24 20        mov         edx,dword ptr [esp+20h]
+  00C70ED5: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C70ED8: 8B 44 24 1C        mov         eax,dword ptr [esp+1Ch]
+  00C70EDC: 81 E2 FF FF FF 3F  and         edx,3FFFFFFFh
+  00C70EE2: 3B C2              cmp         eax,edx
+  00C70EE4: 75 14              jne         00C70EFA
+  00C70EE6: 6A 10              push        10h
+  00C70EE8: 8D 44 24 1C        lea         eax,[esp+1Ch]
+  00C70EEC: 50                 push        eax
+  00C70EED: 51                 push        ecx
+  00C70EEE: E8 4D FA 01 00     call        00C90940
+  00C70EF3: 8B 44 24 28        mov         eax,dword ptr [esp+28h]
+  00C70EF7: 83 C4 0C           add         esp,0Ch
+  00C70EFA: D9 45 14           fld         dword ptr [ebp+14h]
+  00C70EFD: 0F 28 44 24 34     movaps      xmm0,xmmword ptr [esp+34h]
+  00C70F02: DC 05 A0 FF 01 01  fadd        qword ptr ds:[0101FFA0h]
+  00C70F08: C1 E0 04           shl         eax,4
+  00C70F0B: 03 44 24 18        add         eax,dword ptr [esp+18h]
+  00C70F0F: D8 44 24 3C        fadd        dword ptr [esp+3Ch]
+  00C70F13: 0F 29 00           movaps      xmmword ptr [eax],xmm0
+  00C70F16: FF 44 24 1C        inc         dword ptr [esp+1Ch]
+  00C70F1A: 33 F6              xor         esi,esi
+  00C70F1C: D9 5C 24 3C        fstp        dword ptr [esp+3Ch]
+  00C70F20: D9 86 54 01 1B 01  fld         dword ptr [esi+011B0154h]
+  00C70F26: 0F 28 44 24 34     movaps      xmm0,xmmword ptr [esp+34h]
+  00C70F2B: D9 44 24 24        fld         dword ptr [esp+24h]
+  00C70F2F: 0F 29 44 24 44     movaps      xmmword ptr [esp+44h],xmm0
+  00C70F34: D9 C0              fld         st(0)
+  00C70F36: DE CA              fmulp       st(2),st
+  00C70F38: D9 44 24 44        fld         dword ptr [esp+44h]
+  00C70F3C: DE C2              faddp       st(2),st
+  00C70F3E: D9 C9              fxch        st(1)
+  00C70F40: D9 5C 24 44        fstp        dword ptr [esp+44h]
+  00C70F44: D8 8E 74 01 1B 01  fmul        dword ptr [esi+011B0174h]
+  00C70F4A: D8 44 24 48        fadd        dword ptr [esp+48h]
+  00C70F4E: D9 5C 24 48        fstp        dword ptr [esp+48h]
+  00C70F52: E8 F9 47 01 00     call        00C85750
+  00C70F57: 8B 54 24 20        mov         edx,dword ptr [esp+20h]
+  00C70F5B: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C70F5E: 8B 44 24 1C        mov         eax,dword ptr [esp+1Ch]
+  00C70F62: 81 E2 FF FF FF 3F  and         edx,3FFFFFFFh
+  00C70F68: 3B C2              cmp         eax,edx
+  00C70F6A: 75 14              jne         00C70F80
+  00C70F6C: 6A 10              push        10h
+  00C70F6E: 8D 44 24 1C        lea         eax,[esp+1Ch]
+  00C70F72: 50                 push        eax
+  00C70F73: 51                 push        ecx
+  00C70F74: E8 C7 F9 01 00     call        00C90940
+  00C70F79: 8B 44 24 28        mov         eax,dword ptr [esp+28h]
+  00C70F7D: 83 C4 0C           add         esp,0Ch
+  00C70F80: 0F 28 44 24 44     movaps      xmm0,xmmword ptr [esp+44h]
+  00C70F85: C1 E0 04           shl         eax,4
+  00C70F88: 03 44 24 18        add         eax,dword ptr [esp+18h]
+  00C70F8C: 83 C6 04           add         esi,4
+  00C70F8F: 0F 29 00           movaps      xmmword ptr [eax],xmm0
+  00C70F92: FF 44 24 1C        inc         dword ptr [esp+1Ch]
+  00C70F96: 83 FE 20           cmp         esi,20h
+  00C70F99: 72 85              jb          00C70F20
+  00C70F9B: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00C70F9E: D9 00              fld         dword ptr [eax]
+  00C70FA0: 33 F6              xor         esi,esi
+  00C70FA2: D9 05 CC 7B 26 01  fld         dword ptr ds:[01267BCCh]
+  00C70FA8: D9 C0              fld         st(0)
+  00C70FAA: DE CA              fmulp       st(2),st
+  00C70FAC: D9 C9              fxch        st(1)
+  00C70FAE: D9 5C 24 34        fstp        dword ptr [esp+34h]
+  00C70FB2: D9 40 04           fld         dword ptr [eax+4]
+  00C70FB5: D8 C9              fmul        st,st(1)
+  00C70FB7: D9 5C 24 38        fstp        dword ptr [esp+38h]
+  00C70FBB: D8 48 08           fmul        dword ptr [eax+8]
+  00C70FBE: D9 5C 24 3C        fstp        dword ptr [esp+3Ch]
+  00C70FC2: D9 EE              fldz
+  00C70FC4: D9 5C 24 40        fstp        dword ptr [esp+40h]
+  00C70FC8: D9 44 24 24        fld         dword ptr [esp+24h]
+  00C70FCC: DD 05 88 15 01 01  fld         qword ptr ds:[01011588h]
+  00C70FD2: D8 C9              fmul        st,st(1)
+  00C70FD4: DD 54 24 2C        fst         qword ptr [esp+2Ch]
+  00C70FD8: D8 44 24 3C        fadd        dword ptr [esp+3Ch]
+  00C70FDC: D9 5C 24 3C        fstp        dword ptr [esp+3Ch]
+  00C70FE0: EB 12              jmp         00C70FF4
+  00C70FE2: EB 0C              jmp         00C70FF0
+  00C70FE4: 8D A4 24 00 00 00  lea         esp,[esp+00000000h]
+            00
+  00C70FEB: EB 03              jmp         00C70FF0
+  00C70FED: 8D 49 00           lea         ecx,[ecx]
+  00C70FF0: D9 44 24 24        fld         dword ptr [esp+24h]
+  00C70FF4: D9 86 54 01 1B 01  fld         dword ptr [esi+011B0154h]
+  00C70FFA: 0F 28 44 24 34     movaps      xmm0,xmmword ptr [esp+34h]
+  00C70FFF: D8 C9              fmul        st,st(1)
+  00C71001: 0F 29 44 24 44     movaps      xmmword ptr [esp+44h],xmm0
+  00C71006: D9 5C 24 44        fstp        dword ptr [esp+44h]
+  00C7100A: D8 8E 74 01 1B 01  fmul        dword ptr [esi+011B0174h]
+  00C71010: D9 5C 24 48        fstp        dword ptr [esp+48h]
+  00C71014: E8 37 47 01 00     call        00C85750
+  00C71019: 8B 54 24 20        mov         edx,dword ptr [esp+20h]
+  00C7101D: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C71020: 8B 44 24 1C        mov         eax,dword ptr [esp+1Ch]
+  00C71024: 81 E2 FF FF FF 3F  and         edx,3FFFFFFFh
+  00C7102A: 3B C2              cmp         eax,edx
+  00C7102C: 75 14              jne         00C71042
+  00C7102E: 6A 10              push        10h
+  00C71030: 8D 44 24 1C        lea         eax,[esp+1Ch]
+  00C71034: 50                 push        eax
+  00C71035: 51                 push        ecx
+  00C71036: E8 05 F9 01 00     call        00C90940
+  00C7103B: 8B 44 24 28        mov         eax,dword ptr [esp+28h]
+  00C7103F: 83 C4 0C           add         esp,0Ch
+  00C71042: 0F 28 44 24 44     movaps      xmm0,xmmword ptr [esp+44h]
+  00C71047: C1 E0 04           shl         eax,4
+  00C7104A: 03 44 24 18        add         eax,dword ptr [esp+18h]
+  00C7104E: 83 C6 04           add         esi,4
+  00C71051: 0F 29 00           movaps      xmmword ptr [eax],xmm0
+  00C71054: FF 44 24 1C        inc         dword ptr [esp+1Ch]
+  00C71058: 83 FE 20           cmp         esi,20h
+  00C7105B: 72 93              jb          00C70FF0
+  00C7105D: D9 44 24 3C        fld         dword ptr [esp+3Ch]
+  00C71061: DC 44 24 2C        fadd        qword ptr [esp+2Ch]
+  00C71065: D9 5C 24 3C        fstp        dword ptr [esp+3Ch]
+  00C71069: E8 E2 46 01 00     call        00C85750
+  00C7106E: 8B 54 24 20        mov         edx,dword ptr [esp+20h]
+  00C71072: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C71075: 8B 44 24 1C        mov         eax,dword ptr [esp+1Ch]
+  00C71079: 81 E2 FF FF FF 3F  and         edx,3FFFFFFFh
+  00C7107F: 3B C2              cmp         eax,edx
+  00C71081: 75 14              jne         00C71097
+  00C71083: 6A 10              push        10h
+  00C71085: 8D 44 24 1C        lea         eax,[esp+1Ch]
+  00C71089: 50                 push        eax
+  00C7108A: 51                 push        ecx
+  00C7108B: E8 B0 F8 01 00     call        00C90940
+  00C71090: 8B 44 24 28        mov         eax,dword ptr [esp+28h]
+  00C71094: 83 C4 0C           add         esp,0Ch
+  00C71097: 0F 28 44 24 34     movaps      xmm0,xmmword ptr [esp+34h]
+  00C7109C: C1 E0 04           shl         eax,4
+  00C7109F: 03 44 24 18        add         eax,dword ptr [esp+18h]
+  00C710A3: 8D 4C 24 18        lea         ecx,[esp+18h]
+  00C710A7: 0F 29 00           movaps      xmmword ptr [eax],xmm0
+  00C710AA: FF 44 24 1C        inc         dword ptr [esp+1Ch]
+  00C710AE: 51                 push        ecx
+  00C710AF: E8 9C 6E 06 00     call        00CD7F50
+  00C710B4: 83 C4 04           add         esp,4
+  00C710B7: 8B F0              mov         esi,eax
+  00C710B9: 88 5C 24 70        mov         byte ptr [esp+70h],bl
+  00C710BD: E8 8E 46 01 00     call        00C85750
+  00C710C2: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C710C5: 8B 44 24 20        mov         eax,dword ptr [esp+20h]
+  00C710C9: 89 5C 24 1C        mov         dword ptr [esp+1Ch],ebx
+  00C710CD: 85 C0              test        eax,eax
+  00C710CF: 78 21              js          00C710F2
+  00C710D1: 8B 11              mov         edx,dword ptr [ecx]
+  00C710D3: 8B 52 10           mov         edx,dword ptr [edx+10h]
+  00C710D6: 25 FF FF FF 3F     and         eax,3FFFFFFFh
+  00C710DB: C1 E0 04           shl         eax,4
+  00C710DE: 50                 push        eax
+  00C710DF: 8B 44 24 1C        mov         eax,dword ptr [esp+1Ch]
+  00C710E3: 50                 push        eax
+  00C710E4: FF D2              call        edx
+  00C710E6: 8B 44 24 28        mov         eax,dword ptr [esp+28h]
+  00C710EA: 89 87 B4 02 00 00  mov         dword ptr [edi+000002B4h],eax
+  00C710F0: EB 0A              jmp         00C710FC
+  00C710F2: 8B 4C 24 28        mov         ecx,dword ptr [esp+28h]
+  00C710F6: 89 8F B4 02 00 00  mov         dword ptr [edi+000002B4h],ecx
+  00C710FC: 8B C6              mov         eax,esi
+  00C710FE: 8B 4C 24 68        mov         ecx,dword ptr [esp+68h]
+  00C71102: 64 89 0D 00 00 00  mov         dword ptr fs:[00000000h],ecx
+            00
+  00C71109: 59                 pop         ecx
+  00C7110A: 5F                 pop         edi
+  00C7110B: 5E                 pop         esi
+  00C7110C: 5B                 pop         ebx
+  00C7110D: 8B 4C 24 50        mov         ecx,dword ptr [esp+50h]
+  00C71111: 33 CC              xor         ecx,esp
+  00C71113: E8 74 2F 25 00     call        00EC408C
+  00C71118: 8B E5              mov         esp,ebp
+  00C7111A: 5D                 pop         ebp
+  00C7111B: C3                 ret
+  00C7111C: CC                 int         3
+  00C7111D: CC                 int         3
+  00C7111E: CC                 int         3
+  00C7111F: CC                 int         3
+  00C71120: 6A FF              push        0FFFFFFFFh
+  00C71122: 68 BB 0F F3 00     push        0F30FBBh
+  00C71127: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  00C7112D: 50                 push        eax
+  00C7112E: 51                 push        ecx
+  00C7112F: 55                 push        ebp
+  00C71130: 56                 push        esi
+  00C71131: 57                 push        edi
+  00C71132: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  00C71137: 33 C4              xor         eax,esp
+  00C71139: 50                 push        eax
+  00C7113A: 8D 44 24 14        lea         eax,[esp+14h]
+  00C7113E: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  00C71144: 8B F1              mov         esi,ecx
+  00C71146: 89 74 24 10        mov         dword ptr [esp+10h],esi
+  00C7114A: 33 FF              xor         edi,edi
+  00C7114C: 89 7C 24 1C        mov         dword ptr [esp+1Ch],edi
+  00C71150: E8 FB 45 01 00     call        00C85750
+  00C71155: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C71158: 8B 46 18           mov         eax,dword ptr [esi+18h]
+  00C7115B: 89 7E 14           mov         dword ptr [esi+14h],edi
+  00C7115E: 85 C0              test        eax,eax
+  00C71160: 78 15              js          00C71177
+  00C71162: 8B 56 10           mov         edx,dword ptr [esi+10h]
+  00C71165: 8B 29              mov         ebp,dword ptr [ecx]
+  00C71167: 25 FF FF FF 3F     and         eax,3FFFFFFFh
+  00C7116C: 03 C0              add         eax,eax
+  00C7116E: 03 C0              add         eax,eax
+  00C71170: 50                 push        eax
+  00C71171: 52                 push        edx
+  00C71172: 8B 55 10           mov         edx,dword ptr [ebp+10h]
+  00C71175: FF D2              call        edx
+  00C71177: 89 7E 10           mov         dword ptr [esi+10h],edi
+  00C7117A: C7 46 18 00 00 00  mov         dword ptr [esi+18h],80000000h
+            80
+  00C71181: C7 44 24 1C FF FF  mov         dword ptr [esp+1Ch],0FFFFFFFFh
+            FF FF
+  00C71189: E8 C2 45 01 00     call        00C85750
+  00C7118E: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C71191: 8B 46 0C           mov         eax,dword ptr [esi+0Ch]
+  00C71194: 89 7E 08           mov         dword ptr [esi+8],edi
+  00C71197: 85 C0              test        eax,eax
+  00C71199: 78 15              js          00C711B0
+  00C7119B: 8B 11              mov         edx,dword ptr [ecx]
+  00C7119D: 8B 52 10           mov         edx,dword ptr [edx+10h]
+  00C711A0: 25 FF FF FF 3F     and         eax,3FFFFFFFh
+  00C711A5: 03 C0              add         eax,eax
+  00C711A7: 03 C0              add         eax,eax
+  00C711A9: 50                 push        eax
+  00C711AA: 8B 46 04           mov         eax,dword ptr [esi+4]
+  00C711AD: 50                 push        eax
+  00C711AE: FF D2              call        edx
+  00C711B0: C7 46 0C 00 00 00  mov         dword ptr [esi+0Ch],80000000h
+            80
+  00C711B7: 89 7E 04           mov         dword ptr [esi+4],edi
+  00C711BA: 8B 4C 24 14        mov         ecx,dword ptr [esp+14h]
+  00C711BE: 64 89 0D 00 00 00  mov         dword ptr fs:[00000000h],ecx
+            00
+  00C711C5: 59                 pop         ecx
+  00C711C6: 5F                 pop         edi
+  00C711C7: 5E                 pop         esi
+  00C711C8: 5D                 pop         ebp
+  00C711C9: 83 C4 10           add         esp,10h
+  00C711CC: C3                 ret
+  00C711CD: CC                 int         3
+  00C711CE: CC                 int         3
+  00C711CF: CC                 int         3
+  00C711D0: 55                 push        ebp
+  00C711D1: 8B EC              mov         ebp,esp
+  00C711D3: 83 E4 F0           and         esp,0FFFFFFF0h
+  00C711D6: 6A FF              push        0FFFFFFFFh
+  00C711D8: 68 01 10 F3 00     push        0F31001h
+  00C711DD: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  00C711E3: 50                 push        eax
+  00C711E4: 81 EC 28 02 00 00  sub         esp,228h
+  00C711EA: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  00C711EF: 33 C4              xor         eax,esp
+  00C711F1: 89 84 24 20 02 00  mov         dword ptr [esp+00000220h],eax
+            00
+  00C711F8: 53                 push        ebx
+  00C711F9: 56                 push        esi
+  00C711FA: 57                 push        edi
+  00C711FB: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  00C71200: 33 C4              xor         eax,esp
+  00C71202: 50                 push        eax
+  00C71203: 8D 84 24 38 02 00  lea         eax,[esp+00000238h]
+            00
+  00C7120A: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  00C71210: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00C71213: 8B 15 98 FD 26 01  mov         edx,dword ptr ds:[0126FD98h]
+  00C71219: 89 44 24 7C        mov         dword ptr [esp+7Ch],eax
+  00C7121D: 64 A1 2C 00 00 00  mov         eax,dword ptr fs:[0000002Ch]
+  00C71223: 8B 04 90           mov         eax,dword ptr [eax+edx*4]
+  00C71226: 8B F9              mov         edi,ecx
+  00C71228: 8B 4D 10           mov         ecx,dword ptr [ebp+10h]
+  00C7122B: 89 4C 24 68        mov         dword ptr [esp+68h],ecx
+  00C7122F: 8B 88 B4 02 00 00  mov         ecx,dword ptr [eax+000002B4h]
+  00C71235: 89 84 24 84 00 00  mov         dword ptr [esp+00000084h],eax
+            00
+  00C7123C: 89 8C 24 80 00 00  mov         dword ptr [esp+00000080h],ecx
+            00
+  00C71243: C7 80 B4 02 00 00  mov         dword ptr [eax+000002B4h],10h
+            10 00 00 00
+  00C7124D: D9 05 C4 EF 02 01  fld         dword ptr ds:[0102EFC4h]
+  00C71253: 83 67 04 FB        and         dword ptr [edi+4],0FFFFFFFBh
+  00C71257: D9 57 5C           fst         dword ptr [edi+5Ch]
+  00C7125A: D9 57 58           fst         dword ptr [edi+58h]
+  00C7125D: 0F 57 C0           xorps       xmm0,xmm0
+  00C71260: D9 57 54           fst         dword ptr [edi+54h]
+  00C71263: 33 F6              xor         esi,esi
+  00C71265: D9 5F 50           fstp        dword ptr [edi+50h]
+  00C71268: 0F 29 47 40        movaps      xmmword ptr [edi+40h],xmm0
+  00C7126C: F6 47 06 01        test        byte ptr [edi+6],1
+  00C71270: 89 B4 24 40 02 00  mov         dword ptr [esp+00000240h],esi
+            00
+  00C71277: 0F 29 84 24 B4 00  movaps      xmmword ptr [esp+000000B4h],xmm0
+            00 00
+  00C7127F: 74 15              je          00C71296
+  00C71281: 8B 8F FC 01 00 00  mov         ecx,dword ptr [edi+000001FCh]
+  00C71287: 3B CE              cmp         ecx,esi
+  00C71289: 74 05              je          00C71290
+  00C7128B: E8 20 F3 01 00     call        00C905B0
+  00C71290: 89 B7 FC 01 00 00  mov         dword ptr [edi+000001FCh],esi
+  00C71296: F6 47 04 01        test        byte ptr [edi+4],1
+  00C7129A: D9 EE              fldz
+  00C7129C: 0F 28 87 B0 00 00  movaps      xmm0,xmmword ptr [edi+000000B0h]
+            00
+  00C712A3: D9 5C 24 60        fstp        dword ptr [esp+60h]
+  00C712A7: 89 B7 F8 01 00 00  mov         dword ptr [edi+000001F8h],esi
+  00C712AD: 89 74 24 74        mov         dword ptr [esp+74h],esi
+  00C712B1: 89 74 24 64        mov         dword ptr [esp+64h],esi
+  00C712B5: C6 44 24 2A 00     mov         byte ptr [esp+2Ah],0
+  00C712BA: 0F 29 47 40        movaps      xmmword ptr [edi+40h],xmm0
+  00C712BE: C6 44 24 2B 00     mov         byte ptr [esp+2Bh],0
+  00C712C3: 0F 85 C5 00 00 00  jne         00C7138E
+  00C712C9: 8B 57 04           mov         edx,dword ptr [edi+4]
+  00C712CC: C1 EA 05           shr         edx,5
+  00C712CF: F6 C2 01           test        dl,1
+  00C712D2: 0F 85 B6 00 00 00  jne         00C7138E
+  00C712D8: 8B 87 84 01 00 00  mov         eax,dword ptr [edi+00000184h]
+  00C712DE: 85 C0              test        eax,eax
+  00C712E0: 0F 84 A8 00 00 00  je          00C7138E
+  00C712E6: 8B 58 08           mov         ebx,dword ptr [eax+8]
+  00C712E9: 85 DB              test        ebx,ebx
+  00C712EB: 0F 84 9D 00 00 00  je          00C7138E
+  00C712F1: 8B 87 94 01 00 00  mov         eax,dword ptr [edi+00000194h]
+  00C712F7: 85 C0              test        eax,eax
+  00C712F9: 0F 84 8F 00 00 00  je          00C7138E
+  00C712FF: 8B 70 08           mov         esi,dword ptr [eax+8]
+  00C71302: 85 F6              test        esi,esi
+  00C71304: 0F 84 84 00 00 00  je          00C7138E
+  00C7130A: 83 7E 0C 09        cmp         dword ptr [esi+0Ch],9
+  00C7130E: 75 7E              jne         00C7138E
+  00C71310: 8B 46 10           mov         eax,dword ptr [esi+10h]
+  00C71313: 8B 50 04           mov         edx,dword ptr [eax+4]
+  00C71316: 8D 4E 10           lea         ecx,[esi+10h]
+  00C71319: FF D2              call        edx
+  00C7131B: 83 F8 03           cmp         eax,3
+  00C7131E: 75 6E              jne         00C7138E
+  00C71320: 8B 46 18           mov         eax,dword ptr [esi+18h]
+  00C71323: 8B 40 10           mov         eax,dword ptr [eax+10h]
+  00C71326: 85 C0              test        eax,eax
+  00C71328: 74 64              je          00C7138E
+  00C7132A: 83 78 0C 05        cmp         dword ptr [eax+0Ch],5
+  00C7132E: 75 5E              jne         00C7138E
+  00C71330: 8D 8C 24 14 01 00  lea         ecx,[esp+00000114h]
+            00
+  00C71337: 51                 push        ecx
+  00C71338: 81 C3 B0 00 00 00  add         ebx,0B0h
+  00C7133E: 53                 push        ebx
+  00C7133F: 50                 push        eax
+  00C71340: E8 DB C2 FF FF     call        00C6D620
+  00C71345: 8B 56 18           mov         edx,dword ptr [esi+18h]
+  00C71348: 8B 72 20           mov         esi,dword ptr [edx+20h]
+  00C7134B: 83 C4 0C           add         esp,0Ch
+  00C7134E: 85 F6              test        esi,esi
+  00C71350: 74 3C              je          00C7138E
+  00C71352: 83 7E 0C 05        cmp         dword ptr [esi+0Ch],5
+  00C71356: 75 36              jne         00C7138E
+  00C71358: 8D 84 24 24 01 00  lea         eax,[esp+00000124h]
+            00
+  00C7135F: 50                 push        eax
+  00C71360: 53                 push        ebx
+  00C71361: 56                 push        esi
+  00C71362: E8 B9 C2 FF FF     call        00C6D620
+  00C71367: D9 46 10           fld         dword ptr [esi+10h]
+  00C7136A: D9 5C 24 68        fstp        dword ptr [esp+68h]
+  00C7136E: 83 C4 0C           add         esp,0Ch
+  00C71371: D9 44 24 5C        fld         dword ptr [esp+5Ch]
+  00C71375: C6 44 24 2B 01     mov         byte ptr [esp+2Bh],1
+  00C7137A: DC 0D B0 4A 0C 01  fmul        qword ptr ds:[010C4AB0h]
+  00C71380: D9 5C 24 60        fstp        dword ptr [esp+60h]
+  00C71384: D9 44 24 60        fld         dword ptr [esp+60h]
+  00C71388: DC C8              fmul        st(0),st
+  00C7138A: D9 5C 24 60        fstp        dword ptr [esp+60h]
+  00C7138E: 8B 4C 24 7C        mov         ecx,dword ptr [esp+7Ch]
+  00C71392: 8B 41 04           mov         eax,dword ptr [ecx+4]
+  00C71395: 8B 54 24 68        mov         edx,dword ptr [esp+68h]
+  00C71399: 8B 4A 4C           mov         ecx,dword ptr [edx+4Ch]
+  00C7139C: 3B C8              cmp         ecx,eax
+  00C7139E: 7D 08              jge         00C713A8
+  00C713A0: 8B C1              mov         eax,ecx
+  00C713A2: 89 4C 24 5C        mov         dword ptr [esp+5Ch],ecx
+  00C713A6: EB 04              jmp         00C713AC
+  00C713A8: 89 44 24 5C        mov         dword ptr [esp+5Ch],eax
+  00C713AC: C6 44 24 1F 00     mov         byte ptr [esp+1Fh],0
+  00C713B1: C7 44 24 70 00 00  mov         dword ptr [esp+70h],0
+            00 00
+  00C713B9: 85 C0              test        eax,eax
+  00C713BB: 0F 8E 23 0D 00 00  jle         00C720E4
+  00C713C1: 8B 4C 24 70        mov         ecx,dword ptr [esp+70h]
+  00C713C5: 8B 54 24 68        mov         edx,dword ptr [esp+68h]
+  00C713C9: 8B C1              mov         eax,ecx
+  00C713CB: C1 E0 06           shl         eax,6
+  00C713CE: 03 42 48           add         eax,dword ptr [edx+48h]
+  00C713D1: 89 44 24 24        mov         dword ptr [esp+24h],eax
+  00C713D5: 8B C1              mov         eax,ecx
+  00C713D7: 8B 4C 24 7C        mov         ecx,dword ptr [esp+7Ch]
+  00C713DB: 6B C0 70           imul        eax,eax,70h
+  00C713DE: 8B 09              mov         ecx,dword ptr [ecx]
+  00C713E0: 03 C8              add         ecx,eax
+  00C713E2: 89 44 24 40        mov         dword ptr [esp+40h],eax
+  00C713E6: 8B 41 48           mov         eax,dword ptr [ecx+48h]
+  00C713E9: 80 78 18 01        cmp         byte ptr [eax+18h],1
+  00C713ED: 89 4C 24 30        mov         dword ptr [esp+30h],ecx
+  00C713F1: 75 08              jne         00C713FB
+  00C713F3: 0F BE 70 10        movsx       esi,byte ptr [eax+10h]
+  00C713F7: 03 F0              add         esi,eax
+  00C713F9: EB 02              jmp         00C713FD
+  00C713FB: 33 F6              xor         esi,esi
+  00C713FD: 8B 58 1C           mov         ebx,dword ptr [eax+1Ch]
+  00C71400: 8B 47 04           mov         eax,dword ptr [edi+4]
+  00C71403: 8B D0              mov         edx,eax
+  00C71405: C1 EA 10           shr         edx,10h
+  00C71408: 89 74 24 3C        mov         dword ptr [esp+3Ch],esi
+  00C7140C: F6 C2 01           test        dl,1
+  00C7140F: 0F 84 58 02 00 00  je          00C7166D
+  00C71415: A9 00 00 20 00     test        eax,200000h
+  00C7141A: 0F 84 4D 02 00 00  je          00C7166D
+  00C71420: 56                 push        esi
+  00C71421: E8 CA CA FF FF     call        00C6DEF0
+  00C71426: 83 C4 04           add         esp,4
+  00C71429: 84 C0              test        al,al
+  00C7142B: 0F 84 3C 02 00 00  je          00C7166D
+  00C71431: 85 F6              test        esi,esi
+  00C71433: 0F 84 34 02 00 00  je          00C7166D
+  00C71439: 8B 76 0C           mov         esi,dword ptr [esi+0Ch]
+  00C7143C: 89 74 24 2C        mov         dword ptr [esp+2Ch],esi
+  00C71440: 85 F6              test        esi,esi
+  00C71442: 0F 84 25 02 00 00  je          00C7166D
+  00C71448: 8B 76 08           mov         esi,dword ptr [esi+8]
+  00C7144B: 8D 86 B0 01 00 00  lea         eax,[esi+000001B0h]
+  00C71451: 85 F6              test        esi,esi
+  00C71453: 75 05              jne         00C7145A
+  00C71455: B8 30 7E 26 01     mov         eax,1267E30h
+  00C7145A: 50                 push        eax
+  00C7145B: 8D 44 24 54        lea         eax,[esp+54h]
+  00C7145F: 50                 push        eax
+  00C71460: E8 BB 71 7E FF     call        00458620
+  00C71465: D9 44 24 58        fld         dword ptr [esp+58h]
+  00C71469: D9 C0              fld         st(0)
+  00C7146B: 83 C4 08           add         esp,8
+  00C7146E: D9 44 24 54        fld         dword ptr [esp+54h]
+  00C71472: D9 C0              fld         st(0)
+  00C71474: D9 44 24 58        fld         dword ptr [esp+58h]
+  00C71478: D9 C0              fld         st(0)
+  00C7147A: D9 C2              fld         st(2)
+  00C7147C: DE CB              fmulp       st(3),st
+  00C7147E: D9 C4              fld         st(4)
+  00C71480: DE CD              fmulp       st(5),st
+  00C71482: D9 CA              fxch        st(2)
+  00C71484: DE C4              faddp       st(4),st
+  00C71486: D9 C1              fld         st(1)
+  00C71488: DE CA              fmulp       st(2),st
+  00C7148A: D9 CB              fxch        st(3)
+  00C7148C: DE C1              faddp       st(1),st
+  00C7148E: D9 5C 24 18        fstp        dword ptr [esp+18h]
+  00C71492: D9 EE              fldz
+  00C71494: D8 54 24 18        fcom        dword ptr [esp+18h]
+  00C71498: DF E0              fnstsw      ax
+  00C7149A: F6 C4 05           test        ah,5
+  00C7149D: 0F 8A C2 01 00 00  jp          00C71665
+  00C714A3: 8B 87 F8 FB FF FF  mov         eax,dword ptr [edi+FFFFFBF8h]
+  00C714A9: D9 94 24 88 00 00  fst         dword ptr [esp+00000088h]
+            00
+  00C714B0: 8D B7 F0 FB FF FF  lea         esi,[edi+FFFFFBF0h]
+  00C714B6: D9 94 24 8C 00 00  fst         dword ptr [esp+0000008Ch]
+            00
+  00C714BD: D9 9C 24 90 00 00  fstp        dword ptr [esp+00000090h]
+            00
+  00C714C4: 89 44 24 20        mov         dword ptr [esp+20h],eax
+  00C714C8: 85 C0              test        eax,eax
+  00C714CA: 74 3C              je          00C71508
+  00C714CC: DD DA              fstp        st(2)
+  00C714CE: 8B CE              mov         ecx,esi
+  00C714D0: DD D9              fstp        st(1)
+  00C714D2: DD D8              fstp        st(0)
+  00C714D4: E8 47 82 01 00     call        00C89720
+  00C714D9: 8B 4C 24 20        mov         ecx,dword ptr [esp+20h]
+  00C714DD: E8 6E B4 03 00     call        00CAC950
+  00C714E2: 50                 push        eax
+  00C714E3: 8D 8C 24 8C 00 00  lea         ecx,[esp+0000008Ch]
+            00
+  00C714EA: 51                 push        ecx
+  00C714EB: E8 30 71 7E FF     call        00458620
+  00C714F0: 83 C4 08           add         esp,8
+  00C714F3: 8B CE              mov         ecx,esi
+  00C714F5: E8 26 82 01 00     call        00C89720
+  00C714FA: D9 44 24 54        fld         dword ptr [esp+54h]
+  00C714FE: D9 44 24 58        fld         dword ptr [esp+58h]
+  00C71502: D9 44 24 50        fld         dword ptr [esp+50h]
+  00C71506: D9 CA              fxch        st(2)
+  00C71508: D9 84 24 88 00 00  fld         dword ptr [esp+00000088h]
+            00
+  00C7150F: D8 CB              fmul        st,st(3)
+  00C71511: D9 84 24 8C 00 00  fld         dword ptr [esp+0000008Ch]
+            00
+  00C71518: D8 CA              fmul        st,st(2)
+  00C7151A: DE C1              faddp       st(1),st
+  00C7151C: D9 84 24 90 00 00  fld         dword ptr [esp+00000090h]
+            00
+  00C71523: D8 CB              fmul        st,st(3)
+  00C71525: DE C1              faddp       st(1),st
+  00C71527: D9 5C 24 20        fstp        dword ptr [esp+20h]
+  00C7152B: D9 44 24 20        fld         dword ptr [esp+20h]
+  00C7152F: D9 C0              fld         st(0)
+  00C71531: D8 CC              fmul        st,st(4)
+  00C71533: D9 5C 24 20        fstp        dword ptr [esp+20h]
+  00C71537: D9 C0              fld         st(0)
+  00C71539: D8 CA              fmul        st,st(2)
+  00C7153B: D9 5C 24 78        fstp        dword ptr [esp+78h]
+  00C7153F: D8 CA              fmul        st,st(2)
+  00C71541: D9 5C 24 38        fstp        dword ptr [esp+38h]
+  00C71545: D9 44 24 18        fld         dword ptr [esp+18h]
+  00C71549: D9 E8              fld1
+  00C7154B: DE F1              fdivrp      st(1),st
+  00C7154D: D9 5C 24 34        fstp        dword ptr [esp+34h]
+  00C71551: D9 44 24 20        fld         dword ptr [esp+20h]
+  00C71555: D9 44 24 34        fld         dword ptr [esp+34h]
+  00C71559: D9 C0              fld         st(0)
+  00C7155B: DE CA              fmulp       st(2),st
+  00C7155D: D9 C9              fxch        st(1)
+  00C7155F: D9 5C 24 34        fstp        dword ptr [esp+34h]
+  00C71563: D9 44 24 78        fld         dword ptr [esp+78h]
+  00C71567: D8 C9              fmul        st,st(1)
+  00C71569: D9 5C 24 78        fstp        dword ptr [esp+78h]
+  00C7156D: D8 4C 24 38        fmul        dword ptr [esp+38h]
+  00C71571: D9 5C 24 20        fstp        dword ptr [esp+20h]
+  00C71575: D9 44 24 78        fld         dword ptr [esp+78h]
+  00C71579: D9 C0              fld         st(0)
+  00C7157B: D8 CA              fmul        st,st(2)
+  00C7157D: D9 44 24 34        fld         dword ptr [esp+34h]
+  00C71581: D9 C0              fld         st(0)
+  00C71583: D8 CE              fmul        st,st(6)
+  00C71585: DE C2              faddp       st(2),st
+  00C71587: D9 44 24 20        fld         dword ptr [esp+20h]
+  00C7158B: D8 CD              fmul        st,st(5)
+  00C7158D: DE C2              faddp       st(2),st
+  00C7158F: D9 C9              fxch        st(1)
+  00C71591: D9 5C 24 38        fstp        dword ptr [esp+38h]
+  00C71595: D9 EE              fldz
+  00C71597: D8 54 24 38        fcom        dword ptr [esp+38h]
+  00C7159B: DF E0              fnstsw      ax
+  00C7159D: F6 C4 05           test        ah,5
+  00C715A0: 7A 38              jp          00C715DA
+  00C715A2: D9 CD              fxch        st(5)
+  00C715A4: DE E1              fsubrp      st(1),st
+  00C715A6: D9 5C 24 50        fstp        dword ptr [esp+50h]
+  00C715AA: DE E9              fsubp       st(1),st
+  00C715AC: D9 5C 24 54        fstp        dword ptr [esp+54h]
+  00C715B0: D8 64 24 20        fsub        dword ptr [esp+20h]
+  00C715B4: D9 5C 24 58        fstp        dword ptr [esp+58h]
+  00C715B8: D9 44 24 50        fld         dword ptr [esp+50h]
+  00C715BC: D9 44 24 54        fld         dword ptr [esp+54h]
+  00C715C0: D9 44 24 58        fld         dword ptr [esp+58h]
+  00C715C4: D9 C1              fld         st(1)
+  00C715C6: DE CA              fmulp       st(2),st
+  00C715C8: D9 C2              fld         st(2)
+  00C715CA: DE CB              fmulp       st(3),st
+  00C715CC: D9 C9              fxch        st(1)
+  00C715CE: DE C2              faddp       st(2),st
+  00C715D0: DC C8              fmul        st(0),st
+  00C715D2: DE C1              faddp       st(1),st
+  00C715D4: D9 5C 24 18        fstp        dword ptr [esp+18h]
+  00C715D8: EB 0A              jmp         00C715E4
+  00C715DA: DD DD              fstp        st(5)
+  00C715DC: DD DA              fstp        st(2)
+  00C715DE: DD DA              fstp        st(2)
+  00C715E0: DD D9              fstp        st(1)
+  00C715E2: DD D8              fstp        st(0)
+  00C715E4: D8 5C 24 18        fcomp       dword ptr [esp+18h]
+  00C715E8: DF E0              fnstsw      ax
+  00C715EA: F6 C4 05           test        ah,5
+  00C715ED: 7A 7E              jp          00C7166D
+  00C715EF: 6A 28              push        28h
+  00C715F1: B9 38 62 1F 01     mov         ecx,11F6238h
+  00C715F6: E8 45 28 E3 FF     call        00AA3E40
+  00C715FB: 85 C0              test        eax,eax
+  00C715FD: 74 0B              je          00C7160A
+  00C715FF: 8B C8              mov         ecx,eax
+  00C71601: E8 EA C3 FF FF     call        00C6D9F0
+  00C71606: 8B F0              mov         esi,eax
+  00C71608: EB 02              jmp         00C7160C
+  00C7160A: 33 F6              xor         esi,esi
+  00C7160C: 8B 54 24 2C        mov         edx,dword ptr [esp+2Ch]
+  00C71610: 52                 push        edx
+  00C71611: 8B CE              mov         ecx,esi
+  00C71613: 89 74 24 3C        mov         dword ptr [esp+3Ch],esi
+  00C71617: E8 B4 9A 9F FF     call        0066B0D0
+  00C7161C: 8B 44 24 30        mov         eax,dword ptr [esp+30h]
+  00C71620: 50                 push        eax
+  00C71621: 8D 4E 04           lea         ecx,[esi+4]
+  00C71624: 51                 push        ecx
+  00C71625: E8 F6 6F 7E FF     call        00458620
+  00C7162A: 8B 54 24 38        mov         edx,dword ptr [esp+38h]
+  00C7162E: 83 C2 10           add         edx,10h
+  00C71631: 52                 push        edx
+  00C71632: 8D 46 10           lea         eax,[esi+10h]
+  00C71635: 50                 push        eax
+  00C71636: E8 E5 6F 7E FF     call        00458620
+  00C7163B: 8B 4C 24 60        mov         ecx,dword ptr [esp+60h]
+  00C7163F: 8B 54 24 64        mov         edx,dword ptr [esp+64h]
+  00C71643: 8B 44 24 68        mov         eax,dword ptr [esp+68h]
+  00C71647: 89 4E 1C           mov         dword ptr [esi+1Ch],ecx
+  00C7164A: 83 C4 10           add         esp,10h
+  00C7164D: 8D 4C 24 38        lea         ecx,[esp+38h]
+  00C71651: 51                 push        ecx
+  00C71652: 89 56 20           mov         dword ptr [esi+20h],edx
+  00C71655: 8D 8F 38 02 00 00  lea         ecx,[edi+00000238h]
+  00C7165B: 89 46 24           mov         dword ptr [esi+24h],eax
+  00C7165E: E8 4D B1 04 00     call        00CBC7B0
+  00C71663: EB 08              jmp         00C7166D
+  00C71665: DD DB              fstp        st(3)
+  00C71667: DD D8              fstp        st(0)
+  00C71669: DD D8              fstp        st(0)
+  00C7166B: DD D8              fstp        st(0)
+  00C7166D: 8B 44 24 30        mov         eax,dword ptr [esp+30h]
+  00C71671: 0F 28 40 10        movaps      xmm0,xmmword ptr [eax+10h]
+  00C71675: 83 E3 7F           and         ebx,7Fh
+  00C71678: 8B F3              mov         esi,ebx
+  00C7167A: 8B 5F 04           mov         ebx,dword ptr [edi+4]
+  00C7167D: 83 FE 02           cmp         esi,2
+  00C71680: 0F 94 C2           sete        dl
+  00C71683: 08 54 24 1F        or          byte ptr [esp+1Fh],dl
+  00C71687: C1 EB 0B           shr         ebx,0Bh
+  00C7168A: F6 D3              not         bl
+  00C7168C: 0F C6 C0 AA        shufps      xmm0,xmm0,0AAh
+  00C71690: 80 E3 01           and         bl,1
+  00C71693: 83 7C 24 3C 00     cmp         dword ptr [esp+3Ch],0
+  00C71698: F3 0F 11 84 24 A8  movss       dword ptr [esp+000000A8h],xmm0
+            00 00 00
+  00C716A1: D9 84 24 A8 00 00  fld         dword ptr [esp+000000A8h]
+            00
+  00C716A8: D9 54 24 34        fst         dword ptr [esp+34h]
+  00C716AC: 89 74 24 38        mov         dword ptr [esp+38h],esi
+  00C716B0: 88 5C 24 17        mov         byte ptr [esp+17h],bl
+  00C716B4: 0F 84 5C 04 00 00  je          00C71B16
+  00C716BA: DC 1D A8 4A 0C 01  fcomp       qword ptr ds:[010C4AA8h]
+  00C716C0: DF E0              fnstsw      ax
+  00C716C2: F6 C4 41           test        ah,41h
+  00C716C5: 0F 85 4D 04 00 00  jne         00C71B18
+  00C716CB: 8B 4C 24 3C        mov         ecx,dword ptr [esp+3Ch]
+  00C716CF: 80 B9 E8 00 00 00  cmp         byte ptr [ecx+000000E8h],4
+            04
+  00C716D6: 0F 85 3C 04 00 00  jne         00C71B18
+  00C716DC: 83 3D B4 7B 26 01  cmp         dword ptr ds:[01267BB4h],0
+            00
+  00C716E3: 0F 85 2F 04 00 00  jne         00C71B18
+  00C716E9: 8D 94 24 E4 00 00  lea         edx,[esp+000000E4h]
+            00
+  00C716F0: 52                 push        edx
+  00C716F1: 8D 8F F0 FB FF FF  lea         ecx,[edi+FFFFFBF0h]
+  00C716F7: E8 04 CC FF FF     call        00C6E300
+  00C716FC: D9 47 60           fld         dword ptr [edi+60h]
+  00C716FF: D8 84 24 EC 00 00  fadd        dword ptr [esp+000000ECh]
+            00
+  00C71706: 8B 44 24 30        mov         eax,dword ptr [esp+30h]
+  00C7170A: 0F 28 00           movaps      xmm0,xmmword ptr [eax]
+  00C7170D: 0F C6 C0 AA        shufps      xmm0,xmm0,0AAh
+  00C71711: D9 9C 24 EC 00 00  fstp        dword ptr [esp+000000ECh]
+            00
+  00C71718: F3 0F 11 84 24 98  movss       dword ptr [esp+00000098h],xmm0
+            00 00 00
+  00C71721: 0F 28 84 24 E4 00  movaps      xmm0,xmmword ptr [esp+000000E4h]
+            00 00
+  00C71729: D9 84 24 98 00 00  fld         dword ptr [esp+00000098h]
+            00
+  00C71730: 0F C6 C0 AA        shufps      xmm0,xmm0,0AAh
+  00C71734: F3 0F 11 84 24 A0  movss       dword ptr [esp+000000A0h],xmm0
+            00 00 00
+  00C7173D: D9 84 24 A0 00 00  fld         dword ptr [esp+000000A0h]
+            00
+  00C71744: DE D9              fcompp
+  00C71746: DF E0              fnstsw      ax
+  00C71748: F6 C4 01           test        ah,1
+  00C7174B: 0F 85 C7 03 00 00  jne         00C71B18
+  00C71751: D9 E8              fld1
+  00C71753: 33 C0              xor         eax,eax
+  00C71755: 83 C9 FF           or          ecx,0FFFFFFFFh
+  00C71758: D9 94 24 D4 01 00  fst         dword ptr [esp+000001D4h]
+            00
+  00C7175F: D9 9C 24 B8 01 00  fstp        dword ptr [esp+000001B8h]
+            00
+  00C71766: C7 84 24 B4 01 00  mov         dword ptr [esp+000001B4h],1034EC4h
+            00 C4 4E 03 01
+  00C71771: 89 84 24 14 02 00  mov         dword ptr [esp+00000214h],eax
+            00
+  00C71778: 89 8C 24 D8 01 00  mov         dword ptr [esp+000001D8h],ecx
+            00
+  00C7177F: 89 84 24 04 02 00  mov         dword ptr [esp+00000204h],eax
+            00
+  00C71786: 89 8C 24 E4 01 00  mov         dword ptr [esp+000001E4h],ecx
+            00
+  00C7178D: 89 44 24 44        mov         dword ptr [esp+44h],eax
+  00C71791: 89 44 24 48        mov         dword ptr [esp+48h],eax
+  00C71795: C7 44 24 4C 00 00  mov         dword ptr [esp+4Ch],80000000h
+            00 80
+  00C7179D: 8B 87 84 01 00 00  mov         eax,dword ptr [edi+00000184h]
+  00C717A3: 8B 58 08           mov         ebx,dword ptr [eax+8]
+  00C717A6: C6 84 24 40 02 00  mov         byte ptr [esp+00000240h],2
+            00 02
+  00C717AE: E8 9D 3F 01 00     call        00C85750
+  00C717B3: 8B 8B 64 01 00 00  mov         ecx,dword ptr [ebx+00000164h]
+  00C717B9: 8B 74 24 48        mov         esi,dword ptr [esp+48h]
+  00C717BD: 3B CE              cmp         ecx,esi
+  00C717BF: 8B 40 10           mov         eax,dword ptr [eax+10h]
+  00C717C2: 89 4C 24 18        mov         dword ptr [esp+18h],ecx
+  00C717C6: 7F 02              jg          00C717CA
+  00C717C8: 8B F1              mov         esi,ecx
+  00C717CA: 8B 4C 24 4C        mov         ecx,dword ptr [esp+4Ch]
+  00C717CE: 8B 54 24 18        mov         edx,dword ptr [esp+18h]
+  00C717D2: 81 E1 FF FF FF 3F  and         ecx,3FFFFFFFh
+  00C717D8: 3B CA              cmp         ecx,edx
+  00C717DA: 7D 1D              jge         00C717F9
+  00C717DC: 03 C9              add         ecx,ecx
+  00C717DE: 3B D1              cmp         edx,ecx
+  00C717E0: 7C 02              jl          00C717E4
+  00C717E2: 8B CA              mov         ecx,edx
+  00C717E4: 6A 04              push        4
+  00C717E6: 51                 push        ecx
+  00C717E7: 8D 4C 24 4C        lea         ecx,[esp+4Ch]
+  00C717EB: 51                 push        ecx
+  00C717EC: 50                 push        eax
+  00C717ED: E8 CE F0 01 00     call        00C908C0
+  00C717F2: 8B 54 24 28        mov         edx,dword ptr [esp+28h]
+  00C717F6: 83 C4 10           add         esp,10h
+  00C717F9: 8B 83 60 01 00 00  mov         eax,dword ptr [ebx+00000160h]
+  00C717FF: 8B 4C 24 44        mov         ecx,dword ptr [esp+44h]
+  00C71803: 89 44 24 2C        mov         dword ptr [esp+2Ch],eax
+  00C71807: 33 C0              xor         eax,eax
+  00C71809: 85 F6              test        esi,esi
+  00C7180B: 7E 13              jle         00C71820
+  00C7180D: 8B 54 24 2C        mov         edx,dword ptr [esp+2Ch]
+  00C71811: 8B 14 82           mov         edx,dword ptr [edx+eax*4]
+  00C71814: 89 14 81           mov         dword ptr [ecx+eax*4],edx
+  00C71817: 40                 inc         eax
+  00C71818: 3B C6              cmp         eax,esi
+  00C7181A: 7C F1              jl          00C7180D
+  00C7181C: 8B 54 24 18        mov         edx,dword ptr [esp+18h]
+  00C71820: 8B 83 60 01 00 00  mov         eax,dword ptr [ebx+00000160h]
+  00C71826: 8B 5C 24 44        mov         ebx,dword ptr [esp+44h]
+  00C7182A: 8D 0C B5 00 00 00  lea         ecx,[esi*4+00000000h]
+            00
+  00C71831: 03 C1              add         eax,ecx
+  00C71833: 03 D9              add         ebx,ecx
+  00C71835: 8B CA              mov         ecx,edx
+  00C71837: 2B CE              sub         ecx,esi
+  00C71839: 85 C9              test        ecx,ecx
+  00C7183B: 7E 15              jle         00C71852
+  00C7183D: 8B D3              mov         edx,ebx
+  00C7183F: 2B C3              sub         eax,ebx
+  00C71841: 85 D2              test        edx,edx
+  00C71843: 74 05              je          00C7184A
+  00C71845: 8B 34 10           mov         esi,dword ptr [eax+edx]
+  00C71848: 89 32              mov         dword ptr [edx],esi
+  00C7184A: 83 C2 04           add         edx,4
+  00C7184D: 83 E9 01           sub         ecx,1
+  00C71850: 75 EF              jne         00C71841
+  00C71852: A1 10 7C 26 01     mov         eax,dword ptr ds:[01267C10h]
+  00C71857: 8B 4C 24 18        mov         ecx,dword ptr [esp+18h]
+  00C7185B: F3 0F 10 05 78 1D  movss       xmm0,dword ptr ds:[01011D78h]
+            01 01
+  00C71863: 89 4C 24 48        mov         dword ptr [esp+48h],ecx
+  00C71867: A8 01              test        al,1
+  00C71869: 75 2E              jne         00C71899
+  00C7186B: F3 0F 10 1D A0 4A  movss       xmm3,dword ptr ds:[010C4AA0h]
+            0C 01
+  00C71873: F3 0F 10 D0        movss       xmm2,xmm0
+  00C71877: F3 0F 10 C8        movss       xmm1,xmm0
+  00C7187B: F3 0F 10 E0        movss       xmm4,xmm0
+  00C7187F: 83 C8 01           or          eax,1
+  00C71882: A3 10 7C 26 01     mov         dword ptr ds:[01267C10h],eax
+  00C71887: 0F 14 D3           unpcklps    xmm2,xmm3
+  00C7188A: 0F 14 CC           unpcklps    xmm1,xmm4
+  00C7188D: 0F 14 D1           unpcklps    xmm2,xmm1
+  00C71890: 0F 29 15 00 7C 26  movaps      xmmword ptr ds:[01267C00h],xmm2
+            01
+  00C71897: EB 07              jmp         00C718A0
+  00C71899: 0F 28 15 00 7C 26  movaps      xmm2,xmmword ptr ds:[01267C00h]
+            01
+  00C718A0: A8 02              test        al,2
+  00C718A2: 75 2A              jne         00C718CE
+  00C718A4: F3 0F 10 25 9C 4A  movss       xmm4,dword ptr ds:[010C4A9Ch]
+            0C 01
+  00C718AC: F3 0F 10 C8        movss       xmm1,xmm0
+  00C718B0: F3 0F 10 D8        movss       xmm3,xmm0
+  00C718B4: 83 C8 02           or          eax,2
+  00C718B7: A3 10 7C 26 01     mov         dword ptr ds:[01267C10h],eax
+  00C718BC: 0F 14 CC           unpcklps    xmm1,xmm4
+  00C718BF: 0F 14 D8           unpcklps    xmm3,xmm0
+  00C718C2: 0F 14 CB           unpcklps    xmm1,xmm3
+  00C718C5: 0F 29 0D F0 7B 26  movaps      xmmword ptr ds:[01267BF0h],xmm1
+            01
+  00C718CC: EB 07              jmp         00C718D5
+  00C718CE: 0F 28 0D F0 7B 26  movaps      xmm1,xmmword ptr ds:[01267BF0h]
+            01
+  00C718D5: 8B 44 24 30        mov         eax,dword ptr [esp+30h]
+  00C718D9: D9 05 5C 5F 01 01  fld         dword ptr ds:[01015F5Ch]
+  00C718DF: 0F 28 00           movaps      xmm0,xmmword ptr [eax]
+  00C718E2: D9 1D B0 7B 26 01  fstp        dword ptr ds:[01267BB0h]
+  00C718E8: 0F 58 C2           addps       xmm0,xmm2
+  00C718EB: 0F 29 84 24 F4 00  movaps      xmmword ptr [esp+000000F4h],xmm0
+            00 00
+  00C718F3: 0F 5C C1           subps       xmm0,xmm1
+  00C718F6: 0F 29 84 24 04 01  movaps      xmmword ptr [esp+00000104h],xmm0
+            00 00
+  00C718FE: C7 44 24 20 00 00  mov         dword ptr [esp+20h],0
+            00 00
+  00C71906: 85 C9              test        ecx,ecx
+  00C71908: 0F 8E B6 01 00 00  jle         00C71AC4
+  00C7190E: 8B FF              mov         edi,edi
+  00C71910: 8B 4C 24 20        mov         ecx,dword ptr [esp+20h]
+  00C71914: 8B 54 24 44        mov         edx,dword ptr [esp+44h]
+  00C71918: 8B 04 8A           mov         eax,dword ptr [edx+ecx*4]
+  00C7191B: 80 78 18 01        cmp         byte ptr [eax+18h],1
+  00C7191F: 89 44 24 18        mov         dword ptr [esp+18h],eax
+  00C71923: 0F 85 88 01 00 00  jne         00C71AB1
+  00C71929: 0F BE 58 10        movsx       ebx,byte ptr [eax+10h]
+  00C7192D: 03 D8              add         ebx,eax
+  00C7192F: 0F 84 7C 01 00 00  je          00C71AB1
+  00C71935: 80 BB E8 00 00 00  cmp         byte ptr [ebx+000000E8h],4
+            04
+  00C7193C: 0F 85 6F 01 00 00  jne         00C71AB1
+  00C71942: D9 E8              fld1
+  00C71944: 33 C0              xor         eax,eax
+  00C71946: 89 84 24 54 01 00  mov         dword ptr [esp+00000154h],eax
+            00
+  00C7194D: D9 9C 24 74 01 00  fstp        dword ptr [esp+00000174h]
+            00
+  00C71954: 89 84 24 58 01 00  mov         dword ptr [esp+00000158h],eax
+            00
+  00C7195B: 83 C9 FF           or          ecx,0FFFFFFFFh
+  00C7195E: 89 84 24 A4 01 00  mov         dword ptr [esp+000001A4h],eax
+            00
+  00C71965: 8D 84 24 F4 00 00  lea         eax,[esp+000000F4h]
+            00
+  00C7196C: 50                 push        eax
+  00C7196D: 89 8C 24 7C 01 00  mov         dword ptr [esp+0000017Ch],ecx
+            00
+  00C71974: 89 8C 24 88 01 00  mov         dword ptr [esp+00000188h],ecx
+            00
+  00C7197B: 8D B3 F0 00 00 00  lea         esi,[ebx+000000F0h]
+  00C71981: 56                 push        esi
+  00C71982: 8D 8C 24 3C 01 00  lea         ecx,[esp+0000013Ch]
+            00
+  00C71989: E8 02 DD 00 00     call        00C7F690
+  00C7198E: 8D 8C 24 04 01 00  lea         ecx,[esp+00000104h]
+            00
+  00C71995: 51                 push        ecx
+  00C71996: 56                 push        esi
+  00C71997: 8D 8C 24 4C 01 00  lea         ecx,[esp+0000014Ch]
+            00
+  00C7199E: E8 ED DC 00 00     call        00C7F690
+  00C719A3: 8B 54 24 18        mov         edx,dword ptr [esp+18h]
+  00C719A7: 8B 0A              mov         ecx,dword ptr [edx]
+  00C719A9: 8B 01              mov         eax,dword ptr [ecx]
+  00C719AB: 8B 40 20           mov         eax,dword ptr [eax+20h]
+  00C719AE: 8D 94 24 64 01 00  lea         edx,[esp+00000164h]
+            00
+  00C719B5: 52                 push        edx
+  00C719B6: 8D 94 24 38 01 00  lea         edx,[esp+00000138h]
+            00
+  00C719BD: 52                 push        edx
+  00C719BE: 8D 54 24 77        lea         edx,[esp+77h]
+  00C719C2: 52                 push        edx
+  00C719C3: FF D0              call        eax
+  00C719C5: D9 E8              fld1
+  00C719C7: D8 9C 24 74 01 00  fcomp       dword ptr [esp+00000174h]
+            00
+  00C719CE: DF E0              fnstsw      ax
+  00C719D0: F6 C4 41           test        ah,41h
+  00C719D3: 0F 85 D8 00 00 00  jne         00C71AB1
+  00C719D9: 8B 73 2C           mov         esi,dword ptr [ebx+2Ch]
+  00C719DC: 83 E6 7F           and         esi,7Fh
+  00C719DF: 83 CA FF           or          edx,0FFFFFFFFh
+  00C719E2: 89 77 28           mov         dword ptr [edi+28h],esi
+  00C719E5: 33 C0              xor         eax,eax
+  00C719E7: EB 07              jmp         00C719F0
+  00C719E9: 8D A4 24 00 00 00  lea         esp,[esp+00000000h]
+            00
+  00C719F0: 8B 8C 84 84 01 00  mov         ecx,dword ptr [esp+eax*4+00000184h]
+            00
+  00C719F7: 83 F9 FF           cmp         ecx,0FFFFFFFFh
+  00C719FA: 74 08              je          00C71A04
+  00C719FC: 40                 inc         eax
+  00C719FD: 83 F8 08           cmp         eax,8
+  00C71A00: 8B D1              mov         edx,ecx
+  00C71A02: 7C EC              jl          00C719F0
+  00C71A04: 83 FA FF           cmp         edx,0FFFFFFFFh
+  00C71A07: 75 24              jne         00C71A2D
+  00C71A09: 8B 4C 24 18        mov         ecx,dword ptr [esp+18h]
+  00C71A0D: 8B 01              mov         eax,dword ptr [ecx]
+  00C71A0F: 85 C0              test        eax,eax
+  00C71A11: 0F 84 9A 00 00 00  je          00C71AB1
+  00C71A17: 8B 40 08           mov         eax,dword ptr [eax+8]
+  00C71A1A: 85 C0              test        eax,eax
+  00C71A1C: 0F 84 8F 00 00 00  je          00C71AB1
+  00C71A22: 8B 50 10           mov         edx,dword ptr [eax+10h]
+  00C71A25: 83 E2 1F           and         edx,1Fh
+  00C71A28: 80 FA 0F           cmp         dl,0Fh
+  00C71A2B: EB 23              jmp         00C71A50
+  00C71A2D: 83 FE 11           cmp         esi,11h
+  00C71A30: 0F 84 7B 00 00 00  je          00C71AB1
+  00C71A36: 8B 44 24 18        mov         eax,dword ptr [esp+18h]
+  00C71A3A: 50                 push        eax
+  00C71A3B: E8 90 E5 00 00     call        00C7FFD0
+  00C71A40: 83 C4 04           add         esp,4
+  00C71A43: 85 C0              test        eax,eax
+  00C71A45: 74 6A              je          00C71AB1
+  00C71A47: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C71A4A: 83 E1 1F           and         ecx,1Fh
+  00C71A4D: 80 F9 0F           cmp         cl,0Fh
+  00C71A50: 75 5F              jne         00C71AB1
+  00C71A52: F3 0F 10 84 24 74  movss       xmm0,dword ptr [esp+00000174h]
+            01 00 00
+  00C71A5B: 0F 28 8C 24 04 01  movaps      xmm1,xmmword ptr [esp+00000104h]
+            00 00
+  00C71A63: 0F 28 D0           movaps      xmm2,xmm0
+  00C71A66: 0F 28 84 24 F4 00  movaps      xmm0,xmmword ptr [esp+000000F4h]
+            00 00
+  00C71A6E: 0F C6 C0 AA        shufps      xmm0,xmm0,0AAh
+  00C71A72: 0F C6 C9 AA        shufps      xmm1,xmm1,0AAh
+  00C71A76: F3 0F 5C C8        subss       xmm1,xmm0
+  00C71A7A: F3 0F 59 CA        mulss       xmm1,xmm2
+  00C71A7E: F3 0F 58 C1        addss       xmm0,xmm1
+  00C71A82: F3 0F 11 84 24 94  movss       dword ptr [esp+00000094h],xmm0
+            00 00 00
+  00C71A8B: D9 84 24 94 00 00  fld         dword ptr [esp+00000094h]
+            00
+  00C71A92: D9 05 B0 7B 26 01  fld         dword ptr ds:[01267BB0h]
+  00C71A98: D8 D9              fcomp       st(1)
+  00C71A9A: DF E0              fnstsw      ax
+  00C71A9C: F6 C4 05           test        ah,5
+  00C71A9F: 7A 0E              jp          00C71AAF
+  00C71AA1: D9 1D B0 7B 26 01  fstp        dword ptr ds:[01267BB0h]
+  00C71AA7: 89 1D B4 7B 26 01  mov         dword ptr ds:[01267BB4h],ebx
+  00C71AAD: EB 02              jmp         00C71AB1
+  00C71AAF: DD D8              fstp        st(0)
+  00C71AB1: 8B 44 24 20        mov         eax,dword ptr [esp+20h]
+  00C71AB5: 40                 inc         eax
+  00C71AB6: 3B 44 24 48        cmp         eax,dword ptr [esp+48h]
+  00C71ABA: 89 44 24 20        mov         dword ptr [esp+20h],eax
+  00C71ABE: 0F 8C 4C FE FF FF  jl          00C71910
+  00C71AC4: C6 84 24 40 02 00  mov         byte ptr [esp+00000240h],1
+            00 01
+  00C71ACC: E8 7F 3C 01 00     call        00C85750
+  00C71AD1: 8B 48 10           mov         ecx,dword ptr [eax+10h]
+  00C71AD4: 8B 44 24 4C        mov         eax,dword ptr [esp+4Ch]
+  00C71AD8: 33 F6              xor         esi,esi
+  00C71ADA: 89 74 24 48        mov         dword ptr [esp+48h],esi
+  00C71ADE: 85 C0              test        eax,eax
+  00C71AE0: 78 16              js          00C71AF8
+  00C71AE2: 8B 11              mov         edx,dword ptr [ecx]
+  00C71AE4: 8B 52 10           mov         edx,dword ptr [edx+10h]
+  00C71AE7: 25 FF FF FF 3F     and         eax,3FFFFFFFh
+  00C71AEC: 03 C0              add         eax,eax
+  00C71AEE: 03 C0              add         eax,eax
+  00C71AF0: 50                 push        eax
+  00C71AF1: 8B 44 24 48        mov         eax,dword ptr [esp+48h]
+  00C71AF5: 50                 push        eax
+  00C71AF6: FF D2              call        edx
+  00C71AF8: 8A 5C 24 17        mov         bl,byte ptr [esp+17h]
+  00C71AFC: 89 74 24 44        mov         dword ptr [esp+44h],esi
+  00C71B00: 8B 74 24 38        mov         esi,dword ptr [esp+38h]
+  00C71B04: C7 44 24 4C 00 00  mov         dword ptr [esp+4Ch],80000000h
+            00 80
+  00C71B0C: C6 84 24 40 02 00  mov         byte ptr [esp+00000240h],0
+            00 00
+  00C71B14: EB 02              jmp         00C71B18
+  00C71B16: DD D8              fstp        st(0)
+  00C71B18: 8B 4C 24 24        mov         ecx,dword ptr [esp+24h]
+  00C71B1C: 8B 44 24 3C        mov         eax,dword ptr [esp+3Ch]
+  00C71B20: 0F 28 01           movaps      xmm0,xmmword ptr [ecx]
+  00C71B23: 0F 29 84 24 D4 00  movaps      xmmword ptr [esp+000000D4h],xmm0
+            00 00
+  00C71B2B: 85 C0              test        eax,eax
+  00C71B2D: 0F 84 0B 03 00 00  je          00C71E3E
+  00C71B33: 83 C6 FE           add         esi,0FFFFFFFEh
+  00C71B36: 83 FE 08           cmp         esi,8
+  00C71B39: 0F 87 1B 01 00 00  ja          00C71C5A
+  00C71B3F: 0F B6 96 C8 21 C7  movzx       edx,byte ptr [esi+00C721C8h]
+            00
+  00C71B46: FF 24 95 B8 21 C7  jmp         dword ptr [edx*4+00C721B8h]
+            00
+  00C71B4D: 0F B6 80 E8 00 00  movzx       eax,byte ptr [eax+000000E8h]
+            00
+  00C71B54: 83 F8 04           cmp         eax,4
+  00C71B57: 74 05              je          00C71B5E
+  00C71B59: 83 F8 05           cmp         eax,5
+  00C71B5C: 75 0E              jne         00C71B6C
+  00C71B5E: D9 05 98 58 0A 01  fld         dword ptr ds:[010A5898h]
+  00C71B64: D9 59 28           fstp        dword ptr [ecx+28h]
+  00C71B67: E9 54 01 00 00     jmp         00C71CC0
+  00C71B6C: F6 47 06 01        test        byte ptr [edi+6],1
+  00C71B70: 75 6A              jne         00C71BDC
+  00C71B72: F3 0F 10 05 78 1D  movss       xmm0,dword ptr ds:[01011D78h]
+            01 01
+  00C71B7A: D9 E8              fld1
+  00C71B7C: F3 0F 10 15 68 20  movss       xmm2,dword ptr ds:[01012068h]
+            01 01
+  00C71B84: D9 5C 24 34        fstp        dword ptr [esp+34h]
+  00C71B88: D9 EE              fldz
+  00C71B8A: 8B 74 24 24        mov         esi,dword ptr [esp+24h]
+  00C71B8E: 8B 44 24 3C        mov         eax,dword ptr [esp+3Ch]
+  00C71B92: D9 5E 2C           fstp        dword ptr [esi+2Ch]
+  00C71B95: F3 0F 10 C8        movss       xmm1,xmm0
+  00C71B99: 0F B6 88 E8 00 00  movzx       ecx,byte ptr [eax+000000E8h]
+            00
+  00C71BA0: F3 0F 10 D8        movss       xmm3,xmm0
+  00C71BA4: 8D 94 24 B0 00 00  lea         edx,[esp+000000B0h]
+            00
+  00C71BAB: 0F 14 C2           unpcklps    xmm0,xmm2
+  00C71BAE: 52                 push        edx
+  00C71BAF: 89 8C 24 B4 00 00  mov         dword ptr [esp+000000B4h],ecx
+            00
+  00C71BB6: 0F 14 CB           unpcklps    xmm1,xmm3
+  00C71BB9: 0F 14 C1           unpcklps    xmm0,xmm1
+  00C71BBC: 0F 29 84 24 D8 00  movaps      xmmword ptr [esp+000000D8h],xmm0
+            00 00
+  00C71BC4: E8 17 B1 01 00     call        00C8CCE0
+  00C71BC9: 83 C4 04           add         esp,4
+  00C71BCC: 84 C0              test        al,al
+  00C71BCE: 74 0C              je          00C71BDC
+  00C71BD0: 0F 28 84 24 B4 00  movaps      xmm0,xmmword ptr [esp+000000B4h]
+            00 00
+  00C71BD8: 0F 29 46 10        movaps      xmmword ptr [esi+10h],xmm0
+  00C71BDC: 8B 4C 24 24        mov         ecx,dword ptr [esp+24h]
+  00C71BE0: 32 DB              xor         bl,bl
+  00C71BE2: E9 D9 00 00 00     jmp         00C71CC0
+  00C71BE7: F6 47 06 01        test        byte ptr [edi+6],1
+  00C71BEB: 75 69              jne         00C71C56
+  00C71BED: 8B 4C 24 3C        mov         ecx,dword ptr [esp+3Ch]
+  00C71BF1: 81 C1 E0 00 00 00  add         ecx,0E0h
+  00C71BF7: E8 34 48 01 00     call        00C86430
+  00C71BFC: D9 5C 24 2C        fstp        dword ptr [esp+2Ch]
+  00C71C00: D9 44 24 2C        fld         dword ptr [esp+2Ch]
+  00C71C04: D9 05 28 01 1B 01  fld         dword ptr ds:[011B0128h]
+  00C71C0A: DE D9              fcompp
+  00C71C0C: DF E0              fnstsw      ax
+  00C71C0E: F6 C4 41           test        ah,41h
+  00C71C11: 75 10              jne         00C71C23
+  00C71C13: 8B 44 24 24        mov         eax,dword ptr [esp+24h]
+  00C71C17: 0F 28 84 24 B4 00  movaps      xmm0,xmmword ptr [esp+000000B4h]
+            00 00
+  00C71C1F: 0F 29 40 10        movaps      xmmword ptr [eax+10h],xmm0
+  00C71C23: F3 0F 10 05 78 1D  movss       xmm0,dword ptr ds:[01011D78h]
+            01 01
+  00C71C2B: D9 E8              fld1
+  00C71C2D: F3 0F 10 15 68 20  movss       xmm2,dword ptr ds:[01012068h]
+            01 01
+  00C71C35: D9 5C 24 34        fstp        dword ptr [esp+34h]
+  00C71C39: 8B 4C 24 24        mov         ecx,dword ptr [esp+24h]
+  00C71C3D: F3 0F 10 C8        movss       xmm1,xmm0
+  00C71C41: F3 0F 10 D8        movss       xmm3,xmm0
+  00C71C45: 0F 14 C2           unpcklps    xmm0,xmm2
+  00C71C48: 0F 14 CB           unpcklps    xmm1,xmm3
+  00C71C4B: 0F 14 C1           unpcklps    xmm0,xmm1
+  00C71C4E: 0F 29 84 24 D4 00  movaps      xmmword ptr [esp+000000D4h],xmm0
+            00 00
+  00C71C56: 32 DB              xor         bl,bl
+  00C71C58: EB 66              jmp         00C71CC0
+  00C71C5A: 80 7C 24 2B 00     cmp         byte ptr [esp+2Bh],0
+  00C71C5F: 74 5F              je          00C71CC0
+  00C71C61: 8B 57 04           mov         edx,dword ptr [edi+4]
+  00C71C64: C1 EA 05           shr         edx,5
+  00C71C67: F6 C2 01           test        dl,1
+  00C71C6A: 75 54              jne         00C71CC0
+  00C71C6C: 8B 44 24 30        mov         eax,dword ptr [esp+30h]
+  00C71C70: 0F 28 08           movaps      xmm1,xmmword ptr [eax]
+  00C71C73: 0F 28 C1           movaps      xmm0,xmm1
+  00C71C76: 0F 5C 84 24 14 01  subps       xmm0,xmmword ptr [esp+00000114h]
+            00 00
+  00C71C7E: 0F 59 C0           mulps       xmm0,xmm0
+  00C71C81: 0F 28 D0           movaps      xmm2,xmm0
+  00C71C84: 0F C6 D0 55        shufps      xmm2,xmm0,55h
+  00C71C88: 0F 28 D8           movaps      xmm3,xmm0
+  00C71C8B: F3 0F 58 D0        addss       xmm2,xmm0
+  00C71C8F: 0F C6 D8 AA        shufps      xmm3,xmm0,0AAh
+  00C71C93: F3 0F 58 DA        addss       xmm3,xmm2
+  00C71C97: F3 0F 11 9C 24 9C  movss       dword ptr [esp+0000009Ch],xmm3
+            00 00 00
+  00C71CA0: D9 84 24 9C 00 00  fld         dword ptr [esp+0000009Ch]
+            00
+  00C71CA7: D9 44 24 60        fld         dword ptr [esp+60h]
+  00C71CAB: D8 D1              fcom        st(1)
+  00C71CAD: DF E0              fnstsw      ax
+  00C71CAF: DD D9              fstp        st(1)
+  00C71CB1: F6 C4 41           test        ah,41h
+  00C71CB4: 0F 85 3E 01 00 00  jne         00C71DF8
+  00C71CBA: DD D8              fstp        st(0)
+  00C71CBC: 83 4F 04 20        or          dword ptr [edi+4],20h
+  00C71CC0: D9 EE              fldz
+  00C71CC2: D9 44 24 34        fld         dword ptr [esp+34h]
+  00C71CC6: D8 D1              fcom        st(1)
+  00C71CC8: DF E0              fnstsw      ax
+  00C71CCA: DD D9              fstp        st(1)
+  00C71CCC: F6 C4 01           test        ah,1
+  00C71CCF: 0F 85 EA 03 00 00  jne         00C720BF
+  00C71CD5: D9 47 20           fld         dword ptr [edi+20h]
+  00C71CD8: C6 44 24 17 01     mov         byte ptr [esp+17h],1
+  00C71CDD: DE D9              fcompp
+  00C71CDF: DF E0              fnstsw      ax
+  00C71CE1: F6 C4 41           test        ah,41h
+  00C71CE4: 0F 85 08 03 00 00  jne         00C71FF2
+  00C71CEA: 8B 4C 24 30        mov         ecx,dword ptr [esp+30h]
+  00C71CEE: 51                 push        ecx
+  00C71CEF: 8D 8F F0 FB FF FF  lea         ecx,[edi+FFFFFBF0h]
+  00C71CF5: E8 06 CE FF FF     call        00C6EB00
+  00C71CFA: 84 C0              test        al,al
+  00C71CFC: 0F 85 47 02 00 00  jne         00C71F49
+  00C71D02: 84 DB              test        bl,bl
+  00C71D04: 75 0B              jne         00C71D11
+  00C71D06: 8B 57 04           mov         edx,dword ptr [edi+4]
+  00C71D09: C1 EA 0B           shr         edx,0Bh
+  00C71D0C: F6 C2 01           test        dl,1
+  00C71D0F: 74 16              je          00C71D27
+  00C71D11: D9 44 24 34        fld         dword ptr [esp+34h]
+  00C71D15: DC 1D 90 8A 01 01  fcomp       qword ptr ds:[01018A90h]
+  00C71D1B: DF E0              fnstsw      ax
+  00C71D1D: F6 C4 05           test        ah,5
+  00C71D20: 7A 05              jp          00C71D27
+  00C71D22: C6 44 24 17 00     mov         byte ptr [esp+17h],0
+  00C71D27: 83 7C 24 74 04     cmp         dword ptr [esp+74h],4
+  00C71D2C: 0F 8D FE 02 00 00  jge         00C72030
+  00C71D32: 84 DB              test        bl,bl
+  00C71D34: 0F 84 F6 02 00 00  je          00C72030
+  00C71D3A: 8B 5C 24 68        mov         ebx,dword ptr [esp+68h]
+  00C71D3E: 8B 73 4C           mov         esi,dword ptr [ebx+4Ch]
+  00C71D41: 8B 44 24 24        mov         eax,dword ptr [esp+24h]
+  00C71D45: C1 E6 06           shl         esi,6
+  00C71D48: 03 73 48           add         esi,dword ptr [ebx+48h]
+  00C71D4B: 50                 push        eax
+  00C71D4C: 8B CE              mov         ecx,esi
+  00C71D4E: E8 1D B9 FF FF     call        00C6D670
+  00C71D53: D9 EE              fldz
+  00C71D55: 0F 28 84 24 B4 00  movaps      xmm0,xmmword ptr [esp+000000B4h]
+            00 00
+  00C71D5D: F3 0F 10 25 78 1D  movss       xmm4,dword ptr ds:[01011D78h]
+            01 01
+  00C71D65: 0F 29 46 10        movaps      xmmword ptr [esi+10h],xmm0
+  00C71D69: D9 5E 08           fstp        dword ptr [esi+8]
+  00C71D6C: 0F 28 16           movaps      xmm2,xmmword ptr [esi]
+  00C71D6F: 0F 28 C2           movaps      xmm0,xmm2
+  00C71D72: 0F 59 C2           mulps       xmm0,xmm2
+  00C71D75: 0F 28 C8           movaps      xmm1,xmm0
+  00C71D78: 0F C6 C8 55        shufps      xmm1,xmm0,55h
+  00C71D7C: F3 0F 58 C8        addss       xmm1,xmm0
+  00C71D80: 0F C6 C0 AA        shufps      xmm0,xmm0,0AAh
+  00C71D84: F3 0F 58 C1        addss       xmm0,xmm1
+  00C71D88: 0F 28 C8           movaps      xmm1,xmm0
+  00C71D8B: F3 0F 52 C9        rsqrtss     xmm1,xmm1
+  00C71D8F: 0F 28 D9           movaps      xmm3,xmm1
+  00C71D92: 0F 57 C9           xorps       xmm1,xmm1
+  00C71D95: F3 0F 10 CC        movss       xmm1,xmm4
+  00C71D99: 0F 28 E1           movaps      xmm4,xmm1
+  00C71D9C: 0F 28 C8           movaps      xmm1,xmm0
+  00C71D9F: F3 0F 59 C3        mulss       xmm0,xmm3
+  00C71DA3: F3 0F 59 C3        mulss       xmm0,xmm3
+  00C71DA7: F3 0F C2 CC 00     cmpeqss     xmm1,xmm4
+  00C71DAC: F3 0F 10 25 18 77  movss       xmm4,dword ptr ds:[01017718h]
+            01 01
+  00C71DB4: F3 0F 5C E0        subss       xmm4,xmm0
+  00C71DB8: F3 0F 10 05 48 62  movss       xmm0,dword ptr ds:[01016248h]
+            01 01
+  00C71DC0: F3 0F 59 C3        mulss       xmm0,xmm3
+  00C71DC4: F3 0F 59 C4        mulss       xmm0,xmm4
+  00C71DC8: 0F 55 C8           andnps      xmm1,xmm0
+  00C71DCB: 0F 28 C1           movaps      xmm0,xmm1
+  00C71DCE: 0F C6 C1 00        shufps      xmm0,xmm1,0
+  00C71DD2: B8 01 00 00 00     mov         eax,1
+  00C71DD7: 01 44 24 74        add         dword ptr [esp+74h],eax
+  00C71DDB: 0F 59 C2           mulps       xmm0,xmm2
+  00C71DDE: 0F 29 06           movaps      xmmword ptr [esi],xmm0
+  00C71DE1: 01 43 4C           add         dword ptr [ebx+4Ch],eax
+  00C71DE4: 80 7C 24 17 00     cmp         byte ptr [esp+17h],0
+  00C71DE9: 0F 84 41 02 00 00  je          00C72030
+  00C71DEF: FF 44 24 64        inc         dword ptr [esp+64h]
+  00C71DF3: E9 38 02 00 00     jmp         00C72030
+  00C71DF8: 0F 5C 8C 24 24 01  subps       xmm1,xmmword ptr [esp+00000124h]
+            00 00
+  00C71E00: 0F 28 C1           movaps      xmm0,xmm1
+  00C71E03: 0F 59 C0           mulps       xmm0,xmm0
+  00C71E06: 0F 28 C8           movaps      xmm1,xmm0
+  00C71E09: 0F C6 C8 55        shufps      xmm1,xmm0,55h
+  00C71E0D: 0F 28 D0           movaps      xmm2,xmm0
+  00C71E10: F3 0F 58 C8        addss       xmm1,xmm0
+  00C71E14: 0F C6 D0 AA        shufps      xmm2,xmm0,0AAh
+  00C71E18: F3 0F 58 D1        addss       xmm2,xmm1
+  00C71E1C: F3 0F 11 94 24 AC  movss       dword ptr [esp+000000ACh],xmm2
+            00 00 00
+  00C71E25: D9 84 24 AC 00 00  fld         dword ptr [esp+000000ACh]
+            00
+  00C71E2C: DE D9              fcompp
+  00C71E2E: DF E0              fnstsw      ax
+  00C71E30: F6 C4 05           test        ah,5
+  00C71E33: 0F 8A 87 FE FF FF  jp          00C71CC0
+  00C71E39: E9 7E FE FF FF     jmp         00C71CBC
+  00C71E3E: 83 C6 F4           add         esi,0FFFFFFF4h
+  00C71E41: 83 FE 1D           cmp         esi,1Dh
+  00C71E44: 0F 87 77 02 00 00  ja          00C720C1
+  00C71E4A: 0F B6 96 E4 21 C7  movzx       edx,byte ptr [esi+00C721E4h]
+            00
+  00C71E51: FF 24 95 D4 21 C7  jmp         dword ptr [edx*4+00C721D4h]
+            00
+  00C71E58: 0F 28 84 24 B4 00  movaps      xmm0,xmmword ptr [esp+000000B4h]
+            00 00
+  00C71E60: 0F 29 41 10        movaps      xmmword ptr [ecx+10h],xmm0
+  00C71E64: E9 58 02 00 00     jmp         00C720C1
+  00C71E69: F6 47 06 01        test        byte ptr [edi+6],1
+  00C71E6D: 0F 84 4E 02 00 00  je          00C720C1
+  00C71E73: 0F 28 84 24 B4 00  movaps      xmm0,xmmword ptr [esp+000000B4h]
+            00 00
+  00C71E7B: 0F 29 41 10        movaps      xmmword ptr [ecx+10h],xmm0
+  00C71E7F: E9 3D 02 00 00     jmp         00C720C1
+  00C71E84: 8B 44 24 30        mov         eax,dword ptr [esp+30h]
+  00C71E88: 8B 48 48           mov         ecx,dword ptr [eax+48h]
+  00C71E8B: 80 79 18 02        cmp         byte ptr [ecx+18h],2
+  00C71E8F: 75 08              jne         00C71E99
+  00C71E91: 0F BE 41 10        movsx       eax,byte ptr [ecx+10h]
+  00C71E95: 03 C1              add         eax,ecx
+  00C71E97: EB 02              jmp         00C71E9B
+  00C71E99: 33 C0              xor         eax,eax
+  00C71E9B: 50                 push        eax
+  00C71E9C: 8D 8F F0 FB FF FF  lea         ecx,[edi+FFFFFBF0h]
+  00C71EA2: E8 59 BA FF FF     call        00C6D900
+  00C71EA7: F7 80 14 04 00 00  test        dword ptr [eax+00000414h],8000000h
+            00 00 00 08
+  00C71EB1: 74 18              je          00C71ECB
+  00C71EB3: 8B 44 24 24        mov         eax,dword ptr [esp+24h]
+  00C71EB7: 0F 28 84 24 B4 00  movaps      xmm0,xmmword ptr [esp+000000B4h]
+            00 00
+  00C71EBF: 0F 29 00           movaps      xmmword ptr [eax],xmm0
+  00C71EC2: 0F 29 40 10        movaps      xmmword ptr [eax+10h],xmm0
+  00C71EC6: E9 F6 01 00 00     jmp         00C720C1
+  00C71ECB: D9 EE              fldz
+  00C71ECD: 8B 74 24 24        mov         esi,dword ptr [esp+24h]
+  00C71ED1: D9 56 08           fst         dword ptr [esi+8]
+  00C71ED4: 0F 28 06           movaps      xmm0,xmmword ptr [esi]
+  00C71ED7: 0F 29 84 24 C4 00  movaps      xmmword ptr [esp+000000C4h],xmm0
+            00 00
+  00C71EDF: 0F 59 C0           mulps       xmm0,xmm0
+  00C71EE2: 0F 28 C8           movaps      xmm1,xmm0
+  00C71EE5: 0F C6 C8 55        shufps      xmm1,xmm0,55h
+  00C71EE9: 0F 28 D0           movaps      xmm2,xmm0
+  00C71EEC: F3 0F 58 C8        addss       xmm1,xmm0
+  00C71EF0: 0F C6 D0 AA        shufps      xmm2,xmm0,0AAh
+  00C71EF4: F3 0F 58 D1        addss       xmm2,xmm1
+  00C71EF8: F3 0F 11 94 24 A4  movss       dword ptr [esp+000000A4h],xmm2
+            00 00 00
+  00C71F01: D9 84 24 A4 00 00  fld         dword ptr [esp+000000A4h]
+            00
+  00C71F08: DD E1              fucom       st(1)
+  00C71F0A: DF E0              fnstsw      ax
+  00C71F0C: DD D9              fstp        st(1)
+  00C71F0E: F6 C4 44           test        ah,44h
+  00C71F11: 0F 8B A8 01 00 00  jnp         00C720BF
+  00C71F17: E8 24 41 25 00     call        00EC6040
+  00C71F1C: D9 5C 24 2C        fstp        dword ptr [esp+2Ch]
+  00C71F20: D9 44 24 2C        fld         dword ptr [esp+2Ch]
+  00C71F24: D9 E8              fld1
+  00C71F26: DE F1              fdivrp      st(1),st
+  00C71F28: D9 5C 24 2C        fstp        dword ptr [esp+2Ch]
+  00C71F2C: F3 0F 10 44 24 2C  movss       xmm0,dword ptr [esp+2Ch]
+  00C71F32: 0F 28 C8           movaps      xmm1,xmm0
+  00C71F35: 0F C6 C8 00        shufps      xmm1,xmm0,0
+  00C71F39: 0F 59 8C 24 C4 00  mulps       xmm1,xmmword ptr [esp+000000C4h]
+            00 00
+  00C71F41: 0F 29 0E           movaps      xmmword ptr [esi],xmm1
+  00C71F44: E9 78 01 00 00     jmp         00C720C1
+  00C71F49: F7 47 04 00 18 00  test        dword ptr [edi+4],1800h
+            00
+  00C71F50: 75 09              jne         00C71F5B
+  00C71F52: D9 EE              fldz
+  00C71F54: 8B 4C 24 24        mov         ecx,dword ptr [esp+24h]
+  00C71F58: D9 59 2C           fstp        dword ptr [ecx+2Ch]
+  00C71F5B: D9 E8              fld1
+  00C71F5D: F3 0F 10 25 78 1D  movss       xmm4,dword ptr ds:[01011D78h]
+            01 01
+  00C71F65: 8B 54 24 24        mov         edx,dword ptr [esp+24h]
+  00C71F69: D9 9C 24 DC 00 00  fstp        dword ptr [esp+000000DCh]
+            00
+  00C71F70: 0F 28 9C 24 D4 00  movaps      xmm3,xmmword ptr [esp+000000D4h]
+            00 00
+  00C71F78: 81 4F 04 04 04 00  or          dword ptr [edi+4],404h
+            00
+  00C71F7F: 0F 28 C3           movaps      xmm0,xmm3
+  00C71F82: 0F 59 C3           mulps       xmm0,xmm3
+  00C71F85: 0F 28 C8           movaps      xmm1,xmm0
+  00C71F88: 0F C6 C8 55        shufps      xmm1,xmm0,55h
+  00C71F8C: F3 0F 58 C8        addss       xmm1,xmm0
+  00C71F90: 0F C6 C0 AA        shufps      xmm0,xmm0,0AAh
+  00C71F94: F3 0F 58 C1        addss       xmm0,xmm1
+  00C71F98: 0F 28 C8           movaps      xmm1,xmm0
+  00C71F9B: F3 0F 52 C9        rsqrtss     xmm1,xmm1
+  00C71F9F: 0F 28 D1           movaps      xmm2,xmm1
+  00C71FA2: 0F 57 C9           xorps       xmm1,xmm1
+  00C71FA5: F3 0F 10 CC        movss       xmm1,xmm4
+  00C71FA9: 0F 28 E1           movaps      xmm4,xmm1
+  00C71FAC: 0F 28 C8           movaps      xmm1,xmm0
+  00C71FAF: F3 0F 59 C2        mulss       xmm0,xmm2
+  00C71FB3: F3 0F 59 C2        mulss       xmm0,xmm2
+  00C71FB7: F3 0F C2 CC 00     cmpeqss     xmm1,xmm4
+  00C71FBC: F3 0F 10 25 18 77  movss       xmm4,dword ptr ds:[01017718h]
+            01 01
+  00C71FC4: F3 0F 5C E0        subss       xmm4,xmm0
+  00C71FC8: F3 0F 10 05 48 62  movss       xmm0,dword ptr ds:[01016248h]
+            01 01
+  00C71FD0: F3 0F 59 C2        mulss       xmm0,xmm2
+  00C71FD4: F3 0F 59 C4        mulss       xmm0,xmm4
+  00C71FD8: 0F 55 C8           andnps      xmm1,xmm0
+  00C71FDB: 0F 28 C1           movaps      xmm0,xmm1
+  00C71FDE: 0F C6 C1 00        shufps      xmm0,xmm1,0
+  00C71FE2: 0F 59 C3           mulps       xmm0,xmm3
+  00C71FE5: 0F 29 84 24 D4 00  movaps      xmmword ptr [esp+000000D4h],xmm0
+            00 00
+  00C71FED: 0F 29 02           movaps      xmmword ptr [edx],xmm0
+  00C71FF0: EB 3E              jmp         00C72030
+  00C71FF2: F6 47 06 01        test        byte ptr [edi+6],1
+  00C71FF6: 75 1D              jne         00C72015
+  00C71FF8: F6 47 04 01        test        byte ptr [edi+4],1
+  00C71FFC: 74 17              je          00C72015
+  00C71FFE: 8B 44 24 30        mov         eax,dword ptr [esp+30h]
+  00C72002: 50                 push        eax
+  00C72003: 8D 8F A0 01 00 00  lea         ecx,[edi+000001A0h]
+  00C72009: 51                 push        ecx
+  00C7200A: 8B CF              mov         ecx,edi
+  00C7200C: E8 7F A8 FF FF     call        00C6C890
+  00C72011: 8B 4C 24 24        mov         ecx,dword ptr [esp+24h]
+  00C72015: 81 4F 04 00 04 00  or          dword ptr [edi+4],400h
+            00
+  00C7201C: 8B 57 04           mov         edx,dword ptr [edi+4]
+  00C7201F: C1 EA 03           shr         edx,3
+  00C72022: F6 C2 01           test        dl,1
+  00C72025: 75 09              jne         00C72030
+  00C72027: D9 05 98 4A 0C 01  fld         dword ptr ds:[010C4A98h]
+  00C7202D: D9 59 28           fstp        dword ptr [ecx+28h]
+  00C72030: 8D 4F D0           lea         ecx,[edi-30h]
+  00C72033: E8 C8 75 03 00     call        00CA9600
+  00C72038: 85 C0              test        eax,eax
+  00C7203A: 75 10              jne         00C7204C
+  00C7203C: D9 87 58 01 00 00  fld         dword ptr [edi+00000158h]
+  00C72042: 8B 44 24 24        mov         eax,dword ptr [esp+24h]
+  00C72046: D8 48 2C           fmul        dword ptr [eax+2Ch]
+  00C72049: D9 58 2C           fstp        dword ptr [eax+2Ch]
+  00C7204C: 80 7C 24 17 00     cmp         byte ptr [esp+17h],0
+  00C72051: 74 6E              je          00C720C1
+  00C72053: 81 4F 04 00 02 00  or          dword ptr [edi+4],200h
+            00
+  00C7205A: 8B 44 24 7C        mov         eax,dword ptr [esp+7Ch]
+  00C7205E: FF 87 F8 01 00 00  inc         dword ptr [edi+000001F8h]
+  00C72064: 8B 08              mov         ecx,dword ptr [eax]
+  00C72066: 03 4C 24 40        add         ecx,dword ptr [esp+40h]
+  00C7206A: 51                 push        ecx
+  00C7206B: 8D 8F F0 FB FF FF  lea         ecx,[edi+FFFFFBF0h]
+  00C72071: E8 0A C9 FF FF     call        00C6E980
+  00C72076: 80 7C 24 2A 00     cmp         byte ptr [esp+2Ah],0
+  00C7207B: 0F 28 84 24 D4 00  movaps      xmm0,xmmword ptr [esp+000000D4h]
+            00 00
+  00C72083: 74 09              je          00C7208E
+  00C72085: 0F 28 4F 40        movaps      xmm1,xmmword ptr [edi+40h]
+  00C72089: 0F 58 C1           addps       xmm0,xmm1
+  00C7208C: EB 05              jmp         00C72093
+  00C7208E: C6 44 24 2A 01     mov         byte ptr [esp+2Ah],1
+  00C72093: 0F 29 47 40        movaps      xmmword ptr [edi+40h],xmm0
+  00C72097: F6 47 06 01        test        byte ptr [edi+6],1
+  00C7209B: 74 24              je          00C720C1
+  00C7209D: 8B 74 24 3C        mov         esi,dword ptr [esp+3Ch]
+  00C720A1: 8B CE              mov         ecx,esi
+  00C720A3: E8 68 E4 01 00     call        00C90510
+  00C720A8: 8B 8F FC 01 00 00  mov         ecx,dword ptr [edi+000001FCh]
+  00C720AE: 85 C9              test        ecx,ecx
+  00C720B0: 74 05              je          00C720B7
+  00C720B2: E8 F9 E4 01 00     call        00C905B0
+  00C720B7: 89 B7 FC 01 00 00  mov         dword ptr [edi+000001FCh],esi
+  00C720BD: EB 02              jmp         00C720C1
+  00C720BF: DD D8              fstp        st(0)
+  00C720C1: 8B 44 24 70        mov         eax,dword ptr [esp+70h]
+  00C720C5: 40                 inc         eax
+  00C720C6: 3B 44 24 5C        cmp         eax,dword ptr [esp+5Ch]
+  00C720CA: 89 44 24 70        mov         dword ptr [esp+70h],eax
+  00C720CE: 0F 8C ED F2 FF FF  jl          00C713C1
+  00C720D4: 80 7C 24 1F 00     cmp         byte ptr [esp+1Fh],0
+  00C720D9: 74 09              je          00C720E4
+  00C720DB: 81 4F 04 00 00 00  or          dword ptr [edi+4],20000000h
+            20
+  00C720E2: EB 07              jmp         00C720EB
+  00C720E4: 81 67 04 FF FF FF  and         dword ptr [edi+4],0DFFFFFFFh
+            DF
+  00C720EB: 8B 54 24 64        mov         edx,dword ptr [esp+64h]
+  00C720EF: D9 EE              fldz
+  00C720F1: 39 97 F8 01 00 00  cmp         dword ptr [edi+000001F8h],edx
+  00C720F7: 0F 94 C0           sete        al
+  00C720FA: 88 47 68           mov         byte ptr [edi+68h],al
+  00C720FD: 0F 28 47 40        movaps      xmm0,xmmword ptr [edi+40h]
+  00C72101: 0F 29 84 24 C4 00  movaps      xmmword ptr [esp+000000C4h],xmm0
+            00 00
+  00C72109: 0F 59 C0           mulps       xmm0,xmm0
+  00C7210C: 0F 28 C8           movaps      xmm1,xmm0
+  00C7210F: 0F C6 C8 55        shufps      xmm1,xmm0,55h
+  00C72113: 0F 28 D0           movaps      xmm2,xmm0
+  00C72116: F3 0F 58 C8        addss       xmm1,xmm0
+  00C7211A: 0F C6 D0 AA        shufps      xmm2,xmm0,0AAh
+  00C7211E: F3 0F 58 D1        addss       xmm2,xmm1
+  00C72122: F3 0F 11 54 24 40  movss       dword ptr [esp+40h],xmm2
+  00C72128: D9 44 24 40        fld         dword ptr [esp+40h]
+  00C7212C: DD E1              fucom       st(1)
+  00C7212E: DF E0              fnstsw      ax
+  00C72130: DD D9              fstp        st(1)
+  00C72132: F6 C4 44           test        ah,44h
+  00C72135: 7B 44              jnp         00C7217B
+  00C72137: E8 04 3F 25 00     call        00EC6040
+  00C7213C: D9 5C 24 40        fstp        dword ptr [esp+40h]
+  00C72140: D9 44 24 40        fld         dword ptr [esp+40h]
+  00C72144: 8B 8C 24 80 00 00  mov         ecx,dword ptr [esp+00000080h]
+            00
+  00C7214B: D9 E8              fld1
+  00C7214D: 8B 94 24 84 00 00  mov         edx,dword ptr [esp+00000084h]
+            00
+  00C72154: DE F1              fdivrp      st(1),st
+  00C72156: D9 5C 24 40        fstp        dword ptr [esp+40h]
+  00C7215A: F3 0F 10 44 24 40  movss       xmm0,dword ptr [esp+40h]
+
+  Summary
+
+        1600 .text

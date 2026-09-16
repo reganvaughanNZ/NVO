@@ -1,0 +1,20 @@
+{
+  "capture_sha256": "d456dd06d0268787b49ea353949b3536283e855c62a496dd97f4891f7419c125",
+  "review": "source/combat/step3f2/REVIEW-3.md",
+  "native_version": 313,
+  "ordinary_flight_checks": "pass within logged evidence",
+  "terrain_correction": "unexercised; acceptance pending",
+  "fixture": "declined by user; do not prepare",
+  "additional_gameplay_requested": false,
+  "next_packet_authorized": false,
+  "game_modified": false,
+  "assistant_gameplay": false,
+  "damage_authority": false,
+  "next_proposal": "Verify and observe per-instance range/lifetime before defining another gameplay test.",
+  "limits": [
+    "No failed terrain query or correction occurred.",
+    "61 later edited comparisons have aggregate counters but no detailed vectors.",
+    "Final four shots aiming mode and destruction reason are not explicitly recorded.",
+    "Range expiry and a VATS range difference are hypotheses, not verified engine behavior."
+  ]
+}

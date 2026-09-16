@@ -1,0 +1,16 @@
+{
+  "packet": "3N1",
+  "expected_esm_sha256": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e",
+  "runtime_tested": false,
+  "damage_replacement": false,
+  "payload": [
+    {
+      "relative_path": "NVOBaronCheck.txt",
+      "sha256": "578cc4d8535de1bbeaa3a721fd13f45cadb89ebe14570d55123f0090177c0c2d"
+    },
+    {
+      "relative_path": "Data/NVSE/user_defined_functions/NVOBaronCheck/Check.txt",
+      "sha256": "845db1bb01e60e7f2f6f6e324dfdffdcc349fc877cb98f32b5a1ec3936054dc1"
+    }
+  ]
+}

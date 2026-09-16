@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "mode": "offline_NVO_authoring_tags",
+  "runtime_keyword_import": false,
+  "new_runtime_dependencies": [],
+  "native_version_required": 327,
+  "records": 2,
+  "definitions": 2,
+  "rules": 2,
+  "decisions": [
+    {
+      "plugin": "FalloutNV.esm",
+      "local_id": "00020420",
+      "profile": "combat-armour",
+      "revision": 1,
+      "selection": "keyword_profile",
+      "keywords": [
+        "nvo_coverage_combatbody"
+      ],
+      "expected_equip_mask": "00000004"
+    },
+    {
+      "plugin": "FalloutNV.esm",
+      "local_id": "00020426",
+      "profile": "combat-helmet",
+      "revision": 1,
+      "selection": "keyword_profile",
+      "keywords": [
+        "nvo_coverage_combathelmet"
+      ],
+      "expected_equip_mask": "00000602"
+    }
+  ],
+  "coverage_authority": false,
+  "damage_replacement": false,
+  "stagger_writes": false,
+  "source_sha256": "df6e444909aa2970dd5dd8488411c781866152b0e48129aaa39f46ae274e03a5",
+  "runtime_sha256": "0e25e3aafbd0aadf52fb58fb38b19cb079280d96006b0ee84f927fdd860973aa"
+}

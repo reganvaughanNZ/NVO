@@ -1,0 +1,93 @@
+{
+  "capture_sha256": "018ec6d9b0b6ee5c81e4a417e14057895bc4ce1fa18aa3c2096c4386183fee15",
+  "results": [
+    {
+      "lifetime": 1,
+      "status": "engine_baseline_contact",
+      "candidate": 0,
+      "time_s": 0,
+      "speed_mps": 0,
+      "model_gap": 0,
+      "tolerance": 0.0725994371
+    },
+    {
+      "lifetime": 2,
+      "status": "engine_baseline_contact",
+      "candidate": 0,
+      "time_s": 0,
+      "speed_mps": 0,
+      "model_gap": 0,
+      "tolerance": 0.0528937582
+    },
+    {
+      "lifetime": 3,
+      "status": "model_estimate_only",
+      "candidate": 1,
+      "time_s": 0.00224852068446,
+      "speed_mps": 774.164839457,
+      "model_gap": 0.063388123377,
+      "tolerance": 0.0689800017
+    },
+    {
+      "lifetime": 4,
+      "status": "model_estimate_only",
+      "candidate": 1,
+      "time_s": 0.00200690899393,
+      "speed_mps": 774.300416195,
+      "model_gap": 0.0310071749418,
+      "tolerance": 0.0529499464
+    },
+    {
+      "lifetime": 5,
+      "status": "model_estimate_only",
+      "candidate": 1,
+      "time_s": 0.00449448171355,
+      "speed_mps": 808.333188298,
+      "model_gap": 0.0028859033144,
+      "tolerance": 0.0520852329
+    },
+    {
+      "lifetime": 6,
+      "status": "model_estimate_only",
+      "candidate": 1,
+      "time_s": 0.000802311724895,
+      "speed_mps": 774.96508201,
+      "model_gap": 0.0483304887756,
+      "tolerance": 0.0689933665
+    },
+    {
+      "lifetime": 7,
+      "status": "model_estimate_only",
+      "candidate": 1,
+      "time_s": 0.000553545502683,
+      "speed_mps": 775.108122306,
+      "model_gap": 0.0312879862308,
+      "tolerance": 0.0529671056
+    },
+    {
+      "lifetime": 8,
+      "status": "model_estimate_only",
+      "candidate": 1,
+      "time_s": 0.000767974139177,
+      "speed_mps": 774.983476459,
+      "model_gap": 0.0449779056308,
+      "tolerance": 0.0518996904
+    },
+    {
+      "negative_guards": 7,
+      "later_lifetimes_through": 32,
+      "omitted": 2,
+      "cache_lifecycle_checks": true,
+      "game_loaded": false
+    }
+  ],
+  "sources": {
+    "native\\NVOCombatCore\\src\\FlightImpact.inl": "ef677925f463c87e194dbfe9c73027f8914ebfcc999b072cf2b83d77bd3f2e3d",
+    "native\\NVOCombatCore\\src\\FlightImpactModel.inl": "87676175e0c9b306a5a3072effd1c1f4a351484f0739fdab4bc8c768c2000302",
+    "native\\NVOCombatCore\\src\\FlightPhysics.cpp": "367b23578d9793d44776771ac6b6b432275ece300248788c24045806f5ba7b2a",
+    "native\\NVOCombatCore\\include\\FlightDragData.hpp": "2efffb921d8553ec59d952dac0ba7b3836b0871459ee1f3e1816c59e4cfcd202"
+  },
+  "harness_sha256": "6ff0431240c06b94f804ff5d75c9ecc8f79436362a2a432146e78f34fd0a371e",
+  "engine_reads": "stubbed_with_captured_values",
+  "dll_or_game_loaded": false
+}

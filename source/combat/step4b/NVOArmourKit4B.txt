@@ -1,0 +1,3 @@
+player.additem 000E3778 1
+player.additem 0008ED03 100
+player.equipitem 000E3778

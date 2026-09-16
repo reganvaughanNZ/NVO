@@ -1,0 +1,253 @@
+{
+  "archived_log": "source\\combat\\step2\\captures\\2026-09-14-native-a41dea8afb9f.log",
+  "sha256": "a41dea8afb9f02e8fa5df5af94753b03f922a1453de7cc50177582077d29ba58",
+  "events": {
+    "CREATE": 36,
+    "DESTROY": 36,
+    "HIT_NOTICE": 242,
+    "WEAPON_NOTICE": 246,
+    "IMPACT": 31,
+    "BLAST": 9
+  },
+  "sequence_contiguous": true,
+  "lifecycle": [
+    "LIFECYCLE post_load_plugins",
+    "LIFECYCLE post_post_load_plugins",
+    "LIFECYCLE deferred_init",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=1",
+    "LIFECYCLE exit_game"
+  ],
+  "summary": [
+    "SUMMARY session=1 reason=capture_limit rows=600 create=36 impact=31 destroy=36 hit_notice=242 weapon_notice=246 blast=9 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+  ],
+  "weapon_counts": {
+    "000001F4": {
+      "name": "Fists",
+      "counts": {
+        "WEAPON_NOTICE": 14
+      }
+    },
+    "0001540D": {
+      "name": "Test Limb Explosion",
+      "counts": {
+        "WEAPON_NOTICE": 2
+      },
+      "record_type": "EXPL"
+    },
+    "0008F216": {
+      "name": ".357 Magnum Revolver",
+      "counts": {
+        "CREATE": 5,
+        "DESTROY": 5,
+        "WEAPON_NOTICE": 2,
+        "IMPACT": 2
+      }
+    },
+    "000E393B": {
+      "name": "Single Shotgun",
+      "counts": {
+        "CREATE": 18,
+        "WEAPON_NOTICE": 7,
+        "IMPACT": 18,
+        "DESTROY": 18
+      }
+    },
+    "07000804": {
+      "name": "Esther (GRA)",
+      "counts": {
+        "CREATE": 1,
+        "IMPACT": 1,
+        "DESTROY": 1,
+        "WEAPON_NOTICE": 105
+      }
+    },
+    "07000809": {
+      "name": "Two-Step Goodbye (GRA)",
+      "counts": {
+        "WEAPON_NOTICE": 1
+      }
+    },
+    "0700081B": {
+      "name": "25mm Grenade APW (GRA)",
+      "counts": {
+        "CREATE": 2,
+        "IMPACT": 2,
+        "DESTROY": 2,
+        "WEAPON_NOTICE": 17
+      }
+    },
+    "0700084E": {
+      "name": "12.7mm Submachine Gun (GRA)",
+      "counts": {
+        "CREATE": 10,
+        "WEAPON_NOTICE": 8,
+        "IMPACT": 8,
+        "DESTROY": 10
+      }
+    },
+    "07000851": {
+      "name": "Chainsaw (GRA)",
+      "counts": {
+        "WEAPON_NOTICE": 23
+      }
+    },
+    "07000857": {
+      "name": "Ripper (GRA)",
+      "counts": {
+        "WEAPON_NOTICE": 53
+      }
+    },
+    "07000A3A": {
+      "name": "Two-Step Goodbye Explosion",
+      "counts": {
+        "WEAPON_NOTICE": 14
+      },
+      "record_type": "EXPL"
+    }
+  },
+  "resolved_forms": {
+    "000001F4": {
+      "id": "000001F4",
+      "kind": "WEAP",
+      "file": "FalloutNV.esm",
+      "EDID": "Fists"
+    },
+    "0008F216": {
+      "id": "0008F216",
+      "kind": "WEAP",
+      "file": "FalloutNV.esm",
+      "EDID": "WeapNV357Revolver",
+      "FULL": ".357 Magnum Revolver"
+    },
+    "000E393B": {
+      "id": "000E393B",
+      "kind": "WEAP",
+      "file": "FalloutNV.esm",
+      "EDID": "WeapNVSingleShotgun",
+      "FULL": "Single Shotgun"
+    },
+    "07000804": {
+      "id": "07000804",
+      "kind": "WEAP",
+      "file": "GunRunnersArsenal.esm",
+      "EDID": "NVDLC05WeapFatmanUnique",
+      "FULL": "Esther (GRA)"
+    },
+    "07000809": {
+      "id": "07000809",
+      "kind": "WEAP",
+      "file": "GunRunnersArsenal.esm",
+      "EDID": "NVDLC05WeapNVBallisticFistUnique",
+      "FULL": "Two-Step Goodbye (GRA)"
+    },
+    "0700081B": {
+      "id": "0700081B",
+      "kind": "WEAP",
+      "file": "GunRunnersArsenal.esm",
+      "EDID": "NVDLC05Weap25mmGrenadeAPWCustom",
+      "FULL": "25mm Grenade APW (GRA)"
+    },
+    "0700084E": {
+      "id": "0700084E",
+      "kind": "WEAP",
+      "file": "GunRunnersArsenal.esm",
+      "EDID": "NVDLC05WeapNV127mmSubmachineGunCustom",
+      "FULL": "12.7mm Submachine Gun (GRA)"
+    },
+    "07000851": {
+      "id": "07000851",
+      "kind": "WEAP",
+      "file": "GunRunnersArsenal.esm",
+      "EDID": "NVDLC05WeapNVChainsawCustom",
+      "FULL": "Chainsaw (GRA)"
+    },
+    "07000857": {
+      "id": "07000857",
+      "kind": "WEAP",
+      "file": "GunRunnersArsenal.esm",
+      "EDID": "NVDLC05WeapRipperCustom",
+      "FULL": "Ripper (GRA)"
+    },
+    "0001540D": {
+      "id": "0001540D",
+      "kind": "EXPL",
+      "file": "FalloutNV.esm",
+      "EDID": "LimbExplosion",
+      "FULL": "Test Limb Explosion"
+    },
+    "07000A3A": {
+      "id": "07000A3A",
+      "kind": "EXPL",
+      "file": "GunRunnersArsenal.esm",
+      "EDID": "NVDLC05TwoStepGoodbyeExplosion",
+      "FULL": "Two-Step Goodbye Explosion"
+    }
+  },
+  "lifetime_issues": [],
+  "live_lifetimes_at_end": 0,
+  "peak_live_lifetimes": 7,
+  "reused_projectile_ids": {
+    "FF001983": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "19",
+      "23",
+      "31"
+    ],
+    "FF001984": [
+      "7",
+      "9",
+      "16",
+      "17",
+      "20",
+      "32"
+    ],
+    "FF001985": [
+      "8",
+      "21",
+      "33"
+    ],
+    "FF001986": [
+      "22",
+      "34"
+    ],
+    "FF00185B": [
+      "24",
+      "25",
+      "26"
+    ],
+    "FF00197F": [
+      "28",
+      "29",
+      "30"
+    ]
+  },
+  "scope": "Observational trace, not damage-once proof. One successful load, no same-process reload. No combat changes or game tests by assistant.",
+  "edid_conflict_records": {
+    "02014085": {
+      "id": "02014085",
+      "kind": "IMAD",
+      "file": "DeadMoney.esm",
+      "EDID": "FadeToBlackAndBackQuickHalfsISFX"
+    },
+    "0400C6DD": {
+      "id": "0400C6DD",
+      "kind": "IMAD",
+      "file": "OldWorldBlues.esm",
+      "EDID": "FadeToBlackAndBackQuickHalfsISFX"
+    }
+  },
+  "classic_notification_caveat": "WEAPON_NOTICE can carry an EXPL form (0001540D and 07000A3A in this trace); its weapon field is a hit-object ID, not guaranteed WEAP. Do not infer ammunition or damage authority from it."
+}

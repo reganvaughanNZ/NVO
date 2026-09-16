@@ -1,0 +1,102 @@
+{
+  "packet": "3M",
+  "status": "prepared_design_reference",
+  "installed_native_version": 320,
+  "damage_replacement": false,
+  "pre_damage_gate": "HOLD",
+  "runtime_changes": false,
+  "native_compilation": false,
+  "gameplay_test": false,
+  "baron_retired_in_runtime": false,
+  "family_contracts": 12,
+  "reference_profiles": 6,
+  "installed_baseline_verified": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPreview.ini",
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+      "sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVOFlightPilot.esp",
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "sha256": "4826895e3954298de6c3ca5d6f56cd3a576434fda7a696e57572b646c833e664"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "sha256": "4a652ab9c39158485a32bd3cb2f07a5d9e3921d479ac30689da2ba55c42ff354"
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "native/NVOCombatCore/src/FlightPreview.cpp",
+      "sha256": "5bb0d1aa2789efe4507805a9faf29dd32a2476a210fec5b1296c9f24d3578b2d"
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightImpactModel.inl",
+      "sha256": "87676175e0c9b306a5a3072effd1c1f4a351484f0739fdab4bc8c768c2000302"
+    },
+    {
+      "path": "native/NVOCombatCore/include/HitTransaction.hpp",
+      "sha256": "14fb87c7df46114a8e3aec9c05e66c05448b13bb5eeda051503fc3849b96eae8"
+    },
+    {
+      "path": "native/NVOCombatCore/include/CurrentHit.hpp",
+      "sha256": "411beb0b042434fb7593854e063dca60b2bc9831de6ca6b6a26f7de7cbbf57bd"
+    },
+    {
+      "path": "native/NVOCombatCore/config/NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    },
+    {
+      "path": "native/NVOCombatCore/config/NVOFlightPreview.ini",
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4"
+    },
+    {
+      "path": "source/combat/step3a/NVO-Flight-Pilot.json",
+      "sha256": "a1cbc26838d325edb9a2ebc08ff406708c28081f396c53e41713d7e30ae684c8"
+    },
+    {
+      "path": "source/combat/step3a/PROVENANCE.json",
+      "sha256": "851b0fcaae6c02e3e52be771d01a977b85f2a4e9803d240f4dd82d1379b4edf1"
+    },
+    {
+      "path": "source/combat/step2/REVIEW-7-reload-melee-energy.md",
+      "sha256": "f4cb247316898ed6ddf26fe48f4a8bbdfaf7312f044067aa71d5f8ddcd6d09a6"
+    },
+    {
+      "path": "source/combat/review/ULTRA-317-FINDINGS.json",
+      "sha256": "68e5014fe680d194c3a631721d3b5a4ca9f88a270e4b895d0825abb16dbf3af2"
+    },
+    {
+      "path": "source/combat/step3h/CONTRACT.md",
+      "sha256": "0fbc8c536bb1841592fb9469d8ac8ec3424110a7064de31c33b8b8a73eacd98f"
+    },
+    {
+      "path": "source/combat/step3k/CONTRACT.md",
+      "sha256": "eb806c7a9cfd06770be8b215d8cfbce5039b28b5240bd2e926087789747449a6"
+    },
+    {
+      "path": "source/combat/step3l/ENGINE-TRACE.md",
+      "sha256": "9a08a73a028738e708270a082cd87a7632dd9ee3278ce196324c35cdbfa4d511"
+    }
+  ],
+  "checks": [
+    "six_installed_baseline_hashes_match_3L",
+    "all_damage_authority_flags_false",
+    "all_reference_profiles_disabled",
+    "unique_family_ids",
+    "donor_unit_conversions_match_3A",
+    "three_original_Baron_scripts_found_with_compiled_data"
+  ],
+  "next": "ask_before_3N_disabled_resolver_and_Baron_retirement_scripts"
+}

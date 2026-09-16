@@ -1,0 +1,3 @@
+player.additem 0008F217 1
+player.additem 0008ED03 300
+player.equipitem 0008F217

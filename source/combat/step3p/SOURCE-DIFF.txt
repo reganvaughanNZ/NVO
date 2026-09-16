@@ -1,0 +1,118 @@
+--- native320/BUILD.cmd
++++ native321/BUILD.cmd
+@@ -28,7 +28,7 @@
+ pushd "%NVO_BUILD_DIR%"
+ if errorlevel 1 goto folder_error
+ echo Building NVOCombatCore. This does not install or run the DLL.
+-cl.exe /nologo /Bv /LD /MT /O2 /Zi /FdNVOCombatCore-compile.pdb /std:c++17 /EHsc /W4 /permissive- /DWIN32_LEAN_AND_MEAN /DNOMINMAX /I"%NVO_PROJECT_DIR%\include" "%NVO_PROJECT_DIR%\src\Plugin.cpp" "%NVO_PROJECT_DIR%\src\NativeLog.cpp" "%NVO_PROJECT_DIR%\src\NativeObserver.cpp" "%NVO_PROJECT_DIR%\src\CurrentHit.cpp" "%NVO_PROJECT_DIR%\src\DamageEvents.cpp" "%NVO_PROJECT_DIR%\src\HitTransaction.cpp" "%NVO_PROJECT_DIR%\src\ActorValueObserver.cpp" "%NVO_PROJECT_DIR%\src\FlightPreview.cpp" "%NVO_PROJECT_DIR%\src\FlightTiming.cpp" "%NVO_PROJECT_DIR%\src\FlightPhysics.cpp" /link /DEBUG:FULL /OPT:REF /OPT:ICF /PDB:NVOCombatCore.pdb /MACHINE:X86 /DEF:"%NVO_PROJECT_DIR%\src\Exports.def" /OUT:NVOCombatCore.dll /IMPLIB:NVOCombatCore.lib kernel32.lib >build.log 2>&1
++cl.exe /nologo /Bv /LD /MT /O2 /Zi /FdNVOCombatCore-compile.pdb /std:c++17 /EHsc /W4 /permissive- /DWIN32_LEAN_AND_MEAN /DNOMINMAX /I"%NVO_PROJECT_DIR%\include" "%NVO_PROJECT_DIR%\src\Plugin.cpp" "%NVO_PROJECT_DIR%\src\NativeLog.cpp" "%NVO_PROJECT_DIR%\src\NativeObserver.cpp" "%NVO_PROJECT_DIR%\src\CurrentHit.cpp" "%NVO_PROJECT_DIR%\src\DamageEvents.cpp" "%NVO_PROJECT_DIR%\src\HitTransaction.cpp" "%NVO_PROJECT_DIR%\src\ActorValueObserver.cpp" "%NVO_PROJECT_DIR%\src\FlightPreview.cpp" "%NVO_PROJECT_DIR%\src\FlightTiming.cpp" "%NVO_PROJECT_DIR%\src\FlightPhysics.cpp" "%NVO_PROJECT_DIR%\src\SpawnBoundary.cpp" /link /DEBUG:FULL /OPT:REF /OPT:ICF /PDB:NVOCombatCore.pdb /MACHINE:X86 /DEF:"%NVO_PROJECT_DIR%\src\Exports.def" /OUT:NVOCombatCore.dll /IMPLIB:NVOCombatCore.lib kernel32.lib >build.log 2>&1
+ set "NVO_BUILD_RESULT=%ERRORLEVEL%"
+ if not "%NVO_BUILD_RESULT%"=="0" goto compile_error
+ if not exist "NVOCombatCore.dll" goto compile_error
+--- native320/CMakeLists.txt
++++ native321/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(NVOCombatCore VERSION 0.3.20 LANGUAGES CXX)
++project(NVOCombatCore VERSION 0.3.21 LANGUAGES CXX)
+ 
+ if(NOT WIN32 OR NOT MSVC)
+     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")
+@@ -8,7 +8,7 @@
+     message(FATAL_ERROR "Configure with -A Win32. Fallout New Vegas is a 32-bit process.")
+ endif()
+ 
+-add_library(NVOCombatCore SHARED src/Plugin.cpp src/NativeLog.cpp src/NativeObserver.cpp src/CurrentHit.cpp src/DamageEvents.cpp src/HitTransaction.cpp src/ActorValueObserver.cpp src/FlightPreview.cpp src/FlightTiming.cpp src/FlightPhysics.cpp src/Exports.def)
++add_library(NVOCombatCore SHARED src/Plugin.cpp src/NativeLog.cpp src/NativeObserver.cpp src/CurrentHit.cpp src/DamageEvents.cpp src/HitTransaction.cpp src/ActorValueObserver.cpp src/FlightPreview.cpp src/FlightTiming.cpp src/FlightPhysics.cpp src/SpawnBoundary.cpp src/Exports.def)
+ target_compile_features(NVOCombatCore PRIVATE cxx_std_17)
+ target_include_directories(NVOCombatCore PRIVATE include)
+ target_link_libraries(NVOCombatCore PRIVATE kernel32)
+--- native320/THIRD-PARTY-NOTICES.md
++++ native321/THIRD-PARTY-NOTICES.md
+@@ -15,3 +15,5 @@
+ Into the Rough contributors (2026): ITR 2.2.2 pre-hit/pre-health event contracts and float-slot encoding, supplied under MIT. See LICENSE-ITR-MIT.txt. We observe existing public events without copying its hooks or bundling its DLL. Matching source paths/hashes are in sdk-reference.json.
+ 
+ Packet 3B1 also reads the xNVSE GameData loaded-mod layout and JIP projectile/base-form speed, gravity, lifetime and distance layouts. These source contracts are pinned in sdk-reference.json. BallistX donor data and the barrel-speed relation are credited separately in CREDITS-BALLISTX.md; no donor asset relicensing is asserted.
++
++Packet 3P inspects ShowOff184 OnPreProjectileCreate::HandleEvent and its saved engine continuation. Newly authored NVO code atomically interposes the pinned in-memory continuation pointer for a diagnostic, forwards the inspected sixteen-word cdecl ABI unchanged, and correlates return/creation events. ShowOff source and deployed binary were used to establish that contract; no ShowOff implementation, DLL, PDB, or extracted disassembly is redistributed.
+--- native320/src\NativeObserver.cpp
++++ native321/src\NativeObserver.cpp
+@@ -2,6 +2,7 @@
+ #include "NativeLog.hpp"
+ #include "FlightPreview.hpp"
+ #include "FlightPhysics.hpp"
++#include "SpawnBoundary.hpp"
+ #include <Windows.h>
+ #include <cstdint>
+ #include <cstring>
+@@ -99,6 +100,7 @@
+     const Lock lock;
+     if (!gActive) return;
+     const U32 ref = Id(projectile), source = Id(Arg(params, 0)), weapon = Id(Arg(params, 1));
++    nvo::spawn::Created(projectile,ref,source,weapon);
+     const auto serial = ++gNextLifetime;
+     Life* slot = nullptr;
+     bool replaced = false;
+@@ -141,6 +143,7 @@
+ {
+     const Lock lock;
+     if (!gActive) return;
++    nvo::spawn::Destroyed(projectile);
+     const U32 ref = Id(projectile), source = Id(Arg(params, 0)), weapon = Id(Arg(params, 1));
+     auto* life = Find(projectile, ref);
+     if (!life) ++gUnmatched;
+@@ -218,6 +221,7 @@
+     gPending.store(false);
+     if (gActive) Summary(reason);
+     gActive = false;
++    nvo::spawn::Suspend(reason);
+     nvo::flight::Suspend(reason);
+     for (auto& life : gLives) life = {};
+ }
+@@ -226,6 +230,7 @@
+ {
+     const Lock lock;
+     gReason = reason;
++    nvo::spawn::Suspend("capture_requeued");
+     nvo::flight::Suspend("capture_requeued");
+     gActive = false;
+     gPending.store(true);
+@@ -274,6 +279,7 @@
+     nvo::log::Write("CAPTURE session=%u reason=%s handlers=6 max_events=%u current_hit_observer=%u max_contexts=%u engine_damage_hooks=0 damage_replacement=0",
+         gSession, gReason, kMaxEvents, gContextsEnabled ? 1u : 0u, kMaxContexts);
+     nvo::flight::BeginCapture(gSession, contextsReady && nvo::hit::ProjectileLayoutReady(),selectorReady);
++    nvo::spawn::BeginCapture(gSession, contextsReady && nvo::hit::ProjectileLayoutReady());
+     }
+     nvo::flight::EmitNotice(gConsole);
+ }
+--- native320/src\Plugin.cpp
++++ native321/src\Plugin.cpp
+@@ -9,7 +9,7 @@
+ 
+ namespace {
+ constexpr char kPluginName[] = "NVOCombatCore";
+-constexpr std::uint32_t kPluginVersion = 320; // 0.3.20, packet 3K1 startup banner
++constexpr std::uint32_t kPluginVersion = 321; // 0.3.21, packet 3P spawn-boundary diagnostic
+ constexpr bool kHitHooksImplemented = false;
+ constexpr bool kDamageReplacementEnabled = false;
+ bool gLoaded = false;
+@@ -24,8 +24,8 @@
+     gStartupBannerAttempted = true; // Set before calling out, including any reentrant callback.
+     gStartupBannerPending = false;
+     const bool submitted = gConsole && gConsole->version >= 2 && gConsole->RunScriptLine
+-        && gConsole->RunScriptLine("PrintC \"NVO [0.3.20] - The Mojave is yours.\"", nullptr);
+-    nvo::log::Write("STARTUP_BANNER version=0.3.20 submitted=%u once_per_process=1", submitted ? 1u : 0u);
++        && gConsole->RunScriptLine("PrintC \"NVO [0.3.21] - The Mojave is yours.\"", nullptr);
++    nvo::log::Write("STARTUP_BANNER version=0.3.21 submitted=%u once_per_process=1", submitted ? 1u : 0u);
+ }
+ 
+ bool SupportsHost(const nvo::nvse::InterfacePrefix* host) noexcept
+@@ -145,7 +145,7 @@
+         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
+         return false;
+     }
+-    nvo::log::Write("NVOCombatCore 0.3.20 | phase=3K1 | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
++    nvo::log::Write("NVOCombatCore 0.3.21 | phase=3P | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
+     nvo::log::Write("QUERY runtime=0x%08X xnvse=0x%08X editor=%u",
+         host->runtimeVersion, host->nvseVersion, host->isEditor);
+     return true;

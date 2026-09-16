@@ -1,0 +1,577 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>NVO combat packet 3A</title>
+<style>body{max-width:860px;margin:48px auto;padding:0 24px;background:#151b1d;color:#eef4ed;font:18px/1.55 system-ui}a{color:#b8e0a7}button{padding:12px 20px;font:inherit;cursor:pointer}textarea{width:100%;height:320px;background:#0b1113;color:#d2e6cf;margin-top:20px}small{display:block}</style>
+<h1>Packet 3A: BallistX pilot data</h1><p>Purpose: prepare two traceable weapon/cartridge profiles before implementing flight.</p>
+<p>This is source data. Keep NVOCombatCore version 203 installed. There is nothing to copy into GECK or the game, and no additional playtest for this packet.</p>
+<p>The pilot covers the 9mm Pistol with standard 9mm and Hunting Rifle with standard .308. Matching also requires the actual projectile base. Unknown combinations keep engine behaviour.</p>
+<p><a href="README.md">Full instructions and next checkpoint</a> · <a href="NVO-Flight-Pilot.json">JSON data</a></p>
+<button id="copy">Copy complete pilot JSON</button><small id="status" role="status">For source editing only. The installed DLL does not read this file.</small>
+<textarea id="data" readonly aria-label="Complete pilot JSON">{
+  &quot;schema_version&quot;: 1,
+  &quot;packet&quot;: &quot;3A&quot;,
+  &quot;status&quot;: &quot;passive_source_data_not_runtime_configuration&quot;,
+  &quot;installed_native_version&quot;: 203,
+  &quot;runtime_reader_implemented&quot;: false,
+  &quot;projectile_changes_enabled&quot;: false,
+  &quot;damage_changes_enabled&quot;: false,
+  &quot;muzzle_preview_formula&quot;: &quot;maximum_velocity * barrel_length / (barrel_length + 2 * peak_pressure_travel)&quot;,
+  &quot;form_keys&quot;: &quot;Originating plugin filename plus six-digit local ID. Never a hard-coded load-order prefix.&quot;,
+  &quot;profiles&quot;: [
+    {
+      &quot;id&quot;: &quot;9mm-pistol-standard&quot;,
+      &quot;match&quot;: {
+        &quot;weapon&quot;: &quot;FalloutNV.esm:0E3778&quot;,
+        &quot;ammunition&quot;: &quot;FalloutNV.esm:08ED03&quot;,
+        &quot;projectile_base&quot;: &quot;FalloutNV.esm:08F20F&quot;,
+        &quot;policy&quot;: &quot;All three must match the live shot. Otherwise preserve engine behaviour.&quot;
+      },
+      &quot;record_identities&quot;: {
+        &quot;weapon&quot;: {
+          &quot;type&quot;: &quot;WEAP&quot;,
+          &quot;EDID&quot;: &quot;WeapNV9mmPistol&quot;,
+          &quot;FULL&quot;: &quot;9mm Pistol&quot;
+        },
+        &quot;ammunition&quot;: {
+          &quot;type&quot;: &quot;AMMO&quot;,
+          &quot;EDID&quot;: &quot;Ammo9mm&quot;,
+          &quot;FULL&quot;: &quot;9mm Round&quot;
+        },
+        &quot;projectile&quot;: {
+          &quot;type&quot;: &quot;PROJ&quot;,
+          &quot;EDID&quot;: &quot;9mmBulletProjectile&quot;,
+          &quot;FULL&quot;: &quot;9mm Bullet&quot;
+        }
+      },
+      &quot;flight_inputs&quot;: {
+        &quot;drag_curve&quot;: &quot;G1&quot;,
+        &quot;ballistic_coefficient_lb_per_in2&quot;: 0.155,
+        &quot;mass_grain&quot;: 115.0,
+        &quot;diameter_in&quot;: 0.355,
+        &quot;maximum_velocity_m_per_s&quot;: 453.0,
+        &quot;bullet_travel_before_peak_pressure_in&quot;: 0.4,
+        &quot;barrel_length_in&quot;: 4.7,
+        &quot;reference_temperature_k&quot;: 288.15
+      },
+      &quot;preview_only&quot;: {
+        &quot;muzzle_velocity_m_per_s_at_reference_temperature&quot;: 387.109091,
+        &quot;mass_kg&quot;: 0.007451874649999999,
+        &quot;diameter_m&quot;: 0.009016999999999999,
+        &quot;barrel_length_m&quot;: 0.11938
+      },
+      &quot;donor_source&quot;: {
+        &quot;cartridge&quot;: {
+          &quot;member&quot;: &quot;Config/BallistX/Data/CartridgeData.cfg&quot;,
+          &quot;line&quot;: 231,
+          &quot;original_row&quot;: &quot;@FalloutNV.esm:08F20F\t\t\t1\t0.155\t115\t\t0.355\t453\t\t0.4\t\t0.6\t\t37\t\t; 919-M882&quot;
+        },
+        &quot;weapon&quot;: {
+          &quot;member&quot;: &quot;Config/BallistX/Data/WeaponData.cfg&quot;,
+          &quot;line&quot;: 10,
+          &quot;original_row&quot;: &quot;@FalloutNV.esm:0E3778\t\t\t\t4.7\t\t1.6\t\t12.0\t; 9mm Pistol\t\t\t\t\t\t; 919-M882, 15m, Browning Hi-Power&quot;
+        }
+      },
+      &quot;unused_donor_values&quot;: {
+        &quot;base_damage&quot;: 37.0,
+        &quot;zero_moa&quot;: 1.6,
+        &quot;precision_moa&quot;: 12.0,
+        &quot;temperature_velocity_coefficient_m_per_s_per_k&quot;: 0.6
+      }
+    },
+    {
+      &quot;id&quot;: &quot;hunting-rifle-standard-308&quot;,
+      &quot;match&quot;: {
+        &quot;weapon&quot;: &quot;FalloutNV.esm:004333&quot;,
+        &quot;ammunition&quot;: &quot;FalloutNV.esm:06B53C&quot;,
+        &quot;projectile_base&quot;: &quot;FalloutNV.esm:08F20A&quot;,
+        &quot;policy&quot;: &quot;All three must match the live shot. Otherwise preserve engine behaviour.&quot;
+      },
+      &quot;record_identities&quot;: {
+        &quot;weapon&quot;: {
+          &quot;type&quot;: &quot;WEAP&quot;,
+          &quot;EDID&quot;: &quot;WeapHuntingRifle&quot;,
+          &quot;FULL&quot;: &quot;Hunting Rifle&quot;
+        },
+        &quot;ammunition&quot;: {
+          &quot;type&quot;: &quot;AMMO&quot;,
+          &quot;EDID&quot;: &quot;Ammo308&quot;,
+          &quot;FULL&quot;: &quot;.308 Round&quot;
+        },
+        &quot;projectile&quot;: {
+          &quot;type&quot;: &quot;PROJ&quot;,
+          &quot;EDID&quot;: &quot;308BulletProjectile&quot;,
+          &quot;FULL&quot;: &quot;.308 Bullet&quot;
+        }
+      },
+      &quot;flight_inputs&quot;: {
+        &quot;drag_curve&quot;: &quot;G7&quot;,
+        &quot;ballistic_coefficient_lb_per_in2&quot;: 0.209,
+        &quot;mass_grain&quot;: 147.0,
+        &quot;diameter_in&quot;: 0.308,
+        &quot;maximum_velocity_m_per_s&quot;: 1012.0,
+        &quot;bullet_travel_before_peak_pressure_in&quot;: 2.1,
+        &quot;barrel_length_in&quot;: 22.0,
+        &quot;reference_temperature_k&quot;: 288.15
+      },
+      &quot;preview_only&quot;: {
+        &quot;muzzle_velocity_m_per_s_at_reference_temperature&quot;: 849.770992,
+        &quot;mass_kg&quot;: 0.00952543977,
+        &quot;diameter_m&quot;: 0.007823199999999999,
+        &quot;barrel_length_m&quot;: 0.5588
+      },
+      &quot;donor_source&quot;: {
+        &quot;cartridge&quot;: {
+          &quot;member&quot;: &quot;Config/BallistX/Data/CartridgeData.cfg&quot;,
+          &quot;line&quot;: 196,
+          &quot;original_row&quot;: &quot;@FalloutNV.esm:08F20A\t\t\t7\t0.209\t147\t\t0.308\t1012\t2.1\t\t0.6\t\t67\t\t; 762-M80&quot;
+        },
+        &quot;weapon&quot;: {
+          &quot;member&quot;: &quot;Config/BallistX/Data/WeaponData.cfg&quot;,
+          &quot;line&quot;: 30,
+          &quot;original_row&quot;: &quot;@FalloutNV.esm:004333\t\t\t\t22.0\t2.8\t\t1.31\t; Hunting Rifle\t\t\t\t\t\t; 762-Mk316, 100m, Winchester Model 70&quot;
+        }
+      },
+      &quot;unused_donor_values&quot;: {
+        &quot;base_damage&quot;: 67.0,
+        &quot;zero_moa&quot;: 2.8,
+        &quot;precision_moa&quot;: 1.31,
+        &quot;temperature_velocity_coefficient_m_per_s_per_k&quot;: 0.6
+      }
+    }
+  ],
+  &quot;drag_curves&quot;: {
+    &quot;G1&quot;: {
+      &quot;source_member&quot;: &quot;Config/BallistX/Functions/G1_DragFunction.cfg&quot;,
+      &quot;columns&quot;: [
+        &quot;mach&quot;,
+        &quot;drag_coefficient&quot;
+      ],
+      &quot;samples&quot;: [
+        [
+          0.0,
+          0.2629
+        ],
+        [
+          0.1,
+          0.2487
+        ],
+        [
+          0.2,
+          0.2344
+        ],
+        [
+          0.3,
+          0.2214
+        ],
+        [
+          0.4,
+          0.2104
+        ],
+        [
+          0.5,
+          0.2032
+        ],
+        [
+          0.6,
+          0.2034
+        ],
+        [
+          0.7,
+          0.2165
+        ],
+        [
+          0.8,
+          0.2546
+        ],
+        [
+          0.9,
+          0.3415
+        ],
+        [
+          1.0,
+          0.4805
+        ],
+        [
+          1.1,
+          0.5883
+        ],
+        [
+          1.2,
+          0.6393
+        ],
+        [
+          1.3,
+          0.6589
+        ],
+        [
+          1.4,
+          0.6625
+        ],
+        [
+          1.5,
+          0.6573
+        ],
+        [
+          1.6,
+          0.6474
+        ],
+        [
+          1.7,
+          0.6347
+        ],
+        [
+          1.8,
+          0.621
+        ],
+        [
+          1.9,
+          0.6072
+        ],
+        [
+          2.0,
+          0.5934
+        ],
+        [
+          2.1,
+          0.5804
+        ],
+        [
+          2.2,
+          0.5685
+        ],
+        [
+          2.3,
+          0.5577
+        ],
+        [
+          2.4,
+          0.5481
+        ],
+        [
+          2.5,
+          0.5397
+        ],
+        [
+          2.6,
+          0.5325
+        ],
+        [
+          2.7,
+          0.5264
+        ],
+        [
+          2.8,
+          0.5211
+        ],
+        [
+          2.9,
+          0.5168
+        ],
+        [
+          3.0,
+          0.5133
+        ],
+        [
+          3.1,
+          0.5105
+        ],
+        [
+          3.2,
+          0.5084
+        ],
+        [
+          3.3,
+          0.5067
+        ],
+        [
+          3.4,
+          0.5054
+        ],
+        [
+          3.5,
+          0.504
+        ],
+        [
+          3.6,
+          0.503
+        ],
+        [
+          3.7,
+          0.5022
+        ],
+        [
+          3.8,
+          0.5016
+        ],
+        [
+          3.9,
+          0.501
+        ],
+        [
+          4.0,
+          0.5006
+        ],
+        [
+          4.1,
+          0.5002
+        ],
+        [
+          4.2,
+          0.4998
+        ],
+        [
+          4.3,
+          0.4997
+        ],
+        [
+          4.4,
+          0.4995
+        ],
+        [
+          4.5,
+          0.4993
+        ],
+        [
+          4.6,
+          0.4992
+        ],
+        [
+          4.7,
+          0.4991
+        ],
+        [
+          4.8,
+          0.499
+        ],
+        [
+          4.9,
+          0.4989
+        ],
+        [
+          5.0,
+          0.4988
+        ]
+      ]
+    },
+    &quot;G7&quot;: {
+      &quot;source_member&quot;: &quot;Config/BallistX/Functions/G7_DragFunction.cfg&quot;,
+      &quot;columns&quot;: [
+        &quot;mach&quot;,
+        &quot;drag_coefficient&quot;
+      ],
+      &quot;samples&quot;: [
+        [
+          0.0,
+          0.1198
+        ],
+        [
+          0.1,
+          0.1196
+        ],
+        [
+          0.2,
+          0.1193
+        ],
+        [
+          0.3,
+          0.1194
+        ],
+        [
+          0.4,
+          0.1193
+        ],
+        [
+          0.5,
+          0.1194
+        ],
+        [
+          0.6,
+          0.1194
+        ],
+        [
+          0.7,
+          0.1202
+        ],
+        [
+          0.8,
+          0.1242
+        ],
+        [
+          0.9,
+          0.1464
+        ],
+        [
+          1.0,
+          0.3803
+        ],
+        [
+          1.1,
+          0.4014
+        ],
+        [
+          1.2,
+          0.3884
+        ],
+        [
+          1.3,
+          0.3732
+        ],
+        [
+          1.4,
+          0.358
+        ],
+        [
+          1.5,
+          0.344
+        ],
+        [
+          1.6,
+          0.3315
+        ],
+        [
+          1.7,
+          0.3209
+        ],
+        [
+          1.8,
+          0.3117
+        ],
+        [
+          1.9,
+          0.3042
+        ],
+        [
+          2.0,
+          0.298
+        ],
+        [
+          2.1,
+          0.2922
+        ],
+        [
+          2.2,
+          0.2864
+        ],
+        [
+          2.3,
+          0.2807
+        ],
+        [
+          2.4,
+          0.2752
+        ],
+        [
+          2.5,
+          0.2697
+        ],
+        [
+          2.6,
+          0.2643
+        ],
+        [
+          2.7,
+          0.2588
+        ],
+        [
+          2.8,
+          0.2533
+        ],
+        [
+          2.9,
+          0.2479
+        ],
+        [
+          3.0,
+          0.2424
+        ],
+        [
+          3.1,
+          0.2368
+        ],
+        [
+          3.2,
+          0.2313
+        ],
+        [
+          3.3,
+          0.2258
+        ],
+        [
+          3.4,
+          0.2205
+        ],
+        [
+          3.5,
+          0.2154
+        ],
+        [
+          3.6,
+          0.2106
+        ],
+        [
+          3.7,
+          0.206
+        ],
+        [
+          3.8,
+          0.2017
+        ],
+        [
+          3.9,
+          0.1975
+        ],
+        [
+          4.0,
+          0.1935
+        ],
+        [
+          4.1,
+          0.1898
+        ],
+        [
+          4.2,
+          0.1861
+        ],
+        [
+          4.3,
+          0.1827
+        ],
+        [
+          4.4,
+          0.1793
+        ],
+        [
+          4.5,
+          0.1762
+        ],
+        [
+          4.6,
+          0.173
+        ],
+        [
+          4.7,
+          0.1701
+        ],
+        [
+          4.8,
+          0.1672
+        ],
+        [
+          4.9,
+          0.1645
+        ],
+        [
+          5.0,
+          0.1618
+        ]
+      ]
+    }
+  },
+  &quot;exclusions&quot;: [
+    &quot;No new ammo records or distributions&quot;,
+    &quot;No shared WEAP/PROJ edits&quot;,
+    &quot;No donor damage, zeroing or spread writes&quot;,
+    &quot;No laser/plasma/explosive/melee flight conversion&quot;,
+    &quot;No weather integration, projectile lifetime cutoff, engine-unit conversion or active integrator yet&quot;
+  ]
+}
+</textarea>
+<script>document.querySelector('#copy').onclick=async()=>{const t=document.querySelector('#data');try{await navigator.clipboard.writeText(t.value);document.querySelector('#status').textContent='Copied complete pilot JSON.'}catch(e){t.select();document.querySelector('#status').textContent=document.execCommand('copy')?'Copied complete pilot JSON.':'Select the text and press Ctrl+C.'}};</script></html>

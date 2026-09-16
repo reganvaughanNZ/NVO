@@ -1,0 +1,13 @@
+{
+  "packet": "3V",
+  "status": "audit prepared",
+  "native_version_reviewed": 325,
+  "native_code_changes": 0,
+  "game_files_written": false,
+  "install_required": false,
+  "gameplay_test_required": false,
+  "damage_replacement": false,
+  "step3_scope": "explicit bullet flight and diagnostics only",
+  "step4_shadow_adapter_allowed": true,
+  "damage_activation_allowed": false
+}

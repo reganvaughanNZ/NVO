@@ -1,0 +1,25 @@
+{
+  "verdict": "Bounded automatic-fire/inventory checkpoint passed",
+  "native_version": 326,
+  "capture_sha256": "555081337821fb407cb29afa59ca98b86f174766b2a108d1e1675b8849ad7ace",
+  "projectiles": 98,
+  "hit_transactions": 95,
+  "inventory_entries": 137,
+  "stable_snapshots": 72,
+  "first_session_snapshots": 64,
+  "intentional_omissions": 23,
+  "post_reload_snapshots": 8,
+  "armour_reader_errors": 0,
+  "movement_accounting_mismatches": 0,
+  "pre_movement_callbacks": [
+    17,
+    5
+  ],
+  "installed_files_verified": 14,
+  "normal_exit": true,
+  "startup_banners": 1,
+  "subjective_hitch_feedback": "Not supplied",
+  "exact_frame_time_cost": "Not measured",
+  "damage_replacement": false,
+  "authority_promoted": false
+}

@@ -1,0 +1,63 @@
+{
+  "packet": "4D",
+  "state": "PREPARED_NOT_INSTALLED",
+  "native_version": 327,
+  "build": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatCore\\out\\build-12967-23444",
+  "binary": {
+    "machine": "PE32 x86",
+    "exports": [
+      "NVSEPlugin_Load",
+      "NVSEPlugin_Query"
+    ],
+    "warnings": 0,
+    "dll_sha256": "3f0f68fa2a060ab7ffb6f832013d28388b0871b8a2b3c9f758fddeb826049c5b",
+    "pdb_sha256": "afc7e8caee6c777d2d925a2adf56f6fe02e413ed9ac87f996cb638140fc1d281",
+    "codeview_pdb_guid": "c7653503-fb95-40c9-bf65-2b0266de3779",
+    "pdb_age": 1,
+    "pdb_pair_verified": true,
+    "dll_bytes": 443392,
+    "pdb_bytes": 5558272,
+    "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+    "imports": [
+      "KERNEL32.dll"
+    ]
+  },
+  "checks": {
+    "origin_config_prepared": {
+      "result": "PASS 83 checks; 22 guarded-read failure points; 10000 prepared classifications",
+      "source": {
+        "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatCore\\tests\\out\\coverage-results.txt",
+        "bytes": 80,
+        "sha256": "6c4282e4c850ae8a3aacbafb735e2872359c83452e83f8f9c621e3231542ea59"
+      }
+    },
+    "production_integration": {
+      "result": "PASS 31 production-integration fixture checks; no game launched",
+      "source": {
+        "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatCore\\tests\\out\\coverage-integration-results.txt",
+        "bytes": 65,
+        "sha256": "7136b5e4d9d14bbf94f3732cec7897aa3ed3b6d181a5fcb025acfde265ed3533"
+      }
+    },
+    "pure_classifier_and_recorded_replay": {
+      "result": "PASS 53 checks; 76 captured snapshots; 10000 deterministic repetitions",
+      "source": {
+        "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatModel\\out-coverage\\results.txt",
+        "bytes": 2477,
+        "sha256": "e6bce67841f52c529f9d995810f467d87bf0630fe1db9d5d9df2bcfbc0d350b7"
+      }
+    },
+    "authoring": "PASS revision malformed\nPASS revision malformed\nPASS revision malformed\nPASS plugin malformed\nPASS plugin malformed\nPASS plugin malformed\nPASS local_id malformed\nPASS local_id malformed\nPASS expected_equip_mask malformed\nPASS expected_equip_mask malformed\nPASS missing region\nPASS invented region\nPASS unapproved coverage fraction\nPASS boolean extent\nPASS damage settings not accepted\nPASS duplicate origin key\nPASS boolean schema\nPASS empty catalog\nPASS catalog cap\nPASS duplicate JSON fields\nPASS 21 profile-authoring checks"
+  },
+  "unchanged_installed_files": 14,
+  "existing_hook_flight_reader_sources_unchanged": true,
+  "existing_snapshot_only_four_added_lines": true,
+  "new_engine_hooks": 0,
+  "damage_replacement": false,
+  "stagger_writes": false,
+  "armour_authority": false,
+  "shadow_adapter_linked": false,
+  "game_launched": false,
+  "live_custom_armour_validated": false,
+  "limits": "Offline and prior recorded evidence only. Live session identity/config integration still pending. Timing under stress not measured."
+}

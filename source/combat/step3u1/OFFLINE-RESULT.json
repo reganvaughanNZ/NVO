@@ -1,0 +1,97 @@
+{
+  "packet": "3U1",
+  "capture_sha256": "20453d5c1e84f965f408d0721c283d2b851e852cdae51b43ca2f2ef376900b08",
+  "reader": {
+    "checks": 11,
+    "actual_readimpact_body": true,
+    "world_requires_null_pointer": true,
+    "nonnull_zero_id_invalid": true,
+    "game_loaded": false
+  },
+  "capture_rows": [
+    {
+      "shot": 1,
+      "recorded_target": "00104F0A",
+      "historical_kind_ambiguous": 0,
+      "historical_available": 1,
+      "prospective_available": 1,
+      "prospective_status": "observed_engine_segment",
+      "terrain_explained": 0,
+      "invalid_classification_available": 0
+    },
+    {
+      "shot": 2,
+      "recorded_target": "00000000",
+      "historical_kind_ambiguous": 1,
+      "historical_available": 0,
+      "prospective_available": 1,
+      "prospective_status": "owned_step_speed_range",
+      "terrain_explained": 1,
+      "invalid_classification_available": 0
+    },
+    {
+      "shot": 3,
+      "recorded_target": "00000000",
+      "historical_kind_ambiguous": 1,
+      "historical_available": 0,
+      "prospective_available": 1,
+      "prospective_status": "owned_step_speed_range",
+      "terrain_explained": 1,
+      "invalid_classification_available": 0
+    },
+    {
+      "shot": 4,
+      "recorded_target": "00000000",
+      "historical_kind_ambiguous": 1,
+      "historical_available": 0,
+      "prospective_available": 1,
+      "prospective_status": "owned_step_speed_range",
+      "terrain_explained": 0,
+      "invalid_classification_available": 0
+    },
+    {
+      "shot": 5,
+      "recorded_target": "00104F0A",
+      "historical_kind_ambiguous": 0,
+      "historical_available": 1,
+      "prospective_available": 1,
+      "prospective_status": "observed_engine_segment",
+      "terrain_explained": 0,
+      "invalid_classification_available": 0
+    },
+    {
+      "shot": 6,
+      "recorded_target": "00177CA4",
+      "historical_kind_ambiguous": 0,
+      "historical_available": 1,
+      "prospective_available": 1,
+      "prospective_status": "observed_engine_segment",
+      "terrain_explained": 0,
+      "invalid_classification_available": 0
+    }
+  ],
+  "capture_checks": {
+    "checks": 24,
+    "capture_sha256": "20453d5c1e84f965f408d0721c283d2b851e852cdae51b43ca2f2ef376900b08",
+    "historical_pointer_kind_logged": false,
+    "prospective_fixture": true,
+    "game_loaded": false
+  },
+  "historical_world_classification": "ambiguous and unavailable",
+  "prospective_all_contacts_available": 6,
+  "prospective_anonymous_world_contacts_available": 3,
+  "prospective_terrain_clamps": 2,
+  "damage_authority": false,
+  "dll_or_game_loaded": false,
+  "source_sha256": {
+    "native\\NVOCombatCore\\src\\FlightImpact.inl": "36b68a840fd6e0747db02ca8bf27967667aa5b580e8d04c08c9af9b7930e90bc",
+    "native\\NVOCombatCore\\src\\FlightContactSpeed.inl": "9753f62ef37f5aa65cdc769beb2209603ecc95957fd46f73c6ef58a49ed9278e",
+    "native\\NVOCombatCore\\src\\FlightImpactJoin.inl": "5ac90b991e68e2cbbb97db35ed268d803390b51f0d0bd7a12356add30aa0bb04",
+    "native\\NVOCombatCore\\src\\FlightPhysics.cpp": "662f6721f80869b55988b753f829b51c42be8058b962f45e6d343f395e1e01d5",
+    "tools\\replay_world_contact_3u1.py": "ff330f95e66d5876d1ff473879f047c7fd631354e49dee6df649728a5998a4a9"
+  },
+  "harness_sha256": {
+    "reader": "4b5c63677a834a72b6da1380667c5a044cc7b3179b13153dfb7e17d3e9e44dc8",
+    "capture": "795b01343fa35a603b9fb952330a35e83a1f68a574d4f2bc0c7def3c98da538a"
+  }
+}

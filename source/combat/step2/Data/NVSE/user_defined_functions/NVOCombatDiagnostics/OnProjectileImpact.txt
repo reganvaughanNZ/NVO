@@ -1,0 +1,30 @@
+ref rSource
+ref rWeapon
+ref rTarget
+ref rProjectile
+ref rProjectileBase
+ref rWriter
+float fDistance
+float fLifetime
+float fDamage
+string_var sLine
+
+; ShowOff calls ON the projectile, with source, weapon and struck reference.
+begin function {rSource, rWeapon, rTarget}
+    if eval (player.AuxVarGetFlt "*_NVODiagEnabled") == 0
+        return
+    endif
+    set rProjectile to GetSelfAlt
+    if IsFormValid rProjectile == 0
+        return
+    endif
+    set rProjectileBase to rProjectile.GetBaseObject
+    set fDistance to rProjectile.GetProjectileRefDistanceTraveled
+    set fLifetime to rProjectile.GetProjectileRefLifeTime
+    set fDamage to rProjectile.GetProjectileRefDamage
+
+    let sLine := sv_construct "IMPACT projectile=%i projectile_base=%i source=%i weapon=%i target=%i distance_raw=%.3f lifetime_raw=%.3f projectile_damage=%.3f" rProjectile rProjectileBase rSource rWeapon rTarget fDistance fLifetime fDamage
+    set rWriter to player.AuxVarGetRef "*_NVODiagWriter"
+    call rWriter sLine
+    sv_destruct sLine
+end

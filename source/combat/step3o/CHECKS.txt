@@ -1,0 +1,48 @@
+PASS no reservation before a valid session
+PASS session epochs strictly increase
+PASS unsupported path rejected before reservation
+PASS missing armour snapshot revision rejected
+PASS unknown VATS mode stays unsupported
+PASS actor incarnation required separately from form ID
+PASS same application cannot reserve twice
+PASS same key with changed attacker is a conflict
+PASS reused target form with changed incarnation conflicts
+PASS duplicate cannot replace its settings snapshot
+PASS full capacity rejects without evicting an active entry
+PASS duplicate identity remains detectable at full capacity
+PASS application cannot start before resolution
+PASS reserved context resolves through unchanged pure model
+PASS preview retained as values with expected synthetic result
+PASS resolved input cannot be recomputed under the same token
+PASS only one simulated application start
+PASS only one simulated acknowledgment
+PASS completion retains duplicate history until proven producer closure
+PASS retirement preflight blocks on an unresolved lower component
+PASS failed retirement changes no entries or boundary
+PASS only proven closure allows bounded history retirement
+PASS late duplicate and old token remain rejected after cleanup
+PASS slot reuse cannot revive old token
+PASS pre-start rejection can retire without pretending damage was applied
+PASS retirement boundary cannot go backwards
+PASS tokens are scoped to their issuing ledger
+PASS foreign thread rejected before accessing mutable ledger state
+PASS changed snapshot rejects whole pending preview
+PASS invalid model inputs cannot reach simulated application
+PASS armour snapshot size has a separate bounded admission limit
+PASS failure after simulated start retains uncertain ownership
+PASS partial application cannot restart or lose its duplicate history
+PASS reload invalidates old-session completion without touching new state
+PASS new session can reuse IDs while old contexts stay stale
+PASS distinct pellets and distinct applications never collapse by source or time
+PASS one blast retains separate target applications
+PASS nonkinetic family uses its own valid pure-model input through ledger
+PASS nonkinetic family uses its own valid pure-model input through ledger
+PASS nonkinetic family uses its own valid pure-model input through ledger
+PASS nonkinetic family uses its own valid pure-model input through ledger
+PASS flame projectile is not silently treated as verified exposure
+PASS unimplemented miscellaneous family stays unsupported
+PASS family cannot change between reservation and resolution
+PASS invalid configured capacity fails closed
+PASS ordinary fixture still completes after unrelated failures
+PASS 1000-component traces identical with absent failing or successful external logging
+47 admission checks passed. Offline simulations only, no game writes.

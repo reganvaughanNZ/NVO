@@ -1,0 +1,318 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3k\inspection\actor-damage-00881130.obj
+
+File Type: COFF OBJECT
+
+  00881130: F3 6E              rep outs    dx,byte ptr [esi]
+  00881132: 62 9E 55 27 4B B8  bound       ebx,qword ptr [esi+B84B2755h]
+  00881138: B7 FA              mov         bh,0FAh
+  0088113A: 6B BF 08 9C 68 40  imul        edi,dword ptr [edi+40689C08h],0FFFFFFB1h
+            B1
+  00881141: 90                 nop
+  00881142: B9 1E C7 1F C6     mov         ecx,0C61FC71Eh
+  00881147: 65 B1 87           mov         cl,87h
+  0088114A: BE 67 36 06 42     mov         esi,42063667h
+  0088114F: BD 94 32 1D 97     mov         ebp,971D3294h
+  00881154: 90                 nop
+  00881155: E4 19              in          al,19h
+  00881157: 33 9F 11 17 EC 81  xor         ebx,dword ptr [edi+81EC1711h]
+  0088115D: BA FA C4 10 F3     mov         edx,0F310C4FAh
+  00881162: 69 0F 0D 5B B8 95  imul        ecx,dword ptr [edi],95B85B0Dh
+  00881168: 60                 pushad
+  00881169: BD 58 53 52 BE     mov         ebp,0BE525358h
+  0088116E: 0B DD              or          ebx,ebp
+  00881170: 6F                 outs        dx,dword ptr [esi]
+  00881171: 38 BD D6 35 08 2A  cmp         byte ptr [ebp+2A0835D6h],bh
+  00881177: 48                 dec         eax
+  00881178: AC                 lods        byte ptr [esi]
+  00881179: F1
+  0088117A: 08 C3              or          bl,al
+  0088117C: B5 E8              mov         ch,0E8h
+  0088117E: 72 38              jb          008811B8
+  00881180: 92                 xchg        eax,edx
+  00881181: EA 16 43 03 50 14  jmp         2C14:50034316
+            2C
+  00881188: 66 33 83 0A F7 AB  xor         ax,word ptr [ebx+49ABF70Ah]
+            49
+  0088118F: 2E 4C              dec         esp
+  00881191: 2E 93              xchg        eax,ebx
+  00881193: A2 2F 14 F2 EA     mov         byte ptr ds:[EAF2142Fh],al
+  00881198: FA                 cli
+  00881199: E4 48              in          al,48h
+  0088119B: FA                 cli
+  0088119C: 1B 49 2F           sbb         ecx,dword ptr [ecx+2Fh]
+  0088119F: BE AE 19 32 C6     mov         esi,0C63219AEh
+  008811A4: 30 95 87 6B 99 D2  xor         byte ptr [ebp+D2996B87h],dl
+  008811AA: BA 6C 55 DA 1F     mov         edx,1FDA556Ch
+  008811AF: 5E                 pop         esi
+  008811B0: 0D 8C A7 55 61     or          eax,6155A78Ch
+  008811B5: A8 C2              test        al,0C2h
+  008811B7: C9                 leave
+  008811B8: 9F                 lahf
+  008811B9: 72 69              jb          00881224
+  008811BB: EE                 out         dx,al
+  008811BC: B8 5A 11 27 6E     mov         eax,6E27115Ah
+  008811C1: 7A 06              jp          008811C9
+  008811C3: 20 14 1A           and         byte ptr [edx+ebx],dl
+  008811C6: 7D 76              jge         0088123E
+  008811C8: 62 0E              bound       ecx,qword ptr [esi]
+  008811CA: 46                 inc         esi
+  008811CB: A1 70 6D BE D1     mov         eax,dword ptr ds:[D1BE6D70h]
+  008811D0: 70 0F              jo          008811E1
+  008811D2: 92                 xchg        eax,edx
+  008811D3: E6 31              out         31h,al
+  008811D5: F1
+  008811D6: 4D                 dec         ebp
+  008811D7: E4 6F              in          al,6Fh
+  008811D9: E9 E8 A0 F9 D4     jmp         D581B2C6
+  008811DE: 4A                 dec         edx
+  008811DF: 77 66              ja          00881247
+  008811E1: C4 95 01 72 4A E8  les         edx,fword ptr [ebp+E84A7201h]
+  008811E7: 8A 10              mov         dl,byte ptr [eax]
+  008811E9: 85 86 9E D1 13 B2  test        dword ptr [esi+B213D19Eh],eax
+  008811EF: 10 2E              adc         byte ptr [esi],ch
+  008811F1: 7F E1              jg          008811D4
+  008811F3: 0E                 push        cs
+  008811F4: EE                 out         dx,al
+  008811F5: E1 70              loope       00881267
+  008811F7: 21 EB              and         ebx,ebp
+  008811F9: BE D0 A9 24 88     mov         esi,8824A9D0h
+  008811FE: 6C                 ins         byte ptr es:[edi],dx
+  008811FF: 55                 push        ebp
+  00881200: 7C 2F              jl          00881231
+  00881202: 20 78 D5           and         byte ptr [eax-2Bh],bh
+  00881205: 1A 3F              sbb         bh,byte ptr [edi]
+  00881207: 15 58 B3 02 35     adc         eax,3502B358h
+  0088120C: 3D CB AA FC 74     cmp         eax,74FCAACBh
+  00881211: 78 47              js          0088125A
+  00881213: 6B B6 A8 D3 23 C9  imul        esi,dword ptr [esi+C923D3A8h],18h
+            18
+  0088121A: 49                 dec         ecx
+  0088121B: 1D AC 82 12 0A     sbb         eax,0A1282ACh
+  00881220: 03 03              add         eax,dword ptr [ebx]
+  00881222: A9 61 7F F9 41     test        eax,41F97F61h
+  00881227: 63 A0 E4 01 44 FD  arpl        word ptr [eax+FD4401E4h],sp
+  0088122D: 8D
+  0088122E: EE                 out         dx,al
+  0088122F: F4                 hlt
+  00881230: 0A D1              or          dl,cl
+  00881232: 8D 68 B4           lea         ebp,[eax-4Ch]
+  00881235: B8 38 37 30 56     mov         eax,56303738h
+  0088123A: 70 40              jo          0088127C
+  0088123C: F3 50              rep push    eax
+  0088123E: 3F                 aas
+  0088123F: 87 A8 27 A9 DC B2  xchg        ebp,dword ptr [eax+B2DCA927h]
+  00881245: 5E                 pop         esi
+  00881246: 0F DE 9D 33 42 24  pmaxub      mm3,mmword ptr [ebp+0A244233h]
+            0A
+  0088124D: 43                 inc         ebx
+  0088124E: 1F                 pop         ds
+  0088124F: 62
+  00881250: DD B9 17 01 B0 FF  fnstsw      word ptr [ecx+FFB00117h]
+  00881256: 5F                 pop         edi
+  00881257: C0 41 40 C0        rol         byte ptr [ecx+40h],0C0h
+  0088125B: E5 DF              in          eax,0DFh
+  0088125D: 2E
+  0088125E: C7
+  0088125F: 1A 86 84 06 81 24  sbb         al,byte ptr [esi+24810684h]
+  00881265: 55                 push        ebp
+  00881266: 3D 6A 20 8D 97     cmp         eax,978D206Ah
+  0088126B: CD E7              int         0E7h
+  0088126D: 47                 inc         edi
+  0088126E: 91                 xchg        eax,ecx
+  0088126F: AA                 stos        byte ptr es:[edi]
+  00881270: 73 5F              jae         008812D1
+  00881272: 3C 3D              cmp         al,3Dh
+  00881274: 19 2E              sbb         dword ptr [esi],ebp
+  00881276: 4D                 dec         ebp
+  00881277: CF                 iretd
+  00881278: C5
+  00881279: C9                 leave
+  0088127A: 07                 pop         es
+  0088127B: 24 FF              and         al,0FFh
+  0088127D: BB E9 BF 59 6F     mov         ebx,6F59BFE9h
+  00881282: EF                 out         dx,eax
+  00881283: 9B                 wait
+  00881284: E8 86 DA 3B 87     call        87C3ED0F
+  00881289: 78 A7              js          00881232
+  0088128B: CD 55              int         55h
+  0088128D: 3E 75 9F           ht jne      0088122F
+  00881290: 88 13              mov         byte ptr [ebx],dl
+  00881292: 46                 inc         esi
+  00881293: 9F                 lahf
+  00881294: F0 25 C2 41 1E 03  lock and    eax,31E41C2h
+  0088129A: FA                 cli
+  0088129B: A5                 movs        dword ptr es:[edi],dword ptr [esi]
+  0088129C: 30 5D DB           xor         byte ptr [ebp-25h],bl
+  0088129F: 72 9A              jb          0088123B
+  008812A1: 62 2D FA 58 DF 6C  bound       ebp,qword ptr ds:[6CDF58FAh]
+  008812A7: 78 9D              js          00881246
+  008812A9: 96                 xchg        eax,esi
+  008812AA: E5 2D              in          eax,2Dh
+  008812AC: 69 BD B8 C5 02 13  imul        edi,dword ptr [ebp+1302C5B8h],0A3340EB3h
+            B3 0E 34 A3
+  008812B6: 44                 inc         esp
+  008812B7: C0 7F EB 31        sar         byte ptr [edi-15h],31h
+  008812BB: 28 B6 FF 8F 7D 68  sub         byte ptr [esi+687D8FFFh],dh
+  008812C1: 16                 push        ss
+  008812C2: 69 B6 0C 08 F2 C5  imul        esi,dword ptr [esi+C5F2080Ch],1E0F26F6h
+            F6 26 0F 1E
+  008812CC: CB                 retf
+  008812CD: 53                 push        ebx
+  008812CE: 33 37              xor         esi,dword ptr [edi]
+  008812D0: EF                 out         dx,eax
+  008812D1: 40                 inc         eax
+  008812D2: 95                 xchg        eax,ebp
+  008812D3: D9 EC              fldlg2
+  008812D5: EF                 out         dx,eax
+  008812D6: 80 EB 27           sub         bl,27h
+  008812D9: BD 7B BA AE EF     mov         ebp,0EFAEBA7Bh
+  008812DE: 29 5D A2           sub         dword ptr [ebp-5Eh],ebx
+  008812E1: 0B 5F 98           or          ebx,dword ptr [edi-68h]
+  008812E4: 52                 push        edx
+  008812E5: 43                 inc         ebx
+  008812E6: D1 A6 7A BB 73 56  shl         dword ptr [esi+5673BB7Ah],1
+  008812EC: D0 12              rcl         byte ptr [edx],1
+  008812EE: CF                 iretd
+  008812EF: 91                 xchg        eax,ecx
+  008812F0: 9A FF 9C 14 40 C1  call        9AC1:40149CFF
+            9A
+  008812F7: A0 34 3D 2E 4C     mov         al,byte ptr ds:[4C2E3D34h]
+  008812FC: 5B                 pop         ebx
+  008812FD: 34 09              xor         al,9
+  008812FF: 85 6A FC           test        dword ptr [edx-4],ebp
+  00881302: C2 56 D8           ret         0D856h
+  00881305: 27                 daa
+  00881306: 29 CD              sub         ebp,ecx
+  00881308: A6                 cmps        byte ptr [esi],byte ptr es:[edi]
+  00881309: 0B F3              or          esi,ebx
+  0088130B: E8 26 E6 B7 E5     call        E63FF936
+  00881310: 9A 57 55 54 32 1E  call        E21E:32545557
+            E2
+  00881317: 3A CE              cmp         cl,dh
+  00881319: 2A 0A              sub         cl,byte ptr [edx]
+  0088131B: DF 61 A2           fbld        tbyte ptr [ecx-5Eh]
+  0088131E: BF 8F 28 2B B3     mov         edi,0B32B288Fh
+  00881323: 45                 inc         ebp
+  00881324: 14 1E              adc         al,1Eh
+  00881326: 8F
+  00881327: 4F                 dec         edi
+  00881328: 01 28              add         dword ptr [eax],ebp
+  0088132A: 3E EC              in          al,dx
+  0088132C: 14 02              adc         al,2
+  0088132E: CF                 iretd
+  0088132F: 4E                 dec         esi
+  00881330: 53                 push        ebx
+  00881331: CA B4 0D           retf        0DB4h
+  00881334: BF 79 B4 29 64     mov         edi,6429B479h
+  00881339: EB 13              jmp         0088134E
+  0088133B: A8 07              test        al,7
+  0088133D: 2F                 das
+  0088133E: 0D D9 56 C4 AA     or          eax,0AAC456D9h
+  00881343: 23 47 7E           and         eax,dword ptr [edi+7Eh]
+  00881346: BE 4F C6 82 BE     mov         esi,0BE82C64Fh
+  0088134B: E5 80              in          eax,80h
+  0088134D: C5
+  0088134E: DE F8              fdivp       st(0),st
+  00881350: 39 80 5E 13 99 65  cmp         dword ptr [eax+6599135Eh],eax
+  00881356: 9B                 wait
+  00881357: 10 39              adc         byte ptr [ecx],bh
+  00881359: BF 1F 07 BE D2     mov         edi,0D2BE071Fh
+  0088135E: 61                 popad
+  0088135F: 7D FA              jge         0088135B
+  00881361: A3 C4 24 8F 5E     mov         dword ptr ds:[5E8F24C4h],eax
+  00881366: 45                 inc         ebp
+  00881367: B6 F1              mov         dh,0F1h
+  00881369: A8 45              test        al,45h
+  0088136B: 58                 pop         eax
+  0088136C: 14 0C              adc         al,0Ch
+  0088136E: C5 34 E6           lds         esi,fword ptr [esi]
+  00881371: BB 81 3D A8 A3     mov         ebx,0A3A83D81h
+  00881376: 96                 xchg        eax,esi
+  00881377: 86 02              xchg        al,byte ptr [edx]
+  00881379: AF                 scas        dword ptr es:[edi]
+  0088137A: F0 49              lock dec    ecx
+  0088137C: 9A 8C 21 EB CF 8C  call        EA8C:CFEB218C
+            EA
+  00881383: 55                 push        ebp
+  00881384: 2F                 das
+  00881385: AC                 lods        byte ptr [esi]
+  00881386: 3D 18 00 B4 AA     cmp         eax,0AAB40018h
+  0088138B: E1 28              loope       008813B5
+  0088138D: 01 39              add         dword ptr [ecx],edi
+  0088138F: 21 39              and         dword ptr [ecx],edi
+  00881391: 3B E4              cmp         esp,esp
+  00881393: 9B                 wait
+  00881394: 14 65              adc         al,65h
+  00881396: 24 56              and         al,56h
+  00881398: F6 D3              not         bl
+  0088139A: 39 6B B8           cmp         dword ptr [ebx-48h],ebp
+  0088139D: EF                 out         dx,eax
+  0088139E: 05 8E 6E 80 94     add         eax,94806E8Eh
+  008813A3: CD CA              int         0CAh
+  008813A5: D9 53 78           fst         dword ptr [ebx+78h]
+  008813A8: 01 8E A0 F3 17 56  add         dword ptr [esi+5617F3A0h],ecx
+  008813AE: 87 60 30           xchg        esp,dword ptr [eax+30h]
+  008813B1: 2D 66 7A B3 FD     sub         eax,0FDB37A66h
+  008813B6: 1E                 push        ds
+  008813B7: 06                 push        es
+  008813B8: 8B CF              mov         ecx,edi
+  008813BA: 3E 67 04 8A        add         al,8Ah
+  008813BE: 9D                 popfd
+  008813BF: 0B C4              or          eax,esp
+  008813C1: B1 D0              mov         cl,0D0h
+  008813C3: 07                 pop         es
+  008813C4: A7                 cmps        dword ptr [esi],dword ptr es:[edi]
+  008813C5: E7 83              out         83h,eax
+  008813C7: 61                 popad
+  008813C8: 46                 inc         esi
+  008813C9: A8 77              test        al,77h
+  008813CB: 44                 inc         esp
+  008813CC: 73 51              jae         0088141F
+  008813CE: E8 BE 9B 5E 3A     call        3AE6AF91
+  008813D3: 5D                 pop         ebp
+  008813D4: 50                 push        eax
+  008813D5: 61                 popad
+  008813D6: A1 F8 BB 8E 38     mov         eax,dword ptr ds:[388EBBF8h]
+  008813DB: 6F                 outs        dx,dword ptr [esi]
+  008813DC: A4                 movs        byte ptr es:[edi],byte ptr [esi]
+  008813DD: E8 82 2A F4 95     call        967C3E64
+  008813E2: AA                 stos        byte ptr es:[edi]
+  008813E3: F1
+  008813E4: 2B 23              sub         esp,dword ptr [ebx]
+  008813E6: 5A                 pop         edx
+  008813E7: C7 C3 BE C2 B9 90  mov         ebx,90B9C2BEh
+  008813ED: 44                 inc         esp
+  008813EE: 3C 4D              cmp         al,4Dh
+  008813F0: 77 9D              ja          0088138F
+  008813F2: D5 B1              aadb        0B1h
+  008813F4: 1E                 push        ds
+  008813F5: 66 7E 60           jle         00001458
+  008813F8: 2B E6              sub         esp,esi
+  008813FA: 2E
+  008813FB: 3E 81 64 E2 4E 5B  and         dword ptr ds:[edx+4Eh],8EADF5Bh
+            DF EA 08
+  00881404: 3E 90              nop
+  00881406: BD 3F DD 99 42     mov         ebp,4299DD3Fh
+  0088140B: 95                 xchg        eax,ebp
+  0088140C: 5E                 pop         esi
+  0088140D: 02 4A 7F           add         cl,byte ptr [edx+7Fh]
+  00881410: D5 D2              aadb        0D2h
+  00881412: DA 5A 3D           ficomp      dword ptr [edx+3Dh]
+  00881415: D2 AF CB 8F 09 D8  shr         byte ptr [edi+D8098FCBh],cl
+  0088141B: 78 84              js          008813A1
+  0088141D: 69 20 34 E4 20 D2  imul        esp,dword ptr [eax],0D220E434h
+  00881423: CE                 into
+  00881424: A4                 movs        byte ptr es:[edi],byte ptr [esi]
+  00881425: 35 EE A5 DF 84     xor         eax,84DFA5EEh
+  0088142A: 0F
+  0088142B: 3E 99              cdq
+  0088142D: E3 83              jecxz       008813B2
+  0088142F: 4E                 dec         esi
+
+  Summary
+
+         300 .text

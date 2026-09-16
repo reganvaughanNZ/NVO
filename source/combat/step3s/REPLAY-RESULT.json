@@ -1,0 +1,441 @@
+{
+  "summary": {
+    "packet": "3S",
+    "checks": {
+      "checks_passed": 61,
+      "game_loaded": false,
+      "damage_authority": false
+    },
+    "capture_sha256": {
+      "source/combat/step3g2/captures/2026-09-15-3G2-5c4e764753b7/NVOCombatCore.log": "5c4e764753b73c258a176e4270b5b5bdbf8255ac6d35c097daa259cf89fcca63",
+      "source/combat/step3q/captures/review-37821ee73c00/NVOCombatCore.log": "37821ee73c001055b279fc56af83b8c57471ccefc16caac7e8e9a83fbde30b64"
+    },
+    "contact_records": 19,
+    "outcomes": {
+      "unsupported_contact_producer": 2,
+      "conditional_estimate_only": 4,
+      "candidate_or_snapshot_unavailable": 8,
+      "unsupported_profile": 5
+    },
+    "authoritative_energy_records": 0,
+    "game_loaded": false,
+    "game_files_written": false,
+    "installed_native_version": 323,
+    "installed_hashes": {
+      "Data/NVSE/Plugins/NVOCombatCore.dll": "a78d72dd22b7d605b150aa617ecb88b0047bde73c25f5f41b5cfea5b2d148d63",
+      "Data/NVSE/Plugins/NVOCombatCore.pdb": "e257619b26472cc46e23cc29803c16d608bbb1ed7d757449e8e5e67f0c31d1ee"
+    },
+    "source_sha256": {
+      "native\\NVOCombatModel\\ImpactEnergy.hpp": "3454533b1205c2620ee8432e9fe4959019f2951baae3dd5a4b7d00ad9ddf9546",
+      "native\\NVOCombatModel\\ImpactEnergy.cpp": "9db9795bd990e90199a863f99a1f8baf1d1a919dac0ee2a668c4b371e86b0252",
+      "native\\NVOCombatModel\\ImpactEnergyProfiles.inl": "80c953c6e6bb1281f31d937bd213dd34d2425f5d573ea64b517cbe78d0d34af0",
+      "native\\NVOCombatModel\\impact_energy_tests.cpp": "a52d31e89c19ce8eb62aaa7e370ed027464117c978f4872ca4c3d51913d7a020",
+      "tools\\prepare_combat_3s.py": "81b08c7ca98165b315ccc035966a3d96d3dec50e1d8cdfbaeaa376a45bebb568",
+      "source\\combat\\step3a\\NVO-Flight-Pilot.json": "a1cbc26838d325edb9a2ebc08ff406708c28081f396c53e41713d7e30ae684c8",
+      "source\\combat\\step3a\\PROVENANCE.json": "851b0fcaae6c02e3e52be771d01a977b85f2a4e9803d240f4dd82d1379b4edf1",
+      "source\\combat\\step3s\\out\\replay.cpp": "a30a0df3ca33b8908d2b16fc99b2a073450905cba6828f83d61e84de575548fb"
+    },
+    "limit": "Re-evaluates logged diagnostic candidate admission only; does not replay collision physics or prove actual contact speed."
+  },
+  "contacts": [
+    {
+      "index": 0,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 1,
+      "step": 0,
+      "source_line": 51,
+      "companion_lines": {
+        "IMPACT_MODEL": 54,
+        "IMPACT_VELOCITY": 53,
+        "IMPACT_GEOMETRY": 52,
+        "IMPACT_BOUNDARY": 55
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "engine_baseline_contact",
+      "reported_contact_region": -1,
+      "target": "00122CA9",
+      "reason": "unsupported_contact_producer",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 1,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 2,
+      "step": 5,
+      "source_line": 149,
+      "companion_lines": {
+        "IMPACT_MODEL": 152,
+        "IMPACT_VELOCITY": 151,
+        "IMPACT_GEOMETRY": 150,
+        "IMPACT_BOUNDARY": 153
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "model_estimate_only",
+      "reported_contact_region": -1,
+      "target": "001070C1",
+      "reason": "conditional_estimate_only",
+      "conditional_joules": 2922.66738577,
+      "damage_authority": false
+    },
+    {
+      "index": 2,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 3,
+      "step": 6,
+      "source_line": 258,
+      "companion_lines": {
+        "IMPACT_MODEL": 261,
+        "IMPACT_VELOCITY": 260,
+        "IMPACT_GEOMETRY": 259,
+        "IMPACT_BOUNDARY": 262
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "model_estimate_only",
+      "reported_contact_region": -1,
+      "target": "001070C1",
+      "reason": "conditional_estimate_only",
+      "conditional_joules": 2922.67156442,
+      "damage_authority": false
+    },
+    {
+      "index": 3,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 4,
+      "step": 7,
+      "source_line": 379,
+      "companion_lines": {
+        "IMPACT_MODEL": 382,
+        "IMPACT_VELOCITY": 381,
+        "IMPACT_GEOMETRY": 380,
+        "IMPACT_BOUNDARY": 383
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "model_path_differs",
+      "reported_contact_region": -1,
+      "target": "001070C1",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 4,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 5,
+      "step": 7,
+      "source_line": 500,
+      "companion_lines": {
+        "IMPACT_MODEL": 503,
+        "IMPACT_VELOCITY": 502,
+        "IMPACT_GEOMETRY": 501,
+        "IMPACT_BOUNDARY": 504
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "model_estimate_only",
+      "reported_contact_region": -1,
+      "target": "001070C1",
+      "reason": "conditional_estimate_only",
+      "conditional_joules": 2854.12922005,
+      "damage_authority": false
+    },
+    {
+      "index": 5,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 6,
+      "step": 7,
+      "source_line": 621,
+      "companion_lines": {
+        "IMPACT_MODEL": 624,
+        "IMPACT_VELOCITY": 623,
+        "IMPACT_GEOMETRY": 622,
+        "IMPACT_BOUNDARY": 625
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "model_estimate_only",
+      "reported_contact_region": -1,
+      "target": "001070C1",
+      "reason": "conditional_estimate_only",
+      "conditional_joules": 2854.92958227,
+      "damage_authority": false
+    },
+    {
+      "index": 6,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 7,
+      "step": 4,
+      "source_line": 706,
+      "companion_lines": {
+        "IMPACT_MODEL": 709,
+        "IMPACT_VELOCITY": 708,
+        "IMPACT_GEOMETRY": 707,
+        "IMPACT_BOUNDARY": 710
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": 1,
+      "target": "FF001978",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 7,
+      "capture": "3G2",
+      "session": 1,
+      "lifetime": 8,
+      "step": 5,
+      "source_line": 809,
+      "companion_lines": {
+        "IMPACT_MODEL": 812,
+        "IMPACT_VELOCITY": 811,
+        "IMPACT_GEOMETRY": 810,
+        "IMPACT_BOUNDARY": 813
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": 0,
+      "target": "FF001978",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 8,
+      "capture": "3Q",
+      "session": 1,
+      "lifetime": 2,
+      "step": 7,
+      "source_line": 958,
+      "companion_lines": {
+        "IMPACT_MODEL": 961,
+        "IMPACT_VELOCITY": 960,
+        "IMPACT_GEOMETRY": 959,
+        "IMPACT_BOUNDARY": 962
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E6031",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 9,
+      "capture": "3Q",
+      "session": 1,
+      "lifetime": 3,
+      "step": 10,
+      "source_line": 1117,
+      "companion_lines": {
+        "IMPACT_MODEL": 1120,
+        "IMPACT_VELOCITY": 1119,
+        "IMPACT_GEOMETRY": 1118,
+        "IMPACT_BOUNDARY": 1121
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E5946",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 10,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 4,
+      "step": 22,
+      "source_line": 1512,
+      "companion_lines": {
+        "IMPACT_MODEL": 1515,
+        "IMPACT_VELOCITY": 1514,
+        "IMPACT_GEOMETRY": 1513,
+        "IMPACT_BOUNDARY": 1516
+      },
+      "donor_profile": "9mm-pistol-standard",
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E5946",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 11,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 5,
+      "step": 18,
+      "source_line": 1767,
+      "companion_lines": {
+        "IMPACT_MODEL": 1770,
+        "IMPACT_VELOCITY": 1769,
+        "IMPACT_GEOMETRY": 1768,
+        "IMPACT_BOUNDARY": 1771
+      },
+      "donor_profile": "9mm-pistol-standard",
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E5961",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 12,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 6,
+      "step": 11,
+      "source_line": 1938,
+      "companion_lines": {
+        "IMPACT_MODEL": 1941,
+        "IMPACT_VELOCITY": 1940,
+        "IMPACT_GEOMETRY": 1939,
+        "IMPACT_BOUNDARY": 1942
+      },
+      "donor_profile": "9mm-pistol-standard",
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "001724A4",
+      "reason": "candidate_or_snapshot_unavailable",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 13,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 7,
+      "step": 0,
+      "source_line": 1977,
+      "companion_lines": {
+        "IMPACT_MODEL": 1980,
+        "IMPACT_VELOCITY": 1979,
+        "IMPACT_GEOMETRY": 1978,
+        "IMPACT_BOUNDARY": 1981
+      },
+      "donor_profile": "hunting-rifle-standard-308",
+      "original_status": "engine_baseline_contact",
+      "reported_contact_region": 0,
+      "target": "000E5A6A",
+      "reason": "unsupported_contact_producer",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 14,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 8,
+      "step": 3,
+      "source_line": 2077,
+      "companion_lines": {
+        "IMPACT_MODEL": 2080,
+        "IMPACT_VELOCITY": 2079,
+        "IMPACT_GEOMETRY": 2078,
+        "IMPACT_BOUNDARY": 2081
+      },
+      "donor_profile": null,
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E6033",
+      "reason": "unsupported_profile",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 15,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 9,
+      "step": 4,
+      "source_line": 2156,
+      "companion_lines": {
+        "IMPACT_MODEL": 2159,
+        "IMPACT_VELOCITY": 2158,
+        "IMPACT_GEOMETRY": 2157,
+        "IMPACT_BOUNDARY": 2160
+      },
+      "donor_profile": null,
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E6033",
+      "reason": "unsupported_profile",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 16,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 10,
+      "step": 3,
+      "source_line": 2239,
+      "companion_lines": {
+        "IMPACT_MODEL": 2242,
+        "IMPACT_VELOCITY": 2241,
+        "IMPACT_GEOMETRY": 2240,
+        "IMPACT_BOUNDARY": 2243
+      },
+      "donor_profile": null,
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E6033",
+      "reason": "unsupported_profile",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 17,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 11,
+      "step": 3,
+      "source_line": 2312,
+      "companion_lines": {
+        "IMPACT_MODEL": 2315,
+        "IMPACT_VELOCITY": 2314,
+        "IMPACT_GEOMETRY": 2313,
+        "IMPACT_BOUNDARY": 2316
+      },
+      "donor_profile": null,
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E6033",
+      "reason": "unsupported_profile",
+      "conditional_joules": null,
+      "damage_authority": false
+    },
+    {
+      "index": 18,
+      "capture": "3Q",
+      "session": 3,
+      "lifetime": 12,
+      "step": 3,
+      "source_line": 2331,
+      "companion_lines": {
+        "IMPACT_MODEL": 2334,
+        "IMPACT_VELOCITY": 2333,
+        "IMPACT_GEOMETRY": 2332,
+        "IMPACT_BOUNDARY": 2335
+      },
+      "donor_profile": null,
+      "original_status": "contact_geometry_unverified",
+      "reported_contact_region": -1,
+      "target": "000E6033",
+      "reason": "unsupported_profile",
+      "conditional_joules": null,
+      "damage_authority": false
+    }
+  ]
+}

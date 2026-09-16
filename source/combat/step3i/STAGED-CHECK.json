@@ -1,0 +1,72 @@
+{
+  "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3I-Records\\Staged\\Data\\NVO.esm",
+  "sha256": "2d0760c96dfd7cb06a95d4736891f67a98f5f5c25c148eb572a5fd75741e795b",
+  "bytes": 450265,
+  "masters": [
+    "FalloutNV.esm",
+    "CaravanPack.esm",
+    "DeadMoney.esm",
+    "HonestHearts.esm",
+    "OldWorldBlues.esm",
+    "LonesomeRoad.esm",
+    "ClassicPack.esm",
+    "GunRunnersArsenal.esm",
+    "MercenaryPack.esm",
+    "RD.esm",
+    "TribalPack.esm"
+  ],
+  "scripts": [
+    {
+      "script": "NVOCombatBootstrapScript",
+      "record_count": 0,
+      "expected_form": "09000DBE"
+    },
+    {
+      "script": "ALTQscript",
+      "record_count": 1,
+      "expected_form": "0B002900",
+      "form": "0B002900",
+      "identity_correct": true,
+      "source_matches": false,
+      "compiled_bytes": 4137,
+      "compiled_changed": false,
+      "compiled_sha256": "cf57f59e3fde2e16b84876308e748f1c1a3ce31fa1fb8283c804d5c6eddb7fa4",
+      "prior_variable_indices_types_preserved": true
+    },
+    {
+      "script": "ALTStartQscript",
+      "record_count": 1,
+      "expected_form": "0B0022E1",
+      "form": "0B0022E1",
+      "identity_correct": true,
+      "source_matches": false,
+      "compiled_bytes": 4903,
+      "compiled_changed": false,
+      "compiled_sha256": "b3f3ab93d6c344e5edfccd6f95bda171b0def7034bc64ed7adfe39744d66d698",
+      "prior_variable_indices_types_preserved": true
+    }
+  ],
+  "player": {
+    "count": 1,
+    "expected_source": "FalloutNV.esm Player00000007",
+    "full_payload_matches_vanilla": true,
+    "data_matches": true,
+    "config_matches": true,
+    "skills_match": true,
+    "inventory_matches": true
+  },
+  "health_gmsts_preserved": true,
+  "rd_unchanged": true,
+  "bootstrap_quest_link_valid": true,
+  "additional_changes": [],
+  "findings": [
+    "NVOCombatBootstrapScript: missing or duplicated script override",
+    "ALTQscript: source_matches not established",
+    "ALTQscript: compiled_changed not established",
+    "ALTStartQscript: source_matches not established",
+    "ALTStartQscript: compiled_changed not established"
+  ],
+  "status": "review_required",
+  "scope": "SCDA presence/change and source/identity checks do not independently decompile or prove runtime execution.",
+  "damage_replacement": false
+}

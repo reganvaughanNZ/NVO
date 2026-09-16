@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "policy": "Authored candidate coverage, not measured geometry or damage authority",
+  "regions": [
+    "head",
+    "torso",
+    "left_arm",
+    "right_arm",
+    "left_leg",
+    "right_leg"
+  ],
+  "profile_definitions": [
+    {
+      "id": "combat-armour",
+      "revision": 1,
+      "coverage": {
+        "head": "none",
+        "torso": "partial",
+        "left_arm": "partial",
+        "right_arm": "partial",
+        "left_leg": "partial",
+        "right_leg": "partial"
+      },
+      "rationale": "Initial NVO authoring proposal: body gear may protect portions of torso and limbs. This does not make all fabric equivalent to a plate, assign coverage fractions, or identify a struck surface. Mesh/material review remains pending. No head protection from this item."
+    },
+    {
+      "id": "combat-helmet",
+      "revision": 1,
+      "coverage": {
+        "head": "partial",
+        "torso": "none",
+        "left_arm": "none",
+        "right_arm": "none",
+        "left_leg": "none",
+        "right_leg": "none"
+      },
+      "rationale": "Initial NVO authoring proposal: the helmet protects part of the head. A coarse head hit does not establish helmet versus exposed face. No other body region receives coverage."
+    }
+  ],
+  "keyword_rules": [
+    {
+      "keyword": "NVO_Coverage_CombatBody",
+      "profile": "combat-armour"
+    },
+    {
+      "keyword": "NVO_Coverage_CombatHelmet",
+      "profile": "combat-helmet"
+    }
+  ],
+  "bindings": [
+    {
+      "plugin": "FalloutNV.esm",
+      "local_id": "00020420",
+      "expected_equip_mask": "00000004",
+      "keywords": [
+        "NVO_Coverage_CombatBody"
+      ]
+    },
+    {
+      "plugin": "FalloutNV.esm",
+      "local_id": "00020426",
+      "expected_equip_mask": "00000602",
+      "keywords": [
+        "NVO_Coverage_CombatHelmet"
+      ]
+    }
+  ],
+  "record_overrides": []
+}

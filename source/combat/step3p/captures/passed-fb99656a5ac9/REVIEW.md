@@ -1,0 +1,9 @@
+# Packet 3P runtime checkpoint: PASS (narrow scope)
+
+The user fired one9mm pistol, one hunting-rifle VATS shot, eleven9mm SMG shots, reloaded once and fired one9mm pistol. New game was Enclave Remnant; AI processing and combat AI were disabled throughout. Static scene targets differ from the page but are suitable for creation/return matching.
+
+Fresh native321 log exactly matches all14 projectiles. Session1:13 calls,13 paired. Session2:1 call,1 paired after successful reload. Each has one creation event, same returned form/base, no inside-call destruction. Both provider guards pass. No null return, pairing mismatch, nesting, scope overflow, foreign-thread spawn, stale return, unscoped creation or boundary log failure occurred. Observer create/impact/destroy totals13/13/13 then1/1/1, no open lifetimes or native read/identity failures in the captured summaries. Normal exit is logged.
+
+Close-range impacts produced zero applied physics steps, so this validates creation bookkeeping only, not integrated drag/gravity/long-distance motion. Current-hit log also contains a separate source-null, zero-health explosion context after the rifle hit; this does not create an additional paired bullet and is not assigned damage authority. The NVSE co-save no-handler warning persists without plugin attribution, as in prior evidence; it is not marked resolved.
+
+AI being off is fine for this targeted check. No repeat is needed. NPC firing, actual stress/overflow, cancellation, nested dispatch and foreign-thread creation remain future coverage. Current selector/physics code unchanged, capacity reservation OFF, damage replacement OFF. Next packet requires user approval: reserve physics and lifecycle capacity BEFORE private selection at this now-observed final-selection boundary, bind only the exact return, release canceled reservations, define post-selection failure ownership and fallback honestly. Frozen Ultra gate remains HOLD.

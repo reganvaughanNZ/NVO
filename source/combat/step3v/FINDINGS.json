@@ -1,0 +1,111 @@
+{
+  "packet": "3V",
+  "reviewed_native_version": 325,
+  "decision": {
+    "step3_profiled_bullet_flight": "accepted_with_narrow_scope",
+    "all_vanilla_bullet_coverage": false,
+    "damage_activation": "hold",
+    "step4_read_only_shadow_work": "eligible_for_future_packet"
+  },
+  "findings": [
+    {
+      "id": "S3V-01",
+      "severity": "info",
+      "status": "closed_narrow",
+      "evidence_level": "live_and_offline",
+      "finding": "The explicitly profiled bullet-flight transport, bounded admission, identity classification, cleanup and stock fallback form an accepted Step 3 foundation.",
+      "consequence": "Step 3 may close only within the nine selectable-profile boundary.",
+      "next": "Preserve the exact-profile and fail-closed contracts."
+    },
+    {
+      "id": "S3V-02",
+      "severity": "high",
+      "status": "open",
+      "evidence_level": "live_diagnostic",
+      "finding": "No verified exact-once full-context boundary currently proves committed health and limb writes with all engine modifiers.",
+      "consequence": "NVO cannot safely replace direct damage.",
+      "next": "Establish the application and scaling contract before enabling a damage hook."
+    },
+    {
+      "id": "S3V-03",
+      "severity": "high",
+      "status": "open",
+      "evidence_level": "live_and_offline",
+      "finding": "Contact speed and energy remain diagnostic ranges or unavailable for important paths; the 3U1 world recheck uses a baseline engine segment and pre-movement contacts are unavailable.",
+      "consequence": "Estimated values cannot be used as authoritative armour or wound inputs.",
+      "next": "Use explicit validity states in shadow mode and retain engine behavior where the input is not authoritative."
+    },
+    {
+      "id": "S3V-04",
+      "severity": "high",
+      "status": "open",
+      "evidence_level": "live_diagnostic",
+      "finding": "Collision region, ActorHitData region, VATS aim/result and critical semantics do not yet have one tested authority policy.",
+      "consequence": "Anatomy and armour coverage could be assigned to the wrong body region.",
+      "next": "Preserve the separate observations and test a policy before damage activation."
+    },
+    {
+      "id": "S3V-05",
+      "severity": "high",
+      "status": "open",
+      "evidence_level": "offline",
+      "finding": "The pure AdmissionLedger exists offline, while active hit and impact observations remain bounded diagnostics rather than gameplay state.",
+      "consequence": "Diagnostic eviction or loss cannot be allowed to change damage outcomes.",
+      "next": "Create a separate gameplay ledger with explicit lifetime and serialization rules."
+    },
+    {
+      "id": "S3V-06",
+      "severity": "high",
+      "status": "staged",
+      "evidence_level": "design",
+      "finding": "Laser, plasma, flame, explosive, thrown, melee and pellet-specific behavior have no active NVO authority adapter.",
+      "consequence": "The Step 3 closure does not cover those families.",
+      "next": "Implement and verify one fail-closed family adapter at a time after the shared armour contract."
+    },
+    {
+      "id": "S3V-07",
+      "severity": "medium",
+      "status": "open",
+      "evidence_level": "live_limited",
+      "finding": "The capacity test used 127 inert reservations plus one real shot; synchronous per-row logging under locks remains a hot-path concern.",
+      "consequence": "The current evidence does not establish a universal real-combat performance ceiling.",
+      "next": "Disable or buffer production logging and measure real concurrent projectiles and multiple actors before activation."
+    },
+    {
+      "id": "S3V-08",
+      "severity": "low",
+      "status": "accepted_limitation",
+      "evidence_level": "configuration",
+      "finding": "Only nine profiles select automatically; two more are pilot-only and unknown equipment follows the engine path.",
+      "consequence": "Coverage is intentionally partial but fails closed.",
+      "next": "Expand through authored compatibility profiles rather than heuristic ownership."
+    },
+    {
+      "id": "S3V-09",
+      "severity": "medium",
+      "status": "partially_resolved",
+      "evidence_level": "record_and_live",
+      "finding": "Brahmin Baron registrations are retired for the current compiled records and tested new-game/reload path; migration from older saves is unverified.",
+      "consequence": "New-game work may proceed, while old-save support needs an explicit policy.",
+      "next": "Decide whether to migrate or declare pre-retirement saves unsupported before release."
+    },
+    {
+      "id": "S3V-10",
+      "severity": "info",
+      "status": "resolved",
+      "evidence_level": "record_and_static",
+      "finding": "The accepted NVO record state is RD.esm-free and startup ownership no longer requires RD.",
+      "consequence": "RD is not a blocker for the next combat packet.",
+      "next": "Keep the RD-free record check in future release validation."
+    },
+    {
+      "id": "S3V-11",
+      "severity": "low",
+      "status": "open_redistribution_only",
+      "evidence_level": "notice_and_source_review",
+      "finding": "Existing notices are retained, but the archived permission evidence does not settle the redistribution scope of copied BallistX numeric drag tables.",
+      "consequence": "The technical closure does not establish a broad combined-distribution license claim.",
+      "next": "Archive applicable permission text or replace or separate the disputed numeric data before public redistribution claims."
+    }
+  ]
+}

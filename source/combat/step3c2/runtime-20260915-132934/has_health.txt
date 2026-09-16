@@ -1,0 +1,122 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-132934\has_health.obj
+
+File Type: COFF OBJECT
+
+  005722C0: 55                 push        ebp
+  005722C1: 8B EC              mov         ebp,esp
+  005722C3: 83 EC 14           sub         esp,14h
+  005722C6: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  005722C9: C6 45 FF 00        mov         byte ptr [ebp-1],0
+  005722CD: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  005722D0: 8B 10              mov         edx,dword ptr [eax]
+  005722D2: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  005722D5: 8B 82 00 01 00 00  mov         eax,dword ptr [edx+00000100h]
+  005722DB: FF D0              call        eax
+  005722DD: 0F B6 C8           movzx       ecx,al
+  005722E0: 85 C9              test        ecx,ecx
+  005722E2: 74 44              je          00572328
+  005722E4: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  005722E7: E8 B4 C0 2D 00     call        0084E3A0
+  005722EC: 83 F8 07           cmp         eax,7
+  005722EF: 74 37              je          00572328
+  005722F1: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  005722F4: E8 37 D1 23 00     call        007AF430
+  005722F9: 50                 push        eax
+  005722FA: E8 D1 50 F1 FF     call        004873D0
+  005722FF: 83 C4 04           add         esp,4
+  00572302: 89 45 EC           mov         dword ptr [ebp-14h],eax
+  00572305: C7 45 F0 00 00 00  mov         dword ptr [ebp-10h],0
+            00
+  0057230C: DF 6D EC           fild        qword ptr [ebp-14h]
+  0057230F: D9 5D F8           fstp        dword ptr [ebp-8]
+  00572312: D9 45 F8           fld         dword ptr [ebp-8]
+  00572315: DC 1D 60 20 01 01  fcomp       qword ptr ds:[01012060h]
+  0057231B: DF E0              fnstsw      ax
+  0057231D: F6 C4 41           test        ah,41h
+  00572320: 7A 04              jp          00572326
+  00572322: C6 45 FF 01        mov         byte ptr [ebp-1],1
+  00572326: EB 13              jmp         0057233B
+  00572328: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0057232B: E8 70 58 F0 FF     call        00477BA0
+  00572330: 0F B6 D0           movzx       edx,al
+  00572333: 85 D2              test        edx,edx
+  00572335: 74 04              je          0057233B
+  00572337: C6 45 FF 01        mov         byte ptr [ebp-1],1
+  0057233B: 8A 45 FF           mov         al,byte ptr [ebp-1]
+  0057233E: 8B E5              mov         esp,ebp
+  00572340: 5D                 pop         ebp
+  00572341: C2 04 00           ret         4
+  00572344: CC                 int         3
+  00572345: CC                 int         3
+  00572346: CC                 int         3
+  00572347: CC                 int         3
+  00572348: CC                 int         3
+  00572349: CC                 int         3
+  0057234A: CC                 int         3
+  0057234B: CC                 int         3
+  0057234C: CC                 int         3
+  0057234D: CC                 int         3
+  0057234E: CC                 int         3
+  0057234F: CC                 int         3
+  00572350: 55                 push        ebp
+  00572351: 8B EC              mov         ebp,esp
+  00572353: 51                 push        ecx
+  00572354: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00572357: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0057235A: 8B 10              mov         edx,dword ptr [eax]
+  0057235C: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0057235F: 8B 82 00 01 00 00  mov         eax,dword ptr [edx+00000100h]
+  00572365: FF D0              call        eax
+  00572367: 0F B6 C8           movzx       ecx,al
+  0057236A: 85 C9              test        ecx,ecx
+  0057236C: 74 04              je          00572372
+  0057236E: 32 C0              xor         al,al
+  00572370: EB 02              jmp         00572374
+  00572372: B0 01              mov         al,1
+  00572374: 8B E5              mov         esp,ebp
+  00572376: 5D                 pop         ebp
+  00572377: C3                 ret
+  00572378: CC                 int         3
+  00572379: CC                 int         3
+  0057237A: CC                 int         3
+  0057237B: CC                 int         3
+  0057237C: CC                 int         3
+  0057237D: CC                 int         3
+  0057237E: CC                 int         3
+  0057237F: CC                 int         3
+  00572380: 55                 push        ebp
+  00572381: 8B EC              mov         ebp,esp
+  00572383: 83 EC 10           sub         esp,10h
+  00572386: 89 4D F0           mov         dword ptr [ebp-10h],ecx
+  00572389: 8B 45 F0           mov         eax,dword ptr [ebp-10h]
+  0057238C: 83 C0 30           add         eax,30h
+  0057238F: 50                 push        eax
+  00572390: 8D 4D F4           lea         ecx,[ebp-0Ch]
+  00572393: 51                 push        ecx
+  00572394: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00572397: E8 54 7B EC FF     call        00439EF0
+  0057239C: 8D 4D F4           lea         ecx,[ebp-0Ch]
+  0057239F: E8 EC 55 EE FF     call        00457990
+  005723A4: 8B E5              mov         esp,ebp
+  005723A6: 5D                 pop         ebp
+  005723A7: C2 04 00           ret         4
+  005723AA: CC                 int         3
+  005723AB: CC                 int         3
+  005723AC: CC                 int         3
+  005723AD: CC                 int         3
+  005723AE: CC                 int         3
+  005723AF: CC                 int         3
+  005723B0: 55                 push        ebp
+  005723B1: 8B EC              mov         ebp,esp
+  005723B3: 83 EC 24           sub         esp,24h
+  005723B6: 89 4D E4           mov         dword ptr [ebp-1Ch],ecx
+  005723B9: D9 05 70 69 01 01  fld         dword ptr ds:[01016970h]
+  005723BF: D9
+
+  Summary
+
+         100 .text

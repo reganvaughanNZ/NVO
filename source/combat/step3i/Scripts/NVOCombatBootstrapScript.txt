@@ -1,0 +1,93 @@
+scn NVOCombatBootstrapScript
+
+short bChecked
+short bFrameworkReady
+short bCorePresent
+short bCombatEnabled
+short iMissingCount
+short iPacket
+long iRunCount
+long iNVSEMajor
+long iNVSEMinor
+float fQuestDelayTime
+short bReportMissing
+
+Begin GameMode
+
+    set fQuestDelayTime to 1
+    set bReportMissing to 0
+
+    if GetGameLoaded
+        set bChecked to 0
+    endif
+    if GetGameRestarted
+        set bReportMissing to 1
+        set bChecked to 0
+    endif
+
+    if bChecked == 1
+        Return
+    endif
+
+    set bChecked to 1
+    set iPacket to 1
+    set iRunCount to iRunCount + 1
+    set iMissingCount to 0
+    set bFrameworkReady to 0
+    set bCorePresent to 0
+    set bCombatEnabled to 0
+    set iNVSEMajor to GetNVSEVersion
+    set iNVSEMinor to GetNVSERevision
+
+    if iNVSEMajor < 6
+        set iMissingCount to iMissingCount + 1
+        if bReportMissing == 1
+            PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
+        endif
+    elseif iNVSEMajor == 6
+        if iNVSEMinor < 3
+            set iMissingCount to iMissingCount + 1
+            if bReportMissing == 1
+                PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
+            endif
+        endif
+    endif
+
+    if IsPluginInstalled "JIP LN NVSE" == 0
+        if IsPluginInstalled "JIP NVSE Plugin" == 0
+            set iMissingCount to iMissingCount + 1
+            if bReportMissing == 1
+                PrintC "NVO Combat: JIP LN NVSE is missing."
+            endif
+        endif
+    endif
+
+    if IsPluginInstalled "JohnnyGuitarNVSE" == 0
+        set iMissingCount to iMissingCount + 1
+        if bReportMissing == 1
+            PrintC "NVO Combat: JohnnyGuitar NVSE is missing."
+        endif
+    endif
+
+    if IsPluginInstalled "ShowOffNVSE Plugin" == 0
+        set iMissingCount to iMissingCount + 1
+        if bReportMissing == 1
+            PrintC "NVO Combat: ShowOff NVSE is missing."
+        endif
+    endif
+
+    if IsPluginInstalled "NVOCombatCore"
+        set bCorePresent to 1
+    else
+        if bReportMissing == 1
+            PrintC "NVO Combat: NVOCombatCore is missing. Native diagnostics are unavailable."
+        endif
+    endif
+
+    if iMissingCount == 0
+        set bFrameworkReady to 1
+
+    endif
+
+
+End

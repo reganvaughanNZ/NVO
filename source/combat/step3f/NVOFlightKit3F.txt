@@ -1,0 +1,4 @@
+player.additem 00004333 1
+player.additem 0006B53C 40
+player.additem 0013E442 40
+player.additem 0013E443 40

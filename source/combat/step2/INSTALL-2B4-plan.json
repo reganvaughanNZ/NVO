@@ -1,0 +1,43 @@
+{
+  "workspace": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO",
+  "game_root": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas",
+  "packet": "2B4",
+  "version": 203,
+  "created": "2026-09-15T07:58:49.661320",
+  "files": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "action": "install",
+      "sha256": "befcede7a6faec5032ea333bb0ae8a1777d78aeb01620e4ee65aa1699ed975b0",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-2B4-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "source_sha256": "cea7097b58bbcfc11d4cf32465ac2add91837a70b2506545b8e77af84bcc1fb4",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "action": "install",
+      "sha256": "cf0d20b2a21c2ca52701bd86feb349f847bc733992a540b5a02387699187e792",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-2B4-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "source_sha256": "d7609d238203584a18496be441938488563ea6e7cccf4d0fa0ca6386678686e6",
+      "log_may_change_until_game_exits": false
+    }
+  ],
+  "protected_assets": [
+    "Data/NVO.esm",
+    "Data/NVO.bsa",
+    "Data/NVO.override",
+    "Data/Config/ALTStartConfig.ini"
+  ],
+  "preserve_log_copy": [
+    "NVOCombatCore.log",
+    "nvse.log",
+    "jip_ln_nvse.log"
+  ],
+  "empty_directories": [],
+  "dependency_preconditions": [
+    {
+      "path": "Data/NVSE/Plugins/itr-nvse.dll",
+      "sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c"
+    }
+  ]
+}

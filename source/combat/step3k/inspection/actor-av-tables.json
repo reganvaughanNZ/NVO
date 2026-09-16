@@ -1,0 +1,29 @@
+[
+  {
+    "actor": "Character",
+    "actor_table": "01086A6C",
+    "table": "010869A4",
+    "rtti": ".?AVCharacter@@",
+    "get_current": "008805F0",
+    "get_damage": "008B0D70",
+    "engine_damage": "00881130"
+  },
+  {
+    "actor": "Creature",
+    "actor_table": "010870AC",
+    "table": "01086FE4",
+    "rtti": ".?AVCreature@@",
+    "get_current": "008D4870",
+    "get_damage": "008B0D70",
+    "engine_damage": "008D49F0"
+  },
+  {
+    "actor": "PlayerCharacter",
+    "actor_table": "0108AA3C",
+    "table": "0108A974",
+    "rtti": ".?AVPlayerCharacter@@",
+    "get_current": "0093ACB0",
+    "get_damage": "0094C490",
+    "engine_damage": "0093B7A0"
+  }
+]

@@ -1,0 +1,172 @@
+{
+  "packet": "3B2",
+  "base_sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b",
+  "esp_sha256": "f5fd916841ebf5aafae5c467a7e17dd67fdf1faf1abc9368f66e936f146244ab",
+  "format_reference": "https://raw.githubusercontent.com/TES5Edit/TES5Edit/dev-4.1.6/Core/wbDefinitionsFNV.pas",
+  "records": [
+    {
+      "type": "WEAP",
+      "origin": "FalloutNV.esm:0E3778",
+      "local_id": "000800",
+      "name": "NVO Flight - 9mm Pistol",
+      "changed_fields": [
+        {
+          "subrecord": "EDID",
+          "before": "576561704e56396d6d506973746f6c00",
+          "after": "4e564f466c6967687450696c6f74396d6d5745415000"
+        },
+        {
+          "subrecord": "FULL",
+          "before": "396d6d20506973746f6c00",
+          "after": "4e564f20466c69676874202d20396d6d20506973746f6c00"
+        },
+        {
+          "subrecord": "NAM0",
+          "before": "e7371500",
+          "after": "02080001"
+        },
+        {
+          "subrecord": "DNAM",
+          "before": "030000000000803f0000000004ff010b3333333f000000000000000000008242000000000ff208000f200100000080430000404400000000082000000000a03f0000803f000088410000003f000000009a99193e00000000feff47406d56d53f3333b33f0000000029000000010000009a99193e0000803fffffffff0000803f000000009a99993e00000000020000000e000000000000000000e0400000704100000000ff00000002000000000b0000000000000000804000004040000000400000803f0000000000000000",
+          "after": "030000000000803f0000000004ff010b3333333f00000000000000000000824200000000040800010f200100000080430000404400000000082000000000a03f0000803f000088410000003f000000009a99193e00000000feff47406d56d53f3333b33f0000000029000000010000009a99193e0000803fffffffff0000803f000000009a99993e00000000020000000e000000000000000000e0400000704100000000ff00000002000000000b0000000000000000804000004040000000400000803f0000000000000000"
+        }
+      ],
+      "other_subrecords_byte_identical": true
+    },
+    {
+      "type": "AMMO",
+      "origin": "FalloutNV.esm:08ED03",
+      "local_id": "000802",
+      "name": "NVO Flight - 9mm Round",
+      "changed_fields": [
+        {
+          "subrecord": "EDID",
+          "before": "416d6d6f396d6d00",
+          "after": "4e564f466c6967687450696c6f74396d6d414d4d4f00"
+        },
+        {
+          "subrecord": "FULL",
+          "before": "396d6d20526f756e6400",
+          "after": "4e564f20466c69676874202d20396d6d20526f756e6400"
+        },
+        {
+          "subrecord": "DAT2",
+          "before": "00000000000000006891ed3cdd0a14000000c841",
+          "after": "01000000040800016891ed3cdd0a14000000c841"
+        }
+      ],
+      "other_subrecords_byte_identical": true
+    },
+    {
+      "type": "PROJ",
+      "origin": "FalloutNV.esm:08F20F",
+      "local_id": "000804",
+      "name": "NVO Flight - 9mm Bullet",
+      "changed_fields": [
+        {
+          "subrecord": "EDID",
+          "before": "396d6d42756c6c657450726f6a656374696c6500",
+          "after": "4e564f466c6967687450696c6f74396d6d50524f4a00"
+        },
+        {
+          "subrecord": "FULL",
+          "before": "396d6d2042756c6c657400",
+          "after": "4e564f20466c69676874202d20396d6d2042756c6c657400"
+        },
+        {
+          "subrecord": "DATA",
+          "before": "89000100000040400000b94600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a04000000000000000000000000000000000000000000000000000000000",
+          "after": "880001000000000046b3d34600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a04000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "other_subrecords_byte_identical": true
+    },
+    {
+      "type": "WEAP",
+      "origin": "FalloutNV.esm:004333",
+      "local_id": "000801",
+      "name": "NVO Flight - Hunting Rifle",
+      "changed_fields": [
+        {
+          "subrecord": "EDID",
+          "before": "5765617048756e74696e675269666c6500",
+          "after": "4e564f466c6967687450696c6f743330385745415000"
+        },
+        {
+          "subrecord": "FULL",
+          "before": "48756e74696e67205269666c6500",
+          "after": "4e564f20466c69676874202d2048756e74696e67205269666c6500"
+        },
+        {
+          "subrecord": "NAM0",
+          "before": "e9371500",
+          "after": "03080001"
+        },
+        {
+          "subrecord": "DNAM",
+          "before": "050000000000803f0000803f04ff01000ad7233c000000000000000000001842000000000af208002a260100000000440000fa4402000000082000009a99993f0000803f000020423333333f6666663fcdcc4c3e00000000c086723fd3bcfb3f93a9aa3f000000002900000001000000cdcc4c3e0000803fffffffff0000c03f000000009a99993e00000000020000000e000000080000000000a04000005041fa7eaa3eff0000000600000000000000000000000000d0410000000000000000000000000000000032000000",
+          "after": "050000000000803f0000803f04ff01000ad7233c00000000000000000000184200000000050800012a260100000000440000fa4402000000082000009a99993f0000803f000020423333333f6666663fcdcc4c3e00000000c086723fd3bcfb3f93a9aa3f000000002900000001000000cdcc4c3e0000803fffffffff0000c03f000000009a99993e00000000020000000e000000080000000000a04000005041fa7eaa3eff0000000600000000000000000000000000d0410000000000000000000000000000000032000000"
+        }
+      ],
+      "other_subrecords_byte_identical": true
+    },
+    {
+      "type": "AMMO",
+      "origin": "FalloutNV.esm:06B53C",
+      "local_id": "000803",
+      "name": "NVO Flight - .308 Round",
+      "changed_fields": [
+        {
+          "subrecord": "EDID",
+          "before": "416d6d6f33303800",
+          "after": "4e564f466c6967687450696c6f74333038414d4d4f00"
+        },
+        {
+          "subrecord": "FULL",
+          "before": "2e33303820526f756e6400",
+          "after": "4e564f20466c69676874202d202e33303820526f756e6400"
+        },
+        {
+          "subrecord": "DAT2",
+          "before": "0000000000000000ae47613da50a140000002042",
+          "after": "0100000005080001ae47613da50a140000002042"
+        }
+      ],
+      "other_subrecords_byte_identical": true
+    },
+    {
+      "type": "PROJ",
+      "origin": "FalloutNV.esm:08F20A",
+      "local_id": "000805",
+      "name": "NVO Flight - 308 Bullet",
+      "changed_fields": [
+        {
+          "subrecord": "EDID",
+          "before": "33303842756c6c657450726f6a656374696c6500",
+          "after": "4e564f466c6967687450696c6f7433303850524f4a00"
+        },
+        {
+          "subrecord": "FULL",
+          "before": "2e3330382042756c6c657400",
+          "after": "4e564f20466c69676874202d203330382042756c6c657400"
+        },
+        {
+          "subrecord": "DATA",
+          "before": "8d0201009a99993e00084f4700084f4700000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000204100000000000000000000000000000000000000000000000000000000",
+          "after": "8c02010000000000f85b684700084f4700000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000204100000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "other_subrecords_byte_identical": true
+    }
+  ],
+  "record_count": 6,
+  "overrides": 0,
+  "masters": [
+    "FalloutNV.esm"
+  ],
+  "new_scripts_quests_placements_lists": 0,
+  "stock_weapon_damage_preserved": true,
+  "flight_owner": "private PROJ records using engine movement, native measurement only",
+  "gameplay_tested": false,
+  "unit_scale_independently_verified": false
+}

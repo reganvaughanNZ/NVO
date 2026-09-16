@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "archive": "source\\combat\\step3f2\\captures\\2026-09-15-3F2-d456dd06d026\\NVOCombatCore.log",
+  "sha256": "d456dd06d0268787b49ea353949b3536283e855c62a496dd97f4891f7419c125",
+  "bytes": 1135729,
+  "lines": 4808,
+  "last_write_local": "2026-09-15T20:34:09.684379+12:00",
+  "user_context": "User declined fixture, repeated the test and expects the error/path to have been produced."
+}

@@ -1,0 +1,101 @@
+{
+  "machine": "PE32 x86",
+  "exports": [
+    "NVSEPlugin_Load",
+    "NVSEPlugin_Query"
+  ],
+  "warnings": 0,
+  "dll_sha256": "6f53637f281243bbc9e1d2566adf6cc850e8bee5cf7c70299ca03709891455f6",
+  "pdb_sha256": "292ee2664af3a68298b4229a2665778a79124fafcfccb69d6501db7a9e89ee64",
+  "codeview_pdb_guid": "a47df19d-f4ea-4d97-91b9-af0bacd958be",
+  "pdb_age": 1,
+  "pdb_pair_verified": true,
+  "dll_bytes": 299520,
+  "pdb_bytes": 4435968,
+  "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+  "packet": "3H",
+  "plugin_version": 318,
+  "unchanged_sources": [
+    "src/Exports.def",
+    "src/FlightImpact.inl",
+    "src/FlightImpactJoin.inl",
+    "src/FlightImpactModel.inl",
+    "src/FlightPhysics.cpp",
+    "src/FlightPreview.cpp",
+    "src/FlightTiming.cpp",
+    "src/NativeLog.cpp",
+    "include/CurrentHit.hpp",
+    "include/DamageEvents.hpp",
+    "include/FlightDragData.hpp",
+    "include/FlightPhysics.hpp",
+    "include/FlightPreview.hpp",
+    "include/FlightTiming.hpp",
+    "include/NativeLog.hpp",
+    "include/NvseBootstrapApi.hpp",
+    "config/NVOFlightPhysics.ini",
+    "config/NVOFlightPreview.ini"
+  ],
+  "compiled_physics_bridges_unchanged": [
+    "LocalZBridge",
+    "TerrainBridge",
+    "CommitBridge",
+    "NodeBridge",
+    "MovementBridge",
+    "AccountingBridge",
+    "ControllerDispatchBridge",
+    "ControllerDirectBridge",
+    "ControllerReturnBridge"
+  ],
+  "copy_observer_bridge_unchanged": true,
+  "new_bridges_match_offline_probe": true,
+  "log_format_bounds": [
+    {
+      "row": "HIT_TX_SUMMARY",
+      "maximum_bytes": 565
+    },
+    {
+      "row": "HIT_TX_BEGIN",
+      "maximum_bytes": 454
+    },
+    {
+      "row": "HIT_TX_DATA",
+      "maximum_bytes": 470
+    },
+    {
+      "row": "HIT_TX_RETURN",
+      "maximum_bytes": 279
+    },
+    {
+      "row": "HIT_TX_DISABLED",
+      "maximum_bytes": 92
+    },
+    {
+      "row": "HIT_TX_PROTECTION_RESTORE_FAILED",
+      "maximum_bytes": 46
+    },
+    {
+      "row": "HIT_TX_HOOK_READY",
+      "maximum_bytes": 172
+    },
+    {
+      "row": "HIT_TX_READY",
+      "maximum_bytes": 158
+    },
+    {
+      "row": "HIT_TX_STAGE",
+      "maximum_bytes": 403
+    },
+    {
+      "row": "HIT_TX_STAGE",
+      "maximum_bytes": 274
+    },
+    {
+      "row": "HIT_TX_STAGE",
+      "maximum_bytes": 296
+    }
+  ],
+  "new_callsite_observers": 6,
+  "damage_replacement": false,
+  "flight_or_record_changes": false,
+  "gameplay_tested": false
+}

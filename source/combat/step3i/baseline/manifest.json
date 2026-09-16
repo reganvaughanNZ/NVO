@@ -1,0 +1,55 @@
+{
+  "files": [
+    {
+      "name": "RD.esm",
+      "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\RD.esm",
+      "sha256": "9498ee5bee4119ec289b8f88af83e3bbd0ff2e2ec57e45809f3e18dd8b139bc3",
+      "bytes": 9222,
+      "last_write_ns": 947548800000000000
+    },
+    {
+      "name": "NVO.esm",
+      "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+      "sha256": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d",
+      "bytes": 449067,
+      "last_write_ns": 1789302916062131800
+    }
+  ],
+  "scripts": [
+    {
+      "plugin": "RD.esm",
+      "form": "01000DBE",
+      "edid": "NVOCombatBootstrapScript",
+      "compiled_bytes": 1230,
+      "compiled_sha256": "3e574f6a1840160e70d8f303b342cb2547b9997ef040b4095bdee9e377e30898"
+    },
+    {
+      "plugin": "NVO.esm",
+      "form": "0B0022E1",
+      "edid": "ALTStartQscript",
+      "compiled_bytes": 4903,
+      "compiled_sha256": "b3f3ab93d6c344e5edfccd6f95bda171b0def7034bc64ed7adfe39744d66d698"
+    },
+    {
+      "plugin": "NVO.esm",
+      "form": "0B002900",
+      "edid": "ALTQscript",
+      "compiled_bytes": 4137,
+      "compiled_sha256": "cf57f59e3fde2e16b84876308e748f1c1a3ce31fa1fb8283c804d5c6eddb7fa4"
+    },
+    {
+      "plugin": "NVO.esm",
+      "form": "0B0074CA",
+      "edid": "ALTRichKidHit",
+      "compiled_bytes": 188,
+      "compiled_sha256": "1721ec8df9baba5c82f4c7b010bea6cbfa2a1fe1e5fb97cb9e000e2ae736938f"
+    },
+    {
+      "plugin": "NVO.esm",
+      "form": "0B0122A2",
+      "edid": "ALTBackRichKidUDF",
+      "compiled_bytes": 404,
+      "compiled_sha256": "67667f85c49ae603950723acc1c31ecbb4d1e6481abab12152465beefc4a0588"
+    }
+  ]
+}

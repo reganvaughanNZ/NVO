@@ -1,0 +1,170 @@
+[
+  {
+    "script": "ALTQscript",
+    "original_variable_slots": {
+      "sveronicloc": [
+        1,
+        1
+      ],
+      "rturninitem": [
+        2,
+        0
+      ],
+      "iturninvalue": [
+        3,
+        1
+      ],
+      "rref": [
+        5,
+        0
+      ],
+      "bblock": [
+        6,
+        1
+      ],
+      "istate": [
+        7,
+        1
+      ],
+      "iscience": [
+        10,
+        1
+      ],
+      "iupdate": [
+        11,
+        1
+      ],
+      "smajorknight": [
+        12,
+        1
+      ],
+      "modoverridingindex": [
+        13,
+        1
+      ],
+      "modname": [
+        14,
+        1
+      ]
+    },
+    "reserved_slots": [
+      4,
+      8,
+      9
+    ],
+    "maximum_original_slot": 14,
+    "executable_source_unchanged": true,
+    "geck_compile_pending": true
+  },
+  {
+    "script": "ALTStartQscript",
+    "original_variable_slots": {
+      "istage": [
+        1,
+        0
+      ],
+      "ibackground": [
+        3,
+        1
+      ],
+      "rmarker": [
+        4,
+        0
+      ],
+      "rref": [
+        5,
+        0
+      ],
+      "iwealth": [
+        6,
+        1
+      ],
+      "svstring": [
+        7,
+        1
+      ],
+      "bblockui": [
+        8,
+        1
+      ],
+      "iui": [
+        9,
+        1
+      ],
+      "rbackmsg": [
+        10,
+        0
+      ],
+      "sbackdesc": [
+        11,
+        1
+      ],
+      "suiname": [
+        12,
+        1
+      ],
+      "suipath": [
+        13,
+        1
+      ],
+      "bcustommenu": [
+        18,
+        1
+      ],
+      "ftimer": [
+        20,
+        0
+      ],
+      "modoverridingindex": [
+        21,
+        1
+      ],
+      "modname": [
+        22,
+        1
+      ],
+      "rlambda": [
+        23,
+        0
+      ],
+      "iamount": [
+        24,
+        1
+      ],
+      "fwildwastelandchance": [
+        34,
+        0
+      ],
+      "iquickstart": [
+        37,
+        1
+      ],
+      "isetupchoice": [
+        38,
+        1
+      ]
+    },
+    "reserved_slots": [
+      2,
+      14,
+      15,
+      16,
+      17,
+      19,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35,
+      36
+    ],
+    "maximum_original_slot": 38,
+    "executable_source_unchanged": true,
+    "geck_compile_pending": true
+  }
+]

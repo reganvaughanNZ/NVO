@@ -1,0 +1,21 @@
+{
+  "upstream": "https://github.com/xNVSE/NVSE",
+  "method": "Source inspection only, no compile or runtime validation",
+  "headers": [
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\PluginAPI.h",
+      "sha256": "c59c2aa93f285d442307b4c9f855456cedd5e22e7463764ea01b7c448aee8bf5"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\nvse_version.h",
+      "sha256": "2f2f922938a51cbe7c690cd5f953114d6c1dbcf323fb987a67604c3c0a43c794"
+    }
+  ],
+  "commands_inspected": [
+    "Commands_Game.cpp",
+    "CommandTable.cpp",
+    "PluginManager.cpp",
+    "Commands_Console.h"
+  ],
+  "native_use": "Four-field read-only NVSEInterface ABI prefix and PluginInfo layout only"
+}

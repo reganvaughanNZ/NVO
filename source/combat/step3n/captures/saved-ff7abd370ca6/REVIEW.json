@@ -1,0 +1,90 @@
+{
+  "packet": "3N",
+  "sha256": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e",
+  "scripts": [
+    {
+      "editor_id": "ALTRichKidHit",
+      "original_form": "050074CA",
+      "candidates": [
+        {
+          "editor_id": "ALTRichKidHit",
+          "form": "050074CA"
+        }
+      ],
+      "source_matches": true,
+      "compiled_bytes": 31,
+      "compiled_changed": true,
+      "compiled_sha256": "e89054859626b787e163f89647cc356263f202bdaf3489711bc4ea192c758bc9",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    },
+    {
+      "editor_id": "ALTBackRichKidUDF",
+      "original_form": "050122A2",
+      "candidates": [
+        {
+          "editor_id": "ALTBackRichKidUDF",
+          "form": "050122A2"
+        }
+      ],
+      "source_matches": true,
+      "compiled_bytes": 368,
+      "compiled_changed": true,
+      "compiled_sha256": "471c3c9f36f6f729adc8be67cd29ca1e584b322cf4dfd17eb35e9d446ed83a9c",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    },
+    {
+      "editor_id": "ALTQscript",
+      "original_form": "05002900",
+      "candidates": [
+        {
+          "editor_id": "ALTQscript",
+          "form": "05002900"
+        }
+      ],
+      "source_matches": true,
+      "compiled_bytes": 3767,
+      "compiled_changed": true,
+      "compiled_sha256": "e554e576842821802282c732b598a3e85f267dda7135e6b4b1607c314dd8d26a",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    },
+    {
+      "editor_id": "NVOStartPreview",
+      "original_form": "05018E2B",
+      "candidates": [
+        {
+          "editor_id": "NVOStartPreview",
+          "form": "05018E2B"
+        }
+      ],
+      "source_matches": true,
+      "compiled_bytes": 3095,
+      "compiled_changed": true,
+      "compiled_sha256": "9edd8fda4b6228d2c0f071ca4b1a440e821cc4ba444888776774eae15e537308",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    }
+  ],
+  "message_text_correct": true,
+  "message_other_fields_preserved": true,
+  "masters_preserved_RD_free": true,
+  "game_settings_preserved": true,
+  "remaining_registrations": [],
+  "additional_changes": [],
+  "layout_only_changes": [],
+  "findings": [],
+  "status": "record_checks_passed_runtime_pending",
+  "runtime_retirement_verified": false,
+  "damage_replacement": false,
+  "limit": "Source and changed compiled bytes are not independent bytecode decompilation or proof of runtime execution."
+}

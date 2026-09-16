@@ -1,0 +1,12 @@
+{
+  "packet": "4C",
+  "scope": "Offline explicit coverage classifier",
+  "status": "Prepared; verified",
+  "native_version_preserved": 326,
+  "damage_replacement": false,
+  "installed": false,
+  "gameplay_test_required": false,
+  "authored_profiles": 2,
+  "profile_data": "profiles/armour-coverage.json",
+  "runtime_config_loader": false
+}

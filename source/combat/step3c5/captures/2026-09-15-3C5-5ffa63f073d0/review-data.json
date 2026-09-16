@@ -1,0 +1,459 @@
+{
+  "sha256": "5ffa63f073d093706363e8d88de583b08e87f8ef1d5dda49295f728cf86d4c0b",
+  "bytes": 58134,
+  "lines": 265,
+  "comparisons": [
+    {
+      "session": 1,
+      "lifetime": 1,
+      "step": 0,
+      "phase": "baseline",
+      "free_flight_verified": true,
+      "vector_error": 0.00526231031,
+      "recomputed_rounded_error": 0.005262562147825773,
+      "tolerance": 0.0578054169
+    },
+    {
+      "session": 1,
+      "lifetime": 1,
+      "step": 1,
+      "phase": "apply",
+      "free_flight_verified": true,
+      "vector_error": 0.00199444038,
+      "recomputed_rounded_error": 0.0019953157645710203,
+      "tolerance": 0.0750233489
+    },
+    {
+      "session": 1,
+      "lifetime": 1,
+      "step": 2,
+      "phase": "apply",
+      "free_flight_verified": false,
+      "collision_boundary": {
+        "session": "1",
+        "lifetime": "1",
+        "step": "2",
+        "path": "position_commit",
+        "controller_present": "1",
+        "argument": "(0.00022984411,867.059631,-3.05062127)",
+        "candidate_delta": "(371.132812,-778.467773,-89.7060547)",
+        "current_delta": "(0,0,0)",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "session": 2,
+      "lifetime": 2,
+      "step": 0,
+      "phase": "baseline",
+      "free_flight_verified": true,
+      "vector_error": 0.00434488249,
+      "recomputed_rounded_error": 0.004344768467913486,
+      "tolerance": 0.052603113
+    },
+    {
+      "session": 2,
+      "lifetime": 2,
+      "step": 1,
+      "phase": "apply",
+      "free_flight_verified": true,
+      "vector_error": 0.00330025601,
+      "recomputed_rounded_error": 0.003299629477590601,
+      "tolerance": 0.0704945988
+    },
+    {
+      "session": 2,
+      "lifetime": 2,
+      "step": 2,
+      "phase": "apply",
+      "free_flight_verified": true,
+      "vector_error": 0.00696832111,
+      "recomputed_rounded_error": 0.006968402112441945,
+      "tolerance": 0.0534291513
+    },
+    {
+      "session": 2,
+      "lifetime": 2,
+      "step": 3,
+      "phase": "apply",
+      "free_flight_verified": true,
+      "vector_error": 0.0057351879,
+      "recomputed_rounded_error": 0.005734759654004657,
+      "tolerance": 0.0525333281
+    },
+    {
+      "session": 2,
+      "lifetime": 2,
+      "step": 4,
+      "phase": "apply",
+      "free_flight_verified": false,
+      "collision_boundary": {
+        "session": "2",
+        "lifetime": "2",
+        "step": "4",
+        "path": "position_commit",
+        "controller_present": "1",
+        "argument": "(0,903.678833,-0.748480916)",
+        "candidate_delta": "(-892.921875,-132.582031,-41.6582031)",
+        "current_delta": "(0,0,0)",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "session": 2,
+      "lifetime": 3,
+      "step": 0,
+      "phase": "baseline",
+      "free_flight_verified": true,
+      "vector_error": 0.00492579521,
+      "recomputed_rounded_error": 0.004925404065655477,
+      "tolerance": 0.0514134622
+    },
+    {
+      "session": 2,
+      "lifetime": 3,
+      "step": 1,
+      "phase": "apply",
+      "free_flight_verified": true,
+      "vector_error": 0.0030522473,
+      "recomputed_rounded_error": 0.0030521256920634297,
+      "tolerance": 0.0529299414
+    },
+    {
+      "session": 2,
+      "lifetime": 3,
+      "step": 2,
+      "phase": "apply",
+      "free_flight_verified": true,
+      "vector_error": 0.00190188655,
+      "recomputed_rounded_error": 0.0019035887396103692,
+      "tolerance": 0.0705005218
+    },
+    {
+      "session": 2,
+      "lifetime": 3,
+      "step": 3,
+      "phase": "apply",
+      "free_flight_verified": true,
+      "vector_error": 0.0057482075,
+      "recomputed_rounded_error": 0.005747360834259172,
+      "tolerance": 0.0536378615
+    },
+    {
+      "session": 2,
+      "lifetime": 3,
+      "step": 4,
+      "phase": "apply",
+      "free_flight_verified": false,
+      "collision_boundary": {
+        "session": "2",
+        "lifetime": "3",
+        "step": "4",
+        "path": "position_commit",
+        "controller_present": "1",
+        "argument": "(8.52651283e-14,903.023376,-0.758689702)",
+        "candidate_delta": "(-891.296875,-137.312012,-46.8173828)",
+        "current_delta": "(0,0,0)",
+        "observer_writes": "0"
+      }
+    }
+  ],
+  "shots": [
+    {
+      "session": "1",
+      "lifetime": "1",
+      "reason": "destroy",
+      "movement_entries": "3",
+      "accounting_entries": "3",
+      "baseline_verified": "1",
+      "steps": "2",
+      "verified_steps": "1",
+      "pending": "0",
+      "elapsed_s": "0.0310000014",
+      "speed_mps": "830.364538",
+      "stopped": "1",
+      "commit_entries": "3",
+      "node_entries": "0",
+      "controller_entries": "3",
+      "controller_returns": "3",
+      "controller_pending": "0",
+      "reset_entries": "3",
+      "reset_preserved": "2"
+    },
+    {
+      "session": "2",
+      "lifetime": "2",
+      "reason": "destroy",
+      "movement_entries": "5",
+      "accounting_entries": "5",
+      "baseline_verified": "1",
+      "steps": "4",
+      "verified_steps": "3",
+      "pending": "0",
+      "elapsed_s": "0.0620000027",
+      "speed_mps": "811.586177",
+      "stopped": "1",
+      "commit_entries": "5",
+      "node_entries": "0",
+      "controller_entries": "5",
+      "controller_returns": "5",
+      "controller_pending": "0",
+      "reset_entries": "5",
+      "reset_preserved": "4"
+    },
+    {
+      "session": "2",
+      "lifetime": "3",
+      "reason": "destroy",
+      "movement_entries": "5",
+      "accounting_entries": "5",
+      "baseline_verified": "1",
+      "steps": "4",
+      "verified_steps": "3",
+      "pending": "0",
+      "elapsed_s": "0.0630000029",
+      "speed_mps": "810.995233",
+      "stopped": "1",
+      "commit_entries": "5",
+      "node_entries": "0",
+      "controller_entries": "5",
+      "controller_returns": "5",
+      "controller_pending": "0",
+      "reset_entries": "5",
+      "reset_preserved": "4"
+    }
+  ],
+  "archive": "source\\combat\\step3c5\\captures\\2026-09-15-3C5-5ffa63f073d0\\NVOCombatCore.log",
+  "summaries": [
+    [
+      "SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "rows": "5",
+        "create": "1",
+        "impact": "1",
+        "destroy": "1",
+        "hit_notice": "1",
+        "weapon_notice": "1",
+        "blast": "0",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0"
+      }
+    ],
+    [
+      "CURRENT_HIT_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "contexts": "1",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "1",
+        "known_ammo": "1",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "PHYSICS_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "accepted": "1",
+        "applied_steps": "2",
+        "rejected": "0",
+        "overflow": "0",
+        "open": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_ROUTE_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "move_entries_all": "3",
+        "move_untracked": "0",
+        "accounting_entries_all": "3",
+        "accounting_untracked": "0",
+        "baselines_verified": "1",
+        "applied_verified": "1",
+        "mismatches": "0",
+        "accounting_unpaired": "0",
+        "lives_without_update": "0",
+        "reset_entries": "3",
+        "reset_preserved": "2"
+      }
+    ],
+    [
+      "FLIGHT_TIMING_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "accepted": "1",
+        "steps_logged": "4",
+        "invalid": "0",
+        "retired_during_update": "0",
+        "other_thread_steps": "4",
+        "overlap_lifetimes": "0",
+        "thread_changes": "0",
+        "nesting_limit": "0",
+        "open": "0",
+        "timing_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "FLIGHT_PREVIEW_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "seen": "1",
+        "matched": "1",
+        "skipped": "0",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "1",
+        "impact_rows": "1",
+        "destroy_rows": "1",
+        "open_samples": "0",
+        "preview_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "DAMAGE_EVENT_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "hit_callbacks": "1",
+        "hit_rows": "1",
+        "health_callbacks": "1",
+        "health_rows": "1",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "SUMMARY",
+      {
+        "session": "2",
+        "reason": "exit_game",
+        "rows": "16",
+        "create": "2",
+        "impact": "2",
+        "destroy": "2",
+        "hit_notice": "4",
+        "weapon_notice": "5",
+        "blast": "1",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0"
+      }
+    ],
+    [
+      "CURRENT_HIT_SUMMARY",
+      {
+        "session": "2",
+        "reason": "exit_game",
+        "contexts": "2",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "1",
+        "known_ammo": "1",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "PHYSICS_SUMMARY",
+      {
+        "session": "2",
+        "reason": "exit_game",
+        "accepted": "2",
+        "applied_steps": "8",
+        "rejected": "0",
+        "overflow": "0",
+        "open": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_ROUTE_SUMMARY",
+      {
+        "session": "2",
+        "reason": "exit_game",
+        "move_entries_all": "10",
+        "move_untracked": "0",
+        "accounting_entries_all": "10",
+        "accounting_untracked": "0",
+        "baselines_verified": "2",
+        "applied_verified": "6",
+        "mismatches": "0",
+        "accounting_unpaired": "0",
+        "lives_without_update": "0",
+        "reset_entries": "10",
+        "reset_preserved": "8"
+      }
+    ],
+    [
+      "FLIGHT_TIMING_SUMMARY",
+      {
+        "session": "2",
+        "reason": "exit_game",
+        "accepted": "2",
+        "steps_logged": "12",
+        "invalid": "0",
+        "retired_during_update": "0",
+        "other_thread_steps": "12",
+        "overlap_lifetimes": "0",
+        "thread_changes": "0",
+        "nesting_limit": "0",
+        "open": "0",
+        "timing_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "FLIGHT_PREVIEW_SUMMARY",
+      {
+        "session": "2",
+        "reason": "exit_game",
+        "seen": "2",
+        "matched": "2",
+        "skipped": "0",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "2",
+        "impact_rows": "2",
+        "destroy_rows": "2",
+        "open_samples": "0",
+        "preview_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "DAMAGE_EVENT_SUMMARY",
+      {
+        "session": "2",
+        "reason": "exit_game",
+        "hit_callbacks": "1",
+        "hit_rows": "1",
+        "health_callbacks": "1",
+        "health_rows": "1",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified"
+      }
+    ]
+  ],
+  "vats_source": "User reports VATS test; no direct VATS mode field in log",
+  "limited_rifle_flight_checkpoint_accepted": true,
+  "full_vats_physics_accepted": false,
+  "damage_authority_accepted": false,
+  "game_modified": false,
+  "source_last_write_local": "2026-09-15T16:22:41.9349888+12:00"
+}

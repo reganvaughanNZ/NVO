@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-09-15T19:54:58.3891353+12:00",
+  "pid": 2244,
+  "process_start_utc": "2026-09-15T07:53:34.1018521Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "files": [
+    {
+      "sha256": "7eaa975360f4e13afdc173f21a07cba95c581a2e53fa51cf49489d66d5cdc065",
+      "name": "terrain_query",
+      "filename": "terrain_query-004572E0.bin",
+      "bytes": 1280,
+      "address": "004572E0"
+    },
+    {
+      "sha256": "5cdb7fa841dfbd149af046077b58d67e3f6bfdbc3b0e0b76689614a55afef908",
+      "name": "interior_query",
+      "filename": "interior_query-005F36F0.bin",
+      "bytes": 96,
+      "address": "005F36F0"
+    },
+    {
+      "sha256": "a6eb657cf3aab7d4083b6f0eca93d6e4726d1db995b090f29decf45f2376682d",
+      "name": "terrain_threshold",
+      "filename": "terrain_threshold-0101DB88.bin",
+      "bytes": 8,
+      "address": "0101DB88"
+    },
+    {
+      "sha256": "54b26a4aaadacdfe8d8c41a80a90abda551351bd836e4e8c0d4ace153c1408ec",
+      "name": "movement_limit",
+      "filename": "movement_limit-0108A7A0.bin",
+      "bytes": 8,
+      "address": "0108A7A0"
+    }
+  ],
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false
+}

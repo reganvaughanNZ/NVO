@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVO 3F3 · Range diagnostic</title>
+<style>body{font:18px/1.6 system-ui;background:#111a20;color:#e7efee;max-width:820px;margin:48px auto;padding:0 24px}h1{line-height:1.2;color:#afe2ca}a{color:#afe2ca}li{margin:14px 0}code{background:#26343d;padding:3px 7px;border-radius:5px}button{font:inherit;background:#b3e5cd;color:#14251e;border:0;border-radius:6px;padding:10px 18px;cursor:pointer}small{color:#b8c9ce}.box{background:#1a2932;padding:18px 24px;border-radius:10px}footer{margin-top:36px}</style>
+<h1>3F3 · Compare bullet range</h1>
+<p>This update records the range assigned to each bullet. It should help explain the shorter recent flights before you try to reproduce the original terrain error.</p>
+<div class="box"><strong>Native version 314.</strong> No GECK work. Keep your current NVO.esm, NVOFlightPilot.esp and masters active. The packet changes logging; existing flight and damage rules remain in place.</div>
+<ol>
+<li>Launch New Vegas normally and load your test save. Use the <strong>ordinary Hunting Rifle</strong> and select <strong>standard .308</strong>. Your existing kit is sufficient.</li>
+<li>Fire <strong>one shot from the hip, outside VATS and without aiming down sights</strong>, across open space. Wait 15 seconds.</li>
+<li>Try to repeat the <strong>original distant VATS miss</strong> from your earlier position and distance. Wait 15 seconds after VATS finishes. If needed, make up to two additional attempts, then stop.</li>
+<li>Exit normally and tell me you are finished. Mention which shots used VATS and which hit or missed. I will read the log directly. No reload cycle is needed for this packet.</li>
+</ol>
+<p>If you need supplies, this existing console batch adds the rifle and ammunition. Select standard .308 yourself afterward.</p>
+<p><code id="kit">bat NVOFlightKit3F</code> <button id="copy">Copy kit command</button> <small id="copyStatus" role="status"></small></p>
+<p>The log is <strong>NVOCombatCore.log</strong> in your Fallout New Vegas game folder, beside FalloutNV.exe. New entries begin <code>FLIGHT_RANGE</code>. Missing terrain must actually be encountered before the correction can be considered verified.</p>
+<footer><a href="README.md">Packet notes</a> · <a href="Installation/IMPLEMENTATION.md">Implementation and reversal</a></footer>
+<script>document.getElementById('copy').onclick=async()=>{const text=document.getElementById('kit').textContent;const status=document.getElementById('copyStatus');try{await navigator.clipboard.writeText(text);status.textContent='Copied';}catch{const area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();const ok=document.execCommand('copy');area.remove();status.textContent=ok?'Copied':'Select the command and press Ctrl+C';}};</script>
+</html>

@@ -1,0 +1,1048 @@
+[
+  {
+    "key": [
+      "ALCH",
+      "NVO.esm",
+      12037
+    ],
+    "edid": "ALTCapsStash",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EFIT",
+      "EFID"
+    ]
+  },
+  {
+    "key": [
+      "ALCH",
+      "NVO.esm",
+      13610
+    ],
+    "edid": "ALTAddictionAlcohol",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EFIT",
+      "EFID"
+    ]
+  },
+  {
+    "key": [
+      "ALCH",
+      "NVO.esm",
+      19109
+    ],
+    "edid": "ALTLoneWolfRadioAddiction",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EFIT",
+      "EFID"
+    ]
+  },
+  {
+    "key": [
+      "ALCH",
+      "NVO.esm",
+      27383
+    ],
+    "edid": "ALTAddictionJet",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EFIT",
+      "EFID"
+    ]
+  },
+  {
+    "key": [
+      "ALCH",
+      "NVO.esm",
+      30461
+    ],
+    "edid": "ALTPsycho",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EFIT",
+      "EFID"
+    ]
+  },
+  {
+    "key": [
+      "ALCH",
+      "NVO.esm",
+      32034
+    ],
+    "edid": "ALTAddictionNukaCola",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EFIT",
+      "EFID"
+    ]
+  },
+  {
+    "key": [
+      "ARMO",
+      "NVO.esm",
+      8243
+    ],
+    "edid": "ALTDesertRangerArmor",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "MODS",
+      "MO3S"
+    ]
+  },
+  {
+    "key": [
+      "ARMO",
+      "NVO.esm",
+      14467
+    ],
+    "edid": "ALTHubRobes",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "MODS",
+      "MO3S"
+    ]
+  },
+  {
+    "key": [
+      "CELL",
+      "FalloutNV.esm",
+      896002
+    ],
+    "edid": "GunRunners",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "XCLR"
+    ]
+  },
+  {
+    "key": [
+      "CELL",
+      "FalloutNV.esm",
+      908767
+    ],
+    "edid": "SLFishermansShack",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "XCLR"
+    ]
+  },
+  {
+    "key": [
+      "CELL",
+      "FalloutNV.esm",
+      923982
+    ],
+    "edid": "",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "XCLR"
+    ]
+  },
+  {
+    "key": [
+      "CELL",
+      "FalloutNV.esm",
+      924383
+    ],
+    "edid": "",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "XCLR"
+    ]
+  },
+  {
+    "key": [
+      "CONT",
+      "NVO.esm",
+      5155
+    ],
+    "edid": "ALTVertiSupplies",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "COED",
+      "CNTO"
+    ]
+  },
+  {
+    "key": [
+      "CREA",
+      "NVO.esm",
+      3619
+    ],
+    "edid": "ALTDogMeatAudioTemplate",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "AIDT"
+    ]
+  },
+  {
+    "key": [
+      "CREA",
+      "NVO.esm",
+      42710
+    ],
+    "edid": "ALTDogMeat",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "SPLO",
+      "SNAM",
+      "AIDT"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      200
+    ],
+    "edid": "GREETING",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      212
+    ],
+    "edid": "GOODBYE",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225393
+    ],
+    "edid": "FollowersWait",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225394
+    ],
+    "edid": "FollowersTrade",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225395
+    ],
+    "edid": "FollowersTacticsEnd",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225396
+    ],
+    "edid": "FollowersTacticsDistanceLong",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225397
+    ],
+    "edid": "FollowersTacticsDistanceGOODBYE",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225398
+    ],
+    "edid": "FollowersTacticsDistanceEND",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225399
+    ],
+    "edid": "FollowersTacticsDistanceDefault",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225401
+    ],
+    "edid": "FollowersTacticsDistance",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225404
+    ],
+    "edid": "FollowersTacticsCombatEND",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225405
+    ],
+    "edid": "FollowersTacticsCombatGOODBYE",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225406
+    ],
+    "edid": "FollowersTacticsCombat",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225407
+    ],
+    "edid": "FollowersTactics",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225410
+    ],
+    "edid": "FollowersLetsGo",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225411
+    ],
+    "edid": "FollowersFired",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      225412
+    ],
+    "edid": "FollowersHired",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      774206
+    ],
+    "edid": "FollowersFiredNo",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      774207
+    ],
+    "edid": "FollowersFiredYes",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1090017
+    ],
+    "edid": "VFreeformGoodspringsGSSunnySmilesTopic019",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1174474
+    ],
+    "edid": "FollowersAcknowledgeMyOrder",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1174476
+    ],
+    "edid": "FollowersTacticsCombatPassive",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1174477
+    ],
+    "edid": "FollowersTacticsCombatAggressive",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1198721
+    ],
+    "edid": "VFreeformFreesideVFSJulieFarkasTopic030",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1328683
+    ],
+    "edid": "VMS45VRRCPapaKhanTopic004",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1403900
+    ],
+    "edid": "FollowersFiredYesSuite",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1424573
+    ],
+    "edid": "FollowersOverburdened",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1455032
+    ],
+    "edid": "VDialogueHiddenValleyEdgarHardinTopic036",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1455036
+    ],
+    "edid": "VDialogueHiddenValleyEdgarHardinTopic027",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1456338
+    ],
+    "edid": "VDialogueHiddenValleyNolanMcNamaraTopic035",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "DIAL",
+      "FalloutNV.esm",
+      1456342
+    ],
+    "edid": "VDialogueHiddenValleyNolanMcNamaraTopic014",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTI"
+    ]
+  },
+  {
+    "key": [
+      "NPC_",
+      "NVO.esm",
+      5870
+    ],
+    "edid": "ALTMojaveRep",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "CNTO"
+    ]
+  },
+  {
+    "key": [
+      "NPC_",
+      "NVO.esm",
+      23726
+    ],
+    "edid": "ALTRegulatorRep",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "CNTO",
+      "COED"
+    ]
+  },
+  {
+    "key": [
+      "NPC_",
+      "NVO.esm",
+      26799
+    ],
+    "edid": "ALTContractKillerRep",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "CNTO",
+      "COED"
+    ]
+  },
+  {
+    "key": [
+      "NPC_",
+      "NVO.esm",
+      28927
+    ],
+    "edid": "ALTNovacSettler",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "SNAM",
+      "CNTO"
+    ]
+  },
+  {
+    "key": [
+      "PERK",
+      "NVO.esm",
+      16007
+    ],
+    "edid": "ALTMyrmecologistPerk",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EPFT",
+      "DATA",
+      "PRKC",
+      "CTDA"
+    ]
+  },
+  {
+    "key": [
+      "PERK",
+      "NVO.esm",
+      16010
+    ],
+    "edid": "ALTScientistPerk",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "CTDA",
+      "SCTX",
+      "SCDA",
+      "EPF2"
+    ]
+  },
+  {
+    "key": [
+      "PERK",
+      "NVO.esm",
+      20650
+    ],
+    "edid": "ALTYumaFlatsPerk",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "CTDA",
+      "EPFD"
+    ]
+  },
+  {
+    "key": [
+      "PERK",
+      "NVO.esm",
+      23714
+    ],
+    "edid": "ALTGunRunnerPerk",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EPFT",
+      "DATA",
+      "PRKC",
+      "CTDA",
+      "EPFD"
+    ]
+  },
+  {
+    "key": [
+      "PERK",
+      "NVO.esm",
+      34512
+    ],
+    "edid": "ALTGunRunnerPerkModify",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "EPFD",
+      "CTDA"
+    ]
+  },
+  {
+    "key": [
+      "QUST",
+      "FalloutNV.esm",
+      1436763
+    ],
+    "edid": "VMS16b",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "QSTA"
+    ]
+  },
+  {
+    "key": [
+      "QUST",
+      "NVO.esm",
+      103451
+    ],
+    "edid": "NVOCombatBootstrapScriptQ",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "DATA"
+    ]
+  },
+  {
+    "key": [
+      "REFR",
+      "NVO.esm",
+      8944
+    ],
+    "edid": "ALTFishermanPrideBedPlayerRef",
+    "change": "changed",
+    "flags": [
+      "0x400",
+      "0x400"
+    ],
+    "tags_changed": [
+      "XESP"
+    ]
+  },
+  {
+    "key": [
+      "REFR",
+      "NVO.esm",
+      19092
+    ],
+    "edid": "",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "XESP"
+    ]
+  },
+  {
+    "key": [
+      "REFR",
+      "NVO.esm",
+      65130
+    ],
+    "edid": "",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "XESP"
+    ]
+  },
+  {
+    "key": [
+      "REFR",
+      "NVO.esm",
+      65133
+    ],
+    "edid": "",
+    "change": "changed",
+    "flags": [
+      "0x0",
+      "0x0"
+    ],
+    "tags_changed": [
+      "XESP"
+    ]
+  },
+  {
+    "key": [
+      "SCPT",
+      "NVO.esm",
+      104980
+    ],
+    "edid": "NVOCombatBootstrapScriptDUPLICATE000",
+    "change": "added"
+  },
+  {
+    "key": [
+      "SCPT",
+      "NVO.esm",
+      104981
+    ],
+    "edid": "ALTQscriptDUPLICATE000",
+    "change": "added"
+  },
+  {
+    "key": [
+      "SCPT",
+      "NVO.esm",
+      104982
+    ],
+    "edid": "ALTStartQscriptDUPLICATE000",
+    "change": "added"
+  },
+  {
+    "key": [
+      "TES4",
+      "HEADER",
+      0
+    ],
+    "edid": "",
+    "change": "changed",
+    "flags": [
+      "0x1",
+      "0x1"
+    ],
+    "tags_changed": [
+      "HEDR",
+      "ONAM"
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "provider_sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c",
+  "provider_source": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\handlers\\OnPreDamageHandler.cpp",
+  "provider_source_sha256": "732dae3ad501b4f10b042488451782fd25a397194fcc4deadf269444a71a31bd",
+  "preferred_base": 268435456,
+  "timestamp": 1788121053,
+  "image_size": 733184,
+  "calls": [
+    {
+      "index": 0,
+      "site": "0087C4DA",
+      "thunk_rva": 216888,
+      "size": 127,
+      "original_rva": 509784,
+      "relocations": [
+        7,
+        15,
+        21,
+        29,
+        39,
+        55,
+        69,
+        78,
+        92,
+        107
+      ],
+      "fnv64": "B457A4C636F15C31"
+    },
+    {
+      "index": 1,
+      "site": "0089A738",
+      "thunk_rva": 217015,
+      "size": 127,
+      "original_rva": 509804,
+      "relocations": [
+        7,
+        15,
+        21,
+        29,
+        39,
+        55,
+        69,
+        78,
+        92,
+        107
+      ],
+      "fnv64": "3F49B9B662DD8214"
+    },
+    {
+      "index": 2,
+      "site": "008B91E1",
+      "thunk_rva": 217142,
+      "size": 127,
+      "original_rva": 509824,
+      "relocations": [
+        7,
+        15,
+        21,
+        29,
+        39,
+        55,
+        69,
+        78,
+        92,
+        107
+      ],
+      "fnv64": "848654F693A4262B"
+    },
+    {
+      "index": 3,
+      "site": "009B0503",
+      "thunk_rva": 217269,
+      "size": 127,
+      "original_rva": 509844,
+      "relocations": [
+        7,
+        15,
+        21,
+        29,
+        39,
+        55,
+        69,
+        78,
+        92,
+        107
+      ],
+      "fnv64": "89F6E6CDA121084C"
+    },
+    {
+      "index": 4,
+      "site": "009C1E96",
+      "thunk_rva": 217396,
+      "size": 127,
+      "original_rva": 509864,
+      "relocations": [
+        7,
+        15,
+        21,
+        29,
+        39,
+        55,
+        69,
+        78,
+        92,
+        107
+      ],
+      "fnv64": "4C36A5EB7E984F69"
+    },
+    {
+      "index": 5,
+      "site": "009CBDE8",
+      "thunk_rva": 217523,
+      "size": 127,
+      "original_rva": 509884,
+      "relocations": [
+        7,
+        15,
+        21,
+        29,
+        39,
+        55,
+        69,
+        78,
+        92,
+        107
+      ],
+      "fnv64": "685D2761A9143FBC"
+    }
+  ],
+  "read_only_offline_inspection": true,
+  "full_game_damage_contract_verified": false
+}

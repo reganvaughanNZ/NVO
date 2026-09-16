@@ -1,0 +1,53 @@
+{
+  "inspected": "2026-09-14",
+  "packet": "2B2",
+  "sdk_version": "6.4.8",
+  "sources": [
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\PluginAPI.h",
+      "sha256": "c59c2aa93f285d442307b4c9f855456cedd5e22e7463764ea01b7c448aee8bf5"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\nvse_version.h",
+      "sha256": "2f2f922938a51cbe7c690cd5f953114d6c1dbcf323fb987a67604c3c0a43c794"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\EventManager.h",
+      "sha256": "bc46915405299d1854a94e016a9ec718d47462090359748d0a48e82fa8a633cf"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\EventManager.cpp",
+      "sha256": "e1ae0e4223c2b69ca40eacf414584185cdff8ef037d052e855ef1bab9de7c991"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\GameForms.h",
+      "sha256": "4e29d76daf1c79368900a1ad06b2ebabc3c56415f9c3c8d3ac7f97bb01d6f048"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\Serialization.cpp",
+      "sha256": "8a9e2ec9919249a340eb447b59075cf1c6932eb512a852f168cbacaacff89353"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\Core_Serialization.cpp",
+      "sha256": "a96329bdc977bbec65fa401af18fbf66e9e943da15692e015345ed0d08c16fa0"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\Hooks_SaveLoad.cpp",
+      "sha256": "605e4b0e68802ee335b587bb85b1ebd6be218e5514b09c61cc02b06382b86590"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\Hooks_Gameplay.cpp",
+      "sha256": "2f62e15a78d1fe73b42e1e53af9aabd08c267d5c3b9b2e3ced22b68676339e3d"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\ShowOff-NVSE-main\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\Events\\ShowOffEvents.h",
+      "sha256": "5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270"
+    },
+    {
+      "path": "C:\\Users\\regan\\Downloads\\ShowOff-NVSE-main\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\ShowOffNVSE.cpp",
+      "sha256": "95a5c402dbda3794adcf9606b6a2022a58dcb17929da448ba98e605d91ff830b"
+    }
+  ],
+  "method": "Read-only source inspection, compiled NVO code, no game tests",
+  "contracts": "See SDK-BOUNDARY.md; classic and modern callback arguments differ"
+}

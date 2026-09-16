@@ -1,0 +1,13 @@
+# NVO Packet 3J: official content + NVO, RD retired.
+FalloutNV.esm
+DeadMoney.esm
+HonestHearts.esm
+OldWorldBlues.esm
+LonesomeRoad.esm
+GunRunnersArsenal.esm
+ClassicPack.esm
+MercenaryPack.esm
+TribalPack.esm
+CaravanPack.esm
+NVO.esm
+NVOFlightPilot.esp

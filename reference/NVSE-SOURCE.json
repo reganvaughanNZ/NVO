@@ -1,0 +1,63 @@
+{
+  "provided_on": "2026-09-14",
+  "root": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master",
+  "sdk_directory": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse",
+  "declared_version": "6.4.8",
+  "purpose": "Preferred user-provided source location for future native work. Preserve published packet provenance separately.",
+  "current_packet": "2B2 / NVOCombatCore 0.2.1 / 201",
+  "current_api_declarations_identical": {
+    "NVSEInterface": true,
+    "PluginInfo": true,
+    "NVSEMessagingInterface": true,
+    "NVSEEventManagerInterface": true
+  },
+  "differences": "PluginAPI changes include DataInterface v4 and PluginFormExtraData changes, unused by current NVO DLL. Serialization and debug created-object handling also differ. Same declared version does not imply identical source or installed binary.",
+  "files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\PluginAPI.h",
+      "sha256": "bc07f783fd90425e192dbbc026a48aa73f1639983b0267aeb24a43a5a5e191f9",
+      "matches_2b2_reference": false
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\nvse_version.h",
+      "sha256": "2f2f922938a51cbe7c690cd5f953114d6c1dbcf323fb987a67604c3c0a43c794",
+      "matches_2b2_reference": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.h",
+      "sha256": "bc46915405299d1854a94e016a9ec718d47462090359748d0a48e82fa8a633cf",
+      "matches_2b2_reference": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.cpp",
+      "sha256": "e1ae0e4223c2b69ca40eacf414584185cdff8ef037d052e855ef1bab9de7c991",
+      "matches_2b2_reference": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\GameForms.h",
+      "sha256": "4e29d76daf1c79368900a1ad06b2ebabc3c56415f9c3c8d3ac7f97bb01d6f048",
+      "matches_2b2_reference": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Serialization.cpp",
+      "sha256": "4851aa66e33308af82f7df410a7c88ddaf7a1ccb2e800b8e6e529acaae8f7d32",
+      "matches_2b2_reference": false
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Core_Serialization.cpp",
+      "sha256": "f1069c880f23bcd0b94a243e85f3c8d658a4359994111049ffa6e9e504674a3c",
+      "matches_2b2_reference": false
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Hooks_SaveLoad.cpp",
+      "sha256": "605e4b0e68802ee335b587bb85b1ebd6be218e5514b09c61cc02b06382b86590",
+      "matches_2b2_reference": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Hooks_Gameplay.cpp",
+      "sha256": "2f62e15a78d1fe73b42e1e53af9aabd08c267d5c3b9b2e3ced22b68676339e3d",
+      "matches_2b2_reference": true
+    }
+  ],
+  "action": "Source index only. No rebuild, game changes or new packet. Inspect relevant implementation and installed runtime compatibility again before adopting additional interfaces."
+}

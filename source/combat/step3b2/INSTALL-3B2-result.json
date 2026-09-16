@@ -1,0 +1,47 @@
+{
+  "status": "installed",
+  "packet": "3B2",
+  "version": 302,
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3B2-20260915-100035-16ae504b",
+  "closed_processes": [],
+  "activation": {
+    "path": "C:\\Users\\regan\\AppData\\Local\\FalloutNV\\plugins.txt",
+    "original_entries_preserved": true,
+    "sha256": "17c94eb4e77bfcc9273aa45f5de4f7c14c5e06ea8c8aaccd952c8724a2484ee2",
+    "appended": "NVOFlightPilot.esp"
+  },
+  "archived_removed": 0,
+  "replaced": 3,
+  "installed": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "f20f053f06de510902b550e1827c7d1fbe033f49958e6b401df9374d8167e332"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "b7ad5c6b3620885ced5453ade2f80f9021122c4faf6a027343364ebde77bf06a"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPreview.ini",
+      "sha256": "3b7789bf53407a3427f61941ff7c3a81a4aac4fe074bea6f95ba6ba7bf299107"
+    },
+    {
+      "path": "Data/NVOFlightPilot.esp",
+      "sha256": "f5fd916841ebf5aafae5c467a7e17dd67fdf1faf1abc9368f66e936f146244ab"
+    },
+    {
+      "path": "NVOFlightPilot.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "protected_files_verified": 46,
+  "game_relaunched": false,
+  "gameplay_tested": false,
+  "post_install_comment_update": {
+    "file": "Data/NVSE/Plugins/NVOFlightPreview.ini",
+    "before_sha256": "74d2ff71ed3715edfe0e85ca01bb7a3959f7cc0894effc240220ae2ce2f07ba0",
+    "after_sha256": "3b7789bf53407a3427f61941ff7c3a81a4aac4fe074bea6f95ba6ba7bf299107",
+    "settings_unchanged_verified": true,
+    "previous_copy": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3B2-20260915-100035-16ae504b\\NVOFlightPreview-before-label-fix.ini"
+  }
+}

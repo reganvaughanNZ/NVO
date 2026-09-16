@@ -1,0 +1,946 @@
+[
+  {
+    "id": 0,
+    "message": {
+      "type": "MESG",
+      "form": "0A014080",
+      "flags": "00000000",
+      "EDID": "ALTRandomMSG",
+      "FULL": "Random Background"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A014081",
+      "flags": "00000000",
+      "EDID": "ALTBackRandomUDF"
+    }
+  },
+  {
+    "id": 1,
+    "message": {
+      "type": "MESG",
+      "form": "0A0022E8",
+      "flags": "00000000",
+      "EDID": "ALTScavenger",
+      "FULL": "Prospector"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A010A8D",
+      "flags": "00000000",
+      "EDID": "ALTBackProspecterUDF"
+    }
+  },
+  {
+    "id": 2,
+    "message": {
+      "type": "MESG",
+      "form": "0A0022EA",
+      "flags": "00000000",
+      "EDID": "ALTNCRTrooper",
+      "FULL": "NCR Trooper"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01167E",
+      "flags": "00000000",
+      "EDID": "ALTBackNCRTrooperUDF"
+    }
+  },
+  {
+    "id": 3,
+    "message": {
+      "type": "MESG",
+      "form": "0A0022EE",
+      "flags": "00000000",
+      "EDID": "ALTDestituteGambler",
+      "FULL": "Destitute Gambler"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A011C77",
+      "flags": "00000000",
+      "EDID": "ALTBackDestituteGamblerUDF"
+    }
+  },
+  {
+    "id": 4,
+    "message": {
+      "type": "MESG",
+      "form": "0A002302",
+      "flags": "00000000",
+      "EDID": "ALTFisherman",
+      "FULL": "Fisherman"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A011C78",
+      "flags": "00000000",
+      "EDID": "ALTBackFishermanUDF"
+    }
+  },
+  {
+    "id": 5,
+    "message": {
+      "type": "MESG",
+      "form": "0A002902",
+      "flags": "00000000",
+      "EDID": "ALTRoboticsExpert",
+      "FULL": "Robotics Expert"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A011C7A",
+      "flags": "00000000",
+      "EDID": "ALTBackRoboticsExpertUDF"
+    }
+  },
+  {
+    "id": 6,
+    "message": {
+      "type": "MESG",
+      "form": "0A002905",
+      "flags": "00000000",
+      "EDID": "ALTBoSSurvivor",
+      "FULL": "Brotherhood Survivor"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A011C7B",
+      "flags": "00000000",
+      "EDID": "ALTBackBoSSurvivorUDF"
+    }
+  },
+  {
+    "id": 7,
+    "message": {
+      "type": "MESG",
+      "form": "0A002F01",
+      "flags": "00000000",
+      "EDID": "ALTBoSExile",
+      "FULL": "Brotherhood Exile"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A011C7C",
+      "flags": "00000000",
+      "EDID": "ALTBackBoSExileUDF"
+    }
+  },
+  {
+    "id": 8,
+    "message": {
+      "type": "MESG",
+      "form": "0A002F04",
+      "flags": "00000000",
+      "EDID": "ALTPrimmResident",
+      "FULL": "Primm Resident"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012275",
+      "flags": "00000000",
+      "EDID": "ALTBackPrimmResidentUDF"
+    }
+  },
+  {
+    "id": 9,
+    "message": {
+      "type": "MESG",
+      "form": "0A002F0A",
+      "flags": "00000000",
+      "EDID": "ALTRaidedFarmer",
+      "FULL": "Raided Farmer"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012276",
+      "flags": "00000000",
+      "EDID": "ALTBackRaidedFarmerUDF"
+    }
+  },
+  {
+    "id": 10,
+    "message": {
+      "type": "MESG",
+      "form": "0A002F0D",
+      "flags": "00000000",
+      "EDID": "ALTRancher",
+      "FULL": "Rancher"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012277",
+      "flags": "00000000",
+      "EDID": "ALTBackRancherUDF"
+    }
+  },
+  {
+    "id": 11,
+    "message": {
+      "type": "MESG",
+      "form": "0A003535",
+      "flags": "00000000",
+      "EDID": "ALTElRayMotel",
+      "FULL": "Wasteland Wino"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012278",
+      "flags": "00000000",
+      "EDID": "ALTBackElRayMotelUDF"
+    }
+  },
+  {
+    "id": 12,
+    "message": {
+      "type": "MESG",
+      "form": "0A00352C",
+      "flags": "00000000",
+      "EDID": "ALTKhan",
+      "FULL": "Great Khan"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012279",
+      "flags": "00000000",
+      "EDID": "ALTBackKhanUDF"
+    }
+  },
+  {
+    "id": 13,
+    "message": {
+      "type": "MESG",
+      "form": "0A003B32",
+      "flags": "00000000",
+      "EDID": "ALTVanGraffThug",
+      "FULL": "Van Graff Thug"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01227A",
+      "flags": "00000000",
+      "EDID": "ALTBackVanGraffThugUDF"
+    }
+  },
+  {
+    "id": 14,
+    "message": {
+      "type": "MESG",
+      "form": "0A005F03",
+      "flags": "00000000",
+      "EDID": "ALTNovac",
+      "FULL": "Novac Settler"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01227B",
+      "flags": "00000000",
+      "EDID": "ALTBackNovacUDF"
+    }
+  },
+  {
+    "id": 15,
+    "message": {
+      "type": "MESG",
+      "form": "0A006AF6",
+      "flags": "00000000",
+      "EDID": "ALTChemAddict",
+      "FULL": "Chem Addict"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01227C",
+      "flags": "00000000",
+      "EDID": "ALTBackChemAddictUDF"
+    }
+  },
+  {
+    "id": 16,
+    "message": {
+      "type": "MESG",
+      "form": "0A006AFB",
+      "flags": "00000000",
+      "EDID": "ALTKing",
+      "FULL": "Kings Gang Member"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01227D",
+      "flags": "00000000",
+      "EDID": "ALTBackKingUDF"
+    }
+  },
+  {
+    "id": 17,
+    "message": {
+      "type": "MESG",
+      "form": "0A006AFC",
+      "flags": "00000000",
+      "EDID": "ALTChosenOne",
+      "FULL": "Chosen One"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01227E",
+      "flags": "00000000",
+      "EDID": "ALTBackChosenOneUDF"
+    }
+  },
+  {
+    "id": 18,
+    "message": {
+      "type": "MESG",
+      "form": "0A0070F6",
+      "flags": "00000000",
+      "EDID": "ALTTribal",
+      "FULL": "Tribal"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01227F",
+      "flags": "00000000",
+      "EDID": "ALTBackTribalUDF"
+    }
+  },
+  {
+    "id": 19,
+    "message": {
+      "type": "MESG",
+      "form": "0A0070F8",
+      "flags": "00000000",
+      "EDID": "ALTCaravanGuard",
+      "FULL": "Caravan Guard"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012280",
+      "flags": "00000000",
+      "EDID": "ALTBackCaravanGuardUDF"
+    }
+  },
+  {
+    "id": 20,
+    "message": {
+      "type": "MESG",
+      "form": "0A0070FA",
+      "flags": "00000000",
+      "EDID": "ALTMercenary",
+      "FULL": "Mercenary"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012281",
+      "flags": "00000000",
+      "EDID": "ALTBackMercenaryUDF"
+    }
+  },
+  {
+    "id": 21,
+    "message": {
+      "type": "MESG",
+      "form": "0A0070FC",
+      "flags": "00000000",
+      "EDID": "ALTViper",
+      "FULL": "Viper Gunslinger"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012282",
+      "flags": "00000000",
+      "EDID": "ALTBackViperUDF"
+    }
+  },
+  {
+    "id": 22,
+    "message": {
+      "type": "MESG",
+      "form": "0A007101",
+      "flags": "00000000",
+      "EDID": "ALTJackal",
+      "FULL": "Jackal Gang Member"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012283",
+      "flags": "00000000",
+      "EDID": "ALTBackJackalUDF"
+    }
+  },
+  {
+    "id": 23,
+    "message": {
+      "type": "MESG",
+      "form": "0A007103",
+      "flags": "00000000",
+      "EDID": "ALTFiend",
+      "FULL": "Fiend"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012284",
+      "flags": "00000000",
+      "EDID": "ALTBackFiendUDF"
+    }
+  },
+  {
+    "id": 24,
+    "message": {
+      "type": "MESG",
+      "form": "0A00A6D2",
+      "flags": "00000000",
+      "EDID": "ALTLegion",
+      "FULL": "Frumentarii Asset"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012285",
+      "flags": "00000000",
+      "EDID": "ALTBackLegionUDF"
+    }
+  },
+  {
+    "id": 25,
+    "message": {
+      "type": "MESG",
+      "form": "0A00A6D5",
+      "flags": "00000000",
+      "EDID": "ALTThorn",
+      "FULL": "Thorn Gladiator"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012286",
+      "flags": "00000000",
+      "EDID": "ALTBackThornUDF"
+    }
+  },
+  {
+    "id": 26,
+    "message": {
+      "type": "MESG",
+      "form": "0A000E1F",
+      "flags": "00000000",
+      "EDID": "ALTLoneWanderer",
+      "FULL": "Lone Wanderer"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012287",
+      "flags": "00000000",
+      "EDID": "ALTBackLoneWandererUDF"
+    }
+  },
+  {
+    "id": 27,
+    "message": {
+      "type": "MESG",
+      "form": "0A00141E",
+      "flags": "00000000",
+      "EDID": "ALTEnclaveRemnant",
+      "FULL": "Enclave Remnant"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012288",
+      "flags": "00000000",
+      "EDID": "ALTBackEnclaveRemnantUDF"
+    }
+  },
+  {
+    "id": 28,
+    "message": {
+      "type": "MESG",
+      "form": "0A00141F",
+      "flags": "00000000",
+      "EDID": "ALTEnclavePatriot",
+      "FULL": "Enclave Patriot"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012289",
+      "flags": "00000000",
+      "EDID": "ALTBackEnclavePatriotUDF"
+    }
+  },
+  {
+    "id": 29,
+    "message": {
+      "type": "MESG",
+      "form": "0A001421",
+      "flags": "00000000",
+      "EDID": "ALTPilot",
+      "FULL": "Vertibird Crash Survivor"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01228A",
+      "flags": "00000000",
+      "EDID": "ALTBackPilotUDF"
+    }
+  },
+  {
+    "id": 30,
+    "message": {
+      "type": "MESG",
+      "form": "0A001A29",
+      "flags": "00000000",
+      "EDID": "ALTPowderGanger",
+      "FULL": "NCRCF Convict"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01228B",
+      "flags": "00000000",
+      "EDID": "ALTBackPowderGangerUDF"
+    }
+  },
+  {
+    "id": 31,
+    "message": {
+      "type": "MESG",
+      "form": "0A001A2D",
+      "flags": "00000000",
+      "EDID": "ALTQuarryMSG",
+      "FULL": "Egg-thusiast"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01228C",
+      "flags": "00000000",
+      "EDID": "ALTBackQuarryUDF"
+    }
+  },
+  {
+    "id": 32,
+    "message": {
+      "type": "MESG",
+      "form": "0A001A33",
+      "flags": "00000000",
+      "EDID": "ALTSlave",
+      "FULL": "Escaped Slave"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01228D",
+      "flags": "00000000",
+      "EDID": "ALTBackSlaveUDF"
+    }
+  },
+  {
+    "id": 33,
+    "message": {
+      "type": "MESG",
+      "form": "0A00202D",
+      "flags": "00000000",
+      "EDID": "ALTSpartacus",
+      "FULL": "Spartacus"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01228E",
+      "flags": "00000000",
+      "EDID": "ALTBackSpartacusUDF"
+    }
+  },
+  {
+    "id": 34,
+    "message": {
+      "type": "MESG",
+      "form": "0A002651",
+      "flags": "00000000",
+      "EDID": "ALTDesertRanger",
+      "FULL": "Desert Ranger"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01228F",
+      "flags": "00000000",
+      "EDID": "ALTBackDesertRangerUDF"
+    }
+  },
+  {
+    "id": 35,
+    "message": {
+      "type": "MESG",
+      "form": "0A00326D",
+      "flags": "00000000",
+      "EDID": "ALTFoA",
+      "FULL": "Follower of the Apocalypse"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012290",
+      "flags": "00000000",
+      "EDID": "ALTBackFoAUDF"
+    }
+  },
+  {
+    "id": 36,
+    "message": {
+      "type": "MESG",
+      "form": "0A006513",
+      "flags": "00000000",
+      "EDID": "ALTNobody",
+      "FULL": "Nobody"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012291",
+      "flags": "00000000",
+      "EDID": "ALTBackNobodyUDF"
+    }
+  },
+  {
+    "id": 37,
+    "message": {
+      "type": "MESG",
+      "form": "0A004A89",
+      "flags": "00000000",
+      "EDID": "ALTBotanist",
+      "FULL": "Botanist"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012292",
+      "flags": "00000000",
+      "EDID": "ALTBackBotanistUDF"
+    }
+  },
+  {
+    "id": 38,
+    "message": {
+      "type": "MESG",
+      "form": "0A007724",
+      "flags": "00000000",
+      "EDID": "ALTStarCollector",
+      "FULL": "Star Collector"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012293",
+      "flags": "00000000",
+      "EDID": "ALTBackStarCollectorUDF"
+    }
+  },
+  {
+    "id": 39,
+    "message": {
+      "type": "MESG",
+      "form": "0A007D28",
+      "flags": "00000000",
+      "EDID": "ALTNukaColaAddict",
+      "FULL": "Nuka Cola Addict"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012294",
+      "flags": "00000000",
+      "EDID": "ALTBackNukaColaAddictUDF"
+    }
+  },
+  {
+    "id": 40,
+    "message": {
+      "type": "MESG",
+      "form": "0A007D2E",
+      "flags": "00000000",
+      "EDID": "ALTVaultDweller",
+      "FULL": "Vault Dweller"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012295",
+      "flags": "00000000",
+      "EDID": "ALTBackVaultDwellerUDF"
+    }
+  },
+  {
+    "id": 41,
+    "message": {
+      "type": "MESG",
+      "form": "0A008328",
+      "flags": "00000000",
+      "EDID": "ALTChildofAtom",
+      "FULL": "Child of Atom"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012296",
+      "flags": "00000000",
+      "EDID": "ALTBackChildofAtomUDF"
+    }
+  },
+  {
+    "id": 42,
+    "message": {
+      "type": "MESG",
+      "form": "0A008928",
+      "flags": "00000000",
+      "EDID": "ALTCoyote",
+      "FULL": "Raised by Coyotes"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012297",
+      "flags": "00000000",
+      "EDID": "ALTBackCoyoteUDF"
+    }
+  },
+  {
+    "id": 43,
+    "message": {
+      "type": "MESG",
+      "form": "0A00202B",
+      "flags": "00000000",
+      "EDID": "ALTRRanger",
+      "FULL": "Reilly's Ranger"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012298",
+      "flags": "00000000",
+      "EDID": "ALTBackRRangerUDF"
+    }
+  },
+  {
+    "id": 44,
+    "message": {
+      "type": "MESG",
+      "form": "0A002C56",
+      "flags": "00000000",
+      "EDID": "ALTChineseSpy",
+      "FULL": "Chinese Spy"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A012299",
+      "flags": "00000000",
+      "EDID": "ALTBackChineseSpyUDF"
+    }
+  },
+  {
+    "id": 45,
+    "message": {
+      "type": "MESG",
+      "form": "0A003885",
+      "flags": "00000000",
+      "EDID": "ALTHubologist",
+      "FULL": "Hubologist"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01229A",
+      "flags": "00000000",
+      "EDID": "ALTBackHubologistUDF"
+    }
+  },
+  {
+    "id": 46,
+    "message": {
+      "type": "MESG",
+      "form": "0A00388A",
+      "flags": "00000000",
+      "EDID": "ALTMyrmecologist",
+      "FULL": "Myrmecologist"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01229B",
+      "flags": "00000000",
+      "EDID": "ALTBackMyrmecologistUDF"
+    }
+  },
+  {
+    "id": 47,
+    "message": {
+      "type": "MESG",
+      "form": "0A004AA8",
+      "flags": "00000000",
+      "EDID": "ALTLoneWolf",
+      "FULL": "Lone Wolf Radio DJ"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01229C",
+      "flags": "00000000",
+      "EDID": "ALTBackLoneWolfUDF"
+    }
+  },
+  {
+    "id": 48,
+    "message": {
+      "type": "MESG",
+      "form": "0A0050A9",
+      "flags": "00000000",
+      "EDID": "ALTYumaFlats",
+      "FULL": "Yuma Flats Energy Technician"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01229D",
+      "flags": "00000000",
+      "EDID": "ALTBackYumaFlatsUDF"
+    }
+  },
+  {
+    "id": 49,
+    "message": {
+      "type": "MESG",
+      "form": "0A005CA9",
+      "flags": "00000000",
+      "EDID": "ALTGunRunnerMSG",
+      "FULL": "Gun Runner"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01229E",
+      "flags": "00000000",
+      "EDID": "ALTBackGunRunnerUDF"
+    }
+  },
+  {
+    "id": 50,
+    "message": {
+      "type": "MESG",
+      "form": "0A005CB5",
+      "flags": "00000000",
+      "EDID": "ALTRegulator",
+      "FULL": "Regulator"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A01229F",
+      "flags": "00000000",
+      "EDID": "ALTBackRegulatorUDF"
+    }
+  },
+  {
+    "id": 51,
+    "message": {
+      "type": "MESG",
+      "form": "0A0068B3",
+      "flags": "00000000",
+      "EDID": "ALTContractKiller",
+      "FULL": "Contract Killer"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A0",
+      "flags": "00000000",
+      "EDID": "ALTBackContractKillerUDF"
+    }
+  },
+  {
+    "id": 52,
+    "message": {
+      "type": "MESG",
+      "form": "0A0068B6",
+      "flags": "00000000",
+      "EDID": "ALTVaultCity",
+      "FULL": "Vault City Citizen"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A1",
+      "flags": "00000000",
+      "EDID": "ALTBackVaultCityUDF"
+    }
+  },
+  {
+    "id": 53,
+    "message": {
+      "type": "MESG",
+      "form": "0A0074CD",
+      "flags": "00000000",
+      "EDID": "ALTRichKid",
+      "FULL": "Brahmin Baron"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A2",
+      "flags": "00000000",
+      "EDID": "ALTBackRichKidUDF"
+    }
+  },
+  {
+    "id": 54,
+    "message": {
+      "type": "MESG",
+      "form": "0A00EC70",
+      "flags": "00000000",
+      "EDID": "ALTRaider",
+      "FULL": "Raider"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A3",
+      "flags": "00000000",
+      "EDID": "ALTBackRaiderUDF"
+    }
+  },
+  {
+    "id": 55,
+    "message": {
+      "type": "MESG",
+      "form": "0A00F864",
+      "flags": "00000000",
+      "EDID": "ALTDeadMoney",
+      "FULL": "Sierra Madre Patron"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A4",
+      "flags": "00000000",
+      "EDID": "ALTBackDeadMoneyUDF"
+    }
+  },
+  {
+    "id": 56,
+    "message": {
+      "type": "MESG",
+      "form": "0A00F86B",
+      "flags": "00000000",
+      "EDID": "ALTHonestHearts",
+      "FULL": "Happy Trails Caravaneer"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A5",
+      "flags": "00000000",
+      "EDID": "ALTBackHonestHeartsUDF"
+    }
+  },
+  {
+    "id": 57,
+    "message": {
+      "type": "MESG",
+      "form": "0A00F86C",
+      "flags": "00000000",
+      "EDID": "ALTOldWorldBlues",
+      "FULL": "Lobotomite"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A6",
+      "flags": "00000000",
+      "EDID": "ALTBackOldWorldBluesUDF"
+    }
+  },
+  {
+    "id": 58,
+    "message": {
+      "type": "MESG",
+      "form": "0A00F86F",
+      "flags": "00000000",
+      "EDID": "ALTLonesomeRoad",
+      "FULL": "Traveller to the Divide"
+    },
+    "function": {
+      "type": "SCPT",
+      "form": "0A0122A7",
+      "flags": "00000000",
+      "EDID": "ALTBackLonesomeRoadUDF"
+    }
+  }
+]

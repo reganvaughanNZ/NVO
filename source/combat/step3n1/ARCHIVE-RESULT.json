@@ -1,0 +1,18 @@
+{
+  "packet": "3N1",
+  "archived_utc": "2026-09-16T04:16:47.5113723Z",
+  "files": [
+    {
+      "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOBaronCheck.txt",
+      "destination": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\baron-check-3N1-20260916-161647\\NVOBaronCheck.txt",
+      "sha256": "578cc4d8535de1bbeaa3a721fd13f45cadb89ebe14570d55123f0090177c0c2d"
+    },
+    {
+      "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\user_defined_functions\\NVOBaronCheck\\Check.txt",
+      "destination": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\baron-check-3N1-20260916-161647\\Data\\NVSE\\user_defined_functions\\NVOBaronCheck\\Check.txt",
+      "sha256": "845db1bb01e60e7f2f6f6e324dfdffdcc349fc877cb98f32b5a1ec3936054dc1"
+    }
+  ],
+  "logs_preserved": true,
+  "protected_assets_unchanged": true
+}

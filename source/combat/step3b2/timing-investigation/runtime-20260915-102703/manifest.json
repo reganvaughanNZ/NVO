@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-09-15T10:27:03.2181693+12:00",
+  "pid": 19432,
+  "process_start_utc": "2026-09-14T22:25:40.5085419Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "code_base": "009B7000",
+  "code_bytes": 57344,
+  "vtable_base": "0108FA44",
+  "vtable_bytes": 2508,
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false,
+  "code_sha256": "f6c95eb7e7ea3f5968770d6a8b807260f160e08ff2be6e085ade515376f3b452",
+  "vtable_sha256": "20db6c364428f1b3a28eb7a3bc49583027213fe263ce324a8f8c07a0ecc6ae56"
+}

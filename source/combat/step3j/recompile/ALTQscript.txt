@@ -1,0 +1,151 @@
+scn ALTQscript
+
+string_var sVeronicLoc
+
+ref rTurnInItem
+int iTurnInValue
+int nvoReservedSlot4
+ref rRef
+
+int bBlock
+
+int iState
+
+int nvoReservedSlot8
+int nvoReservedSlot9
+int iScience
+int iUpdate
+
+string_var sMajorKnight
+int ModOverridingIndex
+string_var modName
+
+begin gamemode
+	if getgameloaded == 0
+		return
+	else
+		if GetNVSEVersion < 6
+		    Return
+		elseif GetNVSEVersion == 6
+		    if GetNVSERevision < 3
+		        Return
+		    endif
+		endif
+		if IsPluginInstalled "JIP LN NVSE" == 0
+		    if IsPluginInstalled "JIP NVSE Plugin" == 0
+		        Return
+		    endif
+		endif
+		if IsPluginInstalled "JohnnyGuitarNVSE" == 0
+		    Return
+		endif
+		if IsPluginInstalled "ShowOffNVSE Plugin" == 0
+		    Return
+		endif
+
+		if getgamerestarted
+			If ismodloaded "Better Character Creation.esm"
+				PrintC "Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues."
+			ElseIf Eval IsFormOverridden VCG00
+				Set ModOverridingIndex to GetFormOverrideIndex VCG00
+				Let modName := GetModName ModOverridingIndex 1
+				PrintC "The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+				sv_destruct modName
+			ElseIf Eval IsFormOverridden VCG01
+				Set ModOverridingIndex to GetFormOverrideIndex VCG01
+				Let modName := GetModName ModOverridingIndex 1
+				PrintC "The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+				sv_destruct modName
+			Elseif ismodloaded "YUP - Base Game + All DLC.esm" && GetModIndex "YUP - Base Game + All DLC.esm" > GetModIndex "NVO.esm"
+				PrintC "WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues."
+			endif
+
+			SetPerkFlag WildWasteland 1 0
+
+			LNSetName $sVeronicLoc VDialogueVeronicaVeronicaTopic000
+			if eval Sv_Length sMajorKnight != -1
+				LNSetName $sMajorKnight vMojavevMOMajorKnightTopic019
+			endif
+			DialogResponseAddRelatedTopic 0015E575 ALTBoSTop 1 0
+			DialogResponseAddRelatedTopic 000E2F71 ALTBoSTop 1 0
+
+			DialogResponseAddRelatedTopic 000E3608 ALTFoAHelios 1 0
+
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC01MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC02MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC03MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC04MQ00 100
+
+			if ALTBackground == 12
+				LNSetName "How did the Three Families defeat us?" VMS45VRRCPapaKhanTopic016
+				LNSetName "Can you tell me about our tribe?" PapaKhanKhans
+				LNSetName "Just trying to do my part for the tribe." vFreeformSloanQJMelissaTopic017
+				LNSetName "Have a look at this book. Our tribe is nothing but a bunch of thugs, aping the glories of the past." VMS45VRRCPapaKhanTopic013
+				LNSetName "Have a look at this book. If you want to see what our tribe could be, read about the Mongol Empire." VMS45VRRCPapaKhanTopic011
+				LNSetName "We don't need to look outward, mighty Khan. Our tribe is proud and strong - we should claim our own glory!" VMS45VRRCPapaKhanTopic003
+				LNSetName "What great legacy do the Great Khans have? Our tribe is nothing but ghosts and martyrs." VMS45VRRCPapaKhanTopic009
+			elseif ALTBackground == 14
+				LNSetName "Can you tell me more about Novac?" JeannieCrawfordWhereAmI
+				LNSetName "I just moved into town. Pleasure to meet you." MannyVargasWhoAreYou
+				LNSetName "I just moved into town, and I wanted to introduce myself." CraigBooneMeetingNewPeople
+				LNSetName "Is this any way to treat your new neighbor?" CraigBooneDoesntAffectMe
+				LNSetName "I just moved into town, and I wanted to introduce myself." AliceMcBrideIntro
+				LNSetName "Yep, I just moved into the neighborhood." CraigBooneYes
+			elseif ALTBackground == 16
+				LNSetName "Why can't every man in Freeside join the Kings?" VFreeformFreesideVFSTheKingTopic065
+			elseif ALTBackground == 22
+				SetFactionFlags VWastelandNVBanditViperFaction 256
+			elseif ALTBackground == 21
+				SetFactionFlags VJackalsGangFaction 256
+			elseif ALTBackground == 31
+				ForEachInList ALTEggList ({rRef} => SetValueAlt rRef ((GetValue rRef)*2))
+			elseif ALTBackground == 35
+				LNSetName "I'm happy to help." VFreeformFreesideFSJulieFarkasTopic004
+			elseif ALTBackground == 38
+				if ismodloaded "NukaExpansionUltFNV.esm"
+					call ALTNukaExpansionPatcher
+				endif
+				SetOnUseAidItemEventHandler ALTNukaDrinkEvent 1 ALTNukaList
+			elseif ALTBackground == 41
+				SetFactionFlags VCrCoyoteFaction 256
+				SetFactionFlags NVDLC02CrCoyoteFaction 256
+				ForEachInList ALTCoyoteList ({rRef} => call ALTSetFlagUDF rRef 1 5 1)
+			elseif ALTBackground == 49
+				LNSetName "How long have you worked for the Gun Runners?" vDialogueGunRunnerNVIsaacTopic000
+			endif
+		endif
+
+		if iUpdate == 0
+			SetEssential GSSunnySmiles 0
+			SetEssential GSCheyenne 0
+
+			SetCellOwnership GSDocMitchellHouse DocMitchell
+
+			iUpdate = 1
+		elseif iUpdate == 1
+			McMurphyREF.disable
+			JessupREF.disable
+			iUpdate = 2
+		elseif iUpdate == 2
+			if ALTGO == 0 && MannyVargasREF.GetItemCount VMQ01NoteObject > 0
+				MannyVargasREF.removeitem VMQ01NoteObject 1
+			endif
+			iUpdate = 3
+		endif
+
+		if ALTBackground == 3
+			SetEventHandlerAlt "ShowOff:OnPreActivate" ALTGamblerPreActEvent 0::(GetListForms ALTGamblerTablesList) 1::Player 2::1
+		elseif ALTBackground == 21
+			SetEventHandlerAlt "ShowOff:OnPreActivate" ALTViperActivateEvent 0::(GetListForms ALTViperLeaderList) 1::Player 2::1
+		elseif ALTBackground == 22
+			SetEventHandlerAlt "ShowOff:OnPreActivate" ALTJackalActivateEvent 0::(GetListForms ALTJackalLeaderList) 1::Player 2::1
+		elseif ALTBackground == 44
+			SetEventHandlerAlt "ShowOff:OnAdd" ALTCapEvent 1::Caps001 2::player
+		elseif ALTBackground == 47
+			SetEventHandlerAlt "ShowOff:OnPreActivate" ALTLonewolfActivateEvent 0::(GetListForms ALTLoneWolfRadioList) 1::Player 2::1
+		elseif ALTBackground == 53
+			SetEventHandlerAlt "OnHit" ALTRichKidHit 1::Player
+			SetEventHandlerAlt "OnHit" ALTRichKidHit 2::Player
+		endif
+	endif
+end

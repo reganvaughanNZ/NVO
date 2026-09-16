@@ -1,0 +1,201 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3k\runtime-20260916-100050\creature_getav-008D4870.obj
+
+File Type: COFF OBJECT
+
+  008D4870: 55                 push        ebp
+  008D4871: 8B EC              mov         ebp,esp
+  008D4873: 51                 push        ecx
+  008D4874: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D4877: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  008D487A: 50                 push        eax
+  008D487B: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D487E: 81 E9 A4 00 00 00  sub         ecx,0A4h
+  008D4884: E8 F7 01 00 00     call        008D4A80
+  008D4889: 50                 push        eax
+  008D488A: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D488D: E8 5E BD FA FF     call        008805F0
+  008D4892: 8B E5              mov         esp,ebp
+  008D4894: 5D                 pop         ebp
+  008D4895: C2 04 00           ret         4
+  008D4898: CC                 int         3
+  008D4899: CC                 int         3
+  008D489A: CC                 int         3
+  008D489B: CC                 int         3
+  008D489C: CC                 int         3
+  008D489D: CC                 int         3
+  008D489E: CC                 int         3
+  008D489F: CC                 int         3
+  008D48A0: 55                 push        ebp
+  008D48A1: 8B EC              mov         ebp,esp
+  008D48A3: 51                 push        ecx
+  008D48A4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D48A7: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  008D48AA: 50                 push        eax
+  008D48AB: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  008D48AE: 51                 push        ecx
+  008D48AF: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D48B2: E8 C9 01 00 00     call        008D4A80
+  008D48B7: 50                 push        eax
+  008D48B8: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D48BB: E8 10 BE FA FF     call        008806D0
+  008D48C0: 8B E5              mov         esp,ebp
+  008D48C2: 5D                 pop         ebp
+  008D48C3: C2 08 00           ret         8
+  008D48C6: CC                 int         3
+  008D48C7: CC                 int         3
+  008D48C8: CC                 int         3
+  008D48C9: CC                 int         3
+  008D48CA: CC                 int         3
+  008D48CB: CC                 int         3
+  008D48CC: CC                 int         3
+  008D48CD: CC                 int         3
+  008D48CE: CC                 int         3
+  008D48CF: CC                 int         3
+  008D48D0: 55                 push        ebp
+  008D48D1: 8B EC              mov         ebp,esp
+  008D48D3: 51                 push        ecx
+  008D48D4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D48D7: 51                 push        ecx
+  008D48D8: D9 45 0C           fld         dword ptr [ebp+0Ch]
+  008D48DB: D9 1C 24           fstp        dword ptr [esp]
+  008D48DE: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  008D48E1: 50                 push        eax
+  008D48E2: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D48E5: E8 96 01 00 00     call        008D4A80
+  008D48EA: 50                 push        eax
+  008D48EB: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D48EE: E8 0D BE FA FF     call        00880700
+  008D48F3: 8B E5              mov         esp,ebp
+  008D48F5: 5D                 pop         ebp
+  008D48F6: C2 08 00           ret         8
+  008D48F9: CC                 int         3
+  008D48FA: CC                 int         3
+  008D48FB: CC                 int         3
+  008D48FC: CC                 int         3
+  008D48FD: CC                 int         3
+  008D48FE: CC                 int         3
+  008D48FF: CC                 int         3
+  008D4900: 55                 push        ebp
+  008D4901: 8B EC              mov         ebp,esp
+  008D4903: 51                 push        ecx
+  008D4904: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D4907: 8B 45 10           mov         eax,dword ptr [ebp+10h]
+  008D490A: 50                 push        eax
+  008D490B: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  008D490E: 51                 push        ecx
+  008D490F: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  008D4912: 52                 push        edx
+  008D4913: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D4916: E8 65 01 00 00     call        008D4A80
+  008D491B: 50                 push        eax
+  008D491C: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D491F: E8 2C C0 FA FF     call        00880950
+  008D4924: 8B E5              mov         esp,ebp
+  008D4926: 5D                 pop         ebp
+  008D4927: C2 0C 00           ret         0Ch
+  008D492A: CC                 int         3
+  008D492B: CC                 int         3
+  008D492C: CC                 int         3
+  008D492D: CC                 int         3
+  008D492E: CC                 int         3
+  008D492F: CC                 int         3
+  008D4930: 55                 push        ebp
+  008D4931: 8B EC              mov         ebp,esp
+  008D4933: 51                 push        ecx
+  008D4934: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D4937: 8B 45 10           mov         eax,dword ptr [ebp+10h]
+  008D493A: 50                 push        eax
+  008D493B: 51                 push        ecx
+  008D493C: D9 45 0C           fld         dword ptr [ebp+0Ch]
+  008D493F: D9 1C 24           fstp        dword ptr [esp]
+  008D4942: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  008D4945: 51                 push        ecx
+  008D4946: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D4949: E8 32 01 00 00     call        008D4A80
+  008D494E: 50                 push        eax
+  008D494F: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D4952: E8 79 C1 FA FF     call        00880AD0
+  008D4957: 8B E5              mov         esp,ebp
+  008D4959: 5D                 pop         ebp
+  008D495A: C2 0C 00           ret         0Ch
+  008D495D: CC                 int         3
+  008D495E: CC                 int         3
+  008D495F: CC                 int         3
+  008D4960: 55                 push        ebp
+  008D4961: 8B EC              mov         ebp,esp
+  008D4963: 51                 push        ecx
+  008D4964: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D4967: 8B 45 10           mov         eax,dword ptr [ebp+10h]
+  008D496A: 50                 push        eax
+  008D496B: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  008D496E: 51                 push        ecx
+  008D496F: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  008D4972: 52                 push        edx
+  008D4973: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D4976: E8 05 01 00 00     call        008D4A80
+  008D497B: 50                 push        eax
+  008D497C: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D497F: E8 EC C2 FA FF     call        00880C70
+  008D4984: 8B E5              mov         esp,ebp
+  008D4986: 5D                 pop         ebp
+  008D4987: C2 0C 00           ret         0Ch
+  008D498A: CC                 int         3
+  008D498B: CC                 int         3
+  008D498C: CC                 int         3
+  008D498D: CC                 int         3
+  008D498E: CC                 int         3
+  008D498F: CC                 int         3
+  008D4990: 55                 push        ebp
+  008D4991: 8B EC              mov         ebp,esp
+  008D4993: 51                 push        ecx
+  008D4994: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D4997: 8B 45 10           mov         eax,dword ptr [ebp+10h]
+  008D499A: 50                 push        eax
+  008D499B: 51                 push        ecx
+  008D499C: D9 45 0C           fld         dword ptr [ebp+0Ch]
+  008D499F: D9 1C 24           fstp        dword ptr [esp]
+  008D49A2: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  008D49A5: 51                 push        ecx
+  008D49A6: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D49A9: E8 D2 00 00 00     call        008D4A80
+  008D49AE: 50                 push        eax
+  008D49AF: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D49B2: E8 49 C4 FA FF     call        00880E00
+  008D49B7: 8B E5              mov         esp,ebp
+  008D49B9: 5D                 pop         ebp
+  008D49BA: C2 0C 00           ret         0Ch
+  008D49BD: CC                 int         3
+  008D49BE: CC                 int         3
+  008D49BF: CC                 int         3
+  008D49C0: 55                 push        ebp
+  008D49C1: 8B EC              mov         ebp,esp
+  008D49C3: 51                 push        ecx
+  008D49C4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  008D49C7: 8B 45 10           mov         eax,dword ptr [ebp+10h]
+  008D49CA: 50                 push        eax
+  008D49CB: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  008D49CE: 51                 push        ecx
+  008D49CF: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  008D49D2: 52                 push        edx
+  008D49D3: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D49D6: E8 A5 00 00 00     call        008D4A80
+  008D49DB: 50                 push        eax
+  008D49DC: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  008D49DF: E8 CC C5 FA FF     call        00880FB0
+  008D49E4: 8B E5              mov         esp,ebp
+  008D49E6: 5D                 pop         ebp
+  008D49E7: C2 0C 00           ret         0Ch
+  008D49EA: CC                 int         3
+  008D49EB: CC                 int         3
+  008D49EC: CC                 int         3
+  008D49ED: CC                 int         3
+  008D49EE: CC                 int         3
+  008D49EF: CC                 int         3
+
+  Summary
+
+         180 .text

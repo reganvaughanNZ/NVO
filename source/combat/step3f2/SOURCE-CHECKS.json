@@ -1,0 +1,27 @@
+{
+  "baseline": 312,
+  "unchanged_sources": [
+    "src\\CurrentHit.cpp",
+    "src\\DamageEvents.cpp",
+    "src\\Exports.def",
+    "src\\FlightPreview.cpp",
+    "src\\FlightTiming.cpp",
+    "src\\NativeLog.cpp",
+    "src\\NativeObserver.cpp",
+    "include\\CurrentHit.hpp",
+    "include\\DamageEvents.hpp",
+    "include\\FlightDragData.hpp",
+    "include\\FlightPhysics.hpp",
+    "include\\FlightPreview.hpp",
+    "include\\FlightTiming.hpp",
+    "include\\NativeLog.hpp",
+    "include\\NativeObserver.hpp",
+    "include\\NvseBootstrapApi.hpp"
+  ],
+  "candidate_check_uses_existing_tolerance": true,
+  "successful_query_unchanged": true,
+  "baseline_unchanged": true,
+  "no_actor_position_write": true,
+  "only_stack_height_output_changed": true,
+  "code_bytes_not_redistributed": true
+}

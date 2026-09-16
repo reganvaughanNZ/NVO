@@ -1,0 +1,50 @@
+{
+  "packet": "4B",
+  "version": "0.3.26",
+  "plugin_version": 326,
+  "status": "Installed; first live armour-reader checkpoint pending",
+  "installed_by_assistant": true,
+  "gameplay_tested": false,
+  "damage_replacement": false,
+  "capacity_probe_enabled": false,
+  "build_output": "out/build-20913-15431",
+  "reader_checks_passed": 452,
+  "supported_target_form_type": "0x3B Character",
+  "unsupported_target_policy": "0x3C Creature and every non-Character target are skipped before the 64-snapshot humanoid budget",
+  "snapshot_limit_per_session": 64,
+  "equipped_armour_limit_per_snapshot": 32,
+  "stable_double_read_required": true,
+  "cross_instance_extra_alias_rejected": true,
+  "bounded_pointer_sets": true,
+  "new_hooks": 0,
+  "new_dependencies": [],
+  "record_changes": 0,
+  "configuration_changes": 0,
+  "exact_contact_speed_authority": false,
+  "pre_movement_contacts": "unavailable",
+  "raw_armour_reader": true,
+  "snapshot_authority": false,
+  "armour_preview": false,
+  "gameplay_writes": false,
+  "installed_files": [
+    {
+      "sha256": "3d5ff40c5c8ba418c0764cba55bd8595cfa1444396f4e814552210524094e13a",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll"
+    },
+    {
+      "sha256": "9411d09fefe2e59fa50a891081592b81fbc9cc50602bee8951a04e706ac8d2a0",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb"
+    },
+    {
+      "sha256": "693f9e1309431bcad59cf28db6b127f534f08393ba169ce193fb517895eabb24",
+      "path": "NVOArmourKit4B.txt"
+    },
+    {
+      "sha256": "dbdabb6d8cefcd3282913fb3d4896e385b7e39516cbcebeb1b457458b2411933",
+      "path": "NVOArmourTarget4B.txt"
+    }
+  ],
+  "installation_backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-4B-20260916-224741-c418db52",
+  "protected_files_verified": 53,
+  "console_helpers": "Two manually invoked test BAT text files. No automatic loader."
+}

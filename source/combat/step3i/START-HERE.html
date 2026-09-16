@@ -1,0 +1,482 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO · Packet 3I · Startup repair</title><style>
+:root{color-scheme:dark}body{margin:0;background:#101713;color:#e4ece6;font:17px/1.55 system-ui,sans-serif}main{max-width:950px;margin:auto;padding:32px 22px 60px}h1{font-size:32px;line-height:1.15}h2{font-size:21px;margin:0}.eyebrow{color:#b5d6ab;font-weight:650}section{background:#18221c;border:1px solid #3b5141;border-radius:12px;padding:23px;margin:20px 0}a{color:#baddaa}button{background:#c6e2b7;color:#142019;border:0;border-radius:7px;padding:12px 16px;font:700 15px system-ui;cursor:pointer}button:hover{background:#e0f4d7}.row{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}textarea{box-sizing:border-box;width:100%;height:410px;margin-top:12px;background:#0d140f;color:#e4ece6;border:1px solid #59775e;padding:13px;font:13px/1.45 monospace;white-space:pre}code{overflow-wrap:anywhere}li{margin:9px 0}.note{color:#bdd0c3}#status{min-height:1.6em;color:#d9f4c9;position:sticky;bottom:0;background:#101713;padding:10px 0}details{margin-top:14px}summary{cursor:pointer}table{width:100%;border-collapse:collapse}td,th{text-align:left;padding:7px;border-bottom:1px solid #3b5141}@media(max-width:600px){main{padding:20px 12px}.row{display:block}button{margin-top:12px}h1{font-size:27px}}
+</style></head><body><main><p class="eyebrow">NVO / PACKET 3I / GECK COMPILE PENDING</p>
+<h1>Quiet startup. Clean Player baseline.</h1><p>Correct the saved startup scripts and override RD's inherited Player test values. Your health game settings stay intact. Native318 remains installed, with damage replacement disabled.</p>
+<section><h2>First: apply the prepared Player record</h2><ol><li>Save and close GECK. Close New Vegas, Vortex and xEdit.</li>
+<li>In this packet folder, double-click <strong>APPLY-PLAYER-BASELINE.cmd</strong>. It backs up the current files and replaces only NVO.esm with the prepared Player override.</li>
+<li>If it reports newer/different edits, stop and tell me. Do not overwrite manually.</li></ol>
+<button type="button" data-copy="folder">Copy packet folder path</button>
+<textarea id="folder" hidden>C:\Users\regan\Documents\ChatGPT\NVO\release\NVO-Combat-Packet-3I-Records</textarea>
+<p class="note">Apply this before compiling the scripts below. The staged ESM still has the old compiled startup scripts until you compile and save.</p></section>
+<section><h2>Then: compile these three existing scripts</h2><p>Open GECK Extender with <strong>NVO.esm active</strong>. RD.esm stays loaded as a master. Use <strong>Gameplay → Edit Scripts</strong>; all three remain Quest scripts.</p>
+<p>Keep the existing <strong>NVOCombatBootstrapScriptQ</strong> quest and its script assignment. Do not create or rename a quest or script.</p></section>
+<section><div class="row"><h2>1. NVOCombatBootstrapScript</h2><button type="button" data-copy="s1">Copy complete script</button></div>
+<p>Open this existing Quest script. Replace its entire text, then save/compile.</p>
+<details><summary>View complete script</summary><textarea id="s1" readonly spellcheck="false">scn NVOCombatBootstrapScript
+
+short bChecked
+short bFrameworkReady
+short bCorePresent
+short bCombatEnabled
+short iMissingCount
+short iPacket
+long iRunCount
+long iNVSEMajor
+long iNVSEMinor
+float fQuestDelayTime
+short bReportMissing
+
+Begin GameMode
+
+    set fQuestDelayTime to 1
+    set bReportMissing to 0
+
+    if GetGameLoaded
+        set bChecked to 0
+    endif
+    if GetGameRestarted
+        set bReportMissing to 1
+        set bChecked to 0
+    endif
+
+    if bChecked == 1
+        Return
+    endif
+
+    set bChecked to 1
+    set iPacket to 1
+    set iRunCount to iRunCount + 1
+    set iMissingCount to 0
+    set bFrameworkReady to 0
+    set bCorePresent to 0
+    set bCombatEnabled to 0
+    set iNVSEMajor to GetNVSEVersion
+    set iNVSEMinor to GetNVSERevision
+
+    if iNVSEMajor &lt; 6
+        set iMissingCount to iMissingCount + 1
+        if bReportMissing == 1
+            PrintC &quot;NVO Combat: xNVSE 6.3.0 or newer is required.&quot;
+        endif
+    elseif iNVSEMajor == 6
+        if iNVSEMinor &lt; 3
+            set iMissingCount to iMissingCount + 1
+            if bReportMissing == 1
+                PrintC &quot;NVO Combat: xNVSE 6.3.0 or newer is required.&quot;
+            endif
+        endif
+    endif
+
+    if IsPluginInstalled &quot;JIP LN NVSE&quot; == 0
+        if IsPluginInstalled &quot;JIP NVSE Plugin&quot; == 0
+            set iMissingCount to iMissingCount + 1
+            if bReportMissing == 1
+                PrintC &quot;NVO Combat: JIP LN NVSE is missing.&quot;
+            endif
+        endif
+    endif
+
+    if IsPluginInstalled &quot;JohnnyGuitarNVSE&quot; == 0
+        set iMissingCount to iMissingCount + 1
+        if bReportMissing == 1
+            PrintC &quot;NVO Combat: JohnnyGuitar NVSE is missing.&quot;
+        endif
+    endif
+
+    if IsPluginInstalled &quot;ShowOffNVSE Plugin&quot; == 0
+        set iMissingCount to iMissingCount + 1
+        if bReportMissing == 1
+            PrintC &quot;NVO Combat: ShowOff NVSE is missing.&quot;
+        endif
+    endif
+
+    if IsPluginInstalled &quot;NVOCombatCore&quot;
+        set bCorePresent to 1
+    else
+        if bReportMissing == 1
+            PrintC &quot;NVO Combat: NVOCombatCore is missing. Native diagnostics are unavailable.&quot;
+        endif
+    endif
+
+    if iMissingCount == 0
+        set bFrameworkReady to 1
+
+    endif
+
+
+End
+</textarea></details></section>
+<section><div class="row"><h2>2. ALTQscript</h2><button type="button" data-copy="s2">Copy complete script</button></div>
+<p>Open this existing Quest script. Replace its entire text, then save/compile.</p>
+<details><summary>View complete script</summary><textarea id="s2" readonly spellcheck="false">scn ALTQscript
+
+string_var sVeronicLoc
+
+ref rTurnInItem
+int iTurnInValue
+ref rRef
+
+int bBlock
+
+int iState
+
+int iScience
+int iUpdate
+
+string_var sMajorKnight
+int ModOverridingIndex
+string_var modName
+
+begin gamemode
+	if getgameloaded == 0
+		return
+	else
+		if GetNVSEVersion &lt; 6
+		    Return
+		elseif GetNVSEVersion == 6
+		    if GetNVSERevision &lt; 3
+		        Return
+		    endif
+		endif
+		if IsPluginInstalled &quot;JIP LN NVSE&quot; == 0
+		    if IsPluginInstalled &quot;JIP NVSE Plugin&quot; == 0
+		        Return
+		    endif
+		endif
+		if IsPluginInstalled &quot;JohnnyGuitarNVSE&quot; == 0
+		    Return
+		endif
+		if IsPluginInstalled &quot;ShowOffNVSE Plugin&quot; == 0
+		    Return
+		endif
+
+		if getgamerestarted
+			If ismodloaded &quot;Better Character Creation.esm&quot;
+				PrintC &quot;Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues.&quot;
+			ElseIf Eval IsFormOverridden VCG00
+				Set ModOverridingIndex to GetFormOverrideIndex VCG00
+				Let modName := GetModName ModOverridingIndex 1
+				PrintC &quot;The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.&quot; modName
+				sv_destruct modName
+			ElseIf Eval IsFormOverridden VCG01
+				Set ModOverridingIndex to GetFormOverrideIndex VCG01
+				Let modName := GetModName ModOverridingIndex 1
+				PrintC &quot;The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.&quot; modName
+				sv_destruct modName
+			Elseif ismodloaded &quot;YUP - Base Game + All DLC.esm&quot; &amp;&amp; GetModIndex &quot;YUP - Base Game + All DLC.esm&quot; &gt; GetModIndex &quot;NVO.esm&quot;
+				PrintC &quot;WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues.&quot;
+			endif
+
+			SetPerkFlag WildWasteland 1 0
+
+			LNSetName $sVeronicLoc VDialogueVeronicaVeronicaTopic000
+			if eval Sv_Length sMajorKnight != -1
+				LNSetName $sMajorKnight vMojavevMOMajorKnightTopic019
+			endif
+			DialogResponseAddRelatedTopic 0015E575 ALTBoSTop 1 0
+			DialogResponseAddRelatedTopic 000E2F71 ALTBoSTop 1 0
+
+			DialogResponseAddRelatedTopic 000E3608 ALTFoAHelios 1 0
+
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC01MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC02MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC03MQ00 100
+			SetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC04MQ00 100
+
+			if ALTBackground == 12
+				LNSetName &quot;How did the Three Families defeat us?&quot; VMS45VRRCPapaKhanTopic016
+				LNSetName &quot;Can you tell me about our tribe?&quot; PapaKhanKhans
+				LNSetName &quot;Just trying to do my part for the tribe.&quot; vFreeformSloanQJMelissaTopic017
+				LNSetName &quot;Have a look at this book. Our tribe is nothing but a bunch of thugs, aping the glories of the past.&quot; VMS45VRRCPapaKhanTopic013
+				LNSetName &quot;Have a look at this book. If you want to see what our tribe could be, read about the Mongol Empire.&quot; VMS45VRRCPapaKhanTopic011
+				LNSetName &quot;We don&#x27;t need to look outward, mighty Khan. Our tribe is proud and strong - we should claim our own glory!&quot; VMS45VRRCPapaKhanTopic003
+				LNSetName &quot;What great legacy do the Great Khans have? Our tribe is nothing but ghosts and martyrs.&quot; VMS45VRRCPapaKhanTopic009
+			elseif ALTBackground == 14
+				LNSetName &quot;Can you tell me more about Novac?&quot; JeannieCrawfordWhereAmI
+				LNSetName &quot;I just moved into town. Pleasure to meet you.&quot; MannyVargasWhoAreYou
+				LNSetName &quot;I just moved into town, and I wanted to introduce myself.&quot; CraigBooneMeetingNewPeople
+				LNSetName &quot;Is this any way to treat your new neighbor?&quot; CraigBooneDoesntAffectMe
+				LNSetName &quot;I just moved into town, and I wanted to introduce myself.&quot; AliceMcBrideIntro
+				LNSetName &quot;Yep, I just moved into the neighborhood.&quot; CraigBooneYes
+			elseif ALTBackground == 16
+				LNSetName &quot;Why can&#x27;t every man in Freeside join the Kings?&quot; VFreeformFreesideVFSTheKingTopic065
+			elseif ALTBackground == 22
+				SetFactionFlags VWastelandNVBanditViperFaction 256
+			elseif ALTBackground == 21
+				SetFactionFlags VJackalsGangFaction 256
+			elseif ALTBackground == 31
+				ForEachInList ALTEggList ({rRef} =&gt; SetValueAlt rRef ((GetValue rRef)*2))
+			elseif ALTBackground == 35
+				LNSetName &quot;I&#x27;m happy to help.&quot; VFreeformFreesideFSJulieFarkasTopic004
+			elseif ALTBackground == 38
+				if ismodloaded &quot;NukaExpansionUltFNV.esm&quot;
+					call ALTNukaExpansionPatcher
+				endif
+				SetOnUseAidItemEventHandler ALTNukaDrinkEvent 1 ALTNukaList
+			elseif ALTBackground == 41
+				SetFactionFlags VCrCoyoteFaction 256
+				SetFactionFlags NVDLC02CrCoyoteFaction 256
+				ForEachInList ALTCoyoteList ({rRef} =&gt; call ALTSetFlagUDF rRef 1 5 1)
+			elseif ALTBackground == 49
+				LNSetName &quot;How long have you worked for the Gun Runners?&quot; vDialogueGunRunnerNVIsaacTopic000
+			endif
+		endif
+
+		if iUpdate == 0
+			SetEssential GSSunnySmiles 0
+			SetEssential GSCheyenne 0
+
+			SetCellOwnership GSDocMitchellHouse DocMitchell
+
+			iUpdate = 1
+		elseif iUpdate == 1
+			McMurphyREF.disable
+			JessupREF.disable
+			iUpdate = 2
+		elseif iUpdate == 2
+			if ALTGO == 0 &amp;&amp; MannyVargasREF.GetItemCount VMQ01NoteObject &gt; 0
+				MannyVargasREF.removeitem VMQ01NoteObject 1
+			endif
+			iUpdate = 3
+		endif
+
+		if ALTBackground == 3
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTGamblerPreActEvent 0::(GetListForms ALTGamblerTablesList) 1::Player 2::1
+		elseif ALTBackground == 21
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTViperActivateEvent 0::(GetListForms ALTViperLeaderList) 1::Player 2::1
+		elseif ALTBackground == 22
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTJackalActivateEvent 0::(GetListForms ALTJackalLeaderList) 1::Player 2::1
+		elseif ALTBackground == 44
+			SetEventHandlerAlt &quot;ShowOff:OnAdd&quot; ALTCapEvent 1::Caps001 2::player
+		elseif ALTBackground == 47
+			SetEventHandlerAlt &quot;ShowOff:OnPreActivate&quot; ALTLonewolfActivateEvent 0::(GetListForms ALTLoneWolfRadioList) 1::Player 2::1
+		elseif ALTBackground == 53
+			SetEventHandlerAlt &quot;OnHit&quot; ALTRichKidHit 1::Player
+			SetEventHandlerAlt &quot;OnHit&quot; ALTRichKidHit 2::Player
+		endif
+	endif
+end
+</textarea></details></section>
+<section><div class="row"><h2>3. ALTStartQscript</h2><button type="button" data-copy="s3">Copy complete script</button></div>
+<p>Open this existing Quest script. Replace its entire text, then save/compile.</p>
+<details><summary>View complete script</summary><textarea id="s3" readonly spellcheck="false">Scn ALTStartQscript
+
+
+
+Float iStage
+Int iBackground
+Ref rMarker
+Ref rRef
+Int iWealth
+String_Var svString
+
+Int bBlockUI
+Int iUI
+Ref rBackMSG
+String_Var sBackDesc
+String_Var sUIName
+String_Var sUIPath
+
+Int bCustomMenu
+Float ftimer
+
+Int ModOverridingIndex
+String_Var modName
+
+Ref rLambda
+Int iAmount
+
+Float fWildWastelandChance
+Int iQuickStart
+; ===== remove comments from Preorder gear ====
+
+Begin menumode 1001
+	If bCustomMenu == 1
+		If iStage == -1
+			SetUIFloatAlt &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/width&quot; 1000
+			SetUIFloatAlt &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_MessageText/wrapwidth&quot; 940
+			SetUIFloatAlt &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_BottomBracket/y&quot; 768
+			SetUIFloatALT &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_ButtonList/x&quot; 600
+			SetUIFloatALT &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_ButtonList/y&quot; 320
+			If Eval GetUIString &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_Title/string&quot; == &quot;Background&quot;
+				If GetActiveUIComponentID == 7
+					If sUIName != GetActiveUIComponentName
+						sUIName = GetActiveUIComponentName
+						sUIPath = &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_ButtonList/&quot;+$sUIName+&quot;/listindex&quot;
+						iUI = GetUIFloatAlt $sUIPath
+						rBackMSG = ListGetNthForm ALTBackList iUI
+						sBackDesc = GetFormDescription rBackMSG
+						SetUIStringAlt &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_MessageText/string&quot; $sBackDesc
+						SetUIFloatAlt &quot;MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_MessageText/justify&quot; 1
+					EndIf
+				EndIf
+			EndIf
+		EndIf
+	EndIf
+End
+
+Begin gamemode
+	if GetNVSEVersion &lt; 6
+	    Return
+	elseif GetNVSEVersion == 6
+	    if GetNVSERevision &lt; 3
+	        Return
+	    endif
+	endif
+	if IsPluginInstalled &quot;JIP LN NVSE&quot; == 0
+	    if IsPluginInstalled &quot;JIP NVSE Plugin&quot; == 0
+	        Return
+	    endif
+	endif
+	if IsPluginInstalled &quot;JohnnyGuitarNVSE&quot; == 0
+	    Return
+	endif
+	if IsPluginInstalled &quot;ShowOffNVSE Plugin&quot; == 0
+	    Return
+	endif
+
+	If getgamerestarted
+		If ismodloaded &quot;Better Character Creation.esm&quot;
+			PrintC &quot;Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues.&quot;
+			Return
+		ElseIf Eval IsFormOverridden VCG00
+			Set ModOverridingIndex to GetFormOverrideIndex VCG00
+			Let modName := GetModName ModOverridingIndex 1
+			PrintC &quot;The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.&quot; modName
+			sv_destruct modName
+			Return
+		ElseIf Eval IsFormOverridden VCG01
+			Set ModOverridingIndex to GetFormOverrideIndex VCG01
+			Let modName := GetModName ModOverridingIndex 1
+			PrintC &quot;The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.&quot; modName
+			sv_destruct modName
+			Return
+		Elseif ismodloaded &quot;YUP - Base Game + All DLC.esm&quot; &amp;&amp; GetModIndex &quot;YUP - Base Game + All DLC.esm&quot; &gt; GetModIndex &quot;NVO.esm&quot;
+			PrintC &quot;WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues.&quot;
+			return
+		endif
+	EndIf
+
+	If bCustomMenu == 0
+		If Eval (GetINIFloat &quot;All:bDisableBackgroundMenu&quot; &quot;ALTStartConfig.ini&quot;) == 1
+			bCustomMenu = -1
+		Else
+			bCustomMenu = 1
+		EndIf
+	EndIf
+
+	If iStage == 0
+		iUI = -1
+		call ALTBackgroundMenu -1
+		iStage = -1
+	       ElseIf iStage == 1
+        iStage = -2
+        let rLambda := (Begin function {int iSetupChoice}
+            if iSetupChoice == 0
+                let iQuickStart := 1
+                let iStage := 3
+            else
+                let iQuickStart := 0
+                let iStage := 1.5
+            endif
+        End)
+        let svString := &quot;^Character Setup^Quick keeps your current name and appearance and starts at level 1.&quot;
+        let svString += &quot; Custom lets you change your name, appearance and starting level.&quot;
+        let svString += &quot; Both let you choose SPECIAL, skills, traits and survival options.&quot;
+        let svString += &quot;|Quick Setup|Custom Setup&quot;
+        MessageBoxExAlt rLambda &quot;%z&quot; svString
+
+    ElseIf iStage == 1.5
+        GetPlayerName
+        iStage = 2
+    ElseIf iStage == 2
+		ShowRaceMenu
+		iStage = 3
+	ElseIf iStage == 3
+		If ALTBackground == 42
+			Player.SetActorValue intelligence 3
+			Player.SetActorValue charisma 3
+			SetSPECIALPoints 36
+		Else
+			SetSPECIALPoints 40
+		EndIf
+		iStage = 4
+	ElseIf iStage == 4
+		SetTagSkills 3 1
+		iSTage = 5
+	ElseIf iStage == 5
+		SetPerkFlag WildWasteland 1 0
+		ShowTraitMenu
+		iStage = 6
+	ElseIf iStage == 6
+		fWildWastelandChance = GetINIFloat &quot;All:fWildWastelandChance&quot; &quot;ALTStartConfig.ini&quot;
+		if fWildWastelandChance &gt;= 0
+			if (1 - fWildWastelandChance) &lt; (Rand 0.01, 1)
+				player.addperk WildWasteland
+			endif
+			iStage = 7
+		else
+			messageboxexalt ALTWildWastelandMSG &quot;^Wild Wasteland^Wild Wasteland unleashes the most bizarre and silly elements of post-apocalyptic America. Not for the faint of heart or the serious of temperament.%r%rWould you like to experience these unusual events? Once you select an option, you will not be able to change it.|Buy the ticket, take the ride...|I don&#x27;t believe in aliens!&quot;
+		endif
+	ElseIf iStage == 7
+		ALTCasualtHardcoreMessageActivateRef.activate Player 1
+		iStage = 8
+	ElseIf iStage == 8
+		svString = GetStringSetting &quot;sHowMany&quot;
+		SetStringSetting &quot;sHowMany&quot; &quot;Choose Starting Level&quot;
+		rLambda = (Begin function {iAmount}
+				ALTLevelQ.iLevel = iAmount
+				iStage = 10
+		End)
+		showquantityMenu rLambda 20 1
+		SetStringSetting &quot;sHowMany&quot; $svString
+		iStage = 9
+	ElseIf iStage == 10
+		imod FadeInFromBlack4sISFX
+
+		; add background related gear and run functions for the chosen background
+		call ListGetNthForm ALTBackUDFList ALTBackground
+
+		; add gear based on tagged skills
+		call ALTStartingGearUDF iWealth
+
+		Player.moveto rMarker
+		Eval LNSetName ($ALTQ.sVeronicLoc) VDialogueVeronicaVeronicaTopic000
+		Eval LNSetName ($ALTQ.sMajorKnight) vMojavevMOMajorKnightTopic019
+		if ALTBackground != 56 &amp;&amp; ALTBackground != 57
+			enableplayercontrols
+		endif
+		PlayMusic musSCRGoodspringsStinger
+		iStage = 11
+		fTimer = 8
+	ElseIf iStage == 11
+		If ftimer &lt;= 0
+			iStage = 12
+			stopquest ALTStartQ
+			sv_destruct sUIPath sUIName sBackDesc svString
+			if eval (GetINIFloat &quot;All:bShowChosenBackground&quot; &quot;ALTStartConfig.ini&quot;)
+				rBackMSG = ListGetNthForm ALTBackList ALTBackground
+				ShowMessage rBackMSG
+			endif
+			If ALTLevelQ.iLevel &gt; 1
+				startquest ALTLevelQ
+			Else
+				ForceSave
+			EndIf
+		Else
+			ftimer -= GetSecondsPassed
+		EndIf
+	EndIf
+End
+</textarea></details></section>
+<section><h2>Save and stop at this checkpoint</h2><p>After all three scripts compile, save <strong>NVO.esm</strong> from the main GECK window. Reply <strong>“compiled and saved”</strong>, or send the error and script name.</p><p>I will check the saved records before the short startup/reload check. No firing test is needed.</p></section>
+<details><summary>Player changes and remaining RD work</summary><p>The staged override copies the base-game Player record: base health100, SPECIAL5, fatigue200, speed100, zero skill offsets and original base inventory. Character creation/backgrounds still apply their choices. Existing saves can retain old values; 100 base health is not a promise of 100 displayed HP.</p><p>RD remains a master for its required references. Its other records and the Brahmin Baron extra-damage handler have a separate ownership plan. This packet does not activate coordinated damage.</p></details>
+<p><a href="GECK-INSTRUCTIONS.md">Full instructions and reversal</a> · <a href="OWNERSHIP.md">Ownership plan</a> · <a href="PLAYER-RECORD-AUDIT.json">Record audit</a> · <a href="SCRIPT-DIFF.txt">Script changes</a></p>
+<p id="status" role="status" aria-live="polite"></p></main><script>
+document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{
+ const field=document.getElementById(button.dataset.copy),status=document.getElementById('status');
+ try { await navigator.clipboard.writeText(field.value); }
+ catch(error) { const temporary=document.createElement('textarea');temporary.value=field.value;temporary.style.position='fixed';temporary.style.left='-10000px';document.body.appendChild(temporary);temporary.select();const ok=document.execCommand('copy');temporary.remove();if(!ok){if(field.closest('details'))field.closest('details').open=true;field.hidden=false;field.focus();field.select();status.textContent='Copy was blocked. Text selected: press Ctrl+C.';return;} }
+ status.textContent=button.dataset.copy==='folder'?'Folder path copied. Paste it into File Explorer.':'Complete script copied. Paste over all text in the existing GECK script.';
+}));</script></body></html>

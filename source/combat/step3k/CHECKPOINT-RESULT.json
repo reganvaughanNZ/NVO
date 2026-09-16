@@ -1,0 +1,10 @@
+{
+  "packet": "3K",
+  "requested_live_checkpoint": "passed",
+  "scope": "Player-to-NPC net HP/condition observations and save reload; not universal damage approval",
+  "capture": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3k\\captures\\reload-1930643b54d3",
+  "sha256": "1930643b54d36b0a2fe63e86cdb5ff0d18176cf3d926cf7c795ffa935eb35ba5",
+  "damage_replacement": false,
+  "predamage_gate": "HOLD",
+  "remaining": "Trace factor2 and settle the existing units/mass/contact/admission and extra damage-owner findings"
+}

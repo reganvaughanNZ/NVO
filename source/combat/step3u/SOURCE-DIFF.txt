@@ -1,0 +1,429 @@
+--- native323/CMakeLists.txt
++++ native324/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(NVOCombatCore VERSION 0.3.23 LANGUAGES CXX)
++project(NVOCombatCore VERSION 0.3.24 LANGUAGES CXX)
+ 
+ if(NOT WIN32 OR NOT MSVC)
+     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")
+--- native323/src/FlightImpact.inl
++++ native324/src/FlightImpact.inl
+@@ -6,6 +6,8 @@
+     U32 target{}, material{};
+     int region{-1};
+     bool more{};
++    bool policyRead{};
++    U32 flags{};
+     unsigned char impacted{};
+     float life{}, distance{};
+     Vec position{}, point{}, accounting{};
+@@ -15,14 +17,20 @@
+     U32 ref{}, source{}, weapon{}, ammo{}, base{};
+     unsigned step{}, dragModel{};
+     bool collisionCaptured{}, callbackReported{}, wrote{}, baselineVerified{};
++    bool resetObserved{};
+     bool modelCandidate{};
+     double modelTime{},modelSpeed{};
+     const char* modelStatus{"no_collision_sample"};
++    bool speedAvailable{}, speedEngineSegment{};
++    double speedLow{}, speedHigh{}, speedMean{};
++    const char* speedStatus{"no_collision_sample"};
++    ContactTerrain terrain{};
+     Vec start{}, expected{}, before{}, full{};
+     double dt{}, bc{}, tolerance{};
+     ImpactSample collision{};
+ };
+ #include "FlightImpactModel.inl"
++#include "FlightContactSpeed.inl"
+ 
+ constexpr unsigned kImpactLives=32;
+ ImpactRecord gImpactRecords[kImpactLives]{};
+@@ -30,6 +38,7 @@
+ unsigned gImpactObserved{}, gImpactCandidates{}, gImpactUnavailable{}, gImpactReadFailures{};
+ unsigned gImpactCallbacks{}, gImpactCorrelated{}, gImpactUnpaired{}, gImpactLogFailures{};
+ unsigned gImpactDuplicateCollisions{}, gImpactDuplicateCallbacks{}, gImpactDestroyWithoutCallback{};
++unsigned gImpactSpeedRanges{},gImpactEngineSegments{};
+ void ResetImpactHits() noexcept;
+ 
+ bool ImpactVector(const void* p, unsigned offset, Vec& value) noexcept
+@@ -50,6 +59,7 @@
+         || !nvo::hit::ReadForm(weapon,w) || w.id!=t.weapon || w.type!=0x28
+         || !nvo::hit::ReadForm(source,a) || a.id!=t.source) return s;
+     s.valid|=1;
++    s.policyRead=Read(t.p,0xC8,s.flags);
+     if (ImpactVector(t.p,0x30,s.position) && Read(t.p,0xD8,s.life) && Read(t.p,0x110,s.distance)
+         && Read(t.p,0x90,s.impacted) && std::isfinite(s.life) && s.life>=0 && s.life<=1e7f
+         && std::isfinite(s.distance) && s.distance>=0 && s.distance<=1e12f) s.valid|=2;
+@@ -74,6 +84,7 @@
+     gImpactObserved=gImpactCandidates=gImpactUnavailable=gImpactReadFailures=0;
+     gImpactCallbacks=gImpactCorrelated=gImpactUnpaired=gImpactLogFailures=0;
+     gImpactDuplicateCollisions=gImpactDuplicateCallbacks=gImpactDestroyWithoutCallback=0;
++    gImpactSpeedRanges=gImpactEngineSegments=0;
+ }
+ ImpactRecord* ImpactFind(U64 serial) noexcept
+ {
+@@ -98,6 +109,8 @@
+     r.collisionCaptured=true;
+     r.serial=t.serial; r.ref=t.ref; r.source=t.source; r.weapon=t.weapon; r.ammo=t.ammo; r.base=t.base;
+     r.step=t.steps; r.dragModel=t.dragModel; r.wrote=t.wrote; r.baselineVerified=t.baselineVerified;
++    r.resetObserved=t.stepResetObserved;
++    r.terrain=t.contactTerrain;
+     r.start=t.startPos; r.expected=t.expected; r.before=t.wrote?t.velocity:t.proposedVelocity;
+     r.full=t.proposedVelocity; r.dt=t.pendingDt; r.bc=t.ballisticCoefficient;
+     const double coordinate=std::fmax(std::fmax(std::abs(r.start.x),std::abs(r.start.y)),std::abs(r.start.z));
+@@ -107,6 +120,11 @@
+     if (s.valid!=31) ++gImpactReadFailures;
+     if (!r.wrote || !r.baselineVerified) ++gImpactBaselineContacts;
+     const auto m=EvaluateImpact(r,t);
++    const auto speed=EvaluateContactSpeed(r,t);
++    r.speedAvailable=speed.available; r.speedEngineSegment=speed.engineSegment; r.speedStatus=speed.status;
++    r.speedLow=speed.available?speed.low:0; r.speedHigh=speed.available?speed.high:0;
++    r.speedMean=speed.available?speed.mean:0;
++    if (speed.available) { ++gImpactSpeedRanges; if (speed.engineSegment) ++gImpactEngineSegments; }
+     r.modelCandidate=m.estimate; r.modelStatus=m.status;
+     r.modelTime=m.estimate?m.estimateTime:0; r.modelSpeed=m.estimate?m.estimateSpeed:0;
+     if (m.estimate) ++gImpactCandidates; else ++gImpactUnavailable;
+@@ -123,6 +141,13 @@
+         gSession,r.serial,r.step,m.status,m.geometry?1u:0u,m.fraction,m.offChord,m.pointGap,m.estimate?1u:0u,m.estimateTime,m.estimateSpeed,m.modelGap)) ++gImpactLogFailures;
+     if (!nvo::log::Write("IMPACT_BOUNDARY session=%u lifetime=%llu step=%u endpoint_matches=%u accounting_matches=%u endpoint_error=%.9g accounting_error=%.9g tolerance=%.9g endpoint_kind=full_step contact_kind=first_collision observer_writes=0",
+         gSession,r.serial,r.step,m.endpointMatches?1u:0u,m.accountingMatches?1u:0u,m.endpointError,m.accountingError,r.tolerance)) ++gImpactLogFailures;
++    if (!nvo::log::Write("IMPACT_SPEED session=%u lifetime=%llu step=%u status=%s available=%u engine_segment=%u low_mps=%.9g high_mps=%.9g mean_segment_mps=%.9g interval_dt_s=%.9g flags_read=%u flags=%08X reset_observed=%u point_model_valid=%u contact_time_measured=0 point_association_proven=0 speed_authority=0 damage_replacement=0 observer_writes=0",
++        gSession,r.serial,r.step,speed.status,speed.available?1u:0u,speed.engineSegment?1u:0u,
++        r.speedLow,r.speedHigh,r.speedMean,speed.available?r.dt:0,s.policyRead?1u:0u,s.flags,r.resetObserved?1u:0u,m.estimate?1u:0u)) ++gImpactLogFailures;
++    if (!nvo::log::Write("IMPACT_TERRAIN session=%u lifetime=%llu step=%u samples=%u valid=%u query_ok=%u candidate=(%.9g,%.9g,%.9g) floor=%.9g target=%08X region=%d flags=%08X contact=(%.9g,%.9g,%.9g) explained_clamp=%u observer_writes=0",
++        gSession,r.serial,r.step,r.terrain.samples,r.terrain.valid?1u:0u,r.terrain.queryOk?1u:0u,
++        r.terrain.position.x,r.terrain.position.y,r.terrain.position.z,r.terrain.floor,r.terrain.target,r.terrain.region,r.terrain.flags,
++        r.terrain.point.x,r.terrain.point.y,r.terrain.point.z,speed.terrainExplained?1u:0u)) ++gImpactLogFailures;
+ }
+ void ImpactEvent(const Track& t,bool destroyed) noexcept
+ {
+@@ -167,7 +192,9 @@
+     nvo::log::Write("IMPACT_SUMMARY session=%u reason=%s collision_samples=%u model_candidates=%u unavailable_candidates=%u optional_read_failures=%u impact_callbacks=%u correlated_callbacks=%u unpaired_callbacks=%u duplicate_collisions=%u duplicate_callbacks=%u destroy_without_callback=%u log_write_failures=%u max_lifetimes=%u speed_authority=0 damage_replacement=0 observer_writes=0",
+         gSession,reason,gImpactObserved,gImpactCandidates,gImpactUnavailable,gImpactReadFailures,gImpactCallbacks,gImpactCorrelated,gImpactUnpaired,
+         gImpactDuplicateCollisions,gImpactDuplicateCallbacks,gImpactDestroyWithoutCallback,gImpactLogFailures,kImpactLives);
+-    nvo::log::Write("IMPACT_COVERAGE_SUMMARY session=%u reason=%s admitted_lifetimes=%u omitted_lifetimes=%u baseline_contacts=%u max_lifetimes=%u max_extra_detail_rows=416 speed_authority=0 observer_writes=0",
++    nvo::log::Write("IMPACT_COVERAGE_SUMMARY session=%u reason=%s admitted_lifetimes=%u omitted_lifetimes=%u baseline_contacts=%u max_lifetimes=%u max_extra_detail_rows=544 speed_authority=0 observer_writes=0",
+         gSession,reason,gImpactAdmitted,gImpactOmitted,gImpactBaselineContacts,kImpactLives);
++    nvo::log::Write("IMPACT_SPEED_SUMMARY session=%u reason=%s available_segment_ranges=%u observed_engine_segments=%u owned_step_ranges=%u damage_replacement=0 observer_writes=0",
++        gSession,reason,gImpactSpeedRanges,gImpactEngineSegments,gImpactSpeedRanges-gImpactEngineSegments);
+     ImpactReset();
+ }
+--- native323/src/FlightImpactJoin.inl
++++ native324/src/FlightImpactJoin.inl
+@@ -54,6 +54,10 @@
+         gSession,q.context,q.lifetime,paired?1u:0u,candidate?1u:0u,r?r->modelStatus:"unavailable",candidate?r->modelSpeed:0,candidate?r->modelTime:0,r && r->callbackReported?1u:0u)) ++gImpactHitLogFailures;
+     if (!nvo::log::Write("IMPACT_HIT_POSITION session=%u context=%u lifetime=%llu hit_position_valid=%u hit=(%.9g,%.9g,%.9g) contact_valid=%u contact=(%.9g,%.9g,%.9g) observer_writes=0",
+         gSession,q.context,q.lifetime,hitPositionValid?1u:0u,hitPosition.x,hitPosition.y,hitPosition.z,contactValid?1u:0u,s.point.x,s.point.y,s.point.z)) ++gImpactHitLogFailures;
++    const bool speed=paired && r->speedAvailable && s.policyRead && s.flags==r->collision.flags;
++    if (!nvo::log::Write("IMPACT_HIT_SPEED session=%u context=%u lifetime=%llu available=%u status=%s engine_segment=%u low_mps=%.9g high_mps=%.9g mean_segment_mps=%.9g interval_dt_s=%.9g exact_contact_speed=0 speed_authority=0 region_authority=0 damage_replacement=0 observer_writes=0",
++        gSession,q.context,q.lifetime,speed?1u:0u,speed?r->speedStatus:status,speed && r->speedEngineSegment?1u:0u,
++        speed?r->speedLow:0,speed?r->speedHigh:0,speed?r->speedMean:0,speed?r->dt:0)) ++gImpactHitLogFailures;
+ }
+ void SummarizeImpactHits(const char* reason) noexcept
+ {
+--- native323/src/FlightPhysics.cpp
++++ native324/src/FlightPhysics.cpp
+@@ -35,6 +35,14 @@
+ Vec Mul(Vec a, double b) noexcept { return {a.x*b,a.y*b,a.z*b}; }
+ double Length(Vec a) noexcept { return std::sqrt(a.x*a.x+a.y*a.y+a.z*a.z); }
+ struct Config { double units{}, gravity{}, density{}, sound{}; } gConfig;
++struct ContactTerrain {
++    unsigned samples{};
++    bool valid{}, queryOk{};
++    U32 target{},flags{};
++    int region{-1};
++    Vec position{},point{};
++    double floor{};
++};
+ struct Track {
+     nvo::admission::Ticket ticket{};
+     bool committed{};
+@@ -60,6 +68,7 @@
+     unsigned resetEntries{}, resetPreserved{};
+     bool stepResetObserved{};
+     bool terrainAdjusted{};
++    ContactTerrain contactTerrain{};
+ };
+ Track gTracks[kCapacity]{};
+ nvo::admission::Pool<kCapacity> gSlots;
+@@ -303,6 +312,7 @@
+     t->submitted={submitted[0],submitted[1],submitted[2]};
+     t->stepResetObserved=false;
+     t->terrainAdjusted=false;
++    t->contactTerrain={};
+     if (t->logged && t->movementEntries<=kLoggedSteps) nvo::log::Write("PHYSICS_STEP session=%u lifetime=%llu step=%u phase=%s profile=%u dt_s=%.9g movement_dt_s=%.9g speed_before_mps=%.9g speed_after_mps=%.9g vz_before=%.9g vz_after=%.9g world_delta=(%.9g,%.9g,%.9g) pitch=%.9g heading=%.9g argument_write=%u damage_write=0",
+         gSession,t->serial,t->steps,t->wrote?"apply":"baseline",t->profile,static_cast<double>(dt),static_cast<double>(adjustedDt),
+         Length(before),Length(velocity),before.z,velocity.z,displacement.x,displacement.y,displacement.z,
+@@ -591,11 +601,29 @@
+     const Lock lock;
+     if (!gActive.load(std::memory_order_relaxed)) return;
+     auto* t=Find(owner);
+-    if (!t || t->stopped || !t->pending || !t->wrote || !t->baselineVerified
++    if (!t || t->stopped || !t->pending
+         || t->thread!=GetCurrentThreadId() || input!=t->frame+0xC
+         || t->controllerPending || !t->stepResetObserved
+         || t->controllerTarget!=kControllerTarget || t->controllerFrame!=frame
+         || t->controllerArgs!=args) return;
++    // Capture the collision BEFORE the engine's optional Z-only terrain clamp.
++    // This is evidence for the contact-speed observer, never a movement repair.
++    // Keep baseline contacts too, without changing the old write eligibility.
++    auto& terrain=t->contactTerrain;
++    void* contactHead{};
++    if (Read(owner,0x88,contactHead) && contactHead && ImpactFind(t->serial)) {
++        ++terrain.samples; terrain.valid=false;
++        const auto contact=ReadImpact(*t);
++        float observedFloor{}; Vec observedPosition{};
++        if (terrain.samples==1 && contact.valid==15 && contact.policyRead && !contact.more
++            && ImpactVector(candidate,0,observedPosition) && Read(height,0,observedFloor)
++            && std::isfinite(observedFloor) && std::abs(observedFloor)<=1e7f) {
++            terrain.valid=true; terrain.queryOk=(result&0xFFu)!=0;
++            terrain.target=contact.target; terrain.flags=contact.flags; terrain.region=contact.region;
++            terrain.point=contact.point; terrain.position=observedPosition; terrain.floor=observedFloor;
++        }
++    }
++    if (!t->wrote || !t->baselineVerified) return;
+     ++gTerrainQueries;
+     if (result&0xFFu) return; // Preserve the successful engine query and its AL.
+     ++gTerrainFailed;
+--- native323/src/Plugin.cpp
++++ native324/src/Plugin.cpp
+@@ -9,7 +9,7 @@
+ 
+ namespace {
+ constexpr char kPluginName[] = "NVOCombatCore";
+-constexpr std::uint32_t kPluginVersion = 323; // 0.3.23, packet 3R capacity checkpoint
++constexpr std::uint32_t kPluginVersion = 324; // 0.3.24, packet 3U contact-speed coverage
+ constexpr bool kHitHooksImplemented = false;
+ constexpr bool kDamageReplacementEnabled = false;
+ bool gLoaded = false;
+@@ -24,8 +24,8 @@
+     gStartupBannerAttempted = true; // Set before calling out, including any reentrant callback.
+     gStartupBannerPending = false;
+     const bool submitted = gConsole && gConsole->version >= 2 && gConsole->RunScriptLine
+-        && gConsole->RunScriptLine("PrintC \"NVO [0.3.23] - The Mojave is yours.\"", nullptr);
+-    nvo::log::Write("STARTUP_BANNER version=0.3.23 submitted=%u once_per_process=1", submitted ? 1u : 0u);
++        && gConsole->RunScriptLine("PrintC \"NVO [0.3.24] - The Mojave is yours.\"", nullptr);
++    nvo::log::Write("STARTUP_BANNER version=0.3.24 submitted=%u once_per_process=1", submitted ? 1u : 0u);
+ }
+ 
+ bool SupportsHost(const nvo::nvse::InterfacePrefix* host) noexcept
+@@ -145,7 +145,7 @@
+         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
+         return false;
+     }
+-    nvo::log::Write("NVOCombatCore 0.3.23 | phase=3R | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
++    nvo::log::Write("NVOCombatCore 0.3.24 | phase=3U | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
+ #ifdef NVO_ADMISSION_CAPACITY_PROBE
+     nvo::log::Write("CAPACITY_PROBE_BUILD enabled=1 player_standard_9mm_smg_only=1 synthetic_slots=127 process_once=1 damage_replacement=0");
+ #else
+
+NEW: src/FlightContactSpeed.inl
+// Diagnostic segment-speed evidence. No contact-time/point/region authority.
+// An off-curve surface point cannot select a time on our RK4 trajectory. Keep
+// the entire verified step's speed interval instead of widening point tolerance.
+struct ContactSpeed {
+    const char* status{"snapshot_unavailable"};
+    bool available{}, engineSegment{}, terrainExplained{};
+    double low{}, high{}, mean{}, duration{};
+    static constexpr bool damageAuthority=false;
+};
+bool ContactFinite(Vec v) noexcept
+{ return std::isfinite(v.x) && std::isfinite(v.y) && std::isfinite(v.z); }
+ContactSpeed EvaluateContactSpeed(const ImpactRecord& r,const Track& profile) noexcept
+{
+    ContactSpeed out{};
+    const auto& s=r.collision;
+    if (s.valid!=31 || !s.policyRead || !s.target) return out;
+    out.status="unsupported_contact";
+    // Hitscan, stuck, engine-gravity and AlwaysHit/redirected contacts do not
+    // inherit this ordinary, zero-engine-gravity bullet segment contract.
+    if (s.more || (s.flags&0x1047u)) return out;
+    out.status="invalid_inputs";
+    if (!(std::isfinite(r.dt) && r.dt>0 && r.dt<=0.25)
+        || !(std::isfinite(r.tolerance) && r.tolerance>0)
+        || !(std::isfinite(gConfig.units) && gConfig.units>0)
+        || !(std::isfinite(gConfig.gravity) && gConfig.gravity>=0 && gConfig.gravity<=30)
+        || !ContactFinite(r.start) || !ContactFinite(r.expected)
+        || !ContactFinite(r.before) || !ContactFinite(r.full)
+        || !ContactFinite(s.position) || !ContactFinite(s.point) || !ContactFinite(s.accounting)) return out;
+    const double length=Length(r.expected),before=Length(r.before),after=Length(r.full);
+    if (!(std::isfinite(length) && length>0 && std::isfinite(before) && before>0
+        && std::isfinite(after) && after>0)) return out;
+    out.status="movement_unverified";
+    // Exact pending call / identity / no prior contacts are checked by the
+    // caller. These are the same full-endpoint/accounting checks used in flight.
+    if (!r.resetObserved) return out;
+    const Vec endpoint=Add(r.start,r.expected);
+    const bool ordinary=Length(Add(s.position,Mul(endpoint,-1)))<=r.tolerance
+        && Length(Add(s.accounting,Mul(r.expected,-1)))<=r.tolerance;
+    if (!ordinary) {
+        const auto& terrain=r.terrain;
+        // Inspected engine 00930155..00930186 copies floor into Z iff
+        // floor-candidate.Z > 30, even if the height query returned false.
+        // An actual same-contact snapshot is mandatory: never infer this from
+        // a conveniently vertical error alone, or modify the engine's clamp.
+        if (terrain.samples!=1 || !terrain.valid || terrain.target!=s.target
+            || terrain.region!=s.region || terrain.flags!=s.flags
+            || !ContactFinite(terrain.position) || !ContactFinite(terrain.point)
+            || !std::isfinite(terrain.floor)
+            || Length(Add(terrain.point,Mul(s.point,-1)))>r.tolerance
+            || Length(Add(terrain.position,Mul(endpoint,-1)))>r.tolerance
+            || !(terrain.floor-terrain.position.z>30.0)) return out;
+        const Vec corrected{terrain.position.x,terrain.position.y,terrain.floor};
+        if (Length(Add(s.position,Mul(corrected,-1)))>r.tolerance
+            || Length(Add(s.accounting,Mul(Add(corrected,Mul(r.start,-1)),-1)))>r.tolerance) return out;
+        out.terrainExplained=true;
+    }
+    out.duration=r.dt;
+    out.mean=length/(r.dt*gConfig.units);
+    // Numerical comparison allowance only, not a new collision-point tolerance
+    // or a certified floating-point error bound for the physical world.
+    constexpr double numericSpeed=0.00001;
+    if (!r.wrote && !r.baselineVerified && r.step==0) {
+        out.status="baseline_vector_mismatch";
+        if (Length(Add(r.before,Mul(r.full,-1)))>numericSpeed
+            || Length(Add(Mul(r.before,r.dt*gConfig.units),Mul(r.expected,-1)))>r.tolerance) return out;
+        // The first step is an unchanged, observed engine translation. Report
+        // its mean speed; do not backdate NVO drag, claim a launch speed, or
+        // promote baselineVerified on a projectile that has already collided.
+        out.low=std::fmax(0.0,out.mean-numericSpeed);
+        out.high=out.mean+numericSpeed;
+        out.engineSegment=true;
+        out.status="observed_engine_segment";
+    } else {
+        out.status="owned_segment_unverified";
+        if (!r.wrote || !r.baselineVerified
+            || (profile.dragModel!=1 && profile.dragModel!=7)
+            || !std::isfinite(profile.ballisticCoefficient) || profile.ballisticCoefficient<0.05
+            || profile.ballisticCoefficient>2 || !std::isfinite(gConfig.density)
+            || gConfig.density<0 || gConfig.density>5 || !std::isfinite(gConfig.sound)
+            || gConfig.sound<250 || gConfig.sound>450 || before>gConfig.sound*4.9) return out;
+        Vec reproduced=r.before;
+        const Vec displacement=Mul(Integrate(reproduced,r.dt,profile),gConfig.units);
+        if (!ContactFinite(reproduced) || !ContactFinite(displacement)
+            || Length(Add(reproduced,Mul(r.full,-1)))>numericSpeed
+            || Length(Add(displacement,Mul(r.expected,-1)))>r.tolerance) return out;
+        // Drag always opposes velocity, so d|v|/dt <= g. Applying that inequality
+        // forward from the start AND backwards from the end encloses every
+        // intermediate speed: max(0, end-g*dt) <= |v(t)| <= start+g*dt.
+        // Unlike min/max of endpoint speeds this also covers an upward shot
+        // slowing through its apex. Still an estimate of the authored ODE.
+        out.low=std::fmax(0.0,after-gConfig.gravity*r.dt-numericSpeed);
+        out.high=before+gConfig.gravity*r.dt+numericSpeed;
+        if (out.low>before || after>out.high || out.low>out.high) return out;
+        out.status="owned_step_speed_range";
+    }
+    out.available=true;
+    return out;
+}
+
+NEW: tests/contact_speed_checks.inl
+Check(baselineSeed.serial && ownedSeed.serial,"both captured producer kinds available");
+static_assert(!ContactSpeed::damageAuthority,"diagnostics cannot authorize damage");
+auto good=ownedSeed; auto profile=ownedTrack;
+auto negative=[&](ImpactRecord bad,const char* why) { Check(!EvaluateContactSpeed(bad,profile).available,why); };
+auto bad=good; bad.collision.valid=15; negative(bad,"partial snapshot");
+bad=good; bad.collision.policyRead=false; negative(bad,"unread flags");
+for (unsigned flag:{1u,2u,4u,0x40u,0x1000u}) { bad=good; bad.collision.flags|=flag; negative(bad,"unsupported projectile policy"); }
+bad=good; bad.collision.more=true; negative(bad,"multiple contacts");
+bad=good; bad.collision.target=0; negative(bad,"missing target");
+bad=good; bad.resetObserved=false; negative(bad,"unobserved movement reset branch");
+bad=good; bad.collision.position.x+=10; negative(bad,"full endpoint changed");
+bad=good; bad.collision.accounting.y+=10; negative(bad,"accounting changed");
+bad=good; bad.expected.x+=10; negative(bad,"expected displacement changed");
+bad=good; bad.full.z+=1; negative(bad,"solver endpoint velocity changed");
+bad=good; bad.before.x+=1; negative(bad,"solver start velocity changed");
+for(double dt:{0.0,-1.0,0.251,std::numeric_limits<double>::quiet_NaN()}) { bad=good; bad.dt=dt; negative(bad,"invalid timestep"); }
+bad=good; bad.collision.point.x=std::numeric_limits<double>::infinity(); negative(bad,"invalid surface point");
+bad=good; bad.wrote=false; negative(bad,"inconsistent movement ownership");
+bad=good; bad.baselineVerified=false; negative(bad,"missing baseline");
+auto base=EvaluateContactSpeed(baselineSeed,baselineTrack);
+Check(base.available && base.engineSegment && base.low<=base.mean && base.high>=base.mean,"observed engine mean enclosed");
+bad=baselineSeed; bad.before.x+=1;
+Check(!EvaluateContactSpeed(bad,baselineTrack).available,"baseline vector must reconstruct actual translation");
+// A surface point outside the curve must not be promoted into a point estimate.
+bad=good; bad.collision.point.z+=10;
+auto off=EvaluateContactSpeed(bad,profile);
+Check(off.available && !EvaluateImpact(bad,profile).estimate,"off-path retains segment range only");
+auto original=EvaluateContactSpeed(good,profile);
+Check(off.low==original.low && off.high==original.high,"untrusted point cannot select speed/time");
+// Separately observed pre-clamp candidate, unchanged contact and exact Z-only
+// correction are required to explain a later full-endpoint discrepancy.
+auto clamp=good;
+clamp.terrain.samples=1; clamp.terrain.valid=true; clamp.terrain.queryOk=true;
+clamp.terrain.position=clamp.collision.position; clamp.terrain.floor=clamp.terrain.position.z+100;
+clamp.terrain.target=clamp.collision.target; clamp.terrain.flags=clamp.collision.flags;
+clamp.terrain.region=clamp.collision.region; clamp.terrain.point=clamp.collision.point;
+clamp.collision.position.z=clamp.terrain.floor;
+clamp.collision.accounting=Add(clamp.collision.position,Mul(clamp.start,-1));
+auto explained=EvaluateContactSpeed(clamp,profile);
+Check(explained.available && explained.terrainExplained,"explicit observed terrain clamp");
+Check(explained.low==original.low && explained.high==original.high,"post-collision clamp adds no flight energy");
+bad=clamp; bad.terrain.valid=false; negative(bad,"no inferred terrain evidence");
+bad=clamp; bad.terrain.samples=2; negative(bad,"duplicate terrain observation");
+bad=clamp; ++bad.terrain.target; negative(bad,"terrain target mismatch");
+bad=clamp; ++bad.terrain.region; negative(bad,"terrain region mismatch");
+bad=clamp; bad.terrain.flags^=0x100; negative(bad,"terrain flags mismatch");
+bad=clamp; bad.terrain.point.z+=10; negative(bad,"terrain contact mismatch");
+bad=clamp; bad.terrain.position.x+=10; negative(bad,"terrain candidate mismatch");
+bad=clamp; bad.terrain.floor+=10; negative(bad,"terrain final height mismatch");
+bad=clamp; bad.collision.accounting.x+=10; negative(bad,"unrelated final accounting mutation");
+bad=clamp; bad.terrain.floor=bad.terrain.position.z+30; negative(bad,"strict terrain threshold");
+// Failed queries still take this engine branch. Keep their actual result flag.
+auto failedQuery=clamp; failedQuery.terrain.queryOk=false;
+Check(EvaluateContactSpeed(failedQuery,profile).terrainExplained,"observed failed-query clamp");
+// A separate numerical trajectory samples the ENTIRE interval, including an
+// upward low-speed gravity-only trajectory with an interior zero-speed apex.
+unsigned numericalCases=0,numericalSamples=0;
+for (unsigned drag:{1u,7u}) for(double density:{0.0,1.225,5.0})
+for (double dt:{0.001,0.016,0.079,0.25}) for (double bc:{0.05,0.155,0.209,2.0})
+for (Vec initial:{Vec{387.0,0,1},Vec{0,0,0.8},Vec{0,0,-40},Vec{1600,0,300}}) {
+    gConfig={70,9.80665,density,340.294};
+    auto r=good; auto t=profile; t.dragModel=drag; t.ballisticCoefficient=bc;
+    r.dt=dt; r.before=initial; r.full=initial; r.expected=Mul(Integrate(r.full,dt,t),70);
+    r.collision.position=Add(r.start,r.expected); r.collision.accounting=r.expected;
+    const auto range=EvaluateContactSpeed(r,t);
+    Check(range.available,"synthetic supported step"); ++numericalCases;
+    Vec v=initial;
+    for(unsigned i=0;i<=100;++i) {
+        const auto speed=Length(v);
+        Check(speed>=range.low-0.00001 && speed<=range.high+0.00001,"sampled speed inside whole-step range"); ++numericalSamples;
+        if(i<100) Integrate(v,dt/100,t);
+    }
+}
+gConfig={70,9.80665,1.225,340.294};
+// Exercise the production cache and hit join with fixture reads, including
+// stale identity and changed point/flags. No speed evidence survives reload.
+auto cache=[&](const ImpactRecord& r,Track t) {
+    ImpactReset(); nvo::log::rows.clear();
+    t.serial=r.serial; t.ref=r.ref; t.source=r.source; t.weapon=r.weapon; t.ammo=r.ammo; t.base=r.base;
+    t.steps=r.step; t.wrote=r.wrote; t.baselineVerified=r.baselineVerified; t.stepResetObserved=r.resetObserved;
+    t.contactTerrain=r.terrain;
+    t.pendingDt=r.dt; t.startPos=r.start; t.expected=r.expected; t.velocity=r.before; t.proposedVelocity=r.full;
+    ImpactEnroll(t); fixture=r.collision; ImpactCollision(t,nullptr);
+    fixture.valid=15; fixture.position=fixture.point;
+    nvo::physics::HitQuery q{gSession,1,r.serial,r.ref,r.source,r.collision.target,r.weapon,r.ammo,r.collision.region,0,{}};
+    auto available=[&](Track* track,const nvo::physics::HitQuery& query) {
+        ImpactHit(track,query);
+        return nvo::log::rows.back().find("available=1 ")!=std::string::npos;
+    };
+    Check(available(&t,q),"paired hit exposes only bounded evidence");
+    auto wrong=q; ++wrong.ammo; Check(!available(&t,wrong),"wrong ammo refuses range");
+    wrong=q; ++wrong.lifetime; Check(!available(&t,wrong),"wrong lifetime refuses range");
+    wrong=q; ++wrong.target; Check(!available(&t,wrong),"wrong target refuses range");
+    fixture.flags|=0x1000; Check(!available(&t,q),"changed projectile policy refuses range"); fixture.flags=r.collision.flags;
+    fixture.point.z+=10; Check(!available(&t,q),"changed contact refuses cached range"); fixture.point=r.collision.point;
+    ImpactEvent(t,false); Check(!available(&t,q),"after callback refuses range");
+    ImpactReset(); Check(!available(&t,q),"reload clears cached evidence");
+    ImpactEnroll(t); t.movementEntries=t.accountingEntries=0;
+    Check(!available(&t,q),"pre-movement contact remains unknown");
+    Check(!available(nullptr,q),"untracked projectile remains unknown");
+};
+cache(baselineSeed,baselineTrack); cache(ownedSeed,ownedTrack); cache(clamp,ownedTrack);
+// Diagnostic cap must refuse rather than recycling an earlier lifetime.
+ImpactReset();
+for(U64 id=1;id<=33;++id) { auto t=ownedTrack; t.serial=id; ImpactEnroll(t); }
+Check(gImpactAdmitted==32 && gImpactOmitted==1 && !ImpactFind(33),"bounded cache cannot reuse or exceed capacity");
+ImpactReset(); Check(!ImpactFind(1),"clear cache after cap");
+printf("{\"checks\":%u,\"numerical_cases\":%u,\"numerical_samples\":%u,\"cache_join_checks\":true,\"game_loaded\":false}\n",checks,numericalCases,numericalSamples);

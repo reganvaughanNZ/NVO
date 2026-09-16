@@ -1,0 +1,23 @@
+{
+  "packet": "3K1",
+  "version": "0.3.20",
+  "plugin_version": 320,
+  "status": "Installed; one successful startup banner submission verified at main menu",
+  "installed_by_assistant": true,
+  "gameplay_tested": false,
+  "damage_replacement": false,
+  "change": "Once-per-process console banner only",
+  "build_output": "out\\build-464-6337",
+  "installed_files": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "4826895e3954298de6c3ca5d6f56cd3a576434fda7a696e57572b646c833e664"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "4a652ab9c39158485a32bd3cb2f07a5d9e3921d479ac30689da2ba55c42ff354"
+    }
+  ],
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3K1-20260916-122305-96aa1f5d",
+  "startup_submission_verified": true
+}

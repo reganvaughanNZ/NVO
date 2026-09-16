@@ -1,0 +1,30 @@
+{
+  "status": "installed",
+  "packet": "4B",
+  "version": 326,
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-4B-20260916-224741-c418db52",
+  "closed_processes": [],
+  "archived_removed": 0,
+  "replaced": 2,
+  "installed": [
+    {
+      "sha256": "3d5ff40c5c8ba418c0764cba55bd8595cfa1444396f4e814552210524094e13a",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll"
+    },
+    {
+      "sha256": "9411d09fefe2e59fa50a891081592b81fbc9cc50602bee8951a04e706ac8d2a0",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb"
+    },
+    {
+      "sha256": "693f9e1309431bcad59cf28db6b127f534f08393ba169ce193fb517895eabb24",
+      "path": "NVOArmourKit4B.txt"
+    },
+    {
+      "sha256": "dbdabb6d8cefcd3282913fb3d4896e385b7e39516cbcebeb1b457458b2411933",
+      "path": "NVOArmourTarget4B.txt"
+    }
+  ],
+  "protected_files_verified": 53,
+  "game_relaunched": false,
+  "gameplay_tested": false
+}

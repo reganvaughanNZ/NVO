@@ -1,0 +1,86 @@
+{
+  "native_source_files_unchanged": [
+    {
+      "path": "native\\NVOCombatCore\\src\\CurrentHit.cpp",
+      "sha256": "5a0eb75f6fb4b8fc73b9436fb8db29f167f07f18d37b8068b1a3ff47ec7955bf"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\DamageEvents.cpp",
+      "sha256": "7e1575e747aa014a9e1135410dae67570341e70873491cfdd9f2fbe192f6f3e6"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\Exports.def",
+      "sha256": "3d4893c7aba7fa85ef8f6cb553fbd2a1eb4d206e380b8000521e339213b1929f"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\FlightPhysics.cpp",
+      "sha256": "b96fdeac0ab32e305d269f0f7318e57fc585dc0145f57fb13bc040705a568d2f"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\FlightPreview.cpp",
+      "sha256": "f37c685d59d4254a5812c5cf3e49f82d84355321b58b8fa68b628aeb5abdb0ae"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\FlightTiming.cpp",
+      "sha256": "1c96271b23065d94cf30101a88d347ba72841394bda619a30163b43cde30b5d0"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\NativeLog.cpp",
+      "sha256": "95fe3fb1c804c1a96a6122d72ffc190fb8ea82e114a5b049df7071fd3b5a69bd"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\NativeObserver.cpp",
+      "sha256": "653a9a0fcca29fa3ac3aa6b8075ee9193c1f658db3647d3dd96c533f93d60ffc"
+    },
+    {
+      "path": "native\\NVOCombatCore\\src\\Plugin.cpp",
+      "sha256": "de23296ab9b06e28fe7fd83c07d8046b5ab968dee01d4f5937db59632db1afa2"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\CurrentHit.hpp",
+      "sha256": "411beb0b042434fb7593854e063dca60b2bc9831de6ca6b6a26f7de7cbbf57bd"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\DamageEvents.hpp",
+      "sha256": "a0a19f266116ae4a43a4a0e80f0c5d787e0363126cf9b5b15565417fcbd5f104"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\FlightDragData.hpp",
+      "sha256": "2efffb921d8553ec59d952dac0ba7b3836b0871459ee1f3e1816c59e4cfcd202"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\FlightPhysics.hpp",
+      "sha256": "f49b1c2ca7f2ec6b5eda41ed5ec0d1e6ff8490da96fa577a74dc80aa97c1df2f"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\FlightPreview.hpp",
+      "sha256": "c3f4a49e40d2673b6a766268b5c4c0aaa20256a64a0562a3d353af149fb61de0"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\FlightTiming.hpp",
+      "sha256": "bbbf2eba85b7cad5f81d150871df89650dd80bfafdba51d6e7e18db50b81db61"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\NativeLog.hpp",
+      "sha256": "2a1c8088364505f6a4c6c0748c86099c5973e012d91163cd74d03a0db5c21aea"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\NativeObserver.hpp",
+      "sha256": "b99d0b89ba7d5756c61e165e1d9f1c1b11cb844bbaf19125f70a8594fb3c1ab2"
+    },
+    {
+      "path": "native\\NVOCombatCore\\include\\NvseBootstrapApi.hpp",
+      "sha256": "2e551b8ae15937c4e9e6faa62ede946e57b98ad56723ce5f2feedb878566cf5d"
+    }
+  ],
+  "native_build_executed": false,
+  "gameplay_tested": false,
+  "profile_capacity": 16,
+  "profile_count": 11,
+  "config_bytes": 3443,
+  "unique_selection_keys": true,
+  "three_hunting_rifle_clones_checked": true,
+  "ammo_effects_unchanged": true,
+  "previous_thirteen_complete_records_preserved": true,
+  "previous_nine_profiles_preserved": true
+}

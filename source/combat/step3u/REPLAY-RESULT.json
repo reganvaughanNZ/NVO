@@ -1,0 +1,28 @@
+{
+  "packet": "3U",
+  "rows": 21,
+  "available_with_historical_metadata": 18,
+  "prospective_available": 19,
+  "old_point_candidates": 4,
+  "checks": {
+    "checks": 39484,
+    "numerical_cases": 384,
+    "numerical_samples": 38784,
+    "cache_join_checks": true,
+    "game_loaded": false
+  },
+  "source_sha256": {
+    "native\\NVOCombatCore\\src\\FlightImpact.inl": "36b68a840fd6e0747db02ca8bf27967667aa5b580e8d04c08c9af9b7930e90bc",
+    "native\\NVOCombatCore\\src\\FlightImpactModel.inl": "87676175e0c9b306a5a3072effd1c1f4a351484f0739fdab4bc8c768c2000302",
+    "native\\NVOCombatCore\\src\\FlightContactSpeed.inl": "9753f62ef37f5aa65cdc769beb2209603ecc95957fd46f73c6ef58a49ed9278e",
+    "native\\NVOCombatCore\\src\\FlightImpactJoin.inl": "5ac90b991e68e2cbbb97db35ed268d803390b51f0d0bd7a12356add30aa0bb04",
+    "native\\NVOCombatCore\\src\\FlightPhysics.cpp": "662f6721f80869b55988b753f829b51c42be8058b962f45e6d343f395e1e01d5",
+    "native\\NVOCombatCore\\tests\\contact_speed_checks.inl": "b04714383697068d1efeec7980861fd3db5724f561190b67cf8bab4bea370cee",
+    "tools\\replay_contact_speed_3u.py": "52cab00cdfe4de3e589346a3b9ad0334ca64e26e14fec9a10ab39366ed39af05"
+  },
+  "harness_sha256": "9aa37b9d6772a3f435eb30c30a66f1ebcecf9a1884c2297dd3ecdd12cb6731fd",
+  "native_engine_reads": "stubbed with historical values or explicitly prospective flags/reset",
+  "dll_or_game_loaded": false,
+  "contact_point_cause_resolved": false,
+  "damage_authority": false
+}

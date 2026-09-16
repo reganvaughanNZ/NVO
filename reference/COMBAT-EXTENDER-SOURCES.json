@@ -1,0 +1,36 @@
+{
+  "inspected": "2026-09-14",
+  "preferred_jip_source": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main",
+  "jip_source_version": "57.30",
+  "preferred_showoff_source": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\ShowOff-NVSE-main",
+  "scope": "Current packet uses inspected JIP copy/ammo contracts and ShowOff event dispatch. Source alone does not prove the installed binary; native signatures independently gate the new hook.",
+  "source_evidence": "native/NVOCombatCore/sdk-reference.json",
+  "additional_sources": [
+    {
+      "name": "AnhNVSE",
+      "source_root": "C:/Users/regan/Downloads/AnhNVSE-main/AnhNVSE-main",
+      "source_entry": {
+        "path": "C:\\Users\\regan\\Downloads\\AnhNVSE-main\\AnhNVSE-main\\AnhNVSE\\main.cpp",
+        "sha256": "c1ec360211154c863d2f1c02ea042e4ad317e58de549acdbf55c6a5c9943daaf"
+      },
+      "installed_file": {
+        "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\AnhNVSE.dll",
+        "sha256": "c9f664139991ef76ac66939f8ac82d3da3b9be7974880620a9e67a005ba545f2"
+      }
+    },
+    {
+      "name": "SUPNVSE",
+      "source_root": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\SUP-NVSE-PLUGIN-New2\\SUP-NVSE-PLUGIN-New2",
+      "source_entry": {
+        "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\SUP-NVSE-PLUGIN-New2\\SUP-NVSE-PLUGIN-New2\\nvse_plugin_example\\main.cpp",
+        "sha256": "a869d9629fbc57c3ecd91097ab2302ba7094d7cb61a09ca17523647f1c8fd765"
+      },
+      "source_declares_version": 300,
+      "installed_file": {
+        "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\supNVSE.dll",
+        "sha256": "61b0f1760a643ee749c785bf989f22b18f7b445891d2595f55445281c8a22e6c"
+      }
+    }
+  ],
+  "additional_source_review": "No direct matches for the two CopyHitData slots or ammo-init site/names in supplied Anh/SUP C++ sources. Limited overlap search, not blanket compatibility verification. No new dependency introduced. Installed files exist; latest nvse.log predates their load, so runtime versions/loading are unverified."
+}

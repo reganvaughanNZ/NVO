@@ -1,0 +1,7 @@
+# Impact boundary update:3G1 / native316
+
+Capture018ec6d9b0b6 establishes that BeforeAccounting position/accounting still contain the full step endpoint, while all eight later callbacks contain the unchanged collision point. The old pointGap prerequisite was incorrect. Compare full endpoint and accounting against expected movement, and contact against the swept chord separately. Retain the same tolerance, guarded reads and paired callback validation.
+
+EvaluateImpact is a pure internal include reused by the offline C++ harness. Six applied captured contacts pass the corrected model; two baseline contacts remain unavailable. No exact timestamp or calibrated units. Never treat Track.velocity, full-step counter/dt or an unavailable candidate as authoritative impact speed. Live316 confirmation remains pending. ShowOff impact dispatch follows observed damage callbacks, so it is unsuitable as the damage replacement boundary without additional work.
+
+Impact enrollment now has a separate fixed32-lifetime per-load budget, explicit omissions and baseline-contact counts. Heavy frame detail remains first8. Existing physics source differs from315 by one diagnostic enrollment call only; no new hook, flight rule, damage rule or console message. See source/combat/step3g1/IMPLEMENTATION.md and replay/REPLAY-RESULT.json. Previous source provenance remains in the historical3G ENGINE-FINDINGS.json and release.

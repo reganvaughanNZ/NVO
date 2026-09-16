@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVO combat packet 1 — Copy startup script</title>
+<style>body{font:17px/1.55 system-ui,sans-serif;max-width:850px;margin:40px auto;padding:0 20px;background:#f5f3ed;color:#202823}h1{font-size:28px}button{font:inherit;padding:12px 20px;background:#255744;color:white;border:0;border-radius:6px;cursor:pointer}textarea{display:block;box-sizing:border-box;width:100%;height:450px;margin:20px 0;font:14px/1.5 Consolas,monospace;padding:16px;background:white;color:#202823;border:1px solid #aaa}#status{min-height:1.5em}</style>
+<h1>Combat packet 1: startup foundation</h1>
+<p><strong>Purpose:</strong> Report missing combat prerequisites quietly in the console. This step does not change combat.</p>
+<p><strong>Correction after your successful compile:</strong> This version accepts the installed JIP registration name. Replace the whole script in your existing <strong>NVOCombatBootstrapScript</strong> and recompile. Keep its existing quest. This corrects reporting only; it does not install missing plugins.</p>
+<ol><li>For a first installation only, create a new GECK script with <strong>Script Type: Quest</strong>.</li><li>Copy the complete script below, paste it and compile it.</li><li>Create quest <strong>NVOCombatBootstrapQ</strong>. Set Priority 0, check Start Game Enabled and attach <strong>NVOCombatBootstrapScript</strong>.</li><li>Save NVO.esm, then report the result before continuing.</li></ol>
+<p><button id="copy" type="button">Copy complete script</button></p>
+<p id="status" role="status" aria-live="polite">Script prepared. Compilation and testing are yours.</p>
+<label for="source">NVOCombatBootstrapScript — complete source</label>
+<textarea id="source" readonly spellcheck="false">scn NVOCombatBootstrapScript
+
+short bChecked
+short bFrameworkReady
+short bCorePresent
+short bCombatEnabled
+short iMissingCount
+short iPacket
+long iRunCount
+long iNVSEMajor
+long iNVSEMinor
+float fQuestDelayTime
+
+Begin GameMode
+
+    set fQuestDelayTime to 1
+
+    if GetGameLoaded
+        set bChecked to 0
+    endif
+    if GetGameRestarted
+        set bChecked to 0
+    endif
+
+    if bChecked == 1
+        Return
+    endif
+
+    set bChecked to 1
+    set iPacket to 1
+    set iRunCount to iRunCount + 1
+    set iMissingCount to 0
+    set bFrameworkReady to 0
+    set bCorePresent to 0
+    set bCombatEnabled to 0
+    set iNVSEMajor to GetNVSEVersion
+    set iNVSEMinor to GetNVSERevision
+
+    PrintC &quot;NVO Combat: foundation packet 1 initialized.&quot;
+
+    if iNVSEMajor &lt; 6
+        set iMissingCount to iMissingCount + 1
+        PrintC &quot;NVO Combat: xNVSE 6.3.0 or newer is required.&quot;
+    elseif iNVSEMajor == 6
+        if iNVSEMinor &lt; 3
+            set iMissingCount to iMissingCount + 1
+            PrintC &quot;NVO Combat: xNVSE 6.3.0 or newer is required.&quot;
+        endif
+    endif
+
+    if IsPluginInstalled &quot;JIP LN NVSE&quot; == 0
+        if IsPluginInstalled &quot;JIP NVSE Plugin&quot; == 0
+            set iMissingCount to iMissingCount + 1
+            PrintC &quot;NVO Combat: JIP LN NVSE is missing.&quot;
+        endif
+    endif
+
+    if IsPluginInstalled &quot;JohnnyGuitarNVSE&quot; == 0
+        set iMissingCount to iMissingCount + 1
+        PrintC &quot;NVO Combat: JohnnyGuitar NVSE is missing.&quot;
+    endif
+
+    if IsPluginInstalled &quot;ShowOffNVSE Plugin&quot; == 0
+        set iMissingCount to iMissingCount + 1
+        PrintC &quot;NVO Combat: ShowOff NVSE is missing.&quot;
+    endif
+
+    if IsPluginInstalled &quot;NVOCombatCore&quot;
+        set bCorePresent to 1
+        PrintC &quot;NVO Combat: native plugin detected. Damage hooks remain disabled.&quot;
+    else
+        PrintC &quot;NVO Combat: native plugin not installed. Expected for packet 1.&quot;
+    endif
+
+    if iMissingCount == 0
+        set bFrameworkReady to 1
+        PrintC &quot;NVO Combat: prerequisite plugins detected. Version audit is in the packet.&quot;
+    else
+        PrintC &quot;NVO Combat: missing prerequisites. See the console lines above.&quot;
+    endif
+
+    PrintC &quot;NVO Combat: packet 1 does not change combat.&quot;
+
+End
+</textarea>
+<script>
+const source=document.getElementById('source');
+document.getElementById('copy').addEventListener('click',async()=>{
+ const status=document.getElementById('status');
+ try{if(!navigator.clipboard)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(source.value);status.textContent='Copied. Paste into the new Quest script in GECK.';}
+ catch(e){source.focus();source.select();let copied=false;try{copied=document.execCommand('copy');}catch(ignore){}status.textContent=copied?'Copied. Paste into the new Quest script in GECK.':'Browser blocked clipboard access. The script is selected — press Ctrl+C.';}
+});
+</script></html>

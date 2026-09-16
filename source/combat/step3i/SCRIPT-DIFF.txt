@@ -1,0 +1,221 @@
+--- installed/NVOCombatBootstrapScript
++++ prepared/NVOCombatBootstrapScript
+@@ -10,15 +10,18 @@
+ long iNVSEMajor
+ long iNVSEMinor
+ float fQuestDelayTime
++short bReportMissing
+ 
+ Begin GameMode
+ 
+     set fQuestDelayTime to 1
++    set bReportMissing to 0
+ 
+     if GetGameLoaded
+         set bChecked to 0
+     endif
+     if GetGameRestarted
++        set bReportMissing to 1
+         set bChecked to 0
+     endif
+ 
+@@ -36,47 +39,55 @@
+     set iNVSEMajor to GetNVSEVersion
+     set iNVSEMinor to GetNVSERevision
+ 
+-    PrintC "NVO Combat: foundation packet 1 initialized."
+-
+     if iNVSEMajor < 6
+         set iMissingCount to iMissingCount + 1
+-        PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
++        if bReportMissing == 1
++            PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
++        endif
+     elseif iNVSEMajor == 6
+         if iNVSEMinor < 3
+             set iMissingCount to iMissingCount + 1
+-            PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
++            if bReportMissing == 1
++                PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
++            endif
+         endif
+     endif
+ 
+-    if IsPluginInstalled "JIP NVSE Plugin" == 0
+-        set iMissingCount to iMissingCount + 1
+-        PrintC "NVO Combat: JIP LN NVSE is missing."
++    if IsPluginInstalled "JIP LN NVSE" == 0
++        if IsPluginInstalled "JIP NVSE Plugin" == 0
++            set iMissingCount to iMissingCount + 1
++            if bReportMissing == 1
++                PrintC "NVO Combat: JIP LN NVSE is missing."
++            endif
++        endif
+     endif
+ 
+     if IsPluginInstalled "JohnnyGuitarNVSE" == 0
+         set iMissingCount to iMissingCount + 1
+-        PrintC "NVO Combat: JohnnyGuitar NVSE is missing."
++        if bReportMissing == 1
++            PrintC "NVO Combat: JohnnyGuitar NVSE is missing."
++        endif
+     endif
+ 
+     if IsPluginInstalled "ShowOffNVSE Plugin" == 0
+         set iMissingCount to iMissingCount + 1
+-        PrintC "NVO Combat: ShowOff NVSE is missing."
++        if bReportMissing == 1
++            PrintC "NVO Combat: ShowOff NVSE is missing."
++        endif
+     endif
+ 
+     if IsPluginInstalled "NVOCombatCore"
+         set bCorePresent to 1
+-        PrintC "NVO Combat: native plugin detected. Damage hooks remain disabled."
+     else
+-        PrintC "NVO Combat: native plugin not installed. Expected for packet 1."
++        if bReportMissing == 1
++            PrintC "NVO Combat: NVOCombatCore is missing. Native diagnostics are unavailable."
++        endif
+     endif
+ 
+     if iMissingCount == 0
+         set bFrameworkReady to 1
+-        PrintC "NVO Combat: prerequisite plugins detected. Version audit is in the packet."
+-    else
+-        PrintC "NVO Combat: missing prerequisites. See the console lines above."
++
+     endif
+ 
+-    PrintC "NVO Combat: packet 1 does not change combat."
+ 
+ End
+--- installed/ALTQscript
++++ prepared/ALTQscript
+@@ -21,29 +21,40 @@
+ 	if getgameloaded == 0
+ 		return
+ 	else
++		if GetNVSEVersion < 6
++		    Return
++		elseif GetNVSEVersion == 6
++		    if GetNVSERevision < 3
++		        Return
++		    endif
++		endif
++		if IsPluginInstalled "JIP LN NVSE" == 0
++		    if IsPluginInstalled "JIP NVSE Plugin" == 0
++		        Return
++		    endif
++		endif
++		if IsPluginInstalled "JohnnyGuitarNVSE" == 0
++		    Return
++		endif
++		if IsPluginInstalled "ShowOffNVSE Plugin" == 0
++		    Return
++		endif
++
+ 		if getgamerestarted
+-			If GetNVSEVersion < 6
+-				messageboxex "Alternate Start requires NVSE version 6.3.0 or greater. Make sure you update it or this mod will not work."
+-			ElseIf IsPluginInstalled "JIP NVSE Plugin" == 0
+-				messageboxex "Alternate Start requires JIP LN NVSE. Make sure you have it installed or this mod will not work."
+-			ElseIf IsPluginInstalled "JohnnyGuitarNVSE" == 0
+-				messageboxex "Alternate Start requires JohnnyGuitarNVSE. Make sure you have it installed or this mod will not work."
+-			ElseIf IsPluginInstalled "ShowOffNVSE Plugin" == 0
+-				messageboxex "Alternate Start requires ShowOffNVSE. Make sure you have it installed or this mod will not work."
+-			ElseIf ismodloaded "Better Character Creation.esm"
+-				messageboxex "Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues."
++			If ismodloaded "Better Character Creation.esm"
++				PrintC "Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues."
+ 			ElseIf Eval IsFormOverridden VCG00
+ 				Set ModOverridingIndex to GetFormOverrideIndex VCG00
+ 				Let modName := GetModName ModOverridingIndex 1
+-				messageboxex "The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
++				PrintC "The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+ 				sv_destruct modName
+ 			ElseIf Eval IsFormOverridden VCG01
+ 				Set ModOverridingIndex to GetFormOverrideIndex VCG01
+ 				Let modName := GetModName ModOverridingIndex 1
+-				messageboxex "The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
++				PrintC "The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+ 				sv_destruct modName
+ 			Elseif ismodloaded "YUP - Base Game + All DLC.esm" && GetModIndex "YUP - Base Game + All DLC.esm" > GetModIndex "NVO.esm"
+-				messageboxex "WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues."
++				PrintC "WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues."
+ 			endif
+ 
+ 			SetPerkFlag WildWasteland 1 0
+@@ -134,4 +145,4 @@
+ 			SetEventHandlerAlt "OnHit" ALTRichKidHit 2::Player
+ 		endif
+ 	endif
+-end+end
+--- installed/ALTStartQscript
++++ prepared/ALTStartQscript
+@@ -55,36 +55,43 @@
+ End
+ 
+ Begin gamemode
++	if GetNVSEVersion < 6
++	    Return
++	elseif GetNVSEVersion == 6
++	    if GetNVSERevision < 3
++	        Return
++	    endif
++	endif
++	if IsPluginInstalled "JIP LN NVSE" == 0
++	    if IsPluginInstalled "JIP NVSE Plugin" == 0
++	        Return
++	    endif
++	endif
++	if IsPluginInstalled "JohnnyGuitarNVSE" == 0
++	    Return
++	endif
++	if IsPluginInstalled "ShowOffNVSE Plugin" == 0
++	    Return
++	endif
++
+ 	If getgamerestarted
+-		If GetNVSEVersion < 6
+-			messageboxex "Alternate Start requires NVSE version 6.3.0 or greater. Make sure you update it or this mod will not work."
+-			Return
+-		ElseIf IsPluginInstalled "JIP NVSE Plugin" == 0
+-			messageboxex "Alternate Start requires JIP LN NVSE. Make sure you have it installed or this mod will not work."
+-			Return
+-		ElseIf IsPluginInstalled "JohnnyGuitarNVSE" == 0
+-			messageboxex "Alternate Start requires JohnnyGuitarNVSE. Make sure you have it installed or this mod will not work."
+-			Return
+-		ElseIf IsPluginInstalled "ShowOffNVSE Plugin" == 0
+-			messageboxex "Alternate Start requires ShowOffNVSE. Make sure you have it installed or this mod will not work."
+-			Return
+-		ElseIf ismodloaded "Better Character Creation.esm"
+-			messageboxex "Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues."
++		If ismodloaded "Better Character Creation.esm"
++			PrintC "Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues."
+ 			Return
+ 		ElseIf Eval IsFormOverridden VCG00
+ 			Set ModOverridingIndex to GetFormOverrideIndex VCG00
+ 			Let modName := GetModName ModOverridingIndex 1
+-			messageboxex "The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
++			PrintC "The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+ 			sv_destruct modName
+ 			Return
+ 		ElseIf Eval IsFormOverridden VCG01
+ 			Set ModOverridingIndex to GetFormOverrideIndex VCG01
+ 			Let modName := GetModName ModOverridingIndex 1
+-			messageboxex "The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
++			PrintC "The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+ 			sv_destruct modName
+ 			Return
+ 		Elseif ismodloaded "YUP - Base Game + All DLC.esm" && GetModIndex "YUP - Base Game + All DLC.esm" > GetModIndex "NVO.esm"
+-			messageboxex "WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues."
++			PrintC "WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues."
+ 			return
+ 		endif
+ 	EndIf
+@@ -199,4 +206,4 @@
+ 			ftimer -= GetSecondsPassed
+ 		EndIf
+ 	EndIf
+-End+End

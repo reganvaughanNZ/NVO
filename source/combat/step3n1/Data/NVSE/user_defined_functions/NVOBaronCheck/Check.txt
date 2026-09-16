@@ -1,0 +1,62 @@
+ref rCallback
+ref rBackground
+ref rCaps
+array_var aHandlers
+int iBackground
+int iCaps
+int iGroupsBefore
+int iGroupsAfter
+int iPassed
+int iWritten
+float fBefore
+float fAfter
+float fMargin
+
+begin Function {}
+    SetFunctionValue 0
+    let rCallback := GetFormFromMod "NVO.esm" "0074CA"
+    let rBackground := GetFormFromMod "NVO.esm" "0022E7"
+    let rCaps := GetFormFromMod "FalloutNV.esm" "00000F"
+    if (IsFormValid rCallback) == 0 || (IsFormValid rBackground) == 0 || (IsFormValid rCaps) == 0
+        WriteStringToFile "Data\NVSE\Plugins\NVOBaronCheck.log" 1 "3N1 BLOCKED reason=missing_form%r"
+        PrintC "NVO Baron check: missing required form. Stop and report this."
+        return
+    endif
+
+    let iBackground := GetGlobalVariable rBackground
+    let iCaps := Player.GetItemCount rCaps
+    let fBefore := Player.GetAV Health
+    let fMargin := (iCaps * 0.001) + 10
+    let aHandlers := GetEventHandlers "OnHit" rCallback
+    let iGroupsBefore := ar_Size aHandlers
+    let iWritten := WriteStringToFile "Data\NVSE\Plugins\NVOBaronCheck.log" 1 "3N1 BEGIN background=%.0f caps=%.0f hp_before=%.6f handler_priority_groups=%.0f%r" iBackground iCaps fBefore iGroupsBefore
+    if iWritten == 0
+        PrintC "NVO Baron check: cannot write the log. Stop and report this."
+        return
+    endif
+    if iBackground != 53 || iCaps < 5000 || iCaps > 10000 || fBefore <= fMargin || iGroupsBefore < 0
+        WriteStringToFile "Data\NVSE\Plugins\NVOBaronCheck.log" 1 "3N1 BLOCKED reason=preconditions%r"
+        PrintC "NVO Baron check: use a healthy new Brahmin Baron with 5000 to 10000 caps. Report BLOCKED if already correct."
+        return
+    endif
+
+    Call rCallback Player Player
+    let fAfter := Player.GetAV Health
+    let aHandlers := GetEventHandlers "OnHit" rCallback
+    let iGroupsAfter := ar_Size aHandlers
+    let iPassed := 0
+    if fBefore == fAfter && iGroupsBefore == 0 && iGroupsAfter == 0
+        let iPassed := 1
+    endif
+    let iWritten := WriteStringToFile "Data\NVSE\Plugins\NVOBaronCheck.log" 1 "3N1 END expected_result=%.0f hp_after=%.6f handler_priority_groups=%.0f call_target=player call_attacker=player gameplay_setters=0%r" iPassed fAfter iGroupsAfter
+    if iWritten == 0
+        PrintC "NVO Baron check: could not finish writing the log. Stop and report this."
+        return
+    endif
+    if iPassed
+        PrintC "NVO Baron check: expected result recorded. No retired handler and HP unchanged."
+    else
+        PrintC "NVO Baron check: unexpected result recorded. Stop and report this."
+    endif
+    SetFunctionValue iPassed
+end

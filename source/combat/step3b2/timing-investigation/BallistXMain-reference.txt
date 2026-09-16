@@ -1,0 +1,291 @@
+scn BallistXMain
+
+ref rProj
+
+int iIndex
+
+array_var arrTemporary
+array_var arrCartridgeData
+array_var arrWeaponData
+array_var arrG1
+array_var arrG2
+array_var arrG5
+array_var arrG6
+array_var arrG7
+array_var arrG8
+array_var arrGS
+
+array_var arrThisCartridge
+array_var arrThisWeapon
+
+int iBulletGP
+int iMach
+
+float fMetricMass
+float fMetricCrossArea
+float fCartridgeVM
+float fCartridgePP
+float fCartridgeVT
+float fCartridgeBDMG
+float fProjWeaponBL
+float fProjWeaponZ
+float fSDBCRatio
+
+float fProjTravelDistance
+float fRelMuzzleVelocity
+
+float fTurretElevation
+float fTurretWindage
+
+float fProjStartAngleX
+float fProjStartAngleZ
+float fBulletDropX
+float fBulletWindDeflectionZ
+
+float fTimeCorrection
+float fTimeOld
+float fTimeNew
+float fTimeCode
+float fTimeLag
+float fSpeedMultOld
+float fSpeedMultNew
+float fSpeedOld
+float fCD
+float fDeceleration
+float fProjDamage
+
+begin Gamemode
+	if GetGameLoaded || GetGameRestarted
+		
+		;;;;; Loading Cartridge Data ;;;;;
+		if FileExists "Config\BallistX\Data\CartridgeData.cfg"
+			let arrCartridgeData := Call BallistXAnyCartridgeDataUDF "Config\BallistX\Data\CartridgeData.cfg"
+			let arrTemporary := Call BallistXCustomCartridgeDataUDF
+			Ar_Cat arrCartridgeData arrTemporary 1
+			let arrTemporary := Ar_Null
+		else
+			let arrCartridgeData := Call BallistXCustomCartridgeDataUDF
+			if eval arrCartridgeData == Ar_Null
+				print "BallistX: No Cartridge Data found"
+			endif
+		endif
+		
+		;;;;; Loading Weapon Data ;;;;;
+		if FileExists "Config\BallistX\Data\WeaponData.cfg"
+			let arrWeaponData := Call BallistXAnyWeaponDataUDF "Config\BallistX\Data\WeaponData.cfg"
+			let arrTemporary := Call BallistXCustomWeaponDataUDF
+			Ar_Cat arrWeaponData arrTemporary 1
+			let arrTemporary := Ar_Null
+		else
+			let arrWeaponData := Call BallistXCustomWeaponDataUDF
+			if eval arrWeaponData == Ar_Null
+				print "BallistX: No Weapon Data found"
+			endif
+		endif
+		
+		;;;;; Loading G-Drag functions (hard requirement) ;;;;;
+
+		if FileExists "Config\BallistX\Functions\G1_DragFunction.cfg"
+			let arrG1 := ReadArrayFromFile "Data\Config\BallistX\Functions\G1_DragFunction.cfg"
+		else
+			print "BallistX:G1_DragFunction.cfg missing"
+		endif
+		
+		if FileExists "Config\BallistX\Functions\G2_DragFunction.cfg"
+			let arrG2 := ReadArrayFromFile "Data\Config\BallistX\Functions\G2_DragFunction.cfg"
+		else
+			print "BallistX:G2_DragFunction.cfg missing"
+		endif
+		
+		if FileExists "Config\BallistX\Functions\G5_DragFunction.cfg"
+			let arrG5 := ReadArrayFromFile "Data\Config\BallistX\Functions\G5_DragFunction.cfg"
+		else
+			print "BallistX:G5_DragFunction.cfg missing"
+		endif
+		
+		if FileExists "Config\BallistX\Functions\G6_DragFunction.cfg"
+			let arrG6 := ReadArrayFromFile "Data\Config\BallistX\Functions\G6_DragFunction.cfg"
+		else
+			print "BallistX:G6_DragFunction.cfg missing"
+		endif
+		
+		if FileExists "Config\BallistX\Functions\G7_DragFunction.cfg"
+			let arrG7 := ReadArrayFromFile "Data\Config\BallistX\Functions\G7_DragFunction.cfg"
+		else
+			print "BallistX:G7_DragFunction.cfg missing"
+		endif
+		
+		if FileExists "Config\BallistX\Functions\G8_DragFunction.cfg"
+			let arrG8 := ReadArrayFromFile "Data\Config\BallistX\Functions\G8_DragFunction.cfg"
+		else
+			print "BallistX:G8_DragFunction.cfg missing"
+		endif
+		
+		if FileExists "Config\BallistX\Functions\GS_DragFunction.cfg"
+			let arrGS := ReadArrayFromFile "Data\Config\BallistX\Functions\GS_DragFunction.cfg"
+		else
+			print "BallistX:GS_DragFunction.cfg missing"
+		endif
+	endif
+	
+	;;;;;;;;;;;;;;;;;;;;;;;
+	;;;; Main Function ;;;;
+	;;;;;;;;;;;;;;;;;;;;;;;
+	
+	let rProj := (GetFirstRef 51 3)
+	while rProj
+		if TestExpr (let arrThisCartridge := arrCartridgeData[(GetFormIDString (rProj.gbf))])
+			; Drag Model
+			let iBulletGP := arrThisCartridge[0]
+			
+			; Bullet Mass in kg
+			let fMetricMass := arrThisCartridge[2]
+			
+			; Bullet Cross Area
+			let fMetricCrossArea := arrThisCartridge[4]
+			
+			; Bullet SD/BC - ratio
+			let fSDBCRatio := arrThisCartridge[6]
+			
+			; Cartridge Max Velocity in m/s
+			let fCartridgeVM := arrThisCartridge[7]
+			
+			; Cartrigde Bullet Travel before Peak Pressure in in
+			let fCartridgePP := arrThisCartridge[8]
+			
+			; Cartridge Velocity Change with Temperature in m/s per K
+			let fCartridgeVT := arrThisCartridge[9]
+			
+			; Cartrigde Base Damage
+			let fCartridgeBDMG := arrThisCartridge[10]
+			
+			; Getting Weapon Data & Adjust to the Weapon's specific Traits such as Barrel Length
+			; Set generic Data if there is no Weapon Data available
+			
+			if TestExpr (let arrThisWeapon := arrWeaponData[(GetFormIDString (rProj.GetProjectileRefWeapon))])
+				; Weapon Barrel Length
+				let fProjWeaponBL := arrThisWeapon[0]
+				
+				; Weapon Zero
+				let fProjWeaponZ := arrThisWeapon[1]
+				
+				; Le Duc Equation / Velocity Change with Barrel Length
+				let fRelMuzzleVelocity := fProjWeaponBL/(fProjWeaponBL+2*fCartridgePP)					; MuzzleVelocity=MaxVelocity*(BarrelLength/(BarrelLength+2*PressurePeakDistance))
+			else
+				let fProjWeaponZ := 0
+				let fRelMuzzleVelocity := 0.8
+			endif
+			
+			;Turret Elevation/Windage
+			let fTurretElevation := 0
+			let fTurretWindage := 0
+			if ((rProj.GetProjectileRefSource) == PlayerREF) && PlayerREF.IsEquippedWeaponScoped
+				let fTurretElevation := fgTurretElevation
+				let fTurretWindage := fgTurretWindage
+			endif
+			
+			; Update / Get last updated Projectile Lifetime & Get current Projectile Lifetime
+			; Auto corrects poor time measurements, not bulletproof though
+			
+			let fProjTravelDistance := (rProj.GetProjectileRefDistanceTraveled/70)
+			let fTimeOld := (rProj.GetAngle Y)
+			let fTimeNew := (rProj.GetProjectileRefLifeTime)
+			if fProjTravelDistance == 0
+				rProj.SetProjectileRefSpeedMult fRelMuzzleVelocity
+				let fTimeCode := 10000*(RoundAlt fTimeNew 3 1)
+				let fTimeNew := 0
+				
+				; Relative Muzzle Velocity Change with Temperature
+				let fCartridgeVT := 1+fCartridgeVT*(fgTemperature-288.15)/fCartridgeVM					; 288.15K because 15°C is standardized
+			else
+				let fTimeCorrection := (RoundAlt (fTimeOld/10000) 3 1)
+				let fTimeOld -= fTimeCorrection*10000
+				let fTimeNew -= fTimeCorrection
+				let fTimeCode := fTimeCorrection*10000+fTimeNew
+				
+				let fCartridgeVT := 1
+			endif
+			
+			; Get Speed Multiplier
+			let fSpeedMultOld := (rProj.GetProjectileRefSpeedMult)
+			let fSpeedOld := fSpeedMultOld*fCartridgeVM
+			
+			; Get Mach Number
+			let iMach := 10*fSpeedOld/fgSpeedOfSound						; iMach = Mach*10
+			
+			; Getting the associated Drag Model and Adjustment
+			if (iMach >= 0) && (iMach <= 50)
+				if eval iBulletGP == 10
+					let fCD := arrGS[1][iMach]
+				elseif eval iBulletGP == 1
+					let fCD := arrG1[1][iMach]
+				elseif eval iBulletGP == 7
+					let fCD := arrG7[1][iMach]
+				elseif eval iBulletGP == 5
+					let fCD := arrG5[1][iMach]
+				elseif eval iBulletGP == 2
+					let fCD := arrG2[1][iMach]
+				elseif eval iBulletGP == 6
+					let fCD := arrG6[1][iMach]
+				elseif eval iBulletGP == 8
+					let fCD := arrG8[1][iMach]
+				else
+					let fCD := 0.5
+				endif
+			else
+				let fCD := 0.5
+			endif
+			
+			; Formulas - GREEK letters won't be displayed in GECK or xEdit :(
+			; C_D = fCD*SD/BC, drag coefficient
+			; a = ?*A*C_D*v²/(2m), deceleration
+			; v(t) = v(t-?t)-a*(?t), v(t)/v(0) = SpeedMult, v(0) in this case is not the muzzle velocity, but the maximum velocity
+			; t_vac(x) = x/v(x), time of flight in vacuum
+			; t_lag(x) = t(x)-t_vac(x), lag time
+			; d(x) = 0.5g*(t(x)²-t_lag(x)²), bullet drop (approximation)
+			; w(x,WindAngle) = v_w*t_lag(x)*sin(WindAngle), wind deflection
+			; deflAngle = 2*atan(d(x)/x²), deflection angle
+			
+			; Setting up the new Speed Multiplier
+			let fDeceleration := fgAirDensity*fMetricCrossArea*fCD*fSDBCRatio*fSpeedOld*fSpeedOld/(2*fMetricMass)
+			let fSpeedMultNew := fCartridgeVT*(fSpeedOld-fDeceleration*(fTimeNew-fTimeOld))/fCartridgeVM
+			
+			; Lag Time
+			let fTimeLag := fTimeNew-fProjTravelDistance/(fRelMuzzleVelocity*fCartridgeVM)
+			
+			; Calculating Bullet Drop pt1
+			let fProjStartAngleX := (rProj.GetStartingAngle X)
+			let fBulletDropX := 4.905*(fTimeNew*fTimeNew-fTimeLag*fTimeLag)
+			
+			; Calculating Wind Drift pt1
+			let fProjStartAngleZ := (rProj.GetStartingAngle Z)
+			let fBulletWindDeflectionZ := GetWindSpeed*fgMaxWindspeed*fTimeLag
+			
+			; Calculating Bullet Drop & Wind Drift pt2
+			if fProjTravelDistance != 0
+				let fBulletDropX /= fProjTravelDistance*fProjTravelDistance
+				let fBulletWindDeflectionZ /= fProjTravelDistance*fProjTravelDistance
+			else
+				let fBulletDropX := 0
+				let fBulletWindDeflectionZ := 0
+			endif
+			let fBulletDropX := 2.3*fProjTravelDistance*(fatan fBulletDropX)*(fcos fProjStartAngleX)+fProjStartAngleX-fProjWeaponZ/60-fTurretElevation							; 1.15 Correction Factor
+			let fBulletWindDeflectionZ := 2.5*(fatan fBulletWindDeflectionZ)*fProjTravelDistance*(fsin (GetWindDirection - fProjStartAngleZ))+fProjStartAngleZ+fTurretWindage	; 1.25 Correction Factor
+			
+			; Calculating Base Damage
+			let fProjDamage := fCartridgeBDMG*fSpeedMultNew
+			
+			; Apply everything
+			rProj.SetProjectileRefSpeedMult fSpeedMultNew
+			rProj.SetAngleEx fBulletDropX fTimeCode fBulletWindDeflectionZ
+			rProj.SetProjectileRefDamage fProjDamage
+			
+			; Delete Projectile if Lifetime>3s
+			if fTimeNew>3
+				rProj.Disable
+				rProj.MarkForDelete
+			endif
+		endif
+		let rProj := GetNextRef
+	loop
+end

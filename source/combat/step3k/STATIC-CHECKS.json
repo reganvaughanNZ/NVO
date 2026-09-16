@@ -1,0 +1,99 @@
+{
+  "machine": "PE32 x86",
+  "exports": [
+    "NVSEPlugin_Load",
+    "NVSEPlugin_Query"
+  ],
+  "warnings": 0,
+  "dll_sha256": "149dad7115cd8afee5bd51bfa383d113f4f676fb4bb4bb879a5382c34200b49a",
+  "pdb_sha256": "7203850b556bec7c398b79f3218060100196119597dc559b69b1bb80da192a96",
+  "codeview_pdb_guid": "62208990-2603-4aa4-9386-a8beda7bb8ee",
+  "pdb_age": 1,
+  "pdb_pair_verified": true,
+  "dll_bytes": 309760,
+  "pdb_bytes": 4476928,
+  "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+  "packet": "3K",
+  "version": 319,
+  "unchanged_sources": [
+    "src/CurrentHit.cpp",
+    "src/DamageEvents.cpp",
+    "src/Exports.def",
+    "src/FlightImpact.inl",
+    "src/FlightImpactJoin.inl",
+    "src/FlightImpactModel.inl",
+    "src/FlightPhysics.cpp",
+    "src/FlightTiming.cpp",
+    "src/HitTransactionGuards.inl",
+    "src/NativeLog.cpp",
+    "src/NativeObserver.cpp",
+    "include/CurrentHit.hpp",
+    "include/DamageEvents.hpp",
+    "include/FlightDragData.hpp",
+    "include/FlightPhysics.hpp",
+    "include/FlightPreview.hpp",
+    "include/FlightTiming.hpp",
+    "include/NativeLog.hpp",
+    "include/NativeObserver.hpp",
+    "include/NvseBootstrapApi.hpp",
+    "config/NVOFlightPhysics.ini",
+    "config/NVOFlightPreview.ini"
+  ],
+  "preserved_compiled_bridges": [
+    "FlightPhysics::LocalZBridge",
+    "FlightPhysics::TerrainBridge",
+    "FlightPhysics::CommitBridge",
+    "FlightPhysics::NodeBridge",
+    "FlightPhysics::MovementBridge",
+    "FlightPhysics::AccountingBridge",
+    "FlightPhysics::ControllerDispatchBridge",
+    "FlightPhysics::ControllerDirectBridge",
+    "FlightPhysics::ControllerReturnBridge",
+    "CurrentHit::CopyObserver",
+    "HitTransaction::EntryBridge",
+    "HitTransaction::ReturnBridge",
+    "HitTransaction::Entry0",
+    "HitTransaction::Entry1",
+    "HitTransaction::Entry2",
+    "HitTransaction::Entry3",
+    "HitTransaction::Entry4",
+    "HitTransaction::Entry5"
+  ],
+  "new_bridges_match_offline_probe": true,
+  "probe_engine_reads": "mocked; live read values pending user checkpoint",
+  "offline_checks": 14,
+  "log_format_bounds": [
+    {
+      "row": "AV_APPLY_SUMMARY",
+      "maximum_bytes": 472
+    },
+    {
+      "row": "AV_APPLY_BEGIN",
+      "maximum_bytes": 399
+    },
+    {
+      "row": "AV_APPLY_END",
+      "maximum_bytes": 452
+    },
+    {
+      "row": "AV_APPLY_DISABLED",
+      "maximum_bytes": 94
+    },
+    {
+      "row": "AV_APPLY_PROTECTION_RESTORE_FAILED",
+      "maximum_bytes": 49
+    },
+    {
+      "row": "AV_APPLY_HOOK_READY",
+      "maximum_bytes": 156
+    },
+    {
+      "row": "AV_APPLY_READY",
+      "maximum_bytes": 222
+    }
+  ],
+  "gameplay_tested": false,
+  "damage_replacement": false,
+  "record_changes": false,
+  "flight_changes": false
+}

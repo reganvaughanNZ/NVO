@@ -1,0 +1,111 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-132934\pitch_getter.obj
+
+File Type: COFF OBJECT
+
+  00931D70: 55                 push        ebp
+  00931D71: 8B EC              mov         ebp,esp
+  00931D73: 51                 push        ecx
+  00931D74: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00931D77: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00931D7A: E8 B1 EA AF FF     call        00430830
+  00931D7F: D9 00              fld         dword ptr [eax]
+  00931D81: 8B E5              mov         esp,ebp
+  00931D83: 5D                 pop         ebp
+  00931D84: C3                 ret
+  00931D85: CC                 int         3
+  00931D86: CC                 int         3
+  00931D87: CC                 int         3
+  00931D88: CC                 int         3
+  00931D89: CC                 int         3
+  00931D8A: CC                 int         3
+  00931D8B: CC                 int         3
+  00931D8C: CC                 int         3
+  00931D8D: CC                 int         3
+  00931D8E: CC                 int         3
+  00931D8F: CC                 int         3
+  00931D90: 55                 push        ebp
+  00931D91: 8B EC              mov         ebp,esp
+  00931D93: 83 EC 10           sub         esp,10h
+  00931D96: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  00931D99: D9 05 F8 A7 08 01  fld         dword ptr ds:[0108A7F8h]
+  00931D9F: D9 5D FC           fstp        dword ptr [ebp-4]
+  00931DA2: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  00931DA5: 8B 10              mov         edx,dword ptr [eax]
+  00931DA7: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00931DAA: 8B 82 00 01 00 00  mov         eax,dword ptr [edx+00000100h]
+  00931DB0: FF D0              call        eax
+  00931DB2: 0F B6 C8           movzx       ecx,al
+  00931DB5: 85 C9              test        ecx,ecx
+  00931DB7: 74 3C              je          00931DF5
+  00931DB9: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00931DBC: 89 55 F8           mov         dword ptr [ebp-8],edx
+  00931DBF: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00931DC2: 8B 10              mov         edx,dword ptr [eax]
+  00931DC4: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  00931DC7: 8B 82 14 02 00 00  mov         eax,dword ptr [edx+00000214h]
+  00931DCD: FF D0              call        eax
+  00931DCF: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  00931DD2: 83 7D F0 00        cmp         dword ptr [ebp-10h],0
+  00931DD6: 7E 1D              jle         00931DF5
+  00931DD8: 83 7D F0 05        cmp         dword ptr [ebp-10h],5
+  00931DDC: 7E 02              jle         00931DE0
+  00931DDE: EB 15              jmp         00931DF5
+  00931DE0: B9 CC D8 1C 01     mov         ecx,11CD8CCh
+  00931DE5: E8 36 20 AD FF     call        00403E20
+  00931DEA: D9 00              fld         dword ptr [eax]
+  00931DEC: DC 0D 28 31 02 01  fmul        qword ptr ds:[01023128h]
+  00931DF2: D9 5D FC           fstp        dword ptr [ebp-4]
+  00931DF5: D9 45 08           fld         dword ptr [ebp+8]
+  00931DF8: DC 1D F0 A7 08 01  fcomp       qword ptr ds:[0108A7F0h]
+  00931DFE: DF E0              fnstsw      ax
+  00931E00: F6 C4 05           test        ah,5
+  00931E03: 7A 14              jp          00931E19
+  00931E05: 51                 push        ecx
+  00931E06: D9 05 EC A7 08 01  fld         dword ptr ds:[0108A7ECh]
+  00931E0C: D9 1C 24           fstp        dword ptr [esp]
+  00931E0F: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00931E12: E8 59 39 C4 FF     call        00575770
+  00931E17: EB 2F              jmp         00931E48
+  00931E19: D9 45 08           fld         dword ptr [ebp+8]
+  00931E1C: D9 45 FC           fld         dword ptr [ebp-4]
+  00931E1F: DE D9              fcompp
+  00931E21: DF E0              fnstsw      ax
+  00931E23: F6 C4 05           test        ah,5
+  00931E26: 7A 11              jp          00931E39
+  00931E28: 51                 push        ecx
+  00931E29: D9 45 FC           fld         dword ptr [ebp-4]
+  00931E2C: D9 1C 24           fstp        dword ptr [esp]
+  00931E2F: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00931E32: E8 39 39 C4 FF     call        00575770
+  00931E37: EB 0F              jmp         00931E48
+  00931E39: 51                 push        ecx
+  00931E3A: D9 45 08           fld         dword ptr [ebp+8]
+  00931E3D: D9 1C 24           fstp        dword ptr [esp]
+  00931E40: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00931E43: E8 28 39 C4 FF     call        00575770
+  00931E48: 8B E5              mov         esp,ebp
+  00931E4A: 5D                 pop         ebp
+  00931E4B: C2 04 00           ret         4
+  00931E4E: CC                 int         3
+  00931E4F: CC                 int         3
+  00931E50: 55                 push        ebp
+  00931E51: 8B EC              mov         ebp,esp
+  00931E53: 83 EC 08           sub         esp,8
+  00931E56: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00931E59: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00931E5C: E8 0F FF FF FF     call        00931D70
+  00931E61: D8 45 08           fadd        dword ptr [ebp+8]
+  00931E64: D9 5D F8           fstp        dword ptr [ebp-8]
+  00931E67: D9 45 F8           fld         dword ptr [ebp-8]
+  00931E6A: 51                 push        ecx
+  00931E6B: D9 1C 24           fstp        dword ptr [esp]
+  00931E6E: 8B
+  00931E6F: 4D                 dec         ebp
+
+  Summary
+
+         100 .text

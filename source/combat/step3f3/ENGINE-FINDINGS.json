@@ -1,0 +1,48 @@
+{
+  "saved_capture": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3b2\\timing-investigation\\runtime-20260915-102703",
+  "code_sha256": "f6c95eb7e7ea3f5968770d6a8b807260f160e08ff2be6e085ade515376f3b452",
+  "ranges": [
+    {
+      "name": "firing_range_initialization_and_multiplier",
+      "start": "009BDCFE",
+      "bytes": 200,
+      "sha256": "5ce9fd833182308bd11e8daf43be3ed83e9107599968bf4d6111f9a828aeb7e4"
+    },
+    {
+      "name": "passing_sound_range_use",
+      "start": "009BF0B8",
+      "bytes": 48,
+      "sha256": "ad79080ac60d469d9359e60e11c938b730546ede76a40d9dbaa872253fa25b74"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameObjects.h",
+      "sha256": "3f16c3c9b58bdd55026d413eb94a340f11b49b27dc5b4eaacba6e33b2b38ff31"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\internal\\settings_enum.h",
+      "sha256": "0cca9d9cecaf495c9b0d19bb2a10e9097368692511631263b1cabd3f60f8abc0"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\Stewie Tweaks 10.00 Source\\nvse\\nvse\\GameObjects.h",
+      "sha256": "1146ab8e01d2c47ac25ddb8ee7db8cc6489e1b70094c4d844be681ac2518e4f4"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\Stewie Tweaks 10.00 Source\\nvse\\nvse\\GameSettingCollection.cpp",
+      "sha256": "4a045057b927f4de8718d0e8baf354e0d1440ed3e10e238db44ebd5e8f110213"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\handlers\\OnNearMissHandler.cpp",
+      "sha256": "7461a978a48dd5f28b4da78b51665fba3921959e941939ab1fe89c73dcf2ee18"
+    }
+  ],
+  "instance_range_offset": "D4",
+  "base_range_offset": "6C",
+  "excluded_sound_range_offset": "14C",
+  "multiplier_setting": "fCombatIronSightsRangeMult",
+  "multiplier_setting_address": "011CE5F4",
+  "vats_multiplier_claimed": false,
+  "new_runtime_capture": false,
+  "engine_bytes_distributed": false
+}

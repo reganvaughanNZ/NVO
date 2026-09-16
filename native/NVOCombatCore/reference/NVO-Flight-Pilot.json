@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "packet": "3A",
+  "status": "passive_source_data_not_runtime_configuration",
+  "installed_native_version": 203,
+  "runtime_reader_implemented": false,
+  "projectile_changes_enabled": false,
+  "damage_changes_enabled": false,
+  "muzzle_preview_formula": "maximum_velocity * barrel_length / (barrel_length + 2 * peak_pressure_travel)",
+  "form_keys": "Originating plugin filename plus six-digit local ID. Never a hard-coded load-order prefix.",
+  "profiles": [
+    {
+      "id": "9mm-pistol-standard",
+      "match": {
+        "weapon": "FalloutNV.esm:0E3778",
+        "ammunition": "FalloutNV.esm:08ED03",
+        "projectile_base": "FalloutNV.esm:08F20F",
+        "policy": "All three must match the live shot. Otherwise preserve engine behaviour."
+      },
+      "record_identities": {
+        "weapon": {
+          "type": "WEAP",
+          "EDID": "WeapNV9mmPistol",
+          "FULL": "9mm Pistol"
+        },
+        "ammunition": {
+          "type": "AMMO",
+          "EDID": "Ammo9mm",
+          "FULL": "9mm Round"
+        },
+        "projectile": {
+          "type": "PROJ",
+          "EDID": "9mmBulletProjectile",
+          "FULL": "9mm Bullet"
+        }
+      },
+      "flight_inputs": {
+        "drag_curve": "G1",
+        "ballistic_coefficient_lb_per_in2": 0.155,
+        "mass_grain": 115.0,
+        "diameter_in": 0.355,
+        "maximum_velocity_m_per_s": 453.0,
+        "bullet_travel_before_peak_pressure_in": 0.4,
+        "barrel_length_in": 4.7,
+        "reference_temperature_k": 288.15
+      },
+      "preview_only": {
+        "muzzle_velocity_m_per_s_at_reference_temperature": 387.109091,
+        "mass_kg": 0.007451874649999999,
+        "diameter_m": 0.009016999999999999,
+        "barrel_length_m": 0.11938
+      },
+      "donor_source": {
+        "cartridge": {
+          "member": "Config/BallistX/Data/CartridgeData.cfg",
+          "line": 231,
+          "original_row": "@FalloutNV.esm:08F20F\t\t\t1\t0.155\t115\t\t0.355\t453\t\t0.4\t\t0.6\t\t37\t\t; 919-M882"
+        },
+        "weapon": {
+          "member": "Config/BallistX/Data/WeaponData.cfg",
+          "line": 10,
+          "original_row": "@FalloutNV.esm:0E3778\t\t\t\t4.7\t\t1.6\t\t12.0\t; 9mm Pistol\t\t\t\t\t\t; 919-M882, 15m, Browning Hi-Power"
+        }
+      },
+      "unused_donor_values": {
+        "base_damage": 37.0,
+        "zero_moa": 1.6,
+        "precision_moa": 12.0,
+        "temperature_velocity_coefficient_m_per_s_per_k": 0.6
+      }
+    },
+    {
+      "id": "hunting-rifle-standard-308",
+      "match": {
+        "weapon": "FalloutNV.esm:004333",
+        "ammunition": "FalloutNV.esm:06B53C",
+        "projectile_base": "FalloutNV.esm:08F20A",
+        "policy": "All three must match the live shot. Otherwise preserve engine behaviour."
+      },
+      "record_identities": {
+        "weapon": {
+          "type": "WEAP",
+          "EDID": "WeapHuntingRifle",
+          "FULL": "Hunting Rifle"
+        },
+        "ammunition": {
+          "type": "AMMO",
+          "EDID": "Ammo308",
+          "FULL": ".308 Round"
+        },
+        "projectile": {
+          "type": "PROJ",
+          "EDID": "308BulletProjectile",
+          "FULL": ".308 Bullet"
+        }
+      },
+      "flight_inputs": {
+        "drag_curve": "G7",
+        "ballistic_coefficient_lb_per_in2": 0.209,
+        "mass_grain": 147.0,
+        "diameter_in": 0.308,
+        "maximum_velocity_m_per_s": 1012.0,
+        "bullet_travel_before_peak_pressure_in": 2.1,
+        "barrel_length_in": 22.0,
+        "reference_temperature_k": 288.15
+      },
+      "preview_only": {
+        "muzzle_velocity_m_per_s_at_reference_temperature": 849.770992,
+        "mass_kg": 0.00952543977,
+        "diameter_m": 0.007823199999999999,
+        "barrel_length_m": 0.5588
+      },
+      "donor_source": {
+        "cartridge": {
+          "member": "Config/BallistX/Data/CartridgeData.cfg",
+          "line": 196,
+          "original_row": "@FalloutNV.esm:08F20A\t\t\t7\t0.209\t147\t\t0.308\t1012\t2.1\t\t0.6\t\t67\t\t; 762-M80"
+        },
+        "weapon": {
+          "member": "Config/BallistX/Data/WeaponData.cfg",
+          "line": 30,
+          "original_row": "@FalloutNV.esm:004333\t\t\t\t22.0\t2.8\t\t1.31\t; Hunting Rifle\t\t\t\t\t\t; 762-Mk316, 100m, Winchester Model 70"
+        }
+      },
+      "unused_donor_values": {
+        "base_damage": 67.0,
+        "zero_moa": 2.8,
+        "precision_moa": 1.31,
+        "temperature_velocity_coefficient_m_per_s_per_k": 0.6
+      }
+    }
+  ],
+  "drag_curves": {
+    "G1": {
+      "source_member": "Config/BallistX/Functions/G1_DragFunction.cfg",
+      "columns": [
+        "mach",
+        "drag_coefficient"
+      ],
+      "samples": [
+        [
+          0.0,
+          0.2629
+        ],
+        [
+          0.1,
+          0.2487
+        ],
+        [
+          0.2,
+          0.2344
+        ],
+        [
+          0.3,
+          0.2214
+        ],
+        [
+          0.4,
+          0.2104
+        ],
+        [
+          0.5,
+          0.2032
+        ],
+        [
+          0.6,
+          0.2034
+        ],
+        [
+          0.7,
+          0.2165
+        ],
+        [
+          0.8,
+          0.2546
+        ],
+        [
+          0.9,
+          0.3415
+        ],
+        [
+          1.0,
+          0.4805
+        ],
+        [
+          1.1,
+          0.5883
+        ],
+        [
+          1.2,
+          0.6393
+        ],
+        [
+          1.3,
+          0.6589
+        ],
+        [
+          1.4,
+          0.6625
+        ],
+        [
+          1.5,
+          0.6573
+        ],
+        [
+          1.6,
+          0.6474
+        ],
+        [
+          1.7,
+          0.6347
+        ],
+        [
+          1.8,
+          0.621
+        ],
+        [
+          1.9,
+          0.6072
+        ],
+        [
+          2.0,
+          0.5934
+        ],
+        [
+          2.1,
+          0.5804
+        ],
+        [
+          2.2,
+          0.5685
+        ],
+        [
+          2.3,
+          0.5577
+        ],
+        [
+          2.4,
+          0.5481
+        ],
+        [
+          2.5,
+          0.5397
+        ],
+        [
+          2.6,
+          0.5325
+        ],
+        [
+          2.7,
+          0.5264
+        ],
+        [
+          2.8,
+          0.5211
+        ],
+        [
+          2.9,
+          0.5168
+        ],
+        [
+          3.0,
+          0.5133
+        ],
+        [
+          3.1,
+          0.5105
+        ],
+        [
+          3.2,
+          0.5084
+        ],
+        [
+          3.3,
+          0.5067
+        ],
+        [
+          3.4,
+          0.5054
+        ],
+        [
+          3.5,
+          0.504
+        ],
+        [
+          3.6,
+          0.503
+        ],
+        [
+          3.7,
+          0.5022
+        ],
+        [
+          3.8,
+          0.5016
+        ],
+        [
+          3.9,
+          0.501
+        ],
+        [
+          4.0,
+          0.5006
+        ],
+        [
+          4.1,
+          0.5002
+        ],
+        [
+          4.2,
+          0.4998
+        ],
+        [
+          4.3,
+          0.4997
+        ],
+        [
+          4.4,
+          0.4995
+        ],
+        [
+          4.5,
+          0.4993
+        ],
+        [
+          4.6,
+          0.4992
+        ],
+        [
+          4.7,
+          0.4991
+        ],
+        [
+          4.8,
+          0.499
+        ],
+        [
+          4.9,
+          0.4989
+        ],
+        [
+          5.0,
+          0.4988
+        ]
+      ]
+    },
+    "G7": {
+      "source_member": "Config/BallistX/Functions/G7_DragFunction.cfg",
+      "columns": [
+        "mach",
+        "drag_coefficient"
+      ],
+      "samples": [
+        [
+          0.0,
+          0.1198
+        ],
+        [
+          0.1,
+          0.1196
+        ],
+        [
+          0.2,
+          0.1193
+        ],
+        [
+          0.3,
+          0.1194
+        ],
+        [
+          0.4,
+          0.1193
+        ],
+        [
+          0.5,
+          0.1194
+        ],
+        [
+          0.6,
+          0.1194
+        ],
+        [
+          0.7,
+          0.1202
+        ],
+        [
+          0.8,
+          0.1242
+        ],
+        [
+          0.9,
+          0.1464
+        ],
+        [
+          1.0,
+          0.3803
+        ],
+        [
+          1.1,
+          0.4014
+        ],
+        [
+          1.2,
+          0.3884
+        ],
+        [
+          1.3,
+          0.3732
+        ],
+        [
+          1.4,
+          0.358
+        ],
+        [
+          1.5,
+          0.344
+        ],
+        [
+          1.6,
+          0.3315
+        ],
+        [
+          1.7,
+          0.3209
+        ],
+        [
+          1.8,
+          0.3117
+        ],
+        [
+          1.9,
+          0.3042
+        ],
+        [
+          2.0,
+          0.298
+        ],
+        [
+          2.1,
+          0.2922
+        ],
+        [
+          2.2,
+          0.2864
+        ],
+        [
+          2.3,
+          0.2807
+        ],
+        [
+          2.4,
+          0.2752
+        ],
+        [
+          2.5,
+          0.2697
+        ],
+        [
+          2.6,
+          0.2643
+        ],
+        [
+          2.7,
+          0.2588
+        ],
+        [
+          2.8,
+          0.2533
+        ],
+        [
+          2.9,
+          0.2479
+        ],
+        [
+          3.0,
+          0.2424
+        ],
+        [
+          3.1,
+          0.2368
+        ],
+        [
+          3.2,
+          0.2313
+        ],
+        [
+          3.3,
+          0.2258
+        ],
+        [
+          3.4,
+          0.2205
+        ],
+        [
+          3.5,
+          0.2154
+        ],
+        [
+          3.6,
+          0.2106
+        ],
+        [
+          3.7,
+          0.206
+        ],
+        [
+          3.8,
+          0.2017
+        ],
+        [
+          3.9,
+          0.1975
+        ],
+        [
+          4.0,
+          0.1935
+        ],
+        [
+          4.1,
+          0.1898
+        ],
+        [
+          4.2,
+          0.1861
+        ],
+        [
+          4.3,
+          0.1827
+        ],
+        [
+          4.4,
+          0.1793
+        ],
+        [
+          4.5,
+          0.1762
+        ],
+        [
+          4.6,
+          0.173
+        ],
+        [
+          4.7,
+          0.1701
+        ],
+        [
+          4.8,
+          0.1672
+        ],
+        [
+          4.9,
+          0.1645
+        ],
+        [
+          5.0,
+          0.1618
+        ]
+      ]
+    }
+  },
+  "exclusions": [
+    "No new ammo records or distributions",
+    "No shared WEAP/PROJ edits",
+    "No donor damage, zeroing or spread writes",
+    "No laser/plasma/explosive/melee flight conversion",
+    "No weather integration, projectile lifetime cutoff, engine-unit conversion or active integrator yet"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "plugin": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+  "plugin_sha256": "6c5efa5910654953b21e598dd10af193392d8a79c3eff66eadc95dd7f7b73da8",
+  "status": "Source prepared; user must compile and save in GECK.",
+  "scripts": [
+    {
+      "editor_id": "ALTStartQscript",
+      "form_id_in_file": "0A0022E1",
+      "filename_occurrences_changed": 3,
+      "source_file": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\step1\\ALTStartQscript.txt"
+    },
+    {
+      "editor_id": "ALTQscript",
+      "form_id_in_file": "0A002900",
+      "filename_occurrences_changed": 3,
+      "source_file": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\step1\\ALTQscript.txt"
+    }
+  ]
+}

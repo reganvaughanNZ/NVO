@@ -1,0 +1,102 @@
+[
+  {
+    "name": "fAVDHealthLevelMult",
+    "address": 18669220,
+    "kind": "GMST"
+  },
+  {
+    "name": "fAVDNPCHealthLevelMult",
+    "address": 18667784,
+    "kind": "GMST"
+  },
+  {
+    "name": "fPCBaseHealthMult",
+    "address": 18682044,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDamageWeaponMult",
+    "address": 18670272,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPToPCVE",
+    "address": 18678664,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPToPCVH",
+    "address": 18677432,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPByPCE",
+    "address": 18681228,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPByPCH",
+    "address": 18681432,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPByPCN",
+    "address": 18679684,
+    "kind": "GMST"
+  },
+  {
+    "name": "fAVDHealthEnduranceMult",
+    "address": 18666096,
+    "kind": "GMST"
+  },
+  {
+    "name": "fAVDHealthEnduranceOffset",
+    "address": 18665760,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPByPCVE",
+    "address": 18680940,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPByPCVH",
+    "address": 18678180,
+    "kind": "GMST"
+  },
+  {
+    "name": "fAVDNPCHealthEnduranceOffset",
+    "address": 18666108,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPToPCE",
+    "address": 18679864,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPToPCH",
+    "address": 18679084,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDiffMultHPToPCN",
+    "address": 18682536,
+    "kind": "GMST"
+  },
+  {
+    "name": "fAVDNPCHealthEnduranceMult",
+    "address": 18666820,
+    "kind": "GMST"
+  },
+  {
+    "name": "fDifficultyDamageMultiplier",
+    "address": 18678120,
+    "kind": "GMST"
+  },
+  {
+    "name": "iDifficulty",
+    "address": 18745664,
+    "kind": "INIS"
+  }
+]

@@ -1,0 +1,91 @@
+{
+  "packet": "3P",
+  "native_version": 321,
+  "status": "PASS: targeted player creation/return/reload checkpoint",
+  "capture": "source\\combat\\step3p\\captures\\passed-fb99656a5ac9",
+  "log_sha256": "fb99656a5ac9cef77431ea4be0d1e40dc4582461b40d384e8756b2f3e49c1cfc",
+  "nvse_log_sha256": "026330e2c5e898ef128de3f20e6f0e0a31a9d4782ca42313463699d5ecb95279",
+  "user_report": {
+    "background": "Enclave Remnant",
+    "first_shot": "9mm at Miguel pawn-shop door, close range",
+    "second_shot": "VATS headshot at Westside Citizen; log weapon=hunting rifle",
+    "third_sequence": "11-shot 9mm SMG burst at North Sewers manhole, close range",
+    "after_reload": "9mm at chessboard",
+    "AI_processing": "off for both tests",
+    "combat_AI": "off for both tests"
+  },
+  "exact_weapon_sequence_matches": true,
+  "total_projectiles": 14,
+  "creation_summary": [
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "calls": "13",
+      "paired": "13",
+      "null_returns": "0",
+      "mismatched": "0",
+      "nested": "0",
+      "depth_overflow": "0",
+      "other_thread": "0",
+      "stale_returns": "0",
+      "unscoped_creates": "0",
+      "detail_rows": "13",
+      "log_failures": "0",
+      "reservation_enabled": "0",
+      "damage_replacement": "0"
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "calls": "1",
+      "paired": "1",
+      "null_returns": "0",
+      "mismatched": "0",
+      "nested": "0",
+      "depth_overflow": "0",
+      "other_thread": "0",
+      "stale_returns": "0",
+      "unscoped_creates": "0",
+      "detail_rows": "1",
+      "log_failures": "0",
+      "reservation_enabled": "0",
+      "damage_replacement": "0"
+    }
+  ],
+  "physics_summary": [
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "accepted": "13",
+      "applied_steps": "0",
+      "rejected": "0",
+      "overflow": "0",
+      "open": "0",
+      "damage_replacement": "0"
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "accepted": "1",
+      "applied_steps": "0",
+      "rejected": "0",
+      "overflow": "0",
+      "open": "0",
+      "damage_replacement": "0"
+    }
+  ],
+  "no_outstanding_observer_lifetimes": true,
+  "successful_reload": true,
+  "normal_exit_logged": true,
+  "protected_files_verified": 9,
+  "warnings": [
+    "nvse.log retains one unattributed: plugin has data in save file but no handler; also present before this packet. Not attributed to NVO or declared resolved."
+  ],
+  "limits": [
+    "AI-off player firing only; not NPC combat/stress coverage",
+    "No observed nesting, foreign-thread creation, overflow or cancellation; these cases remain unproven live",
+    "Close-range contacts: zero applied physics steps, so this does not revalidate drag/gravity/long-distance flight",
+    "Capacity reservation remains disabled;317-07 still open",
+    "Damage authority remains disabled; pre-damage gate HOLD"
+  ]
+}

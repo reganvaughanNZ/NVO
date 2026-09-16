@@ -1,0 +1,23 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NVO 4B · Automatic-fire check</title>
+<style>body{max-width:860px;margin:36px auto;padding:0 24px;background:#111815;color:#d9e7df;font:18px/1.6 "Segoe UI",sans-serif}h1,h2{color:#9fe0ba}a{color:#8ecbff}.note{border-left:4px solid #91c99f;background:#1c2b21;padding:14px 20px}.cmd{display:flex;align-items:center;gap:15px;background:#070e09;padding:12px;margin:12px 0}.cmd code{flex:1;color:#f0d58a}button{background:#b5d8c0;border:0;border-radius:4px;padding:9px 16px;cursor:pointer}li{margin:20px 0}</style></head><body>
+<h1>NVO 4B · Automatic-fire check</h1>
+<p>Uses the existing <strong>NVO 0.3.26 / native 326</strong>. Two console helper files are installed. No GECK work or DLL update is needed.</p>
+<div class="note"><strong>Purpose:</strong> check the armour reader while a humanoid carries <strong>128 different junk items</strong> and takes repeated automatic fire. We will check its 64-snapshot limit and that it resumes after loading. Damage replacement remains off.</div>
+<h2>One short test</h2>
+<p>Use your disposable test save and usual AI-disabled setup, with a living human target. These helpers change test inventory and health. Do not overwrite your normal save. If god mode is on, turn it off so magazines empty normally.</p>
+<ol><li><strong>Get the SMG.</strong> Run:
+<div class="cmd"><code>bat NVOStressKit4B</code><button type="button">Copy</button></div>
+This gives you a 9mm SMG and 300 standard rounds. Check that the <strong>9mm SMG</strong> is equipped with <strong>standard 9mm</strong>. Reload its magazine fully.</li>
+<li><strong>Prepare the target.</strong> Open the console, click the living human target and check its name appears at the top. Run this once:
+<div class="cmd"><code>bat NVOStressTarget4B</code><button type="button">Copy</button></div>
+The target gets Combat Armor, a Combat Helmet, 128 distinct miscellaneous items and 100,000 health to survive the burst. Close the console, let the equipment appear, and make a separate manual save named <strong>NVO 4B Stress</strong>.</li>
+<li><strong>Fire three full magazines.</strong> Stand a few metres away and aim at the torso. Empty <strong>three 30-round magazines</strong> into the same target, reloading the weapon between them. About 90 rounds total. Use ordinary aiming, without VATS. Notice any stuttering, freezing or unusual behaviour. Some misses are fine; keep the bursts on target so we can reach 65 or more landed hits.</li>
+<li><strong>Reload once.</strong> Load <strong>NVO 4B Stress</strong>. Fire a short burst of roughly five rounds into the same target. Wait a few seconds and quit normally.</li></ol>
+<p>Reply <strong>“finished”</strong> and say whether it felt smooth or stuttered, whether the target survived, and if many shots missed. I will read the log directly. Please avoid relaunching before the log is captured.</p>
+<h2>What the result can tell us</h2>
+<p>Before the sample limit, the log should show complete armour scans over the enlarged inventory. After 64 snapshot attempts, detailed armour scanning stops and later hits increment <code>omitted_after_limit</code>. That count is expected in this test. After the save reload, the budget should reset and armour rows should return.</p>
+<p>This checks bounded-reader stability and noticeable hitches. The current log has no per-scan timing measurements, so it cannot prove an exact frame-time cost or production performance with unlimited observation.</p>
+<p>Log: <code>Fallout New Vegas\NVOCombatCore.log</code>.</p>
+<h2>Undo the test</h2><p>Load your normal save to discard the test changes. The optional files <code>NVOStressKit4B.txt</code> and <code>NVOStressTarget4B.txt</code> can be removed from the game root; they never run automatically. The DLL, ESM, settings and load order were not edited for this checkpoint.</p>
+<p><a href="INSTALL-result.json">Installation receipt</a> · <a href="ITEM-PROVENANCE.json">Item list</a> · <a href="README.md">Checkpoint notes</a></p>
+<script>document.querySelectorAll('button').forEach(button=>button.addEventListener('click',async()=>{const value=button.previousElementSibling.textContent;let copied=false;try{await navigator.clipboard.writeText(value);copied=true}catch(e){const box=document.createElement('textarea');box.value=value;document.body.appendChild(box);box.select();copied=document.execCommand('copy');box.remove()}button.textContent=copied?'Copied':'Select text to copy';setTimeout(()=>button.textContent='Copy',2000)}));</script></body></html>

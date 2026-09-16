@@ -1,0 +1,66 @@
+{
+  "status": "offline provider evidence only; engine runtime capture pending",
+  "provider_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\itr-nvse.dll",
+  "provider_sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c",
+  "source_path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\handlers\\OnPreDamageHandler.cpp",
+  "source_sha256": "732dae3ad501b4f10b042488451782fd25a397194fcc4deadf269444a71a31bd",
+  "disassembly_sha256": "87a69e924e6af20d7cfcc3135b34e6f72e40c179678606d71751bb2d7176e4be",
+  "preferred_base": 268435456,
+  "timestamp": 1788121053,
+  "image_size": 733184,
+  "thunk_rva": 216091,
+  "thunk_size": 421,
+  "thunk_sha256_preferred_base": "28f0795a8074ee542a09af5a6bc7c3685441191cb4818d935f19febf35c24244",
+  "thunk_fnv64_preferred_base": "160620DC4A7EE4EA",
+  "highlow_relocation_offsets": [
+    20,
+    36,
+    61,
+    78,
+    93,
+    99,
+    105,
+    171,
+    183,
+    202,
+    227,
+    232,
+    237,
+    255,
+    317,
+    355,
+    374,
+    399
+  ],
+  "relocation_rule": "Subtract loaded-minus-preferred base at these dwords before hashing.",
+  "damage_slot_offset": 940,
+  "classes": [
+    {
+      "name": "Character",
+      "table": 17328748,
+      "saved_original_rva": 509780,
+      "expected_engine_original": 8917296
+    },
+    {
+      "name": "Creature",
+      "table": 17330348,
+      "saved_original_rva": 509768,
+      "expected_engine_original": 9259504
+    },
+    {
+      "name": "PlayerCharacter",
+      "table": 17345084,
+      "saved_original_rva": 509752,
+      "expected_engine_original": 9680800
+    }
+  ],
+  "engine_runtime_validated": false,
+  "native_code_modified": false,
+  "damage_replacement_enabled": false,
+  "limitations": [
+    "Expected engine originals come from on-disk tables, not captured loaded pointer values.",
+    "ITR may scale health after the method-entry observation.",
+    "A before/after observation measures the net change across the provider call, including nested work.",
+    "This fingerprint alone does not validate engine getter behavior or terminal damage application."
+  ]
+}

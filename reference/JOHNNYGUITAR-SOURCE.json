@@ -1,0 +1,40 @@
+{
+  "reference_folder": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.28",
+  "contents": "Compiled 5.28 release: DLL, PDB, INI; no C++ source in this folder",
+  "observed_installed_version": 525,
+  "existing_developer_source": "C:\\Users\\regan\\Downloads\\JohnnyGuitarNVSE-dev\\JohnnyGuitarNVSE-dev\\JG\\internal\\JG\\EditorIDRestoration.cpp",
+  "source_sha256": "e827d7d15bd3ad95ffe9692ab522f3e89de5c875b9f9d2f1c01d5d9bc6985a7a",
+  "role": "Source reference for EDID restoration/warning semantics; source/release versions do not prove installed behavior",
+  "files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.28\\nvse\\plugins\\johnnyguitar.dll",
+      "sha256": "456b6ce716b6b18d3de13e20eca1692070f7decf35c39daa165f6499cc1113d3"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.28\\nvse\\plugins\\JohnnyGuitar.ini",
+      "sha256": "1556b4e9897f0ef8b787ea44c440626fb501427416544309fab06b7b88ef404d"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.28\\nvse\\plugins\\johnnyguitar.pdb",
+      "sha256": "811dc672e1ecc24a3c09078d7a1f2a4bacaf942adeb99aa3133fb70b35e7892c"
+    }
+  ],
+  "supplied_525": {
+    "folder": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.25",
+    "contents": "DLL, PDB, INI; no C++ source found",
+    "files": [
+      {
+        "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.25\\nvse\\plugins\\johnnyguitar.dll",
+        "sha256": "b2d54e12baffda40381074153c525a1643f47885978dfa681dc6201dd8839b92"
+      },
+      {
+        "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.25\\nvse\\plugins\\JohnnyGuitar.ini",
+        "sha256": "1556b4e9897f0ef8b787ea44c440626fb501427416544309fab06b7b88ef404d"
+      },
+      {
+        "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JohnnyGuitarNVSE-5.25\\nvse\\plugins\\johnnyguitar.pdb",
+        "sha256": "b42b4390a0ec300271d3be300551d94ba7695812d10732c3d889131b42ad42e8"
+      }
+    ]
+  }
+}

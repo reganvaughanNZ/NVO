@@ -1,0 +1,80 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\ShowOffNVSE.dll",
+      "bytes": 1091584,
+      "sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\jip_nvse.dll",
+      "bytes": 502272,
+      "sha256": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\itr-nvse.dll",
+      "bytes": 353280,
+      "sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOFlightPhysics.ini",
+      "bytes": 199,
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOFlightPreview.ini",
+      "bytes": 3595,
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVOFlightPilot.esp",
+      "bytes": 7140,
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+      "bytes": 452260,
+      "sha256": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOFlightKit3F.txt",
+      "bytes": 111,
+      "sha256": "387e095bb0a2a706a267378d584fb2e1fd7fbd1980e3c0c205ecd6f3ffa800f2"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOArmourKit4B.txt",
+      "bytes": 83,
+      "sha256": "693f9e1309431bcad59cf28db6b127f534f08393ba169ce193fb517895eabb24"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOArmourTarget4B.txt",
+      "bytes": 202,
+      "sha256": "dbdabb6d8cefcd3282913fb3d4896e385b7e39516cbcebeb1b457458b2411933"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOStressKit4B.txt",
+      "bytes": 83,
+      "sha256": "446c0e5b25e83ba7e9fa807cea04f794bc4b56d924098fdb56604d3ab90649ce"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOStressTarget4B.txt",
+      "bytes": 2766,
+      "sha256": "19fd0f7053e84dc89c55988fc3897b0b3d584398de7b48ac97412b640b530c84"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "bytes": 443392,
+      "sha256": "3f0f68fa2a060ab7ffb6f832013d28388b0871b8a2b3c9f758fddeb826049c5b"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "bytes": 5558272,
+      "sha256": "afc7e8caee6c777d2d925a2adf56f6fe02e413ed9ac87f996cb638140fc1d281"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOArmourCoverage.tsv",
+      "bytes": 259,
+      "sha256": "0e25e3aafbd0aadf52fb58fb38b19cb079280d96006b0ee84f927fdd860973aa"
+    }
+  ],
+  "read_only": true
+}

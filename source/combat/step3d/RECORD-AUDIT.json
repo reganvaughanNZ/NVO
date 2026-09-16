@@ -1,0 +1,235 @@
+{
+  "packet": "3D",
+  "version": 311,
+  "profiles": [
+    {
+      "name": "9mm-pistol",
+      "weapon": "FalloutNV.esm:0E3778",
+      "ammo": "FalloutNV.esm:08ED03",
+      "source_projectile": "FalloutNV.esm:08F20F",
+      "projectile": "NVOFlightPilot.esp:000806",
+      "select_on_fire": 1,
+      "flight_enabled": 1,
+      "drag_model": 1,
+      "ballistic_coefficient": 0.155,
+      "maximum_velocity_mps": 453.0,
+      "barrel_in": 4.7,
+      "peak_travel_in": 0.4
+    },
+    {
+      "name": "hunting-rifle",
+      "weapon": "FalloutNV.esm:004333",
+      "ammo": "FalloutNV.esm:06B53C",
+      "source_projectile": "FalloutNV.esm:08F20A",
+      "projectile": "NVOFlightPilot.esp:000807",
+      "select_on_fire": 1,
+      "flight_enabled": 1,
+      "drag_model": 7,
+      "ballistic_coefficient": 0.209,
+      "maximum_velocity_mps": 1012.0,
+      "barrel_in": 22.0,
+      "peak_travel_in": 2.1
+    },
+    {
+      "name": "9mm-smg",
+      "weapon": "FalloutNV.esm:08F217",
+      "ammo": "FalloutNV.esm:08ED03",
+      "source_projectile": "FalloutNV.esm:08F20F",
+      "projectile": "NVOFlightPilot.esp:000808",
+      "select_on_fire": 1,
+      "flight_enabled": 1,
+      "drag_model": 1,
+      "ballistic_coefficient": 0.155,
+      "maximum_velocity_mps": 453.0,
+      "barrel_in": 8.0,
+      "peak_travel_in": 0.4
+    },
+    {
+      "name": "service-rifle",
+      "weapon": "FalloutNV.esm:0E9C3B",
+      "ammo": "FalloutNV.esm:004240",
+      "source_projectile": "FalloutNV.esm:00426D",
+      "projectile": "NVOFlightPilot.esp:000809",
+      "select_on_fire": 1,
+      "flight_enabled": 1,
+      "drag_model": 7,
+      "ballistic_coefficient": 0.151,
+      "maximum_velocity_mps": 1133.0,
+      "barrel_in": 20.0,
+      "peak_travel_in": 1.95
+    },
+    {
+      "name": "pilot-9mm-pistol",
+      "weapon": "NVOFlightPilot.esp:000800",
+      "ammo": "NVOFlightPilot.esp:000802",
+      "source_projectile": "NVOFlightPilot.esp:000804",
+      "projectile": "NVOFlightPilot.esp:000804",
+      "select_on_fire": 0,
+      "flight_enabled": 1,
+      "drag_model": 1,
+      "ballistic_coefficient": 0.155,
+      "maximum_velocity_mps": 453.0,
+      "barrel_in": 4.7,
+      "peak_travel_in": 0.4
+    },
+    {
+      "name": "pilot-hunting-rifle",
+      "weapon": "NVOFlightPilot.esp:000801",
+      "ammo": "NVOFlightPilot.esp:000803",
+      "source_projectile": "NVOFlightPilot.esp:000805",
+      "projectile": "NVOFlightPilot.esp:000805",
+      "select_on_fire": 0,
+      "flight_enabled": 1,
+      "drag_model": 7,
+      "ballistic_coefficient": 0.209,
+      "maximum_velocity_mps": 1012.0,
+      "barrel_in": 22.0,
+      "peak_travel_in": 2.1
+    }
+  ],
+  "audit": [
+    {
+      "name": "9mm-pistol",
+      "weapon_name": "9mm Pistol",
+      "weapon_source": {
+        "line": 10,
+        "text": "@FalloutNV.esm:0E3778\t\t\t\t4.7\t\t1.6\t\t12.0\t; 9mm Pistol\t\t\t\t\t\t; 919-M882, 15m, Browning Hi-Power"
+      },
+      "cartridge_source": {
+        "line": 231,
+        "text": "@FalloutNV.esm:08F20F\t\t\t1\t0.155\t115\t\t0.355\t453\t\t0.4\t\t0.6\t\t37\t\t; 919-M882"
+      },
+      "modified_subrecords": [
+        {
+          "tag": "EDID",
+          "before": "396d6d42756c6c657450726f6a656374696c6500",
+          "after": "4e564f466c696768743344396d6d706973746f6c50726f6a656374696c6500"
+        },
+        {
+          "tag": "FULL",
+          "before": "396d6d2042756c6c657400",
+          "after": "4e564f20466c69676874202d20396d6d2d706973746f6c2042756c6c657400"
+        },
+        {
+          "tag": "DATA",
+          "before": "89000100000040400000b94600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a04000000000000000000000000000000000000000000000000000000000",
+          "after": "880001000000000046b3d34600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a04000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "muzzle_mps": 387.10909090909087,
+      "cartridge_mass_grain": 115.0,
+      "diameter_in": 0.355,
+      "unused_donor_damage": 37.0
+    },
+    {
+      "name": "hunting-rifle",
+      "weapon_name": "Hunting Rifle",
+      "weapon_source": {
+        "line": 30,
+        "text": "@FalloutNV.esm:004333\t\t\t\t22.0\t2.8\t\t1.31\t; Hunting Rifle\t\t\t\t\t\t; 762-Mk316, 100m, Winchester Model 70"
+      },
+      "cartridge_source": {
+        "line": 196,
+        "text": "@FalloutNV.esm:08F20A\t\t\t7\t0.209\t147\t\t0.308\t1012\t2.1\t\t0.6\t\t67\t\t; 762-M80"
+      },
+      "modified_subrecords": [
+        {
+          "tag": "EDID",
+          "before": "33303842756c6c657450726f6a656374696c6500",
+          "after": "4e564f466c69676874334468756e74696e677269666c6550726f6a656374696c6500"
+        },
+        {
+          "tag": "FULL",
+          "before": "2e3330382042756c6c657400",
+          "after": "4e564f20466c69676874202d2068756e74696e672d7269666c652042756c6c657400"
+        },
+        {
+          "tag": "DATA",
+          "before": "8d0201009a99993e00084f4700084f4700000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000204100000000000000000000000000000000000000000000000000000000",
+          "after": "8c02010000000000f85b684700084f4700000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000204100000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "muzzle_mps": 849.7709923664122,
+      "cartridge_mass_grain": 147.0,
+      "diameter_in": 0.308,
+      "unused_donor_damage": 67.0
+    },
+    {
+      "name": "9mm-smg",
+      "weapon_name": "9mm Submachine Gun",
+      "weapon_source": {
+        "line": 11,
+        "text": "@FalloutNV.esm:08F217\t\t\t\t8.0\t\t3.1\t\t8.6\t\t; 9mm Submachine Gun\t\t\t\t; 919-M882, 30m, M3 SMG"
+      },
+      "cartridge_source": {
+        "line": 231,
+        "text": "@FalloutNV.esm:08F20F\t\t\t1\t0.155\t115\t\t0.355\t453\t\t0.4\t\t0.6\t\t37\t\t; 919-M882"
+      },
+      "modified_subrecords": [
+        {
+          "tag": "EDID",
+          "before": "396d6d42756c6c657450726f6a656374696c6500",
+          "after": "4e564f466c696768743344396d6d736d6750726f6a656374696c6500"
+        },
+        {
+          "tag": "FULL",
+          "before": "396d6d2042756c6c657400",
+          "after": "4e564f20466c69676874202d20396d6d2d736d672042756c6c657400"
+        },
+        {
+          "tag": "DATA",
+          "before": "89000100000040400000b94600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a04000000000000000000000000000000000000000000000000000000000",
+          "after": "88000100000000008c36e14600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a04000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "muzzle_mps": 411.8181818181818,
+      "cartridge_mass_grain": 115.0,
+      "diameter_in": 0.355,
+      "unused_donor_damage": 37.0
+    },
+    {
+      "name": "service-rifle",
+      "weapon_name": "Service Rifle",
+      "weapon_source": {
+        "line": 48,
+        "text": "@FalloutNV.esm:0E9C3B\t\t\t\t20.0\t2.0\t\t1.75\t; Service Rifle\t\t\t\t\t\t; 556-M855, 100m, M16"
+      },
+      "cartridge_source": {
+        "line": 170,
+        "text": "@FalloutNV.esm:00426D\t\t\t7\t0.151\t62\t\t0.224\t1133\t1.95\t0.6\t\t44\t\t; 556-M855"
+      },
+      "modified_subrecords": [
+        {
+          "tag": "EDID",
+          "before": "3535366d6d5269666c6542756c6c657450726f6a656374696c6500",
+          "after": "4e564f466c696768743344736572766963657269666c6550726f6a656374696c6500"
+        },
+        {
+          "tag": "FULL",
+          "before": "352e35366d6d205269666c652042756c6c657400",
+          "after": "4e564f20466c69676874202d20736572766963652d7269666c652042756c6c657400"
+        },
+        {
+          "tag": "DATA",
+          "before": "8d000100cdcccc3e00c01e4700401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000404000000000000000000000000000000000000000000000000000000000",
+          "after": "8c000100000000001aa0814700401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000404000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "muzzle_mps": 948.1171548117155,
+      "cartridge_mass_grain": 62.0,
+      "diameter_in": 0.224,
+      "unused_donor_damage": 44.0
+    }
+  ],
+  "private_projectiles_added": 4,
+  "stock_overrides": 0,
+  "previous_six_records_preserved": true,
+  "esm_modified": false,
+  "esp_sha256": "001ea6b53efc673c9dc089e6f5b3e2afc5f3afbc2093ba7fe6ec0a7327568cdc",
+  "donor_archive_sha256": "d71fe28f1262dec7a0f2086f06b243168d74a3f11d8b57cd8b7b8127c9506e3d",
+  "ammo_form_ids": [
+    "FalloutNV.esm:08ED03",
+    "FalloutNV.esm:06B53C",
+    "FalloutNV.esm:004240"
+  ]
+}

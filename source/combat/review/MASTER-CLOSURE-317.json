@@ -1,0 +1,140 @@
+{
+  "NVO.esm": {
+    "sha256": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d",
+    "masters": [
+      "FalloutNV.esm",
+      "CaravanPack.esm",
+      "DeadMoney.esm",
+      "HonestHearts.esm",
+      "OldWorldBlues.esm",
+      "LonesomeRoad.esm",
+      "ClassicPack.esm",
+      "GunRunnersArsenal.esm",
+      "MercenaryPack.esm",
+      "RD.esm",
+      "TribalPack.esm"
+    ],
+    "counts": {
+      "TES4": 1,
+      "GMST": 5,
+      "TXST": 4,
+      "GLOB": 4,
+      "FACT": 3,
+      "MGEF": 2,
+      "SCPT": 124,
+      "ENCH": 1,
+      "SPEL": 11,
+      "ACTI": 3,
+      "TERM": 1,
+      "ARMO": 7,
+      "CONT": 2,
+      "MISC": 3,
+      "FURN": 4,
+      "NPC_": 4,
+      "CREA": 2,
+      "ALCH": 11,
+      "LVLI": 10,
+      "CELL": 32,
+      "REFR": 243,
+      "ACRE": 5,
+      "ACHR": 5,
+      "WRLD": 6,
+      "DIAL": 81,
+      "INFO": 128,
+      "QUST": 9,
+      "PACK": 7,
+      "FLST": 21,
+      "PERK": 12,
+      "VTYP": 1,
+      "MESG": 64,
+      "RCPE": 4
+    },
+    "script_count": 275,
+    "settings": [
+      {
+        "form": "0B019419",
+        "edid": "fPCBaseHealthMult",
+        "value": 1.0
+      },
+      {
+        "form": "000539F2",
+        "edid": "fAVDHealthLevelMult",
+        "value": 0.10000000149011612
+      },
+      {
+        "form": "000AE66B",
+        "edid": "fAVDNPCHealthLevelMult",
+        "value": 0.0
+      },
+      {
+        "form": "00026EC9",
+        "edid": "fAVDHealthEnduranceMult",
+        "value": 5.0
+      },
+      {
+        "form": "00034816",
+        "edid": "fAVDHealthEnduranceOffset",
+        "value": -1.0
+      }
+    ],
+    "combat_scripts": [
+      {
+        "type": "SCPT",
+        "form": "0B002900",
+        "flags": "00000000",
+        "EDID": "ALTQscript",
+        "source": "scn ALTQscript\r\n\r\nstring_var sVeronicLoc\r\n\r\nref rTurnInItem\r\nint iTurnInValue\r\nref rRef\r\n\r\nint bBlock\r\n\r\nint iState\r\n\r\nint iScience\r\nint iUpdate\r\n\r\nstring_var sMajorKnight\r\nint ModOverridingIndex\r\nstring_var modName\r\n\r\nbegin gamemode\r\n\tif getgameloaded == 0\r\n\t\treturn\r\n\telse\r\n\t\tif getgamerestarted\r\n\t\t\tIf GetNVSEVersion < 6\r\n\t\t\t\tmessageboxex \"Alternate Start requires NVSE version 6.3.0 or greater. Make sure you update it or this mod will not work.\"\r\n\t\t\tElseIf IsPluginInstalled \"JIP NVSE Plugin\" == 0\r\n\t\t\t\tmessageboxex \"Alternate Start requires JIP LN NVSE. Make sure you have it installed or this mod will not work.\"\r\n\t\t\tElseIf IsPluginInstalled \"JohnnyGuitarNVSE\" == 0\r\n\t\t\t\tmessageboxex \"Alternate Start requires JohnnyGuitarNVSE. Make sure you have it installed or this mod will not work.\"\r\n\t\t\tElseIf IsPluginInstalled \"ShowOffNVSE Plugin\" == 0\r\n\t\t\t\tmessageboxex \"Alternate Start requires ShowOffNVSE. Make sure you have it installed or this mod will not work.\"\r\n\t\t\tElseIf ismodloaded \"Better Character Creation.esm\"\r\n\t\t\t\tmessageboxex \"Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues.\"\r\n\t\t\tElseIf Eval IsFormOverridden VCG00\r\n\t\t\t\tSet ModOverridingIndex to GetFormOverrideIndex VCG00\r\n\t\t\t\tLet modName := GetModName ModOverridingIndex 1\r\n\t\t\t\tmessageboxex \"The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.\" modName\r\n\t\t\t\tsv_destruct modName\r\n\t\t\tElseIf Eval IsFormOverridden VCG01\r\n\t\t\t\tSet ModOverridingIndex to GetFormOverrideIndex VCG01\r\n\t\t\t\tLet modName := GetModName ModOverridingIndex 1\r\n\t\t\t\tmessageboxex \"The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly.\" modName\r\n\t\t\t\tsv_destruct modName\r\n\t\t\tElseif ismodloaded \"YUP - Base Game + All DLC.esm\" && GetModIndex \"YUP - Base Game + All DLC.esm\" > GetModIndex \"NVO.esm\"\r\n\t\t\t\tmessageboxex \"WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues.\"\r\n\t\t\tendif\r\n\r\n\t\t\tSetPerkFlag WildWasteland 1 0\r\n\r\n\t\t\tLNSetName $sVeronicLoc VDialogueVeronicaVeronicaTopic000\r\n\t\t\tif eval Sv_Length sMajorKnight != -1\r\n\t\t\t\tLNSetName $sMajorKnight vMojavevMOMajorKnightTopic019\r\n\t\t\tendif\r\n\t\t\tDialogResponseAddRelatedTopic 0015E575 ALTBoSTop 1 0\r\n\t\t\tDialogResponseAddRelatedTopic 000E2F71 ALTBoSTop 1 0\r\n\r\n\t\t\tDialogResponseAddRelatedTopic 000E3608 ALTFoAHelios 1 0\r\n\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC01MQ00 100\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC02MQ00 100\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC03MQ00 100\r\n\t\t\tSetOnQuestStageEventHandler ALTDogmeatDismiss 1 NVDLC04MQ00 100\r\n\r\n\t\t\tif ALTBackground == 12\r\n\t\t\t\tLNSetName \"How did the Three Families defeat us?\" VMS45VRRCPapaKhanTopic016\r\n\t\t\t\tLNSetName \"Can you tell me about our tribe?\" PapaKhanKhans\r\n\t\t\t\tLNSetName \"Just trying to do my part for the tribe.\" vFreeformSloanQJMelissaTopic017\r\n\t\t\t\tLNSetName \"Have a look at this book. Our tribe is nothing but a bunch of thugs, aping the glories of the past.\" VMS45VRRCPapaKhanTopic013\r\n\t\t\t\tLNSetName \"Have a look at this book. If you want to see what our tribe could be, read about the Mongol Empire.\" VMS45VRRCPapaKhanTopic011\r\n\t\t\t\tLNSetName \"We don't need to look outward, mighty Khan. Our tribe is proud and strong - we should claim our own glory!\" VMS45VRRCPapaKhanTopic003\r\n\t\t\t\tLNSetName \"What great legacy do the Great Khans have? Our tribe is nothing but ghosts and martyrs.\" VMS45VRRCPapaKhanTopic009\r\n\t\t\telseif ALTBackground == 14\r\n\t\t\t\tLNSetName \"Can you tell me more about Novac?\" JeannieCrawfordWhereAmI\r\n\t\t\t\tLNSetName \"I just moved into town. Pleasure to meet you.\" MannyVargasWhoAreYou\r\n\t\t\t\tLNSetName \"I just moved into town, and I wanted to introduce myself.\" CraigBooneMeetingNewPeople\r\n\t\t\t\tLNSetName \"Is this any way to treat your new neighbor?\" CraigBooneDoesntAffectMe\r\n\t\t\t\tLNSetName \"I just moved into town, and I wanted to introduce myself.\" AliceMcBrideIntro\r\n\t\t\t\tLNSetName \"Yep, I just moved into the neighborhood.\" CraigBooneYes\r\n\t\t\telseif ALTBackground == 16\r\n\t\t\t\tLNSetName \"Why can't every man in Freeside join the Kings?\" VFreeformFreesideVFSTheKingTopic065\r\n\t\t\telseif ALTBackground == 22\r\n\t\t\t\tSetFactionFlags VWastelandNVBanditViperFaction 256\r\n\t\t\telseif ALTBackground == 21\r\n\t\t\t\tSetFactionFlags VJackalsGangFaction 256\r\n\t\t\telseif ALTBackground == 31\r\n\t\t\t\tForEachInList ALTEggList ({rRef} => SetValueAlt rRef ((GetValue rRef)*2))\r\n\t\t\telseif ALTBackground == 35\r\n\t\t\t\tLNSetName \"I'm happy to help.\" VFreeformFreesideFSJulieFarkasTopic004\r\n\t\t\telseif ALTBackground == 38\r\n\t\t\t\tif ismodloaded \"NukaExpansionUltFNV.esm\"\r\n\t\t\t\t\tcall ALTNukaExpansionPatcher\r\n\t\t\t\tendif\r\n\t\t\t\tSetOnUseAidItemEventHandler ALTNukaDrinkEvent 1 ALTNukaList\r\n\t\t\telseif ALTBackground == 41\r\n\t\t\t\tSetFactionFlags VCrCoyoteFaction 256\r\n\t\t\t\tSetFactionFlags NVDLC02CrCoyoteFaction 256\r\n\t\t\t\tForEachInList ALTCoyoteList ({rRef} => call ALTSetFlagUDF rRef 1 5 1)\r\n\t\t\telseif ALTBackground == 49\r\n\t\t\t\tLNSetName \"How long have you worked for the Gun Runners?\" vDialogueGunRunnerNVIsaacTopic000\r\n\t\t\tendif\r\n\t\tendif\r\n\r\n\t\tif iUpdate == 0\r\n\t\t\tSetEssential GSSunnySmiles 0\r\n\t\t\tSetEssential GSCheyenne 0\r\n\r\n\t\t\tSetCellOwnership GSDocMitchellHouse DocMitchell\r\n\r\n\t\t\tiUpdate = 1\r\n\t\telseif iUpdate == 1\r\n\t\t\tMcMurphyREF.disable\r\n\t\t\tJessupREF.disable\r\n\t\t\tiUpdate = 2\r\n\t\telseif iUpdate == 2\r\n\t\t\tif ALTGO == 0 && MannyVargasREF.GetItemCount VMQ01NoteObject > 0\r\n\t\t\t\tMannyVargasREF.removeitem VMQ01NoteObject 1\r\n\t\t\tendif\r\n\t\t\tiUpdate = 3\r\n\t\tendif\r\n\r\n\t\tif ALTBackground == 3\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTGamblerPreActEvent 0::(GetListForms ALTGamblerTablesList) 1::Player 2::1\r\n\t\telseif ALTBackground == 21\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTViperActivateEvent 0::(GetListForms ALTViperLeaderList) 1::Player 2::1\r\n\t\telseif ALTBackground == 22\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTJackalActivateEvent 0::(GetListForms ALTJackalLeaderList) 1::Player 2::1\r\n\t\telseif ALTBackground == 44\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnAdd\" ALTCapEvent 1::Caps001 2::player\r\n\t\telseif ALTBackground == 47\r\n\t\t\tSetEventHandlerAlt \"ShowOff:OnPreActivate\" ALTLonewolfActivateEvent 0::(GetListForms ALTLoneWolfRadioList) 1::Player 2::1\r\n\t\telseif ALTBackground == 53\r\n\t\t\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 1::Player\r\n\t\t\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 2::Player\r\n\t\tendif\r\n\tendif\r\nend"
+      },
+      {
+        "type": "SCPT",
+        "form": "0B0074CA",
+        "flags": "00000000",
+        "EDID": "ALTRichKidHit",
+        "source": "scn\tALTRichKidHit\r\n\r\nref rTarget\r\nref rAttacker\r\nfloat iCaps\r\n\r\n\r\nbegin Function {rTarget, rAttacker}\r\n\t\r\n\tiCaps = player.getitemcount caps001\r\n\tiCaps *= 0.001\r\n\tiCaps = Floor iCaps\r\n\t;print $iCaps\r\n\t;print $rTarget.getav health\r\n\tif rTarget.GetDead\r\n\t\t;print \"dead\"\r\n\t\treturn\r\n\telseif iCaps > rTarget.getav health\r\n\t\trTarget.kill rAttacker\r\n\t\t;print \"kill\"\r\n\telse\r\n\t\trTarget.damageav health iCaps\r\n\t\t;print \"damage\"\r\n\tendif\r\n\t;print \"test\"\r\n\r\nend"
+      },
+      {
+        "type": "SCPT",
+        "form": "0B0122A2",
+        "flags": "00000000",
+        "EDID": "ALTBackRichKidUDF",
+        "source": "scn ALTBackRichKidUDF\r\n\r\nbegin Function {}\r\n\tALTStartQ.iWealth = 5\r\n\tALTQ.sMajorKnight = \"Rancher.\"\r\n\tALTQ.sVeronicLoc = \"The Big Circle.\"\r\n\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 1::Player\r\n\tSetEventHandlerAlt \"OnHit\" ALTRichKidHit 2::Player\r\n\tPlayer.additemalt CowboyHat01 1 65 1 1\r\n\tPlayer.additemalt OutfitGambler01 1 65 1 1\r\n\tPlayer.additem caps001 5000 1\r\n\tIf ismodloaded \"Simple Open Freeside.esm\"\r\n\t\tALTStartQ.rMarker = ALTRichKidMarkerFreesideOpen\r\n\tElse\r\n\t\tALTStartQ.rMarker = ALTRichKidMarker\r\n\tEndIf\r\n\r\n\tLListClear ALTStartingGearGuns\r\n\tLListAddForm ALTStartingGearGuns WithAmmoNV357RevolverLoot 1 1 0.0\r\n\tLListAddForm ALTStartingGearGuns Ammo357Magnum 1 30 1.0\r\nend"
+      }
+    ],
+    "bootstrap_matches": []
+  },
+  "RD.esm": {
+    "sha256": "9498ee5bee4119ec289b8f88af83e3bbd0ff2e2ec57e45809f3e18dd8b139bc3",
+    "masters": [
+      "FalloutNV.esm"
+    ],
+    "counts": {
+      "TES4": 1,
+      "SCPT": 1,
+      "SPEL": 1,
+      "NPC_": 1,
+      "LVLI": 1,
+      "QUST": 1,
+      "PERK": 2
+    },
+    "script_count": 1,
+    "settings": [],
+    "combat_scripts": [
+      {
+        "type": "SCPT",
+        "form": "01000DBE",
+        "flags": "00000000",
+        "EDID": "NVOCombatBootstrapScript",
+        "source": "scn NVOCombatBootstrapScript\r\n\r\nshort bChecked\r\nshort bFrameworkReady\r\nshort bCorePresent\r\nshort bCombatEnabled\r\nshort iMissingCount\r\nshort iPacket\r\nlong iRunCount\r\nlong iNVSEMajor\r\nlong iNVSEMinor\r\nfloat fQuestDelayTime\r\n\r\nBegin GameMode\r\n\r\n    set fQuestDelayTime to 1\r\n\r\n    if GetGameLoaded\r\n        set bChecked to 0\r\n    endif\r\n    if GetGameRestarted\r\n        set bChecked to 0\r\n    endif\r\n\r\n    if bChecked == 1\r\n        Return\r\n    endif\r\n\r\n    set bChecked to 1\r\n    set iPacket to 1\r\n    set iRunCount to iRunCount + 1\r\n    set iMissingCount to 0\r\n    set bFrameworkReady to 0\r\n    set bCorePresent to 0\r\n    set bCombatEnabled to 0\r\n    set iNVSEMajor to GetNVSEVersion\r\n    set iNVSEMinor to GetNVSERevision\r\n\r\n    PrintC \"NVO Combat: foundation packet 1 initialized.\"\r\n\r\n    if iNVSEMajor < 6\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: xNVSE 6.3.0 or newer is required.\"\r\n    elseif iNVSEMajor == 6\r\n        if iNVSEMinor < 3\r\n            set iMissingCount to iMissingCount + 1\r\n            PrintC \"NVO Combat: xNVSE 6.3.0 or newer is required.\"\r\n        endif\r\n    endif\r\n\r\n    if IsPluginInstalled \"JIP NVSE Plugin\" == 0\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: JIP LN NVSE is missing.\"\r\n    endif\r\n\r\n    if IsPluginInstalled \"JohnnyGuitarNVSE\" == 0\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: JohnnyGuitar NVSE is missing.\"\r\n    endif\r\n\r\n    if IsPluginInstalled \"ShowOffNVSE Plugin\" == 0\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: ShowOff NVSE is missing.\"\r\n    endif\r\n\r\n    if IsPluginInstalled \"NVOCombatCore\"\r\n        set bCorePresent to 1\r\n        PrintC \"NVO Combat: native plugin detected. Damage hooks remain disabled.\"\r\n    else\r\n        PrintC \"NVO Combat: native plugin not installed. Expected for packet 1.\"\r\n    endif\r\n\r\n    if iMissingCount == 0\r\n        set bFrameworkReady to 1\r\n        PrintC \"NVO Combat: prerequisite plugins detected. Version audit is in the packet.\"\r\n    else\r\n        PrintC \"NVO Combat: missing prerequisites. See the console lines above.\"\r\n    endif\r\n\r\n    PrintC \"NVO Combat: packet 1 does not change combat.\"\r\n\r\nEnd\r\n"
+      }
+    ],
+    "bootstrap_matches": [
+      {
+        "type": "SCPT",
+        "form": "01000DBE",
+        "flags": "00000000",
+        "EDID": "NVOCombatBootstrapScript",
+        "source": "scn NVOCombatBootstrapScript\r\n\r\nshort bChecked\r\nshort bFrameworkReady\r\nshort bCorePresent\r\nshort bCombatEnabled\r\nshort iMissingCount\r\nshort iPacket\r\nlong iRunCount\r\nlong iNVSEMajor\r\nlong iNVSEMinor\r\nfloat fQuestDelayTime\r\n\r\nBegin GameMode\r\n\r\n    set fQuestDelayTime to 1\r\n\r\n    if GetGameLoaded\r\n        set bChecked to 0\r\n    endif\r\n    if GetGameRestarted\r\n        set bChecked to 0\r\n    endif\r\n\r\n    if bChecked == 1\r\n        Return\r\n    endif\r\n\r\n    set bChecked to 1\r\n    set iPacket to 1\r\n    set iRunCount to iRunCount + 1\r\n    set iMissingCount to 0\r\n    set bFrameworkReady to 0\r\n    set bCorePresent to 0\r\n    set bCombatEnabled to 0\r\n    set iNVSEMajor to GetNVSEVersion\r\n    set iNVSEMinor to GetNVSERevision\r\n\r\n    PrintC \"NVO Combat: foundation packet 1 initialized.\"\r\n\r\n    if iNVSEMajor < 6\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: xNVSE 6.3.0 or newer is required.\"\r\n    elseif iNVSEMajor == 6\r\n        if iNVSEMinor < 3\r\n            set iMissingCount to iMissingCount + 1\r\n            PrintC \"NVO Combat: xNVSE 6.3.0 or newer is required.\"\r\n        endif\r\n    endif\r\n\r\n    if IsPluginInstalled \"JIP NVSE Plugin\" == 0\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: JIP LN NVSE is missing.\"\r\n    endif\r\n\r\n    if IsPluginInstalled \"JohnnyGuitarNVSE\" == 0\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: JohnnyGuitar NVSE is missing.\"\r\n    endif\r\n\r\n    if IsPluginInstalled \"ShowOffNVSE Plugin\" == 0\r\n        set iMissingCount to iMissingCount + 1\r\n        PrintC \"NVO Combat: ShowOff NVSE is missing.\"\r\n    endif\r\n\r\n    if IsPluginInstalled \"NVOCombatCore\"\r\n        set bCorePresent to 1\r\n        PrintC \"NVO Combat: native plugin detected. Damage hooks remain disabled.\"\r\n    else\r\n        PrintC \"NVO Combat: native plugin not installed. Expected for packet 1.\"\r\n    endif\r\n\r\n    if iMissingCount == 0\r\n        set bFrameworkReady to 1\r\n        PrintC \"NVO Combat: prerequisite plugins detected. Version audit is in the packet.\"\r\n    else\r\n        PrintC \"NVO Combat: missing prerequisites. See the console lines above.\"\r\n    endif\r\n\r\n    PrintC \"NVO Combat: packet 1 does not change combat.\"\r\n\r\nEnd\r\n"
+      }
+    ]
+  }
+}

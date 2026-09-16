@@ -1,0 +1,310 @@
+{
+  "packet": "3N",
+  "sha256": "8bed50dd121a557c33ac07d26263208d3eb7d3643b63932e8d485acc84e98238",
+  "scripts": [
+    {
+      "editor_id": "ALTRichKidHit",
+      "original_form": "050074CA",
+      "candidates": [
+        {
+          "editor_id": "ALTRichKidHit",
+          "form": "050074CA"
+        }
+      ],
+      "source_matches": false,
+      "compiled_bytes": 188,
+      "compiled_changed": false,
+      "compiled_sha256": "1721ec8df9baba5c82f4c7b010bea6cbfa2a1fe1e5fb97cb9e000e2ae736938f",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    },
+    {
+      "editor_id": "ALTBackRichKidUDF",
+      "original_form": "050122A2",
+      "candidates": [
+        {
+          "editor_id": "ALTBackRichKidUDF",
+          "form": "050122A2"
+        }
+      ],
+      "source_matches": true,
+      "compiled_bytes": 368,
+      "compiled_changed": true,
+      "compiled_sha256": "471c3c9f36f6f729adc8be67cd29ca1e584b322cf4dfd17eb35e9d446ed83a9c",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    },
+    {
+      "editor_id": "ALTQscript",
+      "original_form": "05002900",
+      "candidates": [
+        {
+          "editor_id": "ALTQscript",
+          "form": "05002900"
+        }
+      ],
+      "source_matches": true,
+      "compiled_bytes": 3767,
+      "compiled_changed": true,
+      "compiled_sha256": "e554e576842821802282c732b598a3e85f267dda7135e6b4b1607c314dd8d26a",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    },
+    {
+      "editor_id": "NVOStartPreview",
+      "original_form": "05018E2B",
+      "candidates": [
+        {
+          "editor_id": "NVOStartPreview",
+          "form": "05018E2B"
+        }
+      ],
+      "source_matches": true,
+      "compiled_bytes": 3095,
+      "compiled_changed": true,
+      "compiled_sha256": "9edd8fda4b6228d2c0f071ca4b1a440e821cc4ba444888776774eae15e537308",
+      "script_type_preserved": true,
+      "prior_variable_slots_types_preserved": true,
+      "variable_differences": {},
+      "deleted": false
+    }
+  ],
+  "message_text_correct": true,
+  "message_other_fields_preserved": true,
+  "masters_preserved_RD_free": true,
+  "game_settings_preserved": true,
+  "remaining_registrations": [],
+  "additional_changes": [],
+  "layout_only_changes": [
+    {
+      "type": "ARMO",
+      "form": "05002033",
+      "editor_id": "ALTDesertRangerArmor",
+      "change": "changed"
+    },
+    {
+      "type": "ARMO",
+      "form": "05003883",
+      "editor_id": "ALTHubRobes",
+      "change": "changed"
+    },
+    {
+      "type": "CELL",
+      "form": "000DAC02",
+      "editor_id": "GunRunners",
+      "change": "changed"
+    },
+    {
+      "type": "CELL",
+      "form": "000DDDDF",
+      "editor_id": "SLFishermansShack",
+      "change": "changed"
+    },
+    {
+      "type": "CELL",
+      "form": "000E194E",
+      "editor_id": "",
+      "change": "changed"
+    },
+    {
+      "type": "CELL",
+      "form": "000E1ADF",
+      "editor_id": "",
+      "change": "changed"
+    },
+    {
+      "type": "CONT",
+      "form": "05001423",
+      "editor_id": "ALTVertiSupplies",
+      "change": "changed"
+    },
+    {
+      "type": "CREA",
+      "form": "05000E23",
+      "editor_id": "ALTDogMeatAudioTemplate",
+      "change": "changed"
+    },
+    {
+      "type": "CREA",
+      "form": "0500A6D6",
+      "editor_id": "ALTDogMeat",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "050022EC",
+      "editor_id": "ALTNCRMoney",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "050022ED",
+      "editor_id": "ALTCapsLL",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "05005CAB",
+      "editor_id": "ALTFingerBountyDeathItem",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "050068AD",
+      "editor_id": "ALTEarBountyDeathItem",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "0500FE72",
+      "editor_id": "ALTFishLL",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "05017043",
+      "editor_id": "ALTStartingGearGuns",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "05017044",
+      "editor_id": "ALTStartingGearEnergyWeapons",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "05017045",
+      "editor_id": "ALTStartingGearMelee",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "05017046",
+      "editor_id": "ALTStartingGearUnarmed",
+      "change": "changed"
+    },
+    {
+      "type": "LVLI",
+      "form": "0501763F",
+      "editor_id": "ALTStartingGearExplosives",
+      "change": "changed"
+    },
+    {
+      "type": "NPC_",
+      "form": "050016EE",
+      "editor_id": "ALTMojaveRep",
+      "change": "changed"
+    },
+    {
+      "type": "NPC_",
+      "form": "05005CAE",
+      "editor_id": "ALTRegulatorRep",
+      "change": "changed"
+    },
+    {
+      "type": "NPC_",
+      "form": "050068AF",
+      "editor_id": "ALTContractKillerRep",
+      "change": "changed"
+    },
+    {
+      "type": "NPC_",
+      "form": "050070FF",
+      "editor_id": "ALTNovacSettler",
+      "change": "changed"
+    },
+    {
+      "type": "PERK",
+      "form": "05003E87",
+      "editor_id": "ALTMyrmecologistPerk",
+      "change": "changed"
+    },
+    {
+      "type": "PERK",
+      "form": "05003E8A",
+      "editor_id": "ALTScientistPerk",
+      "change": "changed"
+    },
+    {
+      "type": "PERK",
+      "form": "050050AA",
+      "editor_id": "ALTYumaFlatsPerk",
+      "change": "changed"
+    },
+    {
+      "type": "PERK",
+      "form": "05005CA2",
+      "editor_id": "ALTGunRunnerPerk",
+      "change": "changed"
+    },
+    {
+      "type": "PERK",
+      "form": "050086D0",
+      "editor_id": "ALTGunRunnerPerkModify",
+      "change": "changed"
+    },
+    {
+      "type": "QUST",
+      "form": "00104C1C",
+      "editor_id": "VCG01",
+      "change": "changed"
+    },
+    {
+      "type": "QUST",
+      "form": "0015EC5B",
+      "editor_id": "VMS16b",
+      "change": "changed"
+    },
+    {
+      "type": "REFR",
+      "form": "050022F0",
+      "editor_id": "ALTFishermanPrideBedPlayerRef",
+      "change": "changed"
+    },
+    {
+      "type": "REFR",
+      "form": "05004A94",
+      "editor_id": "",
+      "change": "changed"
+    },
+    {
+      "type": "REFR",
+      "form": "0500FE67",
+      "editor_id": "",
+      "change": "changed"
+    },
+    {
+      "type": "REFR",
+      "form": "0500FE6D",
+      "editor_id": "",
+      "change": "changed"
+    },
+    {
+      "type": "REFR",
+      "form": "0501048B",
+      "editor_id": "",
+      "change": "changed"
+    },
+    {
+      "type": "REFR",
+      "form": "05010491",
+      "editor_id": "",
+      "change": "changed"
+    }
+  ],
+  "findings": [
+    "ALTRichKidHit: source_matches failed",
+    "ALTRichKidHit: compiled_changed failed"
+  ],
+  "status": "review_required",
+  "runtime_retirement_verified": false,
+  "damage_replacement": false,
+  "limit": "Source and changed compiled bytes are not independent bytecode decompilation or proof of runtime execution."
+}

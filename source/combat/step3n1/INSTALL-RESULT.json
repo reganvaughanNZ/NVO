@@ -1,0 +1,40 @@
+{
+  "packet": "3N1",
+  "installed_utc": "2026-09-16T03:59:09.4268941Z",
+  "installed": [
+    {
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3n1\\NVOBaronCheck.txt",
+      "destination": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOBaronCheck.txt",
+      "sha256": "578cc4d8535de1bbeaa3a721fd13f45cadb89ebe14570d55123f0090177c0c2d"
+    },
+    {
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3n1\\Data\\NVSE\\user_defined_functions\\NVOBaronCheck\\Check.txt",
+      "destination": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\user_defined_functions\\NVOBaronCheck\\Check.txt",
+      "sha256": "845db1bb01e60e7f2f6f6e324dfdffdcc349fc877cb98f32b5a1ec3936054dc1"
+    }
+  ],
+  "protected_unchanged": {
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVOFlightPilot.esp": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPhysics.ini": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPreview.ini": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.dll": "4826895e3954298de6c3ca5d6f56cd3a576434fda7a696e57572b646c833e664",
+    "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb": "4a652ab9c39158485a32bd3cb2f07a5d9e3921d479ac30689da2ba55c42ff354"
+  },
+  "prior_logs": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+      "size": 1413,
+      "modified_utc": "2026-09-16T00:34:22.1233138Z",
+      "sha256": "0d51b990b3c5dee47d6a88cf8e21d2cccd5f6a6d3391579e8a08a01b5bc11d6b"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\nvse.log",
+      "size": 109834,
+      "modified_utc": "2026-09-16T00:34:22.1218291Z",
+      "sha256": "5008271eb96123d6d14dd1bf65883dc519c52e1108d9a6af5e993f0a7fd63c0e"
+    }
+  ],
+  "gameplay_tested": false,
+  "damage_replacement": false
+}

@@ -1,0 +1,119 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c3\runtime-20260915-141533\transform_point-00439E90.obj
+
+File Type: COFF OBJECT
+
+  00439E90: 55                 push        ebp
+  00439E91: 8B EC              mov         ebp,esp
+  00439E93: 83 EC 10           sub         esp,10h
+  00439E96: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00439E99: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00439E9C: D9 40 08           fld         dword ptr [eax+8]
+  00439E9F: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  00439EA2: D8 41 08           fadd        dword ptr [ecx+8]
+  00439EA5: D9 5D F8           fstp        dword ptr [ebp-8]
+  00439EA8: D9 45 F8           fld         dword ptr [ebp-8]
+  00439EAB: 51                 push        ecx
+  00439EAC: D9 1C 24           fstp        dword ptr [esp]
+  00439EAF: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00439EB2: D9 42 04           fld         dword ptr [edx+4]
+  00439EB5: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00439EB8: D8 40 04           fadd        dword ptr [eax+4]
+  00439EBB: D9 5D F4           fstp        dword ptr [ebp-0Ch]
+  00439EBE: D9 45 F4           fld         dword ptr [ebp-0Ch]
+  00439EC1: 51                 push        ecx
+  00439EC2: D9 1C 24           fstp        dword ptr [esp]
+  00439EC5: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00439EC8: D9 01              fld         dword ptr [ecx]
+  00439ECA: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  00439ECD: D8 02              fadd        dword ptr [edx]
+  00439ECF: D9 5D F0           fstp        dword ptr [ebp-10h]
+  00439ED2: D9 45 F0           fld         dword ptr [ebp-10h]
+  00439ED5: 51                 push        ecx
+  00439ED6: D9 1C 24           fstp        dword ptr [esp]
+  00439ED9: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00439EDC: E8 8F C9 FD FF     call        00416870
+  00439EE1: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00439EE4: 8B E5              mov         esp,ebp
+  00439EE6: 5D                 pop         ebp
+  00439EE7: C2 08 00           ret         8
+  00439EEA: CC                 int         3
+  00439EEB: CC                 int         3
+  00439EEC: CC                 int         3
+  00439EED: CC                 int         3
+  00439EEE: CC                 int         3
+  00439EEF: CC                 int         3
+  00439EF0: 55                 push        ebp
+  00439EF1: 8B EC              mov         ebp,esp
+  00439EF3: 83 EC 10           sub         esp,10h
+  00439EF6: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00439EF9: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00439EFC: D9 40 08           fld         dword ptr [eax+8]
+  00439EFF: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  00439F02: D8 61 08           fsub        dword ptr [ecx+8]
+  00439F05: D9 5D F8           fstp        dword ptr [ebp-8]
+  00439F08: D9 45 F8           fld         dword ptr [ebp-8]
+  00439F0B: 51                 push        ecx
+  00439F0C: D9 1C 24           fstp        dword ptr [esp]
+  00439F0F: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00439F12: D9 42 04           fld         dword ptr [edx+4]
+  00439F15: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00439F18: D8 60 04           fsub        dword ptr [eax+4]
+  00439F1B: D9 5D F4           fstp        dword ptr [ebp-0Ch]
+  00439F1E: D9 45 F4           fld         dword ptr [ebp-0Ch]
+  00439F21: 51                 push        ecx
+  00439F22: D9 1C 24           fstp        dword ptr [esp]
+  00439F25: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00439F28: D9 01              fld         dword ptr [ecx]
+  00439F2A: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  00439F2D: D8 22              fsub        dword ptr [edx]
+  00439F2F: D9 5D F0           fstp        dword ptr [ebp-10h]
+  00439F32: D9 45 F0           fld         dword ptr [ebp-10h]
+  00439F35: 51                 push        ecx
+  00439F36: D9 1C 24           fstp        dword ptr [esp]
+  00439F39: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00439F3C: E8 2F C9 FD FF     call        00416870
+  00439F41: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00439F44: 8B E5              mov         esp,ebp
+  00439F46: 5D                 pop         ebp
+  00439F47: C2 08 00           ret         8
+  00439F4A: CC                 int         3
+  00439F4B: CC                 int         3
+  00439F4C: CC                 int         3
+  00439F4D: CC                 int         3
+  00439F4E: CC                 int         3
+  00439F4F: CC                 int         3
+  00439F50: 55                 push        ebp
+  00439F51: 8B EC              mov         ebp,esp
+  00439F53: 51                 push        ecx
+  00439F54: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00439F57: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00439F5A: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00439F5D: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00439F60: D9 04 8A           fld         dword ptr [edx+ecx*4]
+  00439F63: D9 18              fstp        dword ptr [eax]
+  00439F65: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00439F68: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00439F6B: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00439F6E: D9 44 8A 0C        fld         dword ptr [edx+ecx*4+0Ch]
+  00439F72: D9 58 04           fstp        dword ptr [eax+4]
+  00439F75: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  00439F78: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00439F7B: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00439F7E: D9 44 8A 18        fld         dword ptr [edx+ecx*4+18h]
+  00439F82: D9 58 08           fstp        dword ptr [eax+8]
+  00439F85: 8B E5              mov         esp,ebp
+  00439F87: 5D                 pop         ebp
+  00439F88: C2 08 00           ret         8
+  00439F8B: CC                 int         3
+  00439F8C: CC                 int         3
+  00439F8D: CC                 int         3
+  00439F8E: CC                 int         3
+  00439F8F: CC                 int         3
+
+  Summary
+
+         100 .text

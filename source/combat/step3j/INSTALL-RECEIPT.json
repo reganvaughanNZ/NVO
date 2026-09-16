@@ -1,0 +1,26 @@
+{
+  "status": "installed",
+  "date": "2026-09-16T00:58:38.0857717+12:00",
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\rd-removal-3J-20260916-005837",
+  "nvo_sha256": "2c005477f719ff6e2884d7ffeb6c7d547a0146196869999e14b8bff9e560ea98",
+  "rd_archived_to": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\rd-removal-3J-20260916-005837\\RD.esm",
+  "official_dlc_explicitly_active": true,
+  "native_version": 318,
+  "native_and_pilot_unchanged": true,
+  "game_tested": false,
+  "quiet_scripts_geck_compiled": false,
+  "load_order": [
+    "FalloutNV.esm",
+    "DeadMoney.esm",
+    "HonestHearts.esm",
+    "OldWorldBlues.esm",
+    "LonesomeRoad.esm",
+    "GunRunnersArsenal.esm",
+    "ClassicPack.esm",
+    "MercenaryPack.esm",
+    "TribalPack.esm",
+    "CaravanPack.esm",
+    "NVO.esm",
+    "NVOFlightPilot.esp"
+  ]
+}

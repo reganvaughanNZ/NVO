@@ -1,0 +1,52 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c3\runtime-20260915-141533\is_actor-0047C850.obj
+
+File Type: COFF OBJECT
+
+  0047C850: 30 C0              xor         al,al
+  0047C852: C3                 ret
+  0047C853: 90                 nop
+  0047C854: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0047C857: 32 C0              xor         al,al
+  0047C859: 8B E5              mov         esp,ebp
+  0047C85B: 5D                 pop         ebp
+  0047C85C: C3                 ret
+  0047C85D: CC                 int         3
+  0047C85E: CC                 int         3
+  0047C85F: CC                 int         3
+  0047C860: 55                 push        ebp
+  0047C861: 8B EC              mov         ebp,esp
+  0047C863: 51                 push        ecx
+  0047C864: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0047C867: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0047C86A: D9 40 14           fld         dword ptr [eax+14h]
+  0047C86D: 8B E5              mov         esp,ebp
+  0047C86F: 5D                 pop         ebp
+  0047C870: C3                 ret
+  0047C871: CC                 int         3
+  0047C872: CC                 int         3
+  0047C873: CC                 int         3
+  0047C874: CC                 int         3
+  0047C875: CC                 int         3
+  0047C876: CC                 int         3
+  0047C877: CC                 int         3
+  0047C878: CC                 int         3
+  0047C879: CC                 int         3
+  0047C87A: CC                 int         3
+  0047C87B: CC                 int         3
+  0047C87C: CC                 int         3
+  0047C87D: CC                 int         3
+  0047C87E: CC                 int         3
+  0047C87F: CC                 int         3
+  0047C880: 55                 push        ebp
+  0047C881: 8B EC              mov         ebp,esp
+  0047C883: 6A FF              push        0FFFFFFFFh
+  0047C885: 68 DB ED EE 00     push        0EEEDDBh
+  0047C88A: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+
+  Summary
+
+          40 .text

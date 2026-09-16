@@ -1,0 +1,37 @@
+{
+  "packet": "3V",
+  "execution_date": "2026-09-16",
+  "status": "complete",
+  "decision": "Step 3 closed as a bounded, explicitly profiled bullet-flight and diagnostic foundation",
+  "profile_scope": {
+    "select_on_fire": 9,
+    "pilot_only": 2,
+    "all_vanilla_ballistics_claimed": false
+  },
+  "damage_authority": "hold",
+  "step4_shadow_adapter": "eligible_for_a_separately_authorized_future_packet",
+  "step4_implementation_started": false,
+  "actions": {
+    "native_code_changed": false,
+    "dll_built_or_installed": false,
+    "game_files_written": false,
+    "geck_or_game_loaded": false,
+    "gameplay_test_run": false
+  },
+  "pre_execution_independent_validation": {
+    "indexed_entries": 121,
+    "size_or_hash_mismatches": 0,
+    "frozen_audit_documents_compared": 9,
+    "frozen_audit_document_mismatches": 0
+  },
+  "status_files_updated": [
+    "STATUS.md",
+    "source/combat/README.md",
+    "source/combat/PRE-DAMAGE-REVIEW.md",
+    "source/combat/review/REVIEW-STATUS.md"
+  ],
+  "frozen_packet": "release/NVO-Combat-Packet-3V-Step3-Closure-Audit",
+  "frozen_packet_modified": false,
+  "post_execution_note": "The frozen index now differs at the two mutable review-status documents because their superseding Packet 3V checkpoints were recorded. Native source, offline model, raw evidence, and the nine frozen audit documents were not changed.",
+  "next_authorization_boundary": "Prepare the first Step 4 read-only armour shadow-adapter packet; do not activate damage."
+}

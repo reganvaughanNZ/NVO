@@ -1,0 +1,187 @@
+{
+  "packet": "3R",
+  "native_version": 323,
+  "status": "PASS: controlled real-pool refusal, stock fallback, resumption and reload/exit cleanup",
+  "capture": "source\\combat\\step3r\\captures\\passed-5e0d186d6c99",
+  "log_sha256": "5e0d186d6c99525ffb8ecc472fd63634fa7d9b2f22386492ff654196b14cc73a",
+  "nvse_log_sha256": "f0c81632e252110d1111467ba55dcb500d34cb929967009af530c0e3058faa95",
+  "checks": {
+    "probe_once_and_actual_full_refusal": true,
+    "owned_flight_preserved": true,
+    "lifecycle_rollback": true,
+    "stock_base_passed_and_returned": true,
+    "weapon_sequence": true,
+    "all21_naturally_retired": true,
+    "twenty_private_commits": true,
+    "first_owned_flight_continued": true,
+    "later_admissions_and_reload": true,
+    "SUMMARY_clean": true,
+    "SPAWN_BOUNDARY_SUMMARY_clean": true,
+    "FLIGHT_ADMISSION_SUMMARY_clean": true,
+    "PHYSICS_ADMISSION_SUMMARY_clean": true,
+    "PHYSICS_SUMMARY_clean": true,
+    "PHYSICS_ROUTE_SUMMARY_clean": true,
+    "PHYSICS_DIAGNOSTIC_SUMMARY_clean": true,
+    "one_expected_refusal": true,
+    "paired_counts": true,
+    "normal_exit": true,
+    "post_reset_zero": true,
+    "damage_disabled_and_no_rejects": true,
+    "nine_game_identities_preserved": true,
+    "no_new_nvse_errors": true
+  },
+  "shots": 21,
+  "smg_shots": 20,
+  "pistol_shots_after_reload": 1,
+  "native_private_admissions": 20,
+  "stock_fallback_shots": 1,
+  "probe_release": [
+    {
+      "session": "1",
+      "reason": "actual_pool_refusal",
+      "synthetic_held": "127",
+      "synthetic_released": "127",
+      "used_before": "128",
+      "used_after": "1",
+      "survivor_token": "128",
+      "survivor_phase_before": "3",
+      "survivor_phase_after": "3",
+      "preserved": "1",
+      "process_once": "1",
+      "_line": 113
+    }
+  ],
+  "fallback_boundary": [
+    {
+      "session": "1",
+      "call": "2",
+      "depth": "1",
+      "source": "00000014",
+      "weapon": "0008F217",
+      "supplied_base": "0017A2C6",
+      "forwarded_base": "0017A2C6",
+      "returned_ref": "FF00197B",
+      "returned_base": "0017A2C6",
+      "create_events": "1",
+      "destroyed_inside": "0",
+      "paired": "1",
+      "returned_null": "0",
+      "base_argument_changed": "0",
+      "reserved": "0",
+      "reservation_enabled": "1",
+      "damage_replacement": "0",
+      "_line": 117
+    }
+  ],
+  "physics_summaries": [
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "accepted": "19",
+      "applied_steps": "408",
+      "rejected": "0",
+      "overflow": "1",
+      "open": "0",
+      "damage_replacement": "0",
+      "_line": 2263
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "accepted": "1",
+      "applied_steps": "26",
+      "rejected": "0",
+      "overflow": "0",
+      "open": "0",
+      "damage_replacement": "0",
+      "_line": 2652
+    }
+  ],
+  "creation_summaries": [
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "calls": "20",
+      "paired": "20",
+      "null_returns": "0",
+      "mismatched": "0",
+      "nested": "0",
+      "depth_overflow": "0",
+      "other_thread": "0",
+      "stale_returns": "0",
+      "unscoped_creates": "0",
+      "detail_rows": "16",
+      "log_failures": "0",
+      "reservation_enabled": "1",
+      "damage_replacement": "0",
+      "_line": 2256
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "calls": "1",
+      "paired": "1",
+      "null_returns": "0",
+      "mismatched": "0",
+      "nested": "0",
+      "depth_overflow": "0",
+      "other_thread": "0",
+      "stale_returns": "0",
+      "unscoped_creates": "0",
+      "detail_rows": "1",
+      "log_failures": "0",
+      "reservation_enabled": "1",
+      "damage_replacement": "0",
+      "_line": 2645
+    }
+  ],
+  "applied_steps": 434,
+  "verified_steps": 434,
+  "reset_rows": [
+    {
+      "session": "1",
+      "reason": "capture_begin",
+      "slots_held": "0",
+      "_line": 33
+    },
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "slots_held": "0",
+      "_line": 2266
+    },
+    {
+      "session": "2",
+      "reason": "capture_begin",
+      "slots_held": "0",
+      "_line": 2292
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "slots_held": "0",
+      "_line": 2655
+    },
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "slots_held": "0",
+      "_line": 2270
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "slots_held": "0",
+      "_line": 2659
+    }
+  ],
+  "prior_cosave_no_handler_warnings": 2,
+  "other_nvse_errors": [],
+  "limits": [
+    "127 inert tickets plus real flight; not a128-real-bullet performance test",
+    "No lifecycle512 saturation, exceptional unwind, nested/foreign-thread creation evidence",
+    "Damage replacement OFF; Ultra pre-damage HOLD; post-selection exceptional fallback remains limited"
+  ],
+  "game_files_changed": false,
+  "probe_still_installed": true
+}

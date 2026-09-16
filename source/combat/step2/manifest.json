@@ -1,0 +1,125 @@
+{
+  "packet": "NVO combat 2A",
+  "prepared": "2026-09-13",
+  "status": "Prepared, awaiting user compilation and gameplay capture",
+  "scope": "Existing extender events only. Custom native observer remains step 2B.",
+  "assistant_compiled": false,
+  "assistant_tested": false,
+  "installed_by_assistant": false,
+  "observed_runtime": {
+    "xNVSE": "6.4.8",
+    "JIP LN NVSE": 5730,
+    "JohnnyGuitarNVSE": 525,
+    "ShowOffNVSE Plugin": 184,
+    "source": "game-root nvse.log inspected 2026-09-13"
+  },
+  "install_files": [
+    {
+      "path": "Data/Config/NVOCombatDiagnostics.ini",
+      "sha256": "e8c6c20b6ed3ef8532558f74e5d7012685badb4440e1ff82fef5442805ff2913"
+    },
+    {
+      "path": "Data/NVSE/Plugins/scripts/ln_NVOCombatDiagnostics.txt",
+      "sha256": "4b94ec735b8f85197a564bae80621e3bb40c53b7d873f2529763e10ac544935d"
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnActorHit.txt",
+      "sha256": "567e08376d4fd70f61fc5b5176ff63c6dd1135dc0412c53939426ce401a3ec35"
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnExplosionHit.txt",
+      "sha256": "8152588ba6f8b1a36e53b7f8613a6c53facea952df6e7c172113d15567b9a9b3"
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnProjectileCreate.txt",
+      "sha256": "e429841a87674112fd9ebf5ac80604d8cb82df85691246a36d585d6d737cf5aa"
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/OnProjectileImpact.txt",
+      "sha256": "95f8dfcef88ac0a5fbfae82d207f8b8e55e81e9d6566091cce9330238c8298bc"
+    },
+    {
+      "path": "Data/NVSE/user_defined_functions/NVOCombatDiagnostics/WriteEvent.txt",
+      "sha256": "80fed7a4d8eb7813d7346f62005ad2e93ce963fbb86a13c8af380a9079731507"
+    }
+  ],
+  "api_sources": [
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\internal\\hooks.h",
+      "sha256": "2b37a24379dea9b4bed1482d657e1c04ac9d03cc5828da4f6caf8d3cdce6e0f3"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\internal\\jip_core.cpp",
+      "sha256": "08b9ecdd07de5940d28c024df7b7f7b7f1678057afa748b3f4067924272162c4"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\internal\\jip_core.h",
+      "sha256": "73e4c51f8df542ce27e4e37077e39ede079f4a42a430129df5d68f55fee5b97a"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\internal\\patches_cmd.h",
+      "sha256": "6a4fb2e6fd6f107bc1875e3d986dab7bfc3adac652aa6cf85626c9193492aa69"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\functions_jip\\jip_fn_actor.h",
+      "sha256": "34eed60941e9f6fe90b0ccbe078d32eb1f944b2a6b75a31da679af11b221fadb"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\functions_jip\\jip_fn_aux_variable.h",
+      "sha256": "62256da48a0db5fb06db6ab13d6602b88e0279adeb4389102f267031024eab1a"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\functions_jip\\jip_fn_projectile.h",
+      "sha256": "a35b9b7a984c3fdc736b7eb8874895d2721c7bc2ec98573da5e6b7a96f6e4c8b"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\functions_jip\\jip_fn_utility.h",
+      "sha256": "bef49b45374c0a44dd2f27fb4529d29cfd0ee7edeec48e7842018481cbc4ec5a"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\functions_ln\\ln_fn_utility.h",
+      "sha256": "b3a1c3e53bf6879efd1b7910e6d6f1ee31475c2d0aa18530e61b9531ad6c04f1"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\nvse\\GameObjects.cpp",
+      "sha256": "7f79a174ac707349eb55b47f18cd7cbd025d69d5e2aadd486d11b199a14b0d7e"
+    },
+    {
+      "project": "JIP",
+      "path": "C:\\Users\\regan\\Downloads\\JIP-LN-NVSE-main\\JIP-LN-NVSE-main\\nvse\\GameScript.cpp",
+      "sha256": "7118c81a8c3b0f9f22e6b13588973309999903be64e50a430f44306f9cf2ade5"
+    },
+    {
+      "project": "ShowOff",
+      "path": "C:\\Users\\regan\\Downloads\\ShowOff-NVSE-main\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\Events\\ShowOffEvents.h",
+      "sha256": "5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270"
+    },
+    {
+      "project": "xNVSE",
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\Commands_Scripting.cpp",
+      "sha256": "22801fcb0626fa7aff67c0873bfc173f6d81fe82567bd483816f8ff3babfa089"
+    },
+    {
+      "project": "xNVSE",
+      "path": "C:\\Users\\regan\\Downloads\\NVSE-master\\NVSE-master\\nvse\\nvse\\Commands_Script.cpp",
+      "sha256": "2de2c064eb0efb85093003d2897f768d85e6a18ecdbf6e6b4736846a17f4426f"
+    }
+  ],
+  "generated_log": "Data/NVSE/Plugins/NVOCombatDiagnostics.log",
+  "temporary_auxiliary_variables": [
+    "*_NVODiagEnabled",
+    "*_NVODiagCount",
+    "*_NVODiagLimit",
+    "*_NVODiagWriter"
+  ]
+}

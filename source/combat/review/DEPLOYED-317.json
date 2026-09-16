@@ -1,0 +1,612 @@
+{
+  "captured_utc": "2026-09-15T11:19:17.822775+00:00",
+  "installed": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "expected": "ad962a694f90bf22ac452cd23ba8772d83bd6752854760d5453bd76c76634d33",
+      "actual": "ad962a694f90bf22ac452cd23ba8772d83bd6752854760d5453bd76c76634d33",
+      "release_sha256": "ad962a694f90bf22ac452cd23ba8772d83bd6752854760d5453bd76c76634d33",
+      "matches": true
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "expected": "3be15b4ca78f1d067588eb79a4d30ad6a7fb50cd2c72e159cae178c394a140a4",
+      "actual": "3be15b4ca78f1d067588eb79a4d30ad6a7fb50cd2c72e159cae178c394a140a4",
+      "release_sha256": "3be15b4ca78f1d067588eb79a4d30ad6a7fb50cd2c72e159cae178c394a140a4",
+      "matches": true
+    }
+  ],
+  "protected": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\nvse_config.ini",
+      "expected": "42316c21a8885f0f820da73d5679d9de3d811c090d2a61e97ea3a3abdac9dd6c",
+      "actual": "42316c21a8885f0f820da73d5679d9de3d811c090d2a61e97ea3a3abdac9dd6c",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\nvse_config.testAnim",
+      "expected": "75554d166ce14122708271747d01e6fae2c315da1144dae591c3945a1992f216",
+      "actual": "75554d166ce14122708271747d01e6fae2c315da1144dae591c3945a1992f216",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\TestAnim.txt",
+      "expected": "ca30bce526769c195d1b9d3008b94beda8de3cee2a527e11e4d17523fe9ef76b",
+      "actual": "ca30bce526769c195d1b9d3008b94beda8de3cee2a527e11e4d17523fe9ef76b",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\AnhNVSE.dll",
+      "expected": "c9f664139991ef76ac66939f8ac82d3da3b9be7974880620a9e67a005ba545f2",
+      "actual": "c9f664139991ef76ac66939f8ac82d3da3b9be7974880620a9e67a005ba545f2",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\geckextender.ini",
+      "expected": "44c671065ab493c30b9afa91dcb54a42dcd920e4a8030d2a24840efe09b6705e",
+      "actual": "44c671065ab493c30b9afa91dcb54a42dcd920e4a8030d2a24840efe09b6705e",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\itr-nvse.dll",
+      "expected": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c",
+      "actual": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\itr-nvse.pdb",
+      "expected": "4d68ede0fb8d685713746ec846fbbc253052bd747fe8fd5b310f60ad29e8ce14",
+      "actual": "4d68ede0fb8d685713746ec846fbbc253052bd747fe8fd5b310f60ad29e8ce14",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\jip_nvse.dll",
+      "expected": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4",
+      "actual": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\jip_nvse.pdb",
+      "expected": "f0a5ea8de514a2d7cfec8b05e81e17f125fb6795d36bbfac751825d5c7872c53",
+      "actual": "f0a5ea8de514a2d7cfec8b05e81e17f125fb6795d36bbfac751825d5c7872c53",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\johnnyguitar.dll",
+      "expected": "b2d54e12baffda40381074153c525a1643f47885978dfa681dc6201dd8839b92",
+      "actual": "b2d54e12baffda40381074153c525a1643f47885978dfa681dc6201dd8839b92",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\JohnnyGuitar.ini",
+      "expected": "1556b4e9897f0ef8b787ea44c440626fb501427416544309fab06b7b88ef404d",
+      "actual": "1556b4e9897f0ef8b787ea44c440626fb501427416544309fab06b7b88ef404d",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\kNVSE.dll",
+      "expected": "90b7f3ed995ccd76027fa2ba4f594ad20c6e09334b4071da2534a90d079bea55",
+      "actual": "90b7f3ed995ccd76027fa2ba4f594ad20c6e09334b4071da2534a90d079bea55",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\kNVSE.ini",
+      "expected": "5b2656223db887f325ab8b174f0c18f92d20d4d7fce54eafc559df70550b8056",
+      "actual": "5b2656223db887f325ab8b174f0c18f92d20d4d7fce54eafc559df70550b8056",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\kNVSE.pdb",
+      "expected": "5c44ac4130672304f4c541a6bf022cf9ca98019c0b742afa346b909e214ae0fc",
+      "actual": "5c44ac4130672304f4c541a6bf022cf9ca98019c0b742afa346b909e214ae0fc",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPhysics.ini",
+      "expected": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac",
+      "actual": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPreview.ini",
+      "expected": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+      "actual": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\ShowOffNVSE.dll",
+      "expected": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e",
+      "actual": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\ShowOffNVSE.pdb",
+      "expected": "9a5d53125246118c003ec76b071eb83ffbf5895eee3a38473ee883a69bbd53d0",
+      "actual": "9a5d53125246118c003ec76b071eb83ffbf5895eee3a38473ee883a69bbd53d0",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\supNVSE.dll",
+      "expected": "61b0f1760a643ee749c785bf989f22b18f7b445891d2595f55445281c8a22e6c",
+      "actual": "61b0f1760a643ee749c785bf989f22b18f7b445891d2595f55445281c8a22e6c",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\supNVSE.ini",
+      "expected": "796d9492f0318e398b54cb7a2332a0011e47fc2af1e740338c087308dadab47b",
+      "actual": "796d9492f0318e398b54cb7a2332a0011e47fc2af1e740338c087308dadab47b",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\supNVSE.pdb",
+      "expected": "cf4021304c1bf577ac47522271c165af70b99eb7904c25098a8cb5d9908e096e",
+      "actual": "cf4021304c1bf577ac47522271c165af70b99eb7904c25098a8cb5d9908e096e",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\ZeGaryHax.dll",
+      "expected": "d1d1ae881f46c6fdb91b17f37a9f74ac803c8f80324f8a542fb5f073830e09db",
+      "actual": "d1d1ae881f46c6fdb91b17f37a9f74ac803c8f80324f8a542fb5f073830e09db",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\ZeGaryHax.pdb",
+      "expected": "31be28592dfaf152a40893c0c864f931d7c0b453201947d921ef5b9b6606a9df",
+      "actual": "31be28592dfaf152a40893c0c864f931d7c0b453201947d921ef5b9b6606a9df",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\scripts\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\scripts\\ln_itr-nvse-mcm.txt",
+      "expected": "9e43c5eee928f07d1fe28449e5025870b75c8738c90c27dd7a3f3c0cbd01434a",
+      "actual": "9e43c5eee928f07d1fe28449e5025870b75c8738c90c27dd7a3f3c0cbd01434a",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\SUPDateChecker\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\textinput\\texteditmenu.xml",
+      "expected": "539bc69d6f2103164fca060fe4c1a8881f2056f05e050fe14b479b6976eb00e9",
+      "actual": "539bc69d6f2103164fca060fe4c1a8881f2056f05e050fe14b479b6976eb00e9",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\tweaks\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\tweaks\\GameSettings\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\tweaks\\inis\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\tweaks\\MenuConfig\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\A3PC\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\AdditiveHitReactions\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\B42Inertia\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\EFOV\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\EnhancedCreatures\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\FO4ST\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\itr-nvse\\OnMCMUpdate.gek",
+      "expected": "097118816d0f0909d02a2f41a4ac85e7044ae978fb7f2a5a82f5f46a2b5fd854",
+      "actual": "097118816d0f0909d02a2f41a4ac85e7044ae978fb7f2a5a82f5f46a2b5fd854",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\MCMExtender\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\user_defined_functions\\NPCsSprint\\__folder_managed_by_vortex",
+      "expected": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "actual": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+      "expected": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d",
+      "actual": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.bsa",
+      "expected": "b6bc07f5c6b5907e5616d2af64db3d7c5d75e2bec0624b5f72836ccd899f48ec",
+      "actual": "b6bc07f5c6b5907e5616d2af64db3d7c5d75e2bec0624b5f72836ccd899f48ec",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.override",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\Config\\ALTStartConfig.ini",
+      "expected": "ce811612bf643702f7e06523baef1d4bb38bf859bce6f757069eb8c98ab83799",
+      "actual": "ce811612bf643702f7e06523baef1d4bb38bf859bce6f757069eb8c98ab83799",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOFlightPilot.txt",
+      "expected": "0af8c8f8498dc898128dcc7206e773de45adb3104e4280aae765630259d8fc4a",
+      "actual": "0af8c8f8498dc898128dcc7206e773de45adb3104e4280aae765630259d8fc4a",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOFlightKit.txt",
+      "expected": "ee1b5af80302197f65766b1a2a6234e29276a646e21557e3219a75f843f25e07",
+      "actual": "ee1b5af80302197f65766b1a2a6234e29276a646e21557e3219a75f843f25e07",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOFlightKit3E.txt",
+      "expected": "bc3c0e83e840c8fd18b84a6783a1b3d8638ef87d798ed97d5a27f34ce88d3a9a",
+      "actual": "bc3c0e83e840c8fd18b84a6783a1b3d8638ef87d798ed97d5a27f34ce88d3a9a",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\RD.esm",
+      "expected": "9498ee5bee4119ec289b8f88af83e3bbd0ff2e2ec57e45809f3e18dd8b139bc3",
+      "actual": "9498ee5bee4119ec289b8f88af83e3bbd0ff2e2ec57e45809f3e18dd8b139bc3",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVOFlightPilot.esp",
+      "expected": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+      "actual": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOFlightKit3F.txt",
+      "expected": "387e095bb0a2a706a267378d584fb2e1fd7fbd1980e3c0c205ecd6f3ffa800f2",
+      "actual": "387e095bb0a2a706a267378d584fb2e1fd7fbd1980e3c0c205ecd6f3ffa800f2",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\AppData\\Local\\FalloutNV\\plugins.txt",
+      "expected": "7aa80eab19487289fb74052da3e9c02d2f3d9a4eba01fb9c700f7ebfc8d271ca",
+      "actual": "7aa80eab19487289fb74052da3e9c02d2f3d9a4eba01fb9c700f7ebfc8d271ca",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\regan\\AppData\\Local\\FalloutNV\\loadorder.txt",
+      "expected": "905dfd6e4411e20449ab93af58d9c9bf56f2d6e91f58e1494ce5b4775adac156",
+      "actual": "905dfd6e4411e20449ab93af58d9c9bf56f2d6e91f58e1494ce5b4775adac156",
+      "matches": true
+    }
+  ],
+  "protected_matched": 53,
+  "activation": {
+    "plugins.txt": "# This file is used by Fallout NV to keep track of your downloaded content.\n# Please do not modify this file.\nFalloutNV.esm\nNVO.esm\nNVOFlightPilot.esp\n",
+    "loadorder.txt": "# Automatically generated by Vortex\nFalloutNV.esm\nCaravanPack.esm\nCheat.esm\nClassicPack.esm\nDeadMoney.esm\nGreenIsle.esm\nGunRunnersArsenal.esm\nHonestHearts.esm\nLonesomeRoad.esm\nMercenaryPack.esm\nRD.esm\nTribalPack.esm\nknights.esm\nNVO.esm\nOldWorldBlues.esm"
+  },
+  "loose_files": [
+    {
+      "path": "Data\\NVSE\\nvse_config.ini",
+      "bytes": 3119,
+      "sha256": "42316c21a8885f0f820da73d5679d9de3d811c090d2a61e97ea3a3abdac9dd6c"
+    },
+    {
+      "path": "Data\\NVSE\\nvse_config.testAnim",
+      "bytes": 40,
+      "sha256": "75554d166ce14122708271747d01e6fae2c315da1144dae591c3945a1992f216"
+    },
+    {
+      "path": "Data\\NVSE\\TestAnim.txt",
+      "bytes": 2750,
+      "sha256": "ca30bce526769c195d1b9d3008b94beda8de3cee2a527e11e4d17523fe9ef76b"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\geckextender.ini",
+      "bytes": 2837,
+      "sha256": "44c671065ab493c30b9afa91dcb54a42dcd920e4a8030d2a24840efe09b6705e"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\JohnnyGuitar.ini",
+      "bytes": 1741,
+      "sha256": "1556b4e9897f0ef8b787ea44c440626fb501427416544309fab06b7b88ef404d"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\kNVSE.ini",
+      "bytes": 1930,
+      "sha256": "5b2656223db887f325ab8b174f0c18f92d20d4d7fce54eafc559df70550b8056"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\NVOFlightPhysics.ini",
+      "bytes": 199,
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\NVOFlightPreview.ini",
+      "bytes": 3595,
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\supNVSE.ini",
+      "bytes": 37,
+      "sha256": "796d9492f0318e398b54cb7a2332a0011e47fc2af1e740338c087308dadab47b"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\scripts\\ln_itr-nvse-mcm.txt",
+      "bytes": 74,
+      "sha256": "9e43c5eee928f07d1fe28449e5025870b75c8738c90c27dd7a3f3c0cbd01434a"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\scripts\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\SUPDateChecker\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\textinput\\texteditmenu.xml",
+      "bytes": 13778,
+      "sha256": "539bc69d6f2103164fca060fe4c1a8881f2056f05e050fe14b479b6976eb00e9"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\tweaks\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\tweaks\\GameSettings\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\tweaks\\inis\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\plugins\\tweaks\\MenuConfig\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\A3PC\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\AdditiveHitReactions\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\B42Inertia\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\EFOV\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\EnhancedCreatures\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\FO4ST\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\itr-nvse\\OnMCMUpdate.gek",
+      "bytes": 52,
+      "sha256": "097118816d0f0909d02a2f41a4ac85e7044ae978fb7f2a5a82f5f46a2b5fd854"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\MCMExtender\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    },
+    {
+      "path": "Data\\NVSE\\user_defined_functions\\NPCsSprint\\__folder_managed_by_vortex",
+      "bytes": 96,
+      "sha256": "360edfdfa238ef89fcc1a8c71f7d05833db03eed08c237ae0f8d60f21ef61ccb"
+    }
+  ],
+  "plugins": [
+    {
+      "name": "NVO.esm",
+      "sha256": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d",
+      "masters": [
+        "FalloutNV.esm",
+        "CaravanPack.esm",
+        "DeadMoney.esm",
+        "HonestHearts.esm",
+        "OldWorldBlues.esm",
+        "LonesomeRoad.esm",
+        "ClassicPack.esm",
+        "GunRunnersArsenal.esm",
+        "MercenaryPack.esm",
+        "RD.esm",
+        "TribalPack.esm"
+      ],
+      "counts": {
+        "TES4": 1,
+        "GMST": 5,
+        "TXST": 4,
+        "GLOB": 4,
+        "FACT": 3,
+        "MGEF": 2,
+        "SCPT": 124,
+        "ENCH": 1,
+        "SPEL": 11,
+        "ACTI": 3,
+        "TERM": 1,
+        "ARMO": 7,
+        "CONT": 2,
+        "MISC": 3,
+        "FURN": 4,
+        "NPC_": 4,
+        "CREA": 2,
+        "ALCH": 11,
+        "LVLI": 10,
+        "CELL": 32,
+        "REFR": 243,
+        "ACRE": 5,
+        "ACHR": 5,
+        "WRLD": 6,
+        "DIAL": 81,
+        "INFO": 128,
+        "QUST": 9,
+        "PACK": 7,
+        "FLST": 21,
+        "PERK": 12,
+        "VTYP": 1,
+        "MESG": 64,
+        "RCPE": 4
+      },
+      "script_count": 275,
+      "quests": [
+        {
+          "type": "QUST",
+          "form": "0B00B6AE",
+          "flags": "00000000",
+          "EDID": "ALTLevelQ"
+        },
+        {
+          "type": "QUST",
+          "form": "000F8B6B",
+          "flags": "00000000",
+          "EDID": "1EExtraFiends",
+          "FULL": "1E Extra Characters - Fiends"
+        },
+        {
+          "type": "QUST",
+          "form": "00102037",
+          "flags": "00000000",
+          "EDID": "VCG00",
+          "FULL": "Welcome To Fabulous New Vegas"
+        },
+        {
+          "type": "QUST",
+          "form": "0B00EC6E",
+          "flags": "00000000",
+          "EDID": "ALTPreorderQ"
+        },
+        {
+          "type": "QUST",
+          "form": "00104C1C",
+          "flags": "00000000",
+          "EDID": "VCG01",
+          "FULL": "Ain't That a Kick in the Head"
+        },
+        {
+          "type": "QUST",
+          "form": "0015EC5B",
+          "flags": "00000000",
+          "EDID": "VMS16b",
+          "FULL": "Run Goodsprings Run"
+        },
+        {
+          "type": "QUST",
+          "form": "0B0016E6",
+          "flags": "00000000",
+          "EDID": "ALTQ"
+        },
+        {
+          "type": "QUST",
+          "form": "0B0022E2",
+          "flags": "00000000",
+          "EDID": "ALTStartQ"
+        },
+        {
+          "type": "QUST",
+          "form": "0B00892E",
+          "flags": "00000000",
+          "EDID": "ALTCoyoteQ"
+        }
+      ]
+    },
+    {
+      "name": "NVOFlightPilot.esp",
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f",
+      "masters": [
+        "FalloutNV.esm"
+      ],
+      "counts": {
+        "TES4": 1,
+        "WEAP": 2,
+        "AMMO": 2,
+        "PROJ": 11
+      },
+      "script_count": 0,
+      "quests": []
+    }
+  ],
+  "scope": "Read-only deployed hash/loose file/embedded source inventory. Source text does not prove compiled execution; archive/load-hook execution not established. No game process inspection or launch."
+}

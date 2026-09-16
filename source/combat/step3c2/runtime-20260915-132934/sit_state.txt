@@ -1,0 +1,40 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-132934\sit_state.obj
+
+File Type: COFF OBJECT
+
+  00ACBB70: 31 C0              xor         eax,eax
+  00ACBB72: C3                 ret
+  00ACBB73: 90                 nop
+  00ACBB74: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00ACBB77: 33 C0              xor         eax,eax
+  00ACBB79: 8B E5              mov         esp,ebp
+  00ACBB7B: 5D                 pop         ebp
+  00ACBB7C: C3                 ret
+  00ACBB7D: CC                 int         3
+  00ACBB7E: CC                 int         3
+  00ACBB7F: CC                 int         3
+  00ACBB80: 55                 push        ebp
+  00ACBB81: 8B EC              mov         ebp,esp
+  00ACBB83: 81 EC 88 00 00 00  sub         esp,88h
+  00ACBB89: 89 4D 84           mov         dword ptr [ebp-7Ch],ecx
+  00ACBB8C: 8B 45 84           mov         eax,dword ptr [ebp-7Ch]
+  00ACBB8F: 8B 48 40           mov         ecx,dword ptr [eax+40h]
+  00ACBB92: 83 E1 08           and         ecx,8
+  00ACBB95: 74 72              je          00ACBC09
+  00ACBB97: 8B 55 84           mov         edx,dword ptr [ebp-7Ch]
+  00ACBB9A: 8B 42 24           mov         eax,dword ptr [edx+24h]
+  00ACBB9D: 8B 08              mov         ecx,dword ptr [eax]
+  00ACBB9F: 89 4D E4           mov         dword ptr [ebp-1Ch],ecx
+  00ACBBA2: 83 7D E4 00        cmp         dword ptr [ebp-1Ch],0
+  00ACBBA6: 74 61              je          00ACBC09
+  00ACBBA8: 8B 55 84           mov         edx,dword ptr [ebp-7Ch]
+  00ACBBAB: 8B 42 24           mov         eax,dword ptr [edx+24h]
+  00ACBBAE: 8B 08              mov         ecx,dword ptr [eax]
+
+  Summary
+
+          40 .text

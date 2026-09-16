@@ -1,0 +1,239 @@
+{
+  "packet": "3U",
+  "native_version": 324,
+  "status": "partial_pass_fix_required",
+  "capture": "source\\combat\\step3u\\captures\\review-20453d5c1e84\\NVOCombatCore.log",
+  "capture_sha256": "20453d5c1e84f965f408d0721c283d2b851e852cdae51b43ca2f2ef376900b08",
+  "shots": [
+    {
+      "shot": 1,
+      "session": 1,
+      "weapon": "000E3778",
+      "ammo": "0008ED03",
+      "target": "00104F0A",
+      "contact_region": 1,
+      "speed_status": "observed_engine_segment",
+      "speed_available": true,
+      "mean_segment_mps": 387.109091,
+      "terrain_geometry": {
+        "raise_rule_triggered": false,
+        "floor_minus_candidate_units": -125.45897999999943,
+        "preclamp_endpoint_error": 0.004266919154581815,
+        "final_position_rule_error": 0.0,
+        "final_accounting_rule_error": 6.201362323169579e-05,
+        "contact_point_error": 0.0,
+        "tolerance": 0.0430072191
+      },
+      "native_explained_clamp": false,
+      "impact_step_line": 61,
+      "speed_line": 66,
+      "terrain_line": 67,
+      "boundary_line": 65
+    },
+    {
+      "shot": 2,
+      "session": 1,
+      "weapon": "000E3778",
+      "ammo": "0008ED03",
+      "target": "00000000",
+      "contact_region": -1,
+      "speed_status": "snapshot_unavailable",
+      "speed_available": false,
+      "mean_segment_mps": null,
+      "terrain_geometry": {
+        "raise_rule_triggered": true,
+        "floor_minus_candidate_units": 40.25194999999985,
+        "preclamp_endpoint_error": 0.007388634671101517,
+        "final_position_rule_error": 0.0,
+        "final_accounting_rule_error": 1.5049911251138145e-05,
+        "contact_point_error": 0.0,
+        "tolerance": 0.04649548
+      },
+      "native_explained_clamp": false,
+      "impact_step_line": 192,
+      "speed_line": 197,
+      "terrain_line": 198,
+      "boundary_line": 196
+    },
+    {
+      "shot": 3,
+      "session": 1,
+      "weapon": "000E3778",
+      "ammo": "0008ED03",
+      "target": "00000000",
+      "contact_region": -1,
+      "speed_status": "snapshot_unavailable",
+      "speed_available": false,
+      "mean_segment_mps": null,
+      "terrain_geometry": {
+        "raise_rule_triggered": true,
+        "floor_minus_candidate_units": 89.06934000000001,
+        "preclamp_endpoint_error": 0.000561051989501387,
+        "final_position_rule_error": 0.0,
+        "final_accounting_rule_error": 1.3009605578656162e-05,
+        "contact_point_error": 0.0,
+        "tolerance": 0.0462072175
+      },
+      "native_explained_clamp": false,
+      "impact_step_line": 471,
+      "speed_line": 476,
+      "terrain_line": 477,
+      "boundary_line": 475
+    },
+    {
+      "shot": 4,
+      "session": 1,
+      "weapon": "000E3778",
+      "ammo": "0008ED03",
+      "target": "00000000",
+      "contact_region": -1,
+      "speed_status": "snapshot_unavailable",
+      "speed_available": false,
+      "mean_segment_mps": null,
+      "terrain_geometry": {
+        "raise_rule_triggered": false,
+        "floor_minus_candidate_units": 22.583990000000995,
+        "preclamp_endpoint_error": 0.004331473404606215,
+        "final_position_rule_error": 0.0,
+        "final_accounting_rule_error": 2.550457403037938e-05,
+        "contact_point_error": 0.0,
+        "tolerance": 0.0409740365
+      },
+      "native_explained_clamp": false,
+      "impact_step_line": 810,
+      "speed_line": 815,
+      "terrain_line": 816,
+      "boundary_line": 814
+    },
+    {
+      "shot": 5,
+      "session": 1,
+      "weapon": "00004333",
+      "ammo": "0006B53C",
+      "target": "00104F0A",
+      "contact_region": 3,
+      "speed_status": "observed_engine_segment",
+      "speed_available": true,
+      "mean_segment_mps": 849.770996,
+      "terrain_geometry": {
+        "raise_rule_triggered": false,
+        "floor_minus_candidate_units": -73.13573999999971,
+        "preclamp_endpoint_error": 0.005020368668430144,
+        "final_position_rule_error": 0.0,
+        "final_accounting_rule_error": 3.838084922320516e-05,
+        "contact_point_error": 0.0,
+        "tolerance": 0.0567921525
+      },
+      "native_explained_clamp": false,
+      "impact_step_line": 849,
+      "speed_line": 854,
+      "terrain_line": 855,
+      "boundary_line": 853
+    },
+    {
+      "shot": 6,
+      "session": 2,
+      "weapon": "000E3778",
+      "ammo": "0008ED03",
+      "target": "00177CA4",
+      "contact_region": -1,
+      "speed_status": "observed_engine_segment",
+      "speed_available": true,
+      "mean_segment_mps": 387.109103,
+      "terrain_geometry": {
+        "raise_rule_triggered": false,
+        "floor_minus_candidate_units": -91.76073999999971,
+        "preclamp_endpoint_error": 0.007533221730537176,
+        "final_position_rule_error": 0.0,
+        "final_accounting_rule_error": 1.3521264468911057e-05,
+        "contact_point_error": 0.0,
+        "tolerance": 0.046469842
+      },
+      "native_explained_clamp": false,
+      "impact_step_line": 958,
+      "speed_line": 963,
+      "terrain_line": 964,
+      "boundary_line": 962
+    }
+  ],
+  "creates": 6,
+  "impacts": 6,
+  "destroys": 6,
+  "reloads": 1,
+  "applied_steps": 51,
+  "clear_flight_steps_verified": 48,
+  "collision_ending_applied_steps": 3,
+  "movement_rejections": 0,
+  "unpaired_accounting": 0,
+  "pools_clear_after_reload_and_exit": true,
+  "startup_banners": 1,
+  "speed_results_available": 3,
+  "zero_id_world_contacts_rejected": 3,
+  "terrain_clamps_supported_by_recorded_geometry": 2,
+  "terrain_clamps_accepted_by_native_estimator": 0,
+  "vats": {
+    "shot": 5,
+    "user_aim": "torso",
+    "contact_region": 3,
+    "contact_name": "left arm 1",
+    "damage_record_region": 0,
+    "damage_record_name": "torso",
+    "automatic_remap": false
+  },
+  "body_mapping_source": {
+    "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.h",
+    "sha256": "96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8"
+  },
+  "installed_identities_verified": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "e1327fe7eca5284bac4cebe0a99b724e185df8297ce5119b069c20008ca3c4c7"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "62575d70fe4ceb06e51bfadfff1c9637f4f9d5f1add390ea9e368e54a8098714"
+    },
+    {
+      "path": "Data/NVSE/Plugins/ShowOffNVSE.dll",
+      "sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e"
+    },
+    {
+      "path": "Data/NVSE/Plugins/jip_nvse.dll",
+      "sha256": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4"
+    },
+    {
+      "path": "Data/NVSE/Plugins/itr-nvse.dll",
+      "sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPreview.ini",
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4"
+    },
+    {
+      "path": "Data/NVOFlightPilot.esp",
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    },
+    {
+      "path": "Data/NVO.esm",
+      "sha256": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e"
+    },
+    {
+      "path": "NVOFlightKit3F.txt",
+      "sha256": "387e095bb0a2a706a267378d584fb2e1fd7fbd1980e3c0c205ecd6f3ffa800f2"
+    }
+  ],
+  "source_rejection": {
+    "path": "release\\NVO-Combat-Packet-3U-Contact-Speed\\Source\\NVOCombatCore\\src\\FlightContactSpeed.inl",
+    "sha256": "688da93fa06402d55f9f606efb93cfd062b63912263edc5b4fedbb5bb4b77fe0",
+    "condition": "!s.target before movement/terrain evaluation"
+  },
+  "game_files_changed": false,
+  "damage_replacement": false,
+  "ultra_gate": "HOLD",
+  "repeat_gameplay_needed_for_diagnosis": false,
+  "next": "Ask before3U1: explicitly classify valid zero-ID world contacts separately from missing reads and actor identity; replay these exact six shots first. Preserve actor/hit identity guards. Do not globally waive target checks."
+}

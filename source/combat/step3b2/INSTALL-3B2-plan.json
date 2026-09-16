@@ -1,0 +1,82 @@
+{
+  "workspace": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO",
+  "game_root": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas",
+  "packet": "3B2",
+  "version": 302,
+  "created": "2026-09-15T10:00:11.846481",
+  "protected_assets": [
+    "Data/NVO.esm",
+    "Data/NVO.bsa",
+    "Data/NVO.override",
+    "Data/Config/ALTStartConfig.ini"
+  ],
+  "preserve_log_copy": [
+    "NVOCombatCore.log",
+    "nvse.log",
+    "jip_ln_nvse.log"
+  ],
+  "empty_directories": [],
+  "dependency_preconditions": [
+    {
+      "path": "Data/NVSE/Plugins/itr-nvse.dll",
+      "sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c"
+    },
+    {
+      "path": "Data/NVSE/Plugins/jip_nvse.dll",
+      "sha256": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4"
+    },
+    {
+      "path": "Data/NVSE/Plugins/ShowOffNVSE.dll",
+      "sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e"
+    }
+  ],
+  "files": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "action": "install",
+      "sha256": "064630e921e62911678d5e459b74839025404b31dd7dafd0588ea82f4cfdb2c3",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B2-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "source_sha256": "f20f053f06de510902b550e1827c7d1fbe033f49958e6b401df9374d8167e332",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "action": "install",
+      "sha256": "1474aeedb6a8accc3729167afc454ecc88a46ed3c1d41904981e73e6f01ca070",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B2-Compiled\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "source_sha256": "b7ad5c6b3620885ced5453ade2f80f9021122c4faf6a027343364ebde77bf06a",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPreview.ini",
+      "action": "install",
+      "sha256": "213997f62df0c0c5b3a02f11c51e84b40a89ae4fe71aca8da434cc23f03f95dc",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B2-Compiled\\Data\\NVSE\\Plugins\\NVOFlightPreview.ini",
+      "source_sha256": "74d2ff71ed3715edfe0e85ca01bb7a3959f7cc0894effc240220ae2ce2f07ba0",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "Data/NVOFlightPilot.esp",
+      "action": "install",
+      "sha256": null,
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B2-Compiled\\Data\\NVOFlightPilot.esp",
+      "source_sha256": "f5fd916841ebf5aafae5c467a7e17dd67fdf1faf1abc9368f66e936f146244ab",
+      "log_may_change_until_game_exits": false
+    },
+    {
+      "path": "NVOFlightPilot.txt",
+      "action": "install",
+      "sha256": null,
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-3B2-Compiled\\NVOFlightPilot.txt",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "log_may_change_until_game_exits": true
+    }
+  ],
+  "activation": {
+    "path": "C:\\Users\\regan\\AppData\\Local\\FalloutNV\\plugins.txt",
+    "before_sha256": "94dba485452d2219a1c1ec44a288fb8db405093c693d0428d8f3a50e158e38a2",
+    "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3b2\\plugins.after.txt",
+    "source_sha256": "17c94eb4e77bfcc9273aa45f5de4f7c14c5e06ea8c8aaccd952c8724a2484ee2",
+    "change": "Append only NVOFlightPilot.esp; preserve all existing bytes and entry order"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "normal_new_game_and_reload_checkpoint_passed",
+  "log_sha256": "e33bf13f8834dfa77485c965936f215114ee99564d5af2b3fb91b3efb8fcdf6e",
+  "log_bytes": 18468,
+  "lifecycle": [
+    "LIFECYCLE post_load_plugins",
+    "LIFECYCLE post_post_load_plugins",
+    "LIFECYCLE deferred_init",
+    "LIFECYCLE new_game session=1",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=2",
+    "LIFECYCLE exit_game"
+  ],
+  "nonzero_diagnostic_error_counts": [],
+  "combat_exercised": false,
+  "damage_replacement": false,
+  "user_report": {
+    "background": "Mercenary",
+    "level": 1,
+    "HP": 130,
+    "AP": 77,
+    "SPECIAL": {
+      "strength": 5,
+      "perception": 8,
+      "endurance": 7,
+      "charisma": 5,
+      "intelligence": 5,
+      "agility": 5,
+      "luck": 5
+    },
+    "dependency_popups": false,
+    "repeated_startup_spam": false,
+    "remaining_console_hint": "[NVO] Flight test kit: bat NVOFlightKit"
+  },
+  "hint_source": "native/NVOCombatCore/src/FlightPreview.cpp:520",
+  "hint_meaning": "Intentional PrintC reminder; does not execute bat or grant a kit.",
+  "limits": [
+    "Stats are user-reported, not read from actor memory.",
+    "Missing-plugin branches not deliberately tested.",
+    "No combat or final damage application tested by this startup checkpoint."
+  ]
+}

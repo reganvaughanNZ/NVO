@@ -1,0 +1,35 @@
+# 3D / 311 implementation and ownership
+
+The current 310 movement/control hook has passed the limited two-weapon free-flight and user-reported VATS/reload checkpoint. This packet expands selection and profile data while keeping those hook spans, assembly bridges, numerical integration stages and movement tolerance.
+
+## Per-shot selection
+
+Use the installed ShowOff provider's public **ShowOff:OnPreProjectileCreate** event. Its supplied source `SHOWOFF-NVSE/Events/ShowOffEvents.h`, namespace OnPreProjectileCreate, dispatches actor/self with original BGSProjectile and weapon arguments through DispatchEventAlt, accepts a form-valued return, and passes the selected base to its existing projectile-creation detour while preserving other creation arguments. NVO adds no creation-hook patch and writes no shared WEAP/AMMO/PROJ object.
+
+NativeObserver binds one additional optional handler outside its own lock, removing only its prior binding each reload. The existing six diagnostic handlers remain required. Expansion selection requires successful binding, valid profiles and the existing physics/layout/hook checks. If unavailable, ordinary weapons retain their original projectiles.
+
+The public EventManager prefix is extended through SetNativeHandlerFunctionValue (offset32). FormResult represents the 16-byte form-valued Element ABI: pointer union at0, type2 at8. A per-profile result remains alive after the native callback returns. The supplied xNVSE EventManager.h invokes the result callback after the native handler; it does not take ownership of the element. No stack-local result is returned. NVO returns a value only on the capture/main thread; other-thread callbacks retain original selection and increment a counter. The source's shared native-result slot is a reason to keep this restriction; it does not certify arbitrary multithreaded third-party event dispatch.
+
+For an approved weapon, read the actor's process at+68, process level at+28 (0/1 only), matching equipped weapon entry at+114 and ammo entry at+118, with form at entry+8. This is the strict equipped-state branch of supplied JIP GameForms.cpp TESObjectWEAP::GetEquippedAmmo. No fallback to default ammo is guessed. The same installed JIP ammo-layout guard remains required. Guarded reads, actual weapon identity and real AMMO type/ID are mandatory. Missing equipped information, alternate ammunition, unknown weapon/projectile, changed projectile properties or non-main-thread dispatch return no replacement.
+
+At capture initialization, a bounded read-only DataHandler projectile-list traversal (+140, tList nodes) resolves source and replacement base pointers. Maximum65536 nodes, at most16 profiles, no per-frame search. Every replacement must be missile type, non-hitscan, non-explosive/non-detonating, zero engine gravity, and have speed consistent with the profile's donor formula and configured unit scale. Its remaining 72 DATA bytes match the original runtime source, with only hitscan/gravity/speed allowed to differ. Cache those DATA bytes and recheck both bases before each selection. This avoids silently applying profiles over a changed projectile configuration. Shared model changes outside these fields are not a full compatibility audit.
+
+The create callback independently matches weapon, actual JIP-captured ammo and private base before tracking. Log FLIGHT_SELECT records the requested selection; only matching subsequent creation/flight verifies it. Other handlers can participate in ShowOff's event. NVO does not claim exclusive ordering; a later different replacement will not receive NVO physics unless its full actual profile matches. Arbitrary handlers that change actor ammunition during creation can invalidate the earlier selection; the current checkpoint must verify selected/actual pairs and does not certify such combinations.
+
+## Records and profiles
+
+Append four PROJ records806..809 to the existing NVOFlightPilot.esp for the standard9mm pistol, .308 hunting rifle, 9mm SMG and5.56 service rifle combinations. Preserve all six earlier records exactly. No stock overrides, new weapon/ammo copies, quests, scripts, distribution or activation changes. Source records are from the pinned FalloutNV.esm; installed NVO.esm has no overrides of the three copied projectile bases. Full allowed-field changes and donor rows are in RECORD-AUDIT.json.
+
+Schema2 of NVOFlightPreview.ini holds six exact profiles, source/replacement keys, select_on_fire, flight_enabled, barrel relation, drag model G1/G7 and coefficient. Originating plugin/local IDs are resolved anew on each load. Duplicate/ambiguous matches, missing fields, nonfinite/out-of-range inputs and inconsistent records fail closed. All profile sections are validated, including disabled ones. No blanket classification by name or calibre alone.
+
+Physics schema2 keeps atmosphere/gravity/unit scale. Remove the two fixed cartridge coefficients from that global config. Copy drag model/coefficient into each lifetime. RK4 equations, fixed substep policy and displacement verification are unchanged except using those per-lifetime parameters. The unchanged first segment per lifetime remains an explicit pilot limitation. Selection requires agreeing unit scales and a ready native physics module. Detailed physics/timing output remains bounded to the first eight lifetimes per capture; physics continues after logging limits, with128 active lifetime capacity.
+
+NVOFlightKit.txt contains only seven player.additem commands for the verified base-game weapon/ammo IDs. No automatic grant, actor-value changes, commands to toggle god mode or quest changes. The user runs `bat NVOFlightKit`. The old dynamically resolved private kit is retained.
+
+## Validation and remaining limits
+
+Validate record structure/reference identities, old-record preservation, all profile inputs, no stock overrides, compiled Win32 PE identity, two exports, matching PDB and zero build warnings/errors. Compare the assembly bridge source with310 and inspect emitted machine code. Keep CurrentHit, DamageEvents, FlightTiming and NativeLog byte-identical. Preserve donor notices and include source copies in the packet.
+
+Do not claim runtime success before the user's log. Creation-event coverage, equipped-ammo read success, SMG overlap and Service Rifle profile behaviour need that observation. Existing engine collisions, hit attribution and damage application remain in place; no damage authority, wounds or armour calculation is enabled. Exact contact-time velocity/energy, the prior collision-only Z correction, physical-unit calibration, alternate ammo, energy/flame/explosive and shotgun coverage remain later work.
+
+Sources: the supplied xNVSE PluginAPI.h/EventManager.h/EventManager.cpp, JIP GameForms.cpp/GameData.h/GameObjects.h/GameProcess.h, ShowOff ShowOffEvents.h, and BallistX5.4 WeaponData/CartridgeData. Exact source hashes are recorded in SOURCE-PROVENANCE.json. The online event page was unavailable; the implementation is grounded in the supplied primary source, not an assumed script command.

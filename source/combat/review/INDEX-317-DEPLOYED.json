@@ -1,0 +1,55 @@
+{
+  "scope": "Independent root deployment/record appendix to frozen Ultra input; read-only observations",
+  "files": [
+    {
+      "path": "source/combat/review/DEPLOYED-317.json",
+      "sha256": "cd67ca5dd005a3c60777ddf67d7d477decc08b2457c279237f3010d26745ae01",
+      "bytes": 28696
+    },
+    {
+      "path": "source/combat/review/DEPLOYED-317-SCRIPTS.json",
+      "sha256": "64a1e41018cdc8c808e2c497d8ee483394f3c05492de872fc91f2e15d3075081",
+      "bytes": 5291
+    },
+    {
+      "path": "source/combat/review/DEPLOYED-317-NOTES.md",
+      "sha256": "ce36e35363c3553fb864dac30751d6c663827991c03fe483ebe2f098caddfbae",
+      "bytes": 3702
+    },
+    {
+      "path": "source/combat/review/MASTER-CLOSURE-317.json",
+      "sha256": "337ddaf1171174dbb5066145aee7b23a916f255d05a95b409d0d749953ebfe29",
+      "bytes": 16358
+    },
+    {
+      "path": "source/combat/review/RD-RECORDS-317.json",
+      "sha256": "5eea4764a911f01bbe37af892889fedc94cb565eb0f64456f2ea5d8810cf9f19",
+      "bytes": 42222
+    },
+    {
+      "path": "source/combat/review/PLAYER-OVERRIDES-317.json",
+      "sha256": "a44ff2e12d81f613ad78d3bb19cae3f239c3a9c14e3b011165f7589d567f7f2c",
+      "bytes": 509
+    },
+    {
+      "path": "source/combat/review/RD.esm-NVOCombatBootstrapScript.txt",
+      "sha256": "f62297c5150d136230e2f30c42fc000aa035d87b4bb2724b77e5d63f8e638552",
+      "bytes": 2213
+    },
+    {
+      "path": "source/combat/review/NVO.esm-ALTQscript.txt",
+      "sha256": "88d022cc37cf50ed24990e1c1f747945da06204ffbb8629a6817cd15f68182ee",
+      "bytes": 6597
+    },
+    {
+      "path": "source/combat/review/NVO.esm-ALTBackRichKidUDF.txt",
+      "sha256": "62bf5975138b540b5281abd9a9a405ca6890a36cf8f234fd7170b44551171c73",
+      "bytes": 680
+    },
+    {
+      "path": "source/combat/review/NVO.esm-ALTRichKidHit.txt",
+      "sha256": "35dc549a9c0f82c6013c2fc6017e5e41f9b68adfc48bdd989fe16870d15f23ba",
+      "bytes": 447
+    }
+  ]
+}

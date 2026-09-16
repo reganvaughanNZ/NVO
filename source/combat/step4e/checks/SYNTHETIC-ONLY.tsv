@@ -1,0 +1,5 @@
+NVO_ARMOUR_COVERAGE_V1
+# plugin|local_hex6|revision|equip_mask_hex8|head|torso|left_arm|right_arm|left_leg|right_leg
+Custom + Armor.esp|00AB03|1|00000602|partial|none|none|none|none|none
+NVO.esm|00AB01|1|00000004|none|partial|partial|partial|partial|partial
+NVO.esm|00AB02|2|00000004|none|unknown|none|none|partial|partial

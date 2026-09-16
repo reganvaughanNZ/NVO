@@ -1,0 +1,31 @@
+{
+  "before_sha256": "e75f142b75e8b85ea63917905d287fbbb7407008b1e9de139475d1ae2a504845",
+  "after_sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d",
+  "before_bytes": 481293,
+  "after_bytes": 453236,
+  "original_records_byte_identical_except_bootstrap_and_header": 820,
+  "deleted": [
+    {
+      "form": "05019A14",
+      "editor_id": "NVOCombatBootstrapScriptDUPLICATE000"
+    },
+    {
+      "form": "05019A15",
+      "editor_id": "ALTQscriptDUPLICATE000"
+    },
+    {
+      "form": "05019A16",
+      "editor_id": "ALTStartQscriptDUPLICATE000"
+    }
+  ],
+  "bootstrap_original_identity_retained": "0501941A",
+  "compiled_bootstrap_bytecode_unchanged_from_user_copy": true,
+  "bootstrap_compiled_bytes": 1090,
+  "records_before": 825,
+  "records_after": 822,
+  "incoming_duplicate_references_found": 0,
+  "master_list_unchanged": true,
+  "header_change": "HEDR record/group count -3 only; next FormID retained",
+  "native_changes": false,
+  "gameplay_tested": false
+}

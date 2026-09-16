@@ -1,0 +1,1472 @@
+[
+  {
+    "form": "0000000A",
+    "edid": "Lockpick",
+    "name": "Bobby Pin",
+    "flags": 0
+  },
+  {
+    "form": "0000000F",
+    "edid": "Caps001",
+    "name": "Bottle Cap",
+    "flags": 0
+  },
+  {
+    "form": "00003A80",
+    "edid": "MS15MagnaCartaRolled",
+    "name": "Magna Carta",
+    "flags": 0
+  },
+  {
+    "form": "0001B01F",
+    "edid": "Crutch",
+    "name": "Crutch",
+    "flags": 0
+  },
+  {
+    "form": "0001EDC5",
+    "edid": "FFDCBrotherhoodDogtag",
+    "name": "Brotherhood of Steel Holotag",
+    "flags": 0
+  },
+  {
+    "form": "0001F21F",
+    "edid": "TeddyBear01",
+    "name": "Teddy Bear",
+    "flags": 0
+  },
+  {
+    "form": "000220FB",
+    "edid": "MotorcycleGasTank",
+    "name": "Motorcycle Gas Tank",
+    "flags": 0
+  },
+  {
+    "form": "000220FC",
+    "edid": "PilotLight",
+    "name": "Pilot Light",
+    "flags": 0
+  },
+  {
+    "form": "000220FE",
+    "edid": "MotorcycleHandbrake",
+    "name": "Motorcycle Handbrake",
+    "flags": 0
+  },
+  {
+    "form": "00022100",
+    "edid": "LeafBlower",
+    "name": "Leaf Blower",
+    "flags": 0
+  },
+  {
+    "form": "00022101",
+    "edid": "FirehoseNozzle",
+    "name": "Firehose Nozzle",
+    "flags": 0
+  },
+  {
+    "form": "00022102",
+    "edid": "Conductor",
+    "name": "Conductor",
+    "flags": 0
+  },
+  {
+    "form": "00022103",
+    "edid": "NukaColaBottle",
+    "name": "Empty Nuka-Cola Bottle",
+    "flags": 0
+  },
+  {
+    "form": "00022104",
+    "edid": "TinCan01",
+    "name": "Tin Can",
+    "flags": 0
+  },
+  {
+    "form": "00022105",
+    "edid": "Turpentine",
+    "name": "Turpentine",
+    "flags": 0
+  },
+  {
+    "form": "00022106",
+    "edid": "AbraxoCleaner",
+    "name": "Abraxo Cleaner",
+    "flags": 0
+  },
+  {
+    "form": "00022107",
+    "edid": "Lunchbox",
+    "name": "Lunchbox",
+    "flags": 0
+  },
+  {
+    "form": "00022108",
+    "edid": "CherryBomb",
+    "name": "Cherry Bomb",
+    "flags": 0
+  },
+  {
+    "form": "00022109",
+    "edid": "SensorModule",
+    "name": "Sensor Module",
+    "flags": 0
+  },
+  {
+    "form": "0002210A",
+    "edid": "WonderGlue",
+    "name": "Wonderglue",
+    "flags": 0
+  },
+  {
+    "form": "0002210B",
+    "edid": "DeathclawHand",
+    "name": "Deathclaw Hand",
+    "flags": 0
+  },
+  {
+    "form": "0002210C",
+    "edid": "LeatherBelt",
+    "name": "Leather Belt",
+    "flags": 0
+  },
+  {
+    "form": "0002210D",
+    "edid": "MedicalBrace",
+    "name": "Medical Brace",
+    "flags": 0
+  },
+  {
+    "form": "0002210E",
+    "edid": "PaintGun",
+    "name": "Paint Gun",
+    "flags": 0
+  },
+  {
+    "form": "0002210F",
+    "edid": "RadscorpionPoisonGland",
+    "name": "Radscorpion Poison Gland",
+    "flags": 0
+  },
+  {
+    "form": "00022110",
+    "edid": "ToyCar",
+    "name": "Toy Car",
+    "flags": 0
+  },
+  {
+    "form": "00022111",
+    "edid": "SurgicalTubing",
+    "name": "Surgical Tubing",
+    "flags": 0
+  },
+  {
+    "form": "00022112",
+    "edid": "SteamGaugeAssembly",
+    "name": "Steam Gauge Assembly",
+    "flags": 0
+  },
+  {
+    "form": "00022113",
+    "edid": "PressureCooker",
+    "name": "Pressure Cooker",
+    "flags": 0
+  },
+  {
+    "form": "000250A3",
+    "edid": "SurgicalBonesaw01",
+    "name": "Bonesaw",
+    "flags": 0
+  },
+  {
+    "form": "000250A4",
+    "edid": "SurgicalScissors01",
+    "name": "Scissors",
+    "flags": 0
+  },
+  {
+    "form": "000250A5",
+    "edid": "SurgicalScalpel01",
+    "name": "Scalpel",
+    "flags": 0
+  },
+  {
+    "form": "000250A6",
+    "edid": "SurgicalTweasers01",
+    "name": "Tweezers",
+    "flags": 0
+  },
+  {
+    "form": "000250A7",
+    "edid": "SurgicalForceps01",
+    "name": "Forceps",
+    "flags": 0
+  },
+  {
+    "form": "000250A8",
+    "edid": "SurgicalSyringe01",
+    "name": "Empty Syringe",
+    "flags": 0
+  },
+  {
+    "form": "00025235",
+    "edid": "Clipboard01",
+    "name": "Medical Clipboard",
+    "flags": 0
+  },
+  {
+    "form": "00025236",
+    "edid": "Clipboard04",
+    "name": "Finance Clipboard",
+    "flags": 0
+  },
+  {
+    "form": "00025237",
+    "edid": "Clipboard03",
+    "name": "Earnings Clipboard",
+    "flags": 0
+  },
+  {
+    "form": "00025238",
+    "edid": "Clipboard02",
+    "name": "Clipboard",
+    "flags": 0
+  },
+  {
+    "form": "0002541B",
+    "edid": "BigPot",
+    "name": "Pot",
+    "flags": 0
+  },
+  {
+    "form": "0002541C",
+    "edid": "Plate04",
+    "name": "Tin Plate",
+    "flags": 0
+  },
+  {
+    "form": "00025421",
+    "edid": "CoffeeKettle",
+    "name": "Coffee Pot",
+    "flags": 0
+  },
+  {
+    "form": "00025E03",
+    "edid": "LawnmowerBlade",
+    "name": "Lawn Mower Blade",
+    "flags": 0
+  },
+  {
+    "form": "000270F0",
+    "edid": "MQ04Undies",
+    "name": "Lacy Underwear",
+    "flags": 0
+  },
+  {
+    "form": "000285F8",
+    "edid": "MQ04RollerSkate",
+    "name": "Rollerskate",
+    "flags": 0
+  },
+  {
+    "form": "00028704",
+    "edid": "PassCardRed",
+    "name": "Red Pass Card",
+    "flags": 0
+  },
+  {
+    "form": "00028706",
+    "edid": "PassCardBlue",
+    "name": "Blue Pass Card",
+    "flags": 0
+  },
+  {
+    "form": "00028EE6",
+    "edid": "MS06Recording",
+    "name": "Lincoln's Voice",
+    "flags": 0
+  },
+  {
+    "form": "00029171",
+    "edid": "NukaTruck",
+    "name": "Nuka-Cola Truck",
+    "flags": 0
+  },
+  {
+    "form": "000291D7",
+    "edid": "MQ04Chandelier",
+    "name": "Chandelier",
+    "flags": 0
+  },
+  {
+    "form": "0002B40B",
+    "edid": "Baseball01",
+    "name": "Baseball",
+    "flags": 0
+  },
+  {
+    "form": "0002B40E",
+    "edid": "Basketball",
+    "name": "Basketball",
+    "flags": 0
+  },
+  {
+    "form": "0002B410",
+    "edid": "BaseballGlove",
+    "name": "Baseball Glove",
+    "flags": 0
+  },
+  {
+    "form": "0002B412",
+    "edid": "PoolBall",
+    "name": "Pool Ball",
+    "flags": 0
+  },
+  {
+    "form": "0002B415",
+    "edid": "pool2ball",
+    "name": "2 Ball",
+    "flags": 0
+  },
+  {
+    "form": "0002B417",
+    "edid": "pool5ball",
+    "name": "5 Ball",
+    "flags": 0
+  },
+  {
+    "form": "0002B419",
+    "edid": "pool8ball",
+    "name": "8 Ball",
+    "flags": 0
+  },
+  {
+    "form": "0002B41B",
+    "edid": "pool10ball",
+    "name": "10 Ball",
+    "flags": 0
+  },
+  {
+    "form": "0002B41D",
+    "edid": "pool13ball",
+    "name": "13 Ball",
+    "flags": 0
+  },
+  {
+    "form": "0002B41F",
+    "edid": "poolcueball",
+    "name": "Cue Ball",
+    "flags": 0
+  },
+  {
+    "form": "0002C5F6",
+    "edid": "poolTriangle",
+    "name": "Triangle",
+    "flags": 0
+  },
+  {
+    "form": "0002D3A5",
+    "edid": "MS03Sanitizer",
+    "name": "Food Sanitizer",
+    "flags": 0
+  },
+  {
+    "form": "0002EDFB",
+    "edid": "MS01Lucky8ball",
+    "name": "Lucky 8 Ball",
+    "flags": 0
+  },
+  {
+    "form": "00031944",
+    "edid": "SpareParts",
+    "name": "Scrap Metal",
+    "flags": 0
+  },
+  {
+    "form": "00033BC6",
+    "edid": "FissionBattery",
+    "name": "Fission Battery",
+    "flags": 0
+  },
+  {
+    "form": "00034057",
+    "edid": "Ashtray",
+    "name": "Ashtray",
+    "flags": 0
+  },
+  {
+    "form": "0003405E",
+    "edid": "SkullBrahmin",
+    "name": "Brahmin Skull",
+    "flags": 0
+  },
+  {
+    "form": "00034062",
+    "edid": "Camera",
+    "name": "Camera",
+    "flags": 0
+  },
+  {
+    "form": "00034067",
+    "edid": "PrewarMoney",
+    "name": "Pre-war Money",
+    "flags": 0
+  },
+  {
+    "form": "00034068",
+    "edid": "CigaretteCarton",
+    "name": "Carton of Cigarettes",
+    "flags": 0
+  },
+  {
+    "form": "00034069",
+    "edid": "CigarettePack",
+    "name": "Pack of Cigarettes",
+    "flags": 0
+  },
+  {
+    "form": "0003406C",
+    "edid": "CoffeeMug01",
+    "name": "Coffee Mug",
+    "flags": 0
+  },
+  {
+    "form": "0003406E",
+    "edid": "BoardCutting",
+    "name": "Cutting Board",
+    "flags": 0
+  },
+  {
+    "form": "0003406F",
+    "edid": "BoxDetergent",
+    "name": "Box of Detergent",
+    "flags": 0
+  },
+  {
+    "form": "00034070",
+    "edid": "BowlDog",
+    "name": "Dog Bowl",
+    "flags": 0
+  },
+  {
+    "form": "00034078",
+    "edid": "Fork01",
+    "name": "Fork",
+    "flags": 0
+  },
+  {
+    "form": "0003407A",
+    "edid": "GnomeGarden",
+    "name": "Garden Gnome",
+    "flags": 0
+  },
+  {
+    "form": "0003407B",
+    "edid": "DrinkingGlass01",
+    "name": "Cup",
+    "flags": 0
+  },
+  {
+    "form": "00034088",
+    "edid": "Iron",
+    "name": "Iron",
+    "flags": 0
+  },
+  {
+    "form": "0003409C",
+    "edid": "PanCookingMetal",
+    "name": "Metal Cooking Pan",
+    "flags": 0
+  },
+  {
+    "form": "0003409D",
+    "edid": "Paperweight",
+    "name": "Paperweight",
+    "flags": 0
+  },
+  {
+    "form": "000340A0",
+    "edid": "PlateDinnerCeramic",
+    "name": "Ceramic Dinner Plate",
+    "flags": 0
+  },
+  {
+    "form": "000340A4",
+    "edid": "Plunger",
+    "name": "Plunger",
+    "flags": 0
+  },
+  {
+    "form": "000340A7",
+    "edid": "PotCookingMetal",
+    "name": "Metal Cooking Pot",
+    "flags": 0
+  },
+  {
+    "form": "000340AD",
+    "edid": "Rake",
+    "name": "Rake",
+    "flags": 0
+  },
+  {
+    "form": "000340B5",
+    "edid": "ShotGlass01",
+    "name": "Shot glass",
+    "flags": 0
+  },
+  {
+    "form": "000340BB",
+    "edid": "Spatula01",
+    "name": "Spatula",
+    "flags": 0
+  },
+  {
+    "form": "000340BC",
+    "edid": "Spoon01",
+    "name": "Metal Spoon",
+    "flags": 0
+  },
+  {
+    "form": "000347DE",
+    "edid": "FFEC09OfficerID",
+    "name": "Experimental Rho ID",
+    "flags": 0
+  },
+  {
+    "form": "000391B1",
+    "edid": "MilitaryID",
+    "name": "Military ID",
+    "flags": 0
+  },
+  {
+    "form": "0003997E",
+    "edid": "OfficeID",
+    "name": "Office Employee ID",
+    "flags": 0
+  },
+  {
+    "form": "00039B5F",
+    "edid": "UtilityID",
+    "name": "Utility Worker ID",
+    "flags": 0
+  },
+  {
+    "form": "0003A73A",
+    "edid": "MedicalBraceNew",
+    "name": "Medical Brace",
+    "flags": 0
+  },
+  {
+    "form": "00040D4D",
+    "edid": "MS18FinGeomapper",
+    "name": "Geomapper Module",
+    "flags": 0
+  },
+  {
+    "form": "00045252",
+    "edid": "MS06Pennies",
+    "name": "Antique Lincoln Coin Collection",
+    "flags": 0
+  },
+  {
+    "form": "00045254",
+    "edid": "MS06LincolnDiary",
+    "name": "Lincoln's Diary",
+    "flags": 0
+  },
+  {
+    "form": "00045256",
+    "edid": "MS06AssassinationPoster",
+    "name": "John Wilkes Booth Wanted Poster",
+    "flags": 0
+  },
+  {
+    "form": "00045258",
+    "edid": "MS06ActionAbe",
+    "name": "Action Abe Action Figure",
+    "flags": 0
+  },
+  {
+    "form": "0004525A",
+    "edid": "MS06DraftPoster",
+    "name": "Civil War Draft Poster",
+    "flags": 0
+  },
+  {
+    "form": "0005516B",
+    "edid": "HotPlate",
+    "name": "Hot Plate",
+    "flags": 0
+  },
+  {
+    "form": "0005A6CE",
+    "edid": "MS10RewardBearCharm",
+    "name": "Yew's Bear Charm",
+    "flags": 0
+  },
+  {
+    "form": "0005A795",
+    "edid": "xMS03survivalGuideBookItem",
+    "name": "Wasteland Survival Guide",
+    "flags": 0
+  },
+  {
+    "form": "0005B52C",
+    "edid": "Cigarette01",
+    "name": "Cigarette",
+    "flags": 0
+  },
+  {
+    "form": "0005B59F",
+    "edid": "DinnerPlate01",
+    "name": "Dinner Plate",
+    "flags": 0
+  },
+  {
+    "form": "0005B633",
+    "edid": "DrinkingGlass02",
+    "name": "Drinking Glass",
+    "flags": 0
+  },
+  {
+    "form": "0005B634",
+    "edid": "GardenGnome01",
+    "name": "Intact Garden Gnome",
+    "flags": 0
+  },
+  {
+    "form": "0005B635",
+    "edid": "GardenGnomeDestroyed01",
+    "name": "Damaged Garden Gnome",
+    "flags": 0
+  },
+  {
+    "form": "0005B636",
+    "edid": "GlassPitcher01",
+    "name": "Glass Pitcher",
+    "flags": 0
+  },
+  {
+    "form": "0005B637",
+    "edid": "Hammer01",
+    "name": "Hammer",
+    "flags": 0
+  },
+  {
+    "form": "0005B638",
+    "edid": "Harmonica01",
+    "name": "Harmonica",
+    "flags": 0
+  },
+  {
+    "form": "0005B639",
+    "edid": "Knife01",
+    "name": "Butter Knife",
+    "flags": 0
+  },
+  {
+    "form": "0005B63A",
+    "edid": "Knife02",
+    "name": "Butter Knife",
+    "flags": 0
+  },
+  {
+    "form": "0005B63B",
+    "edid": "Milkbottle01",
+    "name": "Milk Bottle",
+    "flags": 0
+  },
+  {
+    "form": "0005B63C",
+    "edid": "Pencil01",
+    "name": "Pencil",
+    "flags": 0
+  },
+  {
+    "form": "0005B63D",
+    "edid": "Plate01",
+    "name": "White Plate",
+    "flags": 0
+  },
+  {
+    "form": "0005B63E",
+    "edid": "Plate02",
+    "name": "Red Plate",
+    "flags": 0
+  },
+  {
+    "form": "0005B63F",
+    "edid": "Plate03",
+    "name": "Green Plate",
+    "flags": 0
+  },
+  {
+    "form": "0005B640",
+    "edid": "SpoonBig01",
+    "name": "Big Spoon",
+    "flags": 0
+  },
+  {
+    "form": "0005B641",
+    "edid": "Spork01",
+    "name": "Spork",
+    "flags": 0
+  },
+  {
+    "form": "0005B6CA",
+    "edid": "TinCan02",
+    "name": "Bent Tin Can",
+    "flags": 0
+  },
+  {
+    "form": "0005B6CB",
+    "edid": "WhetStone01",
+    "name": "Whet Stone",
+    "flags": 0
+  },
+  {
+    "form": "0005B6CD",
+    "edid": "ScotchBottle01Empty01",
+    "name": "Large Whiskey Bottle",
+    "flags": 0
+  },
+  {
+    "form": "0005B6CE",
+    "edid": "WhiskeyBottle01Empty01",
+    "name": "Empty Whiskey Bottle",
+    "flags": 0
+  },
+  {
+    "form": "0005B6D0",
+    "edid": "Wrench01",
+    "name": "Wrench",
+    "flags": 0
+  },
+  {
+    "form": "0005F183",
+    "edid": "Opthalmoscope",
+    "name": "Ophthalmoscope",
+    "flags": 0
+  },
+  {
+    "form": "000604DD",
+    "edid": "Ear",
+    "name": "Ear",
+    "flags": 0
+  },
+  {
+    "form": "000604DE",
+    "edid": "Finger",
+    "name": "Finger",
+    "flags": 0
+  },
+  {
+    "form": "0006835F",
+    "edid": "MS17FinSheetMusicBook",
+    "name": "Sheet Music Book",
+    "flags": 0
+  },
+  {
+    "form": "0006AA59",
+    "edid": "MS02AntResin",
+    "name": "Ant Resin",
+    "flags": 0
+  },
+  {
+    "form": "0006C55A",
+    "edid": "RRControlCollar",
+    "name": "Control Collar",
+    "flags": 0
+  },
+  {
+    "form": "0006EEE7",
+    "edid": "BodyPart01",
+    "name": "Mutilated Arm",
+    "flags": 0
+  },
+  {
+    "form": "0006F2D8",
+    "edid": "BodyPart02",
+    "name": "Mutilated Leg",
+    "flags": 0
+  },
+  {
+    "form": "0006F2D9",
+    "edid": "BodyPart03",
+    "name": "Mutilated Organs",
+    "flags": 0
+  },
+  {
+    "form": "0006F2DA",
+    "edid": "BodyPart04",
+    "name": "Mutilated Torso",
+    "flags": 0
+  },
+  {
+    "form": "00074170",
+    "edid": "BodyPart05",
+    "name": "Mutilated Skull",
+    "flags": 0
+  },
+  {
+    "form": "00074EE1",
+    "edid": "Flour",
+    "name": "Flour",
+    "flags": 0
+  },
+  {
+    "form": "0007CBCC",
+    "edid": "WoodChipper",
+    "name": "Wood Chipper",
+    "flags": 0
+  },
+  {
+    "form": "0008C214",
+    "edid": "CapPresConstitutionRolled",
+    "name": "Constitution of the United States",
+    "flags": 0
+  },
+  {
+    "form": "0008C215",
+    "edid": "CapPresEmancRolled",
+    "name": "Emancipation Proclamation",
+    "flags": 0
+  },
+  {
+    "form": "0008C216",
+    "edid": "CapPresGettysburgRolled",
+    "name": "Gettysburg Address",
+    "flags": 0
+  },
+  {
+    "form": "0008C217",
+    "edid": "CapPresMonroeRolled",
+    "name": "Monroe Doctrine",
+    "flags": 0
+  },
+  {
+    "form": "0008C218",
+    "edid": "CapPresDecWarGermanyRolled",
+    "name": "U.S. Declaration of War on Germany",
+    "flags": 0
+  },
+  {
+    "form": "0008C219",
+    "edid": "CapPresDecWarChinaRolled",
+    "name": "U.S. Declaration of War on China",
+    "flags": 0
+  },
+  {
+    "form": "000943F2",
+    "edid": "PreWarBook",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "0009A807",
+    "edid": "ToasterPostwar",
+    "name": "Toaster",
+    "flags": 0
+  },
+  {
+    "form": "0009A808",
+    "edid": "ToasterPrewar",
+    "name": "Toaster",
+    "flags": 0
+  },
+  {
+    "form": "0009A809",
+    "edid": "Chessboard",
+    "name": "Chessboard",
+    "flags": 0
+  },
+  {
+    "form": "0009AA4E",
+    "edid": "SodaBottleEmpty01",
+    "name": "Empty Soda Bottle",
+    "flags": 0
+  },
+  {
+    "form": "000A8745",
+    "edid": "AWMFFDoorComponent",
+    "name": "Door Component",
+    "flags": 0
+  },
+  {
+    "form": "000A9E69",
+    "edid": "BurnedBook02",
+    "name": "Small Ruined Book",
+    "flags": 0
+  },
+  {
+    "form": "000A9E6A",
+    "edid": "BurnedBook03",
+    "name": "Small Scorched Book",
+    "flags": 0
+  },
+  {
+    "form": "000A9E6B",
+    "edid": "BurnedBook04",
+    "name": "Small Destroyed Book",
+    "flags": 0
+  },
+  {
+    "form": "000A9E6C",
+    "edid": "BurnedBook05",
+    "name": "Large Burned Book",
+    "flags": 0
+  },
+  {
+    "form": "000A9E6D",
+    "edid": "BurnedBook06",
+    "name": "Large Ruined Book",
+    "flags": 0
+  },
+  {
+    "form": "000A9E6E",
+    "edid": "BurnedBook07",
+    "name": "Large Scorched Book",
+    "flags": 0
+  },
+  {
+    "form": "000A9E6F",
+    "edid": "BurnedBook08",
+    "name": "Large Destroyed Book",
+    "flags": 0
+  },
+  {
+    "form": "000A9E70",
+    "edid": "BurnedBook01",
+    "name": "Small Burned Book",
+    "flags": 0
+  },
+  {
+    "form": "000BAFBC",
+    "edid": "FactoryID",
+    "name": "Factory Employee ID",
+    "flags": 0
+  },
+  {
+    "form": "000C5D24",
+    "edid": "BookGeneric01",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "000C9403",
+    "edid": "JournalGeneric",
+    "name": "Danielle's Book",
+    "flags": 0
+  },
+  {
+    "form": "000CADE6",
+    "edid": "MS05NukaColaDisk",
+    "name": "Nuka-Cola Clear Formula",
+    "flags": 0
+  },
+  {
+    "form": "000CD18B",
+    "edid": "DinoToy",
+    "name": "Dino Toy",
+    "flags": 0
+  },
+  {
+    "form": "000E6627",
+    "edid": "DeathclawEggNV",
+    "name": "Deathclaw Egg",
+    "flags": 0
+  },
+  {
+    "form": "000E810F",
+    "edid": "CuddlesToyCar",
+    "name": "Cuddles' Toy Car",
+    "flags": 0
+  },
+  {
+    "form": "000EB40B",
+    "edid": "ScottEGnome",
+    "name": "Evil Gnome",
+    "flags": 0
+  },
+  {
+    "form": "000EE6CC",
+    "edid": "MantisLeg",
+    "name": "Mantis Foreleg",
+    "flags": 0
+  },
+  {
+    "form": "000EEA6D",
+    "edid": "NVTrailCarbineScope",
+    "name": "Trail Carbine Scope",
+    "flags": 0
+  },
+  {
+    "form": "000EEA6E",
+    "edid": "NVTrailCarbineLam",
+    "name": "Trail Carbine Laminate Stock",
+    "flags": 0
+  },
+  {
+    "form": "000EEA6F",
+    "edid": "NVTrailCarbineSteel",
+    "name": "Trail Carbine Custom Action",
+    "flags": 0
+  },
+  {
+    "form": "000FC9BA",
+    "edid": "BookGeneric03b",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "000FC9BB",
+    "edid": "BookGeneric04b",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "000FC9BC",
+    "edid": "BookGeneric05b",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "000FC9BD",
+    "edid": "BookGeneric06b",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "000FC9BE",
+    "edid": "BookGeneric07b",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "000FC9BF",
+    "edid": "BookGeneric08b",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "000FC9C0",
+    "edid": "BookGeneric02b",
+    "name": "Pre-War Book",
+    "flags": 0
+  },
+  {
+    "form": "0010291C",
+    "edid": "SSHQDeputyBadge",
+    "name": "Sunset Sarsaparilla Deputy Badge",
+    "flags": 0
+  },
+  {
+    "form": "00103B1B",
+    "edid": "SSBottleEmpty",
+    "name": "Empty Sunset Sarsaparilla Bottle",
+    "flags": 0
+  },
+  {
+    "form": "001175A2",
+    "edid": "NVFakeGolfBall",
+    "name": "Golf Ball",
+    "flags": 0
+  },
+  {
+    "form": "0011836D",
+    "edid": "NVFakePingPongBall",
+    "name": "Ping Pong Ball",
+    "flags": 0
+  },
+  {
+    "form": "0011A581",
+    "edid": "SchematicsMichaelAngeloProp",
+    "name": "Schematics - Billboard",
+    "flags": 0
+  },
+  {
+    "form": "0011C0E6",
+    "edid": "JetEmpty",
+    "name": "Empty Jet Inhaler",
+    "flags": 0
+  },
+  {
+    "form": "0012115E",
+    "edid": "DrainedSmallEnergyCell",
+    "name": "Drained Small Energy Cell",
+    "flags": 0
+  },
+  {
+    "form": "00129D1D",
+    "edid": "InfectedBrahminMeat",
+    "name": "Infected Brahmin Meat",
+    "flags": 0
+  },
+  {
+    "form": "00137B9D",
+    "edid": "LegionMoney1",
+    "name": "Legion Denarius",
+    "flags": 0
+  },
+  {
+    "form": "0013A4D6",
+    "edid": "NCRMoney5",
+    "name": "$5 NCR",
+    "flags": 0
+  },
+  {
+    "form": "0013A4D7",
+    "edid": "NCRMoney20",
+    "name": "$20 NCR",
+    "flags": 0
+  },
+  {
+    "form": "0013A4D8",
+    "edid": "NCRMoney100",
+    "name": "$100 NCR",
+    "flags": 0
+  },
+  {
+    "form": "0013A4D9",
+    "edid": "LegionMoney25",
+    "name": "Legion Aureus",
+    "flags": 0
+  },
+  {
+    "form": "0013B2AF",
+    "edid": "BarkScorpionPoisonGland",
+    "name": "Bark Scorpion Poison Gland",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B0",
+    "edid": "CazadorPoisonGland",
+    "name": "Cazador Poison Gland",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B1",
+    "edid": "ScrapElectronics",
+    "name": "Scrap Electronics",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B2",
+    "edid": "DuctTape",
+    "name": "Duct Tape",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B3",
+    "edid": "EggTimer",
+    "name": "Egg Timer",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B5",
+    "edid": "GeckoHide",
+    "name": "Gecko Hide",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B6",
+    "edid": "GeckoGoldenHide",
+    "name": "Golden Gecko Hide",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B7",
+    "edid": "GeckoFireHide",
+    "name": "Fire Gecko Hide",
+    "flags": 0
+  },
+  {
+    "form": "0013B2B8",
+    "edid": "NightStalkerBlood",
+    "name": "Nightstalker Blood",
+    "flags": 0
+  },
+  {
+    "form": "0013D52D",
+    "edid": "GeckoFireHideTanned",
+    "name": "Tanned Fire Gecko Hide",
+    "flags": 0
+  },
+  {
+    "form": "0013D52E",
+    "edid": "GeckoGoldenHideTanned",
+    "name": "Tanned Golden Gecko Hide",
+    "flags": 0
+  },
+  {
+    "form": "0013D52F",
+    "edid": "GeckoHideTanned",
+    "name": "Tanned Gecko Hide",
+    "flags": 0
+  },
+  {
+    "form": "00140AA2",
+    "edid": "Case357Magnum",
+    "name": "Case, .357 Magnum",
+    "flags": 0
+  },
+  {
+    "form": "00140AA3",
+    "edid": "Case44Magnum",
+    "name": "Case, .44 Magnum",
+    "flags": 0
+  },
+  {
+    "form": "00140AA4",
+    "edid": "Case4570Govt",
+    "name": "Case, .45-70 Gov't",
+    "flags": 0
+  },
+  {
+    "form": "00140AA5",
+    "edid": "Case308",
+    "name": "Case, .308",
+    "flags": 0
+  },
+  {
+    "form": "00140AA6",
+    "edid": "Case50MG",
+    "name": "Case, .50 MG",
+    "flags": 0
+  },
+  {
+    "form": "00140AA7",
+    "edid": "Case10mm",
+    "name": "Case, 10mm",
+    "flags": 0
+  },
+  {
+    "form": "00140AA9",
+    "edid": "PrimerSmallPistol",
+    "name": "Primer, Small Pistol",
+    "flags": 0
+  },
+  {
+    "form": "00140AAA",
+    "edid": "PrimerLargePistol",
+    "name": "Primer, Large Pistol",
+    "flags": 0
+  },
+  {
+    "form": "00140AAB",
+    "edid": "PrimerLargeRifle",
+    "name": "Primer, Large Rifle",
+    "flags": 0
+  },
+  {
+    "form": "00140AAC",
+    "edid": "Primer50MG",
+    "name": "Primer, .50 MG",
+    "flags": 0
+  },
+  {
+    "form": "00140AB2",
+    "edid": "PowderPistol",
+    "name": "Powder, Pistol",
+    "flags": 0
+  },
+  {
+    "form": "00140AB3",
+    "edid": "PowderRifle",
+    "name": "Powder, Rifle",
+    "flags": 0
+  },
+  {
+    "form": "00140ADD",
+    "edid": "Case9mm",
+    "name": "Case, 9mm",
+    "flags": 0
+  },
+  {
+    "form": "00140ADE",
+    "edid": "Case5mm",
+    "name": "Case, 5mm",
+    "flags": 0
+  },
+  {
+    "form": "00140ADF",
+    "edid": "Case556mm",
+    "name": "Case, 5.56mm",
+    "flags": 0
+  },
+  {
+    "form": "00140AE0",
+    "edid": "PrimerSmallRifle",
+    "name": "Primer, Small Rifle",
+    "flags": 0
+  },
+  {
+    "form": "00140AEA",
+    "edid": "Hull20Ga",
+    "name": "Hull, 20 Gauge",
+    "flags": 0
+  },
+  {
+    "form": "00140AEB",
+    "edid": "Hull12Ga",
+    "name": "Hull, 12 Gauge",
+    "flags": 0
+  },
+  {
+    "form": "00140AEC",
+    "edid": "PrimerShotshell",
+    "name": "Primer, Shotshell",
+    "flags": 0
+  },
+  {
+    "form": "00140C2F",
+    "edid": "Lead",
+    "name": "Lead",
+    "flags": 0
+  },
+  {
+    "form": "001429D3",
+    "edid": "Case127mm",
+    "name": "Case, 12.7mm",
+    "flags": 0
+  },
+  {
+    "form": "00154308",
+    "edid": "Timer01",
+    "name": "EggTimer",
+    "flags": 0
+  },
+  {
+    "form": "00157381",
+    "edid": "CounterfeitCaps",
+    "name": "Counterfeit Bottle Cap",
+    "flags": 0
+  },
+  {
+    "form": "0015C629",
+    "edid": "DrainedMicrofusionCell",
+    "name": "Drained Microfusion Cell",
+    "flags": 0
+  },
+  {
+    "form": "0015C62A",
+    "edid": "DrainedElectronChargePack",
+    "name": "Drained Electron Charge Pack",
+    "flags": 0
+  },
+  {
+    "form": "0015C631",
+    "edid": "DrainedFlamerFuelTank",
+    "name": "Drained Flamer Fuel Tank",
+    "flags": 0
+  },
+  {
+    "form": "0015D914",
+    "edid": "DoggieTreat",
+    "name": "Doggie Treat",
+    "flags": 0
+  },
+  {
+    "form": "0015D9AF",
+    "edid": "NVCentaurBlood",
+    "name": "Centaur Blood",
+    "flags": 0
+  },
+  {
+    "form": "0015D9B0",
+    "edid": "NVCoyoteHide",
+    "name": "Coyote Hide",
+    "flags": 0
+  },
+  {
+    "form": "0015D9B1",
+    "edid": "NVDogHide",
+    "name": "Dog Hide",
+    "flags": 0
+  },
+  {
+    "form": "0015E10E",
+    "edid": "GawdyGnome",
+    "name": "Evil Gnome",
+    "flags": 0
+  },
+  {
+    "form": "0015E5BD",
+    "edid": "GeckoEgg",
+    "name": "Gecko Egg",
+    "flags": 0
+  },
+  {
+    "form": "0015E5BE",
+    "edid": "FireGeckoEgg",
+    "name": "Fire Gecko Egg",
+    "flags": 0
+  },
+  {
+    "form": "0015E5BF",
+    "edid": "GoldenGeckoEgg",
+    "name": "Golden Gecko Egg",
+    "flags": 0
+  },
+  {
+    "form": "0015E5C0",
+    "edid": "MantisEgg",
+    "name": "Mantis Egg",
+    "flags": 0
+  },
+  {
+    "form": "0015E5C1",
+    "edid": "NightstalkerEgg",
+    "name": "Nightstalker Egg",
+    "flags": 0
+  },
+  {
+    "form": "0015E5C2",
+    "edid": "RadscorpionEgg",
+    "name": "Radscorpion Egg",
+    "flags": 0
+  },
+  {
+    "form": "0015FE13",
+    "edid": "NiptonLotteryTicket",
+    "name": "Lottery Ticket",
+    "flags": 0
+  },
+  {
+    "form": "0015FE47",
+    "edid": "NiptonLotteryTicketValuable",
+    "name": "Lottery Ticket",
+    "flags": 0
+  },
+  {
+    "form": "0016163C",
+    "edid": "Yeast",
+    "name": "Yeast",
+    "flags": 0
+  },
+  {
+    "form": "00168A6C",
+    "edid": "AcousticGuitar",
+    "name": "Acoustic Guitar",
+    "flags": 0
+  },
+  {
+    "form": "00170F87",
+    "edid": "SSBottleEmptyNoFloat",
+    "name": "Empty Sunset Sarsaparilla Bottle",
+    "flags": 0
+  },
+  {
+    "form": "00173236",
+    "edid": "LegionMoney1Mangled",
+    "name": "Legion Denarius, Mangled",
+    "flags": 0
+  },
+  {
+    "form": "001735D2",
+    "edid": "PreordVaultCanteen",
+    "name": "Vault 13 Canteen",
+    "flags": 0
+  }
+]

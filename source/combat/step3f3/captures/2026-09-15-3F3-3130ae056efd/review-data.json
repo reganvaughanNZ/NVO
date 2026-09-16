@@ -1,0 +1,25 @@
+{
+  "capture_sha256": "3130ae056efdf379d4720fb6b2837447fa9d8e600255860107fbe28c2c50ac0c",
+  "native_version": 314,
+  "review": "source/combat/step3f3/REVIEW-1.md",
+  "terrain_correction": "accepted for observed private Hunting Rifle long-miss condition",
+  "range_diagnostics": "accepted",
+  "corrections_reported_and_verified": 653,
+  "detailed_correction_pairs_checked": 16,
+  "displacement_mismatches": 0,
+  "reload_boundary": "one live projectile retired on reload; no pending update, source tables cleared, final session clean",
+  "scope": "Standard .308 Hunting Rifle; flight/range and terrain correction, not multi-hit damage validation or universal VATS behavior",
+  "next_proposal": "Read-only impact-speed diagnostics before armour input; distinguish contact speed from last free-flight speed",
+  "next_packet_authorized": false,
+  "additional_gameplay_requested": false,
+  "game_modified": false,
+  "assistant_gameplay": false,
+  "damage_authority": false,
+  "limits": [
+    "637 later correction pairs represented by counters after the detail cap.",
+    "One linked actor hit context; seven impact callbacks do not establish seven live-actor wounds.",
+    "Observed five-times range is not a universal VATS multiplier.",
+    "Exact destruction cause not instrumented; range expiry is strongly supported.",
+    "Unit calibration, initial unchanged segment, exact contact speed, mass/energy and armour remain later work."
+  ]
+}

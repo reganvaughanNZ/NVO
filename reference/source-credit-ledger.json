@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "last_verified": "2026-09-16",
+  "policy": {
+    "assembler_credit_requested": false,
+    "statement": "The person who assembled and directed NVO requests no personal credit; credit upstream authors and contributors.",
+    "status_definitions": {
+      "adapted": "Material or data is incorporated into NVO.",
+      "contract": "Source-defined ABI, event, layout, or engine contract is relied on; upstream implementation is not bundled.",
+      "dependency": "Required or observed installed runtime project; not incorporated into NVO source.",
+      "research": "Inspected for comparison or diagnostics; not incorporated.",
+      "planned": "Inventoried candidate only; credit and permission must be rechecked before adoption."
+    }
+  },
+  "sources": [
+    {
+      "project": "Alternate Start with Delayed Main Quest",
+      "version": "1.60",
+      "status": "adapted",
+      "authors": ["hman101"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/82319",
+      "used_for": "Alternative-start records, backgrounds, scripts, and delayed main-quest/Courier path.",
+      "evidence": ["CREDITS.md", "reference/altstart-inventory.json", "source/ALTStartQscript.txt", "source/ALTQscript.txt"],
+      "permission_note": "Nexus permits modification and asset use; no original-file reupload, other-game conversion, or commercial asset use. Current 1.70 contributor tobert is outside the 1.60 donor version."
+    },
+    {
+      "project": "BallistX - Internal and External Ballistics",
+      "version": "5.4",
+      "status": "adapted",
+      "authors": ["Ravuth"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/70341",
+      "used_for": "Selected cartridge/weapon data, G1/G7 tables, and barrel-length/velocity relationship.",
+      "evidence": ["native/NVOCombatCore/CREDITS-BALLISTX.md", "native/NVOCombatCore/include/FlightDragData.hpp", "native/NVOCombatCore/reference/PROVENANCE.json"],
+      "permission_note": "Credit required by author; donor assets may not be used in sold mods/files."
+    },
+    {
+      "project": "New Vegas Script Extender (NVSE/xNVSE)",
+      "version": "supplied source identifies 6.4.8",
+      "status": "contract",
+      "authors": ["ianpatt", "behippo", "scruggsywuggsy the ferret", "hlp", "korri123", "cnf13", "jazzisparis", "Demorome"],
+      "additional_credits": ["Timeslip", "Elminster AU", "lStewieAl", "c6", "carxt", "Into-The-Rough", "Stentorious", "Wall_SoGB"],
+      "url": "https://github.com/xNVSE/NVSE",
+      "used_for": "Plugin ABI, messaging, events, console, serialization, loaded-mod layout, and engine-facing declarations.",
+      "evidence": ["reference/NVSE-SOURCE.json", "native/NVOCombatCore/sdk-reference.json", "native/NVOCombatCore/include/NvseBootstrapApi.hpp"]
+    },
+    {
+      "project": "JIP LN NVSE",
+      "version": "57.30 source",
+      "status": "contract",
+      "authors": ["jazzisparis", "LuthienAnarion"],
+      "additional_credits": [],
+      "url": "https://github.com/jazzisparis/JIP-LN-NVSE",
+      "used_for": "ActorHitData, actor/form, projectile/ammo/process, speed, gravity, lifetime, range, and hook contracts.",
+      "evidence": ["native/NVOCombatCore/sdk-reference.json", "native/NVOCombatCore/THIRD-PARTY-NOTICES.md", "source/combat/step3d/SOURCE-PROVENANCE.json"],
+      "license": "GPL-3.0"
+    },
+    {
+      "project": "ShowOff xNVSE Plugin",
+      "status": "contract",
+      "authors": ["The Dormies", "Demorome", "Trooper", "AVeryUncreativeUsername", "WallSoyGB", "Wall_SoGB"],
+      "additional_credits": ["lStewieAl", "c6", "Luthien", "TommInfinite", "jazzisparis", "karut", "brofield"],
+      "url": "https://github.com/Demorome/Showoff-NVSE",
+      "used_for": "Projectile, explosion, destruction, timing, decoding, and public event contracts.",
+      "evidence": ["native/NVOCombatCore/sdk-reference.json", "native/NVOCombatCore/THIRD-PARTY-NOTICES.md", "source/combat/step3g2/ENGINE-FINDINGS.json"]
+    },
+    {
+      "project": "itr-nvse / ITR NVSE",
+      "version": "2.2.2 reference",
+      "status": "contract",
+      "authors": ["Into the Rough contributors"],
+      "additional_credits": [],
+      "used_for": "Pre-damage, actor-value, near-miss, dispatch, and event-slot contracts.",
+      "evidence": ["native/NVOCombatCore/sdk-reference.json", "native/NVOCombatCore/LICENSE-ITR-MIT.txt", "source/combat/step3h/ENGINE-FINDINGS.json"],
+      "license": "MIT"
+    },
+    {
+      "project": "JohnnyGuitar NVSE",
+      "status": "dependency",
+      "authors": ["carxt", "c6", "lStewieAl", "Wall_SoGB"],
+      "additional_credits": ["jazzisparis", "Nukem", "korri123", "Demorome", "IntoTheRough", "Stentorious", "Wadel", "AVeryUncreativeUsername", "yvileapsis", "W00Z", "djhert", "confused", "alex19EP"],
+      "url": "https://www.nexusmods.com/newvegas/mods/66927",
+      "used_for": "Alternative-start runtime dependency and diagnostic source/release inspection.",
+      "evidence": ["reference/JOHNNYGUITAR-SOURCE.json", "source/combat/step2/REVIEW-4-native-capture.md"]
+    },
+    {
+      "project": "lStewieAl's Tweaks and Engine Fixes",
+      "version": "10.00 source",
+      "status": "research",
+      "authors": ["lStewieAl"],
+      "additional_credits": ["JazzIsParis", "c6"],
+      "url": "https://www.nexusmods.com/newvegas/mods/66347",
+      "used_for": "Corroborating projectile range/settings and engine research; no implementation copied.",
+      "evidence": ["source/combat/step3f3/ENGINE-FINDINGS.json"]
+    },
+    {
+      "project": "Directional Shooting - NVSE",
+      "version": "1.1",
+      "status": "research",
+      "authors": ["LOW", "LowbeeBob"],
+      "additional_credits": ["jazzisparis", "Demorome", "lStewieAl", "carxt", "xNVSE team"],
+      "url": "https://www.nexusmods.com/newvegas/mods/92443",
+      "used_for": "Projectile-direction and controller-correction comparison; not incorporated.",
+      "evidence": ["reference/DIRECTIONAL-SHOOTING-REVIEW.md", "reference/DIRECTIONAL-SHOOTING-SOURCE.json"]
+    },
+    {
+      "project": "SUP NVSE",
+      "status": "research",
+      "authors": ["TommInfinite"],
+      "additional_credits": ["JIP LN NVSE contributors", "JohnnyGuitar NVSE contributors", "lStewieAl", "c6", "Ian Patterson", "Brodie Thiesfield"],
+      "url": "https://www.nexusmods.com/newvegas/mods/73160",
+      "used_for": "Plugin example and engine-site comparison; no matching code adopted.",
+      "evidence": ["reference/COMBAT-EXTENDER-SOURCES.json"]
+    },
+    {
+      "project": "AnhNVSE",
+      "status": "research",
+      "authors": ["anhatthezoo"],
+      "additional_credits": [],
+      "used_for": "Engine-site comparison; no matching code adopted.",
+      "evidence": ["reference/COMBAT-EXTENDER-SOURCES.json"]
+    },
+    {
+      "project": "NVSE-Plugins template",
+      "status": "research",
+      "authors": ["Ez0n3", "Ian Patterson"],
+      "additional_credits": [],
+      "url": "https://github.com/Ez0n3/NVSE-Plugins",
+      "used_for": "Build/example review; no template implementation copied.",
+      "evidence": ["reference/NVSE-PLUGINS-TEMPLATE-REVIEW.md", "reference/NVSE-PLUGINS-TEMPLATE-REVIEW.json"]
+    },
+    {
+      "project": "BALLISTX C++ library",
+      "status": "research",
+      "authors": ["Emir", "kodchhdayininyeri"],
+      "additional_credits": [],
+      "url": "https://github.com/kodchhdayininyeri/BALLISTX",
+      "used_for": "Ballistics-library review only; no code incorporated.",
+      "evidence": ["reference/BALLISTX-LIBRARY-REVIEW.md"],
+      "license": "MIT"
+    },
+    {
+      "project": "Bullet Tracers New Vegas",
+      "version": "1.5",
+      "status": "research",
+      "authors": ["Mhillow"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/64198",
+      "used_for": "Visual tracer record/asset review; not incorporated.",
+      "evidence": ["reference/ballistics-donors-20260915/REVIEW.md"]
+    },
+    {
+      "project": "Improved Bullet Tracers - ESPless",
+      "version": "1.2.1 archive",
+      "status": "research",
+      "authors": ["UserOfMods123"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/98891",
+      "used_for": "Tracer and interpolation behavior review; not incorporated.",
+      "evidence": ["reference/ballistics-donors-20260915/REVIEW.md"],
+      "permission_note": "Nexus requires author permission for modification or asset reuse."
+    },
+    {
+      "project": "Physics' Based Ballistics / Caliber Based Damage / Physics' Based Spread",
+      "status": "research",
+      "authors": ["physicsgaming"],
+      "additional_credits": [],
+      "urls": ["https://www.nexusmods.com/newvegas/mods/82561", "https://www.nexusmods.com/newvegas/mods/82543", "https://www.nexusmods.com/newvegas/mods/83049"],
+      "used_for": "Classification, configuration, projectile, damage, and spread research; independent loaders remain inactive/not incorporated.",
+      "evidence": ["reference/ballistics-donors-20260915/REVIEW.md", "source/combat/step1/OWNERSHIP.md"]
+    },
+    {
+      "project": "Combat AI Tweaks",
+      "version": "1.0.1",
+      "status": "planned",
+      "authors": ["intotherough"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/98454",
+      "used_for": "External AI project/reference only; no code copied.",
+      "permission_note": "Author says reuse is allowed with credit."
+    },
+    {
+      "project": "Simple Bleeding - ESPless",
+      "version": "1.4.1",
+      "status": "planned",
+      "authors": ["Qolore7"],
+      "additional_credits": ["djhert", "FinalCatalyst"],
+      "url": "https://www.nexusmods.com/newvegas/mods/92796",
+      "used_for": "Candidate bleeding and treatment logic; not incorporated.",
+      "permission_note": "Credit author and everyone mentioned in description; derivative must have open permissions."
+    },
+    {
+      "project": "New Blood",
+      "version": "2.75 archive",
+      "status": "planned",
+      "authors": ["S6S", "Sweet6Shooter"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/75666",
+      "used_for": "Candidate anatomy, weapon distinction, bleeding, and impact reactions; not incorporated."
+    },
+    {
+      "project": "Transcendence - The Roleplaying Overhaul",
+      "version": "1.3.0.1",
+      "status": "planned",
+      "authors": ["Qolore7"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/90520",
+      "used_for": "Candidate equipment, combat-style, and progression reference; not incorporated.",
+      "permission_note": "Author asks that upstream be made a requirement where possible."
+    },
+    {
+      "project": "Vanilla SWEEP",
+      "version": "2.35 archive",
+      "status": "planned",
+      "authors": ["S6S", "Sweet6Shooter"],
+      "additional_credits": ["Patchier", "Panzermann11", "phoenix0113", "Hitman47101", "Hopper31", "Migck", "DoktorAkcel", "Just Enough Realism"],
+      "url": "https://www.nexusmods.com/newvegas/mods/81043",
+      "used_for": "Candidate weapon effects/balance reference; not incorporated."
+    },
+    {
+      "project": "KEYWORDS",
+      "version": "1.01",
+      "status": "planned",
+      "authors": ["JazzIsParis", "Xilandro"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/83088",
+      "used_for": "Candidate equipment classification support; not incorporated."
+    },
+    {
+      "project": "Modern Ambient Temperature",
+      "status": "planned",
+      "authors": ["eezstreet"],
+      "additional_credits": ["Imp of the Perverse"],
+      "url": "https://www.nexusmods.com/newvegas/mods/71079",
+      "used_for": "Candidate atmospheric ballistics input; not incorporated."
+    },
+    {
+      "project": "Base Object Swapper",
+      "status": "planned",
+      "authors": ["powerofthree"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/83934",
+      "used_for": "Candidate distribution support; not incorporated."
+    },
+    {
+      "project": "Animated Greetings / Idle Variety",
+      "status": "planned",
+      "authors": ["Wombat", "Woooombat"],
+      "additional_credits": [],
+      "urls": ["https://www.nexusmods.com/newvegas/mods/96211", "https://www.nexusmods.com/newvegas/mods/85718"],
+      "used_for": "Candidate later NPC presentation; not incorporated.",
+      "permission_note": "Animated Greetings declares CC BY-NC-SA 4.0."
+    },
+    {
+      "project": "DIALECTIC",
+      "version": "1.0.0",
+      "status": "research",
+      "authors": ["DwemerDynamics"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/99233",
+      "used_for": "Optional conversation-framework assessment; not incorporated.",
+      "evidence": ["NVO-Dialectic-Proposal.md"],
+      "permission_note": "Nexus requires permission for modification/asset reuse; local archive also contains an MIT notice, so resolve the discrepancy before copying."
+    },
+    {
+      "project": "xEdit",
+      "version": "4.1.5f supplied tool",
+      "status": "research",
+      "authors": ["ElminsterAU", "xEdit contributors"],
+      "additional_credits": [],
+      "url": "https://github.com/TES5Edit/TES5Edit",
+      "used_for": "Development-time record inspection, cleaning, and plugin work; not NVO authorship.",
+      "evidence": ["tools/xedit-4.1.5f/source/wbInterface.pas"],
+      "license": "MPL-2.0"
+    }
+  ]
+}

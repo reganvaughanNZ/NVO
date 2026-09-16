@@ -1,0 +1,68 @@
+scn NVOStartPreview
+
+int iBackground
+int iHasNote
+ref rBackground
+string_var sText
+string_var sNote
+string_var sBreak
+
+begin function {iBackground}
+
+    let rBackground := ListGetNthForm ALTBackList iBackground
+    let sText := GetFormDescription rBackground
+    let sBreak := Sv_Construct "%r%r"
+    let sNote := ""
+    let iHasNote := 1
+
+    if iBackground == 0
+        let sNote := "Your background is rolled after character creation. Its equipment and risks are unknown until then."
+    elseif iBackground == 7
+        let sNote := "The Brotherhood is hostile. This start also changes Brotherhood quest progression."
+       elseif iBackground == 17
+        let sNote := "Your Vault 13 armor starts at 45 condition out of 100. Your weathered pistol starts at 15."
+    elseif iBackground == 18
+        let sNote := "Your tribal armor starts at 45 condition out of 100. Your broad machete starts at 35."
+    elseif iBackground == 19
+        let sNote := "Your lightweight leather armor starts at 45 condition out of 100. Your caravan shotgun starts at 15."
+    elseif iBackground == 20
+        let sNote := "Your lightweight metal armor starts at 45 condition out of 100. Your grenade rifle starts at 15."
+    elseif iBackground == 27
+        let sNote := "Power Armor Training is included, but your Remnants helmet is broken. This start does not give a full power armor suit."
+    elseif iBackground == 29
+        let sNote := "You begin with crippled limbs and lose 70 percent of your current health. Hostile robots make this a dangerous escape."
+    elseif iBackground == 31
+        let sNote := "You begin at night with temporary Stealth Boy protection. The nearby deathclaws remain dangerous."
+    elseif iBackground == 34
+        let sNote := "Your Desert Ranger armor and helmet both start at only 10 condition out of 100. Repairs will matter immediately."
+    elseif iBackground == 42
+        let sNote := "Your starting SPECIAL budget is 36 instead of the usual 40. This is a disadvantaged start despite your coyote allies."
+    elseif iBackground == 43
+        let sNote := "Your Ranger battle armor starts at only 20 condition out of 100. You also receive the Grunt perk."
+    elseif iBackground == 45
+        let sNote := "Your alien blaster starts at 10 condition out of 100 with five cells. A quarter of trading caps are donated."
+    elseif iBackground == 53
+        let sNote := "You receive a 5,000-cap grant. Your starting wealth helps you buy equipment and supplies."
+    elseif iBackground == 54
+        let sNote := "This background starts hostile to numerous factions. Expect severe restrictions on safe travel and friendly settlements."
+    elseif iBackground == 55
+        let sNote := "This starts the Dead Money adventure. The donor describes returning to the Mojave as restricted until you finish it."
+    elseif iBackground == 56
+        let sNote := "This starts the Honest Hearts adventure. The donor describes returning to the Mojave as restricted until you finish the contract."
+    elseif iBackground == 57
+        let sNote := "This starts the Old World Blues adventure. You must find your way out of Big MT before returning to the Mojave."
+    elseif iBackground == 58
+        let sNote := "This starts the Lonesome Road adventure. The donor describes returning to the Mojave as restricted until you finish your business."
+    else
+        let iHasNote := 0
+    endif
+
+    if iHasNote == 1
+        let sText += sBreak + "START DETAILS: " + sNote
+    endif
+
+    let sText += sBreak + "Additional weapons and supplies depend on your tagged skills."
+    let sText += sBreak + "COURIER JOB: Optional. Sign up later at a Mojave Express flier."
+    SetFunctionValue sText
+
+end

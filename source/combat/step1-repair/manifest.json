@@ -1,0 +1,31 @@
+{
+  "purpose": "Restore missing extender plugins using the user existing local files",
+  "versions": {
+    "johnnyguitar.dll": "5.16 from staged package",
+    "ShowOffNVSE.dll": "1.84 from downloaded archive"
+  },
+  "game_directory_modified": false,
+  "runtime_tested": false,
+  "sources": {
+    "johnnyguitar.dll": "C:\\Users\\regan\\AppData\\Roaming\\Vortex\\falloutnv\\mods\\JohnnyGuitar NVSE-66927-5-16-1744904538\\nvse\\plugins\\johnnyguitar.dll",
+    "JohnnyGuitar.ini": "C:\\Users\\regan\\AppData\\Roaming\\Vortex\\falloutnv\\mods\\JohnnyGuitar NVSE-66927-5-16-1744904538\\nvse\\plugins\\JohnnyGuitar.ini",
+    "ShowOffNVSE.dll": "C:\\Users\\regan\\Downloads\\ShowOff xNVSE-72541-1-84-1774735121.zip :: nvse/plugins/ShowOffNVSE.dll"
+  },
+  "files": [
+    {
+      "path": "Data\\NVSE\\Plugins\\johnnyguitar.dll",
+      "sha256": "b2d54e12baffda40381074153c525a1643f47885978dfa681dc6201dd8839b92",
+      "bytes": 259072
+    },
+    {
+      "path": "Data\\NVSE\\Plugins\\JohnnyGuitar.ini",
+      "sha256": "1556b4e9897f0ef8b787ea44c440626fb501427416544309fab06b7b88ef404d",
+      "bytes": 1741
+    },
+    {
+      "path": "Data\\NVSE\\Plugins\\ShowOffNVSE.dll",
+      "sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e",
+      "bytes": 1091584
+    }
+  ]
+}

@@ -1,0 +1,4711 @@
+{
+  "capture": "source/combat/step3b3a/captures/2026-09-15-3B3A-stress-d68774aa6256/NVOCombatCore.log",
+  "sha256": "d68774aa6256672caa76b50ce1f78157c50cabc54fb81e918bac28d4957ccb3f",
+  "bytes": 1619818,
+  "last_write_local": "2026-09-15T11:52:04.158610",
+  "line_count": 8193,
+  "rows_by_kind": {
+    "NVOCombatCore": 1,
+    "QUERY": 1,
+    "LOAD": 1,
+    "LIFECYCLE": 33,
+    "CURRENT_HIT_READY": 1,
+    "CAPTURE": 10,
+    "FLIGHT_OWNER_AUDIT": 10,
+    "FLIGHT_PREVIEW_READY": 10,
+    "FLIGHT_PROFILE": 40,
+    "FLIGHT_PILOT_KIT": 10,
+    "FLIGHT_TIMING_READY": 10,
+    "DAMAGE_EVENTS_READY": 10,
+    "EVENT": 5769,
+    "FLIGHT_PREVIEW_SKIP": 80,
+    "DAMAGE_INPUT": 392,
+    "HIT_CONTEXT": 834,
+    "HEALTH_INPUT": 377,
+    "SUMMARY": 18,
+    "CURRENT_HIT_SUMMARY": 18,
+    "CAPTURE_LIMIT": 8,
+    "FLIGHT_TIMING_TRACK": 33,
+    "FLIGHT_PREVIEW": 81,
+    "FLIGHT_TIMING_THREAD": 33,
+    "FLIGHT_STEP": 96,
+    "FLIGHT_STEP_STATE": 96,
+    "FLIGHT_TRAVEL": 160,
+    "FLIGHT_TIMING_SHOT": 32,
+    "FLIGHT_TIMING_SUMMARY": 9,
+    "FLIGHT_PREVIEW_SUMMARY": 9,
+    "DAMAGE_EVENT_SUMMARY": 9,
+    "CURRENT_HIT_LIMIT": 1,
+    "END": 1
+  },
+  "lifecycle": [
+    "LIFECYCLE post_load_plugins",
+    "LIFECYCLE post_post_load_plugins",
+    "LIFECYCLE deferred_init",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=1",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=2",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=3",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=4",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=5",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=6",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=7",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=8",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=9",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=10"
+  ],
+  "tail": "END native log process limit reached",
+  "by_session": {
+    "1": {
+      "line_range": [
+        9,
+        1186
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "DAMAGE_INPUT": 175,
+        "HIT_CONTEXT": 175,
+        "HEALTH_INPUT": 168,
+        "SUMMARY": 2,
+        "CURRENT_HIT_SUMMARY": 2,
+        "CAPTURE_LIMIT": 1,
+        "FLIGHT_TIMING_TRACK": 3,
+        "FLIGHT_PREVIEW": 3,
+        "FLIGHT_TIMING_THREAD": 3,
+        "FLIGHT_STEP": 7,
+        "FLIGHT_STEP_STATE": 7,
+        "FLIGHT_TRAVEL": 6,
+        "FLIGHT_TIMING_SHOT": 3,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "1",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "138",
+          "impact": "127",
+          "destroy": "129",
+          "hit_notice": "107",
+          "weapon_notice": "99",
+          "blast": "0",
+          "unmatched": "0",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "9",
+          "line": 737
+        },
+        {
+          "session": "1",
+          "reason": "capture_limit",
+          "contexts": "36",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "36",
+          "known_ammo": "36",
+          "damage_applications": "unverified",
+          "line": 738
+        },
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "rows": "600",
+          "create": "717",
+          "impact": "712",
+          "destroy": "717",
+          "hit_notice": "107",
+          "weapon_notice": "99",
+          "blast": "0",
+          "unmatched": "0",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "0",
+          "line": 1182
+        },
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "contexts": "175",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "175",
+          "known_ammo": "175",
+          "damage_applications": "unverified",
+          "line": 1183
+        },
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "accepted": "3",
+          "steps_logged": "7",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "7",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 1184
+        },
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "seen": "717",
+          "matched": "3",
+          "skipped": "714",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "3",
+          "impact_rows": "3",
+          "destroy_rows": "3",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 1185
+        },
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "hit_callbacks": "175",
+          "hit_rows": "175",
+          "health_callbacks": "168",
+          "health_rows": "168",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 1186
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=1 maximum=600 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {
+        "0C000800": 1,
+        "0C000801": 2
+      },
+      "timing_steps": 7,
+      "phases": {
+        "no_motion": 3,
+        "moving": 1,
+        "collision": 3
+      },
+      "ratio_range": [
+        0.999998759,
+        0.999998759
+      ],
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [
+        "11924"
+      ],
+      "max_update_step": 3
+    },
+    "2": {
+      "line_range": [
+        1189,
+        1733
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 419,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 32,
+        "DAMAGE_INPUT": 24,
+        "HEALTH_INPUT": 24,
+        "FLIGHT_TIMING_TRACK": 2,
+        "FLIGHT_PREVIEW": 2,
+        "FLIGHT_TIMING_THREAD": 2,
+        "FLIGHT_STEP": 5,
+        "FLIGHT_STEP_STATE": 5,
+        "FLIGHT_TRAVEL": 4,
+        "FLIGHT_TIMING_SHOT": 2,
+        "SUMMARY": 1,
+        "CURRENT_HIT_SUMMARY": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "2",
+          "reason": "pre_load_game",
+          "rows": "419",
+          "create": "108",
+          "impact": "107",
+          "destroy": "109",
+          "hit_notice": "49",
+          "weapon_notice": "46",
+          "blast": "0",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "0",
+          "line": 1729
+        },
+        {
+          "session": "2",
+          "reason": "pre_load_game",
+          "contexts": "32",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "32",
+          "known_ammo": "32",
+          "damage_applications": "unverified",
+          "line": 1730
+        },
+        {
+          "session": "2",
+          "reason": "pre_load_game",
+          "accepted": "2",
+          "steps_logged": "5",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "5",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 1731
+        },
+        {
+          "session": "2",
+          "reason": "pre_load_game",
+          "seen": "108",
+          "matched": "2",
+          "skipped": "106",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "2",
+          "impact_rows": "2",
+          "destroy_rows": "2",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 1732
+        },
+        {
+          "session": "2",
+          "reason": "pre_load_game",
+          "hit_callbacks": "24",
+          "hit_rows": "24",
+          "health_callbacks": "24",
+          "health_rows": "24",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 1733
+        }
+      ],
+      "limits": [],
+      "timed_weapons": {
+        "0C000800": 1,
+        "0C000801": 1
+      },
+      "timing_steps": 5,
+      "phases": {
+        "no_motion": 2,
+        "moving": 1,
+        "collision": 2
+      },
+      "ratio_range": [
+        0.999999526,
+        0.999999526
+      ],
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [
+        "11924"
+      ],
+      "max_update_step": 3
+    },
+    "3": {
+      "line_range": [
+        1736,
+        2425
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 35,
+        "FLIGHT_TIMING_TRACK": 2,
+        "FLIGHT_PREVIEW": 2,
+        "FLIGHT_TIMING_THREAD": 2,
+        "FLIGHT_STEP": 6,
+        "FLIGHT_STEP_STATE": 6,
+        "DAMAGE_INPUT": 2,
+        "HEALTH_INPUT": 2,
+        "FLIGHT_TRAVEL": 4,
+        "FLIGHT_TIMING_SHOT": 2,
+        "SUMMARY": 2,
+        "CURRENT_HIT_SUMMARY": 2,
+        "CAPTURE_LIMIT": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "3",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "156",
+          "impact": "139",
+          "destroy": "153",
+          "hit_notice": "74",
+          "weapon_notice": "75",
+          "blast": "3",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "4",
+          "line": 2416
+        },
+        {
+          "session": "3",
+          "reason": "capture_limit",
+          "contexts": "33",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "30",
+          "known_ammo": "30",
+          "damage_applications": "unverified",
+          "line": 2417
+        },
+        {
+          "session": "3",
+          "reason": "pre_load_game",
+          "rows": "600",
+          "create": "171",
+          "impact": "152",
+          "destroy": "167",
+          "hit_notice": "74",
+          "weapon_notice": "75",
+          "blast": "3",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "5",
+          "line": 2421
+        },
+        {
+          "session": "3",
+          "reason": "pre_load_game",
+          "contexts": "35",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "32",
+          "known_ammo": "32",
+          "damage_applications": "unverified",
+          "line": 2422
+        },
+        {
+          "session": "3",
+          "reason": "pre_load_game",
+          "accepted": "2",
+          "steps_logged": "6",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "6",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 2423
+        },
+        {
+          "session": "3",
+          "reason": "pre_load_game",
+          "seen": "171",
+          "matched": "2",
+          "skipped": "169",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "2",
+          "impact_rows": "2",
+          "destroy_rows": "2",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 2424
+        },
+        {
+          "session": "3",
+          "reason": "pre_load_game",
+          "hit_callbacks": "2",
+          "hit_rows": "2",
+          "health_callbacks": "2",
+          "health_rows": "2",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 2425
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=3 maximum=600 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {
+        "0C000800": 1,
+        "0C000801": 1
+      },
+      "timing_steps": 6,
+      "phases": {
+        "no_motion": 2,
+        "moving": 2,
+        "collision": 2
+      },
+      "ratio_range": [
+        0.999999632,
+        1.0000006
+      ],
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [
+        "11924"
+      ],
+      "max_update_step": 4
+    },
+    "4": {
+      "line_range": [
+        2428,
+        3125
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 45,
+        "FLIGHT_TIMING_TRACK": 2,
+        "FLIGHT_PREVIEW": 2,
+        "FLIGHT_TIMING_THREAD": 2,
+        "FLIGHT_STEP": 5,
+        "FLIGHT_STEP_STATE": 5,
+        "DAMAGE_INPUT": 2,
+        "HEALTH_INPUT": 2,
+        "FLIGHT_TRAVEL": 4,
+        "FLIGHT_TIMING_SHOT": 2,
+        "SUMMARY": 2,
+        "CURRENT_HIT_SUMMARY": 2,
+        "CAPTURE_LIMIT": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "4",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "145",
+          "impact": "130",
+          "destroy": "147",
+          "hit_notice": "88",
+          "weapon_notice": "89",
+          "blast": "1",
+          "unmatched": "3",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "0",
+          "line": 3111
+        },
+        {
+          "session": "4",
+          "reason": "capture_limit",
+          "contexts": "38",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "37",
+          "known_ammo": "37",
+          "damage_applications": "unverified",
+          "line": 3112
+        },
+        {
+          "session": "4",
+          "reason": "pre_load_game",
+          "rows": "600",
+          "create": "180",
+          "impact": "158",
+          "destroy": "181",
+          "hit_notice": "88",
+          "weapon_notice": "89",
+          "blast": "1",
+          "unmatched": "3",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "1",
+          "line": 3121
+        },
+        {
+          "session": "4",
+          "reason": "pre_load_game",
+          "contexts": "45",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "44",
+          "known_ammo": "44",
+          "damage_applications": "unverified",
+          "line": 3122
+        },
+        {
+          "session": "4",
+          "reason": "pre_load_game",
+          "accepted": "2",
+          "steps_logged": "5",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "5",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 3123
+        },
+        {
+          "session": "4",
+          "reason": "pre_load_game",
+          "seen": "180",
+          "matched": "2",
+          "skipped": "178",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "2",
+          "impact_rows": "2",
+          "destroy_rows": "2",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 3124
+        },
+        {
+          "session": "4",
+          "reason": "pre_load_game",
+          "hit_callbacks": "2",
+          "hit_rows": "2",
+          "health_callbacks": "2",
+          "health_rows": "2",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 3125
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=4 maximum=600 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {
+        "0C000800": 1,
+        "0C000801": 1
+      },
+      "timing_steps": 5,
+      "phases": {
+        "no_motion": 2,
+        "moving": 1,
+        "collision": 2
+      },
+      "ratio_range": [
+        0.999999847,
+        0.999999847
+      ],
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [
+        "11924"
+      ],
+      "max_update_step": 3
+    },
+    "5": {
+      "line_range": [
+        3128,
+        3727
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 550,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 22,
+        "DAMAGE_INPUT": 2,
+        "HEALTH_INPUT": 2,
+        "SUMMARY": 1,
+        "CURRENT_HIT_SUMMARY": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "5",
+          "reason": "pre_load_game",
+          "rows": "550",
+          "create": "140",
+          "impact": "125",
+          "destroy": "137",
+          "hit_notice": "75",
+          "weapon_notice": "73",
+          "blast": "0",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "4",
+          "line": 3723
+        },
+        {
+          "session": "5",
+          "reason": "pre_load_game",
+          "contexts": "22",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "22",
+          "known_ammo": "20",
+          "damage_applications": "unverified",
+          "line": 3724
+        },
+        {
+          "session": "5",
+          "reason": "pre_load_game",
+          "accepted": "0",
+          "steps_logged": "0",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "0",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 3725
+        },
+        {
+          "session": "5",
+          "reason": "pre_load_game",
+          "seen": "140",
+          "matched": "0",
+          "skipped": "140",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "0",
+          "impact_rows": "0",
+          "destroy_rows": "0",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 3726
+        },
+        {
+          "session": "5",
+          "reason": "pre_load_game",
+          "hit_callbacks": "2",
+          "hit_rows": "2",
+          "health_callbacks": "2",
+          "health_rows": "2",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 3727
+        }
+      ],
+      "limits": [],
+      "timed_weapons": {},
+      "timing_steps": 0,
+      "phases": {},
+      "ratio_range": null,
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [],
+      "max_update_step": 0
+    },
+    "6": {
+      "line_range": [
+        3730,
+        4819
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 200,
+        "DAMAGE_INPUT": 130,
+        "HEALTH_INPUT": 130,
+        "SUMMARY": 3,
+        "CURRENT_HIT_SUMMARY": 3,
+        "CAPTURE_LIMIT": 1,
+        "CURRENT_HIT_LIMIT": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "6",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "84",
+          "impact": "72",
+          "destroy": "82",
+          "hit_notice": "170",
+          "weapon_notice": "170",
+          "blast": "22",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "3",
+          "line": 4428
+        },
+        {
+          "session": "6",
+          "reason": "capture_limit",
+          "contexts": "35",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "13",
+          "known_ammo": "13",
+          "damage_applications": "unverified",
+          "line": 4429
+        },
+        {
+          "session": "6",
+          "reason": "current_hit_limit",
+          "rows": "600",
+          "create": "326",
+          "impact": "285",
+          "destroy": "326",
+          "hit_notice": "170",
+          "weapon_notice": "170",
+          "blast": "22",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "1",
+          "line": 4800
+        },
+        {
+          "session": "6",
+          "reason": "current_hit_limit",
+          "contexts": "200",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "68",
+          "known_ammo": "68",
+          "damage_applications": "unverified",
+          "line": 4801
+        },
+        {
+          "session": "6",
+          "reason": "pre_load_game",
+          "rows": "600",
+          "create": "330",
+          "impact": "289",
+          "destroy": "331",
+          "hit_notice": "170",
+          "weapon_notice": "170",
+          "blast": "22",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "0",
+          "line": 4815
+        },
+        {
+          "session": "6",
+          "reason": "pre_load_game",
+          "contexts": "200",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "68",
+          "known_ammo": "68",
+          "damage_applications": "unverified",
+          "line": 4816
+        },
+        {
+          "session": "6",
+          "reason": "pre_load_game",
+          "accepted": "0",
+          "steps_logged": "0",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "0",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 4817
+        },
+        {
+          "session": "6",
+          "reason": "pre_load_game",
+          "seen": "330",
+          "matched": "0",
+          "skipped": "330",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "0",
+          "impact_rows": "0",
+          "destroy_rows": "0",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 4818
+        },
+        {
+          "session": "6",
+          "reason": "pre_load_game",
+          "hit_callbacks": "130",
+          "hit_rows": "130",
+          "health_callbacks": "130",
+          "health_rows": "130",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 4819
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=6 maximum=600 reload_to_capture_again=1",
+        "CURRENT_HIT_LIMIT session=6 maximum=200 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {},
+      "timing_steps": 0,
+      "phases": {},
+      "ratio_range": null,
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [],
+      "max_update_step": 0
+    },
+    "7": {
+      "line_range": [
+        4822,
+        5504
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 28,
+        "DAMAGE_INPUT": 15,
+        "HEALTH_INPUT": 13,
+        "SUMMARY": 2,
+        "CURRENT_HIT_SUMMARY": 2,
+        "CAPTURE_LIMIT": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "7",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "153",
+          "impact": "136",
+          "destroy": "147",
+          "hit_notice": "82",
+          "weapon_notice": "82",
+          "blast": "0",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "7",
+          "line": 5492
+        },
+        {
+          "session": "7",
+          "reason": "capture_limit",
+          "contexts": "25",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "25",
+          "known_ammo": "25",
+          "damage_applications": "unverified",
+          "line": 5493
+        },
+        {
+          "session": "7",
+          "reason": "pre_load_game",
+          "rows": "600",
+          "create": "178",
+          "impact": "161",
+          "destroy": "175",
+          "hit_notice": "82",
+          "weapon_notice": "82",
+          "blast": "0",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "4",
+          "line": 5500
+        },
+        {
+          "session": "7",
+          "reason": "pre_load_game",
+          "contexts": "28",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "27",
+          "known_ammo": "27",
+          "damage_applications": "unverified",
+          "line": 5501
+        },
+        {
+          "session": "7",
+          "reason": "pre_load_game",
+          "accepted": "0",
+          "steps_logged": "0",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "0",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 5502
+        },
+        {
+          "session": "7",
+          "reason": "pre_load_game",
+          "seen": "178",
+          "matched": "0",
+          "skipped": "178",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "0",
+          "impact_rows": "0",
+          "destroy_rows": "0",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 5503
+        },
+        {
+          "session": "7",
+          "reason": "pre_load_game",
+          "hit_callbacks": "15",
+          "hit_rows": "15",
+          "health_callbacks": "13",
+          "health_rows": "13",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 5504
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=7 maximum=600 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {},
+      "timing_steps": 0,
+      "phases": {},
+      "ratio_range": null,
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [],
+      "max_update_step": 0
+    },
+    "8": {
+      "line_range": [
+        5507,
+        6495
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 178,
+        "FLIGHT_TIMING_TRACK": 8,
+        "FLIGHT_PREVIEW": 32,
+        "FLIGHT_TIMING_THREAD": 8,
+        "FLIGHT_STEP": 19,
+        "FLIGHT_STEP_STATE": 19,
+        "FLIGHT_TRAVEL": 64,
+        "FLIGHT_TIMING_SHOT": 8,
+        "DAMAGE_INPUT": 13,
+        "HEALTH_INPUT": 13,
+        "SUMMARY": 2,
+        "CURRENT_HIT_SUMMARY": 2,
+        "CAPTURE_LIMIT": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "8",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "153",
+          "impact": "149",
+          "destroy": "151",
+          "hit_notice": "73",
+          "weapon_notice": "73",
+          "blast": "1",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "3",
+          "line": 6275
+        },
+        {
+          "session": "8",
+          "reason": "capture_limit",
+          "contexts": "44",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "43",
+          "known_ammo": "43",
+          "damage_applications": "unverified",
+          "line": 6276
+        },
+        {
+          "session": "8",
+          "reason": "pre_load_game",
+          "rows": "600",
+          "create": "700",
+          "impact": "659",
+          "destroy": "701",
+          "hit_notice": "73",
+          "weapon_notice": "73",
+          "blast": "1",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "0",
+          "line": 6491
+        },
+        {
+          "session": "8",
+          "reason": "pre_load_game",
+          "contexts": "178",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "171",
+          "known_ammo": "171",
+          "damage_applications": "unverified",
+          "line": 6492
+        },
+        {
+          "session": "8",
+          "reason": "pre_load_game",
+          "accepted": "8",
+          "steps_logged": "19",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "19",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 6493
+        },
+        {
+          "session": "8",
+          "reason": "pre_load_game",
+          "seen": "700",
+          "matched": "42",
+          "skipped": "658",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "32",
+          "impact_rows": "32",
+          "destroy_rows": "32",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 6494
+        },
+        {
+          "session": "8",
+          "reason": "pre_load_game",
+          "hit_callbacks": "13",
+          "hit_rows": "13",
+          "health_callbacks": "13",
+          "health_rows": "13",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 6495
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=8 maximum=600 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {
+        "0C000801": 8
+      },
+      "timing_steps": 19,
+      "phases": {
+        "no_motion": 8,
+        "collision": 8,
+        "moving": 3
+      },
+      "ratio_range": [
+        1.0000005,
+        1.00000248
+      ],
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [
+        "11924"
+      ],
+      "max_update_step": 3
+    },
+    "9": {
+      "line_range": [
+        6498,
+        7448
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 85,
+        "FLIGHT_TIMING_TRACK": 8,
+        "FLIGHT_PREVIEW": 32,
+        "FLIGHT_TIMING_THREAD": 8,
+        "FLIGHT_STEP": 35,
+        "FLIGHT_STEP_STATE": 35,
+        "FLIGHT_TRAVEL": 64,
+        "FLIGHT_TIMING_SHOT": 8,
+        "DAMAGE_INPUT": 27,
+        "HEALTH_INPUT": 22,
+        "SUMMARY": 2,
+        "CURRENT_HIT_SUMMARY": 2,
+        "CAPTURE_LIMIT": 1,
+        "FLIGHT_TIMING_SUMMARY": 1,
+        "FLIGHT_PREVIEW_SUMMARY": 1,
+        "DAMAGE_EVENT_SUMMARY": 1
+      },
+      "summary": [
+        {
+          "session": "9",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "149",
+          "impact": "145",
+          "destroy": "148",
+          "hit_notice": "78",
+          "weapon_notice": "79",
+          "blast": "1",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "2",
+          "line": 7350
+        },
+        {
+          "session": "9",
+          "reason": "capture_limit",
+          "contexts": "22",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "21",
+          "known_ammo": "21",
+          "damage_applications": "unverified",
+          "line": 7351
+        },
+        {
+          "session": "9",
+          "reason": "pre_load_game",
+          "rows": "600",
+          "create": "483",
+          "impact": "435",
+          "destroy": "482",
+          "hit_notice": "78",
+          "weapon_notice": "79",
+          "blast": "1",
+          "unmatched": "2",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "2",
+          "line": 7444
+        },
+        {
+          "session": "9",
+          "reason": "pre_load_game",
+          "contexts": "85",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "84",
+          "known_ammo": "84",
+          "damage_applications": "unverified",
+          "line": 7445
+        },
+        {
+          "session": "9",
+          "reason": "pre_load_game",
+          "accepted": "8",
+          "steps_logged": "35",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "35",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 7446
+        },
+        {
+          "session": "9",
+          "reason": "pre_load_game",
+          "seen": "483",
+          "matched": "99",
+          "skipped": "384",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "32",
+          "impact_rows": "32",
+          "destroy_rows": "32",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0",
+          "line": 7447
+        },
+        {
+          "session": "9",
+          "reason": "pre_load_game",
+          "hit_callbacks": "27",
+          "hit_rows": "27",
+          "health_callbacks": "22",
+          "health_rows": "22",
+          "invalid": "0",
+          "damage_replacement": "0",
+          "damage_applications": "unverified",
+          "line": 7448
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=9 maximum=600 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {
+        "0C000800": 8
+      },
+      "timing_steps": 35,
+      "phases": {
+        "no_motion": 8,
+        "moving": 19,
+        "collision": 8
+      },
+      "ratio_range": [
+        0.999996318,
+        1.00000337
+      ],
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [
+        "11924"
+      ],
+      "max_update_step": 5
+    },
+    "10": {
+      "line_range": [
+        7451,
+        8192
+      ],
+      "kinds": {
+        "LIFECYCLE": 1,
+        "CAPTURE": 1,
+        "FLIGHT_OWNER_AUDIT": 1,
+        "FLIGHT_PREVIEW_READY": 1,
+        "FLIGHT_PROFILE": 4,
+        "FLIGHT_PILOT_KIT": 1,
+        "FLIGHT_TIMING_READY": 1,
+        "DAMAGE_EVENTS_READY": 1,
+        "EVENT": 600,
+        "FLIGHT_PREVIEW_SKIP": 8,
+        "HIT_CONTEXT": 34,
+        "FLIGHT_TIMING_TRACK": 8,
+        "FLIGHT_PREVIEW": 8,
+        "FLIGHT_TIMING_THREAD": 8,
+        "FLIGHT_STEP": 19,
+        "FLIGHT_STEP_STATE": 19,
+        "FLIGHT_TRAVEL": 14,
+        "FLIGHT_TIMING_SHOT": 7,
+        "DAMAGE_INPUT": 2,
+        "HEALTH_INPUT": 1,
+        "SUMMARY": 1,
+        "CURRENT_HIT_SUMMARY": 1,
+        "CAPTURE_LIMIT": 1
+      },
+      "summary": [
+        {
+          "session": "10",
+          "reason": "capture_limit",
+          "rows": "600",
+          "create": "154",
+          "impact": "144",
+          "destroy": "152",
+          "hit_notice": "75",
+          "weapon_notice": "75",
+          "blast": "0",
+          "unmatched": "3",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "4",
+          "line": 8167
+        },
+        {
+          "session": "10",
+          "reason": "capture_limit",
+          "contexts": "28",
+          "invalid_contexts": "0",
+          "linked_lifetimes": "28",
+          "known_ammo": "28",
+          "damage_applications": "unverified",
+          "line": 8168
+        }
+      ],
+      "limits": [
+        "CAPTURE_LIMIT session=10 maximum=600 reload_to_capture_again=1"
+      ],
+      "timed_weapons": {
+        "0C000801": 8
+      },
+      "timing_steps": 19,
+      "phases": {
+        "no_motion": 8,
+        "moving": 4,
+        "collision": 7
+      },
+      "ratio_range": [
+        1.00000058,
+        1.00000155
+      ],
+      "init_threads": [
+        "12708"
+      ],
+      "update_threads": [
+        "11924"
+      ],
+      "max_update_step": 3
+    }
+  },
+  "flags": [
+    {
+      "line": 1729,
+      "raw": "SUMMARY session=2 reason=pre_load_game rows=419 create=108 impact=107 destroy=109 hit_notice=49 weapon_notice=46 blast=0 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+    },
+    {
+      "line": 2416,
+      "raw": "SUMMARY session=3 reason=capture_limit rows=600 create=156 impact=139 destroy=153 hit_notice=74 weapon_notice=75 blast=3 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=4"
+    },
+    {
+      "line": 2421,
+      "raw": "SUMMARY session=3 reason=pre_load_game rows=600 create=171 impact=152 destroy=167 hit_notice=74 weapon_notice=75 blast=3 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=5"
+    },
+    {
+      "line": 3111,
+      "raw": "SUMMARY session=4 reason=capture_limit rows=600 create=145 impact=130 destroy=147 hit_notice=88 weapon_notice=89 blast=1 unmatched=3 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+    },
+    {
+      "line": 3121,
+      "raw": "SUMMARY session=4 reason=pre_load_game rows=600 create=180 impact=158 destroy=181 hit_notice=88 weapon_notice=89 blast=1 unmatched=3 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=1"
+    },
+    {
+      "line": 3723,
+      "raw": "SUMMARY session=5 reason=pre_load_game rows=550 create=140 impact=125 destroy=137 hit_notice=75 weapon_notice=73 blast=0 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=4"
+    },
+    {
+      "line": 4428,
+      "raw": "SUMMARY session=6 reason=capture_limit rows=600 create=84 impact=72 destroy=82 hit_notice=170 weapon_notice=170 blast=22 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=3"
+    },
+    {
+      "line": 4800,
+      "raw": "SUMMARY session=6 reason=current_hit_limit rows=600 create=326 impact=285 destroy=326 hit_notice=170 weapon_notice=170 blast=22 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=1"
+    },
+    {
+      "line": 4815,
+      "raw": "SUMMARY session=6 reason=pre_load_game rows=600 create=330 impact=289 destroy=331 hit_notice=170 weapon_notice=170 blast=22 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+    },
+    {
+      "line": 5492,
+      "raw": "SUMMARY session=7 reason=capture_limit rows=600 create=153 impact=136 destroy=147 hit_notice=82 weapon_notice=82 blast=0 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=7"
+    },
+    {
+      "line": 5500,
+      "raw": "SUMMARY session=7 reason=pre_load_game rows=600 create=178 impact=161 destroy=175 hit_notice=82 weapon_notice=82 blast=0 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=4"
+    },
+    {
+      "line": 6275,
+      "raw": "SUMMARY session=8 reason=capture_limit rows=600 create=153 impact=149 destroy=151 hit_notice=73 weapon_notice=73 blast=1 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=3"
+    },
+    {
+      "line": 6491,
+      "raw": "SUMMARY session=8 reason=pre_load_game rows=600 create=700 impact=659 destroy=701 hit_notice=73 weapon_notice=73 blast=1 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0"
+    },
+    {
+      "line": 7350,
+      "raw": "SUMMARY session=9 reason=capture_limit rows=600 create=149 impact=145 destroy=148 hit_notice=78 weapon_notice=79 blast=1 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=2"
+    },
+    {
+      "line": 7444,
+      "raw": "SUMMARY session=9 reason=pre_load_game rows=600 create=483 impact=435 destroy=482 hit_notice=78 weapon_notice=79 blast=1 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=2"
+    },
+    {
+      "line": 8167,
+      "raw": "SUMMARY session=10 reason=capture_limit rows=600 create=154 impact=144 destroy=152 hit_notice=75 weapon_notice=75 blast=0 unmatched=3 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=4"
+    }
+  ],
+  "timed_shots": [
+    {
+      "session": "1",
+      "lifetime": "595",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 1054,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999998759,
+        0.999998759
+      ],
+      "summaries": [
+        {
+          "session": "1",
+          "lifetime": "595",
+          "projectile": "FF00198F",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 1067
+        }
+      ],
+      "previews": [
+        {
+          "session": "1",
+          "lifetime": "595",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00198F",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 1055
+        }
+      ],
+      "travel": [
+        {
+          "session": "1",
+          "lifetime": "595",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "2500.39",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20003.1",
+          "mean_travel_mps_assuming_donor_scale": "285.759",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1066
+        },
+        {
+          "session": "1",
+          "lifetime": "595",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "2500.39",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20003.1",
+          "mean_travel_mps_assuming_donor_scale": "285.759",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1068
+        }
+      ]
+    },
+    {
+      "session": "1",
+      "lifetime": "640",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 1114,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "1",
+          "lifetime": "640",
+          "projectile": "FF00198F",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 1122
+        }
+      ],
+      "previews": [
+        {
+          "session": "1",
+          "lifetime": "640",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00198F",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 1115
+        }
+      ],
+      "travel": [
+        {
+          "session": "1",
+          "lifetime": "640",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.094",
+          "travel_delta_units": "2731.92",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "29063",
+          "mean_travel_mps_assuming_donor_scale": "415.186",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1121
+        },
+        {
+          "session": "1",
+          "lifetime": "640",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.094",
+          "travel_delta_units": "2731.92",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "29063",
+          "mean_travel_mps_assuming_donor_scale": "415.186",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1123
+        }
+      ]
+    },
+    {
+      "session": "1",
+      "lifetime": "682",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 1139,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "1",
+          "lifetime": "682",
+          "projectile": "FF0019AF",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 1147
+        }
+      ],
+      "previews": [
+        {
+          "session": "1",
+          "lifetime": "682",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019AF",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 1140
+        }
+      ],
+      "travel": [
+        {
+          "session": "1",
+          "lifetime": "682",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.094",
+          "travel_delta_units": "2725.72",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "28997",
+          "mean_travel_mps_assuming_donor_scale": "414.242",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1146
+        },
+        {
+          "session": "1",
+          "lifetime": "682",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.094",
+          "travel_delta_units": "2725.72",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "28997",
+          "mean_travel_mps_assuming_donor_scale": "414.242",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1148
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "763",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 1397,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999999526,
+        0.999999526
+      ],
+      "summaries": [
+        {
+          "session": "2",
+          "lifetime": "763",
+          "projectile": "FF0019A6",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 1424
+        }
+      ],
+      "previews": [
+        {
+          "session": "2",
+          "lifetime": "763",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF0019A6",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 1398
+        }
+      ],
+      "travel": [
+        {
+          "session": "2",
+          "lifetime": "763",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.188",
+          "travel_delta_units": "2547.18",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "13548.8",
+          "mean_travel_mps_assuming_donor_scale": "193.554",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1422
+        },
+        {
+          "session": "2",
+          "lifetime": "763",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.188",
+          "travel_delta_units": "2547.18",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "13548.8",
+          "mean_travel_mps_assuming_donor_scale": "193.554",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1425
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "795",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 1567,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "2",
+          "lifetime": "795",
+          "projectile": "FF0019AB",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 1581
+        }
+      ],
+      "previews": [
+        {
+          "session": "2",
+          "lifetime": "795",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019AB",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 1568
+        }
+      ],
+      "travel": [
+        {
+          "session": "2",
+          "lifetime": "795",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "1826.33",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "23414.5",
+          "mean_travel_mps_assuming_donor_scale": "334.492",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1579
+        },
+        {
+          "session": "2",
+          "lifetime": "795",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "1826.33",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "23414.5",
+          "mean_travel_mps_assuming_donor_scale": "334.492",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 1582
+        }
+      ]
+    },
+    {
+      "session": "3",
+      "lifetime": "887",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 1991,
+      "steps": 4,
+      "phases": {
+        "no_motion": 1,
+        "moving": 2,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999999632,
+        1.0000006
+      ],
+      "summaries": [
+        {
+          "session": "3",
+          "lifetime": "887",
+          "projectile": "FF0019A5",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "4",
+          "moving": "2",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 2018
+        }
+      ],
+      "previews": [
+        {
+          "session": "3",
+          "lifetime": "887",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF0019A5",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 1992
+        }
+      ],
+      "travel": [
+        {
+          "session": "3",
+          "lifetime": "887",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.219",
+          "travel_delta_units": "4660.79",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21282.1",
+          "mean_travel_mps_assuming_donor_scale": "304.031",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2014
+        },
+        {
+          "session": "3",
+          "lifetime": "887",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.219",
+          "travel_delta_units": "4660.79",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21282.1",
+          "mean_travel_mps_assuming_donor_scale": "304.031",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2019
+        }
+      ]
+    },
+    {
+      "session": "3",
+      "lifetime": "933",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 2203,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "3",
+          "lifetime": "933",
+          "projectile": "FF0019A5",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 2218
+        }
+      ],
+      "previews": [
+        {
+          "session": "3",
+          "lifetime": "933",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A5",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 2204
+        }
+      ],
+      "travel": [
+        {
+          "session": "3",
+          "lifetime": "933",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.11",
+          "travel_delta_units": "3747.49",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "34068.1",
+          "mean_travel_mps_assuming_donor_scale": "486.687",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2216
+        },
+        {
+          "session": "3",
+          "lifetime": "933",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.11",
+          "travel_delta_units": "3747.49",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "34068.1",
+          "mean_travel_mps_assuming_donor_scale": "486.687",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2219
+        }
+      ]
+    },
+    {
+      "session": "4",
+      "lifetime": "1017",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 2533,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999999847,
+        0.999999847
+      ],
+      "summaries": [
+        {
+          "session": "4",
+          "lifetime": "1017",
+          "projectile": "FF0019A5",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 2557
+        }
+      ],
+      "previews": [
+        {
+          "session": "4",
+          "lifetime": "1017",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF0019A5",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 2534
+        }
+      ],
+      "travel": [
+        {
+          "session": "4",
+          "lifetime": "1017",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.171",
+          "travel_delta_units": "3387.2",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "19808.2",
+          "mean_travel_mps_assuming_donor_scale": "282.974",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2550
+        },
+        {
+          "session": "4",
+          "lifetime": "1017",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.171",
+          "travel_delta_units": "3387.2",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "19808.2",
+          "mean_travel_mps_assuming_donor_scale": "282.974",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2558
+        }
+      ]
+    },
+    {
+      "session": "4",
+      "lifetime": "1096",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 2880,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "4",
+          "lifetime": "1096",
+          "projectile": "FF0019A3",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 2907
+        }
+      ],
+      "previews": [
+        {
+          "session": "4",
+          "lifetime": "1096",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A3",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 2881
+        }
+      ],
+      "travel": [
+        {
+          "session": "4",
+          "lifetime": "1096",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.063",
+          "travel_delta_units": "1903.49",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "30214.1",
+          "mean_travel_mps_assuming_donor_scale": "431.63",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2901
+        },
+        {
+          "session": "4",
+          "lifetime": "1096",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.063",
+          "travel_delta_units": "1903.49",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "30214.1",
+          "mean_travel_mps_assuming_donor_scale": "431.63",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 2908
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1837",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5570,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1837",
+          "projectile": "FF0019A2",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5585
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1837",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A2",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5571
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1837",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.094",
+          "travel_delta_units": "2781.78",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "29593.4",
+          "mean_travel_mps_assuming_donor_scale": "422.763",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5583
+        },
+        {
+          "session": "8",
+          "lifetime": "1837",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.094",
+          "travel_delta_units": "2781.78",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "29593.4",
+          "mean_travel_mps_assuming_donor_scale": "422.763",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5586
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1847",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5616,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000248,
+        1.00000248
+      ],
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1847",
+          "projectile": "FF0019A0",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5635
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1847",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A0",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5617
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1847",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "4608.66",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "36869.3",
+          "mean_travel_mps_assuming_donor_scale": "526.704",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5633
+        },
+        {
+          "session": "8",
+          "lifetime": "1847",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "4608.66",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "36869.3",
+          "mean_travel_mps_assuming_donor_scale": "526.704",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5636
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1860",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5678,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000215,
+        1.00000215
+      ],
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1860",
+          "projectile": "FF00199F",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5700
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1860",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00199F",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5679
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1860",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.14",
+          "travel_delta_units": "5532.01",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "39514.4",
+          "mean_travel_mps_assuming_donor_scale": "564.491",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5698
+        },
+        {
+          "session": "8",
+          "lifetime": "1860",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.14",
+          "travel_delta_units": "5532.01",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "39514.4",
+          "mean_travel_mps_assuming_donor_scale": "564.491",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5701
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1865",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5726,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1865",
+          "projectile": "FF0019A1",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5738
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1865",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A1",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5727
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1865",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2795.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "35843",
+          "mean_travel_mps_assuming_donor_scale": "512.042",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5736
+        },
+        {
+          "session": "8",
+          "lifetime": "1865",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2795.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "35843",
+          "mean_travel_mps_assuming_donor_scale": "512.042",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5739
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1872",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5768,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.0000005,
+        1.0000005
+      ],
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1872",
+          "projectile": "FF00199F",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5782
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1872",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00199F",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5769
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1872",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "5591.49",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "44731.9",
+          "mean_travel_mps_assuming_donor_scale": "639.028",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5780
+        },
+        {
+          "session": "8",
+          "lifetime": "1872",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "5591.49",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "44731.9",
+          "mean_travel_mps_assuming_donor_scale": "639.028",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5783
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1881",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5817,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1881",
+          "projectile": "FF0019A1",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5829
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1881",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A1",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5818
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1881",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.093",
+          "travel_delta_units": "2787.66",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "29974.8",
+          "mean_travel_mps_assuming_donor_scale": "428.212",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5826
+        },
+        {
+          "session": "8",
+          "lifetime": "1881",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.093",
+          "travel_delta_units": "2787.66",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "29974.8",
+          "mean_travel_mps_assuming_donor_scale": "428.212",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5830
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1898",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5891,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1898",
+          "projectile": "FF0019A0",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5917
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1898",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A0",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5892
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1898",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.11",
+          "travel_delta_units": "3681.53",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "33468.5",
+          "mean_travel_mps_assuming_donor_scale": "478.121",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5907
+        },
+        {
+          "session": "8",
+          "lifetime": "1898",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.11",
+          "travel_delta_units": "3681.53",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "33468.5",
+          "mean_travel_mps_assuming_donor_scale": "478.121",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5918
+        }
+      ]
+    },
+    {
+      "session": "8",
+      "lifetime": "1911",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 5951,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "8",
+          "lifetime": "1911",
+          "projectile": "FF00199F",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 5963
+        }
+      ],
+      "previews": [
+        {
+          "session": "8",
+          "lifetime": "1911",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00199F",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 5952
+        }
+      ],
+      "travel": [
+        {
+          "session": "8",
+          "lifetime": "1911",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.109",
+          "travel_delta_units": "2785.25",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "25552.7",
+          "mean_travel_mps_assuming_donor_scale": "365.039",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5961
+        },
+        {
+          "session": "8",
+          "lifetime": "1911",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.109",
+          "travel_delta_units": "2785.25",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "25552.7",
+          "mean_travel_mps_assuming_donor_scale": "365.039",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 5964
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2535",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6554,
+      "steps": 5,
+      "phases": {
+        "no_motion": 1,
+        "moving": 3,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000024,
+        1.00000124
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2535",
+          "projectile": "FF00199E",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6572
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2535",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00199E",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6555
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2535",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.187",
+          "travel_delta_units": "3785.23",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20241.9",
+          "mean_travel_mps_assuming_donor_scale": "289.17",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6570
+        },
+        {
+          "session": "9",
+          "lifetime": "2535",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.187",
+          "travel_delta_units": "3785.23",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20241.9",
+          "mean_travel_mps_assuming_donor_scale": "289.17",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6573
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2537",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6576,
+      "steps": 4,
+      "phases": {
+        "no_motion": 1,
+        "moving": 2,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999998933,
+        1.00000329
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2537",
+          "projectile": "FF00199F",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "4",
+          "moving": "2",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6598
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2537",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00199F",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6577
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2537",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.141",
+          "travel_delta_units": "2953.65",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20947.8",
+          "mean_travel_mps_assuming_donor_scale": "299.255",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6596
+        },
+        {
+          "session": "9",
+          "lifetime": "2537",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.141",
+          "travel_delta_units": "2953.65",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20947.8",
+          "mean_travel_mps_assuming_donor_scale": "299.255",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6599
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2541",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6605,
+      "steps": 5,
+      "phases": {
+        "no_motion": 1,
+        "moving": 3,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999996318,
+        1.00000155
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2541",
+          "projectile": "FF0019A0",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6630
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2541",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF0019A0",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6606
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2541",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.187",
+          "travel_delta_units": "3780.15",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20214.7",
+          "mean_travel_mps_assuming_donor_scale": "288.781",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6628
+        },
+        {
+          "session": "9",
+          "lifetime": "2541",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.187",
+          "travel_delta_units": "3780.15",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20214.7",
+          "mean_travel_mps_assuming_donor_scale": "288.781",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6631
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2542",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6633,
+      "steps": 4,
+      "phases": {
+        "no_motion": 1,
+        "moving": 2,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000192,
+        1.00000286
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2542",
+          "projectile": "FF00198F",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "4",
+          "moving": "2",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6647
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2542",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00198F",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6634
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2542",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.156",
+          "travel_delta_units": "3372.22",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21616.8",
+          "mean_travel_mps_assuming_donor_scale": "308.811",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6645
+        },
+        {
+          "session": "9",
+          "lifetime": "2542",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.156",
+          "travel_delta_units": "3372.22",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21616.8",
+          "mean_travel_mps_assuming_donor_scale": "308.811",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6648
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2546",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6659,
+      "steps": 4,
+      "phases": {
+        "no_motion": 1,
+        "moving": 2,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999996899,
+        1.00000213
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2546",
+          "projectile": "FF00198F",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "4",
+          "moving": "2",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6675
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2546",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00198F",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6660
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2546",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "2510.09",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20080.7",
+          "mean_travel_mps_assuming_donor_scale": "286.867",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6673
+        },
+        {
+          "session": "9",
+          "lifetime": "2546",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "2510.09",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "20080.7",
+          "mean_travel_mps_assuming_donor_scale": "286.867",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6676
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2548",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6679,
+      "steps": 4,
+      "phases": {
+        "no_motion": 1,
+        "moving": 2,
+        "collision": 1
+      },
+      "ratio_range": [
+        0.999997944,
+        1.00000337
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2548",
+          "projectile": "FF00199E",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "4",
+          "moving": "2",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6704
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2548",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00199E",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6680
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2548",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.14",
+          "travel_delta_units": "2953.65",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21097.5",
+          "mean_travel_mps_assuming_donor_scale": "301.392",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6702
+        },
+        {
+          "session": "9",
+          "lifetime": "2548",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.14",
+          "travel_delta_units": "2953.65",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21097.5",
+          "mean_travel_mps_assuming_donor_scale": "301.392",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6705
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2551",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6711,
+      "steps": 5,
+      "phases": {
+        "no_motion": 1,
+        "moving": 3,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000039,
+        1.00000152
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2551",
+          "projectile": "FF00199E",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6728
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2551",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00199E",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6712
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2551",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.188",
+          "travel_delta_units": "4227.23",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "22485.3",
+          "mean_travel_mps_assuming_donor_scale": "321.218",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6726
+        },
+        {
+          "session": "9",
+          "lifetime": "2551",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.188",
+          "travel_delta_units": "4227.23",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "22485.3",
+          "mean_travel_mps_assuming_donor_scale": "321.218",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6729
+        }
+      ]
+    },
+    {
+      "session": "9",
+      "lifetime": "2552",
+      "source": "00000014",
+      "weapon": "0C000800",
+      "line": 6731,
+      "steps": 4,
+      "phases": {
+        "no_motion": 1,
+        "moving": 2,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.0000023,
+        1.00000307
+      ],
+      "summaries": [
+        {
+          "session": "9",
+          "lifetime": "2552",
+          "projectile": "FF00198F",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "4",
+          "moving": "2",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 6748
+        }
+      ],
+      "previews": [
+        {
+          "session": "9",
+          "lifetime": "2552",
+          "profile": "pilot-9mm",
+          "phase": "create",
+          "projectile": "FF00198F",
+          "source": "00000014",
+          "weapon": "0C000800",
+          "ammo": "0C000802",
+          "projectile_base": "0C000804",
+          "base_flags": "0088",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "10000",
+          "base_speed_setting": "27097.6",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "27097.6",
+          "speed_setting_mps_assuming_donor_scale": "387.109",
+          "muzzle_preview_mps": "387.109",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 6732
+        }
+      ],
+      "travel": [
+        {
+          "session": "9",
+          "lifetime": "2552",
+          "profile": "pilot-9mm",
+          "phase": "impact",
+          "life_delta_s": "0.141",
+          "travel_delta_units": "2980.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21140.1",
+          "mean_travel_mps_assuming_donor_scale": "302.001",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6745
+        },
+        {
+          "session": "9",
+          "lifetime": "2552",
+          "profile": "pilot-9mm",
+          "phase": "destroy",
+          "life_delta_s": "0.141",
+          "travel_delta_units": "2980.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "21140.1",
+          "mean_travel_mps_assuming_donor_scale": "302.001",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 6749
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3012",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 7487,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000085,
+        1.00000085
+      ],
+      "summaries": [
+        {
+          "session": "10",
+          "lifetime": "3012",
+          "projectile": "FF001920",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 7499
+        }
+      ],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3012",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF001920",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 7488
+        }
+      ],
+      "travel": [
+        {
+          "session": "10",
+          "lifetime": "3012",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "5576.36",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "44610.9",
+          "mean_travel_mps_assuming_donor_scale": "637.298",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7497
+        },
+        {
+          "session": "10",
+          "lifetime": "3012",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "5576.36",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "44610.9",
+          "mean_travel_mps_assuming_donor_scale": "637.298",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7500
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3023",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 7543,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.0000012,
+        1.0000012
+      ],
+      "summaries": [
+        {
+          "session": "10",
+          "lifetime": "3023",
+          "projectile": "FF001920",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 7555
+        }
+      ],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3023",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF001920",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 7544
+        }
+      ],
+      "travel": [
+        {
+          "session": "10",
+          "lifetime": "3023",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.109",
+          "travel_delta_units": "4628.94",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "42467.3",
+          "mean_travel_mps_assuming_donor_scale": "606.676",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7553
+        },
+        {
+          "session": "10",
+          "lifetime": "3023",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.109",
+          "travel_delta_units": "4628.94",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "42467.3",
+          "mean_travel_mps_assuming_donor_scale": "606.676",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7556
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3042",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 7624,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000058,
+        1.00000058
+      ],
+      "summaries": [
+        {
+          "session": "10",
+          "lifetime": "3042",
+          "projectile": "FF001920",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 7641
+        }
+      ],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3042",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF001920",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 7625
+        }
+      ],
+      "travel": [
+        {
+          "session": "10",
+          "lifetime": "3042",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "5571.59",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "44572.7",
+          "mean_travel_mps_assuming_donor_scale": "636.753",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7639
+        },
+        {
+          "session": "10",
+          "lifetime": "3042",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.125",
+          "travel_delta_units": "5571.59",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "44572.7",
+          "mean_travel_mps_assuming_donor_scale": "636.753",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7642
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3062",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 7718,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "10",
+          "lifetime": "3062",
+          "projectile": "FF00199F",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 7732
+        }
+      ],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3062",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00199F",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 7719
+        }
+      ],
+      "travel": [
+        {
+          "session": "10",
+          "lifetime": "3062",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2795.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "35842.9",
+          "mean_travel_mps_assuming_donor_scale": "512.042",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7730
+        },
+        {
+          "session": "10",
+          "lifetime": "3062",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2795.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "35842.9",
+          "mean_travel_mps_assuming_donor_scale": "512.042",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7733
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3090",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 7860,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "10",
+          "lifetime": "3090",
+          "projectile": "FF00198F",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 7877
+        }
+      ],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3090",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00198F",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 7861
+        }
+      ],
+      "travel": [
+        {
+          "session": "10",
+          "lifetime": "3090",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2795.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "35842.9",
+          "mean_travel_mps_assuming_donor_scale": "512.042",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7874
+        },
+        {
+          "session": "10",
+          "lifetime": "3090",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2795.75",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "35842.9",
+          "mean_travel_mps_assuming_donor_scale": "512.042",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 7878
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3126",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 8021,
+      "steps": 2,
+      "phases": {
+        "no_motion": 1,
+        "collision": 1
+      },
+      "ratio_range": null,
+      "summaries": [
+        {
+          "session": "10",
+          "lifetime": "3126",
+          "projectile": "FF00199E",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "2",
+          "moving": "0",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 8038
+        }
+      ],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3126",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00199E",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 8022
+        }
+      ],
+      "travel": [
+        {
+          "session": "10",
+          "lifetime": "3126",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2716.18",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "34822.8",
+          "mean_travel_mps_assuming_donor_scale": "497.469",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 8036
+        },
+        {
+          "session": "10",
+          "lifetime": "3126",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.078",
+          "travel_delta_units": "2716.18",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "34822.8",
+          "mean_travel_mps_assuming_donor_scale": "497.469",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 8039
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3168",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 8171,
+      "steps": 3,
+      "phases": {
+        "no_motion": 1,
+        "moving": 1,
+        "collision": 1
+      },
+      "ratio_range": [
+        1.00000155,
+        1.00000155
+      ],
+      "summaries": [
+        {
+          "session": "10",
+          "lifetime": "3168",
+          "projectile": "FF0019A1",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "3",
+          "moving": "1",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "11924",
+          "line": 8181
+        }
+      ],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3168",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF0019A1",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 8172
+        }
+      ],
+      "travel": [
+        {
+          "session": "10",
+          "lifetime": "3168",
+          "profile": "pilot-308",
+          "phase": "impact",
+          "life_delta_s": "0.11",
+          "travel_delta_units": "4566.13",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "41510.3",
+          "mean_travel_mps_assuming_donor_scale": "593.004",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 8180
+        },
+        {
+          "session": "10",
+          "lifetime": "3168",
+          "profile": "pilot-308",
+          "phase": "destroy",
+          "life_delta_s": "0.11",
+          "travel_delta_units": "4566.13",
+          "hitscan": "0",
+          "mean_speed_valid": "1",
+          "mean_travel_units_per_s": "41510.3",
+          "mean_travel_mps_assuming_donor_scale": "593.004",
+          "source": "engine_counters",
+          "not_muzzle_measurement": "1",
+          "flight_writes": "0",
+          "line": 8182
+        }
+      ]
+    },
+    {
+      "session": "10",
+      "lifetime": "3201",
+      "source": "00000014",
+      "weapon": "0C000801",
+      "line": 8188,
+      "steps": 1,
+      "phases": {
+        "no_motion": 1
+      },
+      "ratio_range": null,
+      "summaries": [],
+      "previews": [
+        {
+          "session": "10",
+          "lifetime": "3201",
+          "profile": "pilot-308",
+          "phase": "create",
+          "projectile": "FF00199E",
+          "source": "00000014",
+          "weapon": "0C000801",
+          "ammo": "0C000803",
+          "projectile_base": "0C000805",
+          "base_flags": "028C",
+          "hitscan": "0",
+          "gravity_setting": "0",
+          "range_setting": "53000",
+          "base_speed_setting": "59484",
+          "speed_multiplier": "1",
+          "speed_setting_units_per_s": "59484",
+          "speed_setting_mps_assuming_donor_scale": "849.771",
+          "muzzle_preview_mps": "849.771",
+          "life_s": "0",
+          "travel_units": "0",
+          "flight_writes": "0",
+          "line": 8189
+        }
+      ],
+      "travel": []
+    }
+  ],
+  "review_metrics": {
+    "total_observed_creates_lower_bound": 3201,
+    "last_summary_create_sum_lower_bound": 3161,
+    "highest_logged_creation_serial": 3201,
+    "reloads": 9,
+    "completed_session_summaries": 9,
+    "phases": {
+      "no_motion": 33,
+      "moving": 31,
+      "collision": 32
+    },
+    "moving_max_error_percent": 0.0003682000000004848,
+    "moving_samples": 31,
+    "timed_lifetimes": 33,
+    "timed_lifetimes_complete": 32,
+    "hit_context_directions": {
+      "player_to_npc": 241,
+      "npc_to_player": 570,
+      "nonplayer_to_nonplayer": 15,
+      "player_to_player": 8
+    },
+    "per_session_capture_limit_count": 8,
+    "source_confirmed_process_row_limit": 8192,
+    "prior_settings": [
+      [
+        "pilot-308",
+        "028C",
+        "53000",
+        "59484"
+      ],
+      [
+        "pilot-9mm",
+        "0088",
+        "10000",
+        "27097.6"
+      ]
+    ],
+    "stress_settings": [
+      [
+        "pilot-308",
+        "028C",
+        "53000",
+        "59484"
+      ],
+      [
+        "pilot-9mm",
+        "0088",
+        "10000",
+        "27097.6"
+      ]
+    ],
+    "unchanged_pilot_esp_sha256": "f5fd916841ebf5aafae5c467a7e17dd67fdf1faf1abc9368f66e936f146244ab",
+    "unmatched_callback_count_visible": 20,
+    "unmatched_only_first_four_events": true,
+    "final_run_incomplete_due_to_log_cap": true,
+    "direct_vats_state_logging": false
+  }
+}

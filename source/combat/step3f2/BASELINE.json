@@ -1,0 +1,89 @@
+{
+  "version": 312,
+  "files": [
+    {
+      "path": "BUILD.cmd",
+      "sha256": "28464a78d05ba1d26f6ce4abe0da26343b637cf52044d553e38770f8a3f6d2f8"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "9abfec67a6e4e49d3dbf9a914fff5201588d3cfc526f93d4c7eb28f472164b9c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "892982cbbc935947731f21597c35ac06dbe4142a607627116ad81e2c2ee8b42a"
+    },
+    {
+      "path": "include\\CurrentHit.hpp",
+      "sha256": "411beb0b042434fb7593854e063dca60b2bc9831de6ca6b6a26f7de7cbbf57bd"
+    },
+    {
+      "path": "include\\DamageEvents.hpp",
+      "sha256": "a0a19f266116ae4a43a4a0e80f0c5d787e0363126cf9b5b15565417fcbd5f104"
+    },
+    {
+      "path": "include\\FlightDragData.hpp",
+      "sha256": "2efffb921d8553ec59d952dac0ba7b3836b0871459ee1f3e1816c59e4cfcd202"
+    },
+    {
+      "path": "include\\FlightPhysics.hpp",
+      "sha256": "f49b1c2ca7f2ec6b5eda41ed5ec0d1e6ff8490da96fa577a74dc80aa97c1df2f"
+    },
+    {
+      "path": "include\\FlightPreview.hpp",
+      "sha256": "c3f4a49e40d2673b6a766268b5c4c0aaa20256a64a0562a3d353af149fb61de0"
+    },
+    {
+      "path": "include\\FlightTiming.hpp",
+      "sha256": "bbbf2eba85b7cad5f81d150871df89650dd80bfafdba51d6e7e18db50b81db61"
+    },
+    {
+      "path": "include\\NativeLog.hpp",
+      "sha256": "2a1c8088364505f6a4c6c0748c86099c5973e012d91163cd74d03a0db5c21aea"
+    },
+    {
+      "path": "include\\NativeObserver.hpp",
+      "sha256": "b99d0b89ba7d5756c61e165e1d9f1c1b11cb844bbaf19125f70a8594fb3c1ab2"
+    },
+    {
+      "path": "include\\NvseBootstrapApi.hpp",
+      "sha256": "2e551b8ae15937c4e9e6faa62ede946e57b98ad56723ce5f2feedb878566cf5d"
+    },
+    {
+      "path": "src\\CurrentHit.cpp",
+      "sha256": "5a0eb75f6fb4b8fc73b9436fb8db29f167f07f18d37b8068b1a3ff47ec7955bf"
+    },
+    {
+      "path": "src\\DamageEvents.cpp",
+      "sha256": "7e1575e747aa014a9e1135410dae67570341e70873491cfdd9f2fbe192f6f3e6"
+    },
+    {
+      "path": "src\\Exports.def",
+      "sha256": "3d4893c7aba7fa85ef8f6cb553fbd2a1eb4d206e380b8000521e339213b1929f"
+    },
+    {
+      "path": "src\\FlightPhysics.cpp",
+      "sha256": "6306298dde2855f7766dd9b295bde2be2d42324f592a1dec021334680d650134"
+    },
+    {
+      "path": "src\\FlightPreview.cpp",
+      "sha256": "f37c685d59d4254a5812c5cf3e49f82d84355321b58b8fa68b628aeb5abdb0ae"
+    },
+    {
+      "path": "src\\FlightTiming.cpp",
+      "sha256": "1c96271b23065d94cf30101a88d347ba72841394bda619a30163b43cde30b5d0"
+    },
+    {
+      "path": "src\\NativeLog.cpp",
+      "sha256": "95fe3fb1c804c1a96a6122d72ffc190fb8ea82e114a5b049df7071fd3b5a69bd"
+    },
+    {
+      "path": "src\\NativeObserver.cpp",
+      "sha256": "653a9a0fcca29fa3ac3aa6b8075ee9193c1f658db3647d3dd96c533f93d60ffc"
+    },
+    {
+      "path": "src\\Plugin.cpp",
+      "sha256": "3be946254320be9bbb101981735e34410bed481978d0a03ba58daf0a670e0d9a"
+    }
+  ]
+}

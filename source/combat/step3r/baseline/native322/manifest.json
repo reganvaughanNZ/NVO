@@ -1,0 +1,22 @@
+{
+  "packet": "3Q",
+  "version": "0.3.22",
+  "plugin_version": 322,
+  "status": "Installed; user runtime check pending",
+  "installed_by_assistant": true,
+  "gameplay_tested": false,
+  "damage_replacement": false,
+  "flight_reservation_enabled": true,
+  "build_output": "out\\build-3003-32",
+  "installed_files": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "7a117dc8020231831e3fbb12ea74d92424077185feeb112ef2e62ed49599e3e6"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "57dd11fba783e779315b21993ae32e250ebddf1f475d17f032ca3239962cacea"
+    }
+  ],
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3Q-20260916-182009-5c537708"
+}

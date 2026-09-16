@@ -1,0 +1,67 @@
+{
+  "packet": "3N1",
+  "status": "targeted_new_game_reload_retirement_passed",
+  "checks": [
+    {
+      "before": {
+        "background": "53",
+        "caps": "5108",
+        "hp_before": "120.000000",
+        "handler_priority_groups": "0"
+      },
+      "after": {
+        "expected_result": "1",
+        "hp_after": "120.000000",
+        "handler_priority_groups": "0",
+        "call_target": "player",
+        "call_attacker": "player",
+        "gameplay_setters": "0"
+      }
+    },
+    {
+      "before": {
+        "background": "53",
+        "caps": "5108",
+        "hp_before": "120.000000",
+        "handler_priority_groups": "0"
+      },
+      "after": {
+        "expected_result": "1",
+        "hp_after": "120.000000",
+        "handler_priority_groups": "0",
+        "call_target": "player",
+        "call_attacker": "player",
+        "gameplay_setters": "0"
+      }
+    }
+  ],
+  "compile_errors": [],
+  "native_sessions": [
+    1,
+    2
+  ],
+  "negative_health_applications_observed": 0,
+  "warning_not_attributed": [
+    "plugin has data in save file but no handler"
+  ],
+  "godmode_limit": "User followed instructions to leave cheats off; helper does not read cheat flags.",
+  "damage_replacement": false,
+  "old_pre_retirement_save_migration_verified": false,
+  "files": [
+    {
+      "name": "NVOBaronCheck.log",
+      "sha256": "a15df3cfe377390e20588386fb80904d91922d5be8afc88258918ef8564ef627",
+      "modified_utc_timestamp": 1789531453.4636042
+    },
+    {
+      "name": "NVOCombatCore.log",
+      "sha256": "3ad71e9d0facae92457c86c3dea28671426a8b33821158b0213eff0512cc6332",
+      "modified_utc_timestamp": 1789531463.426614
+    },
+    {
+      "name": "nvse.log",
+      "sha256": "8ee9b07d54223f30b62c5247fe4e5a4848a3a772f6ff7c9eaeeca93e62a11182",
+      "modified_utc_timestamp": 1789531443.1633942
+    }
+  ]
+}

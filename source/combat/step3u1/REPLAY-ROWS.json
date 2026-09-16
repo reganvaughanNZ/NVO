@@ -1,0 +1,62 @@
+[
+  {
+    "shot": 1,
+    "recorded_target": "00104F0A",
+    "historical_kind_ambiguous": 0,
+    "historical_available": 1,
+    "prospective_available": 1,
+    "prospective_status": "observed_engine_segment",
+    "terrain_explained": 0,
+    "invalid_classification_available": 0
+  },
+  {
+    "shot": 2,
+    "recorded_target": "00000000",
+    "historical_kind_ambiguous": 1,
+    "historical_available": 0,
+    "prospective_available": 1,
+    "prospective_status": "owned_step_speed_range",
+    "terrain_explained": 1,
+    "invalid_classification_available": 0
+  },
+  {
+    "shot": 3,
+    "recorded_target": "00000000",
+    "historical_kind_ambiguous": 1,
+    "historical_available": 0,
+    "prospective_available": 1,
+    "prospective_status": "owned_step_speed_range",
+    "terrain_explained": 1,
+    "invalid_classification_available": 0
+  },
+  {
+    "shot": 4,
+    "recorded_target": "00000000",
+    "historical_kind_ambiguous": 1,
+    "historical_available": 0,
+    "prospective_available": 1,
+    "prospective_status": "owned_step_speed_range",
+    "terrain_explained": 0,
+    "invalid_classification_available": 0
+  },
+  {
+    "shot": 5,
+    "recorded_target": "00104F0A",
+    "historical_kind_ambiguous": 0,
+    "historical_available": 1,
+    "prospective_available": 1,
+    "prospective_status": "observed_engine_segment",
+    "terrain_explained": 0,
+    "invalid_classification_available": 0
+  },
+  {
+    "shot": 6,
+    "recorded_target": "00177CA4",
+    "historical_kind_ambiguous": 0,
+    "historical_available": 1,
+    "prospective_available": 1,
+    "prospective_status": "observed_engine_segment",
+    "terrain_explained": 0,
+    "invalid_classification_available": 0
+  }
+]

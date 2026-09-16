@@ -1,0 +1,44 @@
+OnPreDamageHandler::Hook_HitMe<3>:
+  100350B5: 55                 push        ebp
+  100350B6: 8B EC              mov         ebp,esp
+  100350B8: 56                 push        esi
+  100350B9: 57                 push        edi
+  100350BA: 8B 3D 94 C7 07 10  mov         edi,dword ptr ds:[1007C794h]
+  100350C0: 8B F1              mov         esi,ecx
+  100350C2: FF 15 44 E0 03 10  call        dword ptr [__imp__GetCurrentThreadId@0]
+  100350C8: 3B 05 4C C7 07 10  cmp         eax,dword ptr ds:[1007C74Ch]
+  100350CE: 74 28              je          100350F8
+  100350D0: 83 3D B8 2B 05 10  cmp         dword ptr ds:[10052BB8h],0
+            00
+  100350D7: 74 4B              je          10035124
+  100350D9: 33 C9              xor         ecx,ecx
+  100350DB: BA 3C C7 07 10     mov         edx,1007C73Ch
+  100350E0: 41                 inc         ecx
+  100350E1: 33 C0              xor         eax,eax
+  100350E3: F0 0F B1 0A        lock cmpxchg dword ptr [edx],ecx
+  100350E7: 85 C0              test        eax,eax
+  100350E9: 75 39              jne         10035124
+  100350EB: 68 F0 A4 04 10     push        offset ??_C@_0EN@ILFNAJM@OnPreHitDamage?3?5Actor?3?3HitMe?5of@
+  100350F0: E8 42 D6 FC FF     call        ?Log@@YAXPBDZZ
+  100350F5: 59                 pop         ecx
+  100350F6: EB 2C              jmp         10035124
+  100350F8: 83 3D B8 2B 05 10  cmp         dword ptr ds:[10052BB8h],0
+            00
+  100350FF: 74 23              je          10035124
+  10035101: 83 3D 40 C7 07 10  cmp         dword ptr ds:[1007C740h],0
+            00
+  10035108: 75 1A              jne         10035124
+  1003510A: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  1003510D: 8B CE              mov         ecx,esi
+  1003510F: C7 05 40 C7 07 10  mov         dword ptr ds:[1007C740h],1
+            01 00 00 00
+  10035119: E8 88 F9 FF FF     call        10034AA6
+  1003511E: FF 0D 40 C7 07 10  dec         dword ptr ds:[1007C740h]
+  10035124: FF 75 0C           push        dword ptr [ebp+0Ch]
+  10035127: 8B CE              mov         ecx,esi
+  10035129: FF 75 08           push        dword ptr [ebp+8]
+  1003512C: FF D7              call        edi
+  1003512E: 5F                 pop         edi
+  1003512F: 5E                 pop         esi
+  10035130: 5D                 pop         ebp
+  10035131: C2 08 00           ret         8

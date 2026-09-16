@@ -1,0 +1,29 @@
+{
+  "packet": "3C4",
+  "reference_capture": "source\\combat\\step3c3\\runtime-20260915-141533\\movement-0092F260.bin",
+  "sha256": "8bbb4b068af63b965a4c51fee4d69f7a9abc62f43ed198c69275b67278b05c80",
+  "new_observer_spans": [
+    {
+      "address": "0092FFEA",
+      "original_bytes": "8B82C8000000FFD0"
+    },
+    {
+      "address": "0092FFD4",
+      "original_bytes": "E8870B3400"
+    },
+    {
+      "address": "0092FFFB",
+      "original_bytes": "E8B0040000"
+    }
+  ],
+  "new_gameplay_writes": false,
+  "physics_accepted": false,
+  "request": "generic EBP-208",
+  "argument_frame": "generic saved EBX",
+  "target_capture": {
+    "maximum_unique_targets_per_process": 2,
+    "bytes_per_target": 2048,
+    "game_executable_image_only": true
+  },
+  "note": "Static original-byte validation only; no game execution or captured code distribution."
+}

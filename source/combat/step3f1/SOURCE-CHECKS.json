@@ -1,0 +1,34 @@
+{
+  "non_diagnostic_physics_tokens_unchanged": true,
+  "log_format_bounds": [
+    {
+      "record": "PHYSICS_REJECT_DETAIL_LIMIT",
+      "conservative_max_bytes": 129
+    },
+    {
+      "record": "PHYSICS_REJECT_METRICS",
+      "conservative_max_bytes": 450
+    },
+    {
+      "record": "PHYSICS_REJECT_MOTION",
+      "conservative_max_bytes": 512
+    },
+    {
+      "record": "PHYSICS_REJECT_POSITION",
+      "conservative_max_bytes": 387
+    },
+    {
+      "record": "PHYSICS_REJECT_CONTEXT",
+      "conservative_max_bytes": 597
+    },
+    {
+      "record": "PHYSICS_DIAGNOSTIC_READY",
+      "conservative_max_bytes": 236
+    },
+    {
+      "record": "PHYSICS_DIAGNOSTIC_SUMMARY",
+      "conservative_max_bytes": 294
+    }
+  ],
+  "new_engine_memory_reads": 0
+}

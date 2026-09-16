@@ -1,0 +1,177 @@
+{
+  "executable": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "sha256": "518c87f58a6c4d9826e9ef8fbb7f4213882fa70822675610d45aea2464502a57",
+  "source": "on-disk PE, not currently loaded code",
+  "files": [
+    {
+      "label": "controller",
+      "address": "00C73170",
+      "size": 8192,
+      "sha256": "6562b5bf3f77cfc0229c30f51ce35f4c4da9f601339a5747e967b147cfa089d9"
+    },
+    {
+      "label": "movement",
+      "address": "0092F260",
+      "size": 4672,
+      "sha256": "2ecfad57e4b4798974415b336ca01eadc0d42db070b3eb533c2b85d133deaa74"
+    },
+    {
+      "label": "position",
+      "address": "00575830",
+      "size": 832,
+      "sha256": "40829309102f16dab6f8f0669b3c4b91cb8d7be88474455ee7e3ea1709051790"
+    }
+  ],
+  "minus2048_constants": [
+    {
+      "kind": "float",
+      "address": "01017824",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "0102DCC4",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "01031920",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "0104DC8C",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "010F70D0",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "0113F025",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "01141BD9",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "01141F91",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "01157795",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "01161039",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "0116A229",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "0117938D",
+      "section": ".rdata"
+    },
+    {
+      "kind": "float",
+      "address": "0119A1B5",
+      "section": ".data"
+    },
+    {
+      "kind": "float",
+      "address": "011BC406",
+      "section": ".data"
+    },
+    {
+      "kind": "float",
+      "address": "01345419",
+      "section": ".reloc"
+    },
+    {
+      "kind": "float",
+      "address": "0135D551",
+      "section": ".reloc"
+    },
+    {
+      "kind": "float",
+      "address": "01368F05",
+      "section": ".reloc"
+    },
+    {
+      "kind": "float",
+      "address": "01382F75",
+      "section": ".reloc"
+    },
+    {
+      "kind": "float",
+      "address": "013857B5",
+      "section": ".reloc"
+    },
+    {
+      "kind": "float",
+      "address": "0138AC71",
+      "section": ".reloc"
+    },
+    {
+      "kind": "double",
+      "address": "0102CAF4",
+      "section": ".rdata"
+    },
+    {
+      "kind": "double",
+      "address": "01127AC2",
+      "section": ".rdata"
+    },
+    {
+      "kind": "double",
+      "address": "011ADBF4",
+      "section": ".data"
+    },
+    {
+      "kind": "double",
+      "address": "011ADF34",
+      "section": ".data"
+    },
+    {
+      "kind": "double",
+      "address": "011AE024",
+      "section": ".data"
+    },
+    {
+      "kind": "double",
+      "address": "011AE114",
+      "section": ".data"
+    },
+    {
+      "kind": "double",
+      "address": "011AE204",
+      "section": ".data"
+    },
+    {
+      "kind": "double",
+      "address": "011AE2F4",
+      "section": ".data"
+    },
+    {
+      "kind": "double",
+      "address": "011AE3E4",
+      "section": ".data"
+    },
+    {
+      "kind": "double",
+      "address": "011AE4D4",
+      "section": ".data"
+    }
+  ]
+}

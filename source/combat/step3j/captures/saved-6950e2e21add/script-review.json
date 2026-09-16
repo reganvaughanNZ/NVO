@@ -1,0 +1,379 @@
+{
+  "status": "script_repair_required",
+  "sha256": "6950e2e21add1e5b9c2e698a03f26015a7573c13422812c15a95530d38dccace",
+  "bytes": 481017,
+  "masters": [
+    "FalloutNV.esm",
+    "DeadMoney.esm",
+    "HonestHearts.esm",
+    "LonesomeRoad.esm",
+    "OldWorldBlues.esm"
+  ],
+  "masters_unchanged": true,
+  "rd_absent": true,
+  "rd_not_a_master": true,
+  "health_gmsts_preserved": true,
+  "player_override_absent": true,
+  "bootstrap_link_valid": true,
+  "scripts": [
+    {
+      "script": "NVOCombatBootstrapScript",
+      "candidates": [
+        {
+          "editor_id": "NVOCombatBootstrapScript",
+          "form": "0501941A",
+          "is_original": true,
+          "source_matches": false,
+          "compiled_bytes": 1230,
+          "compiled_changed": false,
+          "variables_preserved": true,
+          "variable_changes": {}
+        },
+        {
+          "editor_id": "NVOCombatBootstrapScriptDUPLICATE000",
+          "form": "05019A14",
+          "is_original": false,
+          "source_matches": true,
+          "compiled_bytes": 1090,
+          "compiled_changed": true,
+          "variables_preserved": true,
+          "variable_changes": {}
+        }
+      ]
+    },
+    {
+      "script": "ALTQscript",
+      "candidates": [
+        {
+          "editor_id": "ALTQscript",
+          "form": "05002900",
+          "is_original": true,
+          "source_matches": false,
+          "compiled_bytes": 4137,
+          "compiled_changed": false,
+          "variables_preserved": true,
+          "variable_changes": {}
+        },
+        {
+          "editor_id": "ALTQscriptDUPLICATE000",
+          "form": "05019A15",
+          "is_original": false,
+          "source_matches": true,
+          "compiled_bytes": 3821,
+          "compiled_changed": true,
+          "variables_preserved": false,
+          "variable_changes": {
+            "rref": {
+              "before": [
+                5,
+                0
+              ],
+              "after": [
+                4,
+                0
+              ]
+            },
+            "bblock": {
+              "before": [
+                6,
+                1
+              ],
+              "after": [
+                5,
+                1
+              ]
+            },
+            "istate": {
+              "before": [
+                7,
+                1
+              ],
+              "after": [
+                6,
+                1
+              ]
+            },
+            "iscience": {
+              "before": [
+                10,
+                1
+              ],
+              "after": [
+                7,
+                1
+              ]
+            },
+            "iupdate": {
+              "before": [
+                11,
+                1
+              ],
+              "after": [
+                8,
+                1
+              ]
+            },
+            "smajorknight": {
+              "before": [
+                12,
+                1
+              ],
+              "after": [
+                9,
+                1
+              ]
+            },
+            "modoverridingindex": {
+              "before": [
+                13,
+                1
+              ],
+              "after": [
+                10,
+                1
+              ]
+            },
+            "modname": {
+              "before": [
+                14,
+                1
+              ],
+              "after": [
+                11,
+                1
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "script": "ALTStartQscript",
+      "candidates": [
+        {
+          "editor_id": "ALTStartQscript",
+          "form": "050022E1",
+          "is_original": true,
+          "source_matches": false,
+          "compiled_bytes": 4903,
+          "compiled_changed": false,
+          "variables_preserved": true,
+          "variable_changes": {}
+        },
+        {
+          "editor_id": "ALTStartQscriptDUPLICATE000",
+          "form": "05019A16",
+          "is_original": false,
+          "source_matches": true,
+          "compiled_bytes": 4571,
+          "compiled_changed": true,
+          "variables_preserved": false,
+          "variable_changes": {
+            "ibackground": {
+              "before": [
+                3,
+                1
+              ],
+              "after": [
+                2,
+                1
+              ]
+            },
+            "rmarker": {
+              "before": [
+                4,
+                0
+              ],
+              "after": [
+                3,
+                0
+              ]
+            },
+            "rref": {
+              "before": [
+                5,
+                0
+              ],
+              "after": [
+                4,
+                0
+              ]
+            },
+            "iwealth": {
+              "before": [
+                6,
+                1
+              ],
+              "after": [
+                5,
+                1
+              ]
+            },
+            "svstring": {
+              "before": [
+                7,
+                1
+              ],
+              "after": [
+                6,
+                1
+              ]
+            },
+            "bblockui": {
+              "before": [
+                8,
+                1
+              ],
+              "after": [
+                7,
+                1
+              ]
+            },
+            "iui": {
+              "before": [
+                9,
+                1
+              ],
+              "after": [
+                8,
+                1
+              ]
+            },
+            "rbackmsg": {
+              "before": [
+                10,
+                0
+              ],
+              "after": [
+                9,
+                0
+              ]
+            },
+            "sbackdesc": {
+              "before": [
+                11,
+                1
+              ],
+              "after": [
+                10,
+                1
+              ]
+            },
+            "suiname": {
+              "before": [
+                12,
+                1
+              ],
+              "after": [
+                11,
+                1
+              ]
+            },
+            "suipath": {
+              "before": [
+                13,
+                1
+              ],
+              "after": [
+                12,
+                1
+              ]
+            },
+            "bcustommenu": {
+              "before": [
+                18,
+                1
+              ],
+              "after": [
+                13,
+                1
+              ]
+            },
+            "ftimer": {
+              "before": [
+                20,
+                0
+              ],
+              "after": [
+                14,
+                0
+              ]
+            },
+            "modoverridingindex": {
+              "before": [
+                21,
+                1
+              ],
+              "after": [
+                15,
+                1
+              ]
+            },
+            "modname": {
+              "before": [
+                22,
+                1
+              ],
+              "after": [
+                16,
+                1
+              ]
+            },
+            "rlambda": {
+              "before": [
+                23,
+                0
+              ],
+              "after": [
+                17,
+                0
+              ]
+            },
+            "iamount": {
+              "before": [
+                24,
+                1
+              ],
+              "after": [
+                18,
+                1
+              ]
+            },
+            "fwildwastelandchance": {
+              "before": [
+                34,
+                0
+              ],
+              "after": [
+                19,
+                0
+              ]
+            },
+            "iquickstart": {
+              "before": [
+                37,
+                1
+              ],
+              "after": [
+                20,
+                1
+              ]
+            },
+            "isetupchoice": {
+              "before": [
+                38,
+                1
+              ],
+              "after": [
+                21,
+                1
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "gameplay_tested_by_assistant": false,
+  "limitation": "Source and compiled-byte checks do not independently prove execution. Additional GECK record changes are recorded separately in changes.json."
+}

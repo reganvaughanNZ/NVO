@@ -1,0 +1,30 @@
+string_var sLine
+int iCount
+int iLimit
+int bWritten
+
+begin function {sLine}
+    if eval (player.AuxVarGetFlt "*_NVODiagEnabled") == 0
+        return
+    endif
+    set iCount to player.AuxVarGetFlt "*_NVODiagCount"
+    set iLimit to player.AuxVarGetFlt "*_NVODiagLimit"
+    if iCount >= iLimit
+        player.AuxVarSetFlt "*_NVODiagEnabled" 0
+        return
+    endif
+
+    set iCount to iCount + 1
+    set bWritten to WriteStringToFile "Data\NVSE\Plugins\NVOCombatDiagnostics.log" 1 "%.0f %z%r" iCount sLine
+    if bWritten == 0
+        player.AuxVarSetFlt "*_NVODiagEnabled" 0
+        PrintC "NVO diagnostics: log write failed. Capture stopped."
+        return
+    endif
+    player.AuxVarSetFlt "*_NVODiagCount" iCount
+    if iCount >= iLimit
+        player.AuxVarSetFlt "*_NVODiagEnabled" 0
+        WriteStringToFile "Data\NVSE\Plugins\NVOCombatDiagnostics.log" 1 "END record limit reached%r"
+        PrintC "NVO diagnostics: record limit reached. Capture stopped. Your log is ready."
+    endif
+end

@@ -1,0 +1,233 @@
+{
+  "schema": 1,
+  "packet": "3M",
+  "status": "design_reference_not_runtime_configuration",
+  "all_damage_replacement_disabled": true,
+  "families": [
+    {
+      "id": "kinetic_single",
+      "label": "Bullets, AP, HP and slugs",
+      "planned_transport": "ballistic_trajectory",
+      "planned_channels": [
+        "kinetic_penetration",
+        "transmitted_blunt"
+      ],
+      "required_inputs": [
+        "exact_ammo_construction",
+        "mass_kg",
+        "diameter_m",
+        "supported_contact_velocity_mps"
+      ],
+      "current_evidence": "Limited named pilot flight active; damage replacement absent",
+      "critical_rule": "Known .308 AP/HP identity does not establish variant construction or penetration",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "kinetic_multiple",
+      "label": "Shotgun pellets / multiple kinetic carriers",
+      "planned_transport": "per_carrier_ballistic_trajectory",
+      "planned_channels": [
+        "kinetic_penetration",
+        "transmitted_blunt"
+      ],
+      "required_inputs": [
+        "mass_kg_per_pellet",
+        "live_carrier_identity",
+        "supported_contact_velocity_mps"
+      ],
+      "current_evidence": "Previous separate-carrier observations; full application not verified",
+      "critical_rule": "No total-cartridge mass per pellet and no same-frame merging",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "laser",
+      "label": "Laser, Tri-beam and laser-like pulses",
+      "planned_transport": "verified_beam_or_pulse",
+      "planned_channels": [
+        "thermal_ablation"
+      ],
+      "required_inputs": [
+        "pulse_dose_nvo_units",
+        "range_delivery_curve",
+        "component_identity"
+      ],
+      "current_evidence": "Tri-beam carriers observed in 2B4; NVO laser transport/damage replacement absent",
+      "critical_rule": "No bullet drag/gravity/mass and no repeated visual-callback damage",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "plasma",
+      "label": "Plasma and Multiplas",
+      "planned_transport": "finite_carrier_keep_supported_native_transport",
+      "planned_channels": [
+        "plasma_thermal_ablation",
+        "optional_authored_impact"
+      ],
+      "required_inputs": [
+        "payload_dose_nvo_units",
+        "travel_decay_curve",
+        "component_identity"
+      ],
+      "current_evidence": "Multiplas creations and one actor context observed in 2B4; replacement absent",
+      "critical_rule": "Do not convert travel speed into bullet energy or assume an explosion",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "flame",
+      "label": "Flame / continuous heat",
+      "planned_transport": "verified_exposure_intervals",
+      "planned_channels": [
+        "external_heat",
+        "separate_optional_burn"
+      ],
+      "required_inputs": [
+        "dose_rate_nvo_units_per_game_second",
+        "exposure_game_seconds",
+        "interval_identity"
+      ],
+      "current_evidence": "Timed-exposure adapter/application not verified",
+      "critical_rule": "No FPS scaling or duplicate emitter/direct-effect damage",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "explosive",
+      "label": "Rockets, missiles, grenades and mines",
+      "planned_transport": "family_specific_carrier_fuse_and_blast",
+      "planned_channels": [
+        "optional_direct_impact",
+        "blast",
+        "verified_fragments_only",
+        "authored_secondary_effects"
+      ],
+      "required_inputs": [
+        "explosion_identity",
+        "victim_application_identity",
+        "blast_exposure_profile",
+        "verified_parent_if_linked"
+      ],
+      "current_evidence": "Blast observations exist; parent/component application ownership not verified",
+      "critical_rule": "Impact and blast remain distinct; do not create extra fragments or duplicate engine AoE",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "thrown_piercing",
+      "label": "Thrown objects, darts and modded bolts",
+      "planned_transport": "explicit_kinetic_or_payload_profile",
+      "planned_channels": [
+        "piercing",
+        "cutting",
+        "blunt",
+        "conditional_wound_payload"
+      ],
+      "required_inputs": [
+        "exact_profile",
+        "supported_contact",
+        "construction_or_payload"
+      ],
+      "current_evidence": "No family authority adapter verified",
+      "critical_rule": "Wound-carried poison needs penetration; gas/contact exposure needs a different profile",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "electrical",
+      "label": "Electrical effects",
+      "planned_transport": "authored_pulse_or_exposure",
+      "planned_channels": [
+        "electrical",
+        "mechanical_response"
+      ],
+      "required_inputs": [
+        "dose_profile",
+        "component_identity",
+        "anatomy_response"
+      ],
+      "current_evidence": "No family authority adapter verified",
+      "critical_rule": "Robot response is mechanical, not biological bleeding",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "radiation",
+      "label": "Radiation / radioactive payloads",
+      "planned_transport": "authored_exposure_or_payload",
+      "planned_channels": [
+        "radiation_dose"
+      ],
+      "required_inputs": [
+        "dose_profile",
+        "exposure_route",
+        "component_identity"
+      ],
+      "current_evidence": "No family authority adapter verified",
+      "critical_rule": "Radiation dose is not automatically a direct HP delta",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "exotic",
+      "label": "Sonic, alien and other explicitly classified effects",
+      "planned_transport": "explicit_custom_adapter",
+      "planned_channels": [
+        "authored_supported_channels"
+      ],
+      "required_inputs": [
+        "exact_profile",
+        "verified_delivery",
+        "effect_disposition"
+      ],
+      "current_evidence": "No family authority adapter verified",
+      "critical_rule": "Unknown effect families stay with the engine",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "melee",
+      "label": "Fists, cutting, piercing and blunt melee",
+      "planned_transport": "verified_melee_contact",
+      "planned_channels": [
+        "cutting",
+        "piercing",
+        "blunt"
+      ],
+      "required_inputs": [
+        "contact_identity",
+        "authored_threat",
+        "proficiency_and_condition"
+      ],
+      "current_evidence": "Fists/Super Sledge observed; punch net HP after reload verified; replacement absent",
+      "critical_rule": "No invented firearm energy and no extra OnHit DamageAV",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    },
+    {
+      "id": "unknown",
+      "label": "Unclassified equipment/effects",
+      "planned_transport": "engine_owned",
+      "planned_channels": [],
+      "required_inputs": [],
+      "current_evidence": "Existing behaviour retained",
+      "critical_rule": "Never classify by display name alone",
+      "damage_authority_implemented": false,
+      "until_supported": "existing_engine_damage",
+      "activation_gate": "family_specific_adapter_and_application_checkpoint"
+    }
+  ]
+}

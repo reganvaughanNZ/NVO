@@ -1,0 +1,61 @@
+{
+  "captured_at": "2026-09-15T19:53:54.1535900+12:00",
+  "pid": 2244,
+  "process_start_utc": "2026-09-15T07:53:34.1018521Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "files": [
+    {
+      "sha256": "f5ca3ad19deca4b984baecfb2887c8d7bdb6b924c88401ef511916b6e2440cd9",
+      "filename": "position_commit-00575830.bin",
+      "name": "position_commit",
+      "bytes": 1024,
+      "address": "00575830"
+    },
+    {
+      "sha256": "d9c63c0a8ae9fa5239dc8c5e9e4b0a26ce04ea8084965dfb93ebdc992707860c",
+      "filename": "controller-00C73170.bin",
+      "name": "controller",
+      "bytes": 12288,
+      "address": "00C73170"
+    },
+    {
+      "sha256": "bfd3056ab4642dbf930418afd937d0c6811bfd750030793598c35f1cf9d0e478",
+      "filename": "movement-0092F260.bin",
+      "name": "movement",
+      "bytes": 4672,
+      "address": "0092F260"
+    },
+    {
+      "sha256": "3949e9bdb6ae2fb1837571caa5f139318b5c339c7a74b287048dc077608e4d01",
+      "filename": "projectile_move-009BF300.bin",
+      "name": "projectile_move",
+      "bytes": 368,
+      "address": "009BF300"
+    },
+    {
+      "sha256": "29e9ae24c9d1a5608ad78d5701331035d0cecf3df4974f8379042e3a015119ae",
+      "filename": "position_update-00484B60.bin",
+      "name": "position_update",
+      "bytes": 2048,
+      "address": "00484B60"
+    },
+    {
+      "sha256": "3e631b348a7a8ca36e1e9f56420467cacb22b6dcfb31b48344e2e676bdabbca8",
+      "filename": "position_getter-00436AA0.bin",
+      "name": "position_getter",
+      "bytes": 512,
+      "address": "00436AA0"
+    },
+    {
+      "sha256": "904d958f9d24956c768ea344ac2a3869786d29afd7a6e656fccb376635ec3e9a",
+      "filename": "missile_vtable-0108FA44.bin",
+      "name": "missile_vtable",
+      "bytes": 1024,
+      "address": "0108FA44"
+    }
+  ],
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false
+}

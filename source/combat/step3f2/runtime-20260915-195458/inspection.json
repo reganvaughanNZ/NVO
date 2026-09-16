@@ -1,0 +1,28 @@
+[
+  {
+    "name": "terrain_query",
+    "address": "004572E0",
+    "sha256": "7eaa975360f4e13afdc173f21a07cba95c581a2e53fa51cf49489d66d5cdc065",
+    "disassembled": true
+  },
+  {
+    "name": "interior_query",
+    "address": "005F36F0",
+    "sha256": "5cdb7fa841dfbd149af046077b58d67e3f6bfdbc3b0e0b76689614a55afef908",
+    "disassembled": true
+  },
+  {
+    "name": "terrain_threshold",
+    "address": "0101DB88",
+    "sha256": "a6eb657cf3aab7d4083b6f0eca93d6e4726d1db995b090f29decf45f2376682d",
+    "double": 30.0,
+    "raw_hex": "0000000000003e40"
+  },
+  {
+    "name": "movement_limit",
+    "address": "0108A7A0",
+    "sha256": "54b26a4aaadacdfe8d8c41a80a90abda551351bd836e4e8c0d4ace153c1408ec",
+    "double": 67108864.0,
+    "raw_hex": "0000000000009041"
+  }
+]

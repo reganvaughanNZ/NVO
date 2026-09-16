@@ -1,0 +1,93 @@
+{
+  "packet": "4A",
+  "model_source": [
+    {
+      "path": "native/NVOCombatModel/ArmourModel.hpp",
+      "bytes": 3473,
+      "sha256": "5d1470e5649202f010f756377efd7f778c82f4efaca78fc7b1f24569c0ce0efa"
+    },
+    {
+      "path": "native/NVOCombatModel/ArmourModel.cpp",
+      "bytes": 5577,
+      "sha256": "e2cdb3a954941b71909ab1e3875e91eea7fac1c9b05b12c77aec006e0b0f39e4"
+    },
+    {
+      "path": "native/NVOCombatModel/tests.cpp",
+      "bytes": 10662,
+      "sha256": "1845a86fc1ff74a0c7a05218f963d2d8f6c55cf8be816047386481908a61dc40"
+    },
+    {
+      "path": "native/NVOCombatModel/run_checks.cmd",
+      "bytes": 481,
+      "sha256": "aa6f8c6d2c4b5844ce31423ab59a462c9b83063c64ae2da094428315998d49cf"
+    },
+    {
+      "path": "native/NVOCombatModel/README.md",
+      "bytes": 4617,
+      "sha256": "e0b474fed15f74250951ddbd21de13623a1609de446050bedf428c41f0e494e9"
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.hpp",
+      "bytes": 2868,
+      "sha256": "497973c3883ba060328984b7adf24a43e3d77fd6069fefa81542c6785088a6c7"
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.cpp",
+      "bytes": 7551,
+      "sha256": "058d924f820fa9561caf23b93dd9f4555af530ccb511a9a1e6184b56b7c64e78"
+    },
+    {
+      "path": "native/NVOCombatModel/shadow_adapter_tests.cpp",
+      "bytes": 13386,
+      "sha256": "7acf2dea5481dc79fa96565534435f5fe0da123606035cba97db0b4a44cc06b4"
+    },
+    {
+      "path": "native/NVOCombatModel/run_shadow_checks.cmd",
+      "bytes": 553,
+      "sha256": "083b7283b059284e1a3148d98a0a9fdab64b3e16258ff94359a9aaa0399a5134"
+    }
+  ],
+  "offline_build_outputs": [
+    {
+      "path": "native/NVOCombatModel/out/shadow_adapter_checks.exe",
+      "bytes": 139264,
+      "sha256": "20616d9cb17f2838ae89d3f1e0c375eb194d212224110b1ce0f763a63dd601a1"
+    },
+    {
+      "path": "native/NVOCombatModel/out/shadow-results.txt",
+      "bytes": 2543,
+      "sha256": "c0575e0b690db8beee8b10174cb07e76c66a7803784b7d1122423da496d15666"
+    },
+    {
+      "path": "native/NVOCombatModel/out/shadow-build.log",
+      "bytes": 82,
+      "sha256": "b72fec6a05d569cdfe4459269f76c58408d458372d6bb52599598524b85eaa29"
+    },
+    {
+      "path": "native/NVOCombatModel/out/shadow-toolchain.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "native/NVOCombatModel/out/model_checks.exe",
+      "bytes": 145920,
+      "sha256": "eb241f7cd3e0075766f32b1797f2e295db0a02ea19a95cb60f0315045c9c555a"
+    },
+    {
+      "path": "native/NVOCombatModel/out/results.txt",
+      "bytes": 2452,
+      "sha256": "07451f6eba5fa98f279f7e823cf4db657b4a3896a9244e1513fa2d51498a9a63"
+    },
+    {
+      "path": "native/NVOCombatModel/out/build.log",
+      "bytes": 48,
+      "sha256": "68a97daba85f02915d239971a014a544ff0f420e7530a9caffaef232d40b2203"
+    },
+    {
+      "path": "native/NVOCombatModel/out/toolchain.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "step3_native_snapshot_sha256": "df3364f6ea52aa7962c4f6892e2846979c8c5168ef24747e4d26e75e0b5345b4"
+}

@@ -1,0 +1,9 @@
+unequipallitems
+additem 00020420 1
+additem 00020426 1
+equipitem 00020420
+equipitem 00020426
+SetEquippedCurrentHealth 400 2
+SetEquippedCurrentHealth 50 1
+setav health 2000
+restoreav health 2000

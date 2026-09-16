@@ -1,0 +1,74 @@
+; NVO combat packet 2A. JIP load/new-game script, not a GECK quest.
+; Observer only. No damage, health, equipment or projectile setters.
+ref rWriter
+ref rHit
+ref rCreate
+ref rImpact
+ref rExplosion
+int bValid
+int bWritten
+int iLimit
+
+player.AuxVarSetFlt "*_NVODiagEnabled" 0
+player.AuxVarSetFlt "*_NVODiagCount" 0
+
+let rWriter := CompileScript "NVOCombatDiagnostics\WriteEvent.txt"
+let rHit := CompileScript "NVOCombatDiagnostics\OnActorHit.txt"
+let rCreate := CompileScript "NVOCombatDiagnostics\OnProjectileCreate.txt"
+let rImpact := CompileScript "NVOCombatDiagnostics\OnProjectileImpact.txt"
+let rExplosion := CompileScript "NVOCombatDiagnostics\OnExplosionHit.txt"
+
+; Remove only this packet's callbacks before attaching them again.
+set bValid to 0
+if IsFormValid rWriter
+    set bValid to bValid + 1
+endif
+if IsFormValid rHit
+    SetOnHitEventHandler rHit 0
+    set bValid to bValid + 1
+endif
+if IsFormValid rCreate
+    RemoveEventHandler "ShowOff:OnProjectileCreate" rCreate
+    set bValid to bValid + 1
+endif
+if IsFormValid rImpact
+    RemoveEventHandler "ShowOff:OnProjectileImpact" rImpact
+    set bValid to bValid + 1
+endif
+if IsFormValid rExplosion
+    RemoveEventHandler "ShowOff:OnExplosionHit" rExplosion
+    set bValid to bValid + 1
+endif
+
+if bValid != 5
+    PrintC "NVO diagnostics: callback compilation failed. Capture disabled. Check nvse.log and jip_ln_nvse.log."
+    return
+endif
+
+if eval (GetINIFloat "Diagnostics:Enabled" "NVOCombatDiagnostics.ini") != 1
+    PrintC "NVO diagnostics: capture disabled in NVOCombatDiagnostics.ini."
+    return
+endif
+
+set iLimit to GetINIFloat "Diagnostics:MaxRecords" "NVOCombatDiagnostics.ini"
+if iLimit < 1
+    set iLimit to 1
+elseif iLimit > 2000
+    set iLimit to 2000
+endif
+player.AuxVarSetFlt "*_NVODiagLimit" iLimit
+player.AuxVarSetRef "*_NVODiagWriter" rWriter
+
+set bWritten to WriteStringToFile "Data\NVSE\Plugins\NVOCombatDiagnostics.log" 0 "NVO COMBAT 2A | new capture after load/new game | observer only%r"
+if bWritten == 0
+    PrintC "NVO diagnostics: cannot write Data/NVSE/Plugins/NVOCombatDiagnostics.log. Capture disabled."
+    return
+endif
+WriteStringToFile "Data\NVSE\Plugins\NVOCombatDiagnostics.log" 1 "META limit=%.0f | ammo fields are source snapshots | damage fields are event readings, not measured HP loss%r" iLimit
+
+SetOnHitEventHandler rHit 1
+SetEventHandler "ShowOff:OnProjectileCreate" rCreate
+SetEventHandler "ShowOff:OnProjectileImpact" rImpact
+SetEventHandler "ShowOff:OnExplosionHit" rExplosion
+player.AuxVarSetFlt "*_NVODiagEnabled" 1
+PrintC "NVO diagnostics 2A: capture armed, limit %.0f event rows. This packet does not change damage." iLimit

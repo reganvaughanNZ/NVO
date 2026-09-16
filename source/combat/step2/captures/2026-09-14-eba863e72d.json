@@ -1,0 +1,161 @@
+{
+  "archived_log": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step2\\captures\\2026-09-14-eba863e72d.log",
+  "sha256": "eba863e72d70536968c60b9fcefbaf15a931d19ad68403e85837255532e0b743",
+  "events": {
+    "CREATE": 88,
+    "IMPACT": 87,
+    "HIT": 61,
+    "EXPLOSION": 7
+  },
+  "first": 1,
+  "last": 243,
+  "sequence_contiguous": true,
+  "limit_reached": false,
+  "hit_directions": {
+    "from_player": 29,
+    "to_player": 32
+  },
+  "hit_weapons": {
+    "00004335": 10,
+    "000E9C3B": 28,
+    "00004334": 12,
+    "000BA0F3": 11
+  },
+  "regions": {
+    "1": 15,
+    "5": 4,
+    "0": 15,
+    "3": 5,
+    "7": 5,
+    "10": 3,
+    "14": 1,
+    "-1": 13
+  },
+  "zero_distance_impacts": 74,
+  "zero_hp_hits_to_player": [
+    115,
+    121,
+    131,
+    138,
+    141,
+    144,
+    147,
+    150,
+    153,
+    156,
+    161,
+    164,
+    169,
+    175,
+    184,
+    187,
+    190,
+    199,
+    206,
+    208,
+    210,
+    221,
+    226,
+    233,
+    235,
+    241,
+    243
+  ],
+  "projectile_creation_ids": {
+    "FF001985": 8,
+    "FF001986": 25,
+    "FF001988": 16,
+    "FF001982": 3,
+    "FF001981": 25,
+    "FF001983": 9,
+    "FF001984": 2
+  },
+  "resolved_forms": {
+    "FalloutNV.esm": [
+      {
+        "id": "00004334",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapKnife",
+        "FULL": "Knife"
+      },
+      {
+        "id": "00004335",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapLaserPistol",
+        "FULL": "Laser Pistol"
+      },
+      {
+        "id": "000BA0F3",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapNVDynamite",
+        "FULL": "Dynamite"
+      },
+      {
+        "id": "000E9C3B",
+        "kind": "WEAP",
+        "file": "FalloutNV.esm",
+        "EDID": "WeapNVServiceRifle",
+        "FULL": "Service Rifle"
+      },
+      {
+        "id": "00020772",
+        "kind": "AMMO",
+        "file": "FalloutNV.esm",
+        "EDID": "AmmoSmallEnergyCell",
+        "FULL": "Energy Cell"
+      },
+      {
+        "id": "00004240",
+        "kind": "AMMO",
+        "file": "FalloutNV.esm",
+        "EDID": "Ammo556mm",
+        "FULL": "5.56mm Round"
+      },
+      {
+        "id": "00000007",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "Player"
+      },
+      {
+        "id": "0011A8D8",
+        "kind": "NPC_",
+        "file": "FalloutNV.esm",
+        "EDID": "BCPrivateKowalski",
+        "FULL": "Private Kowalski"
+      },
+      {
+        "id": "0000426D",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "556mmRifleBulletProjectile",
+        "FULL": "5.56mm Rifle Bullet"
+      },
+      {
+        "id": "00014B0F",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "BeamLaserProjectile",
+        "FULL": "Laser Beam"
+      },
+      {
+        "id": "000E3F03",
+        "kind": "PROJ",
+        "file": "FalloutNV.esm",
+        "EDID": "NVDynamiteFragProjectile",
+        "FULL": "Lit Dynamite"
+      },
+      {
+        "id": "000E397F",
+        "kind": "EXPL",
+        "file": "FalloutNV.esm",
+        "EDID": "NVDynamiteExplosion",
+        "FULL": "Dynamite Explosion"
+      }
+    ],
+    "NVO.esm": []
+  }
+}

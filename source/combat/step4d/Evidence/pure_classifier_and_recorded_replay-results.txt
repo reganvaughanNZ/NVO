@@ -1,0 +1,54 @@
+PASS authored catalog valid
+PASS body and helmet classify without authority
+PASS separate head and torso potential coverage
+PASS body never protects head and helmet never torso
+PASS partial head never promoted to full or bare
+PASS condition retained without converting extent or strength
+PASS zero-condition item retained for future material policy
+PASS helmet removal does not certify bare head
+PASS helmet alone only maps head
+PASS no inventory armour is not verified bare or no inherent protection
+PASS inventory order is not layer order
+PASS distinct same-form instances retained without layer ordering
+PASS plugin identity case insensitive
+PASS same local ID in another plugin is not the same item
+PASS unknown item rejects whole classification including prior valid item
+PASS unresolved load index not guessed
+PASS runtime ID cannot masquerade as local ID
+PASS equipment record drift blocked
+PASS duplicate instance rejects entire result
+PASS invalid condition fails closed
+PASS invalid condition fails closed
+PASS invalid condition fails closed
+PASS invalid condition fails closed
+PASS zero instance rejected
+PASS zero raw mask rejected
+PASS unknown raw slot bits rejected
+PASS count bound checked before array access
+PASS exact item bound accepted
+PASS partial inventory rejected
+PASS unstable inventory rejected
+PASS unknown actor kind remains unknown
+PASS creature never interpreted as humanoid armour
+PASS empty creature inventory cannot become bare
+PASS duplicate catalog keys rejected case insensitively
+PASS invalid coverage enum rejected
+PASS unversioned profile rejected
+PASS catalog mask validated
+PASS empty catalog rejected
+PASS catalog bound enforced
+PASS unsafe or unsupported plugin key rejected
+PASS unsafe or unsupported plugin key rejected
+PASS unsafe or unsupported plugin key rejected
+PASS unsafe or unsupported plugin key rejected
+PASS unsafe or unsupported plugin key rejected
+PASS unsafe or unsupported plugin key rejected
+PASS zero local ID rejected
+PASS synthetic full coverage still no hit authority
+PASS authored regional uncertainty retained
+PASS explicit no-cover item retained without bare inference
+PASS overlapping authoring never invents layer order
+PASS 76 captured live snapshots available
+PASS live body/helmet/removal/condition/reload/stress snapshots classify
+PASS repeated calls do not mutate caller input
+PASS 53 checks; 76 captured snapshots; 10000 deterministic repetitions

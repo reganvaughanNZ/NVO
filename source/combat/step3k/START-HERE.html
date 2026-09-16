@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO Packet 3K — HP and limb observation</title>
+<style>body{font:18px/1.6 system-ui;background:#111a20;color:#e7efee;max-width:820px;margin:48px auto;padding:0 24px}h1{line-height:1.2;color:#afe2ca}a{color:#afe2ca}li{margin:16px 0}code{background:#26343d;padding:3px 7px;border-radius:5px}button{font:inherit;background:#b3e5cd;color:#14251e;border:0;border-radius:6px;padding:10px 18px;cursor:pointer}.box{background:#1a2932;padding:18px 24px;border-radius:10px}small{color:#b8c9ce}</style>
+<h1>3K — Measure HP and limb changes</h1>
+<p>Purpose: compare requested damage with the HP and limb changes observed after the existing damage routine returns. This helps establish the foundation for armour rules.</p>
+<div class="box"><strong>Native319.</strong> Damage replacement remains disabled. Keep NVO.esm and NVOFlightPilot.esp active with their required masters. No GECK edits.</div>
+<p>When you can test, launch through NVSE and load your test save. Use the ordinary <strong>Hunting Rifle with standard .308</strong> and nearby living human targets. Use a fresh target if one dies. Leave god mode off for this damage check.</p>
+<ol>
+<li>Land one <strong>torso hit outside VATS</strong>.</li>
+<li>Land one short-range <strong>VATS hit with the left leg selected</strong>. The log will distinguish the selected shot from the body region actually reported.</li>
+<li><strong>Reload the same save once</strong>, unequip your weapon and land one punch on a living human target.</li>
+</ol>
+<p>Wait three seconds between hits. If a shot misses, make at most one replacement attempt and report it. After the punch, wait 20 seconds and exit normally. Tell me what landed; I will read the log directly. No long-range or stress test is needed.</p>
+<p>If you need the rifle and ammunition:</p>
+<p><code id="kit">bat NVOFlightKit3F</code> <button id="copy">Copy kit command</button> <small id="status" role="status"></small></p>
+<p>Expected: normal gameplay, no healthy test-kit console reminder, and new <code>AV_APPLY</code> entries in <strong>NVOCombatCore.log</strong> in the game folder. A zero or invalid measurement is evidence to inspect, not a reason to repeat the entire test.</p>
+<p><a href="README.md">Scope, limitations and reversal</a></p>
+<script>document.getElementById('copy').onclick=async()=>{const text=document.getElementById('kit').textContent;const status=document.getElementById('status');try{await navigator.clipboard.writeText(text);status.textContent='Copied';}catch{const area=document.createElement('textarea');area.value=text;document.body.appendChild(area);area.select();const ok=document.execCommand('copy');area.remove();status.textContent=ok?'Copied':'Select the command and press Ctrl+C';}};</script></html>

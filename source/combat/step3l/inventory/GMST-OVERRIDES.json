@@ -1,0 +1,282 @@
+{
+  "scope": "disk records in active load order, not script mutations",
+  "plugins": [
+    {
+      "name": "FalloutNV.esm",
+      "bytes": 330921877,
+      "sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b"
+    },
+    {
+      "name": "DeadMoney.esm",
+      "bytes": 7303362,
+      "sha256": "076428d59515d554b7830c7ebbc3fe3e5487e888ef07d2c4ec6d375c44feda59"
+    },
+    {
+      "name": "HonestHearts.esm",
+      "bytes": 35736867,
+      "sha256": "db4b7017dd6e1cd6f74e08fc151862960196c57f6373ce4e38522fa9677f17aa"
+    },
+    {
+      "name": "OldWorldBlues.esm",
+      "bytes": 16202800,
+      "sha256": "fd6cc6e582582ec035277150e106d12b6d78c7c60cbb506545e06d1fa7212295"
+    },
+    {
+      "name": "LonesomeRoad.esm",
+      "bytes": 40265999,
+      "sha256": "8516a98d6652bed6824699d807b86f2fde5f1c1873b6e36a832e94863968cf92"
+    },
+    {
+      "name": "GunRunnersArsenal.esm",
+      "bytes": 252293,
+      "sha256": "46494d52a76af9489d3e823f345c4efe873fe29114db25b5d566298365805cb7"
+    },
+    {
+      "name": "ClassicPack.esm",
+      "bytes": 6523,
+      "sha256": "3b31928dfdac46028f2e12f25b0dbdd0e809d4d74ac04fb7783e0063e912760b"
+    },
+    {
+      "name": "MercenaryPack.esm",
+      "bytes": 3064,
+      "sha256": "73e76bcadbf326818af7b58c315773a2d86fe3a8186a778e84a68916cb830c59"
+    },
+    {
+      "name": "TribalPack.esm",
+      "bytes": 2323,
+      "sha256": "342f42ce9835f57ee19be09f12ad0ba2c6182e86740338202fcea9011d62f328"
+    },
+    {
+      "name": "CaravanPack.esm",
+      "bytes": 3007,
+      "sha256": "0473cff52d375a77d6585f203a914445fa5a9e6ba726818aa7d8d48cb177ec82"
+    },
+    {
+      "name": "NVO.esm",
+      "bytes": 453236,
+      "sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d"
+    },
+    {
+      "name": "NVOFlightPilot.esp",
+      "bytes": 7140,
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    }
+  ],
+  "chains": {
+    "fAVDHealthEnduranceMult": [
+      {
+        "plugin": "FalloutNV.esm",
+        "form": "00026EC9",
+        "value": 20.0
+      },
+      {
+        "plugin": "NVO.esm",
+        "form": "00026EC9",
+        "value": 5.0
+      }
+    ],
+    "fAVDHealthEnduranceOffset": [
+      {
+        "plugin": "FalloutNV.esm",
+        "form": "00034816",
+        "value": 0.0
+      },
+      {
+        "plugin": "NVO.esm",
+        "form": "00034816",
+        "value": -1.0
+      }
+    ],
+    "fAVDHealthLevelMult": [
+      {
+        "plugin": "FalloutNV.esm",
+        "form": "000539F2",
+        "value": 5.0
+      },
+      {
+        "plugin": "NVO.esm",
+        "form": "000539F2",
+        "value": 0.10000000149011612
+      }
+    ],
+    "fAVDNPCHealthEnduranceMult": [
+      {
+        "plugin": "FalloutNV.esm",
+        "form": "000AE66A",
+        "value": 5.0
+      }
+    ],
+    "fAVDNPCHealthEnduranceOffset": [],
+    "fAVDNPCHealthLevelMult": [
+      {
+        "plugin": "FalloutNV.esm",
+        "form": "000AE66B",
+        "value": 5.0
+      },
+      {
+        "plugin": "NVO.esm",
+        "form": "000AE66B",
+        "value": 0.0
+      }
+    ],
+    "fDamageWeaponMult": [],
+    "fDiffMultHPByPCE": [],
+    "fDiffMultHPByPCH": [],
+    "fDiffMultHPByPCN": [],
+    "fDiffMultHPByPCVE": [],
+    "fDiffMultHPByPCVH": [],
+    "fDiffMultHPToPCE": [],
+    "fDiffMultHPToPCH": [],
+    "fDiffMultHPToPCN": [],
+    "fDiffMultHPToPCVE": [],
+    "fDiffMultHPToPCVH": [],
+    "fDifficultyDamageMultiplier": [],
+    "fPCBaseHealthMult": [
+      {
+        "plugin": "NVO.esm",
+        "form": "05019419",
+        "value": 1.0
+      }
+    ]
+  },
+  "runtime_comparison": [
+    {
+      "name": "fAVDHealthLevelMult",
+      "live": 0.1,
+      "winner": {
+        "plugin": "NVO.esm",
+        "form": "000539F2",
+        "value": 0.10000000149011612
+      },
+      "matches": true
+    },
+    {
+      "name": "fAVDNPCHealthLevelMult",
+      "live": 0.0,
+      "winner": {
+        "plugin": "NVO.esm",
+        "form": "000AE66B",
+        "value": 0.0
+      },
+      "matches": true
+    },
+    {
+      "name": "fPCBaseHealthMult",
+      "live": 1.0,
+      "winner": {
+        "plugin": "NVO.esm",
+        "form": "05019419",
+        "value": 1.0
+      },
+      "matches": true
+    },
+    {
+      "name": "fDamageWeaponMult",
+      "live": 1.0,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPToPCVE",
+      "live": 0.5,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPToPCVH",
+      "live": 2.0,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPByPCE",
+      "live": 1.5,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPByPCH",
+      "live": 0.75,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPByPCN",
+      "live": 1.0,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fAVDHealthEnduranceMult",
+      "live": 5.0,
+      "winner": {
+        "plugin": "NVO.esm",
+        "form": "00026EC9",
+        "value": 5.0
+      },
+      "matches": true
+    },
+    {
+      "name": "fAVDHealthEnduranceOffset",
+      "live": -1.0,
+      "winner": {
+        "plugin": "NVO.esm",
+        "form": "00034816",
+        "value": -1.0
+      },
+      "matches": true
+    },
+    {
+      "name": "fDiffMultHPByPCVE",
+      "live": 2.0,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPByPCVH",
+      "live": 0.5,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fAVDNPCHealthEnduranceOffset",
+      "live": -1.0,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPToPCE",
+      "live": 0.75,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPToPCH",
+      "live": 1.5,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fDiffMultHPToPCN",
+      "live": 1.0,
+      "winner": null,
+      "matches": null
+    },
+    {
+      "name": "fAVDNPCHealthEnduranceMult",
+      "live": 5.0,
+      "winner": {
+        "plugin": "FalloutNV.esm",
+        "form": "000AE66A",
+        "value": 5.0
+      },
+      "matches": true
+    },
+    {
+      "name": "fDifficultyDamageMultiplier",
+      "live": 10.0,
+      "winner": null,
+      "matches": null
+    }
+  ]
+}

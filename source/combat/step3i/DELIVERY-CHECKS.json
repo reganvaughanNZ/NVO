@@ -1,0 +1,13 @@
+{
+  "html_copy_payloads_verified": 3,
+  "copy_buttons": 4,
+  "package_hashes_verified": 14,
+  "zip_integrity": true,
+  "apply_helper": "PowerShell parser passed; helper not executed",
+  "staged_checker": "Correctly reports script compile pending; Player/GMST/RD/quest checks pass",
+  "game_nvo_rd_unchanged": true,
+  "geck_compilation": false,
+  "gameplay_testing": false,
+  "staged_esm_sha256": "2d0760c96dfd7cb06a95d4736891f67a98f5f5c25c148eb572a5fd75741e795b",
+  "zip_sha256": "480b692d6187556d0c43ce22c83d9b1ceeff8009b0b55358e0f9dd834702fd2b"
+}

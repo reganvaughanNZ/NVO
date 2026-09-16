@@ -1,0 +1,25 @@
+{
+  "packet": "3U1",
+  "native_version": 325,
+  "capture_sha256": "01a7dd5ef0cdaba00a97b950b1e02dd366c4d45ef3f9002a546bc2952a5454ea",
+  "verdict": "pass",
+  "startup_banners": 1,
+  "shots": 1,
+  "profile": "9mm-pistol",
+  "world_contact": {
+    "target": "00000000",
+    "target_kind": 1,
+    "region": -1,
+    "valid_mask": 31
+  },
+  "callback_correlated": true,
+  "speed_available": true,
+  "speed_status": "observed_engine_segment",
+  "terrain_clamp_explained": true,
+  "movement_mismatches": 0,
+  "accounting_unpaired": 0,
+  "open_lifetimes": 0,
+  "pool_resets_zero": true,
+  "damage_replacement": false,
+  "game_loaded_by_reviewer": false
+}

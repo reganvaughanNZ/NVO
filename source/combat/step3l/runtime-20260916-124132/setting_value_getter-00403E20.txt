@@ -1,0 +1,26 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3l\runtime-20260916-124132\setting_value_getter-00403E20.obj
+
+File Type: COFF OBJECT
+
+  00403E20: 55                 push        ebp
+  00403E21: 8B EC              mov         ebp,esp
+  00403E23: 83 EC 0C           sub         esp,0Ch
+  00403E26: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  00403E29: 83 7D F8 00        cmp         dword ptr [ebp-8],0
+  00403E2D: 74 0B              je          00403E3A
+  00403E2F: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  00403E32: 83 C0 04           add         eax,4
+  00403E35: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  00403E38: EB 0F              jmp         00403E49
+  00403E3A: D9 EE              fldz
+  00403E3C: D9
+  00403E3D: 1D
+  00403E3E: 00 28              add         byte ptr [eax],ch
+
+  Summary
+
+          20 .text

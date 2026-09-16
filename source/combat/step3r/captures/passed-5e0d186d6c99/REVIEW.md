@@ -1,0 +1,11 @@
+# Packet 3R runtime checkpoint — PASS
+
+Log records20 standard9mm SMG shots, reload, then1 standard9mm pistol shot. Exact burst count was unrestricted. All21 creation/return pairs match and all21 naturally retire. The second SMG shot reaches the real full128-slot pool, rolls back its lifecycle reservation (2->1), retains original base0017A2C6 through forwarding and the actual returned object, and receives no private-flight admission. The127 inert reservations release; the first actual ticket remains Active with the same identity, continues matched movement and later retires. Subsequent private admissions resume. The probe arms only once and does not rearm on reload.
+
+20 real private admissions commit:19 SMG plus the pistol.434 applied flight updates and434 verified updates; no movement mismatches or process faults. One expected capacity refusal/overflow is the test result, not a failure. Both pools are zero before reload/exit and explicit post-reset logs confirm zero. Normal exit recorded; process absent. No repeat needed.
+
+The83 untracked movement/accounting entries in capture1 occur outside owned physics tracking, which is intentional for the stock fallback; they are not accounting_unpaired or movement mismatches (both zero). Routine boundary detail stops after16 rows; summary records all20 pairs. Eleven private lifetimes are beyond the eight-lifetime routine physics detail limit; aggregate admission/movement/retirement remains recorded. No coverage failure inferred from bounded detail logging.
+
+Nine deployed DLL/PDB/provider/ESM/pilot/config identities match expectations; RD absent. Existing two co-save no-handler warnings remain unattributed; no new NVSE error. No game files changed by this review. Native323 diagnostic remains installed pending authorization to remove probe.
+
+This passes deliberate production-pool occupancy/refusal and ordinary resumption/reload, not the performance cost of128 real bullets, the512 lifecycle limit, exceptional unwind, nesting or other-thread creation. Post-selection private fallback limitations and other pre-damage requirements remain open. Damage OFF and Ultra pre-damage HOLD. Next request authorization to install the already compiled normal probe-disabled build; no repeat firing test needed solely to rerun this accepted checkpoint.

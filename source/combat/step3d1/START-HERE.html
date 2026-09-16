@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO Combat Packet 3D1</title>
+<style>body{background:#101713;color:#e6f0e8;font:18px/1.6 system-ui;max-width:850px;margin:45px auto;padding:0 24px}h1{line-height:1.2}button{font:inherit;background:#a9ddaf;border:0;border-radius:6px;padding:12px 22px;cursor:pointer}code{color:#b7e7c0}li{margin-bottom:14px}.box{border:1px solid #497450;border-radius:8px;padding:20px}a{color:#bbe8c2}#status{min-height:1.5em}</style>
+<h1>NVO Combat Packet 3D1</h1>
+<p><strong>SMG mapping correction · Build 311 retained · Your gameplay check is next</strong></p>
+<p>This update corrects the regular 9mm SMG’s projectile mapping. We will check its flight and finish the longer-distance rifle checks. Your pistol result remains accepted.</p>
+<p>Keep <strong>NVO.esm and NVOFlightPilot.esp active</strong>. No GECK work or compilation is needed.</p>
+<div class="box"><h2>Use the existing kit</h2><p>Load your test save and wait three seconds. If you need the weapons or ammo, run this in the game console:</p><p><code id="cmd">bat NVOFlightKit</code></p><button id="copy" type="button">Copy kit command</button><p id="status" role="status"></p><p>Each run adds another kit. Use the ordinary weapon names and standard ammo.</p></div>
+<h2>Your short follow-up</h2>
+<ol>
+<li>Choose an open area and a distant solid target with a clear line of fire. Stand about <strong>four times farther back than last time</strong>, roughly <strong>100 metres</strong> if practical. Avoid intervening walls, roofs or cover.</li>
+<li>Outside VATS, fire a <strong>short 9mm SMG burst of about three rounds</strong>, then <strong>one Hunting Rifle shot</strong> and <strong>one Service Rifle shot</strong>. Pause between weapons. Use standard <strong>9mm, .308 and 5.56mm</strong> ammo. No pistol retest.</li>
+<li><strong>Reload once</strong>, wait three seconds, and regrant the kit only if needed. Fire <strong>one Service Rifle shot in VATS at a distant live enemy</strong> with a clear line of fire. If no suitable target is available, report that instead of repeating the setup.</li>
+<li><strong>Exit and report completion.</strong> I will read NVOCombatCore.log beside FalloutNV.exe. Wait for review before another launch overwrites it. Mention if the first load was setup.</li>
+</ol>
+<p>God mode is fine. No video or stress test is needed. If flight reports unavailable or firing fails, stop and report it.</p>
+<p>The DLL still reports build 311 and phase 3D: this packet changes the records and configuration. Damage replacement remains disabled.</p>
+<p><a href="README.md">Full instructions and reversal</a> · <a href="Installation/INSTALL-3D1.md">Installation receipt</a> · <a href="Installation/IMPLEMENTATION.md">Implementation details</a></p>
+<script>document.getElementById('copy').onclick=async()=>{const text='bat NVOFlightKit';let ok=false;try{await navigator.clipboard.writeText(text);ok=true}catch(e){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();ok=document.execCommand('copy');t.remove()}document.getElementById('status').textContent=ok?'Copied. Paste into the New Vegas console.':'Select and copy the command shown above.'}</script>
+</html>

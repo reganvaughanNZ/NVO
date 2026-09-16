@@ -1,0 +1,11 @@
+{
+  "pid": 4592,
+  "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "start_utc": "2026-09-16T00:34:06.9861076Z",
+  "archived_at": "2026-09-16T12:44:26.7937340+12:00",
+  "no_save_or_gameplay_loaded": true,
+  "startup_banner_submissions": 1,
+  "log_sha256": "0d51b990b3c5dee47d6a88cf8e21d2cccd5f6a6d3391579e8a08a01b5bc11d6b",
+  "close_method": "Stop-Process exact PID/path/start time, assistant main-menu inspection only",
+  "closed": true
+}

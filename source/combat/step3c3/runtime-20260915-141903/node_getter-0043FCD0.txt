@@ -1,0 +1,97 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c3\runtime-20260915-141903\node_getter-0043FCD0.obj
+
+File Type: COFF OBJECT
+
+  0043FCD0: 55                 push        ebp
+  0043FCD1: 8B EC              mov         ebp,esp
+  0043FCD3: 83 EC 0C           sub         esp,0Ch
+  0043FCD6: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0043FCD9: A1 98 FD 26 01     mov         eax,dword ptr ds:[0126FD98h]
+  0043FCDE: 64 8B 0D 2C 00 00  mov         ecx,dword ptr fs:[0000002Ch]
+            00
+  0043FCE5: 8B 14 81           mov         edx,dword ptr [ecx+eax*4]
+  0043FCE8: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0043FCEB: 3B 82 64 02 00 00  cmp         eax,dword ptr [edx+00000264h]
+  0043FCF1: 75 1B              jne         0043FD0E
+  0043FCF3: 8B 0D 98 FD 26 01  mov         ecx,dword ptr ds:[0126FD98h]
+  0043FCF9: 64 8B 15 2C 00 00  mov         edx,dword ptr fs:[0000002Ch]
+            00
+  0043FD00: 8B 04 8A           mov         eax,dword ptr [edx+ecx*4]
+  0043FD03: 8B 88 60 02 00 00  mov         ecx,dword ptr [eax+00000260h]
+  0043FD09: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  0043FD0C: EB 29              jmp         0043FD37
+  0043FD0E: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  0043FD11: 83 7A 64 00        cmp         dword ptr [edx+64h],0
+  0043FD15: 74 13              je          0043FD2A
+  0043FD17: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0043FD1A: 8B 48 64           mov         ecx,dword ptr [eax+64h]
+  0043FD1D: 83 C1 14           add         ecx,14h
+  0043FD20: E8 2B 97 11 00     call        00559450
+  0043FD25: 89 45 F4           mov         dword ptr [ebp-0Ch],eax
+  0043FD28: EB 07              jmp         0043FD31
+  0043FD2A: C7 45 F4 00 00 00  mov         dword ptr [ebp-0Ch],0
+            00
+  0043FD31: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0043FD34: 89 4D F8           mov         dword ptr [ebp-8],ecx
+  0043FD37: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  0043FD3A: 8B E5              mov         esp,ebp
+  0043FD3C: 5D                 pop         ebp
+  0043FD3D: C3                 ret
+  0043FD3E: CC                 int         3
+  0043FD3F: CC                 int         3
+  0043FD40: 55                 push        ebp
+  0043FD41: 8B EC              mov         ebp,esp
+  0043FD43: 6A FF              push        0FFFFFFFFh
+  0043FD45: 68 B9 C1 EE 00     push        0EEC1B9h
+  0043FD4A: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  0043FD50: 50                 push        eax
+  0043FD51: 51                 push        ecx
+  0043FD52: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  0043FD57: 33 C5              xor         eax,ebp
+  0043FD59: 50                 push        eax
+  0043FD5A: 8D 45 F4           lea         eax,[ebp-0Ch]
+  0043FD5D: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  0043FD63: 89 4D F0           mov         dword ptr [ebp-10h],ecx
+  0043FD66: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  0043FD69: 50                 push        eax
+  0043FD6A: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0043FD6D: E8 1E C8 7F 00     call        00C3C590
+  0043FD72: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  0043FD79: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0043FD7C: C7 01 A4 6B 01 01  mov         dword ptr [ecx],1016BA4h
+  0043FD82: 8B 55 F0           mov         edx,dword ptr [ebp-10h]
+  0043FD85: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0043FD88: 89 42 28           mov         dword ptr [edx+28h],eax
+  0043FD8B: 6A 00              push        0
+  0043FD8D: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0043FD90: 83 C1 2C           add         ecx,2Ch
+  0043FD93: E8 18 8F 0E 00     call        00528CB0
+  0043FD98: C6 45 FC 01        mov         byte ptr [ebp-4],1
+  0043FD9C: 6A 00              push        0
+  0043FD9E: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0043FDA1: 83 C1 30           add         ecx,30h
+  0043FDA4: E8 E7 3E 1F 00     call        00633C90
+  0043FDA9: C6 45 FC 02        mov         byte ptr [ebp-4],2
+  0043FDAD: 6A 00              push        0
+  0043FDAF: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0043FDB2: 83 C1 34           add         ecx,34h
+  0043FDB5: E8 D6 3E 1F 00     call        00633C90
+  0043FDBA: C6 45 FC 03        mov         byte ptr [ebp-4],3
+  0043FDBE: 6A 00              push        0
+  0043FDC0: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0043FDC3: 83 C1 38           add         ecx,38h
+  0043FDC6: E8 E5 8E 0E 00     call        00528CB0
+  0043FDCB: C7
+  0043FDCC: 45                 inc         ebp
+  0043FDCD: FC                 cld
+  0043FDCE: FF
+  0043FDCF: FF
+
+  Summary
+
+         100 .text

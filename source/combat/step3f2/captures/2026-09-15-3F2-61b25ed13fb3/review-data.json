@@ -1,0 +1,68 @@
+{
+  "capture": {
+    "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+    "archive": "source\\combat\\step3f2\\captures\\2026-09-15-3F2-61b25ed13fb3\\NVOCombatCore.log",
+    "sha256": "61b25ed13fb3accf597e3dcd8166fc76f43801a309fa136dbc43e843d1d69822",
+    "bytes": 28583,
+    "lines": 131,
+    "last_write_local": "2026-09-15T20:22:06.127542+12:00",
+    "user_context": "Play test finished after RECHECK-1 one-shot instructions."
+  },
+  "normal_flight_checks_passed": true,
+  "failed_terrain_query_reproduced": false,
+  "correction_checkpoint_accepted": false,
+  "baseline_verified": 1,
+  "edited_steps_verified": 4,
+  "movement_accounting_pairs": 6,
+  "eligible_terrain_queries": 5,
+  "failed_queries": 0,
+  "corrections": 0,
+  "impact": {
+    "session": "1",
+    "seq": "4",
+    "lifetime": "1",
+    "projectile": "FF001996",
+    "source": "00000014",
+    "weapon": "00004333",
+    "target": "001070C1",
+    "matched": "1",
+    "impact_index": "1",
+    "origin_source": "00000014",
+    "origin_weapon": "00004333",
+    "region": "unknown",
+    "damage": "unknown"
+  },
+  "impact_age_s": 0.157,
+  "initial_pitch_degrees": 2.49701897508457,
+  "initial_vertical_velocity_mps": -37.022318,
+  "struck_reference": {
+    "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\FalloutNV.esm",
+    "records": [
+      {
+        "type": "REFR",
+        "id": "001070C1",
+        "flags": "00008000",
+        "base": "000928F3",
+        "position_rotation": [
+          -67640.0,
+          -2280.0,
+          8104.0,
+          0.009141510352492332,
+          0.00258033350110054,
+          3.197530746459961
+        ]
+      },
+      {
+        "type": "STAT",
+        "id": "000928F3",
+        "flags": "08008200",
+        "EDID": "MobileHomeASNV",
+        "MODL": "vehicles\\MobileHomeASNV.nif"
+      }
+    ]
+  },
+  "matching_active_plugin_records": [],
+  "next_action": "Ask before preparing a controlled test-position fixture. No further manual aiming retry requested.",
+  "game_modified": false,
+  "assistant_gameplay": false
+}

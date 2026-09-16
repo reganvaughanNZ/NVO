@@ -1,0 +1,30 @@
+{
+  "machine": "PE32 x86",
+  "exports": [
+    "NVSEPlugin_Load",
+    "NVSEPlugin_Query"
+  ],
+  "warnings": 0,
+  "dll_sha256": "a78d72dd22b7d605b150aa617ecb88b0047bde73c25f5f41b5cfea5b2d148d63",
+  "pdb_sha256": "e257619b26472cc46e23cc29803c16d608bbb1ed7d757449e8e5e67f0c31d1ee",
+  "codeview_pdb_guid": "a88cce24-e0a2-465a-84d7-673ed3bb2083",
+  "pdb_age": 1,
+  "pdb_pair_verified": true,
+  "dll_bytes": 327168,
+  "pdb_bytes": 4599808,
+  "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+  "packet": "3R1",
+  "native_version": 323,
+  "capacity_probe_enabled": false,
+  "damage_replacement": false,
+  "gameplay_tested": false,
+  "no_rebuild": true,
+  "source": "Same native323 source as accepted3R; original already compiled default configuration",
+  "checks": [
+    "Source compile inputs match frozen3R snapshot",
+    "Same normal DLL/PDB as recorded before3R playtest",
+    "Probe disabled marker present and probe arm/release absent",
+    "Reset diagnostics retained",
+    "Both NVSE exports and matched x86 DLL/PDB; zero compile warnings"
+  ]
+}

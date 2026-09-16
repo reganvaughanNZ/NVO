@@ -1,0 +1,117 @@
+{
+  "packet": "3T",
+  "native_version_unchanged": 323,
+  "game_files_written": false,
+  "game_started": false,
+  "captures": [
+    {
+      "capture": "3B3A-VATS",
+      "sha256": "2e0346c2642c2e3e8dbb9a6a02f515fceb9533431c81627f8205cb65b6851ec8",
+      "timing_rows": 36,
+      "moving_rows": 4,
+      "lifetime_next_update_pairs": 20,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 0,
+      "max_parent_dt_error_s": 0,
+      "movement_clock_pairs": 0,
+      "movement_equals_parent": 0,
+      "baseline_roundtrips": 0,
+      "max_baseline_relative_error": 0,
+      "unpaired_due_to_timing_cap": [],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    },
+    {
+      "capture": "3G2",
+      "sha256": "5c4e764753b73c258a176e4270b5b5bdbf8255ac6d35c097daa259cf89fcca63",
+      "timing_rows": 57,
+      "moving_rows": 41,
+      "lifetime_next_update_pairs": 49,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 49,
+      "max_parent_dt_error_s": 0.0,
+      "movement_clock_pairs": 49,
+      "movement_equals_parent": 49,
+      "baseline_roundtrips": 8,
+      "max_baseline_relative_error": 2.6839444000614776e-09,
+      "unpaired_due_to_timing_cap": [],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    },
+    {
+      "capture": "3Q",
+      "sha256": "37821ee73c001055b279fc56af83b8c57471ccefc16caac7e8e9a83fbde30b64",
+      "timing_rows": 226,
+      "moving_rows": 204,
+      "lifetime_next_update_pairs": 214,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 214,
+      "max_parent_dt_error_s": 0.0,
+      "movement_clock_pairs": 215,
+      "movement_equals_parent": 215,
+      "baseline_roundtrips": 12,
+      "max_baseline_relative_error": 3.5802231179715704e-09,
+      "unpaired_due_to_timing_cap": [
+        {
+          "session": 1,
+          "lifetime": 1,
+          "line": 807,
+          "reason": "timing_observer_capped"
+        }
+      ],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    },
+    {
+      "capture": "3R",
+      "sha256": "5e0d186d6c99525ffb8ecc472fd63634fa7d9b2f22386492ff654196b14cc73a",
+      "timing_rows": 201,
+      "moving_rows": 192,
+      "lifetime_next_update_pairs": 192,
+      "max_lifetime_prediction_error_s": 0,
+      "physics_parent_pairs": 192,
+      "max_parent_dt_error_s": 0.0,
+      "movement_clock_pairs": 192,
+      "movement_equals_parent": 192,
+      "baseline_roundtrips": 9,
+      "max_baseline_relative_error": 3.615411192647855e-09,
+      "unpaired_due_to_timing_cap": [],
+      "limitation": "No per-row VATS mode/global time factor was captured; the 3B3A label and 3Q shot7 are user-reported context."
+    }
+  ],
+  "cpp_checks": {
+    "checks_passed": 1741,
+    "logged_applied_steps_replayed": 427,
+    "max_speed_error_mps": 9.41800408327e-07,
+    "max_distance_error_units": 7.41699159335e-06,
+    "max_vertical_error_units": 6.76606575212e-07,
+    "max_partition_position_error_m": 6.94677305143e-06,
+    "max_partition_speed_error_mps": 1.27871066485e-05,
+    "game_loaded": false
+  },
+  "production_inputs_unchanged": 36,
+  "engine_snapshot_sha256": "f6c95eb7e7ea3f5968770d6a8b807260f160e08ff2be6e085ade515376f3b452",
+  "engine_slice_sha256": {
+    "parent_clock_and_vats_branch": "65555ec60c65157adc716c9c14d51afb2bc5d0d839d3215b3a22767c535d9a2d",
+    "virtual_call_then_lifetime_increment": "0bbc101752416d94c3173c17d867eccdde4f760beaabb0f4bc777cb8749bc065",
+    "displacement_built_before_turbo_clock": "1b9d1e0d1895a965d241dc52c67ed12865a75214487b8b0713ea148e2f174893"
+  },
+  "supporting_primary_source_sha256": {
+    "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameUI.h": "f9967a5ff8ec8d1746dd145b54239fa079b225ab033ff5c36a6b82db5b4ae1a1",
+    "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.h": "96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8",
+    "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameData.h": "c7ac149cbb70bb740e7fb074550d86fe0d50e254473f3c57bea2e021e2767848",
+    "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\Stewie Tweaks 10.00 Source\\nvse\\nvse\\GameAPI.cpp": "27834a4d3e6eb734efd398a69d2d4f5faa573323fae62f83dfea92115780bca1",
+    "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3b2\\timing-investigation\\BallistXMain-reference.txt": "90064a9756213093714ffe7b10107b838cc2c5f0ad2fa223a9d53a35a12b4500"
+  },
+  "source_sha256": {
+    "native\\NVOCombatCore\\src\\FlightPhysics.cpp": "98ffb8a0e1c41d0a2169783a5e59e1cce908e101914b7ceea0ef6a2f948a3c7f",
+    "native\\NVOCombatCore\\src\\FlightTiming.cpp": "1c96271b23065d94cf30101a88d347ba72841394bda619a30163b43cde30b5d0",
+    "native\\NVOCombatCore\\include\\FlightDragData.hpp": "2efffb921d8553ec59d952dac0ba7b3836b0871459ee1f3e1816c59e4cfcd202",
+    "tools\\audit_combat_3t.py": "6b0874ac70554ac45232e5edc5c4febc7962d7477b63e364ac344786e654193a",
+    "source\\combat\\step3t\\out\\clock_checks.cpp": "786f4b73775a1476a03a38229454d9f0524a6c19ff0182d5582a5e93b9158673"
+  },
+  "decisions": {
+    "world_scale": "retain authored 70 units/metre convention; no physical-world calibration claimed",
+    "clock": "use incoming UpdateProjectile timestep once; it already follows parent VATS handling",
+    "measured_contact_speed": false,
+    "damage_authority": false,
+    "ultra_gate": "HOLD"
+  }
+}

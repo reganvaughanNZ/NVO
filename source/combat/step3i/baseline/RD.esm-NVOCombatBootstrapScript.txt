@@ -1,0 +1,82 @@
+scn NVOCombatBootstrapScript
+
+short bChecked
+short bFrameworkReady
+short bCorePresent
+short bCombatEnabled
+short iMissingCount
+short iPacket
+long iRunCount
+long iNVSEMajor
+long iNVSEMinor
+float fQuestDelayTime
+
+Begin GameMode
+
+    set fQuestDelayTime to 1
+
+    if GetGameLoaded
+        set bChecked to 0
+    endif
+    if GetGameRestarted
+        set bChecked to 0
+    endif
+
+    if bChecked == 1
+        Return
+    endif
+
+    set bChecked to 1
+    set iPacket to 1
+    set iRunCount to iRunCount + 1
+    set iMissingCount to 0
+    set bFrameworkReady to 0
+    set bCorePresent to 0
+    set bCombatEnabled to 0
+    set iNVSEMajor to GetNVSEVersion
+    set iNVSEMinor to GetNVSERevision
+
+    PrintC "NVO Combat: foundation packet 1 initialized."
+
+    if iNVSEMajor < 6
+        set iMissingCount to iMissingCount + 1
+        PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
+    elseif iNVSEMajor == 6
+        if iNVSEMinor < 3
+            set iMissingCount to iMissingCount + 1
+            PrintC "NVO Combat: xNVSE 6.3.0 or newer is required."
+        endif
+    endif
+
+    if IsPluginInstalled "JIP NVSE Plugin" == 0
+        set iMissingCount to iMissingCount + 1
+        PrintC "NVO Combat: JIP LN NVSE is missing."
+    endif
+
+    if IsPluginInstalled "JohnnyGuitarNVSE" == 0
+        set iMissingCount to iMissingCount + 1
+        PrintC "NVO Combat: JohnnyGuitar NVSE is missing."
+    endif
+
+    if IsPluginInstalled "ShowOffNVSE Plugin" == 0
+        set iMissingCount to iMissingCount + 1
+        PrintC "NVO Combat: ShowOff NVSE is missing."
+    endif
+
+    if IsPluginInstalled "NVOCombatCore"
+        set bCorePresent to 1
+        PrintC "NVO Combat: native plugin detected. Damage hooks remain disabled."
+    else
+        PrintC "NVO Combat: native plugin not installed. Expected for packet 1."
+    endif
+
+    if iMissingCount == 0
+        set bFrameworkReady to 1
+        PrintC "NVO Combat: prerequisite plugins detected. Version audit is in the packet."
+    else
+        PrintC "NVO Combat: missing prerequisites. See the console lines above."
+    endif
+
+    PrintC "NVO Combat: packet 1 does not change combat."
+
+End

@@ -1,0 +1,80 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-133335\sincos.obj
+
+File Type: COFF OBJECT
+
+  004169A0: 55                 push        ebp
+  004169A1: 8B EC              mov         ebp,esp
+  004169A3: 83 EC 08           sub         esp,8
+  004169A6: D9 45 08           fld         dword ptr [ebp+8]
+  004169A9: D9 FB              fsincos
+  004169AB: D9 5D F8           fstp        dword ptr [ebp-8]
+  004169AE: D9 5D FC           fstp        dword ptr [ebp-4]
+  004169B1: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  004169B4: D9 45 FC           fld         dword ptr [ebp-4]
+  004169B7: D9 18              fstp        dword ptr [eax]
+  004169B9: 8B 4D 10           mov         ecx,dword ptr [ebp+10h]
+  004169BC: D9 45 F8           fld         dword ptr [ebp-8]
+  004169BF: D9 19              fstp        dword ptr [ecx]
+  004169C1: 8B E5              mov         esp,ebp
+  004169C3: 5D                 pop         ebp
+  004169C4: C3                 ret
+  004169C5: CC                 int         3
+  004169C6: CC                 int         3
+  004169C7: CC                 int         3
+  004169C8: CC                 int         3
+  004169C9: CC                 int         3
+  004169CA: CC                 int         3
+  004169CB: CC                 int         3
+  004169CC: CC                 int         3
+  004169CD: CC                 int         3
+  004169CE: CC                 int         3
+  004169CF: CC                 int         3
+  004169D0: 55                 push        ebp
+  004169D1: 8B EC              mov         ebp,esp
+  004169D3: 51                 push        ecx
+  004169D4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  004169D7: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004169DA: 8B 80 D8 01 00 00  mov         eax,dword ptr [eax+000001D8h]
+  004169E0: 8B E5              mov         esp,ebp
+  004169E2: 5D                 pop         ebp
+  004169E3: C3                 ret
+  004169E4: CC                 int         3
+  004169E5: CC                 int         3
+  004169E6: CC                 int         3
+  004169E7: CC                 int         3
+  004169E8: CC                 int         3
+  004169E9: CC                 int         3
+  004169EA: CC                 int         3
+  004169EB: CC                 int         3
+  004169EC: CC                 int         3
+  004169ED: CC                 int         3
+  004169EE: CC                 int         3
+  004169EF: CC                 int         3
+  004169F0: 55                 push        ebp
+  004169F1: 8B EC              mov         ebp,esp
+  004169F3: 51                 push        ecx
+  004169F4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  004169F7: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004169FA: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004169FD: 83 C1 08           add         ecx,8
+  00416A00: 8B 10              mov         edx,dword ptr [eax]
+  00416A02: 89 11              mov         dword ptr [ecx],edx
+  00416A04: 8B 50 04           mov         edx,dword ptr [eax+4]
+  00416A07: 89 51 04           mov         dword ptr [ecx+4],edx
+  00416A0A: 8B 40 08           mov         eax,dword ptr [eax+8]
+  00416A0D: 89 41 08           mov         dword ptr [ecx+8],eax
+  00416A10: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00416A13: C6 81 E4 00 00 00  mov         byte ptr [ecx+000000E4h],1
+            01
+  00416A1A: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  00416A1D: C6
+  00416A1E: 82
+  00416A1F: E5
+
+  Summary
+
+          80 .text

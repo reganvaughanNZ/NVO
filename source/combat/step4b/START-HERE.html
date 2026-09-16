@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NVO 4B · Armour reader test</title>
+<style>body{max-width:880px;margin:36px auto;padding:0 24px;background:#111815;color:#d9e7df;font:18px/1.6 "Segoe UI",sans-serif}h1,h2{color:#9fe0ba}a{color:#8ecbff}.notice{border-left:4px solid #91c99f;background:#1c2b21;padding:14px 20px}.cmd{display:flex;align-items:center;gap:15px;background:#070e09;padding:12px;margin:12px 0}.cmd code{flex:1;white-space:pre-wrap;color:#f0d58a}button{background:#b5d8c0;border:0;border-radius:4px;padding:9px 16px;cursor:pointer}li{margin:16px 0}</style></head><body>
+<h1>NVO 4B · Armour reader</h1><p><strong>Installed: NVO 0.3.26 / native 326.</strong> No GECK work needed.</p>
+<div class="notice">Purpose: confirm that the log identifies worn body armour, helmets and their condition, including after reload. This adds observation only; the new armour model and damage replacement remain off.</div>
+<h2>Short test · six landed hits, one reload</h2>
+<p>Use your disposable test setup. These console helpers change equipment and health for testing, so do not overwrite your normal save. Use a living human target and close-range, real-time shots with <strong>standard 9mm</strong>. No VATS, video or stress test is needed for this first check.</p>
+<ol><li><strong>Prepare.</strong> Load the game normally and run the kit command. It gives you a 9mm pistol and 100 rounds. Select standard 9mm in the ammunition menu.
+<div class="cmd"><code>bat NVOArmourKit4B</code><button type="button">Copy</button></div>
+Open the console, <strong>click your living human test target</strong>, and verify its name appears at the top. Then run:
+<div class="cmd"><code>bat NVOArmourTarget4B</code><button type="button">Copy</button></div>
+This equips full-condition Combat Armor and a Combat Helmet and restores the target to high health for repeated shots. Close the console, allow the armour to appear, and make a separate manual save named <strong>NVO 4B Test</strong>. Keep combat AI off if that is already how you run your tests.</li>
+<li><strong>Hit 1:</strong> shoot the armoured target once in the torso.</li>
+<li><strong>Hit 2:</strong> reopen the console and click the same target. Set its body armour to 200 of 400 condition, then close the console and land one torso shot.
+<div class="cmd"><code>SetEquippedCurrentHealth 200 2</code><button type="button">Copy</button></div></li>
+<li><strong>Hit 3:</strong> with the same target selected, remove its helmet. Close the console, check the helmet has disappeared, and land one head shot.
+<div class="cmd"><code>UnequipItem 00020426</code><button type="button">Copy</button></div></li>
+<li><strong>Hit 4:</strong> with the same target selected, unequip everything. Close the console and land one torso shot.
+<div class="cmd"><code>UnequipAllItems</code><button type="button">Copy</button></div></li>
+<li><strong>Hit 5:</strong> spawn a normal bloatfly and land one hit on it. This checks that a creature is skipped by the humanoid armour reader.
+<div class="cmd"><code>player.PlaceAtMe 0009189C 1</code><button type="button">Copy</button></div></li>
+<li><strong>Hit 6:</strong> reload <strong>NVO 4B Test</strong>, confirm the human target has its body armour and helmet again, and land one torso shot. Wait a few seconds, then quit normally.</li></ol>
+<p>Tell me <strong>“finished”</strong> and mention any missed shots, command errors or noticeable pauses. I will read the log directly. Avoid launching again before I capture it, because a new launch replaces the log.</p>
+<h2>What I will check</h2><ul>
+<li>Body armour <code>00020420</code> and helmet <code>00020426</code> appear as separate worn instances.</li>
+<li>Body condition changes from near full to near half. The observation boundary and ordinary game wear can make it slightly lower than the value set.</li>
+<li>The helmet disappears from the worn list after unequipping. The unarmoured hit records no worn armour, without claiming that model parts or natural protection are absent.</li>
+<li>The creature increases <code>unsupported_target_skipped</code>, and the reader resumes correctly after reload.</li>
+<li>All armour-authority, preview and gameplay-write flags remain zero. This checkpoint does not yet validate stress performance or every actor type.</li></ul>
+<p>Log: <code>Fallout New Vegas\NVOCombatCore.log</code> in the game root.</p>
+<h2>Reversal</h2><p>Close the game. Restore <code>NVOCombatCore.dll</code> and <code>NVOCombatCore.pdb</code> from the backup's <code>originals\Data\NVSE\Plugins</code> directory to the game's <code>Data\NVSE\Plugins</code>. You can remove the two root-level <code>NVOArmourKit4B.txt</code> and <code>NVOArmourTarget4B.txt</code> helpers. They never run automatically. Load your normal save to discard test changes.</p>
+<p>Backup: <code>backups\combat-install-4B-20260916-224741-c418db52</code> in the NVO workspace.</p>
+<p><a href="README.md">Reader details</a> · <a href="INSTALL-4B-result.json">Installation receipt</a> · <a href="STATIC-AUDIT.md">Offline audit</a></p>
+<script>document.querySelectorAll('button').forEach(button=>button.addEventListener('click',async()=>{const value=button.previousElementSibling.textContent;let copied=false;try{await navigator.clipboard.writeText(value);copied=true}catch(e){const box=document.createElement('textarea');box.value=value;document.body.appendChild(box);box.select();copied=document.execCommand('copy');box.remove()}button.textContent=copied?'Copied':'Select text to copy';setTimeout(()=>button.textContent='Copy',2000)}));</script></body></html>

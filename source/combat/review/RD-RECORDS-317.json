@@ -1,0 +1,2196 @@
+[
+  {
+    "type": "TES4",
+    "form": "00000000",
+    "edid": "",
+    "flags": 1,
+    "fields": [
+      {
+        "tag": "HEDR",
+        "bytes": 12,
+        "hex": "1f85ab3f0d000000c00d0000"
+      },
+      {
+        "tag": "CNAM",
+        "bytes": 8,
+        "hex": "44454641554c5400"
+      },
+      {
+        "tag": "MAST",
+        "bytes": 14,
+        "hex": "46616c6c6f75744e562e65736d00"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 8,
+        "hex": "0000000000000000"
+      }
+    ]
+  },
+  {
+    "type": "SCPT",
+    "form": "01000DBE",
+    "edid": "NVOCombatBootstrapScript",
+    "flags": 0,
+    "fields": [
+      {
+        "tag": "EDID",
+        "bytes": 25,
+        "hex": "4e564f436f6d626174426f6f74737472617053637269707400"
+      },
+      {
+        "tag": "SCHR",
+        "bytes": 20,
+        "hex": "0000000000000000ce0400000a00000001000100"
+      },
+      {
+        "tag": "SCDA",
+        "bytes": 1230,
+        "hex": null
+      },
+      {
+        "tag": "SCTX",
+        "bytes": 2213,
+        "hex": null
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "010000008033180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 9,
+        "hex": "62436865636b656400"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "020000006033180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 16,
+        "hex": "624672616d65776f726b526561647900"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "030000004033180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 13,
+        "hex": "62436f726550726573656e7400"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "040000002033180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 15,
+        "hex": "62436f6d626174456e61626c656400"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "050000000033180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 14,
+        "hex": "694d697373696e67436f756e7400"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "06000000e032180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 8,
+        "hex": "695061636b657400"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "07000000c032180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 10,
+        "hex": "6952756e436f756e7400"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "08000000a032180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 11,
+        "hex": "694e5653454d616a6f7200"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "090000008032180e00000000000000000100000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 11,
+        "hex": "694e5653454d696e6f7200"
+      },
+      {
+        "tag": "SLSD",
+        "bytes": 24,
+        "hex": "0a0000006032180e00000000000000000000000000000000"
+      },
+      {
+        "tag": "SCVR",
+        "bytes": 16,
+        "hex": "66517565737444656c617954696d6500"
+      }
+    ]
+  },
+  {
+    "type": "SPEL",
+    "form": "01000ADE",
+    "edid": "PlayerHelp",
+    "flags": 0,
+    "fields": [
+      {
+        "tag": "EDID",
+        "bytes": 11,
+        "hex": "506c6179657248656c7000"
+      },
+      {
+        "tag": "FULL",
+        "bytes": 4,
+        "hex": "476f6400"
+      },
+      {
+        "tag": "SPIT",
+        "bytes": 16,
+        "hex": "04000000000000000000000020000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "6d870500"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "0000000000000000000000000000000035000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "7a510100"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "0800000000000000000000000000000036000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "c0620200"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "2300000000000000000000000000000011000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "721d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "3c00000000000000000000000000000029000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "23100300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "9b0000000000000000000000000000000d000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "70510100"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "1e00000000000000000000000000000012000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "ef301600"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "1e0000000000000000000000000000004c000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "6d1d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "5000000000000000000000000000000023000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "7c1d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "1400000000000000000000000000000038000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "691d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "6400000000000000000000000000000027000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "6f1d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "3700000000000000000000000000000025000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "6c1d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "4600000000000000000000000000000022000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "731d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "500000000000000000000000000000002a000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "254b1300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "370000000000000000000000000000002c000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "701d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "4600000000000000000000000000000026000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "761d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "640000000000000000000000000000002d000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "711d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "6400000000000000000000000000000028000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "6e1d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "6400000000000000000000000000000024000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "781d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "9b00000000000000000000000000000010000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "771d0300"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "500000000000000000000000000000000c000000"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "5db00c00"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "12000000000000000000000000000000ffffffff"
+      },
+      {
+        "tag": "EFID",
+        "bytes": 4,
+        "hex": "4e010000"
+      },
+      {
+        "tag": "EFIT",
+        "bytes": 20,
+        "hex": "2b00000000000000000000000000000010000000"
+      }
+    ]
+  },
+  {
+    "type": "NPC_",
+    "form": "00000007",
+    "edid": "Player",
+    "flags": 0,
+    "fields": [
+      {
+        "tag": "EDID",
+        "bytes": 7,
+        "hex": "506c6179657200"
+      },
+      {
+        "tag": "OBND",
+        "bytes": 12,
+        "hex": "000000000000000000000000"
+      },
+      {
+        "tag": "MODL",
+        "bytes": 30,
+        "hex": "436861726163746572735c5f4d616c655c536b656c65746f6e2e4e494600"
+      },
+      {
+        "tag": "ACBS",
+        "bytes": 24,
+        "hex": "00020000900100000100010000009b000000000023000000"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d77c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d67c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d57c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d47c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d37c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d27c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d17c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "d07c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "cf7c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "ce7c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "cd7c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "cc7c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "cb7c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "ca7c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "c97c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "c87c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "c77c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "c67c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "c57c0400004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "a4b20100004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "70330c00004f444c"
+      },
+      {
+        "tag": "SNAM",
+        "bytes": 8,
+        "hex": "12e70700004f444c"
+      },
+      {
+        "tag": "VTCK",
+        "bytes": 4,
+        "hex": "3b850200"
+      },
+      {
+        "tag": "RNAM",
+        "bytes": 4,
+        "hex": "19000000"
+      },
+      {
+        "tag": "EAMT",
+        "bytes": 2,
+        "hex": "ff00"
+      },
+      {
+        "tag": "CNTO",
+        "bytes": 8,
+        "hex": "df0a000101000000"
+      },
+      {
+        "tag": "CNTO",
+        "bytes": 8,
+        "hex": "835b020001000000"
+      },
+      {
+        "tag": "CNTO",
+        "bytes": 8,
+        "hex": "3850010001000000"
+      },
+      {
+        "tag": "AIDT",
+        "bytes": 20,
+        "hex": "0000323200000000000000000000000000000000"
+      },
+      {
+        "tag": "CNAM",
+        "bytes": 4,
+        "hex": "6a7e0500"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 11,
+        "hex": "2602000009090909090909"
+      },
+      {
+        "tag": "DNAM",
+        "bytes": 28,
+        "hex": "0d0e0c0f0f0e1e0d0e19160e161d6464646464646464646464646464"
+      },
+      {
+        "tag": "PNAM",
+        "bytes": 4,
+        "hex": "ea5b0b00"
+      },
+      {
+        "tag": "HNAM",
+        "bytes": 4,
+        "hex": "eedd0200"
+      },
+      {
+        "tag": "LNAM",
+        "bytes": 4,
+        "hex": "0ad7233d"
+      },
+      {
+        "tag": "ENAM",
+        "bytes": 4,
+        "hex": "53420000"
+      },
+      {
+        "tag": "HCLR",
+        "bytes": 4,
+        "hex": "54462e00"
+      },
+      {
+        "tag": "NAM4",
+        "bytes": 4,
+        "hex": "06000000"
+      },
+      {
+        "tag": "FGGS",
+        "bytes": 200,
+        "hex": "d09cba3d58b1f93f08fa6a3d15577cbfcc2eabbf448aedbd402e503c935fd63f729883bf79bda33e50051d3ed026d5bf1ab77f3f52b307c09060b03f1fc244c06bf00e40f7693ac0e39711bfd6d5f33f8f12cfbffae5b6bfb017f6bef76756c0bdcaacbfe45d3c3f560719c0c2d8633f40fcc1bd046a8d3f606f0fbece09debf00afe13d94e6edbf24656b3f4474f53f48d8a03f437f18c0e4a5333f6406323e49788ebf90ab88be707c00c128099040d2f5fd3ff9220a3f1062a5bf82cb113fd8ec4ebff8b28640"
+      },
+      {
+        "tag": "FGGA",
+        "bytes": 120,
+        "hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "tag": "FGTS",
+        "bytes": 200,
+        "hex": "bd69edbfd6cd543f9771e03ec3f2a83f3d3be03e1e571b3f1c29733eb45412bf2c27debedcf8663cfe3e4d3f738e63bf05a7d43fc5e2393ff05600be40ebf43c4e34433f71eaaa3f04fe0c3eaeeb973ec09374bd9ce525beb7d1edbf2a1a77bfcc56db3e76e4a33eb2b023c018b2243fc04916bf54fc323e160cb83ffe59903e90078b3cc094033fbc8e0b3f267b03c05609cfbfd00442be9f7644bf42b5dcbebb8d1e3fd45fd93e53448bbeb65b67bf146714c055c0a03fe8f5cebe75e33fbf9aac693e2a5a403f"
+      },
+      {
+        "tag": "NAM5",
+        "bytes": 2,
+        "hex": "ff00"
+      },
+      {
+        "tag": "NAM6",
+        "bytes": 4,
+        "hex": "00000000"
+      },
+      {
+        "tag": "NAM7",
+        "bytes": 4,
+        "hex": "00000000"
+      }
+    ]
+  },
+  {
+    "type": "LVLI",
+    "form": "01000ADF",
+    "edid": "ReganGear",
+    "flags": 0,
+    "fields": [
+      {
+        "tag": "EDID",
+        "bytes": 10,
+        "hex": "526567616e4765617200"
+      },
+      {
+        "tag": "OBND",
+        "bytes": 12,
+        "hex": "000000000000000000000000"
+      },
+      {
+        "tag": "LVLD",
+        "bytes": 1,
+        "hex": "00"
+      },
+      {
+        "tag": "LVLF",
+        "bytes": 1,
+        "hex": "04"
+      }
+    ]
+  },
+  {
+    "type": "QUST",
+    "form": "01000DBF",
+    "edid": "NVOCombatBootstrapScriptQ",
+    "flags": 0,
+    "fields": [
+      {
+        "tag": "EDID",
+        "bytes": 26,
+        "hex": "4e564f436f6d626174426f6f7473747261705363726970745100"
+      },
+      {
+        "tag": "SCRI",
+        "bytes": 4,
+        "hex": "be0d0001"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 8,
+        "hex": "0100000000000000"
+      }
+    ]
+  },
+  {
+    "type": "PERK",
+    "form": "00058FDF",
+    "edid": "PowerArmorTraining",
+    "flags": 0,
+    "fields": [
+      {
+        "tag": "EDID",
+        "bytes": 19,
+        "hex": "506f77657241726d6f72547261696e696e6700"
+      },
+      {
+        "tag": "FULL",
+        "bytes": 21,
+        "hex": "506f7765722041726d6f7220547261696e696e6700"
+      },
+      {
+        "tag": "DESC",
+        "bytes": 86,
+        "hex": "596f75206861766520726563656976656420746865207370656369616c697a656420747261696e696e67206e656564656420746f206d6f766520696e20616e7920666f726d206f6620506f7765722041726d6f722e00"
+      },
+      {
+        "tag": "ICON",
+        "bytes": 53,
+        "hex": "496e746572666163655c49636f6e735c506970626f79496d616765735c4170706172656c5c706f7765725f61726d6f722e64647300"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 5,
+        "hex": "0101010100"
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "000000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 8,
+        "hex": "b238000050000000"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      }
+    ]
+  },
+  {
+    "type": "PERK",
+    "form": "01000ADD",
+    "edid": "Regan",
+    "flags": 0,
+    "fields": [
+      {
+        "tag": "EDID",
+        "bytes": 6,
+        "hex": "526567616e00"
+      },
+      {
+        "tag": "FULL",
+        "bytes": 6,
+        "hex": "526567616e00"
+      },
+      {
+        "tag": "DESC",
+        "bytes": 6,
+        "hex": "526567616e00"
+      },
+      {
+        "tag": "ICON",
+        "bytes": 53,
+        "hex": "496e746572666163655c49636f6e735c506970626f79496d616765735c5065726b735c5065726b5f63616e6e6962616c2e64647300"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 5,
+        "hex": "0101010100"
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "c97c0b00"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f3d40700"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "160c0600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "d4290e00"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "de0a0001"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "2bc11400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "31c11400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "e0cc1400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "2fc11400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "33c11400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "35c11400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "2cc11400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "29c11400"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "235f0a00"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "245f0a00"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "255f0a00"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "265f0a00"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "275f0a00"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f1300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f3300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "e8300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "e7300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f5300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f6300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "fd300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f0300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f8300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f2300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "f9300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "fa300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "e6300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "fb300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "fc300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "fe300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "ff300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "010000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 4,
+        "hex": "e5300600"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "280302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803e"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "330101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "450101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "2b0302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00002040"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "170301"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00000000"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "370301"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "cdcc4c3e"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "1f0101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "040102"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00000000"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "020303"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00006040"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "300101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "460101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "240303"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00000000"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "110302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "cdcccc3d"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "000303"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "6666c63f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "060303"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "cdcccc3d"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "2c0301"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0ad7233c"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "0c0201"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00002041"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "250302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "9a99d93f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "2a0301"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "cdcccc3f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "360102"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "6666e63f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "490301"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "cdcc4c3e"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "190301"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00008040"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "090201"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00008040"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "230103"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000f041"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "090301"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "713d2a40"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "050302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "cdcccc3e"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "480302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "3333f33f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "3b0302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "e17ad43f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "200101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "140101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "0000803f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "160101"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "00809d43"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "220302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "cdcc0c3f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "070302"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "01"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 4,
+        "hex": "3333b33f"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "010403"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "02"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 8,
+        "hex": "000000000000fa42"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      },
+      {
+        "tag": "PRKE",
+        "bytes": 3,
+        "hex": "020000"
+      },
+      {
+        "tag": "DATA",
+        "bytes": 3,
+        "hex": "080403"
+      },
+      {
+        "tag": "EPFT",
+        "bytes": 1,
+        "hex": "02"
+      },
+      {
+        "tag": "EPFD",
+        "bytes": 8,
+        "hex": "0000803f0000c842"
+      },
+      {
+        "tag": "PRKF",
+        "bytes": 0,
+        "hex": ""
+      }
+    ]
+  }
+]

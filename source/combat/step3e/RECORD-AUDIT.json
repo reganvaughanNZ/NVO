@@ -1,0 +1,251 @@
+{
+  "packet": "3E",
+  "native_plugin_version": 311,
+  "native_rebuilt": false,
+  "base_esm_sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b",
+  "donor_sha256": "d71fe28f1262dec7a0f2086f06b243168d74a3f11d8b57cd8b7b8127c9506e3d",
+  "additions": [
+    {
+      "name": "10mm-pistol",
+      "weapon": 17231,
+      "ammo": 16961,
+      "source": 183647,
+      "cartridge": 183647,
+      "local": 2058,
+      "weapon_name": "10mm Pistol",
+      "ammo_name": "10mm Round",
+      "ammo_list": "001537E6",
+      "ammo_members": [
+        "00004241",
+        "0013E43B",
+        "00140AA8"
+      ],
+      "ammo_projectile_override": 0,
+      "weapon_source": {
+        "line": 5,
+        "text": "@FalloutNV.esm:00434F\t\t\t\t6.0\t\t1.3\t\t11.0\t; 10mm Pistol\t\t\t\t\t\t; 10mm-FMJ, 15m, Desert Eagle ???"
+      },
+      "cartridge_source": {
+        "line": 2,
+        "text": "@FalloutNV.esm:02CD5F\t\t\t1\t0.155\t180\t\t0.400\t503\t\t0.45\t0.6\t\t47\t\t; 10mm-FMJ"
+      },
+      "muzzle_mps": 437.39130434782606,
+      "retained_source_fields": {
+        "EDID": "31306d6d42756c6c657450726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "5269666c652042756c6c657400",
+        "MODL": "70726f6a656374696c65735c31306d6d70726f6a656374696c652e4e494600",
+        "MODT": "f4e50662badae4c774650662bfdae4c7736514740caf62afeedf086289c9566f6e5f08628ec9566f736514740caf62afb1b0106696e60762313010669be6076273741074b3e1c96d",
+        "DATA": "8d000100000040400000d74600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a0400000000000000000000000003f35c145f8090cc7d718f2c550a5be45",
+        "NAM1": "456666656374735c4d757a7a6c65466c61736865735c48616e6447756e4d757a7a6c65466c61736830312e4e494600",
+        "NAM2": "b2b011662d9c07a132301166329c07a173651e74e527efd8b1b0106696e60762313010669be6076273741074b3e1c96d",
+        "VNAM": "01000000"
+      },
+      "clone_fields": {
+        "EDID": "4e564f466c69676874334531306d6d706973746f6c50726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "4e564f20466c69676874202d2031306d6d2d706973746f6c2042756c6c657400",
+        "MODL": "70726f6a656374696c65735c31306d6d70726f6a656374696c652e4e494600",
+        "MODT": "f4e50662badae4c774650662bfdae4c7736514740caf62afeedf086289c9566f6e5f08628ec9566f736514740caf62afb1b0106696e60762313010669be6076273741074b3e1c96d",
+        "DATA": "8c00010000000000c832ef4600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a0400000000000000000000000003f35c145f8090cc7d718f2c550a5be45",
+        "NAM1": "456666656374735c4d757a7a6c65466c61736865735c48616e6447756e4d757a7a6c65466c61736830312e4e494600",
+        "NAM2": "b2b011662d9c07a132301166329c07a173651e74e527efd8b1b0106696e60762313010669be6076273741074b3e1c96d",
+        "VNAM": "01000000"
+      },
+      "unused_donor_damage": 47.0,
+      "profile": {
+        "weapon": "FalloutNV.esm:00434F",
+        "ammo": "FalloutNV.esm:004241",
+        "source_projectile": "FalloutNV.esm:02CD5F",
+        "projectile": "NVOFlightPilot.esp:00080A",
+        "select_on_fire": 1,
+        "flight_enabled": 1,
+        "drag_model": 1,
+        "ballistic_coefficient": 0.155,
+        "maximum_velocity_mps": 503.0,
+        "barrel_in": 6.0,
+        "peak_travel_in": 0.45
+      }
+    },
+    {
+      "name": "357-magnum-revolver",
+      "weapon": 586262,
+      "ammo": 584962,
+      "source": 586252,
+      "cartridge": 586252,
+      "local": 2059,
+      "weapon_name": ".357 Magnum Revolver",
+      "ammo_name": ".357 Magnum Round",
+      "ammo_list": "001537E3",
+      "ammo_members": [
+        "0008ED02",
+        "0013E43C",
+        "00140A9E",
+        "0015E8EE"
+      ],
+      "ammo_projectile_override": 0,
+      "weapon_source": {
+        "line": 1,
+        "text": "@FalloutNV.esm:08F216\t\t\t\t5.5\t\t2.7\t\t5.0\t\t; .357 Magnum Revolver\t\t\t\t; 357M-FMJ, 30m, Colt SAA"
+      },
+      "cartridge_source": {
+        "line": 93,
+        "text": "@FalloutNV.esm:08F20C\t\t\t1\t0.184\t158\t\t0.357\t602\t\t1.05\t0.6\t\t51\t\t; 357M-FMJ"
+      },
+      "muzzle_mps": 435.65789473684214,
+      "retained_source_fields": {
+        "EDID": "33353743616c506973746f6c42756c6c657450726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "2e33353720506973746f6c2042756c6c657400",
+        "MODL": "70726f6a656374696c65735c33353770726f6a656374696c652e4e494600",
+        "DATA": "89000100000090400000cd4600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a040000000000000000000000000e0f110c798f73cc7d0ca0d46c3f5683f",
+        "NAM1": "656666656374735c4d757a7a6c65466c61736865735c68616e6467756e6d757a7a6c65666c61736830312e6e696600",
+        "VNAM": "01000000"
+      },
+      "clone_fields": {
+        "EDID": "4e564f466c6967687433453335376d61676e756d7265766f6c76657250726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "4e564f20466c69676874202d203335372d6d61676e756d2d7265766f6c7665722042756c6c657400",
+        "MODL": "70726f6a656374696c65735c33353770726f6a656374696c652e4e494600",
+        "DATA": "88000100000000001b40ee4600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000a040000000000000000000000000e0f110c798f73cc7d0ca0d46c3f5683f",
+        "NAM1": "656666656374735c4d757a7a6c65466c61736865735c68616e6467756e6d757a7a6c65666c61736830312e6e696600",
+        "VNAM": "01000000"
+      },
+      "unused_donor_damage": 51.0,
+      "profile": {
+        "weapon": "FalloutNV.esm:08F216",
+        "ammo": "FalloutNV.esm:08ED02",
+        "source_projectile": "FalloutNV.esm:08F20C",
+        "projectile": "NVOFlightPilot.esp:00080B",
+        "select_on_fire": 1,
+        "flight_enabled": 1,
+        "drag_model": 1,
+        "ballistic_coefficient": 0.184,
+        "maximum_velocity_mps": 602.0,
+        "barrel_in": 5.5,
+        "peak_travel_in": 1.05
+      }
+    },
+    {
+      "name": "44-magnum-revolver",
+      "weapon": 586261,
+      "ammo": 168830,
+      "source": 245516,
+      "cartridge": 245516,
+      "local": 2060,
+      "weapon_name": ".44 Magnum Revolver",
+      "ammo_name": ".44 Magnum Round",
+      "ammo_list": "001537E4",
+      "ammo_members": [
+        "0002937E",
+        "0013E437",
+        "0013E438",
+        "0015E8ED"
+      ],
+      "ammo_projectile_override": 0,
+      "weapon_source": {
+        "line": 3,
+        "text": "@FalloutNV.esm:08F215\t\t\t\t6.5\t\t2.6\t\t5.4\t\t; .44 Magnum Revolver\t\t\t\t; 44M-FMJ, 30m, S&W Model 29"
+      },
+      "cartridge_source": {
+        "line": 111,
+        "text": "@FalloutNV.esm:03BF0C\t\t\t1\t0.190\t245\t\t0.429\t567\t\t0.9\t\t0.6\t\t62\t\t; 44M-FMJ"
+      },
+      "muzzle_mps": 444.0361445783132,
+      "retained_source_fields": {
+        "EDID": "34344d61676e756d506973746f6c42756c6c657450726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "2e3434204d61676e756d20506973746f6c2042756c6c657400",
+        "MODL": "70726f6a656374696c65735c34346d616770726f6a656374696c652e4e494600",
+        "MODT": "f4e50662badae4c774650662bfdae4c7736514740caf62afeedf086289c9566f6e5f08628ec9566f736514740caf62afb1b0106696e60762313010669be6076273741074b3e1c96d",
+        "DATA": "8d000100000068410000c84600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000204100000000000000000000000000000000000000004561744800000000",
+        "NAM1": "456666656374735c4d757a7a6c65466c61736865735c48616e6447756e4d757a7a6c65466c61736830312e4e494600",
+        "NAM2": "b2b011662d9c07a132301166329c07a173651e74e527efd8b1b0106696e60762313010669be6076273741074b3e1c96d",
+        "VNAM": "01000000"
+      },
+      "clone_fields": {
+        "EDID": "4e564f466c69676874334534346d61676e756d7265766f6c76657250726f6a656374696c6500",
+        "OBND": "000000000000000000000000",
+        "FULL": "4e564f20466c69676874202d2034342d6d61676e756d2d7265766f6c7665722042756c6c657400",
+        "MODL": "70726f6a656374696c65735c34346d616770726f6a656374696c652e4e494600",
+        "MODT": "f4e50662badae4c774650662bfdae4c7736514740caf62afeedf086289c9566f6e5f08628ec9566f736514740caf62afb1b0106696e60762313010669be6076273741074b3e1c96d",
+        "DATA": "8c000100000000000fd5f24600401c4600000000e91d030000000000000000000000000000000000318701000ad7233d0000003f0000204100000000000000000000000000000000000000004561744800000000",
+        "NAM1": "456666656374735c4d757a7a6c65466c61736865735c48616e6447756e4d757a7a6c65466c61736830312e4e494600",
+        "NAM2": "b2b011662d9c07a132301166329c07a173651e74e527efd8b1b0106696e60762313010669be6076273741074b3e1c96d",
+        "VNAM": "01000000"
+      },
+      "unused_donor_damage": 62.0,
+      "profile": {
+        "weapon": "FalloutNV.esm:08F215",
+        "ammo": "FalloutNV.esm:02937E",
+        "source_projectile": "FalloutNV.esm:03BF0C",
+        "projectile": "NVOFlightPilot.esp:00080C",
+        "select_on_fire": 1,
+        "flight_enabled": 1,
+        "drag_model": 1,
+        "ballistic_coefficient": 0.19,
+        "maximum_velocity_mps": 567.0,
+        "barrel_in": 6.5,
+        "peak_travel_in": 0.9
+      }
+    }
+  ],
+  "all_seven_regular_profiles_checked": [
+    {
+      "profile": "9mm-pistol",
+      "source": "0008F20F",
+      "private": "01000806",
+      "weapon_projectile_verified": true,
+      "clone_verified": true
+    },
+    {
+      "profile": "hunting-rifle",
+      "source": "0008F20A",
+      "private": "01000807",
+      "weapon_projectile_verified": true,
+      "clone_verified": true
+    },
+    {
+      "profile": "9mm-smg",
+      "source": "0017A2C6",
+      "private": "01000808",
+      "weapon_projectile_verified": true,
+      "clone_verified": true
+    },
+    {
+      "profile": "service-rifle",
+      "source": "0000426D",
+      "private": "01000809",
+      "weapon_projectile_verified": true,
+      "clone_verified": true
+    },
+    {
+      "profile": "10mm-pistol",
+      "source": "0002CD5F",
+      "private": "0100080A",
+      "weapon_projectile_verified": true,
+      "clone_verified": true
+    },
+    {
+      "profile": "357-magnum-revolver",
+      "source": "0008F20C",
+      "private": "0100080B",
+      "weapon_projectile_verified": true,
+      "clone_verified": true
+    },
+    {
+      "profile": "44-magnum-revolver",
+      "source": "0003BF0C",
+      "private": "0100080C",
+      "weapon_projectile_verified": true,
+      "clone_verified": true
+    }
+  ],
+  "previous_ten_private_records_preserved": true,
+  "previous_six_profiles_preserved": true,
+  "total_profiles": 9,
+  "source_overrides_in_NVO": [],
+  "stock_overrides": 0,
+  "damage_replacement": false,
+  "gameplay_tested": false
+}

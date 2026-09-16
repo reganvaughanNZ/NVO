@@ -1,0 +1,38 @@
+{
+  "status": "installed",
+  "packet": "3D",
+  "version": 311,
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3D-20260915-165232-25cd5ab3",
+  "closed_processes": [],
+  "archived_removed": 0,
+  "replaced": 5,
+  "installed": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "f91a5e6e363443a9a0ce0be6803cdb05b758122cb9e0486ad4805b5ebfb99255"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "fe6156cb49d988022317c4b117f4ae3d6b5034959c3a98473a65da249968560e"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPreview.ini",
+      "sha256": "bb305fc39de527a5759cc80d56e74686154d41c5141574455e8186073043141f"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    },
+    {
+      "path": "Data/NVOFlightPilot.esp",
+      "sha256": "001ea6b53efc673c9dc089e6f5b3e2afc5f3afbc2093ba7fe6ec0a7327568cdc"
+    },
+    {
+      "path": "NVOFlightKit.txt",
+      "sha256": "ee1b5af80302197f65766b1a2a6234e29276a646e21557e3219a75f843f25e07"
+    }
+  ],
+  "protected_files_verified": 48,
+  "game_relaunched": false,
+  "gameplay_tested": false
+}

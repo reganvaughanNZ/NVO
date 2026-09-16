@@ -1,0 +1,113 @@
+{
+  "packet": 1,
+  "runtime_configuration": false,
+  "status": "Original quest source compiled by user. JIP name correction awaiting recompilation. Native source unbuilt.",
+  "geck_records": {
+    "script": "NVOCombatBootstrapScript",
+    "script_type": "Quest",
+    "quest": "NVOCombatBootstrapQ",
+    "start_game_enabled": true,
+    "priority": 0,
+    "form_ids": "GECK allocates new IDs"
+  },
+  "runtime_changes_in_packet": "Console readiness report only. Combat disabled.",
+  "dependencies": [
+    {
+      "name": "Fallout New Vegas",
+      "native_target": "1.4.0.525 normal runtime",
+      "phase": "Native foundation build"
+    },
+    {
+      "name": "xNVSE",
+      "minimum_for_bootstrap": "6.3.0",
+      "phase": "1",
+      "commands": [
+        "GetGameLoaded",
+        "GetGameRestarted",
+        "GetNVSEVersion",
+        "GetNVSERevision",
+        "IsPluginInstalled",
+        "PrintC"
+      ],
+      "source": "https://github.com/xNVSE/NVSE"
+    },
+    {
+      "name": "GECK with xNVSE-aware Extender compiler",
+      "phase": "1 compilation",
+      "note": "Native NVO DLL is not needed in the editor"
+    },
+    {
+      "name": "JIP LN NVSE",
+      "plugin_name": "JIP LN NVSE",
+      "dll": "jip_nvse.dll",
+      "phase": "Combat framework",
+      "packet_1_check": "Presence only",
+      "later_version_floor": "Declare per packet from functions actually used",
+      "legacy_plugin_name": "JIP NVSE Plugin"
+    },
+    {
+      "name": "JohnnyGuitar NVSE",
+      "plugin_name": "JohnnyGuitarNVSE",
+      "dll": "JohnnyGuitarNVSE.dll",
+      "phase": "Combat framework",
+      "packet_1_check": "Presence only",
+      "later_version_floor": "Declare per packet from functions actually used"
+    },
+    {
+      "name": "ShowOff NVSE",
+      "plugin_name": "ShowOffNVSE Plugin",
+      "dll": "ShowOffNVSE.dll",
+      "phase": "Combat framework",
+      "packet_1_check": "Presence only",
+      "later_version_floor": "Declare per packet from functions actually used"
+    },
+    {
+      "name": "NVOCombatCore",
+      "plugin_name": "NVOCombatCore",
+      "dll": "NVOCombatCore.dll",
+      "prepared_native_version": 100,
+      "phase": "Source project prepared in 1, installation deferred",
+      "required_for_packet_1": false
+    },
+    {
+      "name": "KEYWORDS",
+      "phase": "Later classification support",
+      "required_for_packet_1": false
+    },
+    {
+      "name": "Combat AI Tweaks",
+      "reference_archive_version": "1.0.1",
+      "dll": "CombatAITweaksNVSE.dll",
+      "phase": "7",
+      "required_for_packet_1": false
+    },
+    {
+      "name": "Modern Ambient Temperature",
+      "phase": "Later optional weather integration",
+      "required_for_packet_1": false
+    },
+    {
+      "name": "SUP NVSE",
+      "phase": "Required by unmodified BallistX, not inherited automatically by NVO adaptation",
+      "required_for_packet_1": false
+    },
+    {
+      "name": "Other donor dependencies",
+      "phase": "Audit for each selected feature before copying",
+      "note": "No whole-mod installation implied by inclusion in donor inventory"
+    }
+  ],
+  "native_build": {
+    "architecture": "Win32 x86",
+    "compiler": "Visual Studio 2022 MSVC C++ with Windows SDK",
+    "cmake_minimum": "3.21",
+    "build_performed": false,
+    "dll_included": false,
+    "full_xnvse_sdk_required_for_prefix_only_bootstrap": false
+  },
+  "delivery": {
+    "data_files_to_copy_now": [],
+    "user_checkpoint": "Compile script, create quest and save NVO.esm",
+    "automatic_installation": false
+  }
+}

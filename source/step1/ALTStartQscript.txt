@@ -1,0 +1,192 @@
+Scn ALTStartQscript
+
+Float iStage
+Int iBackground
+Ref rMarker
+Ref rRef
+Int iWealth
+String_Var svString
+
+Int bBlockUI
+Int iUI
+Ref rBackMSG
+String_Var sBackDesc
+String_Var sUIName
+String_Var sUIPath
+
+Int bCustomMenu
+Float ftimer
+
+Int ModOverridingIndex
+String_Var modName
+
+Ref rLambda
+Int iAmount
+
+Float fWildWastelandChance
+
+; ===== remove comments from Preorder gear ====
+
+Begin menumode 1001
+	If bCustomMenu == 1  
+		If iStage == -1 
+			SetUIFloatAlt "MessageMenu/NOGLOW_BRANCH/MM_MainRect/width" 1000
+			SetUIFloatAlt "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_MessageText/wrapwidth" 940
+			SetUIFloatAlt "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_BottomBracket/y" 768
+			SetUIFloatALT "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_ButtonList/x" 600 
+			SetUIFloatALT "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_ButtonList/y" 320
+			If Eval GetUIString "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_Title/string" == "Background"
+				If GetActiveUIComponentID == 7
+					If sUIName != GetActiveUIComponentName
+						sUIName = GetActiveUIComponentName
+						sUIPath = "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_ButtonList/"+$sUIName+"/listindex"
+						iUI = GetUIFloatAlt $sUIPath
+						rBackMSG = ListGetNthForm ALTBackList iUI
+						sBackDesc = GetFormDescription rBackMSG
+						SetUIStringAlt "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_MessageText/string" $sBackDesc
+						SetUIFloatAlt "MessageMenu/NOGLOW_BRANCH/MM_MainRect/MM_MessageText/justify" 1
+					EndIf
+				EndIf
+			EndIf
+		EndIf
+	EndIf
+	
+End
+
+
+
+
+
+
+Begin gamemode 
+	If getgamerestarted
+		If GetNVSEVersion < 6
+			messageboxex "Alternate Start requires NVSE version 6.3.0 or greater. Make sure you update it or this mod will not work."
+			Return
+		ElseIf IsPluginInstalled "JIP NVSE Plugin" == 0
+			messageboxex "Alternate Start requires JIP LN NVSE. Make sure you have it installed or this mod will not work."
+			Return
+		ElseIf IsPluginInstalled "JohnnyGuitarNVSE" == 0
+			messageboxex "Alternate Start requires JohnnyGuitarNVSE. Make sure you have it installed or this mod will not work."
+			Return
+		ElseIf IsPluginInstalled "ShowOffNVSE Plugin" == 0
+			messageboxex "Alternate Start requires ShowOffNVSE. Make sure you have it installed or this mod will not work."
+			Return
+		ElseIf ismodloaded "Better Character Creation.esm"
+			messageboxex "Incompatible Mod Detected: Better Character Creation%r%r Better Character Creation is not compatible with Alternate Start. If you proceed, you will experience issues."
+			Return
+		ElseIf Eval IsFormOverridden VCG00
+			Set ModOverridingIndex to GetFormOverrideIndex VCG00 
+			Let modName := GetModName ModOverridingIndex 1
+			messageboxex "The starting quest %qVCG00%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+			sv_destruct modName
+			Return
+		ElseIf Eval IsFormOverridden VCG01
+			Set ModOverridingIndex to GetFormOverrideIndex VCG01
+			Let modName := GetModName ModOverridingIndex 1
+			messageboxex "The starting quest %qVCG01%q which Alternate Start needs to function is being overwritten by %z. Resolve this conflict or the mod will not work properly." modName
+			sv_destruct modName
+			Return
+		Elseif ismodloaded "YUP - Base Game + All DLC.esm" && GetModIndex "YUP - Base Game + All DLC.esm" > GetModIndex "NVO.esm"
+			messageboxex "WARNING: YUP - Base Game + All DLC.esm is loaded below NVO.esm.%r%rMake sure YUP is loaded above NVO.esm in your load order or you will experience issues."
+			return
+		endif
+	EndIf
+	
+	If bCustomMenu == 0
+		If Eval (GetINIFloat "All:bDisableBackgroundMenu" "ALTStartConfig.ini") == 1
+			bCustomMenu = -1
+		Else
+			bCustomMenu = 1
+		EndIf
+	EndIf
+	
+	
+	If iStage == 0
+		iUI = -1
+		call ALTBackgroundMenu -1
+		iStage = -1
+	ElseIf iStage == 1
+		GetPlayerName
+		iStage = 2
+	ElseIf iStage == 2
+		ShowRaceMenu
+		iStage = 3
+	ElseIf iStage == 3
+		If ALTBackground == 42
+			Player.SetActorValue intelligence 3
+			Player.SetActorValue charisma 3
+			SetSPECIALPoints 36
+		Else
+			SetSPECIALPoints 40
+		EndIf
+		iStage = 4
+	ElseIf iStage == 4
+		SetTagSkills 3 1
+		iSTage = 5
+	ElseIf iStage == 5
+		SetPerkFlag WildWasteland 1 0 
+		ShowTraitMenu
+		iStage = 6
+	ElseIf iStage == 6 
+		fWildWastelandChance = GetINIFloat "All:fWildWastelandChance" "ALTStartConfig.ini"
+		if fWildWastelandChance >= 0
+			if (1 - fWildWastelandChance) < (Rand 0.01, 1)
+				player.addperk WildWasteland
+			endif
+			iStage = 7
+		else 
+			messageboxexalt ALTWildWastelandMSG "^Wild Wasteland^Wild Wasteland unleashes the most bizarre and silly elements of post-apocalyptic America. Not for the faint of heart or the serious of temperament.%r%rWould you like to experience these unusual events? Once you select an option, you will not be able to change it.|Buy the ticket, take the ride...|I don't believe in aliens!"
+		endif
+	ElseIf iStage == 7
+		ALTCasualtHardcoreMessageActivateRef.activate Player 1
+		iStage = 8
+		
+	ElseIf iStage == 8
+		svString = GetStringSetting "sHowMany"
+		SetStringSetting "sHowMany" "Choose Starting Level"
+		rLambda = (Begin function {iAmount}
+				ALTLevelQ.iLevel = iAmount
+				iStage = 10
+		End)
+		showquantityMenu rLambda 20 1
+		SetStringSetting "sHowMany" $svString
+		iStage = 9	
+		
+	ElseIf iStage == 10
+		imod FadeInFromBlack4sISFX 
+		
+		; add background related gear and run functions for the chosen background
+		call ListGetNthForm ALTBackUDFList ALTBackground
+		
+		; add gear based on tagged skills
+		call ALTStartingGearUDF iWealth
+
+		Player.moveto rMarker 
+		Eval LNSetName ($ALTQ.sVeronicLoc) VDialogueVeronicaVeronicaTopic000
+		Eval LNSetName ($ALTQ.sMajorKnight) vMojavevMOMajorKnightTopic019
+		if ALTBackground != 56 && ALTBackground != 57
+			enableplayercontrols
+		endif
+		PlayMusic musSCRGoodspringsStinger
+		iStage = 11
+		fTimer = 8 
+	ElseIf iStage == 11
+		If ftimer <= 0
+			iStage = 12
+			stopquest ALTStartQ
+			sv_destruct sUIPath sUIName sBackDesc svString
+			if eval (GetINIFloat "All:bShowChosenBackground" "ALTStartConfig.ini")
+				rBackMSG = ListGetNthForm ALTBackList ALTBackground
+				ShowMessage rBackMSG
+			endif
+			If ALTLevelQ.iLevel > 1
+				startquest ALTLevelQ
+			Else
+				ForceSave
+			EndIf
+		Else
+			ftimer -= GetSecondsPassed
+		EndIf
+	EndIf
+End 

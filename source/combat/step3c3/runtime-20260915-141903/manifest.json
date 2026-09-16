@@ -1,0 +1,96 @@
+{
+  "captured_at": "2026-09-15T14:19:03.7840926+12:00",
+  "pid": 1516,
+  "process_start_utc": "2026-09-15T02:13:50.2621055Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "files": [
+    {
+      "filename": "position_commit-00575830.bin",
+      "address": "00575830",
+      "sha256": "d23ef77de8bdd36cc09935d3f9f59e29a3e7b05f930d4b94cf354d937e34b33f",
+      "name": "position_commit",
+      "bytes": 1280
+    },
+    {
+      "filename": "controller_move-00C70B60.bin",
+      "address": "00C70B60",
+      "sha256": "900e62298aa7629f561617148fc4f20485baf9e83072371a775ba41cca3ca62c",
+      "name": "controller_move",
+      "bytes": 256
+    },
+    {
+      "filename": "node_getter-0043FCD0.bin",
+      "address": "0043FCD0",
+      "sha256": "49decfb3714c1204dee34009a9bb928504266a80ff4ddc627cd1447d9d2d68fd",
+      "name": "node_getter",
+      "bytes": 256
+    },
+    {
+      "filename": "movement_queue-00C6EBD0.bin",
+      "address": "00C6EBD0",
+      "sha256": "f3119e598669e8923f70edc71d1a4e5241f9b417725642b349287e037834ae09",
+      "name": "movement_queue",
+      "bytes": 256
+    },
+    {
+      "filename": "movement-0092F260.bin",
+      "address": "0092F260",
+      "sha256": "8bbb4b068af63b965a4c51fee4d69f7a9abc62f43ed198c69275b67278b05c80",
+      "name": "movement",
+      "bytes": 5152
+    },
+    {
+      "filename": "projectile_move-009BF300.bin",
+      "address": "009BF300",
+      "sha256": "fd3bd986e7970ac1f1be42fbdd959be55861c5b889ecb40ab129bce6014a1a60",
+      "name": "projectile_move",
+      "bytes": 368
+    },
+    {
+      "filename": "movement_thread-009304A0.bin",
+      "address": "009304A0",
+      "sha256": "8383e3e86cf59642210ccaef52bd7ff037649f1c544bab168d48ab13cdeca3b0",
+      "name": "movement_thread",
+      "bytes": 768
+    },
+    {
+      "filename": "controller_mode-00621240.bin",
+      "address": "00621240",
+      "sha256": "96bd4dffb8cb6f23bea915cf6f6f29d3c2da60c8053f88d68c924bebba55a86c",
+      "name": "controller_mode",
+      "bytes": 256
+    },
+    {
+      "filename": "vector_transform-0043C490.bin",
+      "address": "0043C490",
+      "sha256": "f7109399828b7d7544d14aaf721223e2f3e489bf5d61eabd0fb78f8560207b7d",
+      "name": "vector_transform",
+      "bytes": 256
+    },
+    {
+      "filename": "transform_point-00439E90.bin",
+      "address": "00439E90",
+      "sha256": "6b95028fcd9fac3c3e690265b9717aaac93b19e5c99793674402a805f2327529",
+      "name": "transform_point",
+      "bytes": 256
+    },
+    {
+      "filename": "is_actor-0047C850.bin",
+      "address": "0047C850",
+      "sha256": "33d2ca5811d715d4d906f10b262b06e560ad97797de799b801aa961e4fe600a0",
+      "name": "is_actor",
+      "bytes": 64
+    },
+    {
+      "filename": "missile_vtable-0108FA44.bin",
+      "address": "0108FA44",
+      "sha256": "bcda4f5662aa32ad15979d944fa0330014f2f0be63609cb4444c6cca9b94fc42",
+      "name": "missile_vtable",
+      "bytes": 1024
+    }
+  ],
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false
+}

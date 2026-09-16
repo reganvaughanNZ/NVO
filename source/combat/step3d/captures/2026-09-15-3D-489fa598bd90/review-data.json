@@ -1,0 +1,643 @@
+{
+  "sha256": "489fa598bd90b87bd8cfe285f980e7bc3bbcea56dee0661b9a047b1da11a1c90",
+  "bytes": 62315,
+  "lines": 301,
+  "source_last_write_local": "2026-09-15T17:02:15.9603411+12:00",
+  "setup_sessions": [
+    1
+  ],
+  "test_sessions": [
+    2,
+    3
+  ],
+  "packet_fully_accepted": false,
+  "accepted": [
+    "Exact regular pistol, hunting rifle and service rifle selections corroborated by actual creation and ammo",
+    "One edited pistol free-flight match",
+    "Clean observed lifecycle and reload",
+    "Four overlapping original SMG projectiles observed without tracking faults"
+  ],
+  "blocked": [
+    "SMG configuration/cloned source uses pistol projectile instead of actual AutoTracerProjectile",
+    "No edited rifle free-flight match in this capture: contact occurs too early",
+    "No logged live-actor hit context or direct VATS mode flag"
+  ],
+  "game_modified": false,
+  "damage_authority_accepted": false,
+  "shots": [
+    {
+      "session": "1",
+      "lifetime": "1",
+      "reason": "destroy",
+      "movement_entries": "1",
+      "accounting_entries": "1",
+      "baseline_verified": "0",
+      "steps": "0",
+      "verified_steps": "0",
+      "pending": "0",
+      "elapsed_s": "0",
+      "speed_mps": "0",
+      "stopped": "1",
+      "commit_entries": "1",
+      "node_entries": "0",
+      "controller_entries": "1",
+      "controller_returns": "1",
+      "controller_pending": "0",
+      "reset_entries": "1",
+      "reset_preserved": "0"
+    },
+    {
+      "session": "2",
+      "lifetime": "2",
+      "reason": "destroy",
+      "movement_entries": "3",
+      "accounting_entries": "3",
+      "baseline_verified": "1",
+      "steps": "2",
+      "verified_steps": "1",
+      "pending": "0",
+      "elapsed_s": "0.0150000006",
+      "speed_mps": "381.220477",
+      "stopped": "1",
+      "commit_entries": "3",
+      "node_entries": "0",
+      "controller_entries": "3",
+      "controller_returns": "3",
+      "controller_pending": "0",
+      "reset_entries": "3",
+      "reset_preserved": "2"
+    },
+    {
+      "session": "2",
+      "lifetime": "3",
+      "reason": "destroy",
+      "movement_entries": "2",
+      "accounting_entries": "2",
+      "baseline_verified": "1",
+      "steps": "1",
+      "verified_steps": "0",
+      "pending": "0",
+      "elapsed_s": "0",
+      "speed_mps": "849.77103",
+      "stopped": "1",
+      "commit_entries": "2",
+      "node_entries": "0",
+      "controller_entries": "2",
+      "controller_returns": "2",
+      "controller_pending": "0",
+      "reset_entries": "2",
+      "reset_preserved": "1"
+    },
+    {
+      "session": "2",
+      "lifetime": "4",
+      "reason": "destroy",
+      "movement_entries": "1",
+      "accounting_entries": "1",
+      "baseline_verified": "0",
+      "steps": "0",
+      "verified_steps": "0",
+      "pending": "0",
+      "elapsed_s": "0",
+      "speed_mps": "0",
+      "stopped": "1",
+      "commit_entries": "1",
+      "node_entries": "0",
+      "controller_entries": "1",
+      "controller_returns": "1",
+      "controller_pending": "0",
+      "reset_entries": "1",
+      "reset_preserved": "0"
+    },
+    {
+      "session": "3",
+      "lifetime": "9",
+      "reason": "destroy",
+      "movement_entries": "2",
+      "accounting_entries": "2",
+      "baseline_verified": "1",
+      "steps": "1",
+      "verified_steps": "0",
+      "pending": "0",
+      "elapsed_s": "0",
+      "speed_mps": "948.117211",
+      "stopped": "1",
+      "commit_entries": "2",
+      "node_entries": "0",
+      "controller_entries": "2",
+      "controller_returns": "2",
+      "controller_pending": "0",
+      "reset_entries": "2",
+      "reset_preserved": "1"
+    }
+  ],
+  "selections": [
+    {
+      "session": "2",
+      "selection": "1",
+      "profile": "9mm-pistol",
+      "source": "00000014",
+      "weapon": "000E3778",
+      "ammo": "0008ED03",
+      "original": "0008F20F",
+      "replacement": "0C000806",
+      "shared_record_writes": "0",
+      "result_consumed": "unverified"
+    },
+    {
+      "session": "2",
+      "selection": "2",
+      "profile": "hunting-rifle",
+      "source": "00000014",
+      "weapon": "00004333",
+      "ammo": "0006B53C",
+      "original": "0008F20A",
+      "replacement": "0C000807",
+      "shared_record_writes": "0",
+      "result_consumed": "unverified"
+    },
+    {
+      "session": "2",
+      "selection": "3",
+      "profile": "service-rifle",
+      "source": "00000014",
+      "weapon": "000E9C3B",
+      "ammo": "00004240",
+      "original": "0000426D",
+      "replacement": "0C000809",
+      "shared_record_writes": "0",
+      "result_consumed": "unverified"
+    },
+    {
+      "session": "3",
+      "selection": "1",
+      "profile": "service-rifle",
+      "source": "00000014",
+      "weapon": "000E9C3B",
+      "ammo": "00004240",
+      "original": "0000426D",
+      "replacement": "0C000809",
+      "shared_record_writes": "0",
+      "result_consumed": "unverified"
+    }
+  ],
+  "fallback": [
+    {
+      "session": "2",
+      "reason": "ammo_or_projectile_not_profiled",
+      "weapon": "0008F217",
+      "ammo": "0008ED03",
+      "projectile_base": "0017A2C6",
+      "preview_writes": "0"
+    },
+    {
+      "session": "2",
+      "reason": "ammo_or_projectile_not_profiled",
+      "weapon": "0008F217",
+      "ammo": "0008ED03",
+      "projectile_base": "0017A2C6",
+      "preview_writes": "0"
+    },
+    {
+      "session": "2",
+      "reason": "ammo_or_projectile_not_profiled",
+      "weapon": "0008F217",
+      "ammo": "0008ED03",
+      "projectile_base": "0017A2C6",
+      "preview_writes": "0"
+    },
+    {
+      "session": "2",
+      "reason": "ammo_or_projectile_not_profiled",
+      "weapon": "0008F217",
+      "ammo": "0008ED03",
+      "projectile_base": "0017A2C6",
+      "preview_writes": "0"
+    }
+  ],
+  "actual_samples": [
+    {
+      "session": "2",
+      "lifetime": "2",
+      "step": "0",
+      "phase": "baseline",
+      "matched": "1",
+      "actual_delta": "(-866.492188,-24.2099609,-22.4746094)",
+      "vector_error": "0.00275192725",
+      "position_error": "0",
+      "tolerance": "0.0522420932",
+      "writes": "0"
+    },
+    {
+      "session": "2",
+      "lifetime": "2",
+      "step": "1",
+      "phase": "apply",
+      "matched": "1",
+      "actual_delta": "(-403.0625,-11.2612305,-10.53125)",
+      "vector_error": "0.00761893413",
+      "position_error": "0",
+      "tolerance": "0.0433998451",
+      "writes": "0"
+    },
+    {
+      "session": "2",
+      "lifetime": "3",
+      "step": "0",
+      "phase": "baseline",
+      "matched": "1",
+      "actual_delta": "(-891.757812,-26.9223633,-13.0351562)",
+      "vector_error": "0.000659792382",
+      "position_error": "0",
+      "tolerance": "0.0527562978",
+      "writes": "0"
+    },
+    {
+      "session": "3",
+      "lifetime": "9",
+      "step": "0",
+      "phase": "baseline",
+      "matched": "1",
+      "actual_delta": "(-991.816406,-79.5141602,-32.2675781)",
+      "vector_error": "0.00141182299",
+      "position_error": "0",
+      "tolerance": "0.0546161907",
+      "writes": "0"
+    }
+  ],
+  "summaries": [
+    [
+      "SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "rows": "5",
+        "create": "1",
+        "impact": "1",
+        "destroy": "1",
+        "hit_notice": "1",
+        "weapon_notice": "1",
+        "blast": "0",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0"
+      }
+    ],
+    [
+      "CURRENT_HIT_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "contexts": "0",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "0",
+        "known_ammo": "0",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "FLIGHT_SELECTION_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "selected": "0",
+        "skipped": "0",
+        "other_thread_unchanged": "0",
+        "shared_record_writes": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "accepted": "1",
+        "applied_steps": "0",
+        "rejected": "0",
+        "overflow": "0",
+        "open": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_ROUTE_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "move_entries_all": "1",
+        "move_untracked": "0",
+        "accounting_entries_all": "1",
+        "accounting_untracked": "0",
+        "baselines_verified": "0",
+        "applied_verified": "0",
+        "mismatches": "0",
+        "accounting_unpaired": "0",
+        "lives_without_update": "1",
+        "reset_entries": "1",
+        "reset_preserved": "0"
+      }
+    ],
+    [
+      "FLIGHT_TIMING_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "accepted": "1",
+        "steps_logged": "2",
+        "invalid": "0",
+        "retired_during_update": "0",
+        "other_thread_steps": "2",
+        "overlap_lifetimes": "0",
+        "thread_changes": "0",
+        "nesting_limit": "0",
+        "open": "0",
+        "timing_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "FLIGHT_PREVIEW_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "seen": "1",
+        "matched": "1",
+        "skipped": "0",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "1",
+        "impact_rows": "1",
+        "destroy_rows": "1",
+        "open_samples": "0",
+        "preview_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "DAMAGE_EVENT_SUMMARY",
+      {
+        "session": "1",
+        "reason": "pre_load_game",
+        "hit_callbacks": "0",
+        "hit_rows": "0",
+        "health_callbacks": "0",
+        "health_rows": "0",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "rows": "35",
+        "create": "7",
+        "impact": "7",
+        "destroy": "7",
+        "hit_notice": "7",
+        "weapon_notice": "7",
+        "blast": "0",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0"
+      }
+    ],
+    [
+      "CURRENT_HIT_SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "contexts": "0",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "0",
+        "known_ammo": "0",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "FLIGHT_SELECTION_SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "selected": "3",
+        "skipped": "4",
+        "other_thread_unchanged": "0",
+        "shared_record_writes": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "accepted": "3",
+        "applied_steps": "3",
+        "rejected": "0",
+        "overflow": "0",
+        "open": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_ROUTE_SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "move_entries_all": "54",
+        "move_untracked": "48",
+        "accounting_entries_all": "54",
+        "accounting_untracked": "48",
+        "baselines_verified": "2",
+        "applied_verified": "1",
+        "mismatches": "0",
+        "accounting_unpaired": "0",
+        "lives_without_update": "1",
+        "reset_entries": "6",
+        "reset_preserved": "3"
+      }
+    ],
+    [
+      "FLIGHT_TIMING_SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "accepted": "3",
+        "steps_logged": "9",
+        "invalid": "0",
+        "retired_during_update": "0",
+        "other_thread_steps": "9",
+        "overlap_lifetimes": "0",
+        "thread_changes": "0",
+        "nesting_limit": "0",
+        "open": "0",
+        "timing_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "FLIGHT_PREVIEW_SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "seen": "7",
+        "matched": "3",
+        "skipped": "4",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "3",
+        "impact_rows": "3",
+        "destroy_rows": "3",
+        "open_samples": "0",
+        "preview_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "DAMAGE_EVENT_SUMMARY",
+      {
+        "session": "2",
+        "reason": "pre_load_game",
+        "hit_callbacks": "0",
+        "hit_rows": "0",
+        "health_callbacks": "0",
+        "health_rows": "0",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "rows": "5",
+        "create": "1",
+        "impact": "1",
+        "destroy": "1",
+        "hit_notice": "1",
+        "weapon_notice": "1",
+        "blast": "0",
+        "unmatched": "0",
+        "reused_live_address": "0",
+        "overflow": "0",
+        "read_failures": "0",
+        "open_lifetimes": "0"
+      }
+    ],
+    [
+      "CURRENT_HIT_SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "contexts": "0",
+        "invalid_contexts": "0",
+        "linked_lifetimes": "0",
+        "known_ammo": "0",
+        "damage_applications": "unverified"
+      }
+    ],
+    [
+      "FLIGHT_SELECTION_SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "selected": "1",
+        "skipped": "0",
+        "other_thread_unchanged": "0",
+        "shared_record_writes": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "accepted": "1",
+        "applied_steps": "1",
+        "rejected": "0",
+        "overflow": "0",
+        "open": "0",
+        "damage_replacement": "0"
+      }
+    ],
+    [
+      "PHYSICS_ROUTE_SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "move_entries_all": "2",
+        "move_untracked": "0",
+        "accounting_entries_all": "2",
+        "accounting_untracked": "0",
+        "baselines_verified": "1",
+        "applied_verified": "0",
+        "mismatches": "0",
+        "accounting_unpaired": "0",
+        "lives_without_update": "0",
+        "reset_entries": "2",
+        "reset_preserved": "1"
+      }
+    ],
+    [
+      "FLIGHT_TIMING_SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "accepted": "1",
+        "steps_logged": "3",
+        "invalid": "0",
+        "retired_during_update": "0",
+        "other_thread_steps": "3",
+        "overlap_lifetimes": "0",
+        "thread_changes": "0",
+        "nesting_limit": "0",
+        "open": "0",
+        "timing_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "FLIGHT_PREVIEW_SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "seen": "1",
+        "matched": "1",
+        "skipped": "0",
+        "read_failures": "0",
+        "identity_mismatches": "0",
+        "create_rows": "1",
+        "impact_rows": "1",
+        "destroy_rows": "1",
+        "open_samples": "0",
+        "preview_writes": "0",
+        "damage_writes": "0"
+      }
+    ],
+    [
+      "DAMAGE_EVENT_SUMMARY",
+      {
+        "session": "3",
+        "reason": "exit_game",
+        "hit_callbacks": "0",
+        "hit_rows": "0",
+        "health_callbacks": "0",
+        "health_rows": "0",
+        "invalid": "0",
+        "damage_replacement": "0",
+        "damage_applications": "unverified"
+      }
+    ]
+  ],
+  "mapping_audit": "source-mapping-audit.json"
+}

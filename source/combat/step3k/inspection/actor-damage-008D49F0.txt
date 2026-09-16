@@ -1,0 +1,320 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3k\inspection\actor-damage-008D49F0.obj
+
+File Type: COFF OBJECT
+
+  008D49F0: 26 0E              push        cs
+  008D49F2: 89 8A 78 0E D7 2A  mov         dword ptr [edx+2AD70E78h],ecx
+  008D49F8: 15 19 86 94 39     adc         eax,39948619h
+  008D49FD: 25 40 36 2F B9     and         eax,0B92F3640h
+  008D4A02: C2 9B EB           ret         0EB9Bh
+  008D4A05: 2B 4D C5           sub         ecx,dword ptr [ebp-3Bh]
+  008D4A08: 2B 0E              sub         ecx,dword ptr [esi]
+  008D4A0A: 7B 65              jnp         008D4A71
+  008D4A0C: DC 77 DB           fdiv        qword ptr [edi-25h]
+  008D4A0F: B8 57 DD C0 C2     mov         eax,0C2C0DD57h
+  008D4A14: 73 51              jae         008D4A67
+  008D4A16: CD 59              int         59h
+  008D4A18: 6F                 outs        dx,dword ptr [esi]
+  008D4A19: E2 28              loop        008D4A43
+  008D4A1B: 40                 inc         eax
+  008D4A1C: 31 23              xor         dword ptr [ebx],esp
+  008D4A1E: 13 75 34           adc         esi,dword ptr [ebp+34h]
+  008D4A21: 5A                 pop         edx
+  008D4A22: 16                 push        ss
+  008D4A23: 1C 6F              sbb         al,6Fh
+  008D4A25: 06                 push        es
+  008D4A26: F0 E4 02           lock in     al,2
+  008D4A29: 4C                 dec         esp
+  008D4A2A: FE
+  008D4A2B: 6C                 ins         byte ptr es:[edi],dx
+  008D4A2C: CA B3 F2           retf        0F2B3h
+  008D4A2F: CA B3 4F           retf        4FB3h
+  008D4A32: F5                 cmc
+  008D4A33: 5D                 pop         ebp
+  008D4A34: C9                 leave
+  008D4A35: 54                 push        esp
+  008D4A36: A6                 cmps        byte ptr [esi],byte ptr es:[edi]
+  008D4A37: A1 E0 75 4E 3B     mov         eax,dword ptr ds:[3B4E75E0h]
+  008D4A3C: 1A 7A 3D           sbb         bh,byte ptr [edx+3Dh]
+  008D4A3F: 6A BE              push        0FFFFFFBEh
+  008D4A41: 96                 xchg        eax,esi
+  008D4A42: FC                 cld
+  008D4A43: 75 F9              jne         008D4A3E
+  008D4A45: F6 D4              not         ah
+  008D4A47: 6A D4              push        0FFFFFFD4h
+  008D4A49: 71 80              jno         008D49CB
+  008D4A4B: 8D 90 B9 76 3B 07  lea         edx,[eax+073B76B9h]
+  008D4A51: 86 F8              xchg        bh,al
+  008D4A53: B4 5E              mov         ah,5Eh
+  008D4A55: 35 62 52 A9 EA     xor         eax,0EAA95262h
+  008D4A5A: 9B                 wait
+  008D4A5B: 26 B5 55           mov         ch,55h
+  008D4A5E: F9                 stc
+  008D4A5F: 63 6D D1           arpl        word ptr [ebp-2Fh],bp
+  008D4A62: 19 9F 4B 90 09 1A  sbb         dword ptr [edi+1A09904Bh],ebx
+  008D4A68: 57                 push        edi
+  008D4A69: FD                 std
+  008D4A6A: 86 08              xchg        cl,byte ptr [eax]
+  008D4A6C: CC                 int         3
+  008D4A6D: 32 34 6A           xor         dh,byte ptr [edx+ebp*2]
+  008D4A70: 84 11              test        byte ptr [ecx],dl
+  008D4A72: C4 57 C5           les         edx,fword ptr [edi-3Bh]
+  008D4A75: F9                 stc
+  008D4A76: 26 08 DC           or          ah,bl
+  008D4A79: 72 62              jb          008D4ADD
+  008D4A7B: 48                 dec         eax
+  008D4A7C: E5 37              in          eax,37h
+  008D4A7E: 87 08              xchg        ecx,dword ptr [eax]
+  008D4A80: 65 80 CB 8C        or          bl,8Ch
+  008D4A84: 68 AE 50 F8 E3     push        0E3F850AEh
+  008D4A89: FF 16              call        dword ptr [esi]
+  008D4A8B: 1A DA              sbb         bl,dl
+  008D4A8D: C6 BA DE E5 F9 37  xabort      7Ah
+            7A
+  008D4A94: 8D 79 3F           lea         edi,[ecx+3Fh]
+  008D4A97: 4B                 dec         ebx
+  008D4A98: 3F                 aas
+  008D4A99: 6C                 ins         byte ptr es:[edi],dx
+  008D4A9A: C4
+  008D4A9B: F8                 clc
+  008D4A9C: FE
+  008D4A9D: 5E                 pop         esi
+  008D4A9E: 7B 03              jnp         008D4AA3
+  008D4AA0: 2F                 das
+  008D4AA1: 5A                 pop         edx
+  008D4AA2: A1 5B DC 04 F1     mov         eax,dword ptr ds:[F104DC5Bh]
+  008D4AA7: 70 DF              jo          008D4A88
+  008D4AA9: 3E 96              xchg        eax,esi
+  008D4AAB: 49                 dec         ecx
+  008D4AAC: 9B                 wait
+  008D4AAD: 2B EA              sub         ebp,edx
+  008D4AAF: 93                 xchg        eax,ebx
+  008D4AB0: 20 A4 EB 59 83 39  and         byte ptr [ebx+ebp*8+77398359h],ah
+            77
+  008D4AB7: 5E                 pop         esi
+  008D4AB8: A8 95              test        al,95h
+  008D4ABA: E3 7F              jecxz       008D4B3B
+  008D4ABC: 13 0C CD 8D 34 BB  adc         ecx,dword ptr [ecx*8+69BB348Dh]
+            69
+  008D4AC3: 4A                 dec         edx
+  008D4AC4: 4E                 dec         esi
+  008D4AC5: 0A F2              or          dh,dl
+  008D4AC7: 84 A0 DD D0 A9 64  test        byte ptr [eax+64A9D0DDh],ah
+  008D4ACD: 82 79 7F 38        cmp         byte ptr [ecx+7Fh],38h
+  008D4AD1: 82 92 2E D4 DE 03  adc         byte ptr [edx+03DED42Eh],6
+            06
+  008D4AD8: 32 C2              xor         al,dl
+  008D4ADA: 8F
+  008D4ADB: 38 BC C2 75 62 ED  cmp         byte ptr [edx+eax*8+3AED6275h],bh
+            3A
+  008D4AE2: 52                 push        edx
+  008D4AE3: 8A 7F B9           mov         bh,byte ptr [edi-47h]
+  008D4AE6: D5 35              aadb        35h
+  008D4AE8: 41                 inc         ecx
+  008D4AE9: D3 92 1A 03 CA 96  rcl         dword ptr [edx+96CA031Ah],cl
+  008D4AEF: A3 01 5E 3B 77     mov         dword ptr ds:[773B5E01h],eax
+  008D4AF4: B8 D5 72 69 FB     mov         eax,0FB6972D5h
+  008D4AF9: A8 49              test        al,49h
+  008D4AFB: 08 91 A1 98 D8 12  or          byte ptr [ecx+12D898A1h],dl
+  008D4B01: 7F DC              jg          008D4ADF
+  008D4B03: B2 06              mov         dl,6
+  008D4B05: 7A F2              jp          008D4AF9
+  008D4B07: 01 23              add         dword ptr [ebx],esp
+  008D4B09: 49                 dec         ecx
+  008D4B0A: 5D                 pop         ebp
+  008D4B0B: F2 3D 8C BF CD FB  repne cmp   eax,0FBCDBF8Ch
+  008D4B11: 56                 push        esi
+  008D4B12: 96                 xchg        eax,esi
+  008D4B13: 77 97              ja          008D4AAC
+  008D4B15: 37                 aaa
+  008D4B16: 06                 push        es
+  008D4B17: C3                 ret
+  008D4B18: 13 B8 D2 5C C6 38  adc         edi,dword ptr [eax+38C65CD2h]
+  008D4B1E: 33 BA F2 58 C4 79  xor         edi,dword ptr [edx+79C458F2h]
+  008D4B24: 40                 inc         eax
+  008D4B25: 4A                 dec         edx
+  008D4B26: 09 83 7D C6 FC CD  or          dword ptr [ebx+CDFCC67Dh],eax
+  008D4B2C: EF                 out         dx,eax
+  008D4B2D: BE 15 92 63 4F     mov         esi,4F639215h
+  008D4B32: DC D7              fcom2       st(7)
+  008D4B34: AA                 stos        byte ptr es:[edi]
+  008D4B35: 1F                 pop         ds
+  008D4B36: A8 95              test        al,95h
+  008D4B38: 82 79 13 D2        cmp         byte ptr [ecx+13h],0D2h
+  008D4B3C: A2 B5 63 CA 62     mov         byte ptr ds:[62CA63B5h],al
+  008D4B41: C2 82 14           ret         1482h
+  008D4B44: 9A 1D 90 E8 FC F4  call        F5F4:FCE8901D
+            F5
+  008D4B4B: 1A 1B              sbb         bl,byte ptr [ebx]
+  008D4B4D: 24 C2              and         al,0C2h
+  008D4B4F: 20 8C 68 DB AD 7B  and         byte ptr [eax+ebp*2+887BADDBh],cl
+            88
+  008D4B56: 19 B5 72 1F D8 84  sbb         dword ptr [ebp+84D81F72h],esi
+  008D4B5C: 8A 63 D3           mov         ah,byte ptr [ebx-2Dh]
+  008D4B5F: 82 41 A2 CB        add         byte ptr [ecx-5Eh],0CBh
+  008D4B63: AE                 scas        byte ptr es:[edi]
+  008D4B64: 3D 99 57 74 98     cmp         eax,98745799h
+  008D4B69: 66 28 D0           sub         al,dl
+  008D4B6C: DC 26              fsub        qword ptr [esi]
+  008D4B6E: 1F                 pop         ds
+  008D4B6F: C3                 ret
+  008D4B70: FF DB              call        rbx
+  008D4B72: C2 4E 65           ret         654Eh
+  008D4B75: EA FD 4B 02 EF B1  jmp         51B1:EF024BFD
+            51
+  008D4B7C: 91                 xchg        eax,ecx
+  008D4B7D: 3F                 aas
+  008D4B7E: 68 D1 D6 C0 DB     push        0DBC0D6D1h
+  008D4B83: 0F 01 05 6D 51 1D  sgdt        fword ptr ds:[8B1D516Dh]
+            8B
+  008D4B8A: 89 69 FE           mov         dword ptr [ecx-2],ebp
+  008D4B8D: 64 7C 1C           jl          008D4BAC
+  008D4B90: D4 3F              aamb        3Fh
+  008D4B92: D2 D9              rcr         cl,cl
+  008D4B94: F6 92 C2 ED 4F E1  not         byte ptr [edx+E14FEDC2h]
+  008D4B9A: 3E 5C              pop         esp
+  008D4B9C: 33 21              xor         esp,dword ptr [ecx]
+  008D4B9E: 00 5B 63           add         byte ptr [ebx+63h],bl
+  008D4BA1: 13 12              adc         edx,dword ptr [edx]
+  008D4BA3: E0 AA              loopne      008D4B4F
+  008D4BA5: F2 17              repne pop   ss
+  008D4BA7: 28 BC 59 C3 88 40  sub         byte ptr [ecx+ebx*2+D24088C3h],bh
+            D2
+  008D4BAE: F0 09 E8           lock or     eax,ebp
+  008D4BB1: 86 86 2F E0 20 94  xchg        al,byte ptr [esi+9420E02Fh]
+  008D4BB7: 03 57 D7           add         edx,dword ptr [edi-29h]
+  008D4BBA: FF
+  008D4BBB: FB                 sti
+  008D4BBC: 7F 97              jg          008D4B55
+  008D4BBE: 1B 7F 9C           sbb         edi,dword ptr [edi-64h]
+  008D4BC1: FD                 std
+  008D4BC2: 95                 xchg        eax,ebp
+  008D4BC3: 58                 pop         eax
+  008D4BC4: BA 01 77 30 DD     mov         edx,0DD307701h
+  008D4BC9: BE 71 95 77 C9     mov         esi,0C9779571h
+  008D4BCE: 8C 74 65 E0        mov         word ptr [ebp-20h],st(-2)
+  008D4BD2: D4 83              aamb        83h
+  008D4BD4: 84 63 FE           test        byte ptr [ebx-2],ah
+  008D4BD7: B3 36              mov         bl,36h
+  008D4BD9: 9F                 lahf
+  008D4BDA: 13 AA 6C EE 47 DB  adc         ebp,dword ptr [edx+DB47EE6Ch]
+  008D4BE0: A4                 movs        byte ptr es:[edi],byte ptr [esi]
+  008D4BE1: 02 53 5F           add         dl,byte ptr [ebx+5Fh]
+  008D4BE4: 6B 1E E3           imul        ebx,dword ptr [esi],0FFFFFFE3h
+  008D4BE7: AE                 scas        byte ptr es:[edi]
+  008D4BE8: 4E                 dec         esi
+  008D4BE9: 58                 pop         eax
+  008D4BEA: 48                 dec         eax
+  008D4BEB: 97                 xchg        eax,edi
+  008D4BEC: 5B                 pop         ebx
+  008D4BED: FA                 cli
+  008D4BEE: 5B                 pop         ebx
+  008D4BEF: F4                 hlt
+  008D4BF0: 6C                 ins         byte ptr es:[edi],dx
+  008D4BF1: 89 57 65           mov         dword ptr [edi+65h],edx
+  008D4BF4: 20 FF              and         bh,bh
+  008D4BF6: 62 9B 73 0C DB DD  bound       ebx,qword ptr [ebx+DDDB0C73h]
+  008D4BFC: 63 E5              arpl        bp,sp
+  008D4BFE: 86 38              xchg        bh,byte ptr [eax]
+  008D4C00: 0D E8 67 C4 4B     or          eax,4BC467E8h
+  008D4C05: 25 0C BE E9 A8     and         eax,0A8E9BE0Ch
+  008D4C0A: D7                 xlat        byte ptr [ebx]
+  008D4C0B: E1 07              loope       008D4C14
+  008D4C0D: 4A                 dec         edx
+  008D4C0E: 14 08              adc         al,8
+  008D4C10: A2 E8 77 D0 05     mov         byte ptr ds:[05D077E8h],al
+  008D4C15: 28 4D 34           sub         byte ptr [ebp+34h],cl
+  008D4C18: 0C 2A              or          al,2Ah
+  008D4C1A: B6 2E              mov         dh,2Eh
+  008D4C1C: A2 96 5A EB 17     mov         byte ptr ds:[17EB5A96h],al
+  008D4C21: 97                 xchg        eax,edi
+  008D4C22: EE                 out         dx,al
+  008D4C23: 68 FE 93 9B E6     push        0E69B93FEh
+  008D4C28: D6
+  008D4C29: A0 3A E7 E5 07     mov         al,byte ptr ds:[07E5E73Ah]
+  008D4C2E: 8A 99 57 20 F4 BF  mov         bl,byte ptr [ecx+BFF42057h]
+  008D4C34: 2F                 das
+  008D4C35: 4A                 dec         edx
+  008D4C36: 39 48 2A           cmp         dword ptr [eax+2Ah],ecx
+  008D4C39: 1E                 push        ds
+  008D4C3A: 59                 pop         ecx
+  008D4C3B: 8F
+  008D4C3C: CD EC              int         0ECh
+  008D4C3E: 0D D4 54 75 2D     or          eax,2D7554D4h
+  008D4C43: 46                 inc         esi
+  008D4C44: 5A                 pop         edx
+  008D4C45: 58                 pop         eax
+  008D4C46: E5 43              in          eax,43h
+  008D4C48: 48                 dec         eax
+  008D4C49: DA 71 71           fidiv       dword ptr [ecx+71h]
+  008D4C4C: F1
+  008D4C4D: CB                 retf
+  008D4C4E: 18 92 62 57 60 06  sbb         byte ptr [edx+06605762h],dl
+  008D4C54: AE                 scas        byte ptr es:[edi]
+  008D4C55: 05 5C 87 10 30     add         eax,3010875Ch
+  008D4C5A: 8D A6 2B 4A 95 CD  lea         esp,[esi+CD954A2Bh]
+  008D4C60: 76 5A              jbe         008D4CBC
+  008D4C62: 4A                 dec         edx
+  008D4C63: 4D                 dec         ebp
+  008D4C64: 00 43 EA           add         byte ptr [ebx-16h],al
+  008D4C67: BF DD 7D 99 18     mov         edi,18997DDDh
+  008D4C6C: 23 40 87           and         eax,dword ptr [eax-79h]
+  008D4C6F: A2 EA C5 D2 42     mov         byte ptr ds:[42D2C5EAh],al
+  008D4C74: E1 95              loope       008D4C0B
+  008D4C76: FF E1              jmp         ecx
+  008D4C78: 20 11              and         byte ptr [ecx],dl
+  008D4C7A: B2 F5              mov         dl,0F5h
+  008D4C7C: 29 93 3C BD E4 DC  sub         dword ptr [ebx+DCE4BD3Ch],edx
+  008D4C82: 84 57 8C           test        byte ptr [edi-74h],dl
+  008D4C85: 45                 inc         ebp
+  008D4C86: 2F                 das
+  008D4C87: 0E                 push        cs
+  008D4C88: 7E 6F              jle         008D4CF9
+  008D4C8A: D5 B5              aadb        0B5h
+  008D4C8C: 54                 push        esp
+  008D4C8D: 78 91              js          008D4C20
+  008D4C8F: 75 5C              jne         008D4CED
+  008D4C91: 73 7F              jae         008D4D12
+  008D4C93: 86 EB              xchg        ch,bl
+  008D4C95: C4 8D 43 1B A0 E0  les         ecx,fword ptr [ebp+E0A01B43h]
+  008D4C9B: 84 B0 DF 22 1C 8B  test        byte ptr [eax+8B1C22DFh],dh
+  008D4CA1: 4B                 dec         ebx
+  008D4CA2: 85 48 A0           test        dword ptr [eax-60h],ecx
+  008D4CA5: 2A E7              sub         ah,bh
+  008D4CA7: 8E B7 AF E9 C1 32  mov         st(-2),word ptr [edi+32C1E9AFh]
+  008D4CAD: 3B 12              cmp         edx,dword ptr [edx]
+  008D4CAF: F1
+  008D4CB0: 6A E7              push        0FFFFFFE7h
+  008D4CB2: B4 B3              mov         ah,0B3h
+  008D4CB4: 8D 4F 16           lea         ecx,[edi+16h]
+  008D4CB7: 80 66 41 A8        and         byte ptr [esi+41h],0A8h
+  008D4CBB: 57                 push        edi
+  008D4CBC: 48                 dec         eax
+  008D4CBD: 75 1F              jne         008D4CDE
+  008D4CBF: 76 16              jbe         008D4CD7
+  008D4CC1: 6E                 outs        dx,byte ptr [esi]
+  008D4CC2: 4D                 dec         ebp
+  008D4CC3: 5F                 pop         edi
+  008D4CC4: C5 46 C5           lds         eax,fword ptr [esi-3Bh]
+  008D4CC7: F5                 cmc
+  008D4CC8: 05 A7 73 92 59     add         eax,599273A7h
+  008D4CCD: C4 2C 1F           les         ebp,fword ptr [edi+ebx]
+  008D4CD0: 0D 1C 8F 08 38     or          eax,38088F1Ch
+  008D4CD5: 6D                 ins         dword ptr es:[edi],dx
+  008D4CD6: 04 0A              add         al,0Ah
+  008D4CD8: 64 52              push        edx
+  008D4CDA: BD F7 7C 86 6E     mov         ebp,6E867CF7h
+  008D4CDF: 13 B6 57 F1 E6 8F  adc         esi,dword ptr [esi+8FE6F157h]
+  008D4CE5: 9D                 popfd
+  008D4CE6: BC 5C 57 96 13     mov         esp,1396575Ch
+  008D4CEB: 0F 05              syscall
+  008D4CED: E6 AF              out         0AFh,al
+  008D4CEF: AF                 scas        dword ptr es:[edi]
+
+  Summary
+
+         300 .text

@@ -1,0 +1,386 @@
+{
+  "FalloutNV.esm": [
+    {
+      "tag": "EDID",
+      "hex": "506c6179657200"
+    },
+    {
+      "tag": "OBND",
+      "hex": "e9ffefff0000170011008400"
+    },
+    {
+      "tag": "MODL",
+      "hex": "436861726163746572735c5f4d616c655c536b656c65746f6e2e4e494600"
+    },
+    {
+      "tag": "ACBS",
+      "hex": "00000000c800000001000100000064000000000023000000"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "a4b20100004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c57c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c67c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c77c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c87c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c97c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "ca7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cb7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cc7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cd7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "ce7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cf7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d07c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d17c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d27c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d37c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d47c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d57c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d67c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d77c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "12e70700004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "70330c00004f444c"
+    },
+    {
+      "tag": "VTCK",
+      "hex": "3b850200"
+    },
+    {
+      "tag": "RNAM",
+      "hex": "19000000"
+    },
+    {
+      "tag": "EAMT",
+      "hex": "ff00"
+    },
+    {
+      "tag": "CNTO",
+      "hex": "3850010001000000"
+    },
+    {
+      "tag": "CNTO",
+      "hex": "835b020001000000"
+    },
+    {
+      "tag": "AIDT",
+      "hex": "0000323200f3a6be000000000000000000000000"
+    },
+    {
+      "tag": "CNAM",
+      "hex": "6a7e0500"
+    },
+    {
+      "tag": "DATA",
+      "hex": "6400000005050505050505"
+    },
+    {
+      "tag": "DNAM",
+      "hex": "0d0e0c0f0f0e1e0d0e19160e161d0000000000000000000000000000"
+    },
+    {
+      "tag": "PNAM",
+      "hex": "ea5b0b00"
+    },
+    {
+      "tag": "HNAM",
+      "hex": "eedd0200"
+    },
+    {
+      "tag": "LNAM",
+      "hex": "0ad7233d"
+    },
+    {
+      "tag": "ENAM",
+      "hex": "53420000"
+    },
+    {
+      "tag": "HCLR",
+      "hex": "54462e00"
+    },
+    {
+      "tag": "NAM4",
+      "hex": "06000000"
+    },
+    {
+      "tag": "FGGS",
+      "hex": "d09cba3d58b1f93f08fa6a3d15577cbfcc2eabbf448aedbd402e503c935fd63f729883bf79bda33e50051d3ed026d5bf1ab77f3f52b307c09060b03f1fc244c06bf00e40f7693ac0e39711bfd6d5f33f8f12cfbffae5b6bfb017f6bef76756c0bdcaacbfe45d3c3f560719c0c2d8633f40fcc1bd046a8d3f606f0fbece09debf00afe13d94e6edbf24656b3f4474f53f48d8a03f437f18c0e4a5333f6406323e49788ebf90ab88be707c00c128099040d2f5fd3ff9220a3f1062a5bf82cb113fd8ec4ebff8b28640"
+    },
+    {
+      "tag": "FGGA",
+      "hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "tag": "FGTS",
+      "hex": "bd69edbfd6cd543f9771e03ec3f2a83f3d3be03e1e571b3f1c29733eb45412bf2c27debedcf8663cfe3e4d3f738e63bf05a7d43fc5e2393ff05600be40ebf43c4e34433f71eaaa3f04fe0c3eaeeb973ec09374bd9ce525beb7d1edbf2a1a77bfcc56db3e76e4a33eb2b023c018b2243fc04916bf54fc323e160cb83ffe59903e90078b3cc094033fbc8e0b3f267b03c05609cfbfd00442be9f7644bf42b5dcbebb8d1e3fd45fd93e53448bbeb65b67bf146714c055c0a03fe8f5cebe75e33fbf9aac693e2a5a403f"
+    },
+    {
+      "tag": "NAM5",
+      "hex": "ff00"
+    },
+    {
+      "tag": "NAM6",
+      "hex": "00000000"
+    },
+    {
+      "tag": "NAM7",
+      "hex": "00000000"
+    }
+  ],
+  "RD.esm": [
+    {
+      "tag": "EDID",
+      "hex": "506c6179657200"
+    },
+    {
+      "tag": "OBND",
+      "hex": "000000000000000000000000"
+    },
+    {
+      "tag": "MODL",
+      "hex": "436861726163746572735c5f4d616c655c536b656c65746f6e2e4e494600"
+    },
+    {
+      "tag": "ACBS",
+      "hex": "00020000900100000100010000009b000000000023000000"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d77c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d67c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d57c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d47c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d37c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d27c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d17c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "d07c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cf7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "ce7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cd7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cc7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "cb7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "ca7c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c97c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c87c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c77c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c67c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "c57c0400004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "a4b20100004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "70330c00004f444c"
+    },
+    {
+      "tag": "SNAM",
+      "hex": "12e70700004f444c"
+    },
+    {
+      "tag": "VTCK",
+      "hex": "3b850200"
+    },
+    {
+      "tag": "RNAM",
+      "hex": "19000000"
+    },
+    {
+      "tag": "EAMT",
+      "hex": "ff00"
+    },
+    {
+      "tag": "CNTO",
+      "hex": "df0a000101000000"
+    },
+    {
+      "tag": "CNTO",
+      "hex": "835b020001000000"
+    },
+    {
+      "tag": "CNTO",
+      "hex": "3850010001000000"
+    },
+    {
+      "tag": "AIDT",
+      "hex": "0000323200000000000000000000000000000000"
+    },
+    {
+      "tag": "CNAM",
+      "hex": "6a7e0500"
+    },
+    {
+      "tag": "DATA",
+      "hex": "2602000009090909090909"
+    },
+    {
+      "tag": "DNAM",
+      "hex": "0d0e0c0f0f0e1e0d0e19160e161d6464646464646464646464646464"
+    },
+    {
+      "tag": "PNAM",
+      "hex": "ea5b0b00"
+    },
+    {
+      "tag": "HNAM",
+      "hex": "eedd0200"
+    },
+    {
+      "tag": "LNAM",
+      "hex": "0ad7233d"
+    },
+    {
+      "tag": "ENAM",
+      "hex": "53420000"
+    },
+    {
+      "tag": "HCLR",
+      "hex": "54462e00"
+    },
+    {
+      "tag": "NAM4",
+      "hex": "06000000"
+    },
+    {
+      "tag": "FGGS",
+      "hex": "d09cba3d58b1f93f08fa6a3d15577cbfcc2eabbf448aedbd402e503c935fd63f729883bf79bda33e50051d3ed026d5bf1ab77f3f52b307c09060b03f1fc244c06bf00e40f7693ac0e39711bfd6d5f33f8f12cfbffae5b6bfb017f6bef76756c0bdcaacbfe45d3c3f560719c0c2d8633f40fcc1bd046a8d3f606f0fbece09debf00afe13d94e6edbf24656b3f4474f53f48d8a03f437f18c0e4a5333f6406323e49788ebf90ab88be707c00c128099040d2f5fd3ff9220a3f1062a5bf82cb113fd8ec4ebff8b28640"
+    },
+    {
+      "tag": "FGGA",
+      "hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "tag": "FGTS",
+      "hex": "bd69edbfd6cd543f9771e03ec3f2a83f3d3be03e1e571b3f1c29733eb45412bf2c27debedcf8663cfe3e4d3f738e63bf05a7d43fc5e2393ff05600be40ebf43c4e34433f71eaaa3f04fe0c3eaeeb973ec09374bd9ce525beb7d1edbf2a1a77bfcc56db3e76e4a33eb2b023c018b2243fc04916bf54fc323e160cb83ffe59903e90078b3cc094033fbc8e0b3f267b03c05609cfbfd00442be9f7644bf42b5dcbebb8d1e3fd45fd93e53448bbeb65b67bf146714c055c0a03fe8f5cebe75e33fbf9aac693e2a5a403f"
+    },
+    {
+      "tag": "NAM5",
+      "hex": "ff00"
+    },
+    {
+      "tag": "NAM6",
+      "hex": "00000000"
+    },
+    {
+      "tag": "NAM7",
+      "hex": "00000000"
+    }
+  ]
+}

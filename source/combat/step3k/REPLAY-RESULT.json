@@ -1,0 +1,32 @@
+{
+  "results": [
+    "three_classes_health_conditions_creature_remap_and_exact_once=pass",
+    "zero_applied_change_and_unscoped_calls_not_invented=pass",
+    "nested_net_intervals_and_overflow_return_integrity=pass",
+    "ids_and_original_calls_survive_log_limits_and_sink_failure=pass",
+    "suspend_changed_session_and_inactive_passthrough=pass",
+    "read_failure_changed_identity_and_getter_reentrancy_rejected=pass",
+    "unwatched_positive_nonfinite_and_other_thread_no_getters=pass",
+    "actual_x86_bridge_stack_gpr_flags_df_x87_sse_mxcsr=pass",
+    "game_or_plugin_dll_loaded=false"
+  ],
+  "hit_results": [
+    "six_route_chain_identity_and_input_unchanged=pass",
+    "actual_x86_bridge_stack_gpr_flags_df_x87_sse_mxcsr=pass",
+    "nested_depth_overflow_no_parent_attribution_or_bad_return=pass",
+    "call_identity_and_returns_survive_log_budget_and_sink_failure=pass",
+    "suspend_continuation_and_inactive_passthrough=pass",
+    "two_thread_independent_scopes=pass",
+    "game_or_plugin_dll_loaded=false"
+  ],
+  "sources": {
+    "native/NVOCombatCore/src/ActorValueObserver.cpp": "6f9fb4ba3c9da056415fdc4651768a3b28f14e05a33b1d49b2502a8915eb8812",
+    "native/NVOCombatCore/src/ActorValueGuards.inl": "bdaec11a5c814b4ebe3dad6a47f14c6a94aa170c081d695eb0698e3c50bf8c72",
+    "native/NVOCombatCore/src/HitTransaction.cpp": "d3232674e978e586129c12e4ad3c4d8d0c1f64e25f9a1a9b361208227d117c29",
+    "source/combat/step3k/inspection/replay.cpp": "9512391bb9787adf25fd65ff1f70cdae7383749b3aa025a80ef2be27ac34c63b",
+    "source/combat/step3k/inspection/hit-replay.cpp": "a7369240b68d41ea37657ae138b5afb2bdd1d9a8076757e6a951710fec0127ff"
+  },
+  "actual_bridge_instruction_match": true,
+  "engine_reads_mocked": true,
+  "gameplay_tested": false
+}

@@ -1,0 +1,358 @@
+{
+  "capture": {
+    "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+    "sha256": "e8d6c57f37f94a6ef93975ebede002bcea145824d5a8aff85e3ab2024d2968f5",
+    "bytes": 46550,
+    "last_write_ns": 1789473686439162300,
+    "last_write_local": "2026-09-16T00:01:26.439162+12:00",
+    "captured_utc": "2026-09-15T12:08:58.606421+00:00",
+    "stable_two_reads": true,
+    "user_report": "Finish as instructed",
+    "prescribed_test": "One ordinary Hunting Rifle standard .308 torso hit, one short-range VATS head-selected hit, reload once, one unarmed punch, then normal exit.",
+    "interpretation": "User reports completion. Firing mode and aim intent are inferred from prescribed sequence; the log reports actual hit context, not VATS aim selection. Provider return is not a committed-damage acknowledgement."
+  },
+  "begin_count": 3,
+  "return_count": 3,
+  "stages": [
+    {
+      "line": 62,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "1",
+        "tx": "1",
+        "stage": "itr_pre_hit",
+        "ordinal": "1",
+        "identity_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "region": "0",
+        "value_valid": "1",
+        "input_damage": "52",
+        "association": "scope_only",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 64,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "1",
+        "tx": "1",
+        "stage": "copy_input",
+        "ordinal": "2",
+        "pointer_equal": "1",
+        "identity_match": "1",
+        "process_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "region": "0",
+        "health": "52",
+        "limb": "14.6892662",
+        "flags": "80000000",
+        "association": "exact_input_pointer",
+        "committed_loss": "unverified",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 71,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "1",
+        "tx": "1",
+        "stage": "itr_pre_health",
+        "ordinal": "3",
+        "identity_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "value_valid": "1",
+        "delta": "-104",
+        "association": "scope_only",
+        "cause": "unclassified",
+        "committed_loss": "unverified",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 112,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "1",
+        "tx": "2",
+        "stage": "itr_pre_hit",
+        "ordinal": "1",
+        "identity_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "region": "1",
+        "value_valid": "1",
+        "input_damage": "104",
+        "association": "scope_only",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 114,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "1",
+        "tx": "2",
+        "stage": "copy_input",
+        "ordinal": "2",
+        "pointer_equal": "1",
+        "identity_match": "1",
+        "process_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "region": "1",
+        "health": "104",
+        "limb": "44.0677986",
+        "flags": "80000000",
+        "association": "exact_input_pointer",
+        "committed_loss": "unverified",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 121,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "1",
+        "tx": "2",
+        "stage": "itr_pre_health",
+        "ordinal": "3",
+        "identity_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "value_valid": "1",
+        "delta": "-208",
+        "association": "scope_only",
+        "cause": "unclassified",
+        "committed_loss": "unverified",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 177,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "2",
+        "tx": "3",
+        "stage": "itr_pre_hit",
+        "ordinal": "1",
+        "identity_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "region": "0",
+        "value_valid": "1",
+        "input_damage": "2.75",
+        "association": "scope_only",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 179,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "2",
+        "tx": "3",
+        "stage": "copy_input",
+        "ordinal": "2",
+        "pointer_equal": "1",
+        "identity_match": "1",
+        "process_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "region": "0",
+        "health": "2.75",
+        "limb": "0.776836216",
+        "flags": "80000000",
+        "association": "exact_input_pointer",
+        "committed_loss": "unverified",
+        "observer_writes": "0"
+      }
+    },
+    {
+      "line": 183,
+      "kind": "HIT_TX_STAGE",
+      "fields": {
+        "session": "2",
+        "tx": "3",
+        "stage": "itr_pre_health",
+        "ordinal": "3",
+        "identity_match": "1",
+        "tainted": "0",
+        "read": "1",
+        "value_valid": "1",
+        "delta": "-5.5",
+        "association": "scope_only",
+        "cause": "unclassified",
+        "committed_loss": "unverified",
+        "observer_writes": "0"
+      }
+    }
+  ],
+  "checks": [
+    {
+      "tx": "1",
+      "session": "1",
+      "lifetime": "1",
+      "valid": "1",
+      "linked": "1",
+      "site": "0089A738",
+      "receiver": "FF001978",
+      "weapon": "00004333",
+      "carrier": "FF001994",
+      "ammo": "0006B53C",
+      "main_thread": "1",
+      "stages": [
+        "itr_pre_hit",
+        "copy_input",
+        "itr_pre_health"
+      ],
+      "returned": true,
+      "exact_copy_count": 1,
+      "committed_loss": "unverified"
+    },
+    {
+      "tx": "2",
+      "session": "1",
+      "lifetime": "2",
+      "valid": "1",
+      "linked": "1",
+      "site": "0089A738",
+      "receiver": "FF001978",
+      "weapon": "00004333",
+      "carrier": "FF001994",
+      "ammo": "0006B53C",
+      "main_thread": "1",
+      "stages": [
+        "itr_pre_hit",
+        "copy_input",
+        "itr_pre_health"
+      ],
+      "returned": true,
+      "exact_copy_count": 1,
+      "committed_loss": "unverified"
+    },
+    {
+      "tx": "3",
+      "session": "2",
+      "lifetime": "0",
+      "valid": "1",
+      "linked": "0",
+      "site": "0089A738",
+      "receiver": "FF001978",
+      "weapon": "000001F4",
+      "carrier": "00000000",
+      "ammo": "00000000",
+      "main_thread": "1",
+      "stages": [
+        "itr_pre_hit",
+        "copy_input",
+        "itr_pre_health"
+      ],
+      "returned": true,
+      "exact_copy_count": 1,
+      "committed_loss": "unverified"
+    }
+  ],
+  "summaries": [
+    {
+      "line": 135,
+      "kind": "HIT_TX_SUMMARY",
+      "fields": {
+        "session": "1",
+        "reason": "pre_load_game",
+        "entries": "2",
+        "returns": "2",
+        "open": "0",
+        "invalid": "0",
+        "depth_overflow": "0",
+        "unscoped_stages": "0",
+        "pre_hit": "2",
+        "copy": "2",
+        "pre_health": "2",
+        "detailed_calls": "2",
+        "omitted_stage_rows": "0",
+        "log_failures": "0",
+        "max_detail_calls": "64",
+        "max_stage_rows_per_call": "8",
+        "damage_replacement": "0",
+        "committed_loss": "unverified"
+      }
+    },
+    {
+      "line": 186,
+      "kind": "HIT_TX_SUMMARY",
+      "fields": {
+        "session": "2",
+        "reason": "exit_game",
+        "entries": "1",
+        "returns": "1",
+        "open": "0",
+        "invalid": "0",
+        "depth_overflow": "0",
+        "unscoped_stages": "0",
+        "pre_hit": "1",
+        "copy": "1",
+        "pre_health": "1",
+        "detailed_calls": "1",
+        "omitted_stage_rows": "0",
+        "log_failures": "0",
+        "max_detail_calls": "64",
+        "max_stage_rows_per_call": "8",
+        "damage_replacement": "0",
+        "committed_loss": "unverified"
+      }
+    }
+  ],
+  "errors": [],
+  "readiness": [
+    {
+      "line": 34,
+      "kind": "HIT_TX_READY",
+      "fields": {
+        "session": "1",
+        "max_depth": "16",
+        "max_detail_calls": "64",
+        "stages_per_call": "8",
+        "ids_independent_of_logging": "1",
+        "committed_loss": "unverified",
+        "damage_replacement": "0"
+      }
+    },
+    {
+      "line": 174,
+      "kind": "HIT_TX_READY",
+      "fields": {
+        "session": "2",
+        "max_depth": "16",
+        "max_detail_calls": "64",
+        "stages_per_call": "8",
+        "ids_independent_of_logging": "1",
+        "committed_loss": "unverified",
+        "damage_replacement": "0"
+      }
+    }
+  ],
+  "installation": [
+    {
+      "line": 8,
+      "kind": "HIT_TX_HOOK_READY",
+      "fields": {
+        "provider": "ITR20202",
+        "sites": "6",
+        "installed_at": "deferred_init",
+        "original_chain_calls": "1",
+        "entry": "before_itr",
+        "return": "provider_return",
+        "gameplay_writes": "0",
+        "damage_replacement": "0"
+      }
+    }
+  ],
+  "coverage_note": "Detailed records are capped; summaries and unsupported stages need human review.",
+  "gameplay_acceptance": "not_automatically_granted",
+  "damage_applications": "unverified"
+}

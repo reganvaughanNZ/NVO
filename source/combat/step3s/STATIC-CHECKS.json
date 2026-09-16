@@ -1,0 +1,11 @@
+{
+  "packet": "3S",
+  "native323_compile_inputs_unchanged": 36,
+  "x86_checks_executable": "55775fd45d5aa0f6805346bc86e416ad8d870c85b5106aa9abda3291aad4a958",
+  "x86_replay_executable": "4c0c68e686f5be32676db3e803bef3d571e45540393389314a0ae47e3ee3dac2",
+  "warnings": 0,
+  "errors": 0,
+  "no_live_dll_linkage": true,
+  "no_game_files_written": true,
+  "compiled_input_snapshot": "source/combat/step3r1/SOURCE-SNAPSHOT.json"
+}

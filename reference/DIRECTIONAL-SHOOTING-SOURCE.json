@@ -1,0 +1,45 @@
+{
+  "reviewed": "2026-09-15",
+  "archive": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\FNV-Directional-Shooting-main.zip",
+  "archive_sha256": "1d73467e79d0e016bdba9aa3be7eeeaa3f18febe40ec9cdf9f9a17b6d1c720e4",
+  "plugin_version_in_source": 114,
+  "license_file": "GNU GPL version 3",
+  "scope": "Source review only. No installation, compilation, gameplay or NVO code changes. Source-to-binary match unverified.",
+  "files": [
+    {
+      "member": "FNV-Directional-Shooting-main/DirectionalShooting/Gathering_Code.h",
+      "sha256": "10ee215163e9c9b050c8ba2eb3852d71060714767ecf41212a777eeb23ebee08",
+      "bytes": 29155
+    },
+    {
+      "member": "FNV-Directional-Shooting-main/DirectionalShooting/Gathering_Havok.h",
+      "sha256": "3f3c5566b75cccb798ed43b1ce67794bcd7e1c899a1d0bb0154a944048b6c535",
+      "bytes": 27474
+    },
+    {
+      "member": "FNV-Directional-Shooting-main/DirectionalShooting/Gathering_Node.h",
+      "sha256": "fd54d94ef84c63df705e17761fe5280f76756e7f31abecdc1f5610806d56907a",
+      "bytes": 3898
+    },
+    {
+      "member": "FNV-Directional-Shooting-main/DirectionalShooting/Gathering_Utility.h",
+      "sha256": "212d051ce267e2ef06dd1f7adb9243b6cdc679ee17038d2dab49261666530599",
+      "bytes": 20003
+    },
+    {
+      "member": "FNV-Directional-Shooting-main/DirectionalShooting/main.cpp",
+      "sha256": "300b74c665f7978547002e76536bfada79085caf8a616a28580ea9e1b71e650c",
+      "bytes": 10904
+    },
+    {
+      "member": "FNV-Directional-Shooting-main/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    }
+  ],
+  "active_call_sites": [
+    "009BD9E2",
+    "00949CF1"
+  ],
+  "review": "reference/DIRECTIONAL-SHOOTING-REVIEW.md"
+}

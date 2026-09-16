@@ -1,0 +1,18 @@
+{
+  "baseline_sha256": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d",
+  "vanilla_sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b",
+  "staged_sha256": "2d0760c96dfd7cb06a95d4736891f67a98f5f5c25c148eb572a5fd75741e795b",
+  "staged_bytes": 450265,
+  "added_record": "NPC_:00000007 Player",
+  "copied_record_sha256": "7353bc65dbc89629709adbfab39c1aae6f8db6d36e422a20f765d51d753551ce",
+  "preserved_existing_records": 819,
+  "all_existing_non_header_records_byte_identical": true,
+  "header_change": "HEDR record/group count +1 only",
+  "masters_unchanged": true,
+  "gmst_count": 5,
+  "player_policy": "Complete vanilla Player base record overrides RD. Character creation/background scripts still select the character. No runtime SetAV, inventory cleanup, or save edits.",
+  "compiled_scripts_changed": false,
+  "installed": false,
+  "geck_compiled": false,
+  "gameplay_tested": false
+}

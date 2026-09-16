@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO · Packet 3M — Armour &amp; projectile rules</title>
+<style>body{max-width:1040px;margin:42px auto;padding:0 24px;background:#111d19;color:#e2e9df;font:17px/1.6 system-ui}h1{font-size:34px}h2{font-size:23px;color:#cee0b0}a{color:#c2df9e}table{border-collapse:collapse;width:100%}th,td{text-align:left;vertical-align:top;padding:12px;border-bottom:1px solid #46584c}th{color:#cee0b0}.note{background:#203126;border-left:3px solid #b0cb85;padding:16px}small{color:#b6c3b6}</style>
+<p><small>NVO COMBAT · PACKET 3M · DESIGN / REFERENCE</small></p>
+<h1>Armour rules for every attack family</h1>
+<p>Prepared: inputs, coverage/material response, ownership of modifiers and safe unsupported handling. <strong>Nothing is installed or enabled by this packet.</strong></p>
+<div class="note">No GECK compilation or gameplay test now. Native320 stays installed. The Brahmin Baron ability is marked for retirement but remains in the compiled ESM until the script packet is compiled and saved.</div>
+<h2>Your decisions</h2><ul><li>Remove the Baron’s caps-based damage and instant-kill callback. Choose a replacement later.</li><li>Review all starting backgrounds for consistency with NVO in the later background pass.</li><li>Include lasers, plasma, flame, explosives and unusual projectiles with their own rules. Current pilot flight covers classified bullets; other families keep existing engine behaviour until their adapters pass.</li></ul>
+<h2>Projectile and attack rules</h2><table><tr><th>Family</th><th>Required distinction</th></tr><tr><td>Bullets, AP, HP and slugs</td><td>Known .308 AP/HP identity does not establish variant construction or penetration</td></tr>
+<tr><td>Shotgun pellets / multiple kinetic carriers</td><td>No total-cartridge mass per pellet and no same-frame merging</td></tr>
+<tr><td>Laser, Tri-beam and laser-like pulses</td><td>No bullet drag/gravity/mass and no repeated visual-callback damage</td></tr>
+<tr><td>Plasma and Multiplas</td><td>Do not convert travel speed into bullet energy or assume an explosion</td></tr>
+<tr><td>Flame / continuous heat</td><td>No FPS scaling or duplicate emitter/direct-effect damage</td></tr>
+<tr><td>Rockets, missiles, grenades and mines</td><td>Impact and blast remain distinct; do not create extra fragments or duplicate engine AoE</td></tr>
+<tr><td>Thrown objects, darts and modded bolts</td><td>Wound-carried poison needs penetration; gas/contact exposure needs a different profile</td></tr>
+<tr><td>Electrical effects</td><td>Robot response is mechanical, not biological bleeding</td></tr>
+<tr><td>Radiation / radioactive payloads</td><td>Radiation dose is not automatically a direct HP delta</td></tr>
+<tr><td>Sonic, alien and other explicitly classified effects</td><td>Unknown effect families stay with the engine</td></tr>
+<tr><td>Fists, cutting, piercing and blunt melee</td><td>No invented firearm energy and no extra OnHit DamageAV</td></tr>
+<tr><td>Unclassified equipment/effects</td><td>Never classify by display name alone</td></tr></table>
+<h2>What the resolver must know</h2><p>The actual hit region, armour coverage/material/condition, source and target, exact ammunition and component identity, and trustworthy family-specific impact data. Unknown inputs retain engine behaviour. A helmet protects its mapped head region independently of body armour. Robots receive mechanical injuries.</p>
+<p>Two kinetic examples reuse the existing source-backed BallistX mass data. They remain disabled until units, contact data and material response are supported. Energy-weapon doses and armour thresholds are intentionally unset; no fake values have been installed.</p>
+<h2>Next packet, with your approval</h2><p><strong>3N: implement a disabled pure resolver and prepare complete Baron retirement scripts.</strong> Offline fixtures check calculations and rejection rules without changing game health. Copy-button scripts will let you compile the original GECK records and retire the legacy ability. Full damage activation comes after targeted review and supported-path checks.</p>
+<p><a href="README.md">Packet notes</a> · <a href="CONTRACT.md">Full contract</a> · <a href="BRAHMIN-RETIREMENT.md">Baron removal scope</a> · <a href="PROJECTILE-FAMILIES.json">Family coverage</a> · <a href="MODIFIER-OWNERSHIP.json">Modifier ownership</a></p>
+<p><small>Reversal: none required. Workspace documents and reference data only; no game launch, build, install or settings change.</small></p></html>

@@ -1,0 +1,321 @@
+{
+  "status": "Preparation only; Ultra review has not run",
+  "version": 317,
+  "live317_evidence": "pending user test",
+  "brief": "source/combat/PRE-DAMAGE-REVIEW.md",
+  "review_strategy": "One current-source Ultra review at the pre-damage gate, then targeted fix/delta checks; do not send full chat history",
+  "files": [
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/CurrentHit.cpp",
+      "sha256": "5a0eb75f6fb4b8fc73b9436fb8db29f167f07f18d37b8068b1a3ff47ec7955bf",
+      "bytes": 8962
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/DamageEvents.cpp",
+      "sha256": "7e1575e747aa014a9e1135410dae67570341e70873491cfdd9f2fbe192f6f3e6",
+      "bytes": 8619
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/Exports.def",
+      "sha256": "3d4893c7aba7fa85ef8f6cb553fbd2a1eb4d206e380b8000521e339213b1929f",
+      "bytes": 71
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/FlightImpact.inl",
+      "sha256": "eaa7fdd0aff7fe7a761672e093f0711c99fd5aae423e6579adbf8544c6074b20",
+      "bytes": 11512
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/FlightImpactJoin.inl",
+      "sha256": "468f0e0dbbe27928ac628b6d605dc601c1a2af8c9d6e4679520adcdda375c1f7",
+      "bytes": 4774
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/FlightImpactModel.inl",
+      "sha256": "87676175e0c9b306a5a3072effd1c1f4a351484f0739fdab4bc8c768c2000302",
+      "bytes": 2772
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/FlightPhysics.cpp",
+      "sha256": "437ee4ef40ce19dbfc2e82ba405e7aea6acfc1ee880d19b4fd2a3baaa6187305",
+      "bytes": 59143
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/FlightPreview.cpp",
+      "sha256": "db9786c34611b06676cd82f099a6350b77a804e4056bb441bdf20d7c857c129c",
+      "bytes": 36477
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/FlightTiming.cpp",
+      "sha256": "1c96271b23065d94cf30101a88d347ba72841394bda619a30163b43cde30b5d0",
+      "bytes": 18846
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/NativeLog.cpp",
+      "sha256": "95fe3fb1c804c1a96a6122d72ffc190fb8ea82e114a5b049df7071fd3b5a69bd",
+      "bytes": 3354
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/NativeObserver.cpp",
+      "sha256": "2fc2848bdfea49bb92ec3fde06bbe1afb59c8f8d7a06f872eb085639e869c7d5",
+      "bytes": 15339
+    },
+    {
+      "role": "current_native_src",
+      "path": "native/NVOCombatCore/src/Plugin.cpp",
+      "sha256": "e3494cdb975583af680174fd85be36244944cf6bc3bcf6079285a30d52282ee4",
+      "bytes": 6051
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/CurrentHit.hpp",
+      "sha256": "411beb0b042434fb7593854e063dca60b2bc9831de6ca6b6a26f7de7cbbf57bd",
+      "bytes": 1536
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/DamageEvents.hpp",
+      "sha256": "a0a19f266116ae4a43a4a0e80f0c5d787e0363126cf9b5b15565417fcbd5f104",
+      "bytes": 384
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/FlightDragData.hpp",
+      "sha256": "2efffb921d8553ec59d952dac0ba7b3836b0871459ee1f3e1816c59e4cfcd202",
+      "bytes": 1020
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/FlightPhysics.hpp",
+      "sha256": "547eff55c5e54131d41fb3de5d582440600923800df9e0698481123d9d251054",
+      "bytes": 1314
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/FlightPreview.hpp",
+      "sha256": "c3f4a49e40d2673b6a766268b5c4c0aaa20256a64a0562a3d353af149fb61de0",
+      "bytes": 915
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/FlightTiming.hpp",
+      "sha256": "bbbf2eba85b7cad5f81d150871df89650dd80bfafdba51d6e7e18db50b81db61",
+      "bytes": 776
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/NativeLog.hpp",
+      "sha256": "2a1c8088364505f6a4c6c0748c86099c5973e012d91163cd74d03a0db5c21aea",
+      "bytes": 261
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/NativeObserver.hpp",
+      "sha256": "b99d0b89ba7d5756c61e165e1d9f1c1b11cb844bbaf19125f70a8594fb3c1ab2",
+      "bytes": 1579
+    },
+    {
+      "role": "current_native_include",
+      "path": "native/NVOCombatCore/include/NvseBootstrapApi.hpp",
+      "sha256": "2e551b8ae15937c4e9e6faa62ede946e57b98ad56723ce5f2feedb878566cf5d",
+      "bytes": 2997
+    },
+    {
+      "role": "current_native_config",
+      "path": "native/NVOCombatCore/config/NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac",
+      "bytes": 199
+    },
+    {
+      "role": "current_native_config",
+      "path": "native/NVOCombatCore/config/NVOFlightPreview.ini",
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+      "bytes": 3595
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/CONTROLLER-LOCAL-Z-CORRECTION.json",
+      "sha256": "f43ad77280e7869255c3ab4ab44a73e30d1c97532c21e5e64d1444c0424320d4",
+      "bytes": 1037
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/CONTROLLER-REQUEST-DIAGNOSTICS.json",
+      "sha256": "d4869ef28ebd71f003b78ebc71d5cad7b16276a7fdd7d00b4afa4e1db74a985e",
+      "bytes": 877
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/CREDITS.md",
+      "sha256": "f73a9b44dfb5b0f5c0879a22b28f5e5785ccf21bcb23eda5a82ef5a273d77485",
+      "bytes": 1175
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/FIRING-RANGE-NOTES.md",
+      "sha256": "a5116582ddb6cd7738489f99add9616e574c7bff2d39a9da055b3683dd040a0d",
+      "bytes": 1960
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/FLIGHT-BOUNDARY-DIAGNOSTICS.json",
+      "sha256": "9eded8dd7c854de4be79c1010c38f065aaffec6dbcd6c4352fa0c4b691a646f2",
+      "bytes": 1093
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/FLIGHT-MOVEMENT-ARGUMENT.json",
+      "sha256": "83bb5038c5a22c7323a2be22cec18fe06c7678aaedbc7fa248ad9a5b6f56595e",
+      "bytes": 1060
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/FLIGHT-PHYSICS-SOURCE.json",
+      "sha256": "fedb15997f7b84b321f61c27801de18501756920b5eed51741165ab0a51ea3bb",
+      "bytes": 1651
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/FLIGHT-ROUTE-CHECKPOINT.json",
+      "sha256": "00b21fc32d300c3e4ba7eca513e2403befe07f8fab369ab383e706b066fb1779",
+      "bytes": 772
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/FLIGHT-TIMING-HOOK.json",
+      "sha256": "90d3ce42701dba1f49edeb2bb1b5601af5eadb0ea22e09c5800bd065beb0de7a",
+      "bytes": 1354
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/FLIGHT-TIMING-THREADS.json",
+      "sha256": "42644a2246c054b23e4033a374c489be99546bd08fefe327be39f1ff8164cea3",
+      "bytes": 1016
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/IMPACT-HIT-NOTES.md",
+      "sha256": "b29014bc5e8b35d9c31896cbe377d469e8209ce2f1a6103182695e6adbbcda06",
+      "bytes": 1067
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/IMPACT-SPEED-NOTES.md",
+      "sha256": "47c790e2675654af3dc1d066092c6cc522e07d1baa6195644ab7180db685486d",
+      "bytes": 1420
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/NVO-Flight-Pilot.json",
+      "sha256": "a1cbc26838d325edb9a2ebc08ff406708c28081f396c53e41713d7e30ae684c8",
+      "bytes": 11161
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/PROVENANCE.json",
+      "sha256": "851b0fcaae6c02e3e52be771d01a977b85f2a4e9803d240f4dd82d1379b4edf1",
+      "bytes": 1244
+    },
+    {
+      "role": "current_native_reference",
+      "path": "native/NVOCombatCore/reference/TERRAIN-QUERY-NOTES.md",
+      "sha256": "9637dfd2d80928c0c917ed2b86838df5ce3b050c7242456e22b35038df2ec16c",
+      "bytes": 2546
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "native/NVOCombatCore/manifest.json",
+      "sha256": "55ba1c224c44d54366aa1ad4c6f40d811ed7d5e3db46ae6ee987dfd728ae4ae5",
+      "bytes": 1029
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "native/NVOCombatCore/CMakeLists.txt",
+      "sha256": "bae86e31ef07c336e138d172f72662336416cf012d3a81d3c0e785f5adf7d1bd",
+      "bytes": 1243
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "native/NVOCombatCore/BUILD.cmd",
+      "sha256": "28464a78d05ba1d26f6ce4abe0da26343b637cf52044d553e38770f8a3f6d2f8",
+      "bytes": 3746
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "native/NVOCombatCore/THIRD-PARTY-NOTICES.md",
+      "sha256": "5c905eba9e31c824c18b94dc1bfd1c55e79e783184890bf1f508124f0be8e679",
+      "bytes": 2181
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g2/STATIC-CHECKS.json",
+      "sha256": "40960ec25bc6534dcc96f997e87aa4c0d102b33515fec94e3f034423a7b264eb",
+      "bytes": 2691
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g2/INSTALL-3G2-result.json",
+      "sha256": "5ecc2d533ca24d74733cf8a158badc3bb6322061089ffef40b42078df4a0aecf",
+      "bytes": 675
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g2/INSTALL-3G2-plan.json",
+      "sha256": "0bc408513f6a3b9fae9392c25c48f487db71217b2661c7aa647a30474c0b3556",
+      "bytes": 3103
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g2/ENGINE-FINDINGS.json",
+      "sha256": "31b8d2aeb5d6cdabbd81a9aa2789b1753201351cd4a787531784647fea51aa60",
+      "bytes": 1203
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g2/replay/REPLAY-RESULT.json",
+      "sha256": "5c5a0ee9dee2c7b1e71ead18d8ddfba14ee2ecd654a41f5a1a6cf614ae2d8756",
+      "bytes": 1666
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g2/IMPLEMENTATION.md",
+      "sha256": "f3987b069d2e20bca331ac50eec7db316c62ad05e06581904a6fe6562eea45eb",
+      "bytes": 5480
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g1/REVIEW-1.md",
+      "sha256": "56343b87f21e36f7b1ead980706ae31e7b8e3854c7542b4ecf716115cfb0e38b",
+      "bytes": 6638
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3g/REVIEW-1.md",
+      "sha256": "94f0e32ddf260b5ef1b03834b54cc01bda8efae8c8daad917af8de3e5227063c",
+      "bytes": 7753
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/step3f3/REVIEW-1.md",
+      "sha256": "85fec7f6312c5d24501f90214f40b70535fff8d4ee4cdb94dac602a5133fa0b4",
+      "bytes": 6798
+    },
+    {
+      "role": "build_evidence_or_brief",
+      "path": "source/combat/PRE-DAMAGE-REVIEW.md",
+      "sha256": "ec1f90a4dd18e86140614a581c4aa853af23607d110960d90a8b012fb72d9938",
+      "bytes": 7396
+    }
+  ]
+}

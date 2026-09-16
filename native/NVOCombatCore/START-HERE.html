@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVO Combat Packet 4B — Guarded Armour Snapshot</title>
+  <style>
+    body{max-width:880px;margin:40px auto;padding:0 24px;background:#111815;color:#d9e7df;font:18px/1.55 "Segoe UI",sans-serif}
+    h1,h2{color:#9fe0ba}.hold{border-left:5px solid #e1aa4b;padding:12px 18px;background:#202018}
+    .ok{border-left:5px solid #6dc58a;padding:12px 18px;background:#14251c}a{color:#8ecbff}code{color:#f0d58a}li{margin:8px 0}
+  </style>
+</head>
+<body>
+  <h1>NVO Combat Packet 4B</h1>
+  <p><strong>Guarded equipped-armour snapshot reader. Prepared and compiled; not installed.</strong></p>
+  <p>This packet reads exact worn armour instances from supported <code>Character</code> targets at the existing hit-copy boundary. It records raw evidence only.</p>
+  <div class="hold"><strong>Damage remains on HOLD.</strong> Armour coverage, layer order, impact authority, the Step 4A preview, and all gameplay writes remain disabled.</div>
+  <h2>Creature boundary</h2>
+  <p>Humans and non-feral ghouls represented as <code>Character</code> can be inspected for worn inventory armour. Bloatflies, feral ghouls, robots, yao guai, and other <code>Creature</code> targets are skipped rather than treated as bare. Their natural protection will be added later through physiology profiles. Baked GECK model parts are not inferred as equipped armour.</p>
+  <h2>Offline verification</h2>
+  <div class="ok">452 guarded-reader checks passed. The final x86 DLL built with warnings as errors and passed independent source/binary review.</div>
+  <ul>
+    <li>Two identical bounded traversals are required.</li>
+    <li>Cycles, aliases, contradictory presence bits, invalid pointers, mutation, and limits fail closed.</li>
+    <li>No hook site changed and no new hook was added.</li>
+    <li>No game or project file was installed or modified outside this source workspace.</li>
+  </ul>
+  <p>Read <a href="README.md">README.md</a>, <a href="CONTRACT.md">CONTRACT.md</a>, and <a href="BUILD-RESULT.md">BUILD-RESULT.md</a>.</p>
+  <p>A separate approval is required before installation and the short live logging checkpoint.</p>
+</body>
+</html>

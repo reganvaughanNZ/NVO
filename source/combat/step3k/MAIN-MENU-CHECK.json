@@ -1,0 +1,11 @@
+{
+  "native_version": 319,
+  "main_menu_initialization": "passed",
+  "observer_tables": 3,
+  "log_sha256": "2b9e465e70f5384946b50d50014e7f5b7c22ea62e47a75c7c34bcf12dea5f552",
+  "save_loaded": false,
+  "gameplay_tested": false,
+  "game_closed": true,
+  "damage_replacement": false,
+  "next": "User three-hit/reload checkpoint when available"
+}

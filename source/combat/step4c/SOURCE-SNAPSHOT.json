@@ -1,0 +1,50 @@
+{
+  "packet": "4C",
+  "files": [
+    {
+      "path": "native/NVOCombatModel/CoverageProfiles.hpp",
+      "bytes": 3032,
+      "sha256": "385ccc8d9edea9d3bd7bdb4996fcb311b5c969fcee8fdb2232e6d61738e004f9"
+    },
+    {
+      "path": "native/NVOCombatModel/CoverageProfiles.cpp",
+      "bytes": 5201,
+      "sha256": "2360fa1b1af7a84bbf91becd7852428d458f5fdfaee325dc1e055b16f0398334"
+    },
+    {
+      "path": "native/NVOCombatModel/CoverageFixtures.inl",
+      "bytes": 29285,
+      "sha256": "2bda274d1fdc7a372c9078dbc56681cca58b9e9459aed97331127a9c43a62ca7"
+    },
+    {
+      "path": "native/NVOCombatModel/coverage_tests.cpp",
+      "bytes": 9359,
+      "sha256": "df84d24b5ea3f6f33695ff2deb72fbf98983fa2b7078287b1f34f552d7c579b0"
+    },
+    {
+      "path": "native/NVOCombatModel/run_coverage_checks.cmd",
+      "bytes": 573,
+      "sha256": "c789ebc0ae7e1ae4e2a199bf16d21d284efce1d3cca5d256be2308e2bc884f21"
+    },
+    {
+      "path": "tools/generate_combat_4c_fixtures.py",
+      "bytes": 6329,
+      "sha256": "00e227736ab43f54168ba9b42cde8ab052ce395b701ed9ea78ecf5d17483a468"
+    },
+    {
+      "path": "tools/check_combat_4c_profiles.py",
+      "bytes": 2026,
+      "sha256": "216d2ded3c0b5b1419da717dd7937a3654b01c280757d3966f78084cb9c509ea"
+    },
+    {
+      "path": "tools/prepare_combat_4c.py",
+      "bytes": 7865,
+      "sha256": "f36c15883b8f4719c4b325a1b69a98111c1b872e547770c754691b13315f5226"
+    },
+    {
+      "path": "source/combat/step4c/profiles/armour-coverage.json",
+      "bytes": 1431,
+      "sha256": "af13f0567f43b1b3a19da1f3c98012cf89a6279015175f32380ee6be37d61852"
+    }
+  ]
+}

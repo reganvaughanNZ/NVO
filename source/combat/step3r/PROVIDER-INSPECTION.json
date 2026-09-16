@@ -1,0 +1,21 @@
+{
+  "provider_sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e",
+  "timestamp": "0x69c84c9b",
+  "image_size": "0x110000",
+  "preferred_base": "10000000",
+  "handler_rva": "94870",
+  "handler_size": 159,
+  "handler_fnv": "349CE445DFD63A6E",
+  "relocation_offsets": [
+    "0x11",
+    "0x16",
+    "0x1b",
+    "0x2d"
+  ],
+  "saved_target_rva": "102924",
+  "create_thunk_rva": "94850",
+  "engine_target": "009BCA60",
+  "engine_entry_size": 64,
+  "engine_entry_fnv": "1CE93E2A04BF00C2",
+  "capture_sha256": "f6c95eb7e7ea3f5968770d6a8b807260f160e08ff2be6e085ade515376f3b452"
+}

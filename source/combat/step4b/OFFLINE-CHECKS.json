@@ -1,0 +1,56 @@
+{
+  "packet": "4B",
+  "version": "0.3.26",
+  "plugin_version": 326,
+  "prepared_not_installed": true,
+  "reader_checks": {
+    "passed": 452,
+    "failed": 0,
+    "command": "tests/RUN-ARMOUR-SNAPSHOT-CHECKS.cmd --no-pause"
+  },
+  "build": {
+    "directory": "native\\NVOCombatCore\\out\\build-20913-15431",
+    "warnings_as_errors": true,
+    "dll": {
+      "path": "native\\NVOCombatCore\\out\\build-20913-15431\\NVOCombatCore.dll",
+      "bytes": 362496,
+      "sha256": "3d5ff40c5c8ba418c0764cba55bd8595cfa1444396f4e814552210524094e13a"
+    },
+    "pdb": {
+      "path": "native\\NVOCombatCore\\out\\build-20913-15431\\NVOCombatCore.pdb",
+      "bytes": 4673536,
+      "sha256": "9411d09fefe2e59fa50a891081592b81fbc9cc50602bee8951a04e706ac8d2a0"
+    },
+    "pe": "PE32 x86",
+    "exports": [
+      "NVSEPlugin_Load",
+      "NVSEPlugin_Query"
+    ],
+    "imported_dlls": [
+      "KERNEL32.dll"
+    ],
+    "pdb_guid": "8F044AF3-BB3A-4716-9FA2-182E48BED43C",
+    "pdb_age": 1
+  },
+  "static_audit": {
+    "existing_patch_lines_baseline": 45,
+    "existing_patch_lines_current": 45,
+    "patch_line_differences": 0,
+    "copy_observer_instruction_block_differences": 0,
+    "transaction_entry_bridge_instruction_block_differences": 0,
+    "transaction_return_bridge_instruction_block_differences": 0,
+    "new_hooks": 0,
+    "new_module_patch_api_calls": 0,
+    "shadow_adapter_or_armour_model_link": false,
+    "gameplay_writes": false
+  },
+  "authority": {
+    "snapshot": false,
+    "region_coverage": false,
+    "layer_order": false,
+    "impact_timing": false,
+    "bare_region": false,
+    "armour_preview": false,
+    "damage_replacement": false
+  }
+}

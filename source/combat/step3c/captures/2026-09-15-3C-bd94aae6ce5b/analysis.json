@@ -1,0 +1,136 @@
+{
+  "sha256": "bd94aae6ce5b6ff39177df3a868cd651d96c792063bf36d87b8f05fd40132080",
+  "bytes": 57808,
+  "lines": 248,
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "last_write": "2026-09-15T12:38:17.093505",
+  "archive": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3c\\captures\\2026-09-15-3C-bd94aae6ce5b",
+  "user_note": "First reload was test-environment setup, not the requested repeated-shot check.",
+  "sessions": {
+    "1": {
+      "private_creates": {},
+      "private_destroy": {},
+      "phases": {},
+      "physics_steps": 0,
+      "rejects": 0,
+      "timing_steps": 0,
+      "moving_ratios": [],
+      "summaries": [
+        "SUMMARY session=1 reason=pre_load_game rows=7 create=1 impact=2 destroy=2 hit_notice=1 weapon_notice=1 blast=0 unmatched=2 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0",
+        "CURRENT_HIT_SUMMARY session=1 reason=pre_load_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified",
+        "PHYSICS_SUMMARY session=1 reason=pre_load_game accepted=0 applied_steps=0 rejected=0 overflow=0 open=0 damage_replacement=0",
+        "FLIGHT_TIMING_SUMMARY session=1 reason=pre_load_game accepted=0 steps_logged=0 invalid=0 retired_during_update=0 other_thread_steps=0 overlap_lifetimes=0 thread_changes=0 nesting_limit=0 open=0 timing_writes=0 damage_writes=0",
+        "FLIGHT_PREVIEW_SUMMARY session=1 reason=pre_load_game seen=1 matched=0 skipped=1 read_failures=0 identity_mismatches=0 create_rows=0 impact_rows=0 destroy_rows=0 open_samples=0 preview_writes=0 damage_writes=0",
+        "DAMAGE_EVENT_SUMMARY session=1 reason=pre_load_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+      ],
+      "lifetimes": {}
+    },
+    "2": {
+      "private_creates": {
+        "0C000801": 1,
+        "0C000800": 1
+      },
+      "private_destroy": {
+        "0C000801": 1,
+        "0C000800": 1
+      },
+      "phases": {
+        "no_motion": 2,
+        "moving": 11,
+        "collision": 2
+      },
+      "physics_steps": 0,
+      "rejects": 0,
+      "timing_steps": 15,
+      "moving_ratios": [
+        1.00000006,
+        1.0000073,
+        1.0000005,
+        1.00000496,
+        0.999995465,
+        0.999996172,
+        0.999996318,
+        1.00000349,
+        0.999997678,
+        1.00000349,
+        0.999996608
+      ],
+      "summaries": [
+        "SUMMARY session=2 reason=pre_load_game rows=10 create=2 impact=2 destroy=2 hit_notice=2 weapon_notice=2 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0",
+        "CURRENT_HIT_SUMMARY session=2 reason=pre_load_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified",
+        "PHYSICS_SUMMARY session=2 reason=pre_load_game accepted=2 applied_steps=0 rejected=0 overflow=0 open=0 damage_replacement=0",
+        "FLIGHT_TIMING_SUMMARY session=2 reason=pre_load_game accepted=2 steps_logged=15 invalid=0 retired_during_update=0 other_thread_steps=15 overlap_lifetimes=0 thread_changes=0 nesting_limit=0 open=0 timing_writes=0 damage_writes=0",
+        "FLIGHT_PREVIEW_SUMMARY session=2 reason=pre_load_game seen=2 matched=2 skipped=0 read_failures=0 identity_mismatches=0 create_rows=2 impact_rows=2 destroy_rows=2 open_samples=0 preview_writes=0 damage_writes=0",
+        "DAMAGE_EVENT_SUMMARY session=2 reason=pre_load_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+      ],
+      "lifetimes": {
+        "2": "0C000801",
+        "3": "0C000800"
+      }
+    },
+    "3": {
+      "private_creates": {
+        "0C000801": 2,
+        "0C000800": 2
+      },
+      "private_destroy": {
+        "0C000801": 2,
+        "0C000800": 2
+      },
+      "phases": {
+        "no_motion": 4,
+        "moving": 13,
+        "collision": 4
+      },
+      "physics_steps": 0,
+      "rejects": 0,
+      "timing_steps": 21,
+      "moving_ratios": [
+        1.00000036,
+        1.0000064,
+        1.00000017,
+        0.999999086,
+        1.00000032,
+        1.00000864,
+        1.0000001,
+        1.00000856,
+        1.0000001,
+        1.00000856,
+        1.0000001,
+        1.00000856,
+        1.00000823
+      ],
+      "summaries": [
+        "SUMMARY session=3 reason=exit_game rows=25 create=5 impact=5 destroy=5 hit_notice=5 weapon_notice=5 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0",
+        "CURRENT_HIT_SUMMARY session=3 reason=exit_game contexts=3 invalid_contexts=0 linked_lifetimes=3 known_ammo=3 damage_applications=unverified",
+        "PHYSICS_SUMMARY session=3 reason=exit_game accepted=4 applied_steps=0 rejected=0 overflow=0 open=0 damage_replacement=0",
+        "FLIGHT_TIMING_SUMMARY session=3 reason=exit_game accepted=4 steps_logged=21 invalid=0 retired_during_update=0 other_thread_steps=21 overlap_lifetimes=0 thread_changes=0 nesting_limit=0 open=0 timing_writes=0 damage_writes=0",
+        "FLIGHT_PREVIEW_SUMMARY session=3 reason=exit_game seen=5 matched=4 skipped=1 read_failures=0 identity_mismatches=0 create_rows=4 impact_rows=4 destroy_rows=4 open_samples=0 preview_writes=0 damage_writes=0",
+        "DAMAGE_EVENT_SUMMARY session=3 reason=exit_game hit_callbacks=3 hit_rows=3 health_callbacks=3 health_rows=3 invalid=0 damage_replacement=0 damage_applications=unverified"
+      ],
+      "lifetimes": {
+        "4": "0C000801",
+        "5": "0C000800",
+        "6": "0C000800",
+        "8": "0C000801"
+      }
+    }
+  },
+  "lifecycle": [
+    "LIFECYCLE post_load_plugins",
+    "LIFECYCLE post_post_load_plugins",
+    "LIFECYCLE deferred_init",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=1",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=2",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=3",
+    "LIFECYCLE exit_game"
+  ],
+  "disabled": [],
+  "limits": []
+}

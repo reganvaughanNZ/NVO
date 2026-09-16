@@ -1,0 +1,50 @@
+{
+  "capture_sha256": "9a54c6410f44628130ff1e4db97af2a85184eb2422a9c288d5956983116f7bcf",
+  "normal_exit": true,
+  "shot_context": "Shot 1 rock; shot 2 VATS headshot; shot 3 live torso shot at same distance. The order of live-shot checks was reversed from the page. Shot3 mode not explicitly stated; presumed outside VATS from checkpoint context, not independently observed.",
+  "contact_checks": [
+    {
+      "lifetime": 2,
+      "model_status": "model_estimate_only",
+      "candidate_valid": true,
+      "endpoint_matches": true,
+      "accounting_matches": true,
+      "off_chord_units": 0.021774192414595477,
+      "tolerance": 0.0520854894,
+      "excess_off_chord": -0.03031129698540452,
+      "contact_callback_change": 0.0,
+      "collision_region": 0,
+      "damage_context_region": 1,
+      "regions_agree": false,
+      "candidate_speed_mps": 808.438545,
+      "candidate_time_s": 0.00431042584,
+      "model_contact_gap": 0.0371457212
+    },
+    {
+      "lifetime": 3,
+      "model_status": "contact_geometry_unverified",
+      "candidate_valid": false,
+      "endpoint_matches": true,
+      "accounting_matches": true,
+      "off_chord_units": 0.07109234626743273,
+      "tolerance": 0.0532246123,
+      "excess_off_chord": 0.017867733967432728,
+      "contact_callback_change": 0.0,
+      "collision_region": 0,
+      "damage_context_region": 0,
+      "regions_agree": true
+    }
+  ],
+  "rock": {
+    "lifetime": 1,
+    "collision_before_first_movement": true,
+    "speed_unavailable": true,
+    "reason": "contacts already present before first timing update; no movement/accounting entry"
+  },
+  "native_installed": 316,
+  "game_modified": false,
+  "diagnostic_boundary_correction": "observed working; scope limited to one accepted model candidate",
+  "speed_authority": "not enabled",
+  "anatomy_authority": "not accepted: preserve collision and damage-context region separately",
+  "next_packet": "propose paired collision/resolved-hit context and source investigation of unavailable paths; await approval"
+}

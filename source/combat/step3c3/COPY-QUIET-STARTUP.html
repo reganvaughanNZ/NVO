@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>NVO quiet startup script</title><style>body{max-width:850px;margin:40px auto;padding:0 24px;background:#121918;color:#e9f1e8;font:18px/1.6 system-ui}h1{line-height:1.2}code{background:#283530;padding:3px 7px}li{margin:12px 0}button{padding:9px 15px;font:inherit;cursor:pointer}aside{padding:18px;background:#20352c}a{color:#aad8a7}textarea{width:100%;height:480px;font:14px/1.5 Consolas,monospace}</style>
+<h1>Quiet successful reloads</h1><p>This complete replacement removes the old Packet 1 success messages. Dependency checks and missing-dependency warnings remain. It does not change native physics.</p>
+<aside>Prepared for your existing working <b>NVOCombatBootstrapScript</b>. The game Data/NVO.esm inspected during this review does not contain that record. Use this only if the existing script is present in your working GECK file. If it is absent, report one exact repeating NVO console line so we can locate its source. Do not create another bootstrap quest.</aside>
+<ol><li>Back up your working ESM. Open the existing script; retain its Quest script type and quest attachment.</li><li>Replace its entire source with the text below, compile, then save your working ESM.</li><li>When that updated file is installed, successful checks should print no Packet 1 success block. You can perform this separately from the native two-shot diagnostic.</li></ol>
+<button onclick="copy('source',this)">Copy complete script</button><textarea id="source" readonly>scn NVOCombatBootstrapScript
+
+short bChecked
+short bFrameworkReady
+short bCorePresent
+short bCombatEnabled
+short iMissingCount
+short iPacket
+long iRunCount
+long iNVSEMajor
+long iNVSEMinor
+float fQuestDelayTime
+
+Begin GameMode
+
+    set fQuestDelayTime to 1
+
+    if GetGameLoaded
+        set bChecked to 0
+    endif
+    if GetGameRestarted
+        set bChecked to 0
+    endif
+
+    if bChecked == 1
+        Return
+    endif
+
+    set bChecked to 1
+    set iPacket to 1
+    set iRunCount to iRunCount + 1
+    set iMissingCount to 0
+    set bFrameworkReady to 0
+    set bCorePresent to 0
+    set bCombatEnabled to 0
+    set iNVSEMajor to GetNVSEVersion
+    set iNVSEMinor to GetNVSERevision
+
+
+    if iNVSEMajor &lt; 6
+        set iMissingCount to iMissingCount + 1
+        PrintC &quot;NVO Combat: xNVSE 6.3.0 or newer is required.&quot;
+    elseif iNVSEMajor == 6
+        if iNVSEMinor &lt; 3
+            set iMissingCount to iMissingCount + 1
+            PrintC &quot;NVO Combat: xNVSE 6.3.0 or newer is required.&quot;
+        endif
+    endif
+
+    if IsPluginInstalled &quot;JIP LN NVSE&quot; == 0
+        if IsPluginInstalled &quot;JIP NVSE Plugin&quot; == 0
+            set iMissingCount to iMissingCount + 1
+            PrintC &quot;NVO Combat: JIP LN NVSE is missing.&quot;
+        endif
+    endif
+
+    if IsPluginInstalled &quot;JohnnyGuitarNVSE&quot; == 0
+        set iMissingCount to iMissingCount + 1
+        PrintC &quot;NVO Combat: JohnnyGuitar NVSE is missing.&quot;
+    endif
+
+    if IsPluginInstalled &quot;ShowOffNVSE Plugin&quot; == 0
+        set iMissingCount to iMissingCount + 1
+        PrintC &quot;NVO Combat: ShowOff NVSE is missing.&quot;
+    endif
+
+    if IsPluginInstalled &quot;NVOCombatCore&quot;
+        set bCorePresent to 1
+    endif
+
+    if iMissingCount == 0
+        set bFrameworkReady to 1
+    else
+        PrintC &quot;NVO Combat: missing prerequisites. See the console lines above.&quot;
+    endif
+
+
+End
+</textarea><p>Reversal: restore your working ESM backup, or recompile the previous complete Packet 1 source. No game file has been modified automatically by this page.</p><script>async function copy(id,b){const e=document.getElementById(id),t=e.value||e.textContent;try{await navigator.clipboard.writeText(t);b.textContent='Copied'}catch(err){const a=document.createElement('textarea');a.value=t;document.body.append(a);a.select();b.textContent=document.execCommand('copy')?'Copied':'Select and copy';a.remove()}}</script></html>

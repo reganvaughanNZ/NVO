@@ -1,0 +1,119 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3l\runtime-20260916-124025\difficulty_getter-005BE4D0.obj
+
+File Type: COFF OBJECT
+
+  005BE4D0: 55                 push        ebp
+  005BE4D1: 8B EC              mov         ebp,esp
+  005BE4D3: 51                 push        ecx
+  005BE4D4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  005BE4D7: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  005BE4DA: 8B 80 B8 07 00 00  mov         eax,dword ptr [eax+000007B8h]
+  005BE4E0: 8B E5              mov         esp,ebp
+  005BE4E2: 5D                 pop         ebp
+  005BE4E3: C3                 ret
+  005BE4E4: CC                 int         3
+  005BE4E5: CC                 int         3
+  005BE4E6: CC                 int         3
+  005BE4E7: CC                 int         3
+  005BE4E8: CC                 int         3
+  005BE4E9: CC                 int         3
+  005BE4EA: CC                 int         3
+  005BE4EB: CC                 int         3
+  005BE4EC: CC                 int         3
+  005BE4ED: CC                 int         3
+  005BE4EE: CC                 int         3
+  005BE4EF: CC                 int         3
+  005BE4F0: 55                 push        ebp
+  005BE4F1: 8B EC              mov         ebp,esp
+  005BE4F3: 83 EC 14           sub         esp,14h
+  005BE4F6: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  005BE4FD: 8D 45 FC           lea         eax,[ebp-4]
+  005BE500: 50                 push        eax
+  005BE501: 8B 4D 1C           mov         ecx,dword ptr [ebp+1Ch]
+  005BE504: 51                 push        ecx
+  005BE505: 8B 55 18           mov         edx,dword ptr [ebp+18h]
+  005BE508: 52                 push        edx
+  005BE509: 8B 45 14           mov         eax,dword ptr [ebp+14h]
+  005BE50C: 50                 push        eax
+  005BE50D: 8B 4D 10           mov         ecx,dword ptr [ebp+10h]
+  005BE510: 51                 push        ecx
+  005BE511: 8B 55 24           mov         edx,dword ptr [ebp+24h]
+  005BE514: 52                 push        edx
+  005BE515: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  005BE518: 50                 push        eax
+  005BE519: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  005BE51C: 51                 push        ecx
+  005BE51D: E8 8E E7 FE FF     call        005ACCB0
+  005BE522: 83 C4 20           add         esp,20h
+  005BE525: 0F B6 D0           movzx       edx,al
+  005BE528: 85 D2              test        edx,edx
+  005BE52A: 75 07              jne         005BE533
+  005BE52C: 32 C0              xor         al,al
+  005BE52E: E9 88 00 00 00     jmp         005BE5BB
+  005BE533: C7 45 F8 00 00 00  mov         dword ptr [ebp-8],0
+            00
+  005BE53A: EB 09              jmp         005BE545
+  005BE53C: 8B 45 F8           mov         eax,dword ptr [ebp-8]
+  005BE53F: 83 C0 01           add         eax,1
+  005BE542: 89 45 F8           mov         dword ptr [ebp-8],eax
+  005BE545: 6A 00              push        0
+  005BE547: B9 80 0E 1E 01     mov         ecx,11E0E80h
+  005BE54C: E8 FF 98 15 00     call        00717E50
+  005BE551: 8B C8              mov         ecx,eax
+  005BE553: E8 68 00 00 00     call        005BE5C0
+  005BE558: 39 45 F8           cmp         dword ptr [ebp-8],eax
+  005BE55B: 73 5C              jae         005BE5B9
+  005BE55D: 8B 4D F8           mov         ecx,dword ptr [ebp-8]
+  005BE560: 51                 push        ecx
+  005BE561: B9 80 0E 1E 01     mov         ecx,11E0E80h
+  005BE566: E8 E5 98 15 00     call        00717E50
+  005BE56B: 8B C8              mov         ecx,eax
+  005BE56D: E8 FE A0 3A 00     call        00968670
+  005BE572: 89 45 F0           mov         dword ptr [ebp-10h],eax
+  005BE575: C7 45 F4 00 00 00  mov         dword ptr [ebp-0Ch],0
+            00
+  005BE57C: 83 7D F0 00        cmp         dword ptr [ebp-10h],0
+  005BE580: 74 35              je          005BE5B7
+  005BE582: 8B 55 F0           mov         edx,dword ptr [ebp-10h]
+  005BE585: 8B 02              mov         eax,dword ptr [edx]
+  005BE587: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  005BE58A: 8B 90 00 01 00 00  mov         edx,dword ptr [eax+00000100h]
+  005BE590: FF D2              call        edx
+  005BE592: 0F B6 C0           movzx       eax,al
+  005BE595: 85 C0              test        eax,eax
+  005BE597: 74 1E              je          005BE5B7
+  005BE599: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  005BE59C: 89 4D EC           mov         dword ptr [ebp-14h],ecx
+  005BE59F: 83 7D EC 00        cmp         dword ptr [ebp-14h],0
+  005BE5A3: 74 12              je          005BE5B7
+  005BE5A5: 51                 push        ecx
+  005BE5A6: D9 EE              fldz
+  005BE5A8: D9 1C 24           fstp        dword ptr [esp]
+  005BE5AB: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  005BE5AE: 52                 push        edx
+  005BE5AF: 8B 4D EC           mov         ecx,dword ptr [ebp-14h]
+  005BE5B2: E8 49 F3 2D 00     call        0089D900
+  005BE5B7: EB 83              jmp         005BE53C
+  005BE5B9: B0 01              mov         al,1
+  005BE5BB: 8B E5              mov         esp,ebp
+  005BE5BD: 5D                 pop         ebp
+  005BE5BE: C3                 ret
+  005BE5BF: CC                 int         3
+  005BE5C0: 55                 push        ebp
+  005BE5C1: 8B EC              mov         ebp,esp
+  005BE5C3: 51                 push        ecx
+  005BE5C4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  005BE5C7: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  005BE5CA: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  005BE5CD: 8B
+  005BE5CE: 44                 inc         esp
+  005BE5CF: 81
+
+  Summary
+
+         100 .text

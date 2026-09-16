@@ -1,0 +1,161 @@
+{
+  "baseline_esm_sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d",
+  "scripts": [
+    {
+      "editor_id": "ALTRichKidHit",
+      "form": "050074CA",
+      "script_type": "Object",
+      "prior_variables": {
+        "icaps": [
+          1,
+          0
+        ],
+        "rtarget": [
+          2,
+          0
+        ],
+        "rattacker": [
+          3,
+          0
+        ]
+      },
+      "declarations_preserved": true,
+      "baseline_compiled_sha256": "1721ec8df9baba5c82f4c7b010bea6cbfa2a1fe1e5fb97cb9e000e2ae736938f",
+      "replacement_sha256": "3531a12a7a92062f9d90f05aa31830b6ffcd63a2f409aa0b6f32cc8c2c5af5f2",
+      "geck_compile_pending": true
+    },
+    {
+      "editor_id": "ALTBackRichKidUDF",
+      "form": "050122A2",
+      "script_type": "Object",
+      "prior_variables": {},
+      "declarations_preserved": true,
+      "baseline_compiled_sha256": "67667f85c49ae603950723acc1c31ecbb4d1e6481abab12152465beefc4a0588",
+      "replacement_sha256": "2f8392f061b549b7d93ff6e87bd06f6b94c24389ea7ade4201523ebcb7eeba5b",
+      "geck_compile_pending": true
+    },
+    {
+      "editor_id": "ALTQscript",
+      "form": "05002900",
+      "script_type": "Quest",
+      "prior_variables": {
+        "sveronicloc": [
+          1,
+          1
+        ],
+        "rturninitem": [
+          2,
+          0
+        ],
+        "iturninvalue": [
+          3,
+          1
+        ],
+        "nvoreservedslot4": [
+          15,
+          1
+        ],
+        "rref": [
+          5,
+          0
+        ],
+        "bblock": [
+          6,
+          1
+        ],
+        "istate": [
+          7,
+          1
+        ],
+        "nvoreservedslot8": [
+          16,
+          1
+        ],
+        "nvoreservedslot9": [
+          17,
+          1
+        ],
+        "iscience": [
+          10,
+          1
+        ],
+        "iupdate": [
+          11,
+          1
+        ],
+        "smajorknight": [
+          12,
+          1
+        ],
+        "modoverridingindex": [
+          13,
+          1
+        ],
+        "modname": [
+          14,
+          1
+        ]
+      },
+      "declarations_preserved": true,
+      "baseline_compiled_sha256": "d96c69ce5cd87a6d873efa3b9f5be47a9d0be909c455831b3fc2b8bd3cdf5470",
+      "replacement_sha256": "27974ae2c096b87e40292b1c92c39a99c27674a97873797092ae7f2edbfd2d04",
+      "geck_compile_pending": true
+    },
+    {
+      "editor_id": "NVOStartPreview",
+      "form": "05018E2B",
+      "script_type": "Object",
+      "prior_variables": {
+        "ibackground": [
+          1,
+          1
+        ],
+        "ihasnote": [
+          2,
+          1
+        ],
+        "rbackground": [
+          3,
+          0
+        ],
+        "stext": [
+          4,
+          1
+        ],
+        "snote": [
+          5,
+          1
+        ],
+        "sbreak": [
+          6,
+          1
+        ]
+      },
+      "declarations_preserved": true,
+      "baseline_compiled_sha256": "a0045af9d54c020d5af18d2357ae39e8ea81af94d08f0ac5790e50e0f37fd20d",
+      "replacement_sha256": "86cb461e103ead02c47273a9f5d97e4e6a270633716570c0be2a6240daaaef2e",
+      "geck_compile_pending": true
+    }
+  ],
+  "message": {
+    "editor_id": "ALTRichKid",
+    "form": "050074CD"
+  },
+  "unregister": "RemoveEventHandler \"OnHit\" ALTRichKidHit",
+  "semantics": "Only this callback on OnHit, all its filter/priority registrations; does not remove other callbacks",
+  "source_pins": [
+    {
+      "file": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Commands_Script.cpp",
+      "sha256": "2de2c064eb0efb85093003d2897f768d85e6a18ecdbf6e6b4736846a17f4426f"
+    },
+    {
+      "file": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Commands_Script.h",
+      "sha256": "39aecbbde2158a44271e0f84f70083c9cce64e915cb5b85ce531b4018f3a812b"
+    },
+    {
+      "file": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.cpp",
+      "sha256": "e1ae0e4223c2b69ca40eacf414584185cdff8ef037d052e855ef1bab9de7c991"
+    }
+  ],
+  "native_compilation_is_not_GECK_compilation": true
+}

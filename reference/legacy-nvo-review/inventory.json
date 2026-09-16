@@ -1,0 +1,1184 @@
+{
+  "summary": {
+    "v09_udfs": 39,
+    "v10_staged_udfs": 50,
+    "v10_work_udfs": 53,
+    "v09_unchanged_in_v10_staged": [
+      "NVO_ApplyBluntTrauma.txt",
+      "NVO_ApplyFunctionalState.txt",
+      "NVO_ApplyMechanismTrauma.txt",
+      "NVO_ApplyOrganTrauma.txt",
+      "NVO_ApplyOrganTreatment.txt",
+      "NVO_ApplyRobotMechanism.txt",
+      "NVO_ApplyTreatment.txt",
+      "NVO_ApplyWound.txt",
+      "NVO_ClassifyActor.txt",
+      "NVO_ClassifyAnatomy.txt",
+      "NVO_ClassifyMorale.txt",
+      "NVO_ClearFunctionalState.txt",
+      "NVO_DumpActorState.txt",
+      "NVO_InitArmor.txt",
+      "NVO_InitBallistics.txt",
+      "NVO_InitCore.txt",
+      "NVO_InitMechanisms.txt",
+      "NVO_InitOrgans.txt",
+      "NVO_InitProfiles.txt",
+      "NVO_InitTreatments.txt",
+      "NVO_InitWeapons.txt",
+      "NVO_MigrateActorState.txt",
+      "NVO_OnClinicalCare.txt",
+      "NVO_OnTreatment.txt",
+      "NVO_ProcessMechanismTick.txt",
+      "NVO_ProcessOrganTick.txt",
+      "NVO_ProcessRecovery.txt",
+      "NVO_ReconcileActorValue.txt",
+      "NVO_ResolveArmor.txt",
+      "NVO_ResolveBallistics.txt",
+      "NVO_ResolveExplosion.txt",
+      "NVO_ResolveMechanism.txt",
+      "NVO_WoundTick.txt"
+    ],
+    "v09_changed_in_v10_staged": [
+      "NVO_InitMorale.txt",
+      "NVO_OnDeath.txt",
+      "NVO_OnExplosionHit.txt",
+      "NVO_OnHit.txt",
+      "NVO_ProcessMorale.txt",
+      "NVO_ResetActorState.txt"
+    ],
+    "v10_new_udfs": [
+      "NVO_ApplyOriginProfile.txt",
+      "NVO_CreateJobOffer.txt",
+      "NVO_EmitImpactFeedback.txt",
+      "NVO_InitFeedback.txt",
+      "NVO_InitSandbox.txt",
+      "NVO_RecordCivicMemory.txt",
+      "NVO_RecordTacticalImpact.txt",
+      "NVO_RegisterCivicRole.txt",
+      "NVO_ResolveCivicOutcome.txt",
+      "NVO_SetCivicNeed.txt",
+      "NVO_TacticalMemoryExpire.txt"
+    ],
+    "v10_work_differences_from_staged": [
+      "NVO_InitAltStartBridge.txt",
+      "NVO_OnAltStartCourierStage.txt",
+      "NVO_OnCivicPreActivate.txt",
+      "NVO_OnDeath.txt",
+      "NVO_ProcessMorale.txt",
+      "NVO_ResetActorState.txt"
+    ]
+  },
+  "inventories": {
+    "v09": {
+      "root": "C:\\Users\\regan\\Documents\\Codex\\2026-08-16\\can-you-explore-and-create-a\\outputs\\nvo-realism-hybrid-v0.9.0",
+      "files": {
+        "ACTIVE_PROFILE_AUDIT.md": {
+          "sha256": "c144d878939ca4274e2f5730210a3c66539e07273d8bab6a369aa74bd1493c99",
+          "bytes": 6080
+        },
+        "ANATOMY_FAILURE_SPEC.md": {
+          "sha256": "7d7d9fd1e1686e90b360978d96938de6894437550be10ee6d28ef7cedb5cf887",
+          "bytes": 4657
+        },
+        "ARMOR_PENETRATION_SPEC.md": {
+          "sha256": "17e7c8880942284900b06fecf3fd73a1d99fc8b13d8dd5b9c9e87b2ec4e0ee8c",
+          "bytes": 4065
+        },
+        "ARMOR_TRUTH_SET.md": {
+          "sha256": "486f11f2852c4730de735a31864c6d089e179d5ec5bf846cedf43de808e58344",
+          "bytes": 4232
+        },
+        "BALLISTIC_TRUTH_SET.md": {
+          "sha256": "152c0581a096f4b1bb15d788e6f2e48296880647f0f4d4ea76efda357f2cc6f6",
+          "bytes": 3615
+        },
+        "BALLISTICS_SPEC.md": {
+          "sha256": "b8176d58e0ea3912f2e82d67e8a7dbe15f7c4535ef78800dd0d6edaaf36ba1a0",
+          "bytes": 4677
+        },
+        "BUILD_VALIDATION.md": {
+          "sha256": "46e674652b0fdcf643a42109eea21ff9b5b048bb1c8c20325babe148b56cc3ba",
+          "bytes": 5374
+        },
+        "Data/config/NVOCombat/AmmoBallistics.ini": {
+          "sha256": "937a6298d1a607e0441a8045fb5c3f86291ce2877ce717af7c6d8e2e1803f851",
+          "bytes": 12749
+        },
+        "Data/config/NVOCombat/AmmoDamage.ini": {
+          "sha256": "4986b98a1a92b6257db3fe5160a8fe9cd7a4942f640245dec0c185d9df5818f3",
+          "bytes": 383
+        },
+        "Data/config/NVOCombat/AnatomyProfiles.ini": {
+          "sha256": "683ecae4965a83601adbba68f4f9d10ccfa312149e6f9faa3112456c5ae5a452",
+          "bytes": 1647
+        },
+        "Data/config/NVOCombat/ArmorProfiles.ini": {
+          "sha256": "3021a8ba8fc0a2e6f3f0b1d52a982b4ce4e24512ee2d8a4f25480818be0c32b4",
+          "bytes": 7654
+        },
+        "Data/config/NVOCombat/Ballistics.ini": {
+          "sha256": "b290390c038640c3d21305df9c017c6fa1a1fe2948844d0eafacd92655b05522",
+          "bytes": 3449
+        },
+        "Data/config/NVOCombat/ExplosionMechanisms.ini": {
+          "sha256": "76dc17c21526ecd6365ee799c7ec5f1360049a703f37aced79b076652b04c8b8",
+          "bytes": 2090
+        },
+        "Data/config/NVOCombat/HelmetOverrides.ini": {
+          "sha256": "decbddd48d727ea4bca56c92279b6de77c82a3a8af2c004240c5a7a047c21f7a",
+          "bytes": 2541
+        },
+        "Data/config/NVOCombat/MechanismParameters.ini": {
+          "sha256": "5f83a6b7cc29fd4101f4403c55c9077244a1c329c398ead48f5f810531e38950",
+          "bytes": 2759
+        },
+        "Data/config/NVOCombat/MoraleProfiles.ini": {
+          "sha256": "39c917c2f3dbdfdd3b720903d7e62055320b428e42d14721ef9dd9f1a9486375",
+          "bytes": 1230
+        },
+        "Data/config/NVOCombat/NVOCombat.ini": {
+          "sha256": "140f1bff47533bee1a6cffb3f6b9d99c4adf67d61c0c09a84f03e0b7140e0416",
+          "bytes": 7587
+        },
+        "Data/config/NVOCombat/OrganProfiles.ini": {
+          "sha256": "4a1ae749bb1742c7f6b0f32a41dd17706bf45b0b4a8864523c72f6dc534d9f4e",
+          "bytes": 1910
+        },
+        "Data/config/NVOCombat/TreatmentProfiles.ini": {
+          "sha256": "d0719fc4d4baea5ced8c81aab45e7e37d1cf5c1927ccd7166809eb50bbe2881c",
+          "bytes": 2118
+        },
+        "Data/config/NVOCombat/WeaponBallistics.ini": {
+          "sha256": "0541b47528b9995a9491746dca8e840bf552614f2801580e1b096a74e6980416",
+          "bytes": 2217
+        },
+        "Data/config/NVOCombat/WeaponMechanisms.ini": {
+          "sha256": "9f6a2ba173451fbd3d323ff5a0ca879aad248f501e28a1edd0568a40e68b5d59",
+          "bytes": 2551
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat.txt": {
+          "sha256": "9e34d3106bd39012c09b2a9625d6854311f2f03fb5324f4c9deadbaaae9e1f15",
+          "bytes": 8696
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat_Armor.txt": {
+          "sha256": "d283afa16938fd4e43cf9b86a26a9741bb7a0a88308316499b56c0654ee08236",
+          "bytes": 3117
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat_Ballistics.txt": {
+          "sha256": "d1c40828d8c42ab3f1f7917ce48c0ff250b68e4fdd9002a49f03be303ddba097",
+          "bytes": 1862
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyBluntTrauma.txt": {
+          "sha256": "dc74f1230d8726cb3e9457841a458a602fb03416ec95ba3f2ed64f70e8271f1f",
+          "bytes": 5056
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyFunctionalState.txt": {
+          "sha256": "21a8327da1f25a8080456af5b4e3cf450bf66dca891950bb00a86ebf0b1f483d",
+          "bytes": 6763
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyMechanismTrauma.txt": {
+          "sha256": "e7a098f8375ff150a769dcc5e5374610e4c198605d38fa2c46920ec1aee221d5",
+          "bytes": 9166
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOrganTrauma.txt": {
+          "sha256": "addfb8c331f90a032fe7263b182878141c9b4a207a583eb3841d22ab4b9e7284",
+          "bytes": 12821
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOrganTreatment.txt": {
+          "sha256": "6a4d0abe60af5bb3a8c279548dce2b08cdc68f4b16bb6061af65a68b8f5857a9",
+          "bytes": 3528
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyRobotMechanism.txt": {
+          "sha256": "dac9ccae5564971d773791fab2da7a63c03c15f1e9a6e92d1be37a9d070117a8",
+          "bytes": 7823
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyTreatment.txt": {
+          "sha256": "58252b998338f1400e46337de6c40e968a34daa9b7be3b85280f484e1c0cfe1a",
+          "bytes": 12844
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyWound.txt": {
+          "sha256": "64f9fe7f3dd20a5b59c70f409c177bba315368457f55cf697685be8c42722ac3",
+          "bytes": 6689
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyActor.txt": {
+          "sha256": "cfc01bc06118db1405e9d7d4c3b9142bbde3485d9f398f32062a577e913ebbdd",
+          "bytes": 2720
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyAnatomy.txt": {
+          "sha256": "b432de75de7ba048609d43de715faac634b401df77b465268f91611695da703d",
+          "bytes": 1819
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyMorale.txt": {
+          "sha256": "a59662b9695fc707b9d4eb20082ffb1f4dac34332df72b511f59a86af4790fd2",
+          "bytes": 3029
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClearFunctionalState.txt": {
+          "sha256": "4f059997e1e6accda92b75af5ecd7168053a4f20340045f24b6820e2fe785a70",
+          "bytes": 1000
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_DumpActorState.txt": {
+          "sha256": "1301b5d1648a1ce2d1450db1994a0703710e267d458f9ff73027f0b95e3fa493",
+          "bytes": 10026
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitArmor.txt": {
+          "sha256": "75856a789c41a8ca049c630be92c9af7f68c80455243e1d1d9080f181616e733",
+          "bytes": 114
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitBallistics.txt": {
+          "sha256": "3420c66848763740f4b28439d786f33a727e374116c28c407c87e02b384edb1b",
+          "bytes": 119
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitCore.txt": {
+          "sha256": "c82d15cdc3cf14891b9d39e19180466a4eace119f2676d26392f038beea3661c",
+          "bytes": 15227
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitMechanisms.txt": {
+          "sha256": "8be265180f19d59049e3e677cef8f53822aa5d392376508ddfdddbb1e182be9c",
+          "bytes": 15184
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitMorale.txt": {
+          "sha256": "041aaf90a090dd1bff2ba0ed82d72d341c216dfc57e2d5a00d61c9a453650a04",
+          "bytes": 4662
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitOrgans.txt": {
+          "sha256": "c944dc3a7b842097379c208a444f60d1f50b7d416db10f2931b7a032b7cfa60f",
+          "bytes": 8755
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitProfiles.txt": {
+          "sha256": "4d9c51206549f1b164437c022757def9fcc0f068eed4f9a0f2fc35320f1167e9",
+          "bytes": 11852
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitTreatments.txt": {
+          "sha256": "90b8a42f37f02f8649952eb0667749b240a04a06345176bfc47a248fe0ce64fd",
+          "bytes": 8400
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitWeapons.txt": {
+          "sha256": "712e7548ff889fa5455af6d7cfd4c17edc4fb601bb268a0be385816705cebf47",
+          "bytes": 2122
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_MigrateActorState.txt": {
+          "sha256": "c8d331708a1ed4cf09f892669575bec0d4c694c8b835df5b0e539e7bc92bb4b8",
+          "bytes": 1578
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnClinicalCare.txt": {
+          "sha256": "0c07d6ce9716b675c0f57c9436c628cc4fb34f72e59fac4ed555994c8dfb5d3b",
+          "bytes": 270
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnDeath.txt": {
+          "sha256": "3b188ba52141844a82a08e1d9a61b7cd0c5250e6e44841625f238f9bbdf5112e",
+          "bytes": 1623
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnExplosionHit.txt": {
+          "sha256": "dc0294cbad48d99c1abf2a7c071d5d811bdfb19c840a514408512da380c1bb35",
+          "bytes": 1072
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnHit.txt": {
+          "sha256": "395ed10af31d3da17fb4c6689c3b146c700cd41b9d86124e5d1a66ba418d9e74",
+          "bytes": 5164
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnTreatment.txt": {
+          "sha256": "448048fb4577e795eb245008551aa54434077a23a7d38f3633b6040701a67f35",
+          "bytes": 1412
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessMechanismTick.txt": {
+          "sha256": "d9b86d8b7d1a36105ee1c52baabd13d38ba5a8dd737e55a701a309ec1051731e",
+          "bytes": 4805
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessMorale.txt": {
+          "sha256": "f52446e9aa7ee5e185ae93abdd2728242c0aa7c1373d0a0c2c1b1f0074b5da82",
+          "bytes": 6542
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessOrganTick.txt": {
+          "sha256": "f2da2b316c4f1c7b070b1b8b507cb132c1f24cc58b7d108ef533585da28f346d",
+          "bytes": 6082
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessRecovery.txt": {
+          "sha256": "37d9eadbe2ce0e0b3a8a95ba67b239cccec91bd18b6882dea25a1cd06e800049",
+          "bytes": 7756
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ReconcileActorValue.txt": {
+          "sha256": "e4b6bb84e466d83c13431b5625640a6f02b6a34639772e141264ef15dbef2dd7",
+          "bytes": 2521
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResetActorState.txt": {
+          "sha256": "d885c90179636894e60e8fec072a7c06bbad80ecf1b322a977345099fea448d9",
+          "bytes": 1473
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveArmor.txt": {
+          "sha256": "c9a0c95f72a0d09bbdf2ba0c9738575a9811a8917eb591e4c5ffe3355fdf34a6",
+          "bytes": 11625
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveBallistics.txt": {
+          "sha256": "7a8e7910b2af475ed879e3757631d2ecdb36f12ee4a6f6acb7fc503ef4c41171",
+          "bytes": 10829
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveExplosion.txt": {
+          "sha256": "e0fd20b6634b96c24d0ccab1b65877535920ece42db4048ff62e935e61a3ef99",
+          "bytes": 3932
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveMechanism.txt": {
+          "sha256": "77d5fd470999a84d6c8fa470be45ac5d337181f581361a6a008d0e5323a4038e",
+          "bytes": 6001
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_WoundTick.txt": {
+          "sha256": "2760b4b234976cf98b4ce4e693667fc59ab33887660e1ec162c880c0e0ecbe07",
+          "bytes": 10006
+        },
+        "FORM_MANIFEST.md": {
+          "sha256": "e8696d29ebeb250c729f98ee033f82cdd526153aec5522e5678509c41fd27210",
+          "bytes": 3689
+        },
+        "FUNCTIONAL_MORALE_SPEC.md": {
+          "sha256": "b73a668c44250ffbe459728433cf10d8f1d57d2d359326179770890bb1f37d27",
+          "bytes": 6590
+        },
+        "FUNCTIONAL_MORALE_TRUTH_SET.md": {
+          "sha256": "d5dab9e2586b2bf8687d049bd2b7d179a2fed7c5562e1981dcd3fc1a07c82c3a",
+          "bytes": 2595
+        },
+        "MECHANISM_SPEC.md": {
+          "sha256": "521c70b144da5dfefa0c8320f1a8fbd5a1b40c59680e6c2494e08371db21d272",
+          "bytes": 5877
+        },
+        "MECHANISM_TRUTH_SET.md": {
+          "sha256": "3731c6301507ecec68c26f1a14e85eb2a74ae591bfa27e77f61d0379bf40a02e",
+          "bytes": 2995
+        },
+        "MEDICAL_TRUTH_SET.md": {
+          "sha256": "3603d1dd560e9518ee61c6654dca98ca38a68e4e0ba0deecc23925407dc8b29b",
+          "bytes": 2722
+        },
+        "MORALE_PROFILE_AUDIT.md": {
+          "sha256": "6bbee10b56653cd4b8525b0b98127a2e0c68ec9e90efec2fedd3831839d790a7",
+          "bytes": 4283
+        },
+        "ORGAN_AUTHORITY_SPEC.md": {
+          "sha256": "47c1a7f74a5bc911e96be062b3226b6246b4bd791c49b7e426bc6f52b9198fa2",
+          "bytes": 6730
+        },
+        "ORGAN_RECORD_AUDIT.md": {
+          "sha256": "1bb239a9900282d25adcbaa45871e4dd7aed221b29e9c4ca16d23d74afbc9012",
+          "bytes": 2473
+        },
+        "ORGAN_TRUTH_SET.md": {
+          "sha256": "77247ce703de800a92492de49107ee4f8127c66cd9db56816197a38ed348932d",
+          "bytes": 2637
+        },
+        "OVERHAUL_ARCHITECTURE.md": {
+          "sha256": "cd7162b429f806d564719d0f4a0fc8829b247cf8ed87d5bf06060ff8061e05fd",
+          "bytes": 7683
+        },
+        "PLAYTEST_RECORD.md": {
+          "sha256": "94f267a579c08564389ecd9a12a018ccb7adff6c7330edf17ee49b2686b65968",
+          "bytes": 10267
+        },
+        "PROJECT_EXECUTION_PLAN.md": {
+          "sha256": "10560f7960c76b2de9ee91394848717dd2ad9b7d1ee6c2b6cc70224b0fa98194",
+          "bytes": 26182
+        },
+        "README.md": {
+          "sha256": "5da434b233284e5bf419fff3e8ad1da017378740ca3cfc0e5630f698b87df89e",
+          "bytes": 9763
+        },
+        "TREATMENT_SPEC.md": {
+          "sha256": "8814517d9e9a2c96ea22c8bbdd50d1e421c831f78d3559d6b518613398c49ae0",
+          "bytes": 6117
+        },
+        "WOUND_STATE_SPEC.md": {
+          "sha256": "272b8d6acaa88862b3470c0f4d06a9973ad69c5d4e21e3fd148d4da950802de5",
+          "bytes": 9902
+        }
+      }
+    },
+    "v10_staged": {
+      "root": "C:\\Users\\regan\\Documents\\Codex\\2026-08-16\\can-you-explore-and-create-a\\outputs\\NVO-Realism-v1.0.0-dev-staged",
+      "files": {
+        "ACTIVE_PROFILE_AUDIT.md": {
+          "sha256": "c144d878939ca4274e2f5730210a3c66539e07273d8bab6a369aa74bd1493c99",
+          "bytes": 6080
+        },
+        "AI_SURVIVAL_DOCTRINE.md": {
+          "sha256": "360d9f585bf0398b8199c16314b865b535bcea376839cda31efca94a181eda05",
+          "bytes": 2432
+        },
+        "ANATOMY_FAILURE_SPEC.md": {
+          "sha256": "7d7d9fd1e1686e90b360978d96938de6894437550be10ee6d28ef7cedb5cf887",
+          "bytes": 4657
+        },
+        "ARMOR_PENETRATION_SPEC.md": {
+          "sha256": "17e7c8880942284900b06fecf3fd73a1d99fc8b13d8dd5b9c9e87b2ec4e0ee8c",
+          "bytes": 4065
+        },
+        "ARMOR_TRUTH_SET.md": {
+          "sha256": "486f11f2852c4730de735a31864c6d089e179d5ec5bf846cedf43de808e58344",
+          "bytes": 4232
+        },
+        "BALLISTIC_TRUTH_SET.md": {
+          "sha256": "152c0581a096f4b1bb15d788e6f2e48296880647f0f4d4ea76efda357f2cc6f6",
+          "bytes": 3615
+        },
+        "BALLISTICS_SPEC.md": {
+          "sha256": "b8176d58e0ea3912f2e82d67e8a7dbe15f7c4535ef78800dd0d6edaaf36ba1a0",
+          "bytes": 4677
+        },
+        "BUILD_VALIDATION.md": {
+          "sha256": "46e674652b0fdcf643a42109eea21ff9b5b048bb1c8c20325babe148b56cc3ba",
+          "bytes": 5374
+        },
+        "BUILD_VALIDATION_v1.0.md": {
+          "sha256": "2ce040ed1f22e6f145ad7f03e5e9b1b952652c5dea4c372216160f49c5b1f81f",
+          "bytes": 1645
+        },
+        "Data/config/NVOCombat/AmmoBallistics.ini": {
+          "sha256": "937a6298d1a607e0441a8045fb5c3f86291ce2877ce717af7c6d8e2e1803f851",
+          "bytes": 12749
+        },
+        "Data/config/NVOCombat/AmmoDamage.ini": {
+          "sha256": "4986b98a1a92b6257db3fe5160a8fe9cd7a4942f640245dec0c185d9df5818f3",
+          "bytes": 383
+        },
+        "Data/config/NVOCombat/AnatomyProfiles.ini": {
+          "sha256": "683ecae4965a83601adbba68f4f9d10ccfa312149e6f9faa3112456c5ae5a452",
+          "bytes": 1647
+        },
+        "Data/config/NVOCombat/ArmorProfiles.ini": {
+          "sha256": "3021a8ba8fc0a2e6f3f0b1d52a982b4ce4e24512ee2d8a4f25480818be0c32b4",
+          "bytes": 7654
+        },
+        "Data/config/NVOCombat/Ballistics.ini": {
+          "sha256": "b290390c038640c3d21305df9c017c6fa1a1fe2948844d0eafacd92655b05522",
+          "bytes": 3449
+        },
+        "Data/config/NVOCombat/ExplosionMechanisms.ini": {
+          "sha256": "76dc17c21526ecd6365ee799c7ec5f1360049a703f37aced79b076652b04c8b8",
+          "bytes": 2090
+        },
+        "Data/config/NVOCombat/HelmetOverrides.ini": {
+          "sha256": "decbddd48d727ea4bca56c92279b6de77c82a3a8af2c004240c5a7a047c21f7a",
+          "bytes": 2541
+        },
+        "Data/config/NVOCombat/MechanismParameters.ini": {
+          "sha256": "5f83a6b7cc29fd4101f4403c55c9077244a1c329c398ead48f5f810531e38950",
+          "bytes": 2759
+        },
+        "Data/config/NVOCombat/MoraleProfiles.ini": {
+          "sha256": "39c917c2f3dbdfdd3b720903d7e62055320b428e42d14721ef9dd9f1a9486375",
+          "bytes": 1230
+        },
+        "Data/config/NVOCombat/NVOCombat.ini": {
+          "sha256": "5ded7648eb25e5f5ca1ecd15b3fbbc63f67e670c4fa47654f5d4c6da32a89ce8",
+          "bytes": 8671
+        },
+        "Data/config/NVOCombat/OrganProfiles.ini": {
+          "sha256": "4a1ae749bb1742c7f6b0f32a41dd17706bf45b0b4a8864523c72f6dc534d9f4e",
+          "bytes": 1910
+        },
+        "Data/config/NVOCombat/Sandbox.ini": {
+          "sha256": "a72639c59cfb60f9b3d6c35d228d8ba8b441f95b613c6ea7cbb7418ef4f306d5",
+          "bytes": 1278
+        },
+        "Data/config/NVOCombat/TreatmentProfiles.ini": {
+          "sha256": "d0719fc4d4baea5ced8c81aab45e7e37d1cf5c1927ccd7166809eb50bbe2881c",
+          "bytes": 2118
+        },
+        "Data/config/NVOCombat/WeaponBallistics.ini": {
+          "sha256": "0541b47528b9995a9491746dca8e840bf552614f2801580e1b096a74e6980416",
+          "bytes": 2217
+        },
+        "Data/config/NVOCombat/WeaponMechanisms.ini": {
+          "sha256": "9f6a2ba173451fbd3d323ff5a0ca879aad248f501e28a1edd0568a40e68b5d59",
+          "bytes": 2551
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat.txt": {
+          "sha256": "07e526aa1c64ebf9855517aead0b44104333949c347b33814600648fcec7fb78",
+          "bytes": 11034
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat_Armor.txt": {
+          "sha256": "d283afa16938fd4e43cf9b86a26a9741bb7a0a88308316499b56c0654ee08236",
+          "bytes": 3117
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat_Ballistics.txt": {
+          "sha256": "d1c40828d8c42ab3f1f7917ce48c0ff250b68e4fdd9002a49f03be303ddba097",
+          "bytes": 1862
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyBluntTrauma.txt": {
+          "sha256": "dc74f1230d8726cb3e9457841a458a602fb03416ec95ba3f2ed64f70e8271f1f",
+          "bytes": 5056
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyFunctionalState.txt": {
+          "sha256": "21a8327da1f25a8080456af5b4e3cf450bf66dca891950bb00a86ebf0b1f483d",
+          "bytes": 6763
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyMechanismTrauma.txt": {
+          "sha256": "e7a098f8375ff150a769dcc5e5374610e4c198605d38fa2c46920ec1aee221d5",
+          "bytes": 9166
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOrganTrauma.txt": {
+          "sha256": "addfb8c331f90a032fe7263b182878141c9b4a207a583eb3841d22ab4b9e7284",
+          "bytes": 12821
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOrganTreatment.txt": {
+          "sha256": "6a4d0abe60af5bb3a8c279548dce2b08cdc68f4b16bb6061af65a68b8f5857a9",
+          "bytes": 3528
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOriginProfile.txt": {
+          "sha256": "2bf3eee845d521bc326b1c4faa4ac42b4c74fcd07633ed285563a2cecefd49e1",
+          "bytes": 1867
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyRobotMechanism.txt": {
+          "sha256": "dac9ccae5564971d773791fab2da7a63c03c15f1e9a6e92d1be37a9d070117a8",
+          "bytes": 7823
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyTreatment.txt": {
+          "sha256": "58252b998338f1400e46337de6c40e968a34daa9b7be3b85280f484e1c0cfe1a",
+          "bytes": 12844
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyWound.txt": {
+          "sha256": "64f9fe7f3dd20a5b59c70f409c177bba315368457f55cf697685be8c42722ac3",
+          "bytes": 6689
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyActor.txt": {
+          "sha256": "cfc01bc06118db1405e9d7d4c3b9142bbde3485d9f398f32062a577e913ebbdd",
+          "bytes": 2720
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyAnatomy.txt": {
+          "sha256": "b432de75de7ba048609d43de715faac634b401df77b465268f91611695da703d",
+          "bytes": 1819
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyMorale.txt": {
+          "sha256": "a59662b9695fc707b9d4eb20082ffb1f4dac34332df72b511f59a86af4790fd2",
+          "bytes": 3029
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClearFunctionalState.txt": {
+          "sha256": "4f059997e1e6accda92b75af5ecd7168053a4f20340045f24b6820e2fe785a70",
+          "bytes": 1000
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_CreateJobOffer.txt": {
+          "sha256": "ba77bd8cb29c1688da072c8be37a68564844a3c87a92ce96c9321f5c352b2ad5",
+          "bytes": 2357
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_DumpActorState.txt": {
+          "sha256": "1301b5d1648a1ce2d1450db1994a0703710e267d458f9ff73027f0b95e3fa493",
+          "bytes": 10026
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_EmitImpactFeedback.txt": {
+          "sha256": "a00eb1c1b2ff9e9e8995067c676142e162074d7f8e350aea50edccdf0dd4a31e",
+          "bytes": 3427
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitArmor.txt": {
+          "sha256": "75856a789c41a8ca049c630be92c9af7f68c80455243e1d1d9080f181616e733",
+          "bytes": 114
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitBallistics.txt": {
+          "sha256": "3420c66848763740f4b28439d786f33a727e374116c28c407c87e02b384edb1b",
+          "bytes": 119
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitCore.txt": {
+          "sha256": "c82d15cdc3cf14891b9d39e19180466a4eace119f2676d26392f038beea3661c",
+          "bytes": 15227
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitFeedback.txt": {
+          "sha256": "22bdc3eb936ea9ff57dfae0413fde74bf3dffb2dd90f3ef1be66ae165456b870",
+          "bytes": 2107
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitMechanisms.txt": {
+          "sha256": "8be265180f19d59049e3e677cef8f53822aa5d392376508ddfdddbb1e182be9c",
+          "bytes": 15184
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitMorale.txt": {
+          "sha256": "ac1049ff67ce209919e02bbdc04d4c0fd84b0564d6e3f7855e5f2719d65d7e46",
+          "bytes": 6266
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitOrgans.txt": {
+          "sha256": "c944dc3a7b842097379c208a444f60d1f50b7d416db10f2931b7a032b7cfa60f",
+          "bytes": 8755
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitProfiles.txt": {
+          "sha256": "4d9c51206549f1b164437c022757def9fcc0f068eed4f9a0f2fc35320f1167e9",
+          "bytes": 11852
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitSandbox.txt": {
+          "sha256": "37bb9648aa10b440817ab36fff3611b03c71f5f798ab42dc41bbd6c2726c4467",
+          "bytes": 4819
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitTreatments.txt": {
+          "sha256": "90b8a42f37f02f8649952eb0667749b240a04a06345176bfc47a248fe0ce64fd",
+          "bytes": 8400
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitWeapons.txt": {
+          "sha256": "712e7548ff889fa5455af6d7cfd4c17edc4fb601bb268a0be385816705cebf47",
+          "bytes": 2122
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_MigrateActorState.txt": {
+          "sha256": "c8d331708a1ed4cf09f892669575bec0d4c694c8b835df5b0e539e7bc92bb4b8",
+          "bytes": 1578
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnClinicalCare.txt": {
+          "sha256": "0c07d6ce9716b675c0f57c9436c628cc4fb34f72e59fac4ed555994c8dfb5d3b",
+          "bytes": 270
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnDeath.txt": {
+          "sha256": "eea8131f94aa444fcb18e4ef2300df8a99abd0f450ecad0fc70b9279184ff59e",
+          "bytes": 1965
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnExplosionHit.txt": {
+          "sha256": "d3be962e5b635c4a5e72d113119a4548059342de07ae0d7a673f9fce07a3c455",
+          "bytes": 1795
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnHit.txt": {
+          "sha256": "e166fc35ef5742777aac06c0fdf3753a642d2cb6b74a16a9135843fa1e65d2f4",
+          "bytes": 6656
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnTreatment.txt": {
+          "sha256": "448048fb4577e795eb245008551aa54434077a23a7d38f3633b6040701a67f35",
+          "bytes": 1412
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessMechanismTick.txt": {
+          "sha256": "d9b86d8b7d1a36105ee1c52baabd13d38ba5a8dd737e55a701a309ec1051731e",
+          "bytes": 4805
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessMorale.txt": {
+          "sha256": "3d56f6fa448070726ba218dfd495fd6da07ded4b271b9fc0c52249f41c9c824d",
+          "bytes": 9623
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessOrganTick.txt": {
+          "sha256": "f2da2b316c4f1c7b070b1b8b507cb132c1f24cc58b7d108ef533585da28f346d",
+          "bytes": 6082
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessRecovery.txt": {
+          "sha256": "37d9eadbe2ce0e0b3a8a95ba67b239cccec91bd18b6882dea25a1cd06e800049",
+          "bytes": 7756
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ReconcileActorValue.txt": {
+          "sha256": "e4b6bb84e466d83c13431b5625640a6f02b6a34639772e141264ef15dbef2dd7",
+          "bytes": 2521
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_RecordCivicMemory.txt": {
+          "sha256": "ba6443f983650001540f598580e81c3a1195382d95b98a8eecf7333f6328edcd",
+          "bytes": 2315
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_RecordTacticalImpact.txt": {
+          "sha256": "aa9dd42e94b5a5e5535ceb27977c5eb3fa0abbaf1ea7f07ad1a9bee7745103e1",
+          "bytes": 3199
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_RegisterCivicRole.txt": {
+          "sha256": "50fcca3aa86fbf780bb7924972a903ed59e8bc924fec1e4a3ec52ce2160ec68c",
+          "bytes": 1295
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResetActorState.txt": {
+          "sha256": "514c15ce446764d4a7e9cefaf5cc759d8747e4c45631b8aaf19ae5c567e49666",
+          "bytes": 1809
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveArmor.txt": {
+          "sha256": "c9a0c95f72a0d09bbdf2ba0c9738575a9811a8917eb591e4c5ffe3355fdf34a6",
+          "bytes": 11625
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveBallistics.txt": {
+          "sha256": "7a8e7910b2af475ed879e3757631d2ecdb36f12ee4a6f6acb7fc503ef4c41171",
+          "bytes": 10829
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveCivicOutcome.txt": {
+          "sha256": "67d278a4e03ef7e45fa55270db542a4bbc25e834e88e77db917039af05dba5d5",
+          "bytes": 1763
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveExplosion.txt": {
+          "sha256": "e0fd20b6634b96c24d0ccab1b65877535920ece42db4048ff62e935e61a3ef99",
+          "bytes": 3932
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveMechanism.txt": {
+          "sha256": "77d5fd470999a84d6c8fa470be45ac5d337181f581361a6a008d0e5323a4038e",
+          "bytes": 6001
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_SetCivicNeed.txt": {
+          "sha256": "d196c477fafb8c5729c46f0a7e4382783b1101e92becfd3b8d7fc7483fd69738",
+          "bytes": 2085
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_TacticalMemoryExpire.txt": {
+          "sha256": "a30ed67c7db015a4b4a9a11c367e899c42ea7c8292fa778c5ceca83a87233d1a",
+          "bytes": 857
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_WoundTick.txt": {
+          "sha256": "2760b4b234976cf98b4ce4e693667fc59ab33887660e1ec162c880c0e0ecbe07",
+          "bytes": 10006
+        },
+        "FORM_MANIFEST.md": {
+          "sha256": "e8696d29ebeb250c729f98ee033f82cdd526153aec5522e5678509c41fd27210",
+          "bytes": 3689
+        },
+        "FUNCTIONAL_MORALE_SPEC.md": {
+          "sha256": "b73a668c44250ffbe459728433cf10d8f1d57d2d359326179770890bb1f37d27",
+          "bytes": 6590
+        },
+        "FUNCTIONAL_MORALE_TRUTH_SET.md": {
+          "sha256": "d5dab9e2586b2bf8687d049bd2b7d179a2fed7c5562e1981dcd3fc1a07c82c3a",
+          "bytes": 2595
+        },
+        "IMPACT_FEEDBACK_COMPATIBILITY.md": {
+          "sha256": "dff8a661cdd98a0f2910dc7ae211f8c78693f4f5bd16ceafc4df5486a22fb1fb",
+          "bytes": 2429
+        },
+        "MECHANISM_SPEC.md": {
+          "sha256": "521c70b144da5dfefa0c8320f1a8fbd5a1b40c59680e6c2494e08371db21d272",
+          "bytes": 5877
+        },
+        "MECHANISM_TRUTH_SET.md": {
+          "sha256": "3731c6301507ecec68c26f1a14e85eb2a74ae591bfa27e77f61d0379bf40a02e",
+          "bytes": 2995
+        },
+        "MEDICAL_TRUTH_SET.md": {
+          "sha256": "3603d1dd560e9518ee61c6654dca98ca38a68e4e0ba0deecc23925407dc8b29b",
+          "bytes": 2722
+        },
+        "MORALE_PROFILE_AUDIT.md": {
+          "sha256": "6bbee10b56653cd4b8525b0b98127a2e0c68ec9e90efec2fedd3831839d790a7",
+          "bytes": 4283
+        },
+        "NVO_ROLEPLAY_SYSTEMS_PLAN.md": {
+          "sha256": "9c17559b013d991f9e077d2275d82895b74ee6a9385721c370f4226b8402b4df",
+          "bytes": 6440
+        },
+        "NVO_SANDBOX_API.md": {
+          "sha256": "f306bcdeba96ad33d4c71f29a8aa0bac963e83f040f3f01e696f628eea3944e9",
+          "bytes": 8233
+        },
+        "ORGAN_AUTHORITY_SPEC.md": {
+          "sha256": "47c1a7f74a5bc911e96be062b3226b6246b4bd791c49b7e426bc6f52b9198fa2",
+          "bytes": 6730
+        },
+        "ORGAN_RECORD_AUDIT.md": {
+          "sha256": "1bb239a9900282d25adcbaa45871e4dd7aed221b29e9c4ca16d23d74afbc9012",
+          "bytes": 2473
+        },
+        "ORGAN_TRUTH_SET.md": {
+          "sha256": "77247ce703de800a92492de49107ee4f8127c66cd9db56816197a38ed348932d",
+          "bytes": 2637
+        },
+        "OVERHAUL_ARCHITECTURE.md": {
+          "sha256": "cd7162b429f806d564719d0f4a0fc8829b247cf8ed87d5bf06060ff8061e05fd",
+          "bytes": 7683
+        },
+        "PLAYTEST_RECORD.md": {
+          "sha256": "4f85a9eebaccdecd226c45dd36162948cc97a6724c8c1772dd07b039c2ce786a",
+          "bytes": 12369
+        },
+        "PROJECT_EXECUTION_PLAN.md": {
+          "sha256": "10560f7960c76b2de9ee91394848717dd2ad9b7d1ee6c2b6cc70224b0fa98194",
+          "bytes": 26182
+        },
+        "README.md": {
+          "sha256": "5fc4bb6192381c2011d2e8e70a26e2df0fbaa5bdc708459ce04b722642f9d450",
+          "bytes": 12142
+        },
+        "TREATMENT_SPEC.md": {
+          "sha256": "8814517d9e9a2c96ea22c8bbdd50d1e421c831f78d3559d6b518613398c49ae0",
+          "bytes": 6117
+        },
+        "WOUND_STATE_SPEC.md": {
+          "sha256": "272b8d6acaa88862b3470c0f4d06a9973ad69c5d4e21e3fd148d4da950802de5",
+          "bytes": 9902
+        }
+      }
+    },
+    "v10_work": {
+      "root": "C:\\Users\\regan\\Documents\\Codex\\2026-08-16\\can-you-explore-and-create-a\\work\\nvo-realism-hybrid-v1.0.0-dev",
+      "files": {
+        "ACTIVE_PROFILE_AUDIT.md": {
+          "sha256": "c144d878939ca4274e2f5730210a3c66539e07273d8bab6a369aa74bd1493c99",
+          "bytes": 6080
+        },
+        "AI_SURVIVAL_DOCTRINE.md": {
+          "sha256": "bbda14d17c905ff9097322dcaaa8cf2f145a0c58446df38f0afaeb38e9502b7f",
+          "bytes": 2563
+        },
+        "ANATOMY_FAILURE_SPEC.md": {
+          "sha256": "7d7d9fd1e1686e90b360978d96938de6894437550be10ee6d28ef7cedb5cf887",
+          "bytes": 4657
+        },
+        "ARMOR_PENETRATION_SPEC.md": {
+          "sha256": "17e7c8880942284900b06fecf3fd73a1d99fc8b13d8dd5b9c9e87b2ec4e0ee8c",
+          "bytes": 4065
+        },
+        "ARMOR_TRUTH_SET.md": {
+          "sha256": "486f11f2852c4730de735a31864c6d089e179d5ec5bf846cedf43de808e58344",
+          "bytes": 4232
+        },
+        "BALLISTIC_TRUTH_SET.md": {
+          "sha256": "152c0581a096f4b1bb15d788e6f2e48296880647f0f4d4ea76efda357f2cc6f6",
+          "bytes": 3615
+        },
+        "BALLISTICS_SPEC.md": {
+          "sha256": "b8176d58e0ea3912f2e82d67e8a7dbe15f7c4535ef78800dd0d6edaaf36ba1a0",
+          "bytes": 4677
+        },
+        "BUILD_VALIDATION.md": {
+          "sha256": "46e674652b0fdcf643a42109eea21ff9b5b048bb1c8c20325babe148b56cc3ba",
+          "bytes": 5374
+        },
+        "BUILD_VALIDATION_v1.0.md": {
+          "sha256": "a3adea527c9c85f25ef3822750991d32f1530c3787099ec6b8e9c219a1382b4a",
+          "bytes": 1677
+        },
+        "Data/config/NVOCombat/AmmoBallistics.ini": {
+          "sha256": "937a6298d1a607e0441a8045fb5c3f86291ce2877ce717af7c6d8e2e1803f851",
+          "bytes": 12749
+        },
+        "Data/config/NVOCombat/AmmoDamage.ini": {
+          "sha256": "4986b98a1a92b6257db3fe5160a8fe9cd7a4942f640245dec0c185d9df5818f3",
+          "bytes": 383
+        },
+        "Data/config/NVOCombat/AnatomyProfiles.ini": {
+          "sha256": "683ecae4965a83601adbba68f4f9d10ccfa312149e6f9faa3112456c5ae5a452",
+          "bytes": 1647
+        },
+        "Data/config/NVOCombat/ArmorProfiles.ini": {
+          "sha256": "3021a8ba8fc0a2e6f3f0b1d52a982b4ce4e24512ee2d8a4f25480818be0c32b4",
+          "bytes": 7654
+        },
+        "Data/config/NVOCombat/Ballistics.ini": {
+          "sha256": "b290390c038640c3d21305df9c017c6fa1a1fe2948844d0eafacd92655b05522",
+          "bytes": 3449
+        },
+        "Data/config/NVOCombat/ExplosionMechanisms.ini": {
+          "sha256": "76dc17c21526ecd6365ee799c7ec5f1360049a703f37aced79b076652b04c8b8",
+          "bytes": 2090
+        },
+        "Data/config/NVOCombat/HelmetOverrides.ini": {
+          "sha256": "decbddd48d727ea4bca56c92279b6de77c82a3a8af2c004240c5a7a047c21f7a",
+          "bytes": 2541
+        },
+        "Data/config/NVOCombat/MechanismParameters.ini": {
+          "sha256": "5f83a6b7cc29fd4101f4403c55c9077244a1c329c398ead48f5f810531e38950",
+          "bytes": 2759
+        },
+        "Data/config/NVOCombat/MoraleProfiles.ini": {
+          "sha256": "39c917c2f3dbdfdd3b720903d7e62055320b428e42d14721ef9dd9f1a9486375",
+          "bytes": 1230
+        },
+        "Data/config/NVOCombat/NVOCombat.ini": {
+          "sha256": "5ded7648eb25e5f5ca1ecd15b3fbbc63f67e670c4fa47654f5d4c6da32a89ce8",
+          "bytes": 8671
+        },
+        "Data/config/NVOCombat/OrganProfiles.ini": {
+          "sha256": "4a1ae749bb1742c7f6b0f32a41dd17706bf45b0b4a8864523c72f6dc534d9f4e",
+          "bytes": 1910
+        },
+        "Data/config/NVOCombat/Sandbox.ini": {
+          "sha256": "9181bd8514eacbef33842ebe7c171c2d03e3c50ded27d334e6e97441a3720538",
+          "bytes": 1573
+        },
+        "Data/config/NVOCombat/TreatmentProfiles.ini": {
+          "sha256": "d0719fc4d4baea5ced8c81aab45e7e37d1cf5c1927ccd7166809eb50bbe2881c",
+          "bytes": 2118
+        },
+        "Data/config/NVOCombat/WeaponBallistics.ini": {
+          "sha256": "0541b47528b9995a9491746dca8e840bf552614f2801580e1b096a74e6980416",
+          "bytes": 2217
+        },
+        "Data/config/NVOCombat/WeaponMechanisms.ini": {
+          "sha256": "9f6a2ba173451fbd3d323ff5a0ca879aad248f501e28a1edd0568a40e68b5d59",
+          "bytes": 2551
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat.txt": {
+          "sha256": "b1f6afe7867cc72d6af2602337527b947c6ce177a33531f75381d4a2a6cb7bf1",
+          "bytes": 11672
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat_Armor.txt": {
+          "sha256": "d283afa16938fd4e43cf9b86a26a9741bb7a0a88308316499b56c0654ee08236",
+          "bytes": 3117
+        },
+        "Data/NVSE/plugins/scripts/ln_NVOCombat_Ballistics.txt": {
+          "sha256": "d1c40828d8c42ab3f1f7917ce48c0ff250b68e4fdd9002a49f03be303ddba097",
+          "bytes": 1862
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyBluntTrauma.txt": {
+          "sha256": "dc74f1230d8726cb3e9457841a458a602fb03416ec95ba3f2ed64f70e8271f1f",
+          "bytes": 5056
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyFunctionalState.txt": {
+          "sha256": "21a8327da1f25a8080456af5b4e3cf450bf66dca891950bb00a86ebf0b1f483d",
+          "bytes": 6763
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyMechanismTrauma.txt": {
+          "sha256": "e7a098f8375ff150a769dcc5e5374610e4c198605d38fa2c46920ec1aee221d5",
+          "bytes": 9166
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOrganTrauma.txt": {
+          "sha256": "addfb8c331f90a032fe7263b182878141c9b4a207a583eb3841d22ab4b9e7284",
+          "bytes": 12821
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOrganTreatment.txt": {
+          "sha256": "6a4d0abe60af5bb3a8c279548dce2b08cdc68f4b16bb6061af65a68b8f5857a9",
+          "bytes": 3528
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyOriginProfile.txt": {
+          "sha256": "2bf3eee845d521bc326b1c4faa4ac42b4c74fcd07633ed285563a2cecefd49e1",
+          "bytes": 1867
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyRobotMechanism.txt": {
+          "sha256": "dac9ccae5564971d773791fab2da7a63c03c15f1e9a6e92d1be37a9d070117a8",
+          "bytes": 7823
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyTreatment.txt": {
+          "sha256": "58252b998338f1400e46337de6c40e968a34daa9b7be3b85280f484e1c0cfe1a",
+          "bytes": 12844
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ApplyWound.txt": {
+          "sha256": "64f9fe7f3dd20a5b59c70f409c177bba315368457f55cf697685be8c42722ac3",
+          "bytes": 6689
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyActor.txt": {
+          "sha256": "cfc01bc06118db1405e9d7d4c3b9142bbde3485d9f398f32062a577e913ebbdd",
+          "bytes": 2720
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyAnatomy.txt": {
+          "sha256": "b432de75de7ba048609d43de715faac634b401df77b465268f91611695da703d",
+          "bytes": 1819
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClassifyMorale.txt": {
+          "sha256": "a59662b9695fc707b9d4eb20082ffb1f4dac34332df72b511f59a86af4790fd2",
+          "bytes": 3029
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ClearFunctionalState.txt": {
+          "sha256": "4f059997e1e6accda92b75af5ecd7168053a4f20340045f24b6820e2fe785a70",
+          "bytes": 1000
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_CreateJobOffer.txt": {
+          "sha256": "ba77bd8cb29c1688da072c8be37a68564844a3c87a92ce96c9321f5c352b2ad5",
+          "bytes": 2357
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_DumpActorState.txt": {
+          "sha256": "1301b5d1648a1ce2d1450db1994a0703710e267d458f9ff73027f0b95e3fa493",
+          "bytes": 10026
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_EmitImpactFeedback.txt": {
+          "sha256": "a00eb1c1b2ff9e9e8995067c676142e162074d7f8e350aea50edccdf0dd4a31e",
+          "bytes": 3427
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitAltStartBridge.txt": {
+          "sha256": "af7e1030399c85c03fd911d3670089999ab3ec04e5d102542df8aef2d04ecaa7",
+          "bytes": 2435
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitArmor.txt": {
+          "sha256": "75856a789c41a8ca049c630be92c9af7f68c80455243e1d1d9080f181616e733",
+          "bytes": 114
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitBallistics.txt": {
+          "sha256": "3420c66848763740f4b28439d786f33a727e374116c28c407c87e02b384edb1b",
+          "bytes": 119
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitCore.txt": {
+          "sha256": "c82d15cdc3cf14891b9d39e19180466a4eace119f2676d26392f038beea3661c",
+          "bytes": 15227
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitFeedback.txt": {
+          "sha256": "22bdc3eb936ea9ff57dfae0413fde74bf3dffb2dd90f3ef1be66ae165456b870",
+          "bytes": 2107
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitMechanisms.txt": {
+          "sha256": "8be265180f19d59049e3e677cef8f53822aa5d392376508ddfdddbb1e182be9c",
+          "bytes": 15184
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitMorale.txt": {
+          "sha256": "ac1049ff67ce209919e02bbdc04d4c0fd84b0564d6e3f7855e5f2719d65d7e46",
+          "bytes": 6266
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitOrgans.txt": {
+          "sha256": "c944dc3a7b842097379c208a444f60d1f50b7d416db10f2931b7a032b7cfa60f",
+          "bytes": 8755
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitProfiles.txt": {
+          "sha256": "4d9c51206549f1b164437c022757def9fcc0f068eed4f9a0f2fc35320f1167e9",
+          "bytes": 11852
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitSandbox.txt": {
+          "sha256": "37bb9648aa10b440817ab36fff3611b03c71f5f798ab42dc41bbd6c2726c4467",
+          "bytes": 4819
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitTreatments.txt": {
+          "sha256": "90b8a42f37f02f8649952eb0667749b240a04a06345176bfc47a248fe0ce64fd",
+          "bytes": 8400
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_InitWeapons.txt": {
+          "sha256": "712e7548ff889fa5455af6d7cfd4c17edc4fb601bb268a0be385816705cebf47",
+          "bytes": 2122
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_MigrateActorState.txt": {
+          "sha256": "c8d331708a1ed4cf09f892669575bec0d4c694c8b835df5b0e539e7bc92bb4b8",
+          "bytes": 1578
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnAltStartCourierStage.txt": {
+          "sha256": "481a76ac549108a46163b430bf2cf7921031bcabf3d89a7b73abf96ca06a3b43",
+          "bytes": 1924
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnCivicPreActivate.txt": {
+          "sha256": "2f2df975b3fe3b92f22446b52febd71f28633bcab8c0afdfee1bc8fb103cb185",
+          "bytes": 2048
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnClinicalCare.txt": {
+          "sha256": "0c07d6ce9716b675c0f57c9436c628cc4fb34f72e59fac4ed555994c8dfb5d3b",
+          "bytes": 270
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnDeath.txt": {
+          "sha256": "44b81ba704ceb69f620766c2f7213498a57914a768d055471d93412bcbafa7f0",
+          "bytes": 2021
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnExplosionHit.txt": {
+          "sha256": "d3be962e5b635c4a5e72d113119a4548059342de07ae0d7a673f9fce07a3c455",
+          "bytes": 1795
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnHit.txt": {
+          "sha256": "e166fc35ef5742777aac06c0fdf3753a642d2cb6b74a16a9135843fa1e65d2f4",
+          "bytes": 6656
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_OnTreatment.txt": {
+          "sha256": "448048fb4577e795eb245008551aa54434077a23a7d38f3633b6040701a67f35",
+          "bytes": 1412
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessMechanismTick.txt": {
+          "sha256": "d9b86d8b7d1a36105ee1c52baabd13d38ba5a8dd737e55a701a309ec1051731e",
+          "bytes": 4805
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessMorale.txt": {
+          "sha256": "388de46b7afa456d89eb0290f0d55eb94eaf86a7f30bfb89449804b6332e5d75",
+          "bytes": 9899
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessOrganTick.txt": {
+          "sha256": "f2da2b316c4f1c7b070b1b8b507cb132c1f24cc58b7d108ef533585da28f346d",
+          "bytes": 6082
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ProcessRecovery.txt": {
+          "sha256": "37d9eadbe2ce0e0b3a8a95ba67b239cccec91bd18b6882dea25a1cd06e800049",
+          "bytes": 7756
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ReconcileActorValue.txt": {
+          "sha256": "e4b6bb84e466d83c13431b5625640a6f02b6a34639772e141264ef15dbef2dd7",
+          "bytes": 2521
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_RecordCivicMemory.txt": {
+          "sha256": "ba6443f983650001540f598580e81c3a1195382d95b98a8eecf7333f6328edcd",
+          "bytes": 2315
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_RecordTacticalImpact.txt": {
+          "sha256": "aa9dd42e94b5a5e5535ceb27977c5eb3fa0abbaf1ea7f07ad1a9bee7745103e1",
+          "bytes": 3199
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_RegisterCivicRole.txt": {
+          "sha256": "50fcca3aa86fbf780bb7924972a903ed59e8bc924fec1e4a3ec52ce2160ec68c",
+          "bytes": 1295
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResetActorState.txt": {
+          "sha256": "780432897f6b49d04f3c13bd4d6afbaf1c083e1131f05a50ba75bd70cdb87ae9",
+          "bytes": 1864
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveArmor.txt": {
+          "sha256": "c9a0c95f72a0d09bbdf2ba0c9738575a9811a8917eb591e4c5ffe3355fdf34a6",
+          "bytes": 11625
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveBallistics.txt": {
+          "sha256": "7a8e7910b2af475ed879e3757631d2ecdb36f12ee4a6f6acb7fc503ef4c41171",
+          "bytes": 10829
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveCivicOutcome.txt": {
+          "sha256": "67d278a4e03ef7e45fa55270db542a4bbc25e834e88e77db917039af05dba5d5",
+          "bytes": 1763
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveExplosion.txt": {
+          "sha256": "e0fd20b6634b96c24d0ccab1b65877535920ece42db4048ff62e935e61a3ef99",
+          "bytes": 3932
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_ResolveMechanism.txt": {
+          "sha256": "77d5fd470999a84d6c8fa470be45ac5d337181f581361a6a008d0e5323a4038e",
+          "bytes": 6001
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_SetCivicNeed.txt": {
+          "sha256": "d196c477fafb8c5729c46f0a7e4382783b1101e92becfd3b8d7fc7483fd69738",
+          "bytes": 2085
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_TacticalMemoryExpire.txt": {
+          "sha256": "a30ed67c7db015a4b4a9a11c367e899c42ea7c8292fa778c5ceca83a87233d1a",
+          "bytes": 857
+        },
+        "Data/NVSE/user_defined_functions/NVOCombat/NVO_WoundTick.txt": {
+          "sha256": "2760b4b234976cf98b4ce4e693667fc59ab33887660e1ec162c880c0e0ecbe07",
+          "bytes": 10006
+        },
+        "FORM_MANIFEST.md": {
+          "sha256": "e8696d29ebeb250c729f98ee033f82cdd526153aec5522e5678509c41fd27210",
+          "bytes": 3689
+        },
+        "FUNCTIONAL_MORALE_SPEC.md": {
+          "sha256": "b73a668c44250ffbe459728433cf10d8f1d57d2d359326179770890bb1f37d27",
+          "bytes": 6590
+        },
+        "FUNCTIONAL_MORALE_TRUTH_SET.md": {
+          "sha256": "d5dab9e2586b2bf8687d049bd2b7d179a2fed7c5562e1981dcd3fc1a07c82c3a",
+          "bytes": 2595
+        },
+        "IMPACT_FEEDBACK_COMPATIBILITY.md": {
+          "sha256": "dff8a661cdd98a0f2910dc7ae211f8c78693f4f5bd16ceafc4df5486a22fb1fb",
+          "bytes": 2429
+        },
+        "MECHANISM_SPEC.md": {
+          "sha256": "521c70b144da5dfefa0c8320f1a8fbd5a1b40c59680e6c2494e08371db21d272",
+          "bytes": 5877
+        },
+        "MECHANISM_TRUTH_SET.md": {
+          "sha256": "3731c6301507ecec68c26f1a14e85eb2a74ae591bfa27e77f61d0379bf40a02e",
+          "bytes": 2995
+        },
+        "MEDICAL_TRUTH_SET.md": {
+          "sha256": "3603d1dd560e9518ee61c6654dca98ca38a68e4e0ba0deecc23925407dc8b29b",
+          "bytes": 2722
+        },
+        "MORALE_PROFILE_AUDIT.md": {
+          "sha256": "6bbee10b56653cd4b8525b0b98127a2e0c68ec9e90efec2fedd3831839d790a7",
+          "bytes": 4283
+        },
+        "NVO_ROLEPLAY_SYSTEMS_PLAN.md": {
+          "sha256": "4647957593a411acc0ee3fc4b8201ac13550cff78df40847139e2d0789bbf8d8",
+          "bytes": 7025
+        },
+        "NVO_SANDBOX_API.md": {
+          "sha256": "08bce95880e5ae8aef8f250aea0e0cd8a6bf752ba9c8a4c7b348824502b758c4",
+          "bytes": 8812
+        },
+        "ORGAN_AUTHORITY_SPEC.md": {
+          "sha256": "47c1a7f74a5bc911e96be062b3226b6246b4bd791c49b7e426bc6f52b9198fa2",
+          "bytes": 6730
+        },
+        "ORGAN_RECORD_AUDIT.md": {
+          "sha256": "1bb239a9900282d25adcbaa45871e4dd7aed221b29e9c4ca16d23d74afbc9012",
+          "bytes": 2473
+        },
+        "ORGAN_TRUTH_SET.md": {
+          "sha256": "77247ce703de800a92492de49107ee4f8127c66cd9db56816197a38ed348932d",
+          "bytes": 2637
+        },
+        "OVERHAUL_ARCHITECTURE.md": {
+          "sha256": "cd7162b429f806d564719d0f4a0fc8829b247cf8ed87d5bf06060ff8061e05fd",
+          "bytes": 7683
+        },
+        "PLAYTEST_RECORD.md": {
+          "sha256": "7d8cccc131f75b800b7ede8018c4a1c61372552631a54af9d302c644ced6288d",
+          "bytes": 12686
+        },
+        "PROJECT_EXECUTION_PLAN.md": {
+          "sha256": "10560f7960c76b2de9ee91394848717dd2ad9b7d1ee6c2b6cc70224b0fa98194",
+          "bytes": 26182
+        },
+        "README.md": {
+          "sha256": "1a278397e6f89e033881c99e2b9eaeaeac506f7030193c3453062e32fe22107c",
+          "bytes": 12142
+        },
+        "TREATMENT_SPEC.md": {
+          "sha256": "8814517d9e9a2c96ea22c8bbdd50d1e421c831f78d3559d6b518613398c49ae0",
+          "bytes": 6117
+        },
+        "WOUND_STATE_SPEC.md": {
+          "sha256": "272b8d6acaa88862b3470c0f4d06a9973ad69c5d4e21e3fd148d4da950802de5",
+          "bytes": 9902
+        }
+      }
+    }
+  }
+}

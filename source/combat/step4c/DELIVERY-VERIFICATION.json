@@ -1,0 +1,29 @@
+{
+  "package_files": 25,
+  "archive_sha256": "d87b9deb06940a7d16e2d0e272b10ae0fffcf9c3e0311ad959b468ae21c802fc",
+  "checks": {
+    "packet": "4C",
+    "status": "Prepared offline; no runtime installation",
+    "x86_checks": 53,
+    "profile_authoring_checks": 21,
+    "replayed_captured_snapshots": 76,
+    "deterministic_repetitions": 10000,
+    "native_core_files_unchanged": 78,
+    "prior_model_source_files_unchanged": 9,
+    "installed_files_unchanged": 14,
+    "compiled_target": "PE32 x86 /W4 /WX",
+    "runtime_integrated": false,
+    "damage_replacement": false,
+    "authority_promoted": false,
+    "asset_geometry_validated": false,
+    "authored_profiles": 2,
+    "profile_semantics": "Provisional coarse-region candidate extents only",
+    "gameplay_test_required": false,
+    "new_game_files": 0,
+    "checker": {
+      "path": "native/NVOCombatModel/out-coverage/coverage_checks.exe",
+      "bytes": 171008,
+      "sha256": "f87ff8aad3d2956f9649216df0c5ff4a894e19ee75638ed039f5792af31dbcdf"
+    }
+  }
+}

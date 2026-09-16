@@ -1,0 +1,30 @@
+{
+  "native_source_files_unchanged": [
+    "native\\NVOCombatCore\\src\\CurrentHit.cpp",
+    "native\\NVOCombatCore\\src\\DamageEvents.cpp",
+    "native\\NVOCombatCore\\src\\Exports.def",
+    "native\\NVOCombatCore\\src\\FlightPhysics.cpp",
+    "native\\NVOCombatCore\\src\\FlightPreview.cpp",
+    "native\\NVOCombatCore\\src\\FlightTiming.cpp",
+    "native\\NVOCombatCore\\src\\NativeLog.cpp",
+    "native\\NVOCombatCore\\src\\NativeObserver.cpp",
+    "native\\NVOCombatCore\\src\\Plugin.cpp",
+    "native\\NVOCombatCore\\include\\CurrentHit.hpp",
+    "native\\NVOCombatCore\\include\\DamageEvents.hpp",
+    "native\\NVOCombatCore\\include\\FlightDragData.hpp",
+    "native\\NVOCombatCore\\include\\FlightPhysics.hpp",
+    "native\\NVOCombatCore\\include\\FlightPreview.hpp",
+    "native\\NVOCombatCore\\include\\FlightTiming.hpp",
+    "native\\NVOCombatCore\\include\\NativeLog.hpp",
+    "native\\NVOCombatCore\\include\\NativeObserver.hpp",
+    "native\\NVOCombatCore\\include\\NvseBootstrapApi.hpp"
+  ],
+  "native_source_comparison": "Packet 3D source snapshot",
+  "native_build_executed": false,
+  "gameplay_tested": false,
+  "record_audit": "RECORD-AUDIT.json",
+  "profile_capacity": 16,
+  "profile_count": 9,
+  "seven_mappings_and_clones_checked": true,
+  "old_private_record_bytes_preserved": true
+}

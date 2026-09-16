@@ -1,0 +1,597 @@
+{
+  "observed_utc": "2026-09-13T10:26:54.000308+00:00",
+  "method": "Read archive members and plugin records without running donor code",
+  "reference_directory": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)",
+  "archives": [
+    {
+      "archive": "Animated Greetings-96211-1-1-1770602596.7z",
+      "bytes": 1088873,
+      "sha256": "9be2186801c93d7c753b1ba93f0db2aa92ca8fbbc5d04e806bfd094b25ef459c",
+      "loose_startup_scripts": [
+        "nvse/plugins/scripts/ln_AnimatedGreetings.txt"
+      ],
+      "plugin_records": []
+    },
+    {
+      "archive": "BallistX-70341-5-4-1712065466.rar",
+      "bytes": 1107199,
+      "sha256": "d71fe28f1262dec7a0f2086f06b243168d74a3f11d8b57cd8b7b8127c9506e3d",
+      "loose_startup_scripts": [
+        "nvse/plugins/scripts/gr_BallistXAmmo.txt",
+        "nvse/plugins/scripts/ln_BallistXAmmo.txt"
+      ],
+      "plugin_records": [
+        {
+          "member": "BallistX.esp",
+          "masters": [],
+          "record_counts": {
+            "TES4": 1,
+            "GLOB": 8,
+            "SCPT": 6,
+            "NOTE": 1,
+            "QUST": 2
+          },
+          "potential_entrypoint_scripts": [
+            "BallistXMain",
+            "BallistXATM"
+          ]
+        },
+        {
+          "member": "BallistXAmmo.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm",
+            "GunRunnersArsenal.esm"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "GMST": 1,
+            "GLOB": 32,
+            "SCPT": 35,
+            "ENCH": 6,
+            "MISC": 83,
+            "AMMO": 237,
+            "PROJ": 247,
+            "LVLI": 281,
+            "QUST": 1,
+            "EXPL": 7,
+            "FLST": 29,
+            "RCPE": 355,
+            "RCCT": 4,
+            "AMEF": 143
+          },
+          "potential_entrypoint_scripts": [
+            "BallistXAmmoScript"
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "Base Object Swapper-83934-2-0-0-1770602039.7z",
+      "bytes": 1152390,
+      "sha256": "b4da35868b178945da6277dbfbefd03259b73284d4f3596c2aee512f6de93334",
+      "loose_startup_scripts": [],
+      "plugin_records": []
+    },
+    {
+      "archive": "Caliber Based Damage-82543-3-0-1-1758669413 (1).7z",
+      "bytes": 2382,
+      "sha256": "71df0f1b04d0b24b3defcf02895885564f6ef8680172a3ada583ac9f3c14122c",
+      "loose_startup_scripts": [
+        "NVSE/Plugins/scripts/ln_CBDredux.txt"
+      ],
+      "plugin_records": []
+    },
+    {
+      "archive": "CombatAITweaksNVSE 98454 1.0.1 2026-07-24T08-22Z v2JwzBGO.zip",
+      "bytes": 117831,
+      "sha256": "aa6e2a873ba0250341f699d69ccc21ea46842d2d529201964882ca980e607e8b",
+      "loose_startup_scripts": [
+        "NVSE/Plugins/scripts/ln_combataitweaksnvse-mcm.txt"
+      ],
+      "plugin_records": []
+    },
+    {
+      "archive": "Idle Variety-85718-1-40e-1770605541.7z",
+      "bytes": 6462421,
+      "sha256": "9f524f45b739aacf84de682e75ef934cb354922d482f5f6b6f1ead1a02c428df",
+      "loose_startup_scripts": [
+        "nvse/plugins/scripts/gr_idlevariety.txt"
+      ],
+      "plugin_records": [
+        {
+          "member": "Idle Variety.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "SCPT": 7,
+            "QUST": 1,
+            "IDLE": 44,
+            "FLST": 2
+          },
+          "potential_entrypoint_scripts": [
+            "IVScript",
+            "IVMenuOpen",
+            "IVDialogueLoop"
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "KEYWORDS-83088-1-01-1695964898 (1).7z",
+      "bytes": 4975,
+      "sha256": "38bc17cdade9e32db208805019220bba1e72b744dbe869c43bfcff96c6483cd8",
+      "loose_startup_scripts": [
+        "NVSE/plugins/scripts/gr_0KEYWORDS.txt"
+      ],
+      "plugin_records": []
+    },
+    {
+      "archive": "Modern Ambient Temperature-71079-1-0-1-1612318905.zip",
+      "bytes": 60585,
+      "sha256": "cb70160306f2c69006959c6e30929dcdb4696745a3238573725f736a2654e664",
+      "loose_startup_scripts": [],
+      "plugin_records": [
+        {
+          "member": "Modern Ambient Temperature/Ambient Temperature.esm",
+          "masters": [
+            "FalloutNV.esm"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "GLOB": 68,
+            "SCPT": 2,
+            "MISC": 1,
+            "QUST": 2,
+            "MESG": 1
+          },
+          "potential_entrypoint_scripts": [
+            "ATAmbientTemperatureQuestScript",
+            "ATxMCMQuestScript"
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "New Blood-75666-2-75-1777596420.rar",
+      "bytes": 7990581,
+      "sha256": "7294a247cfcf98f96d2ba7afc1a6e37d244b0348ccdef65dc8bb588dafd4dba1",
+      "loose_startup_scripts": [],
+      "plugin_records": [
+        {
+          "member": "New Blood.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm",
+            "OldWorldBlues.esm",
+            "LonesomeRoad.esm",
+            "GunRunnersArsenal.esm"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "GLOB": 19,
+            "FACT": 1,
+            "MGEF": 8,
+            "SCPT": 27,
+            "ENCH": 18,
+            "SPEL": 73,
+            "WEAP": 37,
+            "CREA": 275,
+            "LVLC": 5,
+            "PROJ": 8,
+            "QUST": 4,
+            "EXPL": 11,
+            "IMAD": 2,
+            "FLST": 10,
+            "PERK": 3,
+            "BPTD": 45,
+            "CELL": 1,
+            "ACRE": 3
+          },
+          "potential_entrypoint_scripts": [
+            "SCPTNewBloodStartup"
+          ]
+        }
+      ]
+    },
+    {
+      "archive": "Physics' Based Ballistics-82561-1-1-2-1743173812.7z",
+      "bytes": 2496,
+      "sha256": "9601a7c66498e57d9e3d2b64292a5a493d4b016a204d7f4325eb259e1666e9f3",
+      "loose_startup_scripts": [
+        "NVSE/Plugins/scripts/gr_PBBmain.txt"
+      ],
+      "plugin_records": []
+    },
+    {
+      "archive": "Physics' Based Spread-83049-1-0-0-1694842917.7z",
+      "bytes": 1287,
+      "sha256": "68792fa653b6cf40e2e3aff7e057d63f0efadccfa2e5f41dcc849f279eab638c",
+      "loose_startup_scripts": [
+        "nvse/plugins/scripts/ln_PhysicsBasedSpread.txt"
+      ],
+      "plugin_records": []
+    },
+    {
+      "archive": "Simple Bleeding-92796-1-4-1-1759276777.7z",
+      "bytes": 1885,
+      "sha256": "d4dd7aaa104db040c74385564409c1f86712426fdcf2891842b28e7dc39a8673",
+      "loose_startup_scripts": [
+        "nvse/plugins/scripts/ln_SimpleBleeding.txt"
+      ],
+      "plugin_records": []
+    },
+    {
+      "archive": "Transcendence - The Roleplaying Overhaul-90520-1-3-0-1-1771533140 (2).7z",
+      "bytes": 26754750,
+      "sha256": "20d31d4cc358c9e00b7f044b7c591e05272becf7f7987dd5ca28bc6ee5aaa55b",
+      "loose_startup_scripts": [
+        "Transcendence/00 Core/nvse/plugins/scripts/gr_TransMenuCall.txt",
+        "Transcendence/00 Core/nvse/plugins/scripts/ln_TransLoadCall.txt"
+      ],
+      "plugin_records": [
+        {
+          "member": "Transcendence/00 Core/CaravanTravel.esp",
+          "masters": [
+            "FalloutNV.esm"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "GLOB": 27,
+            "FACT": 1,
+            "SCPT": 1,
+            "NPC_": 17,
+            "CREA": 1,
+            "DIAL": 42,
+            "INFO": 56,
+            "QUST": 2,
+            "PACK": 17,
+            "FLST": 2,
+            "VTYP": 1,
+            "MESG": 3,
+            "WRLD": 1,
+            "CELL": 16,
+            "REFR": 65,
+            "ACHR": 16,
+            "ACRE": 16
+          },
+          "potential_entrypoint_scripts": [
+            "aaaE7CaravanTravelScript"
+          ]
+        },
+        {
+          "member": "Transcendence/00 Core/Transcendence.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm",
+            "OldWorldBlues.esm",
+            "LonesomeRoad.esm",
+            "GunRunnersArsenal.esm",
+            "YUP - Base Game + All DLC.esm"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "GMST": 38,
+            "GLOB": 2,
+            "CLAS": 1,
+            "MGEF": 5,
+            "SCPT": 44,
+            "ENCH": 10,
+            "SPEL": 36,
+            "ACTI": 2,
+            "ARMO": 168,
+            "CONT": 108,
+            "MISC": 60,
+            "WEAP": 283,
+            "AMMO": 114,
+            "NPC_": 1160,
+            "CREA": 84,
+            "LVLC": 275,
+            "LVLN": 104,
+            "ALCH": 190,
+            "IDLM": 2,
+            "NOTE": 3,
+            "PROJ": 6,
+            "LVLI": 587,
+            "CELL": 107,
+            "REFR": 313,
+            "ACRE": 1,
+            "ACHR": 2,
+            "WRLD": 5,
+            "DIAL": 117,
+            "INFO": 240,
+            "QUST": 2,
+            "PACK": 11,
+            "CSTY": 30,
+            "WATR": 15,
+            "EXPL": 5,
+            "FLST": 11,
+            "PERK": 162,
+            "BPTD": 1,
+            "AVIF": 3,
+            "CAMS": 35,
+            "CPTH": 26,
+            "MESG": 2,
+            "IMOD": 101,
+            "RCPE": 78,
+            "RCCT": 1,
+            "CHAL": 105,
+            "AMEF": 14,
+            "CMNY": 3
+          },
+          "potential_entrypoint_scripts": [
+            "VFreeformMcCarranKitchenScript",
+            "VFSJulieFarkasSCRIPT",
+            "vSnowGlobeEnablerSCRIPT",
+            "VPreorderMercenarySCRIPT",
+            "VPreorderCaravanSCRIPT",
+            "VPreorderTribalSCRIPT",
+            "VPreorderClassicSCRIPT",
+            "NVDLC01MQ00Script",
+            "NVDLC01GhostSCRIPT",
+            "NVDLC02MQ00Script",
+            "NVDLC03MQ00SCRIPT",
+            "NVDLC04MQ00SCRIPT",
+            "TransCharismaLimitSCRIPT",
+            "TransOnLoadUDF",
+            "TransMainSCRIPT"
+          ]
+        },
+        {
+          "member": "Transcendence/02 EDEM/Transcended DLC Enhancements.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "HonestHearts.esm",
+            "DLC Enhancements.esp"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "ARMO": 4
+          },
+          "potential_entrypoint_scripts": []
+        },
+        {
+          "member": "Transcendence/03 EVEM/Transcended Vanilla Enhancements.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm",
+            "LonesomeRoad.esm",
+            "Vanilla Enhancements.esm",
+            "Transcendence.esp"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "MISC": 1,
+            "NPC_": 4,
+            "CREA": 3,
+            "DIAL": 1,
+            "INFO": 2,
+            "PERK": 1,
+            "RCPE": 2
+          },
+          "potential_entrypoint_scripts": []
+        },
+        {
+          "member": "Transcendence/04 Goodies/Transcended Goodies.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm",
+            "OldWorldBlues.esm",
+            "LonesomeRoad.esm",
+            "GunRunnersArsenal.esm",
+            "YUP - Base Game + All DLC.esm",
+            "Goodies.esp"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "ENCH": 5,
+            "WEAP": 90,
+            "NPC_": 11,
+            "ALCH": 13,
+            "LVLI": 3,
+            "IMOD": 76
+          },
+          "potential_entrypoint_scripts": []
+        },
+        {
+          "member": "Transcendence/05 Currency/Transcended Simple Currencies.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "SimpleCurrencies.esm",
+            "Transcendence.esp"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "DIAL": 21,
+            "INFO": 47
+          },
+          "potential_entrypoint_scripts": []
+        },
+        {
+          "member": "Transcendence/06 TLD/Transcended TLD.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm",
+            "OldWorldBlues.esm",
+            "LonesomeRoad.esm",
+            "GunRunnersArsenal.esm",
+            "TLD_Travelers.esm",
+            "CaravanTravel.esp",
+            "Transcendence.esp"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "CONT": 1,
+            "NPC_": 59,
+            "CREA": 10,
+            "LVLC": 2,
+            "LVLN": 8,
+            "LVLI": 20,
+            "WRLD": 1,
+            "CELL": 1,
+            "REFR": 51,
+            "DIAL": 2,
+            "INFO": 2
+          },
+          "potential_entrypoint_scripts": []
+        },
+        {
+          "member": "Transcendence/07 Fatigue/Transcended Fatigue Overhaul.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "SD_Fatigue.esp",
+            "Transcendence.esp"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "ARMO": 1,
+            "MISC": 1,
+            "WEAP": 6,
+            "AMMO": 3,
+            "ALCH": 1,
+            "LVLI": 2,
+            "PERK": 2
+          },
+          "potential_entrypoint_scripts": []
+        },
+        {
+          "member": "Transcendence/08 FPGE/Transcended FPGE.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "LonesomeRoad.esm",
+            "Functional Post Game Ending.esm",
+            "Transcendence.esp"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "NPC_": 10,
+            "DIAL": 1,
+            "INFO": 1,
+            "WRLD": 1,
+            "CELL": 1,
+            "REFR": 1
+          },
+          "potential_entrypoint_scripts": []
+        }
+      ]
+    },
+    {
+      "archive": "Vanilla SWEEP 81043 2.35 2026-08-22T00-12Z tDT2ocqq.rar",
+      "bytes": 3106987,
+      "sha256": "3b16780ac89c365e9057bb92235e403b0c9b7e01ba54ee05b0e8d2ce8715aa1f",
+      "loose_startup_scripts": [
+        "NVSE/Plugins/scripts/gr_VSWEEPAGE.txt"
+      ],
+      "plugin_records": [
+        {
+          "member": "Vanilla SWEEP.esp",
+          "masters": [
+            "FalloutNV.esm",
+            "DeadMoney.esm",
+            "HonestHearts.esm",
+            "OldWorldBlues.esm",
+            "LonesomeRoad.esm",
+            "GunRunnersArsenal.esm",
+            "Fallout3.esm",
+            "CaravanPack.esm",
+            "ClassicPack.esm",
+            "Anchorage.esm",
+            "ThePitt.esm",
+            "BrokenSteel.esm",
+            "PointLookout.esm",
+            "Zeta.esm",
+            "MercenaryPack.esm",
+            "TribalPack.esm",
+            "TaleOfTwoWastelands.esm",
+            "YUPTTW.esm"
+          ],
+          "record_counts": {
+            "TES4": 1,
+            "GMST": 2,
+            "TXST": 3,
+            "GLOB": 5,
+            "SOUN": 2,
+            "MGEF": 47,
+            "SCPT": 71,
+            "ENCH": 63,
+            "SPEL": 14,
+            "ACTI": 5,
+            "ARMO": 1,
+            "CONT": 46,
+            "MISC": 2,
+            "IMOD": 10,
+            "STAT": 2,
+            "WEAP": 516,
+            "AMMO": 18,
+            "NPC_": 45,
+            "CREA": 3,
+            "LVLC": 13,
+            "LVLN": 7,
+            "KEYM": 4,
+            "NOTE": 2,
+            "PROJ": 111,
+            "LVLI": 1504,
+            "CELL": 80,
+            "REFR": 352,
+            "ACHR": 10,
+            "ACRE": 4,
+            "PGRE": 2,
+            "WRLD": 7,
+            "DIAL": 5,
+            "INFO": 9,
+            "QUST": 3,
+            "PACK": 1,
+            "EFSH": 2,
+            "EXPL": 63,
+            "IMAD": 1,
+            "FLST": 78,
+            "PERK": 6,
+            "AVIF": 4,
+            "IPCT": 2,
+            "IPDS": 1,
+            "ARMA": 1,
+            "MESG": 1,
+            "RCPE": 78,
+            "AMEF": 7
+          },
+          "potential_entrypoint_scripts": [
+            "VendorMerchantContainerScript",
+            "MS09FamilyVanceScript",
+            "StatesmanHotelRoofTrigger01SCRIPT",
+            "DLC02SoldierTrenchCornerLookSCRIPT",
+            "DLC01DowntownAmbushControlSCRIPT",
+            "DLC05NPCTercorienScript",
+            "DLC05CryoLab01MasSCRIPT",
+            "DLC05CryoSoldierRoomTrigSCRIPT",
+            "SCPTSweepStartup",
+            "NVDLC04ArcWelderArcScript",
+            "AlienDisintegrationTokenSCRIPT",
+            "migTeslaDestroyHnPLG",
+            "migTeslaDestroyQS",
+            "migTeslaChainObjectSCRIPT",
+            "SCPTSweepAnimTester"
+          ]
+        }
+      ]
+    }
+  ],
+  "active_data_snapshot": {
+    "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data",
+    "dlls_present": [
+      "jip_nvse.dll",
+      "ZeGaryHax.dll"
+    ],
+    "loose_startup_scripts": [],
+    "limitations": "File presence is not loaded-plugin evidence. Archive scripts and compiled plugin callers are not covered by the loose-script snapshot."
+  }
+}

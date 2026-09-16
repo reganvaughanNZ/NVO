@@ -1,0 +1,46 @@
+{
+  "status": "RD-free file validation passed; GECK quiet-script compiles and gameplay pending",
+  "sha256": "2c005477f719ff6e2884d7ffeb6c7d547a0146196869999e14b8bff9e560ea98",
+  "bytes": 453168,
+  "masters": [
+    "FalloutNV.esm",
+    "DeadMoney.esm",
+    "HonestHearts.esm",
+    "LonesomeRoad.esm",
+    "OldWorldBlues.esm"
+  ],
+  "records": 822,
+  "existing_records_retained": 819,
+  "added_records": [
+    "NVO.esm:01941A SCPT",
+    "NVO.esm:01941B QUST"
+  ],
+  "compiled_script_blocks_preserved": 269,
+  "health_gmsts_preserved": 5,
+  "player_override_in_NVO": false,
+  "bootstrap_start_enabled_and_link_valid": true,
+  "xedit_version": "4.1.5f x64 7C57FA01",
+  "reference_check_with_RD_physically_absent": true,
+  "unresolved_nonnull_references": 0,
+  "known_donor_empty_effect_records": [
+    "ALTAddictionJet",
+    "ALTPsycho",
+    "ALTAddictionNukaCola",
+    "ALTCapsStash",
+    "ALTAddictionAlcohol",
+    "ALTLoneWolfRadioAddiction"
+  ],
+  "serialization_notes": [
+    "Six already empty donor effects serialized as NULL EFID/zero EFIT. No effect assigned.",
+    "xEdit made the existing Crazed Chem Addict reference 00160845 persistent and moved it to the persistent cell group.",
+    "Dialogue quest/INFO associations and leveled-list entry counts survived canonical sorting."
+  ],
+  "counts": {
+    "form_index_bytes_remapped": 1001,
+    "leveled_list_sorted_without_entry_changes": 1,
+    "xedit_persistent_actor_normalization": 1,
+    "dialogue_quest_associations_preserved": 81
+  },
+  "native_version": 318,
+  "damage_replacement": false
+}

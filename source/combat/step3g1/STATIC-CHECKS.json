@@ -1,0 +1,96 @@
+{
+  "machine": "PE32 x86",
+  "exports": [
+    "NVSEPlugin_Load",
+    "NVSEPlugin_Query"
+  ],
+  "warnings": 0,
+  "dll_sha256": "47301eb8d861fb7315200815c5e277a28cd75f07c494ee71cb4981e82358f7c0",
+  "pdb_sha256": "52791b952a46688f454f7332630268546f8deca86d048537650e9d03a6670b79",
+  "codeview_pdb_guid": "47e26bc1-a917-4b19-aff1-2f5634fe3dbb",
+  "pdb_age": 1,
+  "pdb_pair_verified": true,
+  "dll_bytes": 281088,
+  "pdb_bytes": 4386816,
+  "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+  "packet": "3G1",
+  "plugin_version": 316,
+  "unchanged_sources": [
+    "BUILD.cmd",
+    "include/CurrentHit.hpp",
+    "include/DamageEvents.hpp",
+    "include/FlightDragData.hpp",
+    "include/FlightPhysics.hpp",
+    "include/FlightPreview.hpp",
+    "include/FlightTiming.hpp",
+    "include/NativeLog.hpp",
+    "include/NativeObserver.hpp",
+    "include/NvseBootstrapApi.hpp",
+    "src/CurrentHit.cpp",
+    "src/DamageEvents.cpp",
+    "src/Exports.def",
+    "src/FlightPreview.cpp",
+    "src/FlightTiming.cpp",
+    "src/NativeLog.cpp",
+    "src/NativeObserver.cpp"
+  ],
+  "compiled_bridges_unchanged": [
+    "LocalZBridge",
+    "TerrainBridge",
+    "CommitBridge",
+    "NodeBridge",
+    "MovementBridge",
+    "AccountingBridge",
+    "ControllerDispatchBridge",
+    "ControllerDirectBridge",
+    "ControllerReturnBridge"
+  ],
+  "log_format_bounds": [
+    {
+      "row": "IMPACT_STEP",
+      "maximum_bytes": 534
+    },
+    {
+      "row": "IMPACT_GEOMETRY",
+      "maximum_bytes": 567
+    },
+    {
+      "row": "IMPACT_VELOCITY",
+      "maximum_bytes": 480
+    },
+    {
+      "row": "IMPACT_MODEL",
+      "maximum_bytes": 524
+    },
+    {
+      "row": "IMPACT_BOUNDARY",
+      "maximum_bytes": 326
+    },
+    {
+      "row": "IMPACT_END",
+      "maximum_bytes": 113
+    },
+    {
+      "row": "IMPACT_CALLBACK",
+      "maximum_bytes": 166
+    },
+    {
+      "row": "IMPACT_CALLBACK",
+      "maximum_bytes": 587
+    },
+    {
+      "row": "IMPACT_SUMMARY",
+      "maximum_bytes": 515
+    },
+    {
+      "row": "IMPACT_COVERAGE_SUMMARY",
+      "maximum_bytes": 273
+    }
+  ],
+  "new_hooks": 0,
+  "impact_reads_optional": true,
+  "contact_speed_authority": false,
+  "range_or_flight_rules_changed": false,
+  "damage_replacement": false,
+  "gameplay_tested": false
+}

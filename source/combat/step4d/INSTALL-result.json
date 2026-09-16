@@ -1,0 +1,28 @@
+{
+  "packet": "4D",
+  "status": "installed",
+  "protected_files_verified": 51,
+  "game_launched": false,
+  "gameplay_tested": false,
+  "closed_processes": [],
+  "stagger_writes": false,
+  "installed_utc": "2026-09-16T12:50:40.5798772Z",
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-4D-20260917-005034-7393db93",
+  "damage_replacement": false,
+  "installed": [
+    {
+      "sha256": "3f0f68fa2a060ab7ffb6f832013d28388b0871b8a2b3c9f758fddeb826049c5b",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll"
+    },
+    {
+      "sha256": "afc7e8caee6c777d2d925a2adf56f6fe02e413ed9ac87f996cb638140fc1d281",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb"
+    },
+    {
+      "sha256": "0e25e3aafbd0aadf52fb58fb38b19cb079280d96006b0ee84f927fdd860973aa",
+      "path": "Data/NVSE/Plugins/NVOArmourCoverage.tsv"
+    }
+  ],
+  "native_version": 327,
+  "rd_absent": true
+}

@@ -1,0 +1,151 @@
+{
+  "packet": "4B",
+  "purpose": "Pinned source provenance for raw 32-bit FNV inventory and armour layouts; declarations are references, not copied runtime helpers.",
+  "sources": {
+    "jip_game_forms": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.h",
+      "bytes": 156678,
+      "sha256": "96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8"
+    },
+    "jip_game_objects": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameObjects.h",
+      "bytes": 46361,
+      "sha256": "3f16c3c9b58bdd55026d413eb94a340f11b49b27dc5b4eaacba6e33b2b38ff31"
+    },
+    "jip_extra_base": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameBSExtraData.h",
+      "bytes": 1843,
+      "sha256": "e1bee588d1a1bd9d6dc8bd62da4462eafd831a5ec8c1597c2531b3ba69147117"
+    },
+    "jip_extra_data": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameExtraData.h",
+      "bytes": 30624,
+      "sha256": "6d998041f603dc4aeb65e2ab0bfbec4bbb07841f27524cd0c8501e8745768939"
+    },
+    "jip_game_types": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameTypes.h",
+      "bytes": 13644,
+      "sha256": "cd4daf4609360a5a6b7463cb993b9b655af912fafea163c90974232bd9df6a47"
+    },
+    "xnvse_game_forms": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\GameForms.h",
+      "bytes": 129586,
+      "sha256": "4e29d76daf1c79368900a1ad06b2ebabc3c56415f9c3c8d3ac7f97bb01d6f048"
+    },
+    "xnvse_extra_base": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\GameBSExtraData.h",
+      "bytes": 1766,
+      "sha256": "d1bce7d594c0da89034fd9a53ac0eb9a2a724a16866ec77c4c02e993bf136d76"
+    },
+    "xnvse_extra_data": {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\GameExtraData.h",
+      "bytes": 29363,
+      "sha256": "9b75fb8d49dacabecd8b6cbd496ecb300176201e7b5f0af5468ae9866f725874"
+    }
+  },
+  "claims": [
+    {
+      "claim": "TESForm type and FormID",
+      "offsets": {
+        "type": "0x04",
+        "form_id": "0x0C"
+      },
+      "source": "jip_game_forms",
+      "lines": "266-278"
+    },
+    {
+      "claim": "Character and Creature form types",
+      "values": {
+        "Character": "0x3B",
+        "Creature": "0x3C"
+      },
+      "source": "jip_game_forms",
+      "lines": "63-65"
+    },
+    {
+      "claim": "TESObjectREFR extraDataList",
+      "offset": "0x44",
+      "source": "jip_game_objects",
+      "lines": "101-110"
+    },
+    {
+      "claim": "BSExtraData header",
+      "offsets": {
+        "type": "0x04",
+        "next": "0x08"
+      },
+      "source": "jip_extra_base",
+      "lines": "5-15"
+    },
+    {
+      "claim": "BaseExtraList header",
+      "offsets": {
+        "head": "0x04",
+        "presence": "0x08",
+        "jip_flags": "0x1B"
+      },
+      "source": "jip_extra_base",
+      "lines": "19-31"
+    },
+    {
+      "claim": "ContainerChanges, Worn, WornLeft, Health tags",
+      "values": {
+        "container_changes": "0x15",
+        "worn": "0x16",
+        "worn_left": "0x17",
+        "health": "0x25"
+      },
+      "source": "jip_extra_data",
+      "lines": "141-181"
+    },
+    {
+      "claim": "ExtraContainerChanges Data and EntryData",
+      "offsets": {
+        "extra_data_pointer": "0x0C",
+        "object_list": "0x00",
+        "owner": "0x04",
+        "entry_extend": "0x00",
+        "entry_count": "0x04",
+        "entry_form": "0x08"
+      },
+      "source": "jip_extra_data",
+      "lines": "326-400"
+    },
+    {
+      "claim": "tList node",
+      "offsets": {
+        "data": "0x00",
+        "next": "0x04"
+      },
+      "source": "jip_game_types",
+      "lines": "30-40"
+    },
+    {
+      "claim": "ExtraHealth value",
+      "offset": "0x0C",
+      "source": "jip_extra_data",
+      "lines": "407-414"
+    },
+    {
+      "claim": "TESObjectARMO raw fields",
+      "offsets": {
+        "base_health": "0x6C",
+        "part_mask": "0x74",
+        "biped_flags": "0x78",
+        "armour_rating": "0x178",
+        "damage_threshold": "0x17C",
+        "armour_flags": "0x180"
+      },
+      "sources": [
+        "jip_game_forms lines 526-532, 786-802, 2297-2340"
+      ]
+    }
+  ],
+  "semantic_limits": [
+    "partMask is equip-slot occupancy, not anatomical coverage",
+    "container traversal order is not armour layer order",
+    "absence of ExtraHealth means raw full base condition for this diagnostic only",
+    "baked BIP/model geometry is not an equipped inventory instance",
+    "Creature targets are unsupported and never treated as bare"
+  ]
+}

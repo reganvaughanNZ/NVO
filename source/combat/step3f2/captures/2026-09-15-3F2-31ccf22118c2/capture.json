@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "archive": "source\\combat\\step3f2\\captures\\2026-09-15-3F2-31ccf22118c2\\NVOCombatCore.log",
+  "sha256": "31ccf22118c2711f61712572fbd354a1e3a3de6fd8bbd7795d28eaa64ddb8c5d",
+  "bytes": 79471,
+  "lines": 354,
+  "last_write_local": "2026-09-15T20:13:31.977070+12:00",
+  "user_context": "Shot 1 successful repeat of the miss. Shot 2 far HP VATS headshot. Shot 3 miss from same distance, reported HP."
+}

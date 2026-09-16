@@ -1,0 +1,160 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3k\runtime-20260916-100050\player_getav-0093ACB0.obj
+
+File Type: COFF OBJECT
+
+  0093ACB0: 55                 push        ebp
+  0093ACB1: 8B EC              mov         ebp,esp
+  0093ACB3: 83 EC 20           sub         esp,20h
+  0093ACB6: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0093ACB9: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093ACBC: 50                 push        eax
+  0093ACBD: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0093ACC0: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  0093ACC3: 8B 02              mov         eax,dword ptr [edx]
+  0093ACC5: 8B 50 04           mov         edx,dword ptr [eax+4]
+  0093ACC8: FF D2              call        edx
+  0093ACCA: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093ACCD: 50                 push        eax
+  0093ACCE: 6A 00              push        0
+  0093ACD0: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0093ACD3: 81 E9 A4 00 00 00  sub         ecx,0A4h
+  0093ACD9: DD 5D F4           fstp        qword ptr [ebp-0Ch]
+  0093ACDC: E8 EF 16 01 00     call        0094C3D0
+  0093ACE1: DC 45 F4           fadd        qword ptr [ebp-0Ch]
+  0093ACE4: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  0093ACE7: 51                 push        ecx
+  0093ACE8: 6A 01              push        1
+  0093ACEA: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0093ACED: 81 E9 A4 00 00 00  sub         ecx,0A4h
+  0093ACF3: DD 5D EC           fstp        qword ptr [ebp-14h]
+  0093ACF6: E8 D5 16 01 00     call        0094C3D0
+  0093ACFB: DC 45 EC           fadd        qword ptr [ebp-14h]
+  0093ACFE: 8B 55 08           mov         edx,dword ptr [ebp+8]
+  0093AD01: 52                 push        edx
+  0093AD02: 6A 02              push        2
+  0093AD04: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0093AD07: 81 E9 A4 00 00 00  sub         ecx,0A4h
+  0093AD0D: DD 5D E4           fstp        qword ptr [ebp-1Ch]
+  0093AD10: E8 BB 16 01 00     call        0094C3D0
+  0093AD15: DC 45 E4           fadd        qword ptr [ebp-1Ch]
+  0093AD18: D9 5D E0           fstp        dword ptr [ebp-20h]
+  0093AD1B: D9 45 E0           fld         dword ptr [ebp-20h]
+  0093AD1E: 8B E5              mov         esp,ebp
+  0093AD20: 5D                 pop         ebp
+  0093AD21: C2 04 00           ret         4
+  0093AD24: CC                 int         3
+  0093AD25: CC                 int         3
+  0093AD26: CC                 int         3
+  0093AD27: CC                 int         3
+  0093AD28: CC                 int         3
+  0093AD29: CC                 int         3
+  0093AD2A: CC                 int         3
+  0093AD2B: CC                 int         3
+  0093AD2C: CC                 int         3
+  0093AD2D: CC                 int         3
+  0093AD2E: CC                 int         3
+  0093AD2F: CC                 int         3
+  0093AD30: 55                 push        ebp
+  0093AD31: 8B EC              mov         ebp,esp
+  0093AD33: 51                 push        ecx
+  0093AD34: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0093AD37: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093AD3A: 50                 push        eax
+  0093AD3B: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0093AD3E: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  0093AD41: 8B 02              mov         eax,dword ptr [edx]
+  0093AD43: 8B 50 20           mov         edx,dword ptr [eax+20h]
+  0093AD46: FF D2              call        edx
+  0093AD48: 51                 push        ecx
+  0093AD49: D9 1C 24           fstp        dword ptr [esp]
+  0093AD4C: E8 8F BF AC FF     call        00406CE0
+  0093AD51: 83 C4 04           add         esp,4
+  0093AD54: E8 67 B5 58 00     call        00EC62C0
+  0093AD59: 8B E5              mov         esp,ebp
+  0093AD5B: 5D                 pop         ebp
+  0093AD5C: C2 04 00           ret         4
+  0093AD5F: CC                 int         3
+  0093AD60: 55                 push        ebp
+  0093AD61: 8B EC              mov         ebp,esp
+  0093AD63: 83 EC 28           sub         esp,28h
+  0093AD66: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  0093AD69: D9 EE              fldz
+  0093AD6B: D9 5D F8           fstp        dword ptr [ebp-8]
+  0093AD6E: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093AD71: 50                 push        eax
+  0093AD72: E8 E9 42 B4 FF     call        0047F060
+  0093AD77: 83 C4 04           add         esp,4
+  0093AD7A: 0F B6 C8           movzx       ecx,al
+  0093AD7D: 85 C9              test        ecx,ecx
+  0093AD7F: 74 77              je          0093ADF8
+  0093AD81: 83 3D 3C EA 1D 01  cmp         dword ptr ds:[011DEA3Ch],0
+            00
+  0093AD88: 74 11              je          0093AD9B
+  0093AD8A: 8B 15 3C EA 1D 01  mov         edx,dword ptr ds:[011DEA3Ch]
+  0093AD90: 81 C2 A4 00 00 00  add         edx,0A4h
+  0093AD96: 89 55 F0           mov         dword ptr [ebp-10h],edx
+  0093AD99: EB 07              jmp         0093ADA2
+  0093AD9B: C7 45 F0 00 00 00  mov         dword ptr [ebp-10h],0
+            00
+  0093ADA2: 6A 01              push        1
+  0093ADA4: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093ADA7: 50                 push        eax
+  0093ADA8: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  0093ADAB: 51                 push        ecx
+  0093ADAC: E8 DF 8E D0 FF     call        00643C90
+  0093ADB1: 83 C4 0C           add         esp,0Ch
+  0093ADB4: 8D 55 FF           lea         edx,[ebp-1]
+  0093ADB7: 52                 push        edx
+  0093ADB8: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093ADBB: 50                 push        eax
+  0093ADBC: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0093ADBF: 81 E9 A4 00 00 00  sub         ecx,0A4h
+  0093ADC5: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  0093ADC8: 8B 82 5C FF FF FF  mov         eax,dword ptr [edx+FFFFFF5Ch]
+  0093ADCE: 8B 90 8C 04 00 00  mov         edx,dword ptr [eax+0000048Ch]
+  0093ADD4: DD 5D E8           fstp        qword ptr [ebp-18h]
+  0093ADD7: FF D2              call        edx
+  0093ADD9: DC 45 E8           fadd        qword ptr [ebp-18h]
+  0093ADDC: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093ADDF: 50                 push        eax
+  0093ADE0: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0093ADE3: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  0093ADE6: 8B 02              mov         eax,dword ptr [edx]
+  0093ADE8: 8B 50 18           mov         edx,dword ptr [eax+18h]
+  0093ADEB: DD 5D E0           fstp        qword ptr [ebp-20h]
+  0093ADEE: FF D2              call        edx
+  0093ADF0: DC 45 E0           fadd        qword ptr [ebp-20h]
+  0093ADF3: D9 5D F8           fstp        dword ptr [ebp-8]
+  0093ADF6: EB 2B              jmp         0093AE23
+  0093ADF8: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093ADFB: 50                 push        eax
+  0093ADFC: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0093ADFF: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  0093AE02: 8B 02              mov         eax,dword ptr [edx]
+  0093AE04: 8B 50 04           mov         edx,dword ptr [eax+4]
+  0093AE07: FF D2              call        edx
+  0093AE09: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093AE0C: 50                 push        eax
+  0093AE0D: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  0093AE10: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  0093AE13: 8B 02              mov         eax,dword ptr [edx]
+  0093AE15: 8B 50 18           mov         edx,dword ptr [eax+18h]
+  0093AE18: DD 5D D8           fstp        qword ptr [ebp-28h]
+  0093AE1B: FF D2              call        edx
+  0093AE1D: DC 45 D8           fadd        qword ptr [ebp-28h]
+  0093AE20: D9 5D F8           fstp        dword ptr [ebp-8]
+  0093AE23: 51                 push        ecx
+  0093AE24: D9 45 F8           fld         dword ptr [ebp-8]
+  0093AE27: D9 1C 24           fstp        dword ptr [esp]
+  0093AE2A: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0093AE2D: 50                 push        eax
+  0093AE2E: E8
+  0093AE2F: 5D                 pop         ebp
+
+  Summary
+
+         180 .text

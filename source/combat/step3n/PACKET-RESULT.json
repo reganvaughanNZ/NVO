@@ -1,0 +1,69 @@
+{
+  "packet": "3N",
+  "native_runtime_version_unchanged": 320,
+  "engine_damage_replacement": false,
+  "pre_damage_gate": "HOLD",
+  "offline_checks": 45,
+  "seeded_conservation_cases": 4000,
+  "repeated_pure_previews": 10000,
+  "build": "MSVC x86 /W4 /WX C++17 standalone executable",
+  "GECK_compilation": "pending_user",
+  "baron_runtime_retirement": "pending_user_compile_save_and_verification",
+  "installed_files_changed": [],
+  "baseline_esm_sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d",
+  "baseline_assets": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\nvse\\plugins\\NVOFlightPreview.ini",
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+      "sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVOFlightPilot.esp",
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.dll",
+      "sha256": "4826895e3954298de6c3ca5d6f56cd3a576434fda7a696e57572b646c833e664"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVSE\\Plugins\\NVOCombatCore.pdb",
+      "sha256": "4a652ab9c39158485a32bd3cb2f07a5d9e3921d479ac30689da2ba55c42ff354"
+    }
+  ],
+  "model_sources": [
+    {
+      "file": "ArmourModel.hpp",
+      "sha256": "5d1470e5649202f010f756377efd7f778c82f4efaca78fc7b1f24569c0ce0efa"
+    },
+    {
+      "file": "ArmourModel.cpp",
+      "sha256": "e2cdb3a954941b71909ab1e3875e91eea7fac1c9b05b12c77aec006e0b0f39e4"
+    },
+    {
+      "file": "tests.cpp",
+      "sha256": "1845a86fc1ff74a0c7a05218f963d2d8f6c55cf8be816047386481908a61dc40"
+    },
+    {
+      "file": "README.md",
+      "sha256": "e1549165fbf90ae025b9c6f84b9973209b83158ea5e876489dbfacf737e3b093"
+    },
+    {
+      "file": "run_checks.cmd",
+      "sha256": "aa6f8c6d2c4b5844ce31423ab59a462c9b83063c64ae2da094428315998d49cf"
+    }
+  ],
+  "fixture_executable_sha256": "24df1feb8e7323c2588f37d2ba0e72330404912f3afeed7b2df045f3975b30d4",
+  "claims_not_made": [
+    "live_nonkinetic_adapter_support",
+    "calibrated_armour_balance",
+    "exact_once_engine_application",
+    "GECK_compile_success"
+  ]
+}

@@ -1,0 +1,694 @@
+{
+  "profile_sha256": "af13f0567f43b1b3a19da1f3c98012cf89a6279015175f32380ee6be37d61852",
+  "captures": {
+    "source/combat/step4b/Evidence/LIVE-4B-20260916-233442.log": "1d20983e4d196d41f485853e2eac64ac0eaa49daede615ba971eb696ec138501",
+    "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log": "555081337821fb407cb29afa59ca98b86f174766b2a108d1e1675b8849ad7ace"
+  },
+  "form_origin_policy": "Only exact observed runtime forms00020420/00020426 mapped to FalloutNV.esm. No general load-index resolution.",
+  "fixtures": [
+    {
+      "capture": "source/combat/step4b/Evidence/LIVE-4B-20260916-233442.log",
+      "session": "1",
+      "seq": "1",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/Evidence/LIVE-4B-20260916-233442.log",
+      "session": "1",
+      "seq": "2",
+      "target": "0015A796",
+      "item_count": 1,
+      "head_partial": 0,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/Evidence/LIVE-4B-20260916-233442.log",
+      "session": "1",
+      "seq": "3",
+      "target": "0015A796",
+      "item_count": 0,
+      "head_partial": 0,
+      "torso_partial": 0
+    },
+    {
+      "capture": "source/combat/step4b/Evidence/LIVE-4B-20260916-233442.log",
+      "session": "2",
+      "seq": "1",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "1",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "2",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "3",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "4",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "5",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "6",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "7",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "8",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "9",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "10",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "11",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "12",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "13",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "14",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "15",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "16",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "17",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "18",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "19",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "20",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "21",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "22",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "23",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "24",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "25",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "26",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "27",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "28",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "29",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "30",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "31",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "32",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "33",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "34",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "35",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "36",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "37",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "38",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "39",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "40",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "41",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "42",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "43",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "44",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "45",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "46",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "47",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "48",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "49",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "50",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "51",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "52",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "53",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "54",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "55",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "56",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "57",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "58",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "59",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "60",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "61",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "62",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "63",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "1",
+      "seq": "64",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "1",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "2",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "3",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "4",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "5",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "6",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "7",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    },
+    {
+      "capture": "source/combat/step4b/stress/LIVE-4B-STRESS-20260916-235307.log",
+      "session": "2",
+      "seq": "8",
+      "target": "0015A796",
+      "item_count": 2,
+      "head_partial": 1,
+      "torso_partial": 1
+    }
+  ]
+}

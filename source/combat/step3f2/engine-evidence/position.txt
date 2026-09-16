@@ -1,0 +1,374 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file C:\Users\regan\Documents\ChatGPT\NVO\source\combat\step3f2\engine-evidence\position.obj
+
+File Type: COFF OBJECT
+
+  00575830: 47                 inc         edi
+  00575831: 0D 53 AC 3F B4     or          eax,0B43FAC53h
+  00575836: 1C 50              sbb         al,50h
+  00575838: 5E                 pop         esi
+  00575839: 8E 52 D2           mov         ss,word ptr [edx-2Eh]
+  0057583C: BB A4 7C 73 C8     mov         ebx,0C8737CA4h
+  00575841: D7                 xlat        byte ptr [ebx]
+  00575842: 1C F6              sbb         al,0F6h
+  00575844: AA                 stos        byte ptr es:[edi]
+  00575845: 5F                 pop         edi
+  00575846: F7 D1              not         ecx
+  00575848: 0F BC 01           bsf         eax,dword ptr [ecx]
+  0057584B: 11 21              adc         dword ptr [ecx],esp
+  0057584D: 41                 inc         ecx
+  0057584E: 60                 pushad
+  0057584F: 20 75 DD           and         byte ptr [ebp-23h],dh
+  00575852: 19 BF C4 7A A5 2B  sbb         dword ptr [edi+2BA57AC4h],edi
+  00575858: FC                 cld
+  00575859: 33 C6              xor         eax,esi
+  0057585B: 9C                 pushfd
+  0057585C: FE 4D 3A           dec         byte ptr [ebp+3Ah]
+  0057585F: 3A 5A 6C           cmp         bl,byte ptr [edx+6Ch]
+  00575862: B5 4B              mov         ch,4Bh
+  00575864: 4F                 dec         edi
+  00575865: 77 19              ja          00575880
+  00575867: BE EF 94 A2 84     mov         esi,84A294EFh
+  0057586C: A4                 movs        byte ptr es:[edi],byte ptr [esi]
+  0057586D: E7 E6              out         0E6h,eax
+  0057586F: 05 EB 4B C4 58     add         eax,58C44BEBh
+  00575874: CE                 into
+  00575875: 0D 88 04 42 2B     or          eax,2B420488h
+  0057587A: 1C CE              sbb         al,0CEh
+  0057587C: 41                 inc         ecx
+  0057587D: C0 76 68 6A        sal         byte ptr [esi+68h],6Ah
+  00575881: 5E                 pop         esi
+  00575882: 1B 08              sbb         ecx,dword ptr [eax]
+  00575884: 54                 push        esp
+  00575885: CF                 iretd
+  00575886: CB                 retf
+  00575887: 11 8F EB 8D E8 D6  adc         dword ptr [edi+D6E88DEBh],ecx
+  0057588D: A0 1F A1 0A 08     mov         al,byte ptr ds:[080AA11Fh]
+  00575892: 65 22 A9 7F 26 5F  and         ch,byte ptr gs:[ecx+085F267Fh]
+            08
+  00575899: AE                 scas        byte ptr es:[edi]
+  0057589A: 55                 push        ebp
+  0057589B: 72 CC              jb          00575869
+  0057589D: 3A AC 80 D8 9E 23  cmp         ch,byte ptr [eax+eax*4+98239ED8h]
+            98
+  005758A4: 15 3C 15 9B C0     adc         eax,0C09B153Ch
+  005758A9: AA                 stos        byte ptr es:[edi]
+  005758AA: DF 68 14           fild        qword ptr [eax+14h]
+  005758AD: 83 35 C6 51 66 38  xor         dword ptr ds:[386651C6h],0FFFFFF92h
+            92
+  005758B4: D9 2B              fldcw       word ptr [ebx]
+  005758B6: EC                 in          al,dx
+  005758B7: 9D                 popfd
+  005758B8: 99                 cdq
+  005758B9: 61                 popad
+  005758BA: 14 2F              adc         al,2Fh
+  005758BC: 68 D1 D0 EA 1F     push        1FEAD0D1h
+  005758C1: 81 C9 A3 6B EB 2B  or          ecx,2BEB6BA3h
+  005758C7: 9F                 lahf
+  005758C8: C6 42 BB B0        mov         byte ptr [edx-45h],0B0h
+  005758CC: EC                 in          al,dx
+  005758CD: 33 41 6B           xor         eax,dword ptr [ecx+6Bh]
+  005758D0: 94                 xchg        eax,esp
+  005758D1: 6F                 outs        dx,dword ptr [esi]
+  005758D2: 00 F6              add         dh,dh
+  005758D4: F5                 cmc
+  005758D5: 7E 20              jle         005758F7
+  005758D7: AB                 stos        dword ptr es:[edi]
+  005758D8: 29 F8              sub         eax,edi
+  005758DA: A8 09              test        al,9
+  005758DC: E5 5A              in          eax,5Ah
+  005758DE: 0D CE 7F 24 E1     or          eax,0E1247FCEh
+  005758E3: 2C A3              sub         al,0A3h
+  005758E5: 6A C7              push        0FFFFFFC7h
+  005758E7: DA 8E 43 24 FC 06  fimul       dword ptr [esi+06FC2443h]
+  005758ED: 59                 pop         ecx
+  005758EE: 2E E8 59 D5 D1 26  call        27292E4D
+  005758F4: 6F                 outs        dx,dword ptr [esi]
+  005758F5: 6D                 ins         dword ptr es:[edi],dx
+  005758F6: 57                 push        edi
+  005758F7: 35 CA EC 26 BE     xor         eax,0BE26ECCAh
+  005758FC: 41                 inc         ecx
+  005758FD: 2A 59 ED           sub         bl,byte ptr [ecx-13h]
+  00575900: CE                 into
+  00575901: 8A 7E D5           mov         bh,byte ptr [esi-2Bh]
+  00575904: B0 06              mov         al,6
+  00575906: 72 20              jb          00575928
+  00575908: 14 EC              adc         al,0ECh
+  0057590A: 89 43 C5           mov         dword ptr [ebx-3Bh],eax
+  0057590D: FD                 std
+  0057590E: 22 C7              and         al,bh
+  00575910: F5                 cmc
+  00575911: BF EB 75 32 FA     mov         edi,0FA3275EBh
+  00575916: 94                 xchg        eax,esp
+  00575917: 46                 inc         esi
+  00575918: 38 2C 3A           cmp         byte ptr [edx+edi],ch
+  0057591B: 24 83              and         al,83h
+  0057591D: 0A FF              or          bh,bh
+  0057591F: A5                 movs        dword ptr es:[edi],dword ptr [esi]
+  00575920: 92                 xchg        eax,edx
+  00575921: 7A 64              jp          00575987
+  00575923: A4                 movs        byte ptr es:[edi],byte ptr [esi]
+  00575924: C8 46 AA AF        enter       0AA46h,0AFh
+  00575928: A8 BF              test        al,0BFh
+  0057592A: 12 94 92 05 20 57  adc         dl,byte ptr [edx+edx*4+D2572005h]
+            D2
+  00575931: E1 B1              loope       005758E4
+  00575933: 60                 pushad
+  00575934: C5 59 19           lds         ebx,fword ptr [ecx+19h]
+  00575937: B9 AF A7 AD 57     mov         ecx,57ADA7AFh
+  0057593C: BB 67 67 36 6F     mov         ebx,6F366767h
+  00575941: 4A                 dec         edx
+  00575942: 44                 inc         esp
+  00575943: D8 3C FA           fdivr       dword ptr [edx+edi*8]
+  00575946: 60                 pushad
+  00575947: 43                 inc         ebx
+  00575948: 5A                 pop         edx
+  00575949: 4F                 dec         edi
+  0057594A: 33 34 6E           xor         esi,dword ptr [esi+ebp*2]
+  0057594D: F1
+  0057594E: 44                 inc         esp
+  0057594F: 5A                 pop         edx
+  00575950: EF                 out         dx,eax
+  00575951: 90                 nop
+  00575952: 7D 31              jge         00575985
+  00575954: 56                 push        esi
+  00575955: 76 A9              jbe         00575900
+  00575957: EE                 out         dx,al
+  00575958: BB EF 20 75 AE     mov         ebx,0AE7520EFh
+  0057595D: A9 B8 69 2D 44     test        eax,442D69B8h
+  00575962: 08 0C 2F           or          byte ptr [edi+ebp],cl
+  00575965: FA                 cli
+  00575966: 31 E9              xor         ecx,ebp
+  00575968: 24 FA              and         al,0FAh
+  0057596A: 57                 push        edi
+  0057596B: 46                 inc         esi
+  0057596C: 01 B8 CD D2 77 CC  add         dword ptr [eax+CC77D2CDh],edi
+  00575972: 1F                 pop         ds
+  00575973: 30 AC 85 9E 22 A0  xor         byte ptr [ebp+eax*4+0CA0229Eh],ch
+            0C
+  0057597A: 34 CD              xor         al,0CDh
+  0057597C: 19 22              sbb         dword ptr [edx],esp
+  0057597E: F4                 hlt
+  0057597F: D1 30              sal         dword ptr [eax],1
+  00575981: 9C                 pushfd
+  00575982: EE                 out         dx,al
+  00575983: DD BD 9B FE 3C CA  fnstsw      word ptr [ebp+CA3CFE9Bh]
+  00575989: 18 7C 6A B9        sbb         byte ptr [edx+ebp*2-47h],bh
+  0057598D: A6                 cmps        byte ptr [esi],byte ptr es:[edi]
+  0057598E: F6 D0              not         al
+  00575990: 19 A8 0C B9 EB 1A  sbb         dword ptr [eax+1AEBB90Ch],ebp
+  00575996: 2B E1              sub         esp,ecx
+  00575998: 17                 pop         ss
+  00575999: 36 34 11           xor         al,11h
+  0057599C: 0B 8D CD 17 D9 CF  or          ecx,dword ptr [ebp+CFD917CDh]
+  005759A2: 6E                 outs        dx,byte ptr [esi]
+  005759A3: E4 45              in          al,45h
+  005759A5: 4E                 dec         esi
+  005759A6: 51                 push        ecx
+  005759A7: B1 90              mov         cl,90h
+  005759A9: E7 BD              out         0BDh,eax
+  005759AB: F4                 hlt
+  005759AC: 46                 inc         esi
+  005759AD: AB                 stos        dword ptr es:[edi]
+  005759AE: A3 8E A3 94 82     mov         dword ptr ds:[8294A38Eh],eax
+  005759B3: 75 00              jne         005759B5
+  005759B5: A0 5F 05 99 92     mov         al,byte ptr ds:[9299055Fh]
+  005759BA: DC D7              fcom2       st(7)
+  005759BC: 10 0F              adc         byte ptr [edi],cl
+  005759BE: 46                 inc         esi
+  005759BF: 8E E5              mov         fs,bp
+  005759C1: B9 1C 72 9C 98     mov         ecx,989C721Ch
+  005759C6: D8 F3              fdiv        st,st(3)
+  005759C8: 57                 push        edi
+  005759C9: 91                 xchg        eax,ecx
+  005759CA: 5F                 pop         edi
+  005759CB: 9B                 wait
+  005759CC: 2E 83 60 02 8A     and         dword ptr cs:[eax+2],0FFFFFF8Ah
+  005759D1: 4F                 dec         edi
+  005759D2: F3 49              rep dec     ecx
+  005759D4: CB                 retf
+  005759D5: 03 6E AE           add         ebp,dword ptr [esi-52h]
+  005759D8: 0F 67 7F 8C        packuswb    mm7,mmword ptr [edi-74h]
+  005759DC: BA E4 00 1E 2E     mov         edx,2E1E00E4h
+  005759E1: ED                 in          eax,dx
+  005759E2: 1B 0D DB AC E8 B5  sbb         ecx,dword ptr ds:[B5E8ACDBh]
+  005759E8: C5 67 AE           lds         esp,fword ptr [edi-52h]
+  005759EB: CF                 iretd
+  005759EC: 92                 xchg        eax,edx
+  005759ED: EF                 out         dx,eax
+  005759EE: 63 99 72 56 E6 86  arpl        word ptr [ecx+86E65672h],bx
+  005759F4: F7 54 A7 73        not         dword ptr [edi+73h]
+  005759F8: 3A 37              cmp         dh,byte ptr [edi]
+  005759FA: E4 51              in          al,51h
+  005759FC: 26 5D              pop         ebp
+  005759FE: 06                 push        es
+  005759FF: CA 29 6B           retf        6B29h
+  00575A02: AF                 scas        dword ptr es:[edi]
+  00575A03: B3 D7              mov         bl,0D7h
+  00575A05: FF 1D 0A 6B 67 FB  call        fword ptr ds:[FB676B0Ah]
+  00575A0B: B4 C3              mov         ah,0C3h
+  00575A0D: 4D                 dec         ebp
+  00575A0E: 48                 dec         eax
+  00575A0F: 23 74 3F 99        and         esi,dword ptr [edi+edi-67h]
+  00575A13: EE                 out         dx,al
+  00575A14: 5E                 pop         esi
+  00575A15: 65 EC              in          al,dx
+  00575A17: 66 05 D0 53        add         ax,53D0h
+  00575A1B: 3D 15 C3 D0 78     cmp         eax,78D0C315h
+  00575A20: CA C9 80           retf        80C9h
+  00575A23: 7C 56              jl          00575A7B
+  00575A25: 1C 46              sbb         al,46h
+  00575A27: CA 21 51           retf        5121h
+  00575A2A: D3 2C AA           shr         dword ptr [edx+ebp*4],cl
+  00575A2D: 2E 4F              dec         edi
+  00575A2F: 22 FB              and         bh,bl
+  00575A31: 64 0C 01           or          al,1
+  00575A34: 61                 popad
+  00575A35: CA 05 AA           retf        0AA05h
+  00575A38: A7                 cmps        dword ptr [esi],dword ptr es:[edi]
+  00575A39: CD 22              int         22h
+  00575A3B: 49                 dec         ecx
+  00575A3C: BF AB 81 49 C7     mov         edi,0C74981ABh
+  00575A41: 50                 push        eax
+  00575A42: 71 7E              jno         00575AC2
+  00575A44: 26 77 DC           ja          00575A23
+  00575A47: E4 42              in          al,42h
+  00575A49: 46                 inc         esi
+  00575A4A: 0E                 push        cs
+  00575A4B: C7
+  00575A4C: 8A B7 AE FF 64 0F  mov         dh,byte ptr [edi+0F64FFAEh]
+  00575A52: 3E 2B 95 B5 11 4A  sub         edx,dword ptr ds:[ebp+CE4A11B5h]
+            CE
+  00575A59: 79 E2              jns         00575A3D
+  00575A5B: 98                 cwde
+  00575A5C: A3 6C 63 D2 CF     mov         dword ptr ds:[CFD2636Ch],eax
+  00575A61: 8B 41 30           mov         eax,dword ptr [ecx+30h]
+  00575A64: 00 51 23           add         byte ptr [ecx+23h],dl
+  00575A67: D4 A0              aamb        0A0h
+  00575A69: AA                 stos        byte ptr es:[edi]
+  00575A6A: C9                 leave
+  00575A6B: 79 51              jns         00575ABE
+  00575A6D: 54                 push        esp
+  00575A6E: DD
+  00575A6F: AE                 scas        byte ptr es:[edi]
+  00575A70: 61                 popad
+  00575A71: 16                 push        ss
+  00575A72: A1 66 6C 50 C7     mov         eax,dword ptr ds:[C7506C66h]
+  00575A77: 91                 xchg        eax,ecx
+  00575A78: 6B D4 28           imul        edx,esp,28h
+  00575A7B: 63 1B              arpl        word ptr [ebx],bx
+  00575A7D: 93                 xchg        eax,ebx
+  00575A7E: 45                 inc         ebp
+  00575A7F: DE E1              fsubrp      st(1),st
+  00575A81: A8 BC              test        al,0BCh
+  00575A83: ED                 in          eax,dx
+  00575A84: 03 E0              add         esp,eax
+  00575A86: 55                 push        ebp
+  00575A87: BB F3 94 92 42     mov         ebx,429294F3h
+  00575A8C: EF                 out         dx,eax
+  00575A8D: CE                 into
+  00575A8E: B9 15 8A B0 F6     mov         ecx,0F6B08A15h
+  00575A93: C7
+  00575A94: B3 A5              mov         bl,0A5h
+  00575A96: A8 5E              test        al,5Eh
+  00575A98: 3B DD              cmp         ebx,ebp
+  00575A9A: 45                 inc         ebp
+  00575A9B: 99                 cdq
+  00575A9C: 1F                 pop         ds
+  00575A9D: E4 7D              in          al,7Dh
+  00575A9F: EB F1              jmp         00575A92
+  00575AA1: C8 32 02 C7        enter       232h,0C7h
+  00575AA5: 7D 05              jge         00575AAC
+  00575AA7: B6 3C              mov         dh,3Ch
+  00575AA9: 80 BC 07 A7 C5 C9  cmp         byte ptr [edi+eax+DAC9C5A7h],0B1h
+            DA B1
+  00575AB1: 7C A6              jl          00575A59
+  00575AB3: DC 6A 75           fsubr       qword ptr [edx+75h]
+  00575AB6: A2 BF F3 0E 0C     mov         byte ptr ds:[0C0EF3BFh],al
+  00575ABB: A9 8D B9 93 86     test        eax,8693B98Dh
+  00575AC0: 51                 push        ecx
+  00575AC1: 90                 nop
+  00575AC2: EA 0B AE 5A 44 93  jmp         E593:445AAE0B
+            E5
+  00575AC9: 1F                 pop         ds
+  00575ACA: 93                 xchg        eax,ebx
+  00575ACB: B5 F4              mov         ch,0F4h
+  00575ACD: F1
+  00575ACE: 29 21              sub         dword ptr [ecx],esp
+  00575AD0: 5D                 pop         ebp
+  00575AD1: 79 F9              jns         00575ACC
+  00575AD3: D9 72 F7           fnstenv     [edx-9]
+  00575AD6: A2 36 81 D5 6D     mov         byte ptr ds:[6DD58136h],al
+  00575ADB: A0 FA CC 67 D8     mov         al,byte ptr ds:[D867CCFAh]
+  00575AE0: 4B                 dec         ebx
+  00575AE1: 3F                 aas
+  00575AE2: B7 07              mov         bh,7
+  00575AE4: B0 4D              mov         al,4Dh
+  00575AE6: 7E 45              jle         00575B2D
+  00575AE8: 57                 push        edi
+  00575AE9: AC                 lods        byte ptr [esi]
+  00575AEA: F9                 stc
+  00575AEB: 54                 push        esp
+  00575AEC: FC                 cld
+  00575AED: 84 01              test        byte ptr [ecx],al
+  00575AEF: 13 AA 34 19 68 EB  adc         ebp,dword ptr [edx+EB681934h]
+  00575AF5: D7                 xlat        byte ptr [ebx]
+  00575AF6: 28 8D F4 3D 40 31  sub         byte ptr [ebp+31403DF4h],cl
+  00575AFC: C7
+  00575AFD: 8D 55 B4           lea         edx,[ebp-4Ch]
+  00575B00: 4B                 dec         ebx
+  00575B01: E6 8F              out         8Fh,al
+  00575B03: D0 32              sal         byte ptr [edx],1
+  00575B05: 5D                 pop         ebp
+  00575B06: 14 B5              adc         al,0B5h
+  00575B08: C8 C8 DA E0        enter       0DAC8h,0E0h
+  00575B0C: F6 59 2A           neg         byte ptr [ecx+2Ah]
+  00575B0F: 07                 pop         es
+  00575B10: D5 BC              aadb        0BCh
+  00575B12: 88 46 B2           mov         byte ptr [esi-4Eh],al
+  00575B15: A0 1A FF A9 F2     mov         al,byte ptr ds:[F2A9FF1Ah]
+  00575B1A: B3 AD              mov         bl,0ADh
+  00575B1C: 6D                 ins         dword ptr es:[edi],dx
+  00575B1D: 72 61              jb          00575B80
+  00575B1F: C9                 leave
+  00575B20: C0 06 F7           rol         byte ptr [esi],0F7h
+  00575B23: B4 55              mov         ah,55h
+  00575B25: AC                 lods        byte ptr [esi]
+  00575B26: B1 4F              mov         cl,4Fh
+  00575B28: F2 13 98 3F C8 6B  xacquire adc ebx,dword ptr [eax+766BC83Fh]
+            76
+  00575B2F: DE BC 82 7A F6 47  fidivr      word ptr [edx+eax*4+2447F67Ah]
+            24
+  00575B36: 2F                 das
+  00575B37: 7B D3              jnp         00575B0C
+  00575B39: 5E                 pop         esi
+  00575B3A: DB 4F 8D           fisttp      dword ptr [edi-73h]
+  00575B3D: BE 6A CF 7E 0C     mov         esi,0C7ECF6Ah
+  00575B42: ED                 in          eax,dx
+  00575B43: 5A                 pop         edx
+  00575B44: F0 67 A0 B5 B5     lock mov    al,byte ptr ds:[0000B5B5h]
+  00575B49: F8                 clc
+  00575B4A: B8 13 CC E0 92     mov         eax,92E0CC13h
+  00575B4F: E3 2C              jecxz       00575B7D
+  00575B51: 59                 pop         ecx
+  00575B52: B3 18              mov         bl,18h
+  00575B54: AB                 stos        dword ptr es:[edi]
+  00575B55: D9 FA              fsqrt
+  00575B57: A9 7C 3D 2A 1F     test        eax,1F2A3D7Ch
+  00575B5C: 32 64 D6 81        xor         ah,byte ptr [esi+edx*8-7Fh]
+  00575B60: 5A                 pop         edx
+  00575B61: 1B 21              sbb         esp,dword ptr [ecx]
+  00575B63: 46                 inc         esi
+  00575B64: F5                 cmc
+  00575B65: E5 9F              in          eax,9Fh
+  00575B67: DA
+  00575B68: F1
+  00575B69: 9A ED 52 B2 32 21  call        2821:32B252ED
+            28
+
+  Summary
+
+         340 .text

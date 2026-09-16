@@ -1,0 +1,11 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "sha256": "5c4e764753b73c258a176e4270b5b5bdbf8255ac6d35c097daa259cf89fcca63",
+  "bytes": 205918,
+  "last_write_ns": 1789470483831135200,
+  "last_write_local": "2026-09-15T23:08:03.831135+12:00",
+  "captured_utc": "2026-09-15T11:15:31.892971+00:00",
+  "stable_two_reads": true,
+  "user_report": "Test finished, first shot was a rock, followed by many VATS misses from the far distance even at max perception and gun skill. before connecting with a headshot. however the bodyshot without VATS was hit on the first. Final shot was long distance I aimed at the torso.",
+  "interpretation": "Aim, firing mode and perceived outcome are user observations. VATS aim selection and probability are not logged; match against contact and hit records without assuming all outcomes."
+}

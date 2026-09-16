@@ -1,0 +1,14 @@
+{
+  "packet": "4A",
+  "status": "prepared; offline checks passed; not installed",
+  "purpose": "typed fail-closed evidence adapter into the pure armour preview",
+  "native_core_version_preserved": 325,
+  "native_core_changes": 0,
+  "runtime_integration": false,
+  "gameplay_writes": false,
+  "production_profiles": 0,
+  "install_required": false,
+  "gameplay_test_required": false,
+  "damage_authority": false,
+  "next_packet": "4B guarded engine-side equipped-armour snapshot reader, only after approval"
+}

@@ -1,0 +1,1 @@
+Packet 4B prepared and compiled as NVOCombatCore 0.3.26 / plugin 326. Guarded Character-only equipped-armour snapshots are diagnostic and read-only. PASS 452 offline checks. Damage/model authority remains HOLD. Build is not installed; live checkpoint requires separate approval.

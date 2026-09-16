@@ -1,0 +1,34 @@
+{
+  "packet": "3C3",
+  "capture_manifests": [
+    {
+      "path": "source\\combat\\step3c3\\runtime-20260915-141533\\manifest.json",
+      "sha256": "982fc26187959cf5af9b87898f0e45eef546851b9659985b6a98bc80a1fde276"
+    },
+    {
+      "path": "source\\combat\\step3c3\\runtime-20260915-141903\\manifest.json",
+      "sha256": "256d853c9e10948781f9c729ef95c6f71991dd69cbe92b1cfd7260a1a2882938"
+    }
+  ],
+  "new_observer_calls": [
+    {
+      "address": "00930475",
+      "original": "00575830",
+      "bytes": "E8 B6 53 C4 FF"
+    },
+    {
+      "address": "0092F5DC",
+      "original": "00440460",
+      "bytes": "E8 7F 0E B1 FF"
+    }
+  ],
+  "generic_body_guard": {
+    "address": "0092F260",
+    "size": "123C",
+    "normalized_fnv64": "DEFD795E42FB0C4E"
+  },
+  "new_boundary_gameplay_writes": false,
+  "physics_correction_accepted": false,
+  "hypothesis": "Discarded input local Z fits all four 307 failures; exact executing route remains unproven.",
+  "note": "No captured executable bytes are distributed. Only address/stack/hash metadata is copied."
+}

@@ -1,0 +1,120 @@
+unit MigrateRD;
+
+var
+  NVO, RD, SourceScript, SourceQuest, NewScript, NewQuest: IInterface;
+  KeepMasters, Audit, BeforeRefs, AfterRefs, BeforeErrors, AfterErrors: TStringList;
+  Migrated: Boolean;
+
+function StableForm(r: IInterface): string;
+begin
+  Result := GetFileName(GetFile(MasterOrSelf(r))) + ':' + IntToHex(GetLoadOrderFormID(r) and $00FFFFFF, 6);
+end;
+
+procedure Capture(e: IInterface; root: string; refs, errors: TStringList);
+var
+  i: Integer;
+  link: IInterface;
+  err, label: string;
+begin
+  label := root + '/' + Name(e);
+  link := LinksTo(e);
+  if Assigned(link) then
+    refs.Add(root + '/' + Signature(e) + '=' + StableForm(link));
+  err := Check(e);
+  if err <> '' then errors.Add(label + ' -> ' + err);
+  if CanContainFormIDs(e) then
+    for i := 0 to ElementCount(e) - 1 do
+      Capture(ElementByIndex(e, i), root + '/' + IntToStr(i), refs, errors);
+end;
+
+procedure ScanOriginalRecords(f: IInterface; refs, errors: TStringList);
+var
+  i: Integer;
+  r: IInterface;
+begin
+  for i := 0 to RecordCount(f) - 1 do begin
+    r := RecordByIndex(f, i);
+    if Signature(r) <> 'TES4' then
+      if (EditorID(r) <> 'NVOCombatBootstrapScript') and (EditorID(r) <> 'NVOCombatBootstrapScriptQ') then
+        Capture(r, StableForm(r), refs, errors);
+  end;
+  refs.Sort;
+  errors.Sort;
+end;
+
+function Initialize: Integer;
+var
+  i: Integer;
+  f: IInterface;
+begin
+  Result := 0;
+  KeepMasters := TStringList.Create;
+  Audit := TStringList.Create;
+  BeforeRefs := TStringList.Create;
+  AfterRefs := TStringList.Create;
+  BeforeErrors := TStringList.Create;
+  AfterErrors := TStringList.Create;
+  for i := 0 to FileCount - 1 do begin
+    f := FileByIndex(i);
+    if SameText(GetFileName(f), 'NVO.esm') then NVO := f;
+    if SameText(GetFileName(f), 'RD.esm') then RD := f;
+  end;
+  if not Assigned(NVO) or not Assigned(RD) then raise Exception.Create('Expected workspace NVO and RD not loaded.');
+  if not SameText(GetFileName(FileByIndex(FileCount - 1)), 'NVO.esm') then raise Exception.Create('Unexpected last plugin.');
+  for i := 0 to MasterCount(NVO)-1 do
+    if not SameText(GetFileName(MasterByIndex(NVO,i)), 'RD.esm') then
+      KeepMasters.Add(GetFileName(MasterByIndex(NVO,i)));
+  if KeepMasters.Count <> 10 then raise Exception.Create('Unexpected starting master set.');
+  for i := 0 to RecordCount(RD)-1 do begin
+    f := RecordByIndex(RD,i);
+    if EditorID(f) = 'NVOCombatBootstrapScript' then SourceScript := f;
+    if EditorID(f) = 'NVOCombatBootstrapScriptQ' then SourceQuest := f;
+  end;
+  if not Assigned(SourceScript) or not Assigned(SourceQuest) then raise Exception.Create('Bootstrap source missing.');
+  ScanOriginalRecords(NVO, BeforeRefs, BeforeErrors);
+  BeforeRefs.SaveToFile(ProgramPath + 'NVO-3J-before-refs.txt');
+  BeforeErrors.SaveToFile(ProgramPath + 'NVO-3J-before-errors.txt');
+  NewScript := wbCopyElementToFile(SourceScript, NVO, True, True);
+  NewQuest := wbCopyElementToFile(SourceQuest, NVO, True, True);
+  if not Assigned(NewScript) or not Assigned(NewQuest) then raise Exception.Create('Copy failed.');
+  SetElementEditValues(NewScript, 'EDID', 'NVOCombatBootstrapScript');
+  SetElementEditValues(NewQuest, 'EDID', 'NVOCombatBootstrapScriptQ');
+  SetElementNativeValues(NewQuest, 'SCRI', GetLoadOrderFormID(NewScript));
+  Audit.Add('Script=' + StableForm(NewScript));
+  Audit.Add('Quest=' + StableForm(NewQuest));
+  if not SameText(GetFileName(GetFile(MasterOrSelf(NewScript))), 'NVO.esm') then raise Exception.Create('Script is still RD-owned.');
+  if not SameText(GetFileName(GetFile(MasterOrSelf(NewQuest))), 'NVO.esm') then raise Exception.Create('Quest is still RD-owned.');
+  CleanMasters(NVO);
+  for i := 0 to MasterCount(NVO)-1 do
+    if SameText(GetFileName(MasterByIndex(NVO,i)), 'RD.esm') then raise Exception.Create('RD is still referenced after migration.');
+  for i := 0 to KeepMasters.Count-1 do AddMasterIfMissing(NVO, KeepMasters[i], False);
+  SortMasters(NVO);
+  if MasterCount(NVO) <> 10 then raise Exception.Create('Final master count differs.');
+  ScanOriginalRecords(NVO, AfterRefs, AfterErrors);
+  AfterRefs.SaveToFile(ProgramPath + 'NVO-3J-after-refs.txt');
+  AfterErrors.SaveToFile(ProgramPath + 'NVO-3J-after-errors.txt');
+  if BeforeRefs.Text <> AfterRefs.Text then raise Exception.Create('Existing resolved references changed.');
+  if BeforeErrors.Text <> AfterErrors.Text then raise Exception.Create('Existing reference errors changed.');
+  for i := 0 to MasterCount(NVO)-1 do Audit.Add('Master=' + GetFileName(MasterByIndex(NVO,i)));
+  Audit.Add('OriginalReferences=' + IntToStr(BeforeRefs.Count));
+  Audit.Add('OriginalErrors=' + IntToStr(BeforeErrors.Count));
+  Audit.Add('MIGRATION_COMPLETE_PENDING_SAVE');
+  Audit.SaveToFile(ProgramPath + 'NVO-3J-migration.txt');
+  AddMessage(Audit.Text);
+  Migrated := True;
+end;
+
+function Process(e: IInterface): Integer;
+begin
+  Result := 0;
+end;
+
+function Finalize: Integer;
+begin
+  Result := 0;
+  if Migrated then AddMessage('NVO_3J_SCRIPT_FINISHED');
+  KeepMasters.Free; Audit.Free; BeforeRefs.Free; AfterRefs.Free;
+  BeforeErrors.Free; AfterErrors.Free;
+end;
+
+end.

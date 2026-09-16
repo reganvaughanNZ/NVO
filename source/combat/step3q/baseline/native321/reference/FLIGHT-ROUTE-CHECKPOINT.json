@@ -1,0 +1,17 @@
+{
+  "packet": "3C1",
+  "new_read_only_checkpoint": "009BF411",
+  "original_target": "0092F260",
+  "original_call_hex": "e84afef6ff",
+  "return_address": "009BF416",
+  "callee_cleanup": "ret 0C",
+  "receiver": "ECX",
+  "first_argument": "float timestep",
+  "second_argument": "pointer to Vec3",
+  "third_argument": "flags (15)",
+  "caller_frame": "009BF370 EBP, input=EBP+0C, parent return=009BF35D",
+  "source_capture": "source/combat/step3c/runtime-20260915-121449/projectile_move-009BF300.bin",
+  "capture_sha256": "302a2c755a3eaf2a3ec9762132f2adf6c40c948de3784749b1b98f540bc3349f",
+  "retained_physics_callsite": "00930255",
+  "limitations": "Entry diagnostic only. No root-cause claim; the next user capture must identify missing route or filters."
+}

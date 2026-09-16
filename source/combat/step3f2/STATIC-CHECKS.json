@@ -1,0 +1,71 @@
+{
+  "machine": "PE32 x86",
+  "exports": [
+    "NVSEPlugin_Load",
+    "NVSEPlugin_Query"
+  ],
+  "warnings": 0,
+  "dll_sha256": "ad34527aced3296d090e99246cd8c603ee84a0c082851ee9f82a1680585ded04",
+  "pdb_sha256": "4fdb5044ef8c332da1079cb394291321c8d3ee9e2335f47af72f7afe34906101",
+  "codeview_pdb_guid": "a20e411b-886b-4452-9a23-a70193907cf6",
+  "pdb_age": 1,
+  "pdb_pair_verified": true,
+  "dll_bytes": 261632,
+  "pdb_bytes": 4362240,
+  "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+  "packet": "3F2",
+  "plugin_version": 313,
+  "unchanged_native_sources": [
+    "src\\CurrentHit.cpp",
+    "src\\DamageEvents.cpp",
+    "src\\Exports.def",
+    "src\\FlightPreview.cpp",
+    "src\\FlightTiming.cpp",
+    "src\\NativeLog.cpp",
+    "src\\NativeObserver.cpp",
+    "include\\CurrentHit.hpp",
+    "include\\DamageEvents.hpp",
+    "include\\FlightDragData.hpp",
+    "include\\FlightPhysics.hpp",
+    "include\\FlightPreview.hpp",
+    "include\\FlightTiming.hpp",
+    "include\\NativeLog.hpp",
+    "include\\NativeObserver.hpp",
+    "include\\NvseBootstrapApi.hpp"
+  ],
+  "compiled_existing_bridges_unchanged": [
+    "LocalZBridge",
+    "CommitBridge",
+    "NodeBridge",
+    "MovementBridge",
+    "AccountingBridge",
+    "ControllerDispatchBridge",
+    "ControllerDirectBridge",
+    "ControllerReturnBridge"
+  ],
+  "new_bridge": "TerrainBridge",
+  "new_native_hooks": 1,
+  "terrain_bridge_bytes": "9C 81 7B 04 16 F4 9B 00 74 07 9D FF 25 00 00 00 00 9D FF 74 24 08 FF 74 24 08 FF 15 00 00 00 00 9C 60 8B DC 81 EC 10 02 00 00 83 E4 F0 0F AE 04 24 FC DB E3 68 80 1F 00 00 0F AE 14 24 83 C4 04 FF 73 1C FF 73 2C FF 73 28 FF 73 10 FF 73 08 E8 00 00 00 00 83 C4 14 0F AE 0C 24 8B E3 61 9D C2 08 00",
+  "log_format_bounds": [
+    {
+      "record": "PHYSICS_TERRAIN_REJECT_DEFAULT_VERIFIED",
+      "maximum_bytes": 219
+    },
+    {
+      "record": "PHYSICS_TERRAIN_REJECT_DEFAULT",
+      "maximum_bytes": 312
+    },
+    {
+      "record": "PHYSICS_TERRAIN_READY",
+      "maximum_bytes": 189
+    },
+    {
+      "record": "PHYSICS_TERRAIN_SUMMARY",
+      "maximum_bytes": 234
+    }
+  ],
+  "integrator_unchanged": true,
+  "displacement_tolerance_unchanged": true,
+  "damage_replacement": false,
+  "gameplay_tested": false
+}

@@ -1,0 +1,4 @@
+NVO_ARMOUR_COVERAGE_V1
+# plugin|local_hex6|revision|equip_mask_hex8|head|torso|left_arm|right_arm|left_leg|right_leg
+FalloutNV.esm|020420|1|00000004|none|partial|partial|partial|partial|partial
+FalloutNV.esm|020426|1|00000602|partial|none|none|none|none|none

@@ -1,0 +1,67 @@
+{
+  "status": "original_scripts_updated",
+  "sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d",
+  "bytes": 453236,
+  "masters": [
+    "FalloutNV.esm",
+    "DeadMoney.esm",
+    "HonestHearts.esm",
+    "LonesomeRoad.esm",
+    "OldWorldBlues.esm"
+  ],
+  "masters_unchanged": true,
+  "rd_absent": true,
+  "rd_not_a_master": true,
+  "health_gmsts_preserved": true,
+  "player_override_absent": true,
+  "bootstrap_link_valid": true,
+  "scripts": [
+    {
+      "script": "NVOCombatBootstrapScript",
+      "candidates": [
+        {
+          "editor_id": "NVOCombatBootstrapScript",
+          "form": "0501941A",
+          "is_original": true,
+          "source_matches": true,
+          "compiled_bytes": 1090,
+          "compiled_changed": true,
+          "variables_preserved": true,
+          "variable_changes": {}
+        }
+      ]
+    },
+    {
+      "script": "ALTQscript",
+      "candidates": [
+        {
+          "editor_id": "ALTQscript",
+          "form": "05002900",
+          "is_original": true,
+          "source_matches": true,
+          "compiled_bytes": 3821,
+          "compiled_changed": true,
+          "variables_preserved": true,
+          "variable_changes": {}
+        }
+      ]
+    },
+    {
+      "script": "ALTStartQscript",
+      "candidates": [
+        {
+          "editor_id": "ALTStartQscript",
+          "form": "050022E1",
+          "is_original": true,
+          "source_matches": true,
+          "compiled_bytes": 4571,
+          "compiled_changed": true,
+          "variables_preserved": true,
+          "variable_changes": {}
+        }
+      ]
+    }
+  ],
+  "gameplay_tested_by_assistant": false,
+  "limitation": "Source and compiled-byte checks do not independently prove execution. Additional GECK record changes are recorded separately in changes.json."
+}

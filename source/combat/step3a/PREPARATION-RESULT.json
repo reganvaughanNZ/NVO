@@ -1,0 +1,34 @@
+{
+  "scope": "Static data preparation only; no native build or game/GECK testing.",
+  "checks": [
+    "Exact donor archive hash",
+    "Unique selected rows and expected column counts",
+    "Positive finite physics inputs",
+    "Ascending finite drag tables",
+    "Base ESM WEAP/AMMO/PROJ identities",
+    "No runtime data reader claimed"
+  ],
+  "profiles": [
+    {
+      "id": "9mm-pistol-standard",
+      "muzzle_velocity_m_per_s_at_reference_temperature": 387.109091,
+      "mass_kg": 0.007451874649999999,
+      "diameter_m": 0.009016999999999999,
+      "barrel_length_m": 0.11938
+    },
+    {
+      "id": "hunting-rifle-standard-308",
+      "muzzle_velocity_m_per_s_at_reference_temperature": 849.770992,
+      "mass_kg": 0.00952543977,
+      "diameter_m": 0.007823199999999999,
+      "barrel_length_m": 0.5588
+    }
+  ],
+  "pending": [
+    "Winning overrides and live projectile-base matching",
+    "Engine units and direction/velocity semantics",
+    "Native profile reader and read-only shot preview",
+    "Bounded flight integrator and hook ownership",
+    "User validation before any flight changes"
+  ]
+}

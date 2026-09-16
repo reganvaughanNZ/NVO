@@ -1,0 +1,44 @@
+ref rTarget
+ref rTargetBase
+ref rSource
+ref rWeapon
+ref rHitObject
+ref rAmmo
+ref rWriter
+int iRegion
+int bEnginePenetrated
+float fHealth
+float fLimb
+float fWeaponBase
+string_var sLine
+
+; JIP calls this function ON the struck actor, with no parameters.
+begin function {}
+    if eval (player.AuxVarGetFlt "*_NVODiagEnabled") == 0
+        return
+    endif
+    set rTarget to GetSelfAlt
+    if IsFormValid rTarget == 0
+        return
+    endif
+
+    ; Read the hit context immediately, before calling another UDF.
+    set rSource to rTarget.GetHitAttacker
+    set rWeapon to rTarget.GetHitWeapon
+    set rHitObject to rTarget.GetHitProjectile
+    set iRegion to rTarget.GetHitLocation
+    set fHealth to rTarget.GetHitHealthDamage
+    set fLimb to rTarget.GetHitLimbDamage
+    set fWeaponBase to rTarget.GetHitBaseWeaponDamage
+    set bEnginePenetrated to rTarget.GetArmourPenetrated
+    set rTargetBase to rTarget.GetBaseObject
+    set rAmmo to 0
+    if IsFormValid rSource
+        set rAmmo to rSource.GetCurrentAmmo
+    endif
+
+    let sLine := sv_construct "HIT target=%i target_base=%i source=%i weapon=%i hit_object=%i ammo_at_hit=%i region=%.0f hit_hp=%.3f limb=%.3f weapon_base=%.3f engine_pen=%.0f" rTarget rTargetBase rSource rWeapon rHitObject rAmmo iRegion fHealth fLimb fWeaponBase bEnginePenetrated
+    set rWriter to player.AuxVarGetRef "*_NVODiagWriter"
+    call rWriter sLine
+    sv_destruct sLine
+end

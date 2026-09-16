@@ -1,0 +1,200 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-132934\heading_getter.obj
+
+File Type: COFF OBJECT
+
+  0080F790: 55                 push        ebp
+  0080F791: 8B EC              mov         ebp,esp
+  0080F793: 51                 push        ecx
+  0080F794: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0080F797: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0080F79A: E8 91 10 C2 FF     call        00430830
+  0080F79F: D9 40 08           fld         dword ptr [eax+8]
+  0080F7A2: 8B E5              mov         esp,ebp
+  0080F7A4: 5D                 pop         ebp
+  0080F7A5: C2 04 00           ret         4
+  0080F7A8: CC                 int         3
+  0080F7A9: CC                 int         3
+  0080F7AA: CC                 int         3
+  0080F7AB: CC                 int         3
+  0080F7AC: CC                 int         3
+  0080F7AD: CC                 int         3
+  0080F7AE: CC                 int         3
+  0080F7AF: CC                 int         3
+  0080F7B0: 55                 push        ebp
+  0080F7B1: 8B EC              mov         ebp,esp
+  0080F7B3: 51                 push        ecx
+  0080F7B4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0080F7B7: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0080F7BA: 8A 4D 08           mov         cl,byte ptr [ebp+8]
+  0080F7BD: 88 88 87 00 00 00  mov         byte ptr [eax+00000087h],cl
+  0080F7C3: 8B E5              mov         esp,ebp
+  0080F7C5: 5D                 pop         ebp
+  0080F7C6: C2 04 00           ret         4
+  0080F7C9: CC                 int         3
+  0080F7CA: CC                 int         3
+  0080F7CB: CC                 int         3
+  0080F7CC: CC                 int         3
+  0080F7CD: CC                 int         3
+  0080F7CE: CC                 int         3
+  0080F7CF: CC                 int         3
+  0080F7D0: 55                 push        ebp
+  0080F7D1: 8B EC              mov         ebp,esp
+  0080F7D3: 51                 push        ecx
+  0080F7D4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0080F7D7: B0 01              mov         al,1
+  0080F7D9: 8B E5              mov         esp,ebp
+  0080F7DB: 5D                 pop         ebp
+  0080F7DC: C2 08 00           ret         8
+  0080F7DF: CC                 int         3
+  0080F7E0: 55                 push        ebp
+  0080F7E1: 8B EC              mov         ebp,esp
+  0080F7E3: 51                 push        ecx
+  0080F7E4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  0080F7E7: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0080F7EA: E8 41 03 00 00     call        0080FB30
+  0080F7EF: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  0080F7F2: 83 E0 01           and         eax,1
+  0080F7F5: 74 0C              je          0080F803
+  0080F7F7: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  0080F7FA: 51                 push        ecx
+  0080F7FB: E8 30 18 BF FF     call        00401030
+  0080F800: 83 C4 04           add         esp,4
+  0080F803: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  0080F806: 8B E5              mov         esp,ebp
+  0080F808: 5D                 pop         ebp
+  0080F809: C2 04 00           ret         4
+  0080F80C: CC                 int         3
+  0080F80D: CC                 int         3
+  0080F80E: CC                 int         3
+  0080F80F: CC                 int         3
+  0080F810: 53                 push        ebx
+  0080F811: 8B DC              mov         ebx,esp
+  0080F813: 83 EC 08           sub         esp,8
+  0080F816: 83 E4 F0           and         esp,0FFFFFFF0h
+  0080F819: 83 C4 04           add         esp,4
+  0080F81C: 55                 push        ebp
+  0080F81D: 8B 6B 04           mov         ebp,dword ptr [ebx+4]
+  0080F820: 89 6C 24 04        mov         dword ptr [esp+4],ebp
+  0080F824: 8B EC              mov         ebp,esp
+  0080F826: 6A FF              push        0FFFFFFFFh
+  0080F828: 68 9E 0B F1 00     push        0F10B9Eh
+  0080F82D: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  0080F833: 50                 push        eax
+  0080F834: 53                 push        ebx
+  0080F835: 83 EC 50           sub         esp,50h
+  0080F838: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  0080F83D: 33 C5              xor         eax,ebp
+  0080F83F: 89 45 EC           mov         dword ptr [ebp-14h],eax
+  0080F842: 50                 push        eax
+  0080F843: 8D 45 F4           lea         eax,[ebp-0Ch]
+  0080F846: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  0080F84C: 89 4D E8           mov         dword ptr [ebp-18h],ecx
+  0080F84F: 83 EC 0C           sub         esp,0Ch
+  0080F852: 8B C4              mov         eax,esp
+  0080F854: 8B 4B 24           mov         ecx,dword ptr [ebx+24h]
+  0080F857: 89 08              mov         dword ptr [eax],ecx
+  0080F859: 8B 53 28           mov         edx,dword ptr [ebx+28h]
+  0080F85C: 89 50 04           mov         dword ptr [eax+4],edx
+  0080F85F: 8B 4B 2C           mov         ecx,dword ptr [ebx+2Ch]
+  0080F862: 89 48 08           mov         dword ptr [eax+8],ecx
+  0080F865: 83 EC 0C           sub         esp,0Ch
+  0080F868: 8B D4              mov         edx,esp
+  0080F86A: 8B 43 18           mov         eax,dword ptr [ebx+18h]
+  0080F86D: 89 02              mov         dword ptr [edx],eax
+  0080F86F: 8B 4B 1C           mov         ecx,dword ptr [ebx+1Ch]
+  0080F872: 89 4A 04           mov         dword ptr [edx+4],ecx
+  0080F875: 8B 43 20           mov         eax,dword ptr [ebx+20h]
+  0080F878: 89 42 08           mov         dword ptr [edx+8],eax
+  0080F87B: 8B 4B 14           mov         ecx,dword ptr [ebx+14h]
+  0080F87E: 51                 push        ecx
+  0080F87F: 8B 53 10           mov         edx,dword ptr [ebx+10h]
+  0080F882: 52                 push        edx
+  0080F883: 8B 43 0C           mov         eax,dword ptr [ebx+0Ch]
+  0080F886: 50                 push        eax
+  0080F887: 8B 4B 08           mov         ecx,dword ptr [ebx+8]
+  0080F88A: 51                 push        ecx
+  0080F88B: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F88E: E8 6D E4 00 00     call        0081DD00
+  0080F893: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  0080F89A: 8B 55 E8           mov         edx,dword ptr [ebp-18h]
+  0080F89D: C7 02 54 A5 07 01  mov         dword ptr [edx],107A554h
+  0080F8A3: 8B 45 E8           mov         eax,dword ptr [ebp-18h]
+  0080F8A6: C7 40 18 48 A5 07  mov         dword ptr [eax+18h],107A548h
+            01
+  0080F8AD: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F8B0: 81 C1 B4 00 00 00  add         ecx,0B4h
+  0080F8B6: E8 95 A9 C0 FF     call        0041A250
+  0080F8BB: C6 45 FC 01        mov         byte ptr [ebp-4],1
+  0080F8BF: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F8C2: E8 39 DB CE FF     call        004FD400
+  0080F8C7: 8B C8              mov         ecx,eax
+  0080F8C9: E8 02 13 1A 00     call        009B0BD0
+  0080F8CE: B9 F8 16 1D 01     mov         ecx,11D16F8h
+  0080F8D3: DD 5D E0           fstp        qword ptr [ebp-20h]
+  0080F8D6: E8 45 45 BF FF     call        00403E20
+  0080F8DB: D9 00              fld         dword ptr [eax]
+  0080F8DD: DC 4D E0           fmul        qword ptr [ebp-20h]
+  0080F8E0: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F8E3: D9 99 88 00 00 00  fstp        dword ptr [ecx+00000088h]
+  0080F8E9: 8B 55 E8           mov         edx,dword ptr [ebp-18h]
+  0080F8EC: C7 82 AC 00 00 00  mov         dword ptr [edx+000000ACh],0
+            00 00 00 00
+  0080F8F6: 8B 45 E8           mov         eax,dword ptr [ebp-18h]
+  0080F8F9: D9 EE              fldz
+  0080F8FB: D9 98 A8 00 00 00  fstp        dword ptr [eax+000000A8h]
+  0080F901: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F904: D9 E8              fld1
+  0080F906: D9 99 B0 00 00 00  fstp        dword ptr [ecx+000000B0h]
+  0080F90C: 8B 55 E8           mov         edx,dword ptr [ebp-18h]
+  0080F90F: C7 82 C0 00 00 00  mov         dword ptr [edx+000000C0h],0
+            00 00 00 00
+  0080F919: 83 7B 30 00        cmp         dword ptr [ebx+30h],0
+  0080F91D: 74 0E              je          0080F92D
+  0080F91F: 8B 43 30           mov         eax,dword ptr [ebx+30h]
+  0080F922: 50                 push        eax
+  0080F923: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F926: E8 45 16 D6 FF     call        00570F70
+  0080F92B: EB 0A              jmp         0080F937
+  0080F92D: 6A 00              push        0
+  0080F92F: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F932: E8 39 EC 00 00     call        0081E570
+  0080F937: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F93A: E8 B1 03 00 00     call        0080FCF0
+  0080F93F: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F942: E8 69 05 00 00     call        0080FEB0
+  0080F947: 51                 push        ecx
+  0080F948: D9 EE              fldz
+  0080F94A: D9 1C 24           fstp        dword ptr [esp]
+  0080F94D: 51                 push        ecx
+  0080F94E: D9 EE              fldz
+  0080F950: D9 1C 24           fstp        dword ptr [esp]
+  0080F953: 51                 push        ecx
+  0080F954: D9 EE              fldz
+  0080F956: D9 1C 24           fstp        dword ptr [esp]
+  0080F959: D9 05 10 A5 07 01  fld         dword ptr ds:[0107A510h]
+  0080F95F: D9 E0              fchs
+  0080F961: 51                 push        ecx
+  0080F962: D9 1C 24           fstp        dword ptr [esp]
+  0080F965: 8D 4D D0           lea         ecx,[ebp-30h]
+  0080F968: E8 33 39 D4 FF     call        005532A0
+  0080F96D: 8D 4D D0           lea         ecx,[ebp-30h]
+  0080F970: 51                 push        ecx
+  0080F971: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F974: E8 57 0D 12 00     call        009306D0
+  0080F979: 8B C8              mov         ecx,eax
+  0080F97B: E8 80 01 00 00     call        0080FB00
+  0080F980: 6A 00              push        0
+  0080F982: 8B 55 E8           mov         edx,dword ptr [ebp-18h]
+  0080F985: 52                 push        edx
+  0080F986: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  0080F989: E8 A2 75 0C 00     call        008D6F30
+  0080F98E: 8B C8              mov         ecx,eax
+
+  Summary
+
+         200 .text

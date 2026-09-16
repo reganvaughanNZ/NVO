@@ -1,0 +1,160 @@
+{
+  "log_sha256": "5235b89c05faa4914ee64259a89ac0e312d55d8424a79dc8ded1b67f2aa02536",
+  "log_bytes": 45400,
+  "log_lines": 183,
+  "log_source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\NVOCombatCore.log",
+  "archive": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3c2\\captures\\2026-09-15-3C2-5235b89c05fa",
+  "comparisons": [
+    {
+      "session": 1,
+      "lifetime": 1,
+      "timestep_s": 0.0160000008,
+      "intended_world": [
+        863.919259,
+        -382.393628,
+        -49.5950389
+      ],
+      "actual_world": [
+        863.921875,
+        -382.395386,
+        -49.5078125
+      ],
+      "local_input_reconstructed": [
+        2.9648895747413917e-06,
+        946.0660828142944,
+        -0.08739576979730401
+      ],
+      "local_z_discard_prediction": [
+        863.9234410718299,
+        -382.39547909614043,
+        -49.507762876392405
+      ],
+      "local_z_discard_residual": 0.0015696210912551965,
+      "full_vector_error": 0.0872832995,
+      "tolerance": 0.0565434507,
+      "hypothesis_only": true
+    },
+    {
+      "session": 1,
+      "lifetime": 2,
+      "timestep_s": 0.0310000014,
+      "intended_world": [
+        759.04607,
+        -326.093506,
+        -36.5675733
+      ],
+      "actual_world": [
+        759.0625,
+        -326.099121,
+        -36.2421875
+      ],
+      "local_input_reconstructed": [
+        8.035320036015037e-06,
+        826.9371149573852,
+        -0.326130072018735
+      ],
+      "local_z_discard_prediction": [
+        759.0592025256359,
+        -326.0991478594097,
+        -36.24175658761746
+      ],
+      "local_z_discard_residual": 0.003325619354531466,
+      "full_vector_error": 0.325848708,
+      "tolerance": 0.0548665131,
+      "hypothesis_only": true
+    },
+    {
+      "session": 2,
+      "lifetime": 3,
+      "timestep_s": 0.0310000014,
+      "intended_world": [
+        1652.58463,
+        -758.259117,
+        -129.075892
+      ],
+      "actual_world": [
+        1652.60938,
+        -758.269043,
+        -128.75
+      ],
+      "local_input_reconstructed": [
+        -2.0762246549566044e-05,
+        1822.8146716313097,
+        -0.3265074175453435
+      ],
+      "local_z_discard_prediction": [
+        1652.6055909615425,
+        -758.2687345653462,
+        -128.7502000685062
+      ],
+      "local_z_discard_residual": 0.0038068322495473485,
+      "full_vector_error": 0.326980743,
+      "tolerance": 0.074519298,
+      "hypothesis_only": true
+    },
+    {
+      "session": 2,
+      "lifetime": 4,
+      "timestep_s": 0.0160000008,
+      "intended_world": [
+        391.873242,
+        -175.601946,
+        -22.8034983
+      ],
+      "actual_world": [
+        391.875,
+        -175.60376,
+        -22.7167969
+      ],
+      "local_input_reconstructed": [
+        -6.581424486284959e-06,
+        430.02403787851705,
+        -0.08726941765491247
+      ],
+      "local_z_discard_prediction": [
+        391.87744899752806,
+        -175.603831193741,
+        -22.716350732769556
+      ],
+      "local_z_discard_residual": 0.002490325809756368,
+      "full_vector_error": 0.0867382368,
+      "tolerance": 0.0471304887,
+      "hypothesis_only": true
+    }
+  ],
+  "bootstrap": {
+    "found": false,
+    "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\NVO.esm",
+    "plugin_sha256": "2bb53410287c1c409a0bbb9b51ef38bf14bba2a4e3376f23b5cfc9f73fc0028d"
+  },
+  "lifecycle": [
+    "LIFECYCLE post_load_plugins",
+    "LIFECYCLE post_post_load_plugins",
+    "LIFECYCLE deferred_init",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=1",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=2",
+    "LIFECYCLE exit_game"
+  ],
+  "summaries": [
+    "SUMMARY session=1 reason=pre_load_game rows=10 create=2 impact=2 destroy=2 hit_notice=2 weapon_notice=2 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0",
+    "CURRENT_HIT_SUMMARY session=1 reason=pre_load_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified",
+    "PHYSICS_SUMMARY session=1 reason=pre_load_game accepted=2 applied_steps=2 rejected=2 overflow=0 open=0 damage_replacement=0",
+    "PHYSICS_ROUTE_SUMMARY session=1 reason=pre_load_game move_entries_all=11 move_untracked=0 accounting_entries_all=11 accounting_untracked=0 baselines_verified=2 applied_verified=0 mismatches=2 accounting_unpaired=0 lives_without_update=0",
+    "FLIGHT_TIMING_SUMMARY session=1 reason=pre_load_game accepted=2 steps_logged=13 invalid=0 retired_during_update=0 other_thread_steps=13 overlap_lifetimes=0 thread_changes=0 nesting_limit=0 open=0 timing_writes=0 damage_writes=0",
+    "FLIGHT_PREVIEW_SUMMARY session=1 reason=pre_load_game seen=2 matched=2 skipped=0 read_failures=0 identity_mismatches=0 create_rows=2 impact_rows=2 destroy_rows=2 open_samples=0 preview_writes=0 damage_writes=0",
+    "DAMAGE_EVENT_SUMMARY session=1 reason=pre_load_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified",
+    "SUMMARY session=2 reason=exit_game rows=10 create=2 impact=2 destroy=2 hit_notice=2 weapon_notice=2 blast=0 unmatched=0 reused_live_address=0 overflow=0 read_failures=0 open_lifetimes=0",
+    "CURRENT_HIT_SUMMARY session=2 reason=exit_game contexts=0 invalid_contexts=0 linked_lifetimes=0 known_ammo=0 damage_applications=unverified",
+    "PHYSICS_SUMMARY session=2 reason=exit_game accepted=2 applied_steps=2 rejected=2 overflow=0 open=0 damage_replacement=0",
+    "PHYSICS_ROUTE_SUMMARY session=2 reason=exit_game move_entries_all=15 move_untracked=0 accounting_entries_all=15 accounting_untracked=0 baselines_verified=2 applied_verified=0 mismatches=2 accounting_unpaired=0 lives_without_update=0",
+    "FLIGHT_TIMING_SUMMARY session=2 reason=exit_game accepted=2 steps_logged=17 invalid=0 retired_during_update=0 other_thread_steps=17 overlap_lifetimes=0 thread_changes=0 nesting_limit=0 open=0 timing_writes=0 damage_writes=0",
+    "FLIGHT_PREVIEW_SUMMARY session=2 reason=exit_game seen=2 matched=2 skipped=0 read_failures=0 identity_mismatches=0 create_rows=2 impact_rows=2 destroy_rows=2 open_samples=0 preview_writes=0 damage_writes=0",
+    "DAMAGE_EVENT_SUMMARY session=2 reason=exit_game hit_callbacks=0 hit_rows=0 health_callbacks=0 health_rows=0 invalid=0 damage_replacement=0 damage_applications=unverified"
+  ],
+  "game_mutations": false,
+  "gameplay_tests": false
+}

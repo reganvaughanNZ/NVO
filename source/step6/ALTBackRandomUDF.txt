@@ -1,0 +1,16 @@
+scn ALTBackRandomUDF
+
+int iMax
+
+begin Function {}
+    iMax = ListGetCount ALTBackList
+    ALTBackground = Rand 1, iMax
+
+    if eval(GetINIFloat "All:bNoRandomDLC" "ALTStartConfig.ini")
+        while ALTBackground > 54 && ALTBackground < 59
+            ALTBackground = Rand 1, iMax
+        loop
+    endif
+
+    call ListGetNthForm ALTBackUDFList ALTBackground
+end

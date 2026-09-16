@@ -1,0 +1,34 @@
+[
+  {
+    "plugin": "NVO.esm",
+    "type": "SCPT",
+    "form": "0B0074CA",
+    "flags": "00000000",
+    "EDID": "ALTRichKidHit",
+    "source": "scn\tALTRichKidHit\r\n\r\nref rTarget\r\nref rAttacker\r\nfloat iCaps\r\n\r\n\r\nbegin Function {rTarget, rAttacker}\r\n\t\r\n\tiCaps = player.getitemcount caps001\r\n\tiCaps *= 0.001\r\n\tiCaps = Floor iCaps\r\n\t;print $iCaps\r\n\t;print $rTarget.getav health\r\n\tif rTarget.GetDead\r\n\t\t;print \"dead\"\r\n\t\treturn\r\n\telseif iCaps > rTarget.getav health\r\n\t\trTarget.kill rAttacker\r\n\t\t;print \"kill\"\r\n\telse\r\n\t\trTarget.damageav health iCaps\r\n\t\t;print \"damage\"\r\n\tendif\r\n\t;print \"test\"\r\n\r\nend"
+  },
+  {
+    "plugin": "NVO.esm",
+    "type": "SCPT",
+    "form": "0B01228A",
+    "flags": "00000000",
+    "EDID": "ALTBackPilotUDF",
+    "source": "scn ALTBackPilotUDF\r\n\r\nref rRef\r\n\r\nbegin Function {}\r\n\tALTStartQ.iWealth = 0\r\n\tALTStartQ.rMarker = ALTPilotMarker\r\n\tPlayer.additemalt ArmorRecon 1 55 1 1\r\n\tPlayer.additemalt ArmorReconHelmet 1 40 1 1\r\n\tALTQ.sVeronicLoc = \"Searchlight.\"\r\n\ttapcontrol 8\r\n\tALTVertiSuppliesRef.enable\r\n\trRef = StringtoRef \"FalloutNV.esm:15461A\"\r\n\tIf isformvalid rRef\r\n\t\tshowmap rRef\r\n\tEndIf\r\n\tPlayer.cripplelimb 4\r\n\tPlayer.cripplelimb 3\r\n\tPlayer.addperk powerarmortraining\r\n\t\r\n\tEval Player.damageav health ((Player.getav health) * 0.7)\r\n\tALTQ.sMajorKnight = \"Traveler.\"\r\nend"
+  },
+  {
+    "plugin": "NVO.esm",
+    "type": "SCPT",
+    "form": "0B012296",
+    "flags": "00000000",
+    "EDID": "ALTBackChildofAtomUDF",
+    "source": "scn ALTBackChildofAtomUDF\r\n\r\nbegin Function {}\r\n\tALTStartQ.iWealth = 1\r\n\tALTStartQ.rMarker = ALTChildofAtomMarker\r\n\tALTQ.sVeronicLoc = \"The East Coast.\"\r\n\tPlayer.additemalt OutfitWasteland03 1 55 1 1\r\n\tPlayer.addperk RadChild \r\n\tPlayer.modav RadiationRads 75\r\n\tPlayer.addspellNS ALTAtomEffect\r\n\tPlayer.additem IrradiatedWaterUnpurified 3\r\n\tALTQ.sMajorKnight = \"Missionary.\"\r\nend"
+  },
+  {
+    "plugin": "NVO.esm",
+    "type": "SCPT",
+    "form": "000B7E84",
+    "flags": "00000000",
+    "EDID": "VNovacSniperVictimSCRIPT",
+    "source": "ScriptName VNovacSniperVictimSCRIPT\r\n\r\nfloat fSecondsPassed\r\nfloat fTimeDelta\r\n\r\nbegin GameMode\r\n\t; if we are currently accused.\r\n\tif ((GetIsID MannyVargas && VFreeformNovac.nAccusedIndex == 2) || (GetIsID NobarkNoonan && VFreeformNovac.nAccusedIndex == 3) || (GetIsID DustyMcBride && VFreeformNovac.nAccusedIndex == 5) || (GetIsID AliceMcBride && VFreeformNovac.nAccusedIndex == 6) || (GetIsID RangerAndy && VFreeformNovac.nAccusedIndex == 7))\r\n\t\tif (VFreeformNovac.bTargetIsWaiting == 1 && CraigBooneREF.bGotRevenge == 0)\r\n\t\t\tset fTimeDelta to GetSecondsPassed\r\n\t\t\tif (fSecondsPassed < 10.0)\r\n\t\t\t\tset fSecondsPassed to fSecondsPassed + fTimeDelta\r\n\t\t\telseif (SniperVictimTriggerREF.bPlayerInZone && SniperVictimTriggerREF.bVictimInZone && player.GetEquipped HatNCRBoonesBeret && CraigBooneREF.bGotRevenge == 0 && CraigBooneREF.bInNest)\r\n\t\t\t\tCraigBooneREF.RemoveScriptPackage;\r\n\t\t\t\tSetObjectiveCompleted VMS53 30 1;\r\n\t\t\t\tSetObjectiveDisplayed VMS53 40 1;\r\n\t\t\t\tKillActor CraigBooneREF, 1, 2\r\n\t\t\t\tset CraigBooneREF.bGotRevenge to 1;\r\n\t\t\t\tset VFreeformNovac.nSnipersRevengeStage to 20;\r\n\t\t\t\tCraigBooneREF.ResetAI;\r\n\t\t\telse\r\n\t\t\t\tset VFreeformNovac.bTargetIsWaiting to 0\r\n\t\t\t\tset VFreeformNovac.nAccusedIndex to 0\t; invalidate the target\r\n\t\t\t\tset fSecondsPassed to 0.0\r\n\t\t\t\tRemoveScriptPackage;     Turn off the travel package\r\n\t\t\t\tEVP\r\n\t\t\t\tSetActorValue SpeedMult 100;\t\trestore normal movement speed\r\n\t\t\tendif\r\n\t\tendif\r\n\tendif\r\nend ;GameMode\r\n\r\nbegin OnHit CraigBooneREF\r\n\tif (GetObjectiveCompleted VMS53 30 == 0)\r\n\t\tSetObjectiveCompleted VMS53 30 1;\r\n\t\tSetObjectiveDisplayed VMS53 40 1;\r\n\t\tKillActor CraigBooneREF, 1, 2\r\n\t\tset CraigBooneREF.bGotRevenge to 1;\r\n\t\tset VFreeformNovac.nSnipersRevengeStage to 20;\r\n\t\tCraigBooneREF.ResetAI;\r\n\tendif\r\nend ;OnHit\r\n\r\nBEGIN OnHit player\r\n\tsetav SpeedMult 100;\tReset speed mult if player attacks.\r\nEND\r\n\r\nbegin OnDeath CraigBooneREF\r\n;\tset VFreeformNovac.bBooneGotKill to 1;\r\n\r\nend ;OnDeath\r\n\r\nBEGIN OnDeath\r\n\r\n\tif(CraigBooneREF.bGotRevenge == 0)\r\n\t\tset VFreeformNovac.bTargetIsWaiting to 0;\r\n\t\tset VFreeformNovac.nAccusedIndex to 0;\r\n\t\tset fSecondsPassed to 0.0;\r\n\tendif\r\n\t\r\n\tif getquestcompleted VCG01\r\n\t\tif (GetIsID MannyVargas && GetObjectiveCompleted VMQ01 45 == 0)\r\n\t\t\tif(GetHasNote VNovacGreatKhansNote)\r\n\t\t\t\tSetObjectiveCompleted VMQ01 45 1;\r\n\t\t\t\tSetObjectiveDisplayed VMQ01 50 1;\r\n\t\t\telse\r\n\t\t\t\tSetObjectiveDisplayed VMQ01 45 0;\r\n\t\t\t\tSetObjectiveDisplayed VMQ01 46 1;\r\n\t\t\tendif\r\n\t\tendif\r\n\tendif\r\n\r\n\t; if all victims are killed fail the quest.\r\n\tif (GetObjectiveCompleted VMS53 30 == 0)\r\n\t\tif (NobarkREF.GetDead && DustyMcBrideREF.GetDead && AliceMcBrideREF.GetDead && MannyVargasREF.GetDead && JeannieMayCrawfordREF.GetDead && RangerAndyREF.GetDead && CliffBriscoeREF.GetDead)\r\n\t\t\tSetStage VMS53 255\r\n\t\tendif\r\n\tendif\r\nEND"
+  }
+]

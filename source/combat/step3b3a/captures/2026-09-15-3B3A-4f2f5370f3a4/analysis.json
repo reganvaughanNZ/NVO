@@ -1,0 +1,682 @@
+{
+  "capture": "source\\combat\\step3b3a\\captures\\2026-09-15-3B3A-4f2f5370f3a4\\NVOCombatCore.log",
+  "sha256": "4f2f5370f3a4a170be395bd38da18c001083d63a59ed6d6bd7aae6ee1a994c9e",
+  "bytes": 82112,
+  "last_write_local": "2026-09-15T11:33:00.103235",
+  "header": "NVOCombatCore 0.3.4 | phase=3B3A | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | flight_writes=0 | isolated_record_flight_pilot=1 | hit_hooks=0 | damage_replacement=0",
+  "lifecycle": [
+    "LIFECYCLE post_load_plugins",
+    "LIFECYCLE post_post_load_plugins",
+    "LIFECYCLE deferred_init",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=1",
+    "LIFECYCLE pre_load_game",
+    "LIFECYCLE load_game",
+    "LIFECYCLE post_load_game success=1 session=2",
+    "LIFECYCLE exit_game"
+  ],
+  "rows_by_kind": {
+    "NVOCombatCore": 1,
+    "QUERY": 1,
+    "LOAD": 1,
+    "LIFECYCLE": 10,
+    "CURRENT_HIT_READY": 1,
+    "CAPTURE": 2,
+    "FLIGHT_OWNER_AUDIT": 2,
+    "FLIGHT_PREVIEW_READY": 2,
+    "FLIGHT_PROFILE": 8,
+    "FLIGHT_PILOT_KIT": 2,
+    "FLIGHT_TIMING_READY": 2,
+    "DAMAGE_EVENTS_READY": 2,
+    "EVENT": 50,
+    "FLIGHT_TIMING_TRACK": 10,
+    "FLIGHT_PREVIEW": 10,
+    "FLIGHT_TIMING_THREAD": 10,
+    "FLIGHT_STEP": 71,
+    "FLIGHT_STEP_STATE": 71,
+    "FLIGHT_TRAVEL": 20,
+    "FLIGHT_TIMING_SHOT": 10,
+    "SUMMARY": 2,
+    "CURRENT_HIT_SUMMARY": 2,
+    "FLIGHT_TIMING_SUMMARY": 2,
+    "FLIGHT_PREVIEW_SUMMARY": 2,
+    "DAMAGE_EVENT_SUMMARY": 2
+  },
+  "by_session": {
+    "1": {
+      "profiles": {
+        "0C000800": 1,
+        "0C000801": 1
+      },
+      "steps": 14,
+      "phases": {
+        "no_motion": 2,
+        "moving": 10,
+        "collision": 2
+      },
+      "timing_summary": [
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "accepted": "2",
+          "steps_logged": "14",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "14",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0"
+        }
+      ],
+      "lifecycle_summary": [
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "rows": "10",
+          "create": "2",
+          "impact": "2",
+          "destroy": "2",
+          "hit_notice": "2",
+          "weapon_notice": "2",
+          "blast": "0",
+          "unmatched": "0",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "0"
+        }
+      ],
+      "preview_summary": [
+        {
+          "session": "1",
+          "reason": "pre_load_game",
+          "seen": "2",
+          "matched": "2",
+          "skipped": "0",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "2",
+          "impact_rows": "2",
+          "destroy_rows": "2",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0"
+        }
+      ]
+    },
+    "2": {
+      "profiles": {
+        "0C000801": 4,
+        "0C000800": 4
+      },
+      "steps": 57,
+      "phases": {
+        "no_motion": 8,
+        "moving": 41,
+        "collision": 8
+      },
+      "timing_summary": [
+        {
+          "session": "2",
+          "reason": "exit_game",
+          "accepted": "8",
+          "steps_logged": "57",
+          "invalid": "0",
+          "retired_during_update": "0",
+          "other_thread_steps": "57",
+          "overlap_lifetimes": "0",
+          "thread_changes": "0",
+          "nesting_limit": "0",
+          "open": "0",
+          "flight_writes": "0",
+          "damage_writes": "0"
+        }
+      ],
+      "lifecycle_summary": [
+        {
+          "session": "2",
+          "reason": "exit_game",
+          "rows": "40",
+          "create": "8",
+          "impact": "8",
+          "destroy": "8",
+          "hit_notice": "8",
+          "weapon_notice": "8",
+          "blast": "0",
+          "unmatched": "0",
+          "reused_live_address": "0",
+          "overflow": "0",
+          "read_failures": "0",
+          "open_lifetimes": "0"
+        }
+      ],
+      "preview_summary": [
+        {
+          "session": "2",
+          "reason": "exit_game",
+          "seen": "8",
+          "matched": "8",
+          "skipped": "0",
+          "read_failures": "0",
+          "identity_mismatches": "0",
+          "create_rows": "8",
+          "impact_rows": "8",
+          "destroy_rows": "8",
+          "open_samples": "0",
+          "flight_writes": "0",
+          "damage_writes": "0"
+        }
+      ]
+    }
+  },
+  "by_weapon": {
+    "0C000800": {
+      "lifetimes": 5,
+      "valid_moving_updates": 36,
+      "ratio_min": 0.999993634,
+      "ratio_max": 1.00001012,
+      "ratio_mean": 1.0000012640555556,
+      "max_error_percent": 0.001012000000000235,
+      "step_speed_min": 27097.4642,
+      "step_speed_max": 27097.911
+    },
+    "0C000801": {
+      "lifetimes": 5,
+      "valid_moving_updates": 15,
+      "ratio_min": 0.999998048,
+      "ratio_max": 1.00000237,
+      "ratio_mean": 1.0000000594666667,
+      "max_error_percent": 0.0002370000000029293,
+      "step_speed_min": 59483.8526,
+      "step_speed_max": 59484.11
+    }
+  },
+  "total_steps": 71,
+  "valid_moving_steps": 51,
+  "all_steps_have_state": true,
+  "update_threads": [
+    "21028"
+  ],
+  "init_threads": [
+    "9436"
+  ],
+  "impacts_in_window_counts": {
+    "0": 71
+  },
+  "anomalies": [],
+  "lifetimes": [
+    {
+      "session": "1",
+      "lifetime": "1",
+      "weapon": "0C000800",
+      "step_count": 9,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0310000014,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "1",
+          "lifetime": "1",
+          "projectile": "FF00196B",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "9",
+          "moving": "7",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "1",
+      "lifetime": "2",
+      "weapon": "0C000801",
+      "step_count": 5,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0310000014,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "1",
+          "lifetime": "2",
+          "projectile": "FF00196B",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "3",
+      "weapon": "0C000801",
+      "step_count": 5,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0320000015,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "3",
+          "projectile": "FF001737",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "4",
+      "weapon": "0C000801",
+      "step_count": 5,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0310000014,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "4",
+          "projectile": "FF001737",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "5",
+      "weapon": "0C000801",
+      "step_count": 5,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0310000014,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "5",
+          "projectile": "FF001737",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "6",
+      "weapon": "0C000801",
+      "step_count": 5,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0310000014,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "6",
+          "projectile": "FF001737",
+          "weapon": "0C000801",
+          "reason": "destroy",
+          "steps": "5",
+          "moving": "3",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "7",
+      "weapon": "0C000800",
+      "step_count": 9,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0310000014,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "7",
+          "projectile": "FF00185B",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "9",
+          "moving": "7",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "8",
+      "weapon": "0C000800",
+      "step_count": 10,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0470000021,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "8",
+          "projectile": "FF00185B",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "10",
+          "moving": "8",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "9",
+      "weapon": "0C000800",
+      "step_count": 9,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0470000021,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "9",
+          "projectile": "FF00185B",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "9",
+          "moving": "7",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    },
+    {
+      "session": "2",
+      "lifetime": "10",
+      "weapon": "0C000800",
+      "step_count": 9,
+      "step_numbers_sequential": true,
+      "phases": [
+        "no_motion",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "moving",
+        "collision"
+      ],
+      "dt_first": 0.0310000014,
+      "life_constant_inside_all": true,
+      "gap_distance_always_zero": true,
+      "events": [
+        "CREATE",
+        "IMPACT",
+        "DESTROY"
+      ],
+      "targets": [
+        "00106B5E"
+      ],
+      "timing_summary": [
+        {
+          "session": "2",
+          "lifetime": "10",
+          "projectile": "FF00185B",
+          "weapon": "0C000800",
+          "reason": "destroy",
+          "steps": "9",
+          "moving": "7",
+          "no_motion": "1",
+          "collision": "1",
+          "invalid": "0",
+          "impact_callbacks": "1",
+          "capped": "0",
+          "pending_update": "0",
+          "blocked": "0",
+          "last_update_thread": "21028"
+        }
+      ]
+    }
+  ],
+  "review_checks": {
+    "speed_arithmetic_recomputed": true,
+    "valid_moving_position_distance_agree_relative_tolerance": 1e-06,
+    "all_lifetimes_complete": true,
+    "all_lifetimes_start_no_motion_end_collision": true,
+    "all_shots_no_invalid_cap_pending_or_blocked": true,
+    "status": "accepted for bounded timing and ordinary completed-shot reload checkpoint"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "packet": "3P",
+  "version": "0.3.21",
+  "plugin_version": 321,
+  "status": "Installed; targeted player runtime checkpoint passed; awaiting capacity-packet approval",
+  "installed_by_assistant": true,
+  "gameplay_tested": true,
+  "damage_replacement": false,
+  "flight_reservation_enabled": false,
+  "build_output": "out\\build-26304-2770",
+  "installed_files": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "f4b4c03af5c8631dbb9b64f3b396b4885a64c4efa46fc3a2b6f5ae1b7cb39445"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "8baa826d149da8f24f7c8598eba544230c7ec716536028184c7e74f9a926fdf7"
+    }
+  ],
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-3P-20260916-172311-aa84e6ec",
+  "runtime_validation_scope": "14 exact creation/return pairs, player firing with AI off, one reload; not stress or integrated flight validation"
+}

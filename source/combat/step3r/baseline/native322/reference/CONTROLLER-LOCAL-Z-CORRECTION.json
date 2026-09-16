@@ -1,0 +1,21 @@
+{
+  "packet": "3C5",
+  "version": 310,
+  "source_capture": "source\\combat\\step3c4\\captures\\2026-09-15-3C4-7e3ad3449a2c\\controller-00C73170.bin",
+  "sha256": "20a927ae6742fc61e6cdf8f0a52c945051a7a33cf743c1aa7c7a151627e0beac",
+  "prefix_bytes": 2048,
+  "prefix_fnv64": "0193951146A4412C",
+  "hook_site": "00C73517",
+  "original_bytes": "D9EED95C2458",
+  "patch": "CALL bridge + NOP",
+  "continuation": "00C7351D",
+  "caller_return": "0092FFEF (owned virtual-dispatch CALL)",
+  "frame": "C73170 EBP -> generic movement EBP; [EBP+8] == paired request",
+  "stack": "pre-patch ESP == align_down(C73170 EBP,16) - B0; local XYZ at ESP+50",
+  "fallback": "FLDZ; FSTP [bridge entry ESP+5C]; RET through NOP",
+  "correction": "Skip this reset only for a verified, already-copied private applied vector",
+  "no_new_engine_calls": true,
+  "damage_replacement": false,
+  "runtime_accepted": false,
+  "note": "Prefix only, not whole function. Engine bytes are not shipped. Branch and actual flight require user validation."
+}

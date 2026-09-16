@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NVO · Packet 3L — Damage scaling</title>
+<style>body{margin:48px auto;padding:0 24px;max-width:860px;background:#101b18;color:#e2e8de;font:18px/1.65 system-ui}h1{font-size:34px}h2{font-size:23px;color:#d3e2ab}a{color:#c8e8b3}strong{color:#eff5d9}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:10px;border-bottom:1px solid #46564c}.note{border-left:3px solid #acc286;padding:12px 20px;background:#172720}small{color:#b7c3b7}</style>
+<p><small>NVO COMBAT · PACKET 3L · READ-ONLY AUDIT</small></p>
+<h1>The existing ×2 scaling is accounted for</h1>
+<p>The current loaded difficulty is <strong>Very Easy</strong>: health damage uses <strong>×2 against non-player targets</strong> and <strong>×0.5 against the player</strong>. The engine applies it before the health request we log.</p>
+<table><tr><th>Completed test</th><th>Earlier hit value</th><th>Health lost</th></tr><tr><td>Hunting rifle</td><td>29.5 × 2</td><td>59</td></tr><tr><td>Punch after reload</td><td>0.45 × 2</td><td>0.90</td></tr></table>
+<p>This matches your completed test. The historical test did not capture difficulty at hit time; its cause is inferred from the matching current settings, code and arithmetic.</p>
+<div class="note"><strong>No installation, GECK work or repeat test.</strong> Native320 and the once-per-launch NVO banner remain installed. Your health settings, difficulty and flight configuration are unchanged. Damage replacement stays off.</div>
+<h2>Your difficulty proposal</h2>
+<p>We can make the ten health-damage multipliers 1.0 and use difficulty for NVO presets instead: supplies, believable enemy reactions/accuracy, and recovery/treatment forgiveness. Penetration and anatomical vulnerability would remain consistent. This is a proposal; no settings have been changed.</p>
+<h2>Next, with your approval</h2>
+<p><strong>3M: the disabled armour model’s inputs and damage handoff.</strong> Define ammunition mass and units, reliable impact information, unsupported-hit handling, and which system owns each modifier. Include difficulty and the Brahmin Baron extra damage path before enabling any replacement.</p>
+<p><a href="README.md">Full packet notes</a> · <a href="ENGINE-TRACE.md">Engine evidence</a> · <a href="RESULT.json">Verification receipt</a></p>
+<p><small>Reversal: none required. This packet only adds workspace evidence and notes. Do not install the captured binary/object files. The inspection game was closed without loading a save.</small></p></html>

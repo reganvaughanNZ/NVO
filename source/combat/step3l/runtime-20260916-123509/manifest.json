@@ -1,0 +1,181 @@
+{
+  "captured_at": "2026-09-16T12:35:09.4318482+12:00",
+  "pid": 4592,
+  "process_start_utc": "2026-09-16T00:34:06.9861076Z",
+  "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+  "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+  "settings": [
+    {
+      "name": "fAVDHealthLevelMult",
+      "actual_name": "fAVDHealthLevelMult",
+      "address": "011CDEA4",
+      "value": 0.1,
+      "object_bytes": "FCEBAc3MzD2cEQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fAVDNPCHealthLevelMult",
+      "actual_name": "fAVDNPCHealthLevelMult",
+      "address": "011CD908",
+      "value": 0.0,
+      "object_bytes": "FCEBAQAAAADsEQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fPCBaseHealthMult",
+      "actual_name": "fPCBaseHealthMult",
+      "address": "011D10BC",
+      "value": 1.0,
+      "object_bytes": "FCEBAQAAgD+cbQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDamageWeaponMult",
+      "actual_name": "fDamageWeaponMult",
+      "address": "011CE2C0",
+      "value": 1.0,
+      "object_bytes": "FCEBAQAAgD8YMQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPToPCVE",
+      "actual_name": "fDiffMultHPToPCVE",
+      "address": "011D0388",
+      "value": 0.5,
+      "object_bytes": "FCEBAQAAAD98iQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPToPCVH",
+      "actual_name": "fDiffMultHPToPCVH",
+      "address": "011CFEB8",
+      "value": 2.0,
+      "object_bytes": "FCEBAQAAAEDMiQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPByPCE",
+      "actual_name": "fDiffMultHPByPCE",
+      "address": "011D0D8C",
+      "value": 1.5,
+      "object_bytes": "FCEBAQAAwD/0iQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPByPCH",
+      "actual_name": "fDiffMultHPByPCH",
+      "address": "011D0E58",
+      "value": 0.75,
+      "object_bytes": "FCEBAQAAQD8cigUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPByPCN",
+      "actual_name": "fDiffMultHPByPCN",
+      "address": "011D0784",
+      "value": 1.0,
+      "object_bytes": "FCEBAQAAgD8IigUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fAVDHealthEnduranceMult",
+      "actual_name": "fAVDHealthEnduranceMult",
+      "address": "011CD270",
+      "value": 5.0,
+      "object_bytes": "FCEBAQAAoEBoEQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fAVDHealthEnduranceOffset",
+      "actual_name": "fAVDHealthEnduranceOffset",
+      "address": "011CD120",
+      "value": -1.0,
+      "object_bytes": "FCEBAQAAgL+AEQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPByPCVE",
+      "actual_name": "fDiffMultHPByPCVE",
+      "address": "011D0C6C",
+      "value": 2.0,
+      "object_bytes": "FCEBAQAAAEDgiQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPByPCVH",
+      "actual_name": "fDiffMultHPByPCVH",
+      "address": "011D01A4",
+      "value": 0.5,
+      "object_bytes": "FCEBAQAAAD8wigUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fAVDNPCHealthEnduranceOffset",
+      "actual_name": "fAVDNPCHealthEnduranceOffset",
+      "address": "011CD27C",
+      "value": -1.0,
+      "object_bytes": "FCEBAQAAgL/MEQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPToPCE",
+      "actual_name": "fDiffMultHPToPCE",
+      "address": "011D0838",
+      "value": 0.75,
+      "object_bytes": "FCEBAQAAQD+QiQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPToPCH",
+      "actual_name": "fDiffMultHPToPCH",
+      "address": "011D052C",
+      "value": 1.5,
+      "object_bytes": "FCEBAQAAwD+4iQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDiffMultHPToPCN",
+      "actual_name": "fDiffMultHPToPCN",
+      "address": "011D12A8",
+      "value": 1.0,
+      "object_bytes": "FCEBAQAAgD+kiQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fAVDNPCHealthEnduranceMult",
+      "actual_name": "fAVDNPCHealthEnduranceMult",
+      "address": "011CD544",
+      "value": 5.0,
+      "object_bytes": "FCEBAQAAoECwEQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "fDifficultyDamageMultiplier",
+      "actual_name": "fDifficultyDamageMultiplier",
+      "address": "011D0168",
+      "value": 10.0,
+      "object_bytes": "FCEBAQAAIEFoeQUB",
+      "scope": "main_menu_current_value"
+    },
+    {
+      "name": "iDifficulty",
+      "actual_name": "iDifficulty:GamePlay",
+      "address": "011E0940",
+      "value": 0,
+      "object_bytes": "OCcCAQAAAADwtQgB",
+      "scope": "main_menu_current_value"
+    }
+  ],
+  "files": [
+    {
+      "filename": "hitme_tail_and_health_apply-0089BF60.bin",
+      "bytes": 8704,
+      "name": "hitme_tail_and_health_apply",
+      "sha256": "3e1f757cf838f959bc358f87383b076679fd7f198fbcafc9eb99cd7bd492c2b1",
+      "address": "0089BF60"
+    }
+  ],
+  "code_stable_across_two_reads": true,
+  "process_write_or_injection": false,
+  "game_launched": false
+}

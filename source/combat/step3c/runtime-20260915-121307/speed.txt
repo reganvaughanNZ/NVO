@@ -1,0 +1,216 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c\runtime-20260915-121307\speed.obj
+
+File Type: COFF OBJECT
+
+  009669C0: 55                 push        ebp
+  009669C1: 8B EC              mov         ebp,esp
+  009669C3: 51                 push        ecx
+  009669C4: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  009669C7: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  009669CA: 51                 push        ecx
+  009669CB: D9 80 D0 00 00 00  fld         dword ptr [eax+000000D0h]
+  009669D1: D9 1C 24           fstp        dword ptr [esp]
+  009669D4: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  009669D7: 51                 push        ecx
+  009669D8: D9 81 CC 00 00 00  fld         dword ptr [ecx+000000CCh]
+  009669DE: D9 1C 24           fstp        dword ptr [esp]
+  009669E1: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  009669E4: E8 F7 17 AB FF     call        004181E0
+  009669E9: 8B C8              mov         ecx,eax
+  009669EB: E8 90 85 D3 FF     call        0069EF80
+  009669F0: 51                 push        ecx
+  009669F1: D9 1C 24           fstp        dword ptr [esp]
+  009669F4: E8 57 D5 05 00     call        009C3F50
+  009669F9: 83 C4 0C           add         esp,0Ch
+  009669FC: 8B E5              mov         esp,ebp
+  009669FE: 5D                 pop         ebp
+  009669FF: C3                 ret
+  00966A00: 55                 push        ebp
+  00966A01: 8B EC              mov         ebp,esp
+  00966A03: 51                 push        ecx
+  00966A04: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00966A07: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00966A0A: D9 45 08           fld         dword ptr [ebp+8]
+  00966A0D: D9 98 D0 00 00 00  fstp        dword ptr [eax+000000D0h]
+  00966A13: 8B E5              mov         esp,ebp
+  00966A15: 5D                 pop         ebp
+  00966A16: C2 04 00           ret         4
+  00966A19: CC                 int         3
+  00966A1A: CC                 int         3
+  00966A1B: CC                 int         3
+  00966A1C: CC                 int         3
+  00966A1D: CC                 int         3
+  00966A1E: CC                 int         3
+  00966A1F: CC                 int         3
+  00966A20: 55                 push        ebp
+  00966A21: 8B EC              mov         ebp,esp
+  00966A23: 51                 push        ecx
+  00966A24: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00966A27: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00966A2A: D9 80 EC 00 00 00  fld         dword ptr [eax+000000ECh]
+  00966A30: 8B E5              mov         esp,ebp
+  00966A32: 5D                 pop         ebp
+  00966A33: C3                 ret
+  00966A34: CC                 int         3
+  00966A35: CC                 int         3
+  00966A36: CC                 int         3
+  00966A37: CC                 int         3
+  00966A38: CC                 int         3
+  00966A39: CC                 int         3
+  00966A3A: CC                 int         3
+  00966A3B: CC                 int         3
+  00966A3C: CC                 int         3
+  00966A3D: CC                 int         3
+  00966A3E: CC                 int         3
+  00966A3F: CC                 int         3
+  00966A40: 55                 push        ebp
+  00966A41: 8B EC              mov         ebp,esp
+  00966A43: D9 05 00 1C 1F 01  fld         dword ptr ds:[011F1C00h]
+  00966A49: 5D                 pop         ebp
+  00966A4A: C3                 ret
+  00966A4B: CC                 int         3
+  00966A4C: CC                 int         3
+  00966A4D: CC                 int         3
+  00966A4E: CC                 int         3
+  00966A4F: CC                 int         3
+  00966A50: 55                 push        ebp
+  00966A51: 8B EC              mov         ebp,esp
+  00966A53: 51                 push        ecx
+  00966A54: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00966A57: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00966A5A: 81 C1 E4 05 00 00  add         ecx,5E4h
+  00966A60: E8 1B 79 C4 FF     call        005AE380
+  00966A65: 8B E5              mov         esp,ebp
+  00966A67: 5D                 pop         ebp
+  00966A68: C3                 ret
+  00966A69: CC                 int         3
+  00966A6A: CC                 int         3
+  00966A6B: CC                 int         3
+  00966A6C: CC                 int         3
+  00966A6D: CC                 int         3
+  00966A6E: CC                 int         3
+  00966A6F: CC                 int         3
+  00966A70: 55                 push        ebp
+  00966A71: 8B EC              mov         ebp,esp
+  00966A73: 6A FF              push        0FFFFFFFFh
+  00966A75: 68 E8 86 F1 00     push        0F186E8h
+  00966A7A: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  00966A80: 50                 push        eax
+  00966A81: 83 EC 0C           sub         esp,0Ch
+  00966A84: A1 BC 16 1C 01     mov         eax,dword ptr ds:[011C16BCh]
+  00966A89: 33 C5              xor         eax,ebp
+  00966A8B: 50                 push        eax
+  00966A8C: 8D 45 F4           lea         eax,[ebp-0Ch]
+  00966A8F: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  00966A95: 89 4D E8           mov         dword ptr [ebp-18h],ecx
+  00966A98: 8D 4D EC           lea         ecx,[ebp-14h]
+  00966A9B: E8 10 CD A9 FF     call        004037B0
+  00966AA0: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  00966AA7: 83 7D 08 00        cmp         dword ptr [ebp+8],0
+  00966AAB: 75 21              jne         00966ACE
+  00966AAD: 68 00 B4 08 01     push        108B400h
+  00966AB2: E8 89 F3 C4 FF     call        005B5E40
+  00966AB7: 83 C4 04           add         esp,4
+  00966ABA: C7 45 FC FF FF FF  mov         dword ptr [ebp-4],0FFFFFFFFh
+            FF
+  00966AC1: 8D 4D EC           lea         ecx,[ebp-14h]
+  00966AC4: E8 07 CD A9 FF     call        004037D0
+  00966AC9: E9 9C 00 00 00     jmp         00966B6A
+  00966ACE: 8D 45 08           lea         eax,[ebp+8]
+  00966AD1: 50                 push        eax
+  00966AD2: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  00966AD5: 81 C1 E4 05 00 00  add         ecx,5E4h
+  00966ADB: E8 F0 FA C8 FF     call        005F65D0
+  00966AE0: 0F B6 C8           movzx       ecx,al
+  00966AE3: 85 C9              test        ecx,ecx
+  00966AE5: 75 4E              jne         00966B35
+  00966AE7: 8D 55 08           lea         edx,[ebp+8]
+  00966AEA: 52                 push        edx
+  00966AEB: 8B 4D E8           mov         ecx,dword ptr [ebp-18h]
+  00966AEE: 81 C1 E4 05 00 00  add         ecx,5E4h
+  00966AF4: E8 D7 78 C4 FF     call        005AE3D0
+  00966AF9: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  00966AFC: 83 C1 48           add         ecx,48h
+  00966AFF: E8 9C 22 AA FF     call        00408DA0
+  00966B04: 50                 push        eax
+  00966B05: B9 A0 3C 1D 01     mov         ecx,11D3CA0h
+  00966B0A: E8 E1 D2 A9 FF     call        00403DF0
+  00966B0F: 50                 push        eax
+  00966B10: 8D 45 EC           lea         eax,[ebp-14h]
+  00966B13: 50                 push        eax
+  00966B14: E8 47 04 AA FF     call        00406F60
+  00966B19: 83 C4 0C           add         esp,0Ch
+  00966B1C: 0F B6 4D 0C        movzx       ecx,byte ptr [ebp+0Ch]
+  00966B20: 85 C9              test        ecx,ecx
+  00966B22: 74 11              je          00966B35
+  00966B24: 8D 4D EC           lea         ecx,[ebp-14h]
+  00966B27: E8 24 29 BF FF     call        00559450
+  00966B2C: 50                 push        eax
+  00966B2D: E8 CE D0 D9 FF     call        00703C00
+  00966B32: 83 C4 04           add         esp,4
+  00966B35: 6A 00              push        0
+  00966B37: 51                 push        ecx
+  00966B38: D9 05 B4 A1 FE 0A  fld         dword ptr ds:[0AFEA1B4h]
+  00966B3E: D9 1C 24           fstp        dword ptr [esp]
+  00966B41: 68 D4 4D 08 01     push        1084DD4h
+  00966B46: 6A 00              push        0
+  00966B48: 6A 00              push        0
+  00966B4A: 8D 4D EC           lea         ecx,[ebp-14h]
+  00966B4D: E8 FE 28 BF FF     call        00559450
+  00966B52: 50                 push        eax
+  00966B53: E8 98 E7 D9 FF     call        007052F0
+  00966B58: 83 C4 18           add         esp,18h
+  00966B5B: C7 45 FC FF FF FF  mov         dword ptr [ebp-4],0FFFFFFFFh
+            FF
+  00966B62: 8D 4D EC           lea         ecx,[ebp-14h]
+  00966B65: E8 66 CC A9 FF     call        004037D0
+  00966B6A: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00966B6D: 64 89 0D 00 00 00  mov         dword ptr fs:[00000000h],ecx
+            00
+  00966B74: 59                 pop         ecx
+  00966B75: 8B E5              mov         esp,ebp
+  00966B77: 5D                 pop         ebp
+  00966B78: C2 08 00           ret         8
+  00966B7B: CC                 int         3
+  00966B7C: CC                 int         3
+  00966B7D: CC                 int         3
+  00966B7E: CC                 int         3
+  00966B7F: CC                 int         3
+  00966B80: 55                 push        ebp
+  00966B81: 8B EC              mov         ebp,esp
+  00966B83: 51                 push        ecx
+  00966B84: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00966B87: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  00966B8A: 50                 push        eax
+  00966B8B: E8 E0 D8 D9 FF     call        00704470
+  00966B90: 83 C4 04           add         esp,4
+  00966B93: 8D 4D 08           lea         ecx,[ebp+8]
+  00966B96: 51                 push        ecx
+  00966B97: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00966B9A: 81 C1 E4 05 00 00  add         ecx,5E4h
+  00966BA0: E8 8B E7 F9 FF     call        00905330
+  00966BA5: 8B E5              mov         esp,ebp
+  00966BA7: 5D                 pop         ebp
+  00966BA8: C2 04 00           ret         4
+  00966BAB: CC                 int         3
+  00966BAC: CC                 int         3
+  00966BAD: CC                 int         3
+  00966BAE: CC                 int         3
+  00966BAF: CC                 int         3
+  00966BB0: 55                 push        ebp
+  00966BB1: 8B EC              mov         ebp,esp
+  00966BB3: 83 EC 0C           sub         esp,0Ch
+  00966BB6: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  00966BB9: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  00966BBC: 05
+  00966BBD: E4 05              in          al,5
+  00966BBF: 00
+
+  Summary
+
+         200 .text

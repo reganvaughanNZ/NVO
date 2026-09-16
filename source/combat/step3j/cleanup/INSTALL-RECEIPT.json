@@ -1,0 +1,14 @@
+{
+  "status": "installed",
+  "date": "2026-09-16T09:30:51.2602723+12:00",
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-3J-cleanup-20260916-093051",
+  "previous_sha256": "e75f142b75e8b85ea63917905d287fbbb7407008b1e9de139475d1ae2a504845",
+  "installed_sha256": "fb25c3c6362c3ef0c5a3f9d67625aa433dfe8379c2bb77fc7d492800b4dc5e4d",
+  "bytes": 453236,
+  "removed_duplicate_scripts": 3,
+  "bootstrap_compiled_code_promoted_to_original": true,
+  "native_and_pilot_unchanged": true,
+  "activation_files_changed": false,
+  "rd_still_absent": true,
+  "assistant_gameplay_tested": false
+}

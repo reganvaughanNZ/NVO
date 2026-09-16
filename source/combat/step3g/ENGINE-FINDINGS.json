@@ -1,0 +1,31 @@
+{
+  "source_files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\Events\\ShowOffEvents.h",
+      "sha256": "5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\internal\\decoding.h",
+      "sha256": "8d930cdf470d3e924007d9f066607bfc6c821ae5c33b2733b6517e0696ed3c66"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameObjects.h",
+      "sha256": "3f16c3c9b58bdd55026d413eb94a340f11b49b27dc5b4eaacba6e33b2b38ff31"
+    }
+  ],
+  "impact_callback_hook": "009C20C9",
+  "showoff_moves_position_to_first_contact_before_dispatch": true,
+  "contact_list_offset": "88",
+  "contact_position_offset": "04",
+  "contact_target_offset": "00",
+  "contact_material_offset": "20",
+  "contact_region_offset": "24",
+  "evidence_log_sha256": "3130ae056efdf379d4720fb6b2837447fa9d8e600255860107fbe28c2c50ac0c",
+  "example_lifetime": 8,
+  "example_full_step_units": 1740.10254,
+  "example_position_delta_units": 287.051876,
+  "damage_callbacks_precede_showoff_impact": true,
+  "exact_contact_time_available": false,
+  "new_engine_hook": false,
+  "scope": "Read-only collision-step observations and non-authoritative model estimates"
+}

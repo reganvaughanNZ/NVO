@@ -1,0 +1,38 @@
+{
+  "packet": "3S",
+  "checks": {
+    "checks_passed": 61,
+    "game_loaded": false,
+    "damage_authority": false
+  },
+  "capture_sha256": {
+    "source/combat/step3g2/captures/2026-09-15-3G2-5c4e764753b7/NVOCombatCore.log": "5c4e764753b73c258a176e4270b5b5bdbf8255ac6d35c097daa259cf89fcca63",
+    "source/combat/step3q/captures/review-37821ee73c00/NVOCombatCore.log": "37821ee73c001055b279fc56af83b8c57471ccefc16caac7e8e9a83fbde30b64"
+  },
+  "contact_records": 19,
+  "outcomes": {
+    "unsupported_contact_producer": 2,
+    "conditional_estimate_only": 4,
+    "candidate_or_snapshot_unavailable": 8,
+    "unsupported_profile": 5
+  },
+  "authoritative_energy_records": 0,
+  "game_loaded": false,
+  "game_files_written": false,
+  "installed_native_version": 323,
+  "installed_hashes": {
+    "Data/NVSE/Plugins/NVOCombatCore.dll": "a78d72dd22b7d605b150aa617ecb88b0047bde73c25f5f41b5cfea5b2d148d63",
+    "Data/NVSE/Plugins/NVOCombatCore.pdb": "e257619b26472cc46e23cc29803c16d608bbb1ed7d757449e8e5e67f0c31d1ee"
+  },
+  "source_sha256": {
+    "native\\NVOCombatModel\\ImpactEnergy.hpp": "3454533b1205c2620ee8432e9fe4959019f2951baae3dd5a4b7d00ad9ddf9546",
+    "native\\NVOCombatModel\\ImpactEnergy.cpp": "9db9795bd990e90199a863f99a1f8baf1d1a919dac0ee2a668c4b371e86b0252",
+    "native\\NVOCombatModel\\ImpactEnergyProfiles.inl": "80c953c6e6bb1281f31d937bd213dd34d2425f5d573ea64b517cbe78d0d34af0",
+    "native\\NVOCombatModel\\impact_energy_tests.cpp": "a52d31e89c19ce8eb62aaa7e370ed027464117c978f4872ca4c3d51913d7a020",
+    "tools\\prepare_combat_3s.py": "81b08c7ca98165b315ccc035966a3d96d3dec50e1d8cdfbaeaa376a45bebb568",
+    "source\\combat\\step3a\\NVO-Flight-Pilot.json": "a1cbc26838d325edb9a2ebc08ff406708c28081f396c53e41713d7e30ae684c8",
+    "source\\combat\\step3a\\PROVENANCE.json": "851b0fcaae6c02e3e52be771d01a977b85f2a4e9803d240f4dd82d1379b4edf1",
+    "source\\combat\\step3s\\out\\replay.cpp": "a30a0df3ca33b8908d2b16fc99b2a073450905cba6828f83d61e84de575548fb"
+  },
+  "limit": "Re-evaluates logged diagnostic candidate admission only; does not replay collision physics or prove actual contact speed."
+}

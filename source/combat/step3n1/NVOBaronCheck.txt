@@ -1,0 +1,1 @@
+Call (CompileScript "NVOBaronCheck\Check.txt")

@@ -1,0 +1,130 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c2\runtime-20260915-132934\pitch_matrix.obj
+
+File Type: COFF OBJECT
+
+  00524AC0: 55                 push        ebp
+  00524AC1: 8B EC              mov         ebp,esp
+  00524AC3: 83 EC 0C           sub         esp,0Ch
+  00524AC6: 89 4D F4           mov         dword ptr [ebp-0Ch],ecx
+  00524AC9: 8D 45 F8           lea         eax,[ebp-8]
+  00524ACC: 50                 push        eax
+  00524ACD: 8D 4D FC           lea         ecx,[ebp-4]
+  00524AD0: 51                 push        ecx
+  00524AD1: 51                 push        ecx
+  00524AD2: D9 45 08           fld         dword ptr [ebp+8]
+  00524AD5: D9 1C 24           fstp        dword ptr [esp]
+  00524AD8: E8 C3 1E EF FF     call        004169A0
+  00524ADD: 83 C4 0C           add         esp,0Ch
+  00524AE0: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00524AE3: D9 E8              fld1
+  00524AE5: D9 1A              fstp        dword ptr [edx]
+  00524AE7: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  00524AEA: D9 EE              fldz
+  00524AEC: D9 58 04           fstp        dword ptr [eax+4]
+  00524AEF: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00524AF2: D9 EE              fldz
+  00524AF4: D9 59 08           fstp        dword ptr [ecx+8]
+  00524AF7: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00524AFA: D9 EE              fldz
+  00524AFC: D9 5A 0C           fstp        dword ptr [edx+0Ch]
+  00524AFF: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  00524B02: D9 45 F8           fld         dword ptr [ebp-8]
+  00524B05: D9 58 10           fstp        dword ptr [eax+10h]
+  00524B08: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00524B0B: D9 45 FC           fld         dword ptr [ebp-4]
+  00524B0E: D9 59 14           fstp        dword ptr [ecx+14h]
+  00524B11: 8B 55 F4           mov         edx,dword ptr [ebp-0Ch]
+  00524B14: D9 EE              fldz
+  00524B16: D9 5A 18           fstp        dword ptr [edx+18h]
+  00524B19: D9 45 FC           fld         dword ptr [ebp-4]
+  00524B1C: D9 E0              fchs
+  00524B1E: 8B 45 F4           mov         eax,dword ptr [ebp-0Ch]
+  00524B21: D9 58 1C           fstp        dword ptr [eax+1Ch]
+  00524B24: 8B 4D F4           mov         ecx,dword ptr [ebp-0Ch]
+  00524B27: D9 45 F8           fld         dword ptr [ebp-8]
+  00524B2A: D9 59 20           fstp        dword ptr [ecx+20h]
+  00524B2D: 8B E5              mov         esp,ebp
+  00524B2F: 5D                 pop         ebp
+  00524B30: C2 04 00           ret         4
+  00524B33: CC                 int         3
+  00524B34: CC                 int         3
+  00524B35: CC                 int         3
+  00524B36: CC                 int         3
+  00524B37: CC                 int         3
+  00524B38: CC                 int         3
+  00524B39: CC                 int         3
+  00524B3A: CC                 int         3
+  00524B3B: CC                 int         3
+  00524B3C: CC                 int         3
+  00524B3D: CC                 int         3
+  00524B3E: CC                 int         3
+  00524B3F: CC                 int         3
+  00524B40: 55                 push        ebp
+  00524B41: 8B EC              mov         ebp,esp
+  00524B43: 51                 push        ecx
+  00524B44: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00524B47: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00524B4A: 0F B6 88 00 01 00  movzx       ecx,byte ptr [eax+00000100h]
+            00
+  00524B51: 83 E1 02           and         ecx,2
+  00524B54: 0F 95 C0           setne       al
+  00524B57: 8B E5              mov         esp,ebp
+  00524B59: 5D                 pop         ebp
+  00524B5A: C3                 ret
+  00524B5B: CC                 int         3
+  00524B5C: CC                 int         3
+  00524B5D: CC                 int         3
+  00524B5E: CC                 int         3
+  00524B5F: CC                 int         3
+  00524B60: 55                 push        ebp
+  00524B61: 8B EC              mov         ebp,esp
+  00524B63: 51                 push        ecx
+  00524B64: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00524B67: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  00524B6A: 8A 80 02 01 00 00  mov         al,byte ptr [eax+00000102h]
+  00524B70: 8B E5              mov         esp,ebp
+  00524B72: 5D                 pop         ebp
+  00524B73: C3                 ret
+  00524B74: CC                 int         3
+  00524B75: CC                 int         3
+  00524B76: CC                 int         3
+  00524B77: CC                 int         3
+  00524B78: CC                 int         3
+  00524B79: CC                 int         3
+  00524B7A: CC                 int         3
+  00524B7B: CC                 int         3
+  00524B7C: CC                 int         3
+  00524B7D: CC                 int         3
+  00524B7E: CC                 int         3
+  00524B7F: CC                 int         3
+  00524B80: 55                 push        ebp
+  00524B81: 8B EC              mov         ebp,esp
+  00524B83: 83 EC 08           sub         esp,8
+  00524B86: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  00524B89: 0F B6 45 08        movzx       eax,byte ptr [ebp+8]
+  00524B8D: 85 C0              test        eax,eax
+  00524B8F: 74 31              je          00524BC2
+  00524B91: 6A 00              push        0
+  00524B93: 6A 03              push        3
+  00524B95: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00524B98: E8 C3 83 F9 FF     call        004BCF60
+  00524B9D: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  00524BA0: D8 A9 04 01 00 00  fsubr       dword ptr [ecx+00000104h]
+  00524BA6: D9 5D F8           fstp        dword ptr [ebp-8]
+  00524BA9: D9 45 F8           fld         dword ptr [ebp-8]
+  00524BAC: 51                 push        ecx
+  00524BAD: D9 1C 24           fstp        dword ptr [esp]
+  00524BB0: 51                 push        ecx
+  00524BB1: D9 EE              fldz
+  00524BB3: D9 1C 24           fstp        dword ptr [esp]
+  00524BB6: E8 55 F4 ED FF     call        00404010
+  00524BBB: 83 C4 08           add         esp,8
+  00524BBE: EB 0B              jmp         00524BCB
+
+  Summary
+
+         100 .text

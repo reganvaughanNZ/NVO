@@ -1,0 +1,83 @@
+{
+  "machine": "PE32 x86",
+  "exports": [
+    "NVSEPlugin_Load",
+    "NVSEPlugin_Query"
+  ],
+  "warnings": 0,
+  "dll_sha256": "c0a1a17de412b16b4e0637a35b7bcd7f68c8df387f1a3217ef883bfd673c4e9e",
+  "pdb_sha256": "061998ad2b5f34830d92bc2960bd7f23ca1036b5e31ca8b874f5f32333bb3403",
+  "codeview_pdb_guid": "44eff375-deb2-4212-ab5f-c718443503f2",
+  "pdb_age": 1,
+  "pdb_pair_verified": true,
+  "dll_bytes": 258048,
+  "pdb_bytes": 4354048,
+  "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+  "packet": "3F1",
+  "plugin_version": 312,
+  "non_diagnostic_physics_tokens_unchanged": true,
+  "unchanged_native_sources": [
+    "src\\CurrentHit.cpp",
+    "src\\DamageEvents.cpp",
+    "src\\Exports.def",
+    "src\\FlightPreview.cpp",
+    "src\\FlightTiming.cpp",
+    "src\\NativeLog.cpp",
+    "src\\NativeObserver.cpp",
+    "include\\CurrentHit.hpp",
+    "include\\DamageEvents.hpp",
+    "include\\FlightDragData.hpp",
+    "include\\FlightPhysics.hpp",
+    "include\\FlightPreview.hpp",
+    "include\\FlightTiming.hpp",
+    "include\\NativeLog.hpp",
+    "include\\NativeObserver.hpp",
+    "include\\NvseBootstrapApi.hpp"
+  ],
+  "compiled_bridges_unchanged": [
+    "LocalZBridge",
+    "CommitBridge",
+    "NodeBridge",
+    "MovementBridge",
+    "AccountingBridge",
+    "ControllerDispatchBridge",
+    "ControllerDirectBridge",
+    "ControllerReturnBridge"
+  ],
+  "log_format_bounds": [
+    {
+      "record": "PHYSICS_REJECT_DETAIL_LIMIT",
+      "conservative_max_bytes": 129
+    },
+    {
+      "record": "PHYSICS_REJECT_METRICS",
+      "conservative_max_bytes": 450
+    },
+    {
+      "record": "PHYSICS_REJECT_MOTION",
+      "conservative_max_bytes": 512
+    },
+    {
+      "record": "PHYSICS_REJECT_POSITION",
+      "conservative_max_bytes": 387
+    },
+    {
+      "record": "PHYSICS_REJECT_CONTEXT",
+      "conservative_max_bytes": 597
+    },
+    {
+      "record": "PHYSICS_DIAGNOSTIC_READY",
+      "conservative_max_bytes": 236
+    },
+    {
+      "record": "PHYSICS_DIAGNOSTIC_SUMMARY",
+      "conservative_max_bytes": 294
+    }
+  ],
+  "maximum_failure_reports_per_session": 16,
+  "rows_per_failure": 4,
+  "extra_engine_memory_reads": 0,
+  "new_native_hooks": 0,
+  "damage_replacement": false,
+  "gameplay_tested": false
+}

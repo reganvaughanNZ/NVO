@@ -1,0 +1,345 @@
+[
+  {
+    "session": 1,
+    "lifetime": 1,
+    "physics_line": 42,
+    "timing_line": 56,
+    "dt": 0.0790000036
+  },
+  {
+    "session": 1,
+    "lifetime": 2,
+    "physics_line": 80,
+    "timing_line": 90,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 2,
+    "physics_line": 92,
+    "timing_line": 102,
+    "dt": 0.0320000015
+  },
+  {
+    "session": 1,
+    "lifetime": 2,
+    "physics_line": 104,
+    "timing_line": 114,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 2,
+    "physics_line": 116,
+    "timing_line": 126,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 2,
+    "physics_line": 128,
+    "timing_line": 138,
+    "dt": 0.0320000015
+  },
+  {
+    "session": 1,
+    "lifetime": 2,
+    "physics_line": 140,
+    "timing_line": 154,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 3,
+    "physics_line": 177,
+    "timing_line": 187,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 3,
+    "physics_line": 189,
+    "timing_line": 199,
+    "dt": 0.0320000015
+  },
+  {
+    "session": 1,
+    "lifetime": 3,
+    "physics_line": 201,
+    "timing_line": 211,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 3,
+    "physics_line": 213,
+    "timing_line": 223,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 3,
+    "physics_line": 225,
+    "timing_line": 235,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 3,
+    "physics_line": 237,
+    "timing_line": 247,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 3,
+    "physics_line": 249,
+    "timing_line": 263,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 286,
+    "timing_line": 296,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 298,
+    "timing_line": 308,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 310,
+    "timing_line": 320,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 322,
+    "timing_line": 332,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 334,
+    "timing_line": 344,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 346,
+    "timing_line": 356,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 358,
+    "timing_line": 368,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 4,
+    "physics_line": 370,
+    "timing_line": 384,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 407,
+    "timing_line": 417,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 419,
+    "timing_line": 429,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 431,
+    "timing_line": 441,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 443,
+    "timing_line": 453,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 455,
+    "timing_line": 465,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 467,
+    "timing_line": 477,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 479,
+    "timing_line": 489,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 5,
+    "physics_line": 491,
+    "timing_line": 505,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 528,
+    "timing_line": 538,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 540,
+    "timing_line": 550,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 552,
+    "timing_line": 562,
+    "dt": 0.0320000015
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 564,
+    "timing_line": 574,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 576,
+    "timing_line": 586,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 588,
+    "timing_line": 598,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 600,
+    "timing_line": 610,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 6,
+    "physics_line": 612,
+    "timing_line": 626,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 7,
+    "physics_line": 649,
+    "timing_line": 659,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 7,
+    "physics_line": 661,
+    "timing_line": 671,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 7,
+    "physics_line": 673,
+    "timing_line": 683,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 7,
+    "physics_line": 685,
+    "timing_line": 695,
+    "dt": 0.0310000014
+  },
+  {
+    "session": 1,
+    "lifetime": 7,
+    "physics_line": 697,
+    "timing_line": 711,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 8,
+    "physics_line": 740,
+    "timing_line": 750,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 8,
+    "physics_line": 752,
+    "timing_line": 762,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 8,
+    "physics_line": 764,
+    "timing_line": 774,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 8,
+    "physics_line": 776,
+    "timing_line": 786,
+    "dt": 0.0160000008
+  },
+  {
+    "session": 1,
+    "lifetime": 8,
+    "physics_line": 788,
+    "timing_line": 798,
+    "dt": 0.0150000006
+  },
+  {
+    "session": 1,
+    "lifetime": 8,
+    "physics_line": 800,
+    "timing_line": 814,
+    "dt": 0.0160000008
+  }
+]

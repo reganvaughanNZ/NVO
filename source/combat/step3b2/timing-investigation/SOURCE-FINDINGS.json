@@ -1,0 +1,69 @@
+{
+  "scope": "Read-only investigation. No native code, game files or settings changed; no game launch or gameplay test.",
+  "source_hashes": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameObjects.h",
+      "sha256": "3f16c3c9b58bdd55026d413eb94a340f11b49b27dc5b4eaacba6e33b2b38ff31"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameObjects.cpp",
+      "sha256": "7f79a174ac707349eb55b47f18cd7cbd025d69d5e2aadd486d11b199a14b0d7e"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\internal\\class_vtbls.h",
+      "sha256": "f5a33900661db6a09124f2c0991675e2173cc66595312099150bde1133429948"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\Events\\ShowOffEvents.h",
+      "sha256": "5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step3b2\\timing-investigation\\BallistXMain-reference.txt",
+      "sha256": "90064a9756213093714ffe7b10107b838cc2c5f0ad2fa223a9d53a35a12b4500"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\handlers\\OnNearMissHandler.cpp",
+      "sha256": "7461a978a48dd5f28b4da78b51665fba3921959e941939ab1fe89c73dcf2ee18"
+    }
+  ],
+  "confirmed": [
+    "JIP exposes lifeTime at +D8 and distTravelled at +110 directly, without timing correction.",
+    "BallistXMain lines 190-204 records lifetime while distance is zero and subtracts the stored offset later.",
+    "NVO 302 samples creation and terminal counters only; it does not observe that intermediate zero-distance interval.",
+    "ShowOff impact/destruction helpers copy the impact position to the projectile reference; that is not a distance-counter correction.",
+    "Loaded missile UpdateProjectile dispatch is 009B8030; base lifetime +D8 is incremented after the virtual call returns.",
+    "Missile update has movement-skipping paths while the enclosing base update still increments lifetime.",
+    "The vector setter at 009C4E60 conditionally increments +110; +104 must not be treated as a permanent velocity vector."
+  ],
+  "not_proven": [
+    "Which movement-skipping or callback-phase intervals occurred in each of the six logged shots",
+    "Instantaneous projectile velocity, scalar math helper implementation, or independently calibrated units",
+    "Runtime owner of the detour at 009BECC0; supplied ITR source installs a hook at this address"
+  ],
+  "raw_image_limit": {
+    "FalloutNV.exe_sha256": "518c87f58a6c4d9826e9ef8fbb7f4213882fa70822675610d45aea2464502a57",
+    "backup_sha256": "3a87f92f011e5dc9179ddf733cf08be2b39ea6e5b7a8a9e3a9a72dafcc1b104d",
+    "known_hook_site_raw_bytes_do_not_match_runtime_source": true,
+    "raw_disassembly_usable_for_engine_semantics": false,
+    "expected_update_dispatch_from_rdata": "MissileProjectile vtable +310 => 009B8030; confirmed by runtime snapshot"
+  },
+  "pending": "Investigation complete. Await confirmation for packet 3B3 aligned movement observation; no more main-menu capture or repeat gameplay test needed now.",
+  "decision": "Keep configured speeds unchanged. Investigate aligned movement timing instead of subtracting a hardcoded 16ms or multiplying bullet speed.",
+  "runtime_capture": {
+    "captured_at": "2026-09-15T10:27:03.2181693+12:00",
+    "pid": 19432,
+    "process_start_utc": "2026-09-14T22:25:40.5085419Z",
+    "process_path": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\FalloutNV.exe",
+    "access": "QUERY_LIMITED_INFORMATION|VM_READ",
+    "code_base": "009B7000",
+    "code_bytes": 57344,
+    "vtable_base": "0108FA44",
+    "vtable_bytes": 2508,
+    "code_stable_across_two_reads": true,
+    "process_write_or_injection": false,
+    "game_launched": false,
+    "code_sha256": "f6c95eb7e7ea3f5968770d6a8b807260f160e08ff2be6e085ade515376f3b452",
+    "vtable_sha256": "20db6c364428f1b3a28eb7a3bc49583027213fe263ce324a8f8c07a0ecc6ae56"
+  },
+  "report": "REVIEW.md"
+}

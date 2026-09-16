@@ -1,0 +1,197 @@
+--- native323/CMakeLists.txt
++++ native324/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ cmake_minimum_required(VERSION 3.21)
+-project(NVOCombatCore VERSION 0.3.24 LANGUAGES CXX)
++project(NVOCombatCore VERSION 0.3.25 LANGUAGES CXX)
+ 
+ if(NOT WIN32 OR NOT MSVC)
+     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")
+--- native323/src/FlightContactSpeed.inl
++++ native324/src/FlightContactSpeed.inl
+@@ -13,7 +13,10 @@
+ {
+     ContactSpeed out{};
+     const auto& s=r.collision;
+-    if (s.valid!=31 || !s.policyRead || !s.target) return out;
++    if (s.valid!=31 || !s.policyRead) return out;
++    const bool world=s.targetKind==ImpactTargetKind::World && !s.target && s.region==-1;
++    const bool reference=s.targetKind==ImpactTargetKind::Reference && s.target;
++    if (!world && !reference) return out;
+     out.status="unsupported_contact";
+     // Hitscan, stuck, engine-gravity and AlwaysHit/redirected contacts do not
+     // inherit this ordinary, zero-engine-gravity bullet segment contract.
+@@ -42,7 +45,8 @@
+         // floor-candidate.Z > 30, even if the height query returned false.
+         // An actual same-contact snapshot is mandatory: never infer this from
+         // a conveniently vertical error alone, or modify the engine's clamp.
+-        if (terrain.samples!=1 || !terrain.valid || terrain.target!=s.target
++        if (terrain.samples!=1 || !terrain.valid || terrain.targetKind!=s.targetKind
++            || terrain.target!=s.target
+             || terrain.region!=s.region || terrain.flags!=s.flags
+             || !ContactFinite(terrain.position) || !ContactFinite(terrain.point)
+             || !std::isfinite(terrain.floor)
+--- native323/src/FlightImpact.inl
++++ native324/src/FlightImpact.inl
+@@ -4,6 +4,7 @@
+ struct ImpactSample {
+     unsigned valid{};
+     U32 target{}, material{};
++    ImpactTargetKind targetKind{ImpactTargetKind::Invalid};
+     int region{-1};
+     bool more{};
+     bool policyRead{};
+@@ -68,10 +69,10 @@
+     if (Read(t.p,0x88,first) && Read(t.p,0x8C,next)) {
+         s.valid|=4; s.more=next!=nullptr;
+         void* target{}; nvo::hit::Form form{};
+-        if (first && Read(first,0,target) && nvo::hit::ReadForm(target,form)
++        if (first && Read(first,0,target) && (!target || nvo::hit::ReadForm(target,form))
+             && ImpactVector(first,4,s.point) && Read(first,0x20,s.material) && Read(first,0x24,s.region)) {
+-            s.target=form.id; s.valid|=8;
+-        } else { s.point={}; s.target=s.material=0; s.region=-1; }
++            s.target=form.id; s.targetKind=ClassifyImpactTarget(target,form.id); s.valid|=8;
++        } else { s.point={}; s.target=s.material=0; s.region=-1; s.targetKind=ImpactTargetKind::Invalid; }
+     }
+     if (delta && ImpactVector(delta,0,s.accounting)) s.valid|=16;
+     return s;
+@@ -128,8 +129,8 @@
+     r.modelCandidate=m.estimate; r.modelStatus=m.status;
+     r.modelTime=m.estimate?m.estimateTime:0; r.modelSpeed=m.estimate?m.estimateSpeed:0;
+     if (m.estimate) ++gImpactCandidates; else ++gImpactUnavailable;
+-    if (!nvo::log::Write("IMPACT_STEP session=%u lifetime=%llu step=%u projectile=%08X source=%08X weapon=%08X ammo=%08X base=%08X target=%08X region=%d material=%u valid_mask=%u more_contacts=%u impacted=%u applied=%u baseline_verified=%u dt_s=%.9g speed_before_mps=%.9g proposed_full_step_mps=%.9g life_s=%.9g travel_units=%.9g observer_writes=0",
+-        gSession,r.serial,r.step,r.ref,r.source,r.weapon,r.ammo,r.base,s.target,s.region,s.material,s.valid,s.more?1u:0u,
++    if (!nvo::log::Write("IMPACT_STEP session=%u lifetime=%llu step=%u projectile=%08X source=%08X weapon=%08X ammo=%08X base=%08X target=%08X target_kind=%u region=%d material=%u valid_mask=%u more_contacts=%u impacted=%u applied=%u baseline_verified=%u dt_s=%.9g speed_before_mps=%.9g proposed_full_step_mps=%.9g life_s=%.9g travel_units=%.9g observer_writes=0",
++        gSession,r.serial,r.step,r.ref,r.source,r.weapon,r.ammo,r.base,s.target,static_cast<unsigned>(s.targetKind),s.region,s.material,s.valid,s.more?1u:0u,
+         static_cast<unsigned>(s.impacted),r.wrote?1u:0u,r.baselineVerified?1u:0u,r.dt,Length(r.before),Length(r.full),
+         static_cast<double>(s.life),static_cast<double>(s.distance))) ++gImpactLogFailures;
+     if (!nvo::log::Write("IMPACT_GEOMETRY session=%u lifetime=%llu step=%u start=(%.9g,%.9g,%.9g) expected=(%.9g,%.9g,%.9g) position=(%.9g,%.9g,%.9g) contact=(%.9g,%.9g,%.9g) accounting_delta=(%.9g,%.9g,%.9g) tolerance=%.9g observer_writes=0",
+@@ -144,9 +145,9 @@
+     if (!nvo::log::Write("IMPACT_SPEED session=%u lifetime=%llu step=%u status=%s available=%u engine_segment=%u low_mps=%.9g high_mps=%.9g mean_segment_mps=%.9g interval_dt_s=%.9g flags_read=%u flags=%08X reset_observed=%u point_model_valid=%u contact_time_measured=0 point_association_proven=0 speed_authority=0 damage_replacement=0 observer_writes=0",
+         gSession,r.serial,r.step,speed.status,speed.available?1u:0u,speed.engineSegment?1u:0u,
+         r.speedLow,r.speedHigh,r.speedMean,speed.available?r.dt:0,s.policyRead?1u:0u,s.flags,r.resetObserved?1u:0u,m.estimate?1u:0u)) ++gImpactLogFailures;
+-    if (!nvo::log::Write("IMPACT_TERRAIN session=%u lifetime=%llu step=%u samples=%u valid=%u query_ok=%u candidate=(%.9g,%.9g,%.9g) floor=%.9g target=%08X region=%d flags=%08X contact=(%.9g,%.9g,%.9g) explained_clamp=%u observer_writes=0",
++    if (!nvo::log::Write("IMPACT_TERRAIN session=%u lifetime=%llu step=%u samples=%u valid=%u query_ok=%u candidate=(%.9g,%.9g,%.9g) floor=%.9g target=%08X target_kind=%u region=%d flags=%08X contact=(%.9g,%.9g,%.9g) explained_clamp=%u observer_writes=0",
+         gSession,r.serial,r.step,r.terrain.samples,r.terrain.valid?1u:0u,r.terrain.queryOk?1u:0u,
+-        r.terrain.position.x,r.terrain.position.y,r.terrain.position.z,r.terrain.floor,r.terrain.target,r.terrain.region,r.terrain.flags,
++        r.terrain.position.x,r.terrain.position.y,r.terrain.position.z,r.terrain.floor,r.terrain.target,static_cast<unsigned>(r.terrain.targetKind),r.terrain.region,r.terrain.flags,
+         r.terrain.point.x,r.terrain.point.y,r.terrain.point.z,speed.terrainExplained?1u:0u)) ++gImpactLogFailures;
+ }
+ void ImpactEvent(const Track& t,bool destroyed) noexcept
+@@ -177,10 +178,11 @@
+     if (s.valid!=15) ++gImpactReadFailures;
+     const double contactGap=Length(Add(s.point,Mul(r->collision.point,-1)));
+     const bool correlated=s.valid==15 && r->collision.valid==31 && !s.more && !r->collision.more
+-        && s.target==r->collision.target && s.region==r->collision.region && contactGap<=r->tolerance;
++        && s.targetKind==r->collision.targetKind && s.target==r->collision.target
++        && s.region==r->collision.region && contactGap<=r->tolerance;
+     if (correlated) ++gImpactCorrelated; else ++gImpactUnpaired;
+-    if (!nvo::log::Write("IMPACT_CALLBACK session=%u lifetime=%llu step=%u status=%s valid_mask=%u target=%08X region=%d contact=(%.9g,%.9g,%.9g) position=(%.9g,%.9g,%.9g) life_s=%.9g travel_units=%.9g contact_change_units=%.9g age_since_collision_s=%.9g contact_time_measured=0 speed_authority=0 observer_writes=0",
+-        gSession,t.serial,r->step,correlated?"correlated":"contact_changed_or_unavailable",s.valid,s.target,s.region,
++    if (!nvo::log::Write("IMPACT_CALLBACK session=%u lifetime=%llu step=%u status=%s valid_mask=%u target=%08X target_kind=%u region=%d contact=(%.9g,%.9g,%.9g) position=(%.9g,%.9g,%.9g) life_s=%.9g travel_units=%.9g contact_change_units=%.9g age_since_collision_s=%.9g contact_time_measured=0 speed_authority=0 observer_writes=0",
++        gSession,t.serial,r->step,correlated?"correlated":"contact_changed_or_unavailable",s.valid,s.target,static_cast<unsigned>(s.targetKind),s.region,
+         s.point.x,s.point.y,s.point.z,s.position.x,s.position.y,s.position.z,static_cast<double>(s.life),static_cast<double>(s.distance),
+         contactGap,static_cast<double>(s.life)-r->collision.life)) ++gImpactLogFailures;
+ }
+--- native323/src/FlightImpactJoin.inl
++++ native324/src/FlightImpactJoin.inl
+@@ -24,7 +24,7 @@
+         s=ReadImpact(*t);
+         if (s.valid!=15) { ++gImpactHitReads; status="contact_read_unavailable"; }
+         else if (s.more) status="multiple_contacts";
+-        else if (s.target!=q.target) status="contact_target_differs";
++        else if (s.targetKind!=ImpactTargetKind::Reference || !q.target || s.target!=q.target) status="contact_target_differs";
+         else if (t->stopped || r->callbackReported) status="after_impact_callback";
+         else if (!r->collisionCaptured) {
+             const bool immediate=!t->movementEntries && !t->accountingEntries;
+@@ -32,6 +32,8 @@
+             if (immediate) ++gImpactHitImmediate;
+         } else {
+             const bool stable=r->collision.valid==31 && !r->collision.more
++                && r->collision.targetKind==ImpactTargetKind::Reference
++                && s.targetKind==ImpactTargetKind::Reference
+                 && r->collision.target==s.target && r->collision.region==s.region
+                 && Length(Add(s.point,Mul(r->collision.point,-1)))<=r->tolerance;
+             paired=stable;
+@@ -40,7 +42,8 @@
+         }
+     }
+     const bool contactValid=(s.valid&8)!=0;
+-    const bool regionsKnown=identity && contactValid && !s.more && s.target==q.target
++    const bool regionsKnown=identity && contactValid && !s.more
++        && s.targetKind==ImpactTargetKind::Reference && q.target && s.target==q.target
+         && s.region>=0 && q.region>=0;
+     const bool differs=regionsKnown && s.region!=q.region;
+     if (differs) ++gImpactHitRegionDifferences;
+@@ -48,8 +51,8 @@
+     bool hitPositionValid=true;
+     for (float value:q.position) if (!std::isfinite(value) || std::abs(value)>1e7f) hitPositionValid=false;
+     const Vec hitPosition=hitPositionValid?Vec{q.position[0],q.position[1],q.position[2]}:Vec{};
+-    if (!nvo::log::Write("IMPACT_HIT session=%u context=%u lifetime=%llu phase=copy_input status=%s projectile=%08X source=%08X target=%08X weapon=%08X ammo=%08X hit_region=%d contact_region=%d contact_valid=%u regions_known=%u regions_differ=%u hit_flags=%08X observer_writes=0",
+-        gSession,q.context,q.lifetime,status,q.projectile,q.source,q.target,q.weapon,q.ammo,q.region,s.region,contactValid?1u:0u,regionsKnown?1u:0u,differs?1u:0u,q.flags)) ++gImpactHitLogFailures;
++    if (!nvo::log::Write("IMPACT_HIT session=%u context=%u lifetime=%llu phase=copy_input status=%s projectile=%08X source=%08X target=%08X weapon=%08X ammo=%08X hit_region=%d contact_region=%d contact_kind=%u contact_valid=%u regions_known=%u regions_differ=%u hit_flags=%08X observer_writes=0",
++        gSession,q.context,q.lifetime,status,q.projectile,q.source,q.target,q.weapon,q.ammo,q.region,s.region,static_cast<unsigned>(s.targetKind),contactValid?1u:0u,regionsKnown?1u:0u,differs?1u:0u,q.flags)) ++gImpactHitLogFailures;
+     if (!nvo::log::Write("IMPACT_HIT_MODEL session=%u context=%u lifetime=%llu collision_paired=%u candidate_available=%u model_status=%s candidate_speed_mps=%.9g candidate_time_s=%.9g callback_seen=%u contact_time_measured=0 speed_authority=0 region_authority=0 damage_replacement=0 observer_writes=0",
+         gSession,q.context,q.lifetime,paired?1u:0u,candidate?1u:0u,r?r->modelStatus:"unavailable",candidate?r->modelSpeed:0,candidate?r->modelTime:0,r && r->callbackReported?1u:0u)) ++gImpactHitLogFailures;
+     if (!nvo::log::Write("IMPACT_HIT_POSITION session=%u context=%u lifetime=%llu hit_position_valid=%u hit=(%.9g,%.9g,%.9g) contact_valid=%u contact=(%.9g,%.9g,%.9g) observer_writes=0",
+--- native323/src/FlightPhysics.cpp
++++ native324/src/FlightPhysics.cpp
+@@ -35,10 +35,17 @@
+ Vec Mul(Vec a, double b) noexcept { return {a.x*b,a.y*b,a.z*b}; }
+ double Length(Vec a) noexcept { return std::sqrt(a.x*a.x+a.y*a.y+a.z*a.z); }
+ struct Config { double units{}, gravity{}, density{}, sound{}; } gConfig;
++enum class ImpactTargetKind : U32 { Invalid, World, Reference };
++ImpactTargetKind ClassifyImpactTarget(const void* target,U32 formId) noexcept
++{
++    if (!target) return formId?ImpactTargetKind::Invalid:ImpactTargetKind::World;
++    return formId?ImpactTargetKind::Reference:ImpactTargetKind::Invalid;
++}
+ struct ContactTerrain {
+     unsigned samples{};
+     bool valid{}, queryOk{};
+     U32 target{},flags{};
++    ImpactTargetKind targetKind{ImpactTargetKind::Invalid};
+     int region{-1};
+     Vec position{},point{};
+     double floor{};
+@@ -619,7 +626,8 @@
+             && ImpactVector(candidate,0,observedPosition) && Read(height,0,observedFloor)
+             && std::isfinite(observedFloor) && std::abs(observedFloor)<=1e7f) {
+             terrain.valid=true; terrain.queryOk=(result&0xFFu)!=0;
+-            terrain.target=contact.target; terrain.flags=contact.flags; terrain.region=contact.region;
++            terrain.target=contact.target; terrain.targetKind=contact.targetKind;
++            terrain.flags=contact.flags; terrain.region=contact.region;
+             terrain.point=contact.point; terrain.position=observedPosition; terrain.floor=observedFloor;
+         }
+     }
+--- native323/src/Plugin.cpp
++++ native324/src/Plugin.cpp
+@@ -9,7 +9,7 @@
+ 
+ namespace {
+ constexpr char kPluginName[] = "NVOCombatCore";
+-constexpr std::uint32_t kPluginVersion = 324; // 0.3.24, packet 3U contact-speed coverage
++constexpr std::uint32_t kPluginVersion = 325; // 0.3.25, packet 3U1 world-contact classification
+ constexpr bool kHitHooksImplemented = false;
+ constexpr bool kDamageReplacementEnabled = false;
+ bool gLoaded = false;
+@@ -24,8 +24,8 @@
+     gStartupBannerAttempted = true; // Set before calling out, including any reentrant callback.
+     gStartupBannerPending = false;
+     const bool submitted = gConsole && gConsole->version >= 2 && gConsole->RunScriptLine
+-        && gConsole->RunScriptLine("PrintC \"NVO [0.3.24] - The Mojave is yours.\"", nullptr);
+-    nvo::log::Write("STARTUP_BANNER version=0.3.24 submitted=%u once_per_process=1", submitted ? 1u : 0u);
++        && gConsole->RunScriptLine("PrintC \"NVO [0.3.25] - The Mojave is yours.\"", nullptr);
++    nvo::log::Write("STARTUP_BANNER version=0.3.25 submitted=%u once_per_process=1", submitted ? 1u : 0u);
+ }
+ 
+ bool SupportsHost(const nvo::nvse::InterfacePrefix* host) noexcept
+@@ -145,7 +145,7 @@
+         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
+         return false;
+     }
+-    nvo::log::Write("NVOCombatCore 0.3.24 | phase=3U | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
++    nvo::log::Write("NVOCombatCore 0.3.25 | phase=3U1 | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
+ #ifdef NVO_ADMISSION_CAPACITY_PROBE
+     nvo::log::Write("CAPACITY_PROBE_BUILD enabled=1 player_standard_9mm_smg_only=1 synthetic_slots=127 process_once=1 damage_replacement=0");
+ #else

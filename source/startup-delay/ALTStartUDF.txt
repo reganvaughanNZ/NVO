@@ -1,0 +1,139 @@
+scn AlTStartUDF
+
+ref rRef
+int iStart
+begin function {}
+
+	if ALTGO == 0
+		ALTQ.iUpdate = 3
+	
+		disableplayercontrols
+		player.setscale 1
+		player.moveto ALTCellMarker
+		
+		;from doc mitchell trigger
+		GSVictorREF.MoveTo GSVictorCircuitStartMarkerREF;
+		Set VFreeformGoodsprings.bVictorPatrol to 1;
+		GSVictorREF.EVP
+		RadioBlackMountainTAREF.enable
+		RNVTARef.Enable		;enable Radio New Vegas
+		
+		;disable goons and benny
+		TopsBodyguardGoon1REF.disable
+		BennyREF.disable
+		BennySuiteDoorREF.SetDestroyed 1 
+		
+		;disable lucky38 victor 
+		Lucky38VictorEntranceREF.moveto ALTHoldingMarker
+		Lucky38VictorEntranceREF.SetActorsAI 0 
+		
+		
+		;remove beagle journal 
+		PrimmDeputyRef.removeitem VMQ01BeagleJournalNote 1
+		
+		;boulder city disable
+		rRef = StringtoRef "FalloutNV.esm:14F532"
+		if isformvalid rRef
+			rRef.SetDestroyed 1 
+		endif
+		LieutenantMonroeRef.moveto ALTHoldingMarker
+		LieutenantMonroeRef.SetActorsAI 0 
+		
+		
+		SetEssential DocMitchell 1
+		SetEssential Victor 1
+		
+		if ismodloaded "Lone Star.esm" == 0 && ismodloaded "Leveled DLC Delay.esm" == 0
+			stopquest VPreorderCaravan
+			stopquest VPreorderClassic
+			stopquest VPreorderMercenary
+			stopquest VPreorderTribal
+		else
+			startquest ALTPreorderQ
+		endif
+		
+		SetCellOwnership GSDocMitchellHouse DocMitchell
+		
+		MannyVargasREF.removeitem VMQ01NoteObject 1
+		 
+	elseif ALTGO == 1
+		disableplayercontrols
+		TopsBodyguardGoon1REF.enable
+		BennyREF.enable
+		BennySuiteDoorREF.SetDestroyed 0
+		
+		PrimmDeputyRef.additem VMQ01BeagleJournalNote 1
+		
+		rRef = StringtoRef "FalloutNV.esm:14F532"
+		rRef.SetDestroyed 0
+		LieutenantMonroeRef.movetoeditorposition
+		LieutenantMonroeRef.SetActorsAI 1
+		LieutenantMonroeRef.evp
+		
+		SetEnemy playerfaction GoodspringsFaction 1 1
+		SetEnemy playerfaction GoodspringsMilitiaFaction 1 1
+		ClearFactionPlayerEnemyFlag GoodspringsFaction
+		ClearFactionPlayerEnemyFlag GoodspringsMilitiaFaction
+		DocMitchellRef.stopcombat
+		SetCellOwnership GSDocMitchellHouse
+		
+		SetEssential DocMitchell 0
+		SetEssential Victor 0
+		
+		if Player.IsHardcore
+			ToggleHardcoreTracking 0
+		endif 
+		setgamehour 336
+		if Player.IsHardcore
+			ToggleHardcoreTracking 1
+		endif 
+		
+		
+		Player.ResetHealth;
+		Player.RestoreActorValue PerceptionCondition 100;
+		Player.RestoreActorValue EnduranceCondition 100;
+		Player.RestoreActorValue LeftAttackCondition 100;
+		Player.RestoreActorValue RightAttackCondition 100;
+		Player.RestoreActorValue LeftMobilityCondition 100;
+		Player.RestoreActorValue RightMobilityCondition 100;
+		Player.RestoreActorValue RadiationRads 1000;
+		Player.cios NVDLC04RestUp
+		
+		if eval (GetINIFloat "All:bBennyTakesYourStuff" "ALTStartConfig.ini") == 1
+			ALTStuffBagNewRef.enable
+		endif
+		
+		if eval (GetINIFloat "All:bCompanionsDismiss" "ALTStartConfig.ini") == 1
+			startquest P04CompanionFireQuest
+			call ALTDogmeatDismiss ALTQ 1
+		endif
+			
+		
+		player.removeallitems ALTStuffRef 1 1
+		
+		Lucky38VictorEntranceREF.movetoeditorposition
+		Lucky38VictorEntranceREF.SetActorsAI 1
+		Lucky38VictorEntranceREF.evp
+		
+		player.moveto ALTHoldingMarker
+		
+		ALTMojaveExpressBoardRef.SetDestroyed 1
+		ALTMojaveExpressBoardMORef.SetDestroyed 1
+		ALTMojaveExpressBoardCCRef.SetDestroyed 1
+		ALTMojaveExpressBoardWSRef.SetDestroyed 1 
+		
+		SetLastExtDoorActivated GSDocMitchellHouseIntDoorREF
+		
+		MannyVargasREF.Additem VMQ01NoteObject 1
+		
+		callafterseconds 1 (begin function {}
+			StartQuest VCG00
+			SetStage VCG00 0
+		end)
+
+	endif
+	
+
+
+
+end

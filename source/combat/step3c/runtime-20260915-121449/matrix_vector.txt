@@ -1,0 +1,80 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file source\combat\step3c\runtime-20260915-121449\matrix_vector.obj
+
+File Type: COFF OBJECT
+
+  004B4500: 55                 push        ebp
+  004B4501: 8B EC              mov         ebp,esp
+  004B4503: 83 EC 10           sub         esp,10h
+  004B4506: 89 4D FC           mov         dword ptr [ebp-4],ecx
+  004B4509: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004B450C: D9 40 18           fld         dword ptr [eax+18h]
+  004B450F: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  004B4512: D8 09              fmul        dword ptr [ecx]
+  004B4514: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  004B4517: D9 42 1C           fld         dword ptr [edx+1Ch]
+  004B451A: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  004B451D: D8 48 04           fmul        dword ptr [eax+4]
+  004B4520: DE C1              faddp       st(1),st
+  004B4522: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004B4525: D9 41 20           fld         dword ptr [ecx+20h]
+  004B4528: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  004B452B: D8 4A 08           fmul        dword ptr [edx+8]
+  004B452E: DE C1              faddp       st(1),st
+  004B4530: D9 5D F8           fstp        dword ptr [ebp-8]
+  004B4533: D9 45 F8           fld         dword ptr [ebp-8]
+  004B4536: 51                 push        ecx
+  004B4537: D9 1C 24           fstp        dword ptr [esp]
+  004B453A: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004B453D: D9 40 0C           fld         dword ptr [eax+0Ch]
+  004B4540: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  004B4543: D8 09              fmul        dword ptr [ecx]
+  004B4545: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  004B4548: D9 42 10           fld         dword ptr [edx+10h]
+  004B454B: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  004B454E: D8 48 04           fmul        dword ptr [eax+4]
+  004B4551: DE C1              faddp       st(1),st
+  004B4553: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004B4556: D9 41 14           fld         dword ptr [ecx+14h]
+  004B4559: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  004B455C: D8 4A 08           fmul        dword ptr [edx+8]
+  004B455F: DE C1              faddp       st(1),st
+  004B4561: D9 5D F4           fstp        dword ptr [ebp-0Ch]
+  004B4564: D9 45 F4           fld         dword ptr [ebp-0Ch]
+  004B4567: 51                 push        ecx
+  004B4568: D9 1C 24           fstp        dword ptr [esp]
+  004B456B: 8B 45 FC           mov         eax,dword ptr [ebp-4]
+  004B456E: D9 00              fld         dword ptr [eax]
+  004B4570: 8B 4D 0C           mov         ecx,dword ptr [ebp+0Ch]
+  004B4573: D8 09              fmul        dword ptr [ecx]
+  004B4575: 8B 55 FC           mov         edx,dword ptr [ebp-4]
+  004B4578: D9 42 04           fld         dword ptr [edx+4]
+  004B457B: 8B 45 0C           mov         eax,dword ptr [ebp+0Ch]
+  004B457E: D8 48 04           fmul        dword ptr [eax+4]
+  004B4581: DE C1              faddp       st(1),st
+  004B4583: 8B 4D FC           mov         ecx,dword ptr [ebp-4]
+  004B4586: D9 41 08           fld         dword ptr [ecx+8]
+  004B4589: 8B 55 0C           mov         edx,dword ptr [ebp+0Ch]
+  004B458C: D8 4A 08           fmul        dword ptr [edx+8]
+  004B458F: DE C1              faddp       st(1),st
+  004B4591: D9 5D F0           fstp        dword ptr [ebp-10h]
+  004B4594: D9 45 F0           fld         dword ptr [ebp-10h]
+  004B4597: 51                 push        ecx
+  004B4598: D9 1C 24           fstp        dword ptr [esp]
+  004B459B: 8B 4D 08           mov         ecx,dword ptr [ebp+8]
+  004B459E: E8 CD 22 F6 FF     call        00416870
+  004B45A3: 8B 45 08           mov         eax,dword ptr [ebp+8]
+  004B45A6: 8B E5              mov         esp,ebp
+  004B45A8: 5D                 pop         ebp
+  004B45A9: C2 08 00           ret         8
+  004B45AC: CC                 int         3
+  004B45AD: CC                 int         3
+  004B45AE: CC                 int         3
+  004B45AF: CC                 int         3
+
+  Summary
+
+          B0 .text

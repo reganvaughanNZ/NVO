@@ -1,0 +1,19 @@
+{
+  "results": [
+    "six_route_chain_identity_and_input_unchanged=pass",
+    "actual_x86_bridge_stack_gpr_flags_df_x87_sse_mxcsr=pass",
+    "nested_depth_overflow_no_parent_attribution_or_bad_return=pass",
+    "call_identity_and_returns_survive_log_budget_and_sink_failure=pass",
+    "suspend_continuation_and_inactive_passthrough=pass",
+    "two_thread_independent_scopes=pass",
+    "game_or_plugin_dll_loaded=false"
+  ],
+  "sources": {
+    "native/NVOCombatCore/src/HitTransaction.cpp": "7c1de4e7f2c8473b21b0d28231de3eab89eaa1000e4192925e6061eb9d59ae56",
+    "native/NVOCombatCore/src/HitTransactionGuards.inl": "c2972d627189eff7ffc814ff8019ed823c03c41bb96ad8131e14794dca9d4e4e",
+    "native/NVOCombatCore/include/HitTransaction.hpp": "10a6ee33fbd52673b487cbe69359a4f386da4bbe2d919f86de1373877d2e2b7c",
+    "source/combat/step3h/inspection/replay.cpp": "e1270b6d44596736d0744fbe8a892efc7fc5dd23389f8cbb7c505187398e90d5"
+  },
+  "game_or_plugin_dll_loaded": false,
+  "compiled_bridges_match_dll_object": true
+}

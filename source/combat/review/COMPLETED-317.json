@@ -1,0 +1,35 @@
+{
+  "status": "Ultra review completed; material gate HOLD",
+  "files": [
+    {
+      "path": "source/combat/review/ULTRA-317-REVIEW.md",
+      "bytes": 17106,
+      "sha256": "d98c3fc6140c4e7ced5f3cfb46f9f23c7fa8c96a6b8a8382e082070b90dfd4f8"
+    },
+    {
+      "path": "source/combat/review/ULTRA-317-FINDINGS.json",
+      "bytes": 14981,
+      "sha256": "68e5014fe680d194c3a631721d3b5a4ca9f88a270e4b895d0825abb16dbf3af2"
+    },
+    {
+      "path": "source/combat/review/REVIEW-STATUS.md",
+      "bytes": 927,
+      "sha256": "0cbdd1c5731adaa37cbdfd53c7538db09c5ef62ef8d7c85bcbb4997d78ea7e67"
+    },
+    {
+      "path": "source/combat/step3g2/CHECKPOINT-REVIEWED.md",
+      "bytes": 3993,
+      "sha256": "1cec3d1c165a5722e394036870b9a1a6501dc744911d3e4fe5731bfd66735fea"
+    },
+    {
+      "path": "source/combat/step3g2/REVIEW-1.md",
+      "bytes": 4279,
+      "sha256": "13bac3dabbbb231c61168a85a6f3856a3d627a3d8dc9ecf0e384aa1351c923e7"
+    },
+    {
+      "path": "source/combat/step3g2/review-data.json",
+      "bytes": 8074,
+      "sha256": "9ff8067e0f1584e923e98cca0897ea446f80cd4d9007cf5e2f360bab61d68158"
+    }
+  ]
+}

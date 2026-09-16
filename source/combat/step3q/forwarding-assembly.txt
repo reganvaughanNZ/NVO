@@ -1,0 +1,242 @@
+?Forward@spawn@nvo@@YAPAXP6APAXIIIIIIIIIIIIIIII@ZABV?$array@I$0BA@@std@@@Z:
+  10016D50: 8B 44 24 08        mov         eax,dword ptr [esp+8]
+  10016D54: FF 70 3C           push        dword ptr [eax+3Ch]
+  10016D57: FF 70 38           push        dword ptr [eax+38h]
+  10016D5A: FF 70 34           push        dword ptr [eax+34h]
+  10016D5D: FF 70 30           push        dword ptr [eax+30h]
+  10016D60: FF 70 2C           push        dword ptr [eax+2Ch]
+  10016D63: FF 70 28           push        dword ptr [eax+28h]
+  10016D66: FF 70 24           push        dword ptr [eax+24h]
+  10016D69: FF 70 20           push        dword ptr [eax+20h]
+  10016D6C: FF 70 1C           push        dword ptr [eax+1Ch]
+  10016D6F: FF 70 18           push        dword ptr [eax+18h]
+  10016D72: FF 70 14           push        dword ptr [eax+14h]
+  10016D75: FF 70 10           push        dword ptr [eax+10h]
+  10016D78: FF 70 0C           push        dword ptr [eax+0Ch]
+  10016D7B: FF 70 08           push        dword ptr [eax+8]
+  10016D7E: FF 70 04           push        dword ptr [eax+4]
+  10016D81: FF 30              push        dword ptr [eax]
+  10016D83: FF 54 24 44        call        dword ptr [esp+44h]
+  10016D87: 83 C4 40           add         esp,40h
+  10016D8A: C3                 ret
+  10016D8B: CC CC CC CC CC                                   ллллл
+`anonymous namespace'::Wrapper:
+  10017490: 55                 push        ebp
+  10017491: 8D 6C 24 BC        lea         ebp,[esp-44h]
+  10017495: 83 EC 44           sub         esp,44h
+  10017498: 6A FE              push        0FFFFFFFEh
+  1001749A: 68 38 FA 03 10     push        1003FA38h
+  1001749F: 68 10 9B 01 10     push        offset __except_handler4
+  100174A4: 64 A1 00 00 00 00  mov         eax,dword ptr fs:[00000000h]
+  100174AA: 50                 push        eax
+  100174AB: 81 EC CC 00 00 00  sub         esp,0CCh
+  100174B1: A1 40 D9 04 10     mov         eax,dword ptr [___security_cookie]
+  100174B6: 31 45 F8           xor         dword ptr [ebp-8],eax
+  100174B9: 33 C5              xor         eax,ebp
+  100174BB: 89 45 40           mov         dword ptr [ebp+40h],eax
+  100174BE: 53                 push        ebx
+  100174BF: 56                 push        esi
+  100174C0: 57                 push        edi
+  100174C1: 50                 push        eax
+  100174C2: 8D 45 F0           lea         eax,[ebp-10h]
+  100174C5: 64 A3 00 00 00 00  mov         dword ptr fs:[00000000h],eax
+  100174CB: 8B 45 4C           mov         eax,dword ptr [ebp+4Ch]
+  100174CE: 89 45 00           mov         dword ptr [ebp],eax
+  100174D1: 8B 45 50           mov         eax,dword ptr [ebp+50h]
+  100174D4: 89 45 04           mov         dword ptr [ebp+4],eax
+  100174D7: 8B 45 54           mov         eax,dword ptr [ebp+54h]
+  100174DA: 89 45 08           mov         dword ptr [ebp+8],eax
+  100174DD: 8B 45 58           mov         eax,dword ptr [ebp+58h]
+  100174E0: 89 45 0C           mov         dword ptr [ebp+0Ch],eax
+  100174E3: 8B 45 5C           mov         eax,dword ptr [ebp+5Ch]
+  100174E6: 89 45 10           mov         dword ptr [ebp+10h],eax
+  100174E9: 8B 45 60           mov         eax,dword ptr [ebp+60h]
+  100174EC: 89 45 14           mov         dword ptr [ebp+14h],eax
+  100174EF: 8B 45 64           mov         eax,dword ptr [ebp+64h]
+  100174F2: 89 45 18           mov         dword ptr [ebp+18h],eax
+  100174F5: 8B 45 68           mov         eax,dword ptr [ebp+68h]
+  100174F8: 89 45 1C           mov         dword ptr [ebp+1Ch],eax
+  100174FB: 8B 45 6C           mov         eax,dword ptr [ebp+6Ch]
+  100174FE: 89 45 20           mov         dword ptr [ebp+20h],eax
+  10017501: 8B 45 70           mov         eax,dword ptr [ebp+70h]
+  10017504: 89 45 24           mov         dword ptr [ebp+24h],eax
+  10017507: 8B 45 74           mov         eax,dword ptr [ebp+74h]
+  1001750A: 89 45 28           mov         dword ptr [ebp+28h],eax
+  1001750D: 8B 45 78           mov         eax,dword ptr [ebp+78h]
+  10017510: 89 45 2C           mov         dword ptr [ebp+2Ch],eax
+  10017513: 8B 45 7C           mov         eax,dword ptr [ebp+7Ch]
+  10017516: 89 45 30           mov         dword ptr [ebp+30h],eax
+  10017519: 8B 85 80 00 00 00  mov         eax,dword ptr [ebp+80h]
+  1001751F: 89 45 34           mov         dword ptr [ebp+34h],eax
+  10017522: 8B 85 84 00 00 00  mov         eax,dword ptr [ebp+84h]
+  10017528: 89 45 38           mov         dword ptr [ebp+38h],eax
+  1001752B: 8B 85 88 00 00 00  mov         eax,dword ptr [ebp+88h]
+  10017531: 89 45 3C           mov         dword ptr [ebp+3Ch],eax
+  10017534: 0F 57 C0           xorps       xmm0,xmm0
+  10017537: 66 0F 13 85 2C FF  movlpd      qword ptr [ebp-0D4h],xmm0
+            FF FF
+  1001753F: 66 0F 13 85 34 FF  movlpd      qword ptr [ebp-0CCh],xmm0
+            FF FF
+  10017547: C7 85 3C FF FF FF  mov         dword ptr [ebp-0C4h],0
+            00 00 00 00
+  10017551: 66 C7 85 40 FF FF  mov         word ptr [ebp-0C0h],0
+            FF 00 00
+  1001755A: C7 85 44 FF FF FF  mov         dword ptr [ebp-0BCh],0
+            00 00 00 00
+  10017564: 66 0F 13 85 4C FF  movlpd      qword ptr [ebp-0B4h],xmm0
+            FF FF
+  1001756C: C7 85 54 FF FF FF  mov         dword ptr [ebp-0ACh],0
+            00 00 00 00
+  10017576: C7 85 58 FF FF FF  mov         dword ptr [ebp-0A8h],0
+            00 00 00 00
+  10017580: 66 0F 13 85 5C FF  movlpd      qword ptr [ebp-0A4h],xmm0
+            FF FF
+  10017588: C7 85 64 FF FF FF  mov         dword ptr [ebp-9Ch],0
+            00 00 00 00
+  10017592: C7 85 68 FF FF FF  mov         dword ptr [ebp-98h],0
+            00 00 00 00
+  1001759C: 66 0F 13 85 6C FF  movlpd      qword ptr [ebp-94h],xmm0
+            FF FF
+  100175A4: C7 85 74 FF FF FF  mov         dword ptr [ebp-8Ch],0
+            00 00 00 00
+  100175AE: C7 85 7C FF FF FF  mov         dword ptr [ebp-84h],0
+            00 00 00 00
+  100175B8: C7 45 80 00 00 00  mov         dword ptr [ebp-80h],0
+            00
+  100175BF: C7 45 84 00 00 00  mov         dword ptr [ebp-7Ch],0
+            00
+  100175C6: C7 45 88 00 00 00  mov         dword ptr [ebp-78h],0
+            00
+  100175CD: C7 45 8C 00 00 00  mov         dword ptr [ebp-74h],0
+            00
+  100175D4: C7 45 90 00 00 00  mov         dword ptr [ebp-70h],0
+            00
+  100175DB: C7 45 94 00 00 00  mov         dword ptr [ebp-6Ch],0
+            00
+  100175E2: C7 45 98 00 00 00  mov         dword ptr [ebp-68h],0
+            00
+  100175E9: C7 45 9C 00 00 00  mov         dword ptr [ebp-64h],0
+            00
+  100175F0: C7 45 A0 00 00 00  mov         dword ptr [ebp-60h],0
+            00
+  100175F7: F2 0F 11 45 A4     movsd       mmword ptr [ebp-5Ch],xmm0
+  100175FC: C6 45 AC 00        mov         byte ptr [ebp-54h],0
+  10017600: C7 45 B4 00 00 00  mov         dword ptr [ebp-4Ch],0
+            00
+  10017607: C7 45 B8 00 00 00  mov         dword ptr [ebp-48h],0
+            00
+  1001760E: C7 45 BC 00 00 00  mov         dword ptr [ebp-44h],0
+            00
+  10017615: C7 45 C0 00 00 00  mov         dword ptr [ebp-40h],0
+            00
+  1001761C: C7 45 C4 00 00 00  mov         dword ptr [ebp-3Ch],0
+            00
+  10017623: C7 45 C8 00 00 00  mov         dword ptr [ebp-38h],0
+            00
+  1001762A: C7 45 CC 00 00 00  mov         dword ptr [ebp-34h],0
+            00
+  10017631: C7 45 D0 00 00 00  mov         dword ptr [ebp-30h],0
+            00
+  10017638: C7 45 D4 00 00 00  mov         dword ptr [ebp-2Ch],0
+            00
+  1001763F: C7 45 D8 00 00 00  mov         dword ptr [ebp-28h],0
+            00
+  10017646: 64 8B 3D 2C 00 00  mov         edi,dword ptr fs:[2Ch]
+            00
+  1001764D: 8B 1D A0 E4 08 10  mov         ebx,dword ptr [__tls_index]
+  10017653: 8B 14 9F           mov         edx,dword ptr [edi+ebx*4]
+  10017656: 8B 8A 60 17 00 00  mov         ecx,dword ptr [edx+1760h]
+  1001765C: 89 8D 24 FF FF FF  mov         dword ptr [ebp-0DCh],ecx
+  10017662: 85 C9              test        ecx,ecx
+  10017664: 74 0C              je          10017672
+  10017666: 8B 41 18           mov         eax,dword ptr [ecx+18h]
+  10017669: 40                 inc         eax
+  1001766A: 89 85 3C FF FF FF  mov         dword ptr [ebp-0C4h],eax
+  10017670: EB 0A              jmp         1001767C
+  10017672: C7 85 3C FF FF FF  mov         dword ptr [ebp-0C4h],1
+            01 00 00 00
+  1001767C: 85 C9              test        ecx,ecx
+  1001767E: 75 06              jne         10017686
+  10017680: 88 8A 5C 17 00 00  mov         byte ptr [edx+175Ch],cl
+  10017686: 8D 85 24 FF FF FF  lea         eax,[ebp-0DCh]
+  1001768C: 89 82 60 17 00 00  mov         dword ptr [edx+1760h],eax
+  10017692: C7 45 E0 00 00 00  mov         dword ptr [ebp-20h],0
+            00
+  10017699: C6 45 E7 00        mov         byte ptr [ebp-19h],0
+  1001769D: 9B                 wait
+  1001769E: C7 45 FC 00 00 00  mov         dword ptr [ebp-4],0
+            00
+  100176A5: 8B 45 48           mov         eax,dword ptr [ebp+48h]
+  100176A8: 50                 push        eax
+  100176A9: 8D 45 00           lea         eax,[ebp]
+  100176AC: 50                 push        eax
+  100176AD: 8D 85 24 FF FF FF  lea         eax,[ebp-0DCh]
+  100176B3: 50                 push        eax
+  100176B4: E8 47 EC FF FF     call        10016300
+  100176B9: 8D 45 00           lea         eax,[ebp]
+  100176BC: 50                 push        eax
+  100176BD: 8D 85 24 FF FF FF  lea         eax,[ebp-0DCh]
+  100176C3: 50                 push        eax
+  100176C4: E8 A7 F7 FF FF     call        10016E70
+  100176C9: 8D 45 00           lea         eax,[ebp]
+  100176CC: 50                 push        eax
+  100176CD: FF 35 28 E4 08 10  push        dword ptr ds:[1008E428h]
+  100176D3: E8 78 F6 FF FF     call        ?Forward@spawn@nvo@@YAPAXP6APAXIIIIIIIIIIIIIIII@ZABV?$array@I$0BA@@std@@@Z
+  100176D8: 8B F0              mov         esi,eax
+  100176DA: 89 75 E0           mov         dword ptr [ebp-20h],esi
+  100176DD: 56                 push        esi
+  100176DE: 8D 85 24 FF FF FF  lea         eax,[ebp-0DCh]
+  100176E4: 50                 push        eax
+  100176E5: E8 B6 F3 FF FF     call        10016AA0
+  100176EA: 88 45 DC           mov         byte ptr [ebp-24h],al
+  100176ED: FF 75 DC           push        dword ptr [ebp-24h]
+  100176F0: 56                 push        esi
+  100176F1: 8D 85 24 FF FF FF  lea         eax,[ebp-0DCh]
+  100176F7: 50                 push        eax
+  100176F8: E8 73 FC FF FF     call        10017370
+  100176FD: 83 C4 30           add         esp,30h
+  10017700: B0 01              mov         al,1
+  10017702: 88 45 E7           mov         byte ptr [ebp-19h],al
+  10017705: 9B                 wait
+  10017706: C7 45 FC FE FF FF  mov         dword ptr [ebp-4],0FFFFFFFEh
+            FF
+  1001770D: E8 32 00 00 00     call        10017744
+  10017712: 8B C6              mov         eax,esi
+  10017714: 8B 4D F0           mov         ecx,dword ptr [ebp-10h]
+  10017717: 64 89 0D 00 00 00  mov         dword ptr fs:[0],ecx
+            00
+  1001771E: 59                 pop         ecx
+  1001771F: 5F                 pop         edi
+  10017720: 5E                 pop         esi
+  10017721: 5B                 pop         ebx
+  10017722: 8B 4D 40           mov         ecx,dword ptr [ebp+40h]
+  10017725: 33 CD              xor         ecx,ebp
+  10017727: E8 74 00 00 00     call        @__security_check_cookie@4
+  1001772C: 8D 65 44           lea         esp,[ebp+44h]
+  1001772F: 5D                 pop         ebp
+  10017730: C3                 ret
+  10017731: 8B 1D A0 E4 08 10  mov         ebx,dword ptr [__tls_index]
+  10017737: 64 8B 3D 2C 00 00  mov         edi,dword ptr fs:[2Ch]
+            00
+  1001773E: 8B 75 E0           mov         esi,dword ptr [ebp-20h]
+  10017741: 8A 45 E7           mov         al,byte ptr [ebp-19h]
+  10017744: 84 C0              test        al,al
+  10017746: 75 3A              jne         10017782
+  10017748: 8B 85 4C FF FF FF  mov         eax,dword ptr [ebp-0B4h]
+  1001774E: 0B 85 50 FF FF FF  or          eax,dword ptr [ebp-0B0h]
+  10017754: 74 2C              je          10017782
+  10017756: 8B 85 5C FF FF FF  mov         eax,dword ptr [ebp-0A4h]
+  1001775C: 0B 85 60 FF FF FF  or          eax,dword ptr [ebp-0A0h]
+  10017762: 74 1E              je          10017782
+  10017764: 8B 85 6C FF FF FF  mov         eax,dword ptr [ebp-94h]
+  1001776A: 0B 85 70 FF FF FF  or          eax,dword ptr [ebp-90h]
+  10017770: 74 10              je          10017782
+  10017772: B9 04 00 00 00     mov         ecx,4
+  10017777: BA 94 E2 05 10     mov         edx,offset ?processFault@admission@nvo@@3U?$atomic@W4Fault@admission@nvo@@@std@@A
+  1001777C: 33 C0              xor         eax,eax
+  1001777E: F0 0F B1 0A        lock cmpxchg dword ptr [edx],ecx
+  10017782: 8B 0C 9F           mov         ecx,dword ptr [edi+ebx*4]
+  10017785: 8B 85 24 FF FF FF  mov         eax,dword ptr [ebp-0DCh]
+  1001778B: 89 81 60 17 00 00  mov         dword ptr [ecx+1760h],eax
+  10017791: C3                 ret
+  10017792: CC CC CC CC CC CC CC CC CC CC CC CC CC CC        лллллллллллллл

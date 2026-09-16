@@ -1,0 +1,14 @@
+# Packet 3C1 movement-route diagnostic boundary
+
+Version 306 addresses missing diagnostic evidence from the 305 zero-update test. It does not assert the movement/physics connection has been fixed. One read-only checkpoint is added at CALL 009BF411 (original target 0092F260, engine return 009BF416). The old matrix hook at 00930255 remains under the same identity/stack/rotation/write guards and uses the same integration. No hook address is substituted speculatively.
+
+MovementBridge preserves GP/EFLAGS/x87/SSE/MXCSR and passes the original ECX receiver, float dt, vector pointer and EBP to BeforeMovement. It tail-jumps to the original, leaving receiver, three arguments and return untouched; the engine callee's ret 0C performs cleanup. The helper records only counters and bounded log rows. Its expected input is caller frame+0C and saved parent return 009BF35D. Game object reads occur synchronously while the original call owns the object; no asynchronous retained pointer dereference. No lock crosses the original engine call.
+
+BeforeMatrix now counts all active entries, stack failures, return mismatches, owner-read failures, untracked owners and stopped owners. First eight early failures per capture include bounded raw addresses, without scanning stack contents. Each private identity counts movement/matrix visits. First eight private identities log at most four movement-entry rows each. PHYSICS_NO_UPDATE is emitted at most once per zero-update lifetime and at most 16 per capture. PHYSICS_ROUTE_SUMMARY provides total counts at load/exit. ARMING is labelled PHYSICS_ARMED with execution_observed=0; actual PHYSICS_STEP plus engine displacement is still needed for acceptance.
+
+Both five-byte CALL patches are byte/fingerprint guarded and installed transactionally during DeferredInit. Only verified own patch bytes are normalized before physics/timing fingerprints. Both page protections and instruction caches are handled; failed transactions restore owned original bytes without overwriting another hook. No update-time patching or global matrix-function detour. Source provenance in reference/FLIGHT-ROUTE-CHECKPOINT.json points at the existing read-only decoded capture; no game executable code is distributed.
+
+Four modules (CurrentHit, NativeObserver, DamageEvents, FlightPreview) are unchanged from 305. FlightTiming only adds owned-hook normalization to its existing fingerprint reader so the new entry checkpoint does not disable timing. NativeLog reserves priority capacity for the new zero-update/armed messages. New packet installs only DLL/PDB; all existing INIs, records and dependencies remain.
+
+Runtime execution of the new checkpoint and exact cause of zero updates require the next user capture. Ask for two distant private shots outside VATS only; no repeat of unchanged six-shot or stress coverage. Do not accept movement from hook installation alone or weaken a failing guard based solely on expected behaviour.
+

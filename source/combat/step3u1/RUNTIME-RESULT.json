@@ -1,0 +1,51 @@
+{
+  "packet": "3U1",
+  "native_version": 325,
+  "capture_sha256": "7337bf485a5cb219ec4cd4e2bfc37121a0936e3c5bd5091dba801b3ca3de65a2",
+  "verdict": "partial_pass_null_world_not_observed",
+  "startup_banners": 1,
+  "sessions": 2,
+  "reload_observed": true,
+  "shots_selected": 5,
+  "profiles": {
+    "9mm-pistol": 5
+  },
+  "collisions": 3,
+  "contact_kind_counts": {
+    "invalid_0": 0,
+    "world_1": 0,
+    "reference_2": 3
+  },
+  "collision_lifetimes": [
+    3,
+    4,
+    5
+  ],
+  "collision_regions": [
+    -1,
+    0,
+    -1
+  ],
+  "distant_no_contact_lifetimes": [
+    1,
+    2
+  ],
+  "distant_no_contact_life_s": [
+    3.082,
+    3.072
+  ],
+  "actor_reference_join_preserved": true,
+  "actor_join_speed_available": true,
+  "correlated_callbacks": 3,
+  "unpaired_callbacks": 0,
+  "available_speed_ranges": 3,
+  "applied_steps": 371,
+  "movement_mismatches": 0,
+  "accounting_unpaired": 0,
+  "open_lifetimes": 0,
+  "pool_resets_zero": true,
+  "terrain_clamps_observed": 0,
+  "damage_replacement": false,
+  "game_loaded_by_reviewer": false,
+  "repeat_needed": "one close standard-9mm shot directly into bare landscape ground, then quit normally"
+}

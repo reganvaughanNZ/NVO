@@ -1,0 +1,15 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>NVO Combat 3F2</title>
+<style>body{max-width:880px;margin:40px auto;padding:0 22px;background:#151d1a;color:#eef5ef;font:18px/1.6 system-ui}h1{line-height:1.2}a{color:#b0e1c1}aside{background:#273d31;padding:18px}button{font:inherit;padding:8px 16px;cursor:pointer}li{margin:12px 0}code{background:#29332f;padding:3px 6px}</style>
+<h1>3F2: keep failed terrain queries from lifting bullets</h1>
+<p>The engine can report no terrain height, then use its default <code>-2048</code> anyway. This packet prevents that adjustment for verified NVO bullets. Your test checks that the correction runs and the bullet still passes our movement checks.</p>
+<aside><strong>Native build313 / 0.3.13.</strong> Keep NVO.esm and NVOFlightPilot.esp active as before. No GECK work. HP selection after loading still needs manual confirmation.</aside>
+<h2>Short test</h2><ol>
+<li>Launch New Vegas and load your prepared test save. Wait3 seconds. Use the ordinary Hunting Rifle and standard .308 ammunition.</li>
+<li>Repeat the distant VATS setup used for shot3, which missed. Fire one shot and wait15 seconds after VATS ends. If it hits, you may try up to two more shots, waiting after each. Report the actual results; do not keep trying indefinitely.</li>
+<li>Load the test save once and wait3 seconds. Manually select .308 HP and let the ammo-switch animation finish. Make one farther-away VATS shot at a live target, as in your previous successful HP test.</li>
+<li>Wait15 seconds, exit and report the shot order, misses/hits, and any unusual movement or crash. I will read the log directly.</li></ol>
+<p>If you need supplies: <code>bat NVOFlightKit3F</code> <button id="copy">Copy kit command</button> <span id="notice" role="status"></span></p>
+<p>No extra stress test or AP cycle is needed. If no miss reproduces the long-flight path, report that; a quiet log alone does not establish the correction.</p>
+<h2>What I will check</h2><p>Correct ammo identity, failed terrain-query correction followed by matching displacement, clean reload and the final HP hit. The existing <code>NVOCombatCore.log</code> stays in the game root. Native damage replacement remains off.</p>
+<p><a href="Installation/INSTALL-3F2.md">Installed files and rollback</a> · <a href="Installation/IMPLEMENTATION.md">Implementation</a> · <a href="Installation/STATIC-CHECKS.json">Build checks</a></p>
+<script>document.getElementById('copy').onclick=async()=>{try{await navigator.clipboard.writeText('bat NVOFlightKit3F');document.getElementById('notice').textContent='Copied';}catch{document.getElementById('notice').textContent='Select and copy the command shown above.'}};</script></html>

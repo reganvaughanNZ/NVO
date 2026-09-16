@@ -1,0 +1,21 @@
+PASS revision malformed
+PASS revision malformed
+PASS revision malformed
+PASS plugin malformed
+PASS plugin malformed
+PASS plugin malformed
+PASS local_id malformed
+PASS local_id malformed
+PASS expected_equip_mask malformed
+PASS expected_equip_mask malformed
+PASS missing region
+PASS invented region
+PASS unapproved coverage fraction
+PASS boolean extent
+PASS damage settings not accepted
+PASS duplicate origin key
+PASS boolean schema
+PASS empty catalog
+PASS catalog cap
+PASS duplicate JSON fields
+PASS 21 profile-authoring checks

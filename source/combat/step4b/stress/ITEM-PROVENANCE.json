@@ -1,0 +1,777 @@
+{
+  "count": 128,
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\FalloutNV.esm",
+  "source_sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b",
+  "selection": "Explicit list of distinct ordinary MISC forms; no script, deleted or quest-item flag in base record.",
+  "script_flag_basis": "Local xNVSE GameForms.h:321-322: Deleted0x20, QuestItem0x400. Raw MISC subrecords filtered for absent SCRI.",
+  "items": [
+    {
+      "form": "0001B01F",
+      "edid": "Crutch",
+      "name": "Crutch",
+      "flags": 0
+    },
+    {
+      "form": "0001F21F",
+      "edid": "TeddyBear01",
+      "name": "Teddy Bear",
+      "flags": 0
+    },
+    {
+      "form": "000220FB",
+      "edid": "MotorcycleGasTank",
+      "name": "Motorcycle Gas Tank",
+      "flags": 0
+    },
+    {
+      "form": "000220FC",
+      "edid": "PilotLight",
+      "name": "Pilot Light",
+      "flags": 0
+    },
+    {
+      "form": "000220FE",
+      "edid": "MotorcycleHandbrake",
+      "name": "Motorcycle Handbrake",
+      "flags": 0
+    },
+    {
+      "form": "00022100",
+      "edid": "LeafBlower",
+      "name": "Leaf Blower",
+      "flags": 0
+    },
+    {
+      "form": "00022101",
+      "edid": "FirehoseNozzle",
+      "name": "Firehose Nozzle",
+      "flags": 0
+    },
+    {
+      "form": "00022102",
+      "edid": "Conductor",
+      "name": "Conductor",
+      "flags": 0
+    },
+    {
+      "form": "00022103",
+      "edid": "NukaColaBottle",
+      "name": "Empty Nuka-Cola Bottle",
+      "flags": 0
+    },
+    {
+      "form": "00022104",
+      "edid": "TinCan01",
+      "name": "Tin Can",
+      "flags": 0
+    },
+    {
+      "form": "00022105",
+      "edid": "Turpentine",
+      "name": "Turpentine",
+      "flags": 0
+    },
+    {
+      "form": "00022106",
+      "edid": "AbraxoCleaner",
+      "name": "Abraxo Cleaner",
+      "flags": 0
+    },
+    {
+      "form": "00022107",
+      "edid": "Lunchbox",
+      "name": "Lunchbox",
+      "flags": 0
+    },
+    {
+      "form": "00022108",
+      "edid": "CherryBomb",
+      "name": "Cherry Bomb",
+      "flags": 0
+    },
+    {
+      "form": "00022109",
+      "edid": "SensorModule",
+      "name": "Sensor Module",
+      "flags": 0
+    },
+    {
+      "form": "0002210A",
+      "edid": "WonderGlue",
+      "name": "Wonderglue",
+      "flags": 0
+    },
+    {
+      "form": "0002210B",
+      "edid": "DeathclawHand",
+      "name": "Deathclaw Hand",
+      "flags": 0
+    },
+    {
+      "form": "0002210C",
+      "edid": "LeatherBelt",
+      "name": "Leather Belt",
+      "flags": 0
+    },
+    {
+      "form": "0002210D",
+      "edid": "MedicalBrace",
+      "name": "Medical Brace",
+      "flags": 0
+    },
+    {
+      "form": "0002210E",
+      "edid": "PaintGun",
+      "name": "Paint Gun",
+      "flags": 0
+    },
+    {
+      "form": "0002210F",
+      "edid": "RadscorpionPoisonGland",
+      "name": "Radscorpion Poison Gland",
+      "flags": 0
+    },
+    {
+      "form": "00022110",
+      "edid": "ToyCar",
+      "name": "Toy Car",
+      "flags": 0
+    },
+    {
+      "form": "00022111",
+      "edid": "SurgicalTubing",
+      "name": "Surgical Tubing",
+      "flags": 0
+    },
+    {
+      "form": "00022112",
+      "edid": "SteamGaugeAssembly",
+      "name": "Steam Gauge Assembly",
+      "flags": 0
+    },
+    {
+      "form": "00022113",
+      "edid": "PressureCooker",
+      "name": "Pressure Cooker",
+      "flags": 0
+    },
+    {
+      "form": "000250A3",
+      "edid": "SurgicalBonesaw01",
+      "name": "Bonesaw",
+      "flags": 0
+    },
+    {
+      "form": "000250A4",
+      "edid": "SurgicalScissors01",
+      "name": "Scissors",
+      "flags": 0
+    },
+    {
+      "form": "000250A5",
+      "edid": "SurgicalScalpel01",
+      "name": "Scalpel",
+      "flags": 0
+    },
+    {
+      "form": "000250A6",
+      "edid": "SurgicalTweasers01",
+      "name": "Tweezers",
+      "flags": 0
+    },
+    {
+      "form": "000250A7",
+      "edid": "SurgicalForceps01",
+      "name": "Forceps",
+      "flags": 0
+    },
+    {
+      "form": "000250A8",
+      "edid": "SurgicalSyringe01",
+      "name": "Empty Syringe",
+      "flags": 0
+    },
+    {
+      "form": "00025235",
+      "edid": "Clipboard01",
+      "name": "Medical Clipboard",
+      "flags": 0
+    },
+    {
+      "form": "00025236",
+      "edid": "Clipboard04",
+      "name": "Finance Clipboard",
+      "flags": 0
+    },
+    {
+      "form": "00025237",
+      "edid": "Clipboard03",
+      "name": "Earnings Clipboard",
+      "flags": 0
+    },
+    {
+      "form": "00025238",
+      "edid": "Clipboard02",
+      "name": "Clipboard",
+      "flags": 0
+    },
+    {
+      "form": "0002541B",
+      "edid": "BigPot",
+      "name": "Pot",
+      "flags": 0
+    },
+    {
+      "form": "0002541C",
+      "edid": "Plate04",
+      "name": "Tin Plate",
+      "flags": 0
+    },
+    {
+      "form": "00025421",
+      "edid": "CoffeeKettle",
+      "name": "Coffee Pot",
+      "flags": 0
+    },
+    {
+      "form": "00025E03",
+      "edid": "LawnmowerBlade",
+      "name": "Lawn Mower Blade",
+      "flags": 0
+    },
+    {
+      "form": "00029171",
+      "edid": "NukaTruck",
+      "name": "Nuka-Cola Truck",
+      "flags": 0
+    },
+    {
+      "form": "0002B40B",
+      "edid": "Baseball01",
+      "name": "Baseball",
+      "flags": 0
+    },
+    {
+      "form": "0002B40E",
+      "edid": "Basketball",
+      "name": "Basketball",
+      "flags": 0
+    },
+    {
+      "form": "0002B410",
+      "edid": "BaseballGlove",
+      "name": "Baseball Glove",
+      "flags": 0
+    },
+    {
+      "form": "0002B412",
+      "edid": "PoolBall",
+      "name": "Pool Ball",
+      "flags": 0
+    },
+    {
+      "form": "0002B415",
+      "edid": "pool2ball",
+      "name": "2 Ball",
+      "flags": 0
+    },
+    {
+      "form": "0002B417",
+      "edid": "pool5ball",
+      "name": "5 Ball",
+      "flags": 0
+    },
+    {
+      "form": "0002B419",
+      "edid": "pool8ball",
+      "name": "8 Ball",
+      "flags": 0
+    },
+    {
+      "form": "0002B41B",
+      "edid": "pool10ball",
+      "name": "10 Ball",
+      "flags": 0
+    },
+    {
+      "form": "0002B41D",
+      "edid": "pool13ball",
+      "name": "13 Ball",
+      "flags": 0
+    },
+    {
+      "form": "0002B41F",
+      "edid": "poolcueball",
+      "name": "Cue Ball",
+      "flags": 0
+    },
+    {
+      "form": "0002C5F6",
+      "edid": "poolTriangle",
+      "name": "Triangle",
+      "flags": 0
+    },
+    {
+      "form": "00031944",
+      "edid": "SpareParts",
+      "name": "Scrap Metal",
+      "flags": 0
+    },
+    {
+      "form": "00033BC6",
+      "edid": "FissionBattery",
+      "name": "Fission Battery",
+      "flags": 0
+    },
+    {
+      "form": "00034057",
+      "edid": "Ashtray",
+      "name": "Ashtray",
+      "flags": 0
+    },
+    {
+      "form": "0003405E",
+      "edid": "SkullBrahmin",
+      "name": "Brahmin Skull",
+      "flags": 0
+    },
+    {
+      "form": "00034062",
+      "edid": "Camera",
+      "name": "Camera",
+      "flags": 0
+    },
+    {
+      "form": "00034067",
+      "edid": "PrewarMoney",
+      "name": "Pre-war Money",
+      "flags": 0
+    },
+    {
+      "form": "00034068",
+      "edid": "CigaretteCarton",
+      "name": "Carton of Cigarettes",
+      "flags": 0
+    },
+    {
+      "form": "00034069",
+      "edid": "CigarettePack",
+      "name": "Pack of Cigarettes",
+      "flags": 0
+    },
+    {
+      "form": "0003406C",
+      "edid": "CoffeeMug01",
+      "name": "Coffee Mug",
+      "flags": 0
+    },
+    {
+      "form": "0003406E",
+      "edid": "BoardCutting",
+      "name": "Cutting Board",
+      "flags": 0
+    },
+    {
+      "form": "0003406F",
+      "edid": "BoxDetergent",
+      "name": "Box of Detergent",
+      "flags": 0
+    },
+    {
+      "form": "00034070",
+      "edid": "BowlDog",
+      "name": "Dog Bowl",
+      "flags": 0
+    },
+    {
+      "form": "00034078",
+      "edid": "Fork01",
+      "name": "Fork",
+      "flags": 0
+    },
+    {
+      "form": "0003407A",
+      "edid": "GnomeGarden",
+      "name": "Garden Gnome",
+      "flags": 0
+    },
+    {
+      "form": "0003407B",
+      "edid": "DrinkingGlass01",
+      "name": "Cup",
+      "flags": 0
+    },
+    {
+      "form": "00034088",
+      "edid": "Iron",
+      "name": "Iron",
+      "flags": 0
+    },
+    {
+      "form": "0003409C",
+      "edid": "PanCookingMetal",
+      "name": "Metal Cooking Pan",
+      "flags": 0
+    },
+    {
+      "form": "0003409D",
+      "edid": "Paperweight",
+      "name": "Paperweight",
+      "flags": 0
+    },
+    {
+      "form": "000340A0",
+      "edid": "PlateDinnerCeramic",
+      "name": "Ceramic Dinner Plate",
+      "flags": 0
+    },
+    {
+      "form": "000340A4",
+      "edid": "Plunger",
+      "name": "Plunger",
+      "flags": 0
+    },
+    {
+      "form": "000340A7",
+      "edid": "PotCookingMetal",
+      "name": "Metal Cooking Pot",
+      "flags": 0
+    },
+    {
+      "form": "000340AD",
+      "edid": "Rake",
+      "name": "Rake",
+      "flags": 0
+    },
+    {
+      "form": "000340B5",
+      "edid": "ShotGlass01",
+      "name": "Shot glass",
+      "flags": 0
+    },
+    {
+      "form": "000340BB",
+      "edid": "Spatula01",
+      "name": "Spatula",
+      "flags": 0
+    },
+    {
+      "form": "000340BC",
+      "edid": "Spoon01",
+      "name": "Metal Spoon",
+      "flags": 0
+    },
+    {
+      "form": "0003A73A",
+      "edid": "MedicalBraceNew",
+      "name": "Medical Brace",
+      "flags": 0
+    },
+    {
+      "form": "0005516B",
+      "edid": "HotPlate",
+      "name": "Hot Plate",
+      "flags": 0
+    },
+    {
+      "form": "0005B52C",
+      "edid": "Cigarette01",
+      "name": "Cigarette",
+      "flags": 0
+    },
+    {
+      "form": "0005B59F",
+      "edid": "DinnerPlate01",
+      "name": "Dinner Plate",
+      "flags": 0
+    },
+    {
+      "form": "0005B633",
+      "edid": "DrinkingGlass02",
+      "name": "Drinking Glass",
+      "flags": 0
+    },
+    {
+      "form": "0005B634",
+      "edid": "GardenGnome01",
+      "name": "Intact Garden Gnome",
+      "flags": 0
+    },
+    {
+      "form": "0005B635",
+      "edid": "GardenGnomeDestroyed01",
+      "name": "Damaged Garden Gnome",
+      "flags": 0
+    },
+    {
+      "form": "0005B636",
+      "edid": "GlassPitcher01",
+      "name": "Glass Pitcher",
+      "flags": 0
+    },
+    {
+      "form": "0005B637",
+      "edid": "Hammer01",
+      "name": "Hammer",
+      "flags": 0
+    },
+    {
+      "form": "0005B638",
+      "edid": "Harmonica01",
+      "name": "Harmonica",
+      "flags": 0
+    },
+    {
+      "form": "0005B639",
+      "edid": "Knife01",
+      "name": "Butter Knife",
+      "flags": 0
+    },
+    {
+      "form": "0005B63A",
+      "edid": "Knife02",
+      "name": "Butter Knife",
+      "flags": 0
+    },
+    {
+      "form": "0005B63B",
+      "edid": "Milkbottle01",
+      "name": "Milk Bottle",
+      "flags": 0
+    },
+    {
+      "form": "0005B63C",
+      "edid": "Pencil01",
+      "name": "Pencil",
+      "flags": 0
+    },
+    {
+      "form": "0005B63D",
+      "edid": "Plate01",
+      "name": "White Plate",
+      "flags": 0
+    },
+    {
+      "form": "0005B63E",
+      "edid": "Plate02",
+      "name": "Red Plate",
+      "flags": 0
+    },
+    {
+      "form": "0005B63F",
+      "edid": "Plate03",
+      "name": "Green Plate",
+      "flags": 0
+    },
+    {
+      "form": "0005B640",
+      "edid": "SpoonBig01",
+      "name": "Big Spoon",
+      "flags": 0
+    },
+    {
+      "form": "0005B641",
+      "edid": "Spork01",
+      "name": "Spork",
+      "flags": 0
+    },
+    {
+      "form": "0005B6CA",
+      "edid": "TinCan02",
+      "name": "Bent Tin Can",
+      "flags": 0
+    },
+    {
+      "form": "0005B6CB",
+      "edid": "WhetStone01",
+      "name": "Whet Stone",
+      "flags": 0
+    },
+    {
+      "form": "0005B6CD",
+      "edid": "ScotchBottle01Empty01",
+      "name": "Large Whiskey Bottle",
+      "flags": 0
+    },
+    {
+      "form": "0005B6CE",
+      "edid": "WhiskeyBottle01Empty01",
+      "name": "Empty Whiskey Bottle",
+      "flags": 0
+    },
+    {
+      "form": "0005B6D0",
+      "edid": "Wrench01",
+      "name": "Wrench",
+      "flags": 0
+    },
+    {
+      "form": "0005F183",
+      "edid": "Opthalmoscope",
+      "name": "Ophthalmoscope",
+      "flags": 0
+    },
+    {
+      "form": "00074EE1",
+      "edid": "Flour",
+      "name": "Flour",
+      "flags": 0
+    },
+    {
+      "form": "0007CBCC",
+      "edid": "WoodChipper",
+      "name": "Wood Chipper",
+      "flags": 0
+    },
+    {
+      "form": "000943F2",
+      "edid": "PreWarBook",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "0009A807",
+      "edid": "ToasterPostwar",
+      "name": "Toaster",
+      "flags": 0
+    },
+    {
+      "form": "0009A808",
+      "edid": "ToasterPrewar",
+      "name": "Toaster",
+      "flags": 0
+    },
+    {
+      "form": "0009A809",
+      "edid": "Chessboard",
+      "name": "Chessboard",
+      "flags": 0
+    },
+    {
+      "form": "0009AA4E",
+      "edid": "SodaBottleEmpty01",
+      "name": "Empty Soda Bottle",
+      "flags": 0
+    },
+    {
+      "form": "000A9E69",
+      "edid": "BurnedBook02",
+      "name": "Small Ruined Book",
+      "flags": 0
+    },
+    {
+      "form": "000A9E6A",
+      "edid": "BurnedBook03",
+      "name": "Small Scorched Book",
+      "flags": 0
+    },
+    {
+      "form": "000A9E6B",
+      "edid": "BurnedBook04",
+      "name": "Small Destroyed Book",
+      "flags": 0
+    },
+    {
+      "form": "000A9E6C",
+      "edid": "BurnedBook05",
+      "name": "Large Burned Book",
+      "flags": 0
+    },
+    {
+      "form": "000A9E6D",
+      "edid": "BurnedBook06",
+      "name": "Large Ruined Book",
+      "flags": 0
+    },
+    {
+      "form": "000A9E6E",
+      "edid": "BurnedBook07",
+      "name": "Large Scorched Book",
+      "flags": 0
+    },
+    {
+      "form": "000A9E6F",
+      "edid": "BurnedBook08",
+      "name": "Large Destroyed Book",
+      "flags": 0
+    },
+    {
+      "form": "000A9E70",
+      "edid": "BurnedBook01",
+      "name": "Small Burned Book",
+      "flags": 0
+    },
+    {
+      "form": "000C5D24",
+      "edid": "BookGeneric01",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "000C9403",
+      "edid": "JournalGeneric",
+      "name": "Danielle's Book",
+      "flags": 0
+    },
+    {
+      "form": "000CD18B",
+      "edid": "DinoToy",
+      "name": "Dino Toy",
+      "flags": 0
+    },
+    {
+      "form": "000E6627",
+      "edid": "DeathclawEggNV",
+      "name": "Deathclaw Egg",
+      "flags": 0
+    },
+    {
+      "form": "000EE6CC",
+      "edid": "MantisLeg",
+      "name": "Mantis Foreleg",
+      "flags": 0
+    },
+    {
+      "form": "000FC9BA",
+      "edid": "BookGeneric03b",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "000FC9BB",
+      "edid": "BookGeneric04b",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "000FC9BC",
+      "edid": "BookGeneric05b",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "000FC9BD",
+      "edid": "BookGeneric06b",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "000FC9BE",
+      "edid": "BookGeneric07b",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "000FC9BF",
+      "edid": "BookGeneric08b",
+      "name": "Pre-War Book",
+      "flags": 0
+    },
+    {
+      "form": "000FC9C0",
+      "edid": "BookGeneric02b",
+      "name": "Pre-War Book",
+      "flags": 0
+    }
+  ]
+}

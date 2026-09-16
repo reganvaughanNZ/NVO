@@ -1,0 +1,20 @@
+{
+  "installed": [
+    {
+      "path": "NVOStressKit4B.txt",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-4B-Stress-Check\\NVOStressKit4B.txt",
+      "sha256": "446c0e5b25e83ba7e9fa807cea04f794bc4b56d924098fdb56604d3ab90649ce"
+    },
+    {
+      "path": "NVOStressTarget4B.txt",
+      "source": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\release\\NVO-Combat-Packet-4B-Stress-Check\\NVOStressTarget4B.txt",
+      "sha256": "19fd0f7053e84dc89c55988fc3897b0b3d584398de7b48ac97412b640b530c84"
+    }
+  ],
+  "native_unchanged": true,
+  "packet": "4B-stress",
+  "process_actions": 0,
+  "gameplay_tested": false,
+  "protected_files_verified": 12,
+  "status": "installed"
+}

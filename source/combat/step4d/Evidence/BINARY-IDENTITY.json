@@ -1,0 +1,19 @@
+{
+  "machine": "PE32 x86",
+  "exports": [
+    "NVSEPlugin_Load",
+    "NVSEPlugin_Query"
+  ],
+  "warnings": 0,
+  "dll_sha256": "3f0f68fa2a060ab7ffb6f832013d28388b0871b8a2b3c9f758fddeb826049c5b",
+  "pdb_sha256": "afc7e8caee6c777d2d925a2adf56f6fe02e413ed9ac87f996cb638140fc1d281",
+  "codeview_pdb_guid": "c7653503-fb95-40c9-bf65-2b0266de3779",
+  "pdb_age": 1,
+  "pdb_pair_verified": true,
+  "dll_bytes": 443392,
+  "pdb_bytes": 5558272,
+  "validation_scope": "Compilation and static identity/source/assembly inspection only. No DLL execution or gameplay tests.",
+  "imports": [
+    "KERNEL32.dll"
+  ]
+}

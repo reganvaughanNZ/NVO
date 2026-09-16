@@ -1,0 +1,43 @@
+{
+  "capture": "source/combat/step3b2/timing-investigation/runtime-20260915-102703",
+  "code_sha256": "f6c95eb7e7ea3f5968770d6a8b807260f160e08ff2be6e085ade515376f3b452",
+  "missile_vtable": "0108FA44",
+  "slot": "0108FD54",
+  "fingerprints": [
+    {
+      "name": "missile_update",
+      "address": "009B8030",
+      "size": 2149,
+      "fnv1a64": "A1B80FE6DF917F84",
+      "sha256": "0bd5eec023bdcf30d26ed05a221bbdaa1b224e513598d61443c515f51fa3b3b7"
+    },
+    {
+      "name": "base_dispatch_and_lifetime",
+      "address": "009BEF65",
+      "size": 65,
+      "fnv1a64": "BDC0B598AD95B05E",
+      "sha256": "bb957251325c9db3d6bfdf4ec1daf0f3d7b9000eec3ac4e501fd782cf5ab6b89"
+    },
+    {
+      "name": "move_wrapper",
+      "address": "009BF300",
+      "size": 99,
+      "fnv1a64": "86FBDFE576BF1F9B",
+      "sha256": "41aeb260f60f970e68b1e90ad58c6e4741ade2d718d559caa1c0a3c0e7f89d21"
+    },
+    {
+      "name": "move",
+      "address": "009BF370",
+      "size": 252,
+      "fnv1a64": "1A357A2E8A685927",
+      "sha256": "7f62fb150108935adfe2609595a2a651d549c164e617eae7f574ad5e32b2f119"
+    },
+    {
+      "name": "vector_setter",
+      "address": "009C4E60",
+      "size": 94,
+      "fnv1a64": "D82BC9F26A9C40F5",
+      "sha256": "6e50b6694a7c1d109ec8f45eb179cf98faac44cb583bb4f769080c7f25a9788f"
+    }
+  ]
+}

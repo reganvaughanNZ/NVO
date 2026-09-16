@@ -1,0 +1,15 @@
+# Packet3P: scoped creation-boundary prerequisite
+
+Source review found a concrete gap in the initially proposed immediate reservation change: the public ShowOff pre-create callback has no cancellation or returned-projectile token. Instead of correlating shots by actor/weapon/time, inspect the provider's actual synchronous engine continuation. Installed ShowOff184 maps that saved target to009BCA60 and forwards16stackwords. Full159-byte handler fingerprint normalizes exactly4HIGHLOW relocations; pointer owner and branch guards prevent chaining an unknown target. Correspondence is diagnostic only until user runtime result.
+
+Native321 adds original integration code at this boundary. Existing selection, physics and damage source unchanged. No engine/game object writes; one provider-internal continuation pointer is atomically interposed in memory. Known metadata/code/slot mismatches disable this diagnostic. Locks are not held across original engine execution. TLS receipts are stack owned and restored by __finally without swallowing engine exceptions. Null/duplicate/unscoped/destroyed/reused identities do not establish a pair. Excess nesting invalidates the observed chain. Existing actor/physics lifetimes and caps are untouched.
+
+Static evidence: zero-warning x86 build, matching PDB, final disassembly verifies16pushes/onecall/64bytecleanup and unchangedEAXreturn.19 ABI/receipt fixtures (10000call trace) passed. These are not live native hook tests and do not simulate full threading, SEH or reload lifecycle. Runtime checkpoint intentionally small: pistol, rifleVATS, SMGburst, reloadpistol. No full stress replay or repeatedUltra audit.
+
+Installed DLL/PDB with native320 backup and53 protected files verified. ESMff7 and configurations unchanged. No game launched. Full game/provider disassembly remains local inspection data, not included in release. New source/build/credits accompany the DLL.
+
+317-07 remains OPEN: this packet establishes a potential receipt boundary, not capacity reservation. Future selection must happen AFTER physics/lifecycle reservation here, replacing the old pre-event selector. Commit only exact returnedobject, release canceled reservation on callend, reject foreign/unknown/scopedidentityambiguity before substitution where possible, and define currentprivate-projectile post-fault behavior explicitly without false stock-flight claims. An after-start failure must retain diagnostic ownership and block further selections as appropriate.317-01/05/06/08 producer/units/application work and the pre-damage gate remain HOLD.
+
+## Runtime result
+
+Targeted player checkpoint PASSED:13 exact pairs before reload,1 afterward; all requested weapon counts match; no boundary failures, closed lifetimes, normal exit. User AI/combat AI off. Close shots had zero applied physics steps; no drag or stress claim. RUNTIME-RESULT.json and captures/ record hashes and the existing unattributed NVSE co-save warning. Await user approval for capacity-admission implementation; no new DLL/game changes this review.
