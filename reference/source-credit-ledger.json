@@ -14,6 +14,18 @@
   },
   "sources": [
     {
+      "project": "Titans of The New West 2.0",
+      "version": "2.1.51d",
+      "status": "research",
+      "authors": ["Wombat", "Woooombat"],
+      "additional_credits": [],
+      "url": "https://www.nexusmods.com/newvegas/mods/78688",
+      "used_for": "Inspected candidate power-armour presentation and equipment integration; no donor code or assets incorporated.",
+      "evidence": ["reference/titans-2.1.51d/ASSESSMENT.md"],
+      "license": "CC-BY-NC-SA-4.0",
+      "permission_note": "Recorded in the September 17 assessment; recheck upstream notices before adaptation or distribution."
+    },
+    {
       "project": "Alternate Start with Delayed Main Quest",
       "version": "1.60",
       "status": "adapted",

@@ -4,6 +4,12 @@ Recorded 14 September 2026 from the approved plan in the task “Check GECK NVSE
 
 NVO's overall aim is a dangerous, reactive Mojave with internally consistent Fallout rules, meaningful backgrounds, consequential injuries, and NPCs whose survival matters. The concrete implementation sequence currently being executed is the eight-step combat plan reproduced below.
 
+## Current implementation checkpoint
+
+Packet **4J1 / native 0.3.31 / 331 is installed; the short live check is pending**. Recent work spans offline material/target definitions, kinetic preview and impact-evidence binding (4F–4H), then native copy, callback and caller-route diagnostics (4I–4J). Packet 4J1 isolates positively qualified observation-only flame repeats while retaining admission ownership faults and cleanup. See the [progress overview](README.md#recent-development), [installation receipt](source/combat/step4j1/INSTALL-result.json) and newest entry in [STATUS.md](STATUS.md).
+
+The previous native 330 route/callback check passed narrowly, but flame notifications caused a flight-admission fault. The [331 flame/9mm/reload check](source/combat/step4j1/TEST-NOW.html) must establish recovery from that issue; installation alone does not. Damage, armour wear and stagger remain disabled; the model stays offline. The Step 4 design below is an intended destination, not a claim that runtime armour damage or later injury systems are implemented.
+
 ## Historical position recorded 14 September
 
 For the live packet, installation and test checkpoint, read [STATUS.md](STATUS.md). The table below is the original September 14 snapshot, not the current implementation state.
@@ -18,9 +24,9 @@ For the live packet, installation and test checkpoint, read [STATUS.md](STATUS.m
 | Remaining step 2B: native hit observation | Pending after build/load acceptance. |
 | Combat steps 3–8 | Planned; not implemented. |
 
-**The immediate checkpoint is 2B1:** build and load NVOCombatCore, confirm plugin version 200, and review its lifecycle log. The prepared source contains no native hit hooks or damage replacement. Step 2A observes existing extender events and does not establish that the custom native core can resolve damage.
+**At that historical checkpoint, the next step was 2B1:** build and load NVOCombatCore, confirm plugin version 200, and review its lifecycle log. The source prepared then contained no native hit hooks or damage replacement. Step 2A observed existing extender events and did not establish that the custom native core could resolve damage. This is retained history; do not use it as the current build or testing instruction.
 
-The later native observer must establish current hit context and separate projectile lifetimes. Captures showed rapidly reused projectile IDs and potentially stale hit readings. Native validation still needs NPC-to-NPC, robots, VATS, incoming damage without invulnerability, and damage applied once. The accepted shotgun capture was NPC-to-player, not a player-fired shotgun damage test.
+The September 14 plan required the later native observer to establish current hit context and separate projectile lifetimes. Captures had shown rapidly reused projectile IDs and potentially stale hit readings. Its outstanding validation list included NPC-to-NPC, robots, VATS, incoming damage without invulnerability, and damage applied once. The accepted shotgun capture at that point was NPC-to-player, not a player-fired shotgun damage test. Later bounded evidence is recorded in `STATUS.md`; it does not imply that this whole coverage list has passed.
 
 ## Donor addition assessed 17 September 2026
 
@@ -36,7 +42,7 @@ The installed NVO.esm edited by the user is the working plugin. Workspace source
 
 ## Approved combat plan
 
-The following is the original approved plan. Its “I” refers to the assistant preparing packets; “you” refers to the user compiling and testing. Its instruction to begin with Step 1 is historical; the current position is recorded above.
+The following is the original approved plan. Its “I” refers to the assistant preparing packets; “you” refers to the user compiling and testing. Its instruction to begin with Step 1 is historical; the current position is recorded in the current implementation checkpoint above and `STATUS.md`.
 
 ---
 

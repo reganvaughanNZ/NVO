@@ -72,6 +72,8 @@ These projects supplied ABI definitions, event contracts, data layouts, or engin
 
 These credits acknowledge useful research and prevent future provenance loss. Listing here does **not** claim that their code, assets, or gameplay features are present in NVO.
 
+- `Wombat` / `Woooombat` — Titans of The New West 2.0, version 2.1.51d: inspected as a candidate power-armour presentation module; no code or assets incorporated. The [September 17 assessment](reference/titans-2.1.51d/ASSESSMENT.md) records the source fingerprint, attribution and CC BY-NC-SA 4.0 notice. This repository update preserves that assessment; it is not a new upstream permission check.
+
 - `LOW` / `LowbeeBob` — [Directional Shooting - NVSE](https://www.nexusmods.com/newvegas/mods/92443): inspected projectile-direction and controller-correction approaches. The page also credits `jazzisparis`, `Demorome`, `lStewieAl`, `carxt`, the xNVSE team, and other code sharers.
 - `TommInfinite` — [SUP NVSE](https://www.nexusmods.com/newvegas/mods/73160): inspected a plugin example while looking for comparable engine sites; it did not provide the needed match and introduced no NVO dependency. The source itself marks portions from JIP LN, JohnnyGuitar, lStewieAl's Tweaks, and other libraries.
 - `anhatthezoo` — AnhNVSE: source was searched for comparable engine sites during the same investigation; no matching code was adopted.

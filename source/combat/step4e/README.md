@@ -1,6 +1,6 @@
-# Packet4E — Shared armour profiles
+# Packet 4E — Shared armour profiles
 
-Prepared offline. No new runtime dependency, DLL, GECK record, or installed file change. The game continues using native327 / NVO0.3.27 from the passed4D checkpoint.
+Historical preparation checkpoint: **prepared offline**. This packet introduced no runtime dependency, DLL, GECK record or installed-file change. At preparation, the game used native 327 / NVO 0.3.27 from the passed 4D checkpoint. See the repository's [current status](../../../STATUS.md) for later native versions, installations and live reviews.
 
 ## Purpose and implemented behaviour
 
@@ -10,15 +10,19 @@ The new resolver validates the whole document, selects definitions, records its 
 
 These are NVO authoring tags. They are not queried from the live JIP keyword map, and this packet does not load KEYWORDS INIs or automatically discover modded armour. Profile bindings must still be reviewed. We have adapted the classification concept with original NVO code; no donor implementation was copied into the resolver. See DEPENDENCIES.md.
 
-## Files
+## Files and layouts
 
-- profiles/armour-tags.json: editable source, containing the two provisional Combat Armor/Helmet definitions and exact bindings.
-- generated/armour-coverage.json: expanded exact-record authoring compatible with the4D compiler.
-- generated/NVOArmourCoverage.tsv: output accepted by the current DLL; identical to the installed file.
-- generated/RESOLUTION.json: each record's selected definition, revision, tags and whether an exact exception applied.
-- Tools/resolve_armour_profiles.py: original NVO resolver and CLI; uses Python's standard library and the included NVO validators.
-- checks/SYNTHETIC-ONLY.*: non-game fixture IDs for verifying custom records and exceptions. Never install these.
-- Source/: unchanged parser/classifier source copied from native327 solely to make the standalone export check reproducible. This is not a replacement DLL project.
+Paths differ between a repository checkout and the historical extracted release:
+
+| Contents | Repository checkout | Extracted 4E package |
+| --- | --- | --- |
+| Editable definitions and exact bindings | `source/combat/step4e/profiles/armour-tags.json` | `profiles/armour-tags.json` |
+| Expanded authoring JSON, runtime TSV and resolution report | `source/combat/step4e/generated/` | `generated/` |
+| Original NVO resolver and validators | `tools/resolve_armour_profiles.py` and its sibling tools | `Tools/resolve_armour_profiles.py` and sibling tools |
+| Synthetic fixtures and native export runner | `source/combat/step4e/checks/` | `checks/` |
+| Parser/classifier implementation | Active files under `native/NVOCombatCore/` and `native/NVOCombatModel/` | Historical native 327 copies under `Source/` |
+
+The two provisional Combat Armor/Helmet definitions retain exact owning-plugin/local-ID and equip-mask checks. `generated/RESOLUTION.json` records the chosen definition, revision, tags and any exact exception. `checks/SYNTHETIC-ONLY.*` contains non-game fixture IDs and must never be installed. Packaged `Source/` is a historical standalone-check snapshot, not the active DLL project in this checkout.
 
 ## Resolution rules
 
@@ -34,7 +38,13 @@ The source is capped at1MiB,256 definitions,256 bindings,512 declared rules and3
 
 After an actual ARMO record is imported and its origin/mask reviewed, add a binding to an appropriate reviewed definition. Give a damaged or unusual variant its own definition and an explicit exception. Head and body items remain separate. A cosmetic replacement, power-armour flag, faction or display name does not establish anatomical coverage. A static power-armour tag cannot tell whether a suit is currently powered.
 
-From this packet's root, with Python available:
+From the **repository root**, with Python 3 available:
+
+```powershell
+python tools/resolve_armour_profiles.py source/combat/step4e/profiles/armour-tags.json source/combat/step4e/out-candidates/NVOArmourCoverage.tsv --expanded source/combat/step4e/out-candidates/armour-coverage.json --report source/combat/step4e/out-candidates/RESOLUTION.json
+```
+
+From the root of an **extracted 4E package**:
 
 ```powershell
 python Tools/resolve_armour_profiles.py profiles/armour-tags.json prepared/NVOArmourCoverage.tsv --expanded prepared/armour-coverage.json --report prepared/RESOLUTION.json
@@ -48,7 +58,17 @@ This writes reviewed-output candidates to the workspace, not the game. Keep inpu
 
 ## Verification and reversal
 
-54 resolver/export checks and19 checks through the unchanged production327 parser/classifier pass. All5 coverage rows from the pinned4D log retain their mapped extents. Shared definitions, record exceptions, conflicting tags, typo handling, duplicate keys, cap limits and failed-export preservation are covered offline. This does not establish live keyword loading or performance with additional records.
+The original preparation recorded 54 resolver/export checks and 19 checks through the unchanged production 327 parser/classifier, all passing. All five coverage rows from the pinned 4D log retained their mapped extents. These are historical results, not a fresh rerun during this documentation update. Shared definitions, record exceptions, conflicting tags, typo handling, duplicate keys, cap limits and failed-export preservation were covered offline. This does not establish live keyword loading or performance with additional records.
+
+The native export check can be run from the repository root:
+
+```bat
+source\combat\step4e\checks\RUN-CHECK.cmd
+```
+
+That runner supports both layouts above, but contains a fixed Visual Studio path; inspect and adapt it to your MSVC x86 installation first. It writes under `checks/out/` and does not install a DLL.
+
+The full Python replay runner is `tools/check_armour_profile_resolution.py`. It also needs `source/combat/step4d/Evidence/LIVE-4D-20260917-010933.log`, which is intentionally excluded from Git. The packaged equivalent needs `Evidence/REFERENCE-4D.log`. A clone alone cannot reproduce that historical replay, although the profile resolver/export command above does not require the capture. Do not fabricate a replacement capture or treat the recorded counts as a new result.
 
 No installation, live test or reversal is needed. To undo an authoring edit, restore its previous JSON and re-export to a workspace folder. The current game files and previous4D backup remain untouched. See Evidence/VERIFICATION.json for source and installed-byte checks.
 
