@@ -1,0 +1,28 @@
+{
+  "status": "installed",
+  "protected_files_verified": 57,
+  "game_launched": false,
+  "closed_processes": [],
+  "rd_absent": true,
+  "backup": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\backups\\combat-install-4J-20260919-213149-8ceccd61",
+  "stagger_writes": false,
+  "native_version": 330,
+  "packet": "4J",
+  "installed": [
+    {
+      "sha256": "d2abf997cec4fec41ea613386938032178c062a66bc8c2e9849779216b1cdaa0",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll"
+    },
+    {
+      "sha256": "92b8cc0c12995c16fa14cec47f8dc73e775bf34e2a2291d524cd910a3fa0dd18",
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb"
+    },
+    {
+      "sha256": "10ed24188f14802e5cd21fd26f7ca2070e10ad09bf0a465e797f898de0cc4e0a",
+      "path": "NVOComponentKit4J.txt"
+    }
+  ],
+  "damage_replacement": false,
+  "gameplay_tested": false,
+  "installed_utc": "2026-09-19T09:31:57.6832600Z"
+}

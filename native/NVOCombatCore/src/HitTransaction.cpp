@@ -1,6 +1,7 @@
 #include "HitTransaction.hpp"
 #include "NativeObserver.hpp"
 #include "NativeLog.hpp"
+#include "DamageEvents.hpp"
 #include <Windows.h>
 #include <cmath>
 #include <cstring>
@@ -30,8 +31,8 @@ struct Snapshot {
 struct Frame {
     std::uintptr_t caller{}, input{};
     void* receiver{}; // Identity only after entry; never dereferenced on return.
-    U64 id{}, parent{}, lifetime{};
-    unsigned session{}, site{}, stages{}, hitEvents{}, copies{}, healthEvents{};
+    U64 id{}, parent{}, lifetime{}, generation{}, copies{};
+    unsigned session{}, site{}, stages{}, hitEvents{}, healthEvents{};
     DWORD thread{};
     Snapshot before{};
     bool detail{}, tainted{};
@@ -45,6 +46,7 @@ bool gAttempted{}, gInstalled{}, gActive{}, gPending{};
 unsigned gSession{}, gRequestedSession{};
 DWORD gMainThread{};
 U64 gNextId{}, gEntries{}, gReturns{}, gOpen{}, gInvalid{}, gOverflow{}, gUnscoped{};
+U64 gGeneration{};
 U64 gHitStages{}, gCopyStages{}, gHealthStages{}, gOmittedStages{}, gLogFailures{}, gDetailed{};
 
 bool Actor(const nvo::hit::Form& f) noexcept
@@ -86,7 +88,8 @@ bool StageRow(Frame& f) noexcept
 }
 Frame* Current() noexcept
 {
-    if (!gActive || !gDepth || gFrames[gDepth-1].session != gSession) {
+    if (!gActive || !gDepth || gFrames[gDepth-1].session != gSession
+        || gFrames[gDepth-1].generation != gGeneration) {
         if (gActive) ++gUnscoped;
         return nullptr;
     }
@@ -97,11 +100,11 @@ bool __cdecl Before(void* receiver,const nvo::hit::Data* input,U32 attackClass,
     std::uintptr_t caller,unsigned site) noexcept
 {
     const ErrorGuard error;
-    unsigned session{};
+    unsigned session{}; U64 generation{};
     {
         const Lock lock;
         if (!gActive) return false;
-        session=gSession;
+        session=gSession; generation=gGeneration;
         if (gDepth>=kDepth) {
             ++gOverflow;
             // This call gets no replacement return. Suppress attribution to
@@ -117,12 +120,18 @@ bool __cdecl Before(void* receiver,const nvo::hit::Data* input,U32 attackClass,
     if (s.valid && nvo::hit::IsProjectile(s.carrier.type))
         life=nvo::observer::LookupLifetime(s.data.carrier,s.carrier.id,s.source.id,s.weapon.id);
     const Lock lock;
-    if (!gActive || session!=gSession) return false;
+    if (!gActive || session!=gSession || generation!=gGeneration) return false;
+    if (!nvo::capture::Advance(gNextId)) {
+        ++gInvalid;
+        if (gDepth) gFrames[gDepth-1].tainted=true;
+        return false;
+    }
     auto& f=gFrames[gDepth]; f={};
-    f.parent=gDepth && gFrames[gDepth-1].session==session ? gFrames[gDepth-1].id : 0;
+    f.parent=gDepth && gFrames[gDepth-1].session==session
+        && gFrames[gDepth-1].generation==generation ? gFrames[gDepth-1].id : 0;
     f.tainted=gDepth && gFrames[gDepth-1].tainted;
     f.caller=caller; f.receiver=receiver; f.input=reinterpret_cast<std::uintptr_t>(input);
-    f.session=session; f.site=site; f.id=++gNextId; f.thread=GetCurrentThreadId();
+    f.session=session; f.generation=generation; f.site=site; f.id=gNextId; f.thread=GetCurrentThreadId();
     f.before=s;
     const bool linked=life.session==session && life.lifetime && life.ammo==s.ammo && s.ammo;
     f.lifetime=linked ? life.lifetime : 0;
@@ -148,12 +157,19 @@ std::uintptr_t __cdecl After() noexcept
 {
     const ErrorGuard error;
     const Frame f=gFrames[--gDepth];
+    bool checkCallbacks{};
+    {
     const Lock lock;
-    if (gActive && f.session==gSession) {
+    if (gActive && f.session==gSession && f.generation==gGeneration) {
         ++gReturns; --gOpen;
-        if (f.detail && !nvo::log::Write("HIT_TX_RETURN session=%u tx=%llu parent=%llu depth=%u pre_hit=%u copies=%u pre_health=%u tainted=%u acknowledgement=provider_return committed_loss=unverified post_pointer_reads=0 damage_replacement=0",
+        if (f.detail && !nvo::log::Write("HIT_TX_RETURN session=%u tx=%llu parent=%llu depth=%u pre_hit=%u copies=%llu pre_health=%u tainted=%u acknowledgement=provider_return committed_loss=unverified post_pointer_reads=0 damage_replacement=0",
             f.session,f.id,f.parent,gDepth+1,f.hitEvents,f.copies,f.healthEvents,f.tainted?1u:0u)) ++gLogFailures;
+        checkCallbacks = f.copies && !f.tainted && f.before.valid && f.thread==gMainThread
+            && (!f.hitEvents || !f.healthEvents);
     }
+    }
+    // No registry calls in a hit or while holding the transaction lock.
+    if (checkCallbacks) nvo::damage::QueueCheck(f.session, f.id, f.hitEvents, f.healthEvents);
     return f.caller;
 }
 
@@ -344,30 +360,35 @@ void nvo::transaction::Initialize() noexcept
 void nvo::transaction::QueueCapture(unsigned session) noexcept
 {
     const Lock lock;gActive=false;gPending=true;gRequestedSession=session;
+    nvo::capture::Advance(gGeneration);
 }
 void nvo::transaction::Suspend(const char* reason) noexcept
 {
     const Lock lock;gPending=false;if(gActive)Summary(reason);gActive=false;
+    nvo::capture::Advance(gGeneration);
 }
 void nvo::transaction::Tick() noexcept
 {
     const ErrorGuard error;
-    unsigned session{};
-    { const Lock lock;if(!gPending)return;gPending=false;session=gRequestedSession; }
+    unsigned session{}; U64 generation{};
+    { const Lock lock;if(!gPending)return;gPending=false;session=gRequestedSession;generation=gGeneration; }
     if (!gInstalled || !OwnsCalls() || !Provider(GetModuleHandleW(L"itr-nvse.dll"))) {
         Disabled("capture_hook_guard_failed");return;
     }
     const Lock lock;
+    if (generation!=gGeneration || !nvo::capture::Advance(gGeneration)) return;
     gSession=session;gEntries=gReturns=gOpen=gInvalid=gOverflow=gUnscoped=0;
     gHitStages=gCopyStages=gHealthStages=gOmittedStages=gLogFailures=gDetailed=0;
     gActive=true;
-    nvo::log::Write("HIT_TX_READY session=%u max_depth=16 max_detail_calls=64 stages_per_call=8 ids_independent_of_logging=1 committed_loss=unverified damage_replacement=0",session);
+    nvo::log::Write("HIT_TX_READY session=%u generation=%llu max_depth=16 max_detail_calls=64 stages_per_call=8 ids_independent_of_logging=1 copy_ordinal_independent_of_logging=1 component_verified=0 application_verified=0 committed_loss=unverified damage_replacement=0",session,gGeneration);
 }
 nvo::transaction::CopyScope nvo::transaction::CopyInput(
     const nvo::hit::Data* input,void* process) noexcept
 {
     const ErrorGuard error;const Lock lock;
-    auto* f=Current();if(!f)return {};++f->copies;++gCopyStages;
+    auto* f=Current();if(!f)return {};
+    if (!nvo::capture::Advance(f->copies)) { f->tainted=true; return {}; }
+    ++gCopyStages;
     nvo::hit::Data d{};void* ownerProcess{};
     const bool read=nvo::hit::ReadBytes(input,&d,sizeof(d));
     const bool identity=read && d.target==f->receiver && d.source==f->before.data.source
@@ -378,19 +399,30 @@ nvo::transaction::CopyScope nvo::transaction::CopyInput(
     const bool mainThread=f->thread==gMainThread && GetCurrentThreadId()==f->thread;
     nvo::transaction::CopyScope scope{};
     scope.id=f->id;scope.lifetime=f->lifetime;scope.session=f->session;
+    scope.generation=f->generation;scope.copyOrdinal=f->copies;
     scope.source=f->before.source.id;scope.target=f->before.target.id;
     scope.carrier=f->before.carrier.id;scope.weapon=f->before.weapon.id;scope.ammo=f->before.ammo;
     scope.region=read?d.region:0;scope.flags=read?d.flags:0;scope.thread=f->thread;
     scope.exactInput=exact;scope.identityMatch=identity;scope.processMatch=processMatches;
     scope.mainThread=mainThread;scope.tainted=f->tainted;
-    scope.valid=gActive && f->session==gSession && !f->tainted && f->before.valid
+    scope.valid=gActive && f->session==gSession && f->generation==gGeneration && !f->tainted && f->before.valid
         && read && exact && processMatches && mainThread;
-    if (StageRow(*f) && !nvo::log::Write("HIT_TX_STAGE session=%u tx=%llu stage=copy_input ordinal=%u pointer_equal=%u identity_match=%u process_match=%u tainted=%u read=%u region=%d health=%.9g limb=%.9g flags=%08X association=%s committed_loss=unverified observer_writes=0",
+    if (StageRow(*f) && !nvo::log::Write("HIT_TX_STAGE session=%u tx=%llu stage=copy_input ordinal=%u pointer_equal=%u identity_match=%u process_match=%u tainted=%u read=%u region=%d health=%.9g limb=%.9g flags=%08X association=%s generation=%llu copy=%llu component_verified=0 application_verified=0 committed_loss=unverified observer_writes=0",
         f->session,f->id,f->stages,exact?1u:0u,identity?1u:0u,processMatches?1u:0u,f->tainted?1u:0u,read?1u:0u,
         read?d.region:-1,read&&std::isfinite(d.health)?static_cast<double>(d.health):0,
         read&&std::isfinite(d.limb)?static_cast<double>(d.limb):0,read?d.flags:0,
-        scope.valid ? "exact_input_pointer" : "scope_only")) ++gLogFailures;
+        scope.valid ? "exact_input_pointer" : "scope_only",scope.generation,scope.copyOrdinal)) ++gLogFailures;
     return scope;
+}
+bool nvo::transaction::IsCurrent(const CopyScope& scope) noexcept
+{
+    const ErrorGuard error; const Lock lock;
+    if (!gActive || !gDepth || !scope.valid || !scope.mainThread || scope.tainted
+        || scope.thread!=GetCurrentThreadId() || scope.thread!=gMainThread) return false;
+    const auto& f=gFrames[gDepth-1];
+    return scope.session==gSession && scope.generation==gGeneration
+        && f.session==scope.session && f.generation==scope.generation
+        && f.id==scope.id && f.copies==scope.copyOrdinal && !f.tainted;
 }
 void nvo::transaction::HitEvent(void* thisObj,void* params) noexcept
 {
@@ -423,7 +455,14 @@ nvo::transaction::Scope nvo::transaction::MatchScope(void* receiver,void* source
     const ErrorGuard error;const Lock lock;
     if (!gActive || !gDepth) return {};
     const auto& f=gFrames[gDepth-1];
-    if (f.session!=gSession || f.tainted || !f.before.valid
+    if (f.session!=gSession || f.generation!=gGeneration || f.tainted || !f.before.valid
+        || f.thread!=gMainThread || GetCurrentThreadId()!=gMainThread
         || f.receiver!=receiver || f.before.data.source!=source) return {};
-    return {f.id,f.session,true};
+    Scope s{f.id,f.session,true};
+    s.generation=f.generation; s.lifetime=f.lifetime; s.copiesObserved=f.copies;
+    s.carrier=f.before.carrier.id; s.carrierType=f.before.carrier.type;
+    s.carrierPresent=f.before.data.carrier!=nullptr;
+    s.weapon=f.before.weapon.id; s.ammo=f.before.ammo; s.flags=f.before.data.flags;
+    s.criticalEffectPresent=f.before.data.criticalEffect!=nullptr;
+    return s;
 }

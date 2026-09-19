@@ -1,0 +1,256 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36257.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file NVOCombatCore.dll
+
+PE signature found
+
+File Type: DLL
+
+FILE HEADER VALUES
+             14C machine (x86)
+               5 number of sections
+        6AAE5441 time date stamp Sat Sep 19 21:22:09 2026
+               0 file pointer to symbol table
+               0 number of symbols
+              E0 size of optional header
+            2102 characteristics
+                   Executable
+                   32 bit word machine
+                   DLL
+
+OPTIONAL HEADER VALUES
+             10B magic # (PE32)
+           14.51 linker version
+           37400 size of code
+           A1000 size of initialized data
+               0 size of uninitialized data
+           212C0 entry point (100212C0) __DllMainCRTStartup@12
+            1000 base of code
+           39000 base of data
+        10000000 image base (10000000 to 100DCFFF)
+            1000 section alignment
+             200 file alignment
+            6.00 operating system version
+            0.00 image version
+            6.00 subsystem version
+               0 Win32 version
+           DD000 size of image
+             400 size of headers
+               0 checksum
+               2 subsystem (Windows GUI)
+             140 DLL characteristics
+                   Dynamic base
+                   NX compatible
+          100000 size of stack reserve
+            1000 size of stack commit
+          100000 size of heap reserve
+            1000 size of heap commit
+               0 loader flags
+              10 number of directories
+           4F0C0 [      70] RVA [size] of Export Directory
+           4F130 [      28] RVA [size] of Import Directory
+               0 [       0] RVA [size] of Resource Directory
+               0 [       0] RVA [size] of Exception Directory
+               0 [       0] RVA [size] of Certificates Directory
+           D9000 [    30F8] RVA [size] of Base Relocation Directory
+           4C510 [      54] RVA [size] of Debug Directory
+               0 [       0] RVA [size] of Architecture Directory
+               0 [       0] RVA [size] of Global Pointer Directory
+           4C580 [      18] RVA [size] of Thread Storage Directory
+           4C450 [      40] RVA [size] of Load Configuration Directory
+               0 [       0] RVA [size] of Bound Import Directory
+           39000 [     13C] RVA [size] of Import Address Table Directory
+               0 [       0] RVA [size] of Delay Import Directory
+               0 [       0] RVA [size] of COM Descriptor Directory
+               0 [       0] RVA [size] of Reserved Directory
+
+
+SECTION HEADER #1
+   .text name
+   372DF virtual size
+    1000 virtual address (10001000 to 100382DE)
+   37400 size of raw data
+     400 file pointer to raw data (00000400 to 000377FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+60000020 flags
+         Code
+         Execute Read
+
+SECTION HEADER #2
+  .rdata name
+   16860 virtual size
+   39000 virtual address (10039000 to 1004F85F)
+   16A00 size of raw data
+   37800 file pointer to raw data (00037800 to 0004E1FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+40000040 flags
+         Initialized Data
+         Read Only
+
+  Debug Directories
+
+        Time Type        Size      RVA  Pointer
+    -------- ------- -------- -------- --------
+    6AAE5441 cv            78 0004C808    4B008    Format: RSDS, {B77111C7-8D96-4BF7-9E9D-543478A33C59}, 1, C:\Users\regan\Documents\ChatGPT\NVO\native\NVOCombatCore\out\build-2752-9227\NVOCombatCore.pdb
+    6AAE5441 feat          14 0004C880    4B080    Counts: Pre-VC++ 11.00=0, C/C++=230, /GS=230, /sdl=0, guardN=212
+    6AAE5441 coffgrp      320 0004C894    4B094
+
+  Section contains the following exports for NVOCombatCore.dll
+
+    00000000 characteristics
+    FFFFFFFF time date stamp
+        0.00 version
+           1 ordinal base
+           2 number of functions
+           2 number of names
+
+    ordinal hint RVA      name
+
+          1    0 000013B0 NVSEPlugin_Load = _NVSEPlugin_Load
+          2    1 00001500 NVSEPlugin_Query = _NVSEPlugin_Query
+
+  Section contains the following imports:
+
+    KERNEL32.dll
+              10039000 Import Address Table
+              1004F158 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                  447 OutputDebugStringA
+                   E6 CreateFileW
+                  64F WriteFile
+                   9D CloseHandle
+                  4E6 ReleaseSRWLockExclusive
+                    0 AcquireSRWLockExclusive
+                  29B GetModuleFileNameW
+                  240 GetCurrentThreadId
+                  336 GetTickCount64
+                  287 GetLastError
+                  569 SetLastError
+                  609 VirtualProtect
+                  60B VirtualQuery
+                  29F GetModuleHandleW
+                  23B GetCurrentProcess
+                  1C3 FlushInstructionCache
+                  271 GetFileSizeEx
+                  4A5 ReadFile
+                  269 GetFileAttributesW
+                  26B GetFileInformationByHandle
+                  546 SetEndOfFile
+                  559 SetFilePointerEx
+                  2D1 GetPrivateProfileSectionW
+                  3B5 IsProcessorFeaturePresent
+                  47E QueryPerformanceCounter
+                  23C GetCurrentProcessId
+                  313 GetSystemTimeAsFileTime
+                  391 InitializeSListHead
+                  5A8 SetUnhandledExceptionFilter
+                  2FA GetStartupInfoW
+                  509 RtlUnwind
+                  494 RaiseException
+                  39A InterlockedFlushSList
+                  1BC FlsAlloc
+                  1BE FlsGetValue
+                  1C0 FlsSetValue
+                  1BD FlsFree
+                  14F EncodePointer
+                  153 EnterCriticalSection
+                  3ED LeaveCriticalSection
+                  38E InitializeCriticalSectionEx
+                  12E DeleteCriticalSection
+                  180 ExitProcess
+                  5C8 TerminateProcess
+                  1CE FreeLibrary
+                  29E GetModuleHandleExW
+                  2D6 GetProcAddress
+                  3AD IsDebuggerPresent
+                  5EA UnhandledExceptionFilter
+                  377 HeapFree
+                  373 HeapAlloc
+                  2FC GetStdHandle
+                  273 GetFileType
+                  127 DecodePointer
+                  197 FindClose
+                  19D FindFirstFileExW
+                  1AE FindNextFileW
+                  3BB IsValidCodePage
+                  1D5 GetACP
+                  2BF GetOEMCP
+                  1E4 GetCPInfo
+                  1F9 GetCommandLineA
+                  1FA GetCommandLineW
+                  420 MultiByteToWideChar
+                  63B WideCharToMultiByte
+                  25B GetEnvironmentStringsW
+                  1CD FreeEnvironmentStringsW
+                  3F3 LoadLibraryExW
+                  3E1 LCMapStringW
+                  2DD GetProcessHeap
+                  301 GetStringTypeW
+                  584 SetStdHandle
+                  37C HeapSize
+                  37A HeapReAlloc
+                  1C2 FlushFileBuffers
+                  223 GetConsoleOutputCP
+                  21F GetConsoleMode
+                  64E WriteConsoleW
+
+SECTION HEADER #3
+   .data name
+   870E8 virtual size
+   50000 virtual address (10050000 to 100D70E7)
+   1E600 size of raw data
+   4E200 file pointer to raw data (0004E200 to 0006C7FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+SECTION HEADER #4
+.fptable name
+      80 virtual size
+   D8000 virtual address (100D8000 to 100D807F)
+     200 size of raw data
+   6C800 file pointer to raw data (0006C800 to 0006C9FF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+C0000040 flags
+         Initialized Data
+         Read Write
+
+SECTION HEADER #5
+  .reloc name
+    30F8 virtual size
+   D9000 virtual address (100D9000 to 100DC0F7)
+    3200 size of raw data
+   6CA00 file pointer to raw data (0006CA00 to 0006FBFF)
+       0 file pointer to relocation table
+       0 file pointer to line numbers
+       0 number of relocations
+       0 number of line numbers
+42000040 flags
+         Initialized Data
+         Discardable
+         Read Only
+
+  Summary
+
+       88000 .data
+        1000 .fptable
+       17000 .rdata
+        4000 .reloc
+       38000 .text

@@ -1,0 +1,101 @@
+{
+  "extracted_utc": "2026-09-19T11:02:14.311411+00:00",
+  "method": "zipfile plus ElementTree; all paragraphs including table cells and available note/header/footer/comment stories; no source DOCX modification",
+  "rendered": false,
+  "factual_verification": "See REFERENCES-REVIEW.md; report claims are not runtime authority",
+  "reports": [
+    {
+      "source": "C:\\Users\\regan\\Downloads\\FNV_Armor_Clothing_NVO_Report.docx",
+      "bytes": 36518,
+      "sha256": "55bf34d2ac8dd8410ee2510381c9feff69a2a051d3fa53616f82552d05818646",
+      "counts": {
+        "paragraphs": 798,
+        "nonempty_paragraphs": 794,
+        "tables": 16,
+        "table_rows": 168,
+        "table_cells": 693,
+        "footnotes": 2,
+        "endnotes": 2,
+        "nonempty_footnote_paragraphs": 0,
+        "nonempty_endnote_paragraphs": 0,
+        "drawing_nodes": 0,
+        "alt_chunks": 0
+      },
+      "story_parts": [
+        "word/document.xml",
+        "word/comments.xml",
+        "word/endnotes.xml",
+        "word/footer1.xml",
+        "word/footnotes.xml",
+        "word/header1.xml"
+      ],
+      "external_relationships": [],
+      "extracted_text": "FNV_Armor_Clothing_NVO_Report.txt",
+      "extracted_text_sha256": "026c54b39c0a3b2efa878ef2f697b93b8213868dbd32cb4525155392018499b0",
+      "extracted_json": "FNV_Armor_Clothing_NVO_Report.json",
+      "extracted_json_sha256": "61c3872adb2c599101461b5d8a66e7623ae391822b460ebe864ecd191ee62729"
+    },
+    {
+      "source": "C:\\Users\\regan\\Downloads\\FNV_Armored_Creature_Variants_NVO_Report.docx",
+      "bytes": 23543,
+      "sha256": "01c2dd655a9d16b9b801b91f4076368337ffb400e0cc9f9e89c82cf0df71657d",
+      "counts": {
+        "paragraphs": 309,
+        "nonempty_paragraphs": 305,
+        "tables": 8,
+        "table_rows": 55,
+        "table_cells": 212,
+        "footnotes": 2,
+        "endnotes": 2,
+        "nonempty_footnote_paragraphs": 0,
+        "nonempty_endnote_paragraphs": 0,
+        "drawing_nodes": 0,
+        "alt_chunks": 0
+      },
+      "story_parts": [
+        "word/document.xml",
+        "word/comments.xml",
+        "word/endnotes.xml",
+        "word/footer1.xml",
+        "word/footnotes.xml",
+        "word/header1.xml"
+      ],
+      "external_relationships": [],
+      "extracted_text": "FNV_Armored_Creature_Variants_NVO_Report.txt",
+      "extracted_text_sha256": "c04155cf009a4c51b0aced0fb0f02904d2c2c8043c45bf3fe0b88f4740f2001b",
+      "extracted_json": "FNV_Armored_Creature_Variants_NVO_Report.json",
+      "extracted_json_sha256": "602093d7b24587ddbd924dc4cf222f9f3b903f98b4674a59f67ec2fa16cf5858"
+    },
+    {
+      "source": "C:\\Users\\regan\\Downloads\\FNV_Weapons_and_NVO_Report.docx",
+      "bytes": 32943,
+      "sha256": "ccc0664ab331a7db56a51dff2d407669cb2af1a9ee41da007d51a40fe6cfe2ea",
+      "counts": {
+        "paragraphs": 638,
+        "nonempty_paragraphs": 633,
+        "tables": 14,
+        "table_rows": 174,
+        "table_cells": 522,
+        "footnotes": 2,
+        "endnotes": 2,
+        "nonempty_footnote_paragraphs": 0,
+        "nonempty_endnote_paragraphs": 0,
+        "drawing_nodes": 0,
+        "alt_chunks": 0
+      },
+      "story_parts": [
+        "word/document.xml",
+        "word/comments.xml",
+        "word/endnotes.xml",
+        "word/footer1.xml",
+        "word/footnotes.xml",
+        "word/header1.xml"
+      ],
+      "external_relationships": [],
+      "extracted_text": "FNV_Weapons_and_NVO_Report.txt",
+      "extracted_text_sha256": "22b01d7d3a6f8e1c125b0adb4419b7b500d290a9d8ac93e9bda654f9432d3fe6",
+      "extracted_json": "FNV_Weapons_and_NVO_Report.json",
+      "extracted_json_sha256": "c24f72293be7a21999f3bb781bca33e0d63fc91c3909c8335d214260d4947f0c"
+    }
+  ]
+}

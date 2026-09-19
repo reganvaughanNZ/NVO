@@ -22,19 +22,52 @@ Result Reject(Status status, Reason reason, Region region = Region::Unknown,
 }
 }
 
-Result Evaluate(const Input& input) {
-    const auto& identity = input.identity;
+EvidenceCheck CheckIdentityAndMode(const IdentityEvidence& identity, const ModeEvidence& mode) {
     if (!identity.identitiesVerified || !identity.session || !identity.source || !identity.target
         || !identity.carrier || !identity.weapon || !identity.ammo || !identity.profile)
-        return Reject(Status::WaitingForEvidence, Reason::Identity);
+        return {false, Status::WaitingForEvidence, Reason::Identity};
     if (!identity.component || !identity.application)
-        return Reject(Status::WaitingForEvidence, Reason::Component);
+        return {false, Status::WaitingForEvidence, Reason::Component};
     if (!identity.pathVerified)
-        return Reject(Status::WaitingForEvidence, Reason::Path);
+        return {false, Status::WaitingForEvidence, Reason::Path};
 
-    if (!input.mode.verified || (input.mode.value != Mode::RealTime && input.mode.value != Mode::Vats))
-        return Reject(Status::WaitingForEvidence, Reason::Mode);
+    if (!mode.verified || (mode.value != Mode::RealTime && mode.value != Mode::Vats))
+        return {false, Status::WaitingForEvidence, Reason::Mode};
+    return {true, Status::PreviewOnly, Reason::None};
+}
+EvidenceCheck CheckKineticInputs(const IdentityEvidence& identity, const KineticProfile& profile, const SpeedEvidence& speed) {
+    if (!profile.exactMapping || !profile.identity || profile.identity != identity.profile
+        || profile.construction < Construction::Ball
+        || profile.construction >= Construction::Unknown
+        || !ExactMeasurement(profile.mass, Unit::Kilograms, true)
+        || !ExactMeasurement(profile.diameter, Unit::Metres, true))
+        return {false, Status::Unsupported, Reason::ThreatProfile};
 
+    if (speed.shape == Shape::Missing || speed.shape == Shape::Ambiguous)
+        return {false, Status::WaitingForEvidence, Reason::SpeedUnavailable};
+    if (speed.shape == Shape::Interval) {
+        if (!ExactMeasurement(speed.low, Unit::MetresPerSecond, false)
+            || !ExactMeasurement(speed.high, Unit::MetresPerSecond, false)
+            || speed.low.value > speed.high.value)
+            return {false, Status::InvalidInput, Reason::SpeedInterval};
+        // Interval evidence is represented honestly but revision 4A does not
+        // reinterpret the scalar resolver or choose a midpoint/end point.
+        return {false, Status::WaitingForEvidence, Reason::SpeedInterval};
+    }
+    if (speed.shape != Shape::Exact
+        || !ExactMeasurement(speed.exact, Unit::MetresPerSecond, false))
+        return {false, Status::InvalidInput, Reason::SpeedUnavailable};
+    if (!speed.contactVerified || !speed.producerVerified)
+        return {false, Status::WaitingForEvidence, Reason::SpeedProducer};
+    if (!speed.unitsCalibrated)
+        return {false, Status::WaitingForEvidence, Reason::SpeedUnits};
+    return {true, Status::PreviewOnly, Reason::None};
+}
+
+Result Evaluate(const Input& input) {
+    const auto& identity = input.identity;
+    const auto identityCheck = CheckIdentityAndMode(identity, input.mode);
+    if (!identityCheck.ready) return Reject(identityCheck.status, identityCheck.reason);
     const auto& region = input.region;
     if (!region.hitDataVerified || !region.collisionVerified
         || !KnownRegion(region.hitData) || !KnownRegion(region.collision))
@@ -42,10 +75,8 @@ Result Evaluate(const Input& input) {
     if (region.hitData != region.collision)
         return Reject(Status::WaitingForEvidence, Reason::RegionConflict);
     const Region actual = region.hitData;
-
     if (!input.modifierOwnershipVerified)
         return Reject(Status::WaitingForEvidence, Reason::ModifierOwnership, actual);
-
     const auto& armour = input.armour;
     if (!armour.enumerationComplete || !armour.regionCoverageComplete
         || armour.order != LayerOrder::OutermostToInnermost || !armour.impactSnapshotVerified)
@@ -54,36 +85,12 @@ Result Evaluate(const Input& input) {
         return Reject(Status::WaitingForEvidence, Reason::ArmourSnapshot, actual);
     if (!armour.layers.empty() && armour.bareRegionVerified)
         return Reject(Status::InvalidInput, Reason::ArmourContradiction, actual);
-
     if (input.family != Family::Kinetic)
         return Reject(Status::Unsupported, Reason::Family, actual);
     const auto& profile = input.kinetic;
-    if (!profile.exactMapping || !profile.identity || profile.identity != identity.profile
-        || profile.construction < Construction::Ball
-        || profile.construction >= Construction::Unknown
-        || !ExactMeasurement(profile.mass, Unit::Kilograms, true)
-        || !ExactMeasurement(profile.diameter, Unit::Metres, true))
-        return Reject(Status::Unsupported, Reason::ThreatProfile, actual);
-
     const auto& speed = input.speed;
-    if (speed.shape == Shape::Missing || speed.shape == Shape::Ambiguous)
-        return Reject(Status::WaitingForEvidence, Reason::SpeedUnavailable, actual);
-    if (speed.shape == Shape::Interval) {
-        if (!ExactMeasurement(speed.low, Unit::MetresPerSecond, false)
-            || !ExactMeasurement(speed.high, Unit::MetresPerSecond, false)
-            || speed.low.value > speed.high.value)
-            return Reject(Status::InvalidInput, Reason::SpeedInterval, actual);
-        // Interval evidence is represented honestly but revision 4A does not
-        // reinterpret the scalar resolver or choose a midpoint/end point.
-        return Reject(Status::WaitingForEvidence, Reason::SpeedInterval, actual);
-    }
-    if (speed.shape != Shape::Exact
-        || !ExactMeasurement(speed.exact, Unit::MetresPerSecond, false))
-        return Reject(Status::InvalidInput, Reason::SpeedUnavailable, actual);
-    if (!speed.contactVerified || !speed.producerVerified)
-        return Reject(Status::WaitingForEvidence, Reason::SpeedProducer, actual);
-    if (!speed.unitsCalibrated)
-        return Reject(Status::WaitingForEvidence, Reason::SpeedUnits, actual);
+    const auto kineticCheck = CheckKineticInputs(identity, profile, speed);
+    if (!kineticCheck.ready) return Reject(kineticCheck.status, kineticCheck.reason, actual);
     if (!input.target.verified)
         return Reject(Status::Unsupported, Reason::TargetProfile, actual);
 

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO 4J1 — Flame lifecycle</title>
+<style>:root{color-scheme:dark}body{max-width:800px;margin:48px auto;padding:0 24px;background:#101813;color:#e6eee7;font:17px/1.65 system-ui,sans-serif}h1{line-height:1.15}a{color:#b4ddb8}section{border:1px solid #385241;border-radius:10px;padding:18px 24px;margin:24px 0}button{font:inherit;background:#24432d;color:#fff;border:1px solid #719a7b;border-radius:5px;padding:6px 14px;cursor:pointer}code{color:#f0e8bc}li{margin:12px 0}.tag{color:#b4ddb8;font-size:14px}#status{min-height:1.6em}</style></head>
+<body><main><p class="tag">NVO · PACKET 4J1 · INSTALLED · LIVE CHECK PENDING</p>
+<h1>Keep flame notifications from blocking later bullet flight.</h1>
+<p>Native 0.3.31 / 331 isolates matching flame notifications while retaining safeguards for genuine flight conflicts. Damage, armour wear and stagger remain disabled.</p>
+<section><strong>Installed and verified.</strong><p>Native 331 is installed. The prior DLL/PDB pair is backed up, and 58 protected files were verified unchanged. No game was launched or closed. No GECK work or new dependency is needed.</p></section>
+<h2>Purpose of the next check</h2><p>Confirm that a short flame attack leaves NVO's 9mm flight working both before and after a reload. Offline checks cannot establish that live result.</p>
+<h2>Your short check</h2><p>Launch normally and load your saved setup. If you need supplies, use the existing kit:</p>
+<p><code id="command">bat NVOComponentKit4J</code> <button id="copy" type="button">Copy command</button></p><p id="status" role="status"></p>
+<ol><li>Give a living target a very short flamer tap, then wait three seconds unpaused.</li><li>Before reloading, hit a living target's torso once with a standard-ammunition 9mm pistol.</li><li>Reload your saved setup and repeat one standard 9mm torso hit.</li><li>Quit normally and report completion so I can review <code>NVOCombatCore.log</code>.</li></ol>
+<p>No VATS, grenade, video or stress test is needed. If flames do not repeat in this recording, that branch remains untested.</p>
+<h2>Your reference documents</h2><p>Its projectile and effect categories are useful as a checklist. Its numerical values and engine claims have not been adopted without verification. <a href="DOCUMENT-REVIEW.md">Read the earlier assessment</a>. The three additional reports are covered in the <a href="references/REFERENCES-REVIEW.md">new reference review</a>.</p>
+<p><a href="README.md">Packet details and reversal</a> · <a href="REVIEW.md">Review limits</a> · <a href="SOURCE-TRACE.md">Source trace</a> · <a href="Evidence/VERIFICATION.json">Fresh build evidence</a></p>
+</main><script>document.getElementById('copy').addEventListener('click',async()=>{const s=document.getElementById('status');try{await navigator.clipboard.writeText(document.getElementById('command').textContent);s.textContent='Copied.';}catch{s.textContent='Clipboard unavailable. Select the command above and copy it.'}});</script></body></html>

@@ -1187,12 +1187,12 @@ void nvo::physics::Fault(admission::Ticket ticket) noexcept
     if (!gSlots.Fault(ticket)) return;
     auto& t=gTracks[ticket.slot]; t.stopped=true; t.pending=false;
 }
-void nvo::physics::Event(void* p,U64 serial,bool destroyed) noexcept
+void nvo::physics::Event(void* p,U64 serial,bool destroyed,bool identityAvailable) noexcept
 {
     const ErrorGuard error; const Lock lock;
     if (!gActive.load() || !serial) return;
     if (auto* t=Find(p,serial)) {
-        ImpactEvent(*t,destroyed);
+        if (identityAvailable) ImpactEvent(*t,destroyed);
         MissingRoute(*t,destroyed?"destroy":"impact");
         if (destroyed) { Summary(*t,"destroy"); gSlots.Destroy(t->ticket); *t={}; }
         else if (!t->stopped) { Summary(*t,"impact"); t->stopped=true; }

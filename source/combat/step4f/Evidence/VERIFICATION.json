@@ -1,0 +1,67 @@
+{
+  "packet": "4F",
+  "status": "PREPARED_OFFLINE",
+  "verified_utc": "2026-09-19T05:58:15.890732+00:00",
+  "runtime_version_unchanged": 327,
+  "gameplay_authority": false,
+  "native_dll_built": false,
+  "installed": false,
+  "game_accessed": false,
+  "geck_required": false,
+  "playtest_required": false,
+  "new_runtime_dependencies": [],
+  "checks_passed": 243,
+  "deterministic_selections": 10000,
+  "compiler": "MSVC x86 /std:c++17 /W4 /WX /permissive-",
+  "pointer_size_asserted": 4,
+  "source_inputs": [
+    {
+      "path": "native/NVOCombatModel/ResponseDefinitions.hpp",
+      "sha256": "a2b199deb370ce083766d3bd29db0b6dd37391df006087cbdbf8d9696994410a",
+      "bytes": 5141
+    },
+    {
+      "path": "native/NVOCombatModel/ResponseDefinitions.cpp",
+      "sha256": "76367c6ec4eaaac5092c0e9f054b28d7829702f3d2f35083936baaeac0ed325b",
+      "bytes": 11570
+    },
+    {
+      "path": "native/NVOCombatModel/response_definition_tests.cpp",
+      "sha256": "d4eb3b6bdef6b477d38ecff8ec435d3116d3bd9e65303fe4e271494afe704f9f",
+      "bytes": 14662
+    },
+    {
+      "path": "native/NVOCombatModel/run_response_checks.cmd",
+      "sha256": "4f1e80da8dd8451845aebf67e73f80dc389a8bdf336ef2b6e4a445ea229c0e80",
+      "bytes": 1242
+    }
+  ],
+  "existing_native_files_unchanged": 110,
+  "existing_native_documentation_updated": [
+    "native/NVOCombatModel/README.md"
+  ],
+  "build_definitions_unchanged": [
+    {
+      "path": "native/NVOCombatCore/BUILD.cmd",
+      "sha256": "a47b63e2ce788099cef17a7c66c3090d5675e50ca61268577fe8cd6f20831512",
+      "bytes": 4370
+    },
+    {
+      "path": "native/NVOCombatCore/CMakeLists.txt",
+      "sha256": "27f92604f8923d0652194b0b365db6f489e49ffc0e3add95fee60a006b552e42",
+      "bytes": 1723
+    }
+  ],
+  "test_executable": {
+    "path": "native/NVOCombatModel/out-response/response_checks.exe",
+    "sha256": "22419e3420b74f7663bdc99eaca709678b9e5f4590b8084ede0ec8a0954d639b",
+    "bytes": 257536
+  },
+  "limitations": [
+    "Symbolic response definitions only; no new numeric material/damage calculation.",
+    "All test profiles are synthetic; no production armour or creature record mappings.",
+    "No actual-hit evidence, engine integration, application or runtime stress benchmark.",
+    "Previous model/adapter/energy/flight implementations unchanged; old checks were not rerun.",
+    "No game files inspected; unchanged source build definitions do not prove current live installation."
+  ]
+}

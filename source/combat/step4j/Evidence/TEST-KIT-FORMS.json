@@ -1,0 +1,37 @@
+{
+  "source": "C:\\Users\\regan\\Desktop\\Steam Install Folder\\steamapps\\common\\Fallout New Vegas\\Data\\FalloutNV.esm",
+  "sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b",
+  "read_only": true,
+  "forms": [
+    {
+      "type": "WEAP",
+      "form": "0000432D",
+      "editor_id": "WeapFlamer",
+      "name": "Flamer"
+    },
+    {
+      "type": "WEAP",
+      "form": "00004330",
+      "editor_id": "WeapGrenadeFrag",
+      "name": "Frag Grenade"
+    },
+    {
+      "type": "WEAP",
+      "form": "000E3778",
+      "editor_id": "WeapNV9mmPistol",
+      "name": "9mm Pistol"
+    },
+    {
+      "type": "AMMO",
+      "form": "0008ED03",
+      "editor_id": "Ammo9mm",
+      "name": "9mm Round"
+    },
+    {
+      "type": "AMMO",
+      "form": "00029371",
+      "editor_id": "AmmoFlamerFuel",
+      "name": "Flamer Fuel"
+    }
+  ]
+}

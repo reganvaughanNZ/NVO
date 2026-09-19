@@ -1,0 +1,2 @@
+AV attribution checks: 98 passed, 0 failed
+game_or_plugin_dll_loaded=false hooks_installed=false getter_values=synthetic

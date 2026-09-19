@@ -1,0 +1,212 @@
+{
+  "packet": "4I",
+  "status": "COPY_ASSOCIATION_PASSED_WITH_CALLBACK_FOLLOWUP",
+  "reviewed_utc": "2026-09-19T07:56:27.812170+00:00",
+  "capture": {
+    "path": "source/combat/step4i/Evidence/LIVE-4I-20260919.log",
+    "sha256": "97a8bc9a614b926b950e2797267007648e81b6fe090759ebf9e9a876e8e80fc2",
+    "bytes": 78731,
+    "lines": 327
+  },
+  "hits": [
+    {
+      "session": "1",
+      "generation": "3",
+      "tx": "1",
+      "copy": "1",
+      "context": "1",
+      "lifetime": "1",
+      "target": "0011A8D9",
+      "region": "0",
+      "armour_sequence": "1",
+      "reader_epoch": "4",
+      "forms": [
+        "00020420",
+        "00020426"
+      ],
+      "instance_tokens": [
+        "0011A8D91252EB00",
+        "0011A8D91252EAE0"
+      ],
+      "speed_kind": "observed_engine_segment",
+      "speed_authority": "0",
+      "lines": {
+        "HIT_TX_STAGE": 76,
+        "ARMOUR_COPY_SCOPE": 78,
+        "HIT_COPY_CAPTURE": 86,
+        "HIT_CONTEXT": 87,
+        "IMPACT_HIT": 88,
+        "IMPACT_COPY_CAPTURE": 91,
+        "HIT_TX_RETURN": 101
+      }
+    },
+    {
+      "session": "1",
+      "generation": "3",
+      "tx": "2",
+      "copy": "1",
+      "context": "2",
+      "lifetime": "2",
+      "target": "0011A8D9",
+      "region": "0",
+      "armour_sequence": "2",
+      "reader_epoch": "4",
+      "forms": [
+        "00020420",
+        "00020426"
+      ],
+      "instance_tokens": [
+        "0011A8D91252EB00",
+        "0011A8D91252EAE0"
+      ],
+      "speed_kind": "observed_engine_segment",
+      "speed_authority": "0",
+      "lines": {
+        "HIT_TX_STAGE": 146,
+        "ARMOUR_COPY_SCOPE": 148,
+        "HIT_COPY_CAPTURE": 156,
+        "HIT_CONTEXT": 157,
+        "IMPACT_HIT": 158,
+        "IMPACT_COPY_CAPTURE": 161,
+        "HIT_TX_RETURN": 171
+      }
+    },
+    {
+      "session": "2",
+      "generation": "6",
+      "tx": "3",
+      "copy": "1",
+      "context": "1",
+      "lifetime": "3",
+      "target": "0011A8D9",
+      "region": "0",
+      "armour_sequence": "1",
+      "reader_epoch": "7",
+      "forms": [
+        "00020426",
+        "00020420"
+      ],
+      "instance_tokens": [
+        "0011A8D91242F400",
+        "0011A8D91242F420"
+      ],
+      "speed_kind": "observed_engine_segment",
+      "speed_authority": "0",
+      "lines": {
+        "HIT_TX_STAGE": 268,
+        "ARMOUR_COPY_SCOPE": 270,
+        "HIT_COPY_CAPTURE": 278,
+        "HIT_CONTEXT": 279,
+        "IMPACT_HIT": 280,
+        "IMPACT_COPY_CAPTURE": 283,
+        "HIT_TX_RETURN": 291
+      }
+    }
+  ],
+  "callback_summaries": [
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "hit_callbacks": "2",
+      "hit_rows": "2",
+      "health_callbacks": "2",
+      "health_rows": "2",
+      "invalid": "0",
+      "damage_replacement": "0",
+      "damage_applications": "unverified",
+      "event": "DAMAGE_EVENT_SUMMARY",
+      "line": 206
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "hit_callbacks": "0",
+      "hit_rows": "0",
+      "health_callbacks": "0",
+      "health_rows": "0",
+      "invalid": "0",
+      "damage_replacement": "0",
+      "damage_applications": "unverified",
+      "event": "DAMAGE_EVENT_SUMMARY",
+      "line": 326
+    }
+  ],
+  "callback_gaps": [
+    {
+      "session": "2",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "line": 326
+    }
+  ],
+  "installed": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "845300b703e60b53f36c8084f6b19253ac6dd272923b39eb5cb24657e6824556"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "1ecee825ef67c7e0219c54cc50658dddb60de33e97fa59d94bea397d4e1aa59d"
+    }
+  ],
+  "protected_records_and_config": [
+    {
+      "path": "Data/FalloutNV.esm",
+      "sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b"
+    },
+    {
+      "path": "Data/MercenaryPack.esm",
+      "sha256": "73e76bcadbf326818af7b58c315773a2d86fe3a8186a778e84a68916cb830c59"
+    },
+    {
+      "path": "Data/ClassicPack.esm",
+      "sha256": "3b31928dfdac46028f2e12f25b0dbdd0e809d4d74ac04fb7783e0063e912760b"
+    },
+    {
+      "path": "Data/HonestHearts.esm",
+      "sha256": "db4b7017dd6e1cd6f74e08fc151862960196c57f6373ce4e38522fa9677f17aa"
+    },
+    {
+      "path": "Data/NVO.esm",
+      "sha256": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e"
+    },
+    {
+      "path": "Data/NVOFlightPilot.esp",
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOArmourCoverage.tsv",
+      "sha256": "0e25e3aafbd0aadf52fb58fb38b19cb079280d96006b0ee84f927fdd860973aa"
+    },
+    {
+      "path": "Data/CaravanPack.esm",
+      "sha256": "0473cff52d375a77d6585f203a914445fa5a9e6ba726818aa7d8d48cb177ec82"
+    },
+    {
+      "path": "Data/GunRunnersArsenal.esm",
+      "sha256": "46494d52a76af9489d3e823f345c4efe873fe29114db25b5d566298365805cb7"
+    },
+    {
+      "path": "Data/OldWorldBlues.esm",
+      "sha256": "fd6cc6e582582ec035277150e106d12b6d78c7c60cbb506545e06d1fa7212295"
+    },
+    {
+      "path": "Data/LonesomeRoad.esm",
+      "sha256": "8516a98d6652bed6824699d807b86f2fde5f1c1873b6e36a832e94863968cf92"
+    },
+    {
+      "path": "Data/DeadMoney.esm",
+      "sha256": "076428d59515d554b7830c7ebbc3fe3e5487e888ef07d2c4ec6d375c44feda59"
+    },
+    {
+      "path": "Data/TribalPack.esm",
+      "sha256": "342f42ce9835f57ee19be09f12ad0ba2c6182e86740338202fcea9011d62f328"
+    }
+  ],
+  "normal_exit": true,
+  "startup_banners": 1,
+  "gameplay_writes": false,
+  "game_modified": false,
+  "scope": "Three standard9mm humanoid torso copies across one reload. No exact speed/atomic snapshot/component/application acceptance.",
+  "next": "Investigate/recover missing post-reload ITR callbacks before advancing the damage pipeline; no repeat of this unchanged copy test."
+}

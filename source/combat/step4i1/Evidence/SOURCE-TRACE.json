@@ -1,0 +1,73 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\PluginAPI.h",
+      "sha256": "bc07f783fd90425e192dbbc026a48aa73f1639983b0267aeb24a43a5a5e191f9",
+      "bytes": 71597,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.h",
+      "sha256": "bc46915405299d1854a94e016a9ec718d47462090359748d0a48e82fa8a633cf",
+      "bytes": 41727,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\EventManager.cpp",
+      "sha256": "e1ae0e4223c2b69ca40eacf414584185cdff8ef037d052e855ef1bab9de7c991",
+      "bytes": 73306,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Serialization.cpp",
+      "sha256": "4851aa66e33308af82f7df410a7c88ddaf7a1ccb2e800b8e6e529acaae8f7d32",
+      "bytes": 24787,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\handlers\\OnPreDamageHandler.cpp",
+      "sha256": "732dae3ad501b4f10b042488451782fd25a397194fcc4deadf269444a71a31bd",
+      "bytes": 9765,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\internal\\EventDispatch.cpp",
+      "sha256": "d88e1ea776853abb191574671045fae00fcd940c1a4fb11e74d1959e0c7981c9",
+      "bytes": 12500,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\ITR.cpp",
+      "sha256": "eebdd6c86f28601597f419e17a7ad2988c8ae10e2dc28b5923fd3861b4cd1d4d",
+      "bytes": 31872,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Core_Serialization.cpp",
+      "sha256": "f1069c880f23bcd0b94a243e85f3c8d658a4359994111049ffa6e9e504674a3c",
+      "bytes": 5159,
+      "prior_pin": false
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Hooks_SaveLoad.cpp",
+      "sha256": "605e4b0e68802ee335b587bb85b1ebd6be218e5514b09c61cc02b06382b86590",
+      "bytes": 6653,
+      "prior_pin": false
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\Hooks_Gameplay.cpp",
+      "sha256": "2f62e15a78d1fe73b42e1e53af9aabd08c267d5c3b9b2e3ced22b68676339e3d",
+      "bytes": 34250,
+      "prior_pin": false
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\NVSE-master (1)\\NVSE-master\\nvse\\nvse\\PluginManager.cpp",
+      "sha256": "f9f6befa5f2efe21a29205b98a6c3fb20a55ed0cdf67ffa51aaefe33567fea90",
+      "bytes": 33525,
+      "prior_pin": false
+    }
+  ],
+  "copied_donor_implementation": false,
+  "api": "xNVSE event interface8: IsEventHandlerFirst index11 offset44, prefix48 bytes",
+  "original_live_cause_established": false
+}

@@ -1,4 +1,5 @@
 #pragma once
+#include "CopyCapture.hpp"
 
 namespace nvo::hit { struct Data; }
 namespace nvo::transaction { struct CopyScope; }
@@ -12,6 +13,6 @@ void Initialize() noexcept;
 void QueueCapture(unsigned session) noexcept;
 void Tick() noexcept;
 void Suspend(const char* reason) noexcept;
-void Observe(const nvo::hit::Data* input, void* process,
+nvo::capture::ArmourReceipt Observe(const nvo::hit::Data* input, void* process,
     const nvo::transaction::CopyScope& scope) noexcept;
 } // namespace nvo::armour

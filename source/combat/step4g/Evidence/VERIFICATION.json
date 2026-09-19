@@ -1,0 +1,163 @@
+{
+  "packet": "4G",
+  "status": "PREPARED_OFFLINE",
+  "verified_utc": "2026-09-19T06:24:48.675874+00:00",
+  "native_source_version": 327,
+  "gameplay_writes": false,
+  "runtime_integrated": false,
+  "dll_built": false,
+  "installed": false,
+  "game_accessed": false,
+  "new_runtime_dependencies": [],
+  "compiler": "MSVC x86 /std:c++17 /W4 /WX /permissive-",
+  "checks_total": 416,
+  "suites": {
+    "material": {
+      "checks": 80,
+      "result": "SAMPLE synthetic baseline: incident=800.000 J residual=500.000 J stopped=300.000 J transmitted=125.000 J retained=175.000 J biological_hp=42.500 regional_loss=12.750 worn_loss=0.100 natural_loss=0.200\nPASS material preview checks: 80"
+    },
+    "model": {
+      "checks": 45,
+      "result": "PASS bare kinetic preview with explicit SI inputs\nPASS layer separates residual wound energy from transmitted blunt energy\nPASS limb and instance-specific wear remain separate preview fields\nPASS stopped HP can transmit blunt trauma but cannot deliver wound poison\nPASS explicit AP Ball HP response distinctions\nPASS body armour does not cover head\nPASS helmet covers reported head separately\nPASS damaged fixture armour offers less resistance\nPASS zero condition has no fixture resistance or further wear\nPASS layers absorb without increasing incident energy\nPASS robot receives mechanical preview without biological payload\nPASS pure model has identical VATS and real-time armour rules\nPASS laser plasma blast select different authored responses\nPASS non-kinetic dose is not joules or bullet penetration\nPASS unmodelled non-kinetic wound payload is rejected rather than discarded\nPASS fixed-state flame dose independent of interval partition\nPASS three distinct beam previews preserve component multiplicity\nPASS per-pellet mass conserves total fixture energy\nPASS zero incident is not a wound\nPASS invalid mass rejected without partial result\nPASS invalid mass rejected without partial result\nPASS invalid mass rejected without partial result\nPASS mixed units rejected\nPASS missing speed is not zero or muzzle speed\nPASS geometry-rejected contact cannot acquire authority\nPASS uncalibrated game units rejected\nPASS incident arithmetic overflow rejected\nPASS unknown actual region is not torso\nPASS unknown VATS mode rejected\nPASS unowned critical or difficulty modifier rejects preview\nPASS missing armour snapshot is not bare skin\nPASS condition outside normalized domain rejected\nPASS unknown worn armour is unsupported\nPASS duplicate armour instance cannot absorb twice\nPASS material and incident units must agree\nPASS amplifying shield fraction rejected\nPASS wear is capped by remaining condition\nPASS late invalid layer returns no earlier partial result\nPASS flame duration requires simulated seconds\nPASS unsupported family cannot become a bullet\nPASS out of range family rejected before array access\nPASS HP overflow returns no partial result\nPASS 4000 seeded layered cases conserve energy\nPASS 4000 seeded cases retain more energy through weaker fixture armour\nPASS 10000 previews unchanged with no diagnostic budget dependency\nRESULT checks=45 failures=0 gameplay_writes=0 synthetic_fixtures=1"
+    },
+    "shadow": {
+      "checks": 48,
+      "result": "PASS complete exact evidence produces preview only\nPASS adapter preserves agreed region and pure resolver output\nPASS complete instance layer reaches pure preview\nPASS instance identity remains in preview wear field\nPASS body layer does not silently become helmet coverage\nPASS verified VATS uses the same pure armour rule\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing component identity is explicit\nPASS missing application identity is explicit\nPASS unverified engine path cannot preview\nPASS unknown real-time or VATS mode cannot preview\nPASS one region producer is insufficient\nPASS region disagreement remains disagreement\nPASS unknown region is not torso\nPASS unowned difficulty critical or VATS scaling blocks preview\nPASS incomplete equipped-item enumeration is not bare skin\nPASS unproven region coverage is not bare skin\nPASS unverified layer order blocks preview\nPASS armour list not coherently captured at impact blocks preview\nPASS empty layer list requires verified bare region\nPASS bare and armoured claims cannot coexist\nPASS kinetic adapter does not invent laser slug physics\nPASS unmapped weapon and ammunition stay unsupported\nPASS profile identity must match the hit snapshot\nPASS unknown ammunition construction stays unsupported\nPASS mixed cartridge units are rejected before the resolver\nPASS missing speed remains unavailable\nPASS ambiguous speed remains unavailable\nPASS valid speed interval is represented without midpoint promotion\nPASS reversed speed interval is invalid\nPASS unverified scalar speed is not exact\nPASS unverified contact producer blocks preview\nPASS unverified speed producer blocks preview\nPASS authored unit convention is not silently called calibrated\nPASS missing target anatomy profile stays unsupported\nPASS unknown worn armour cannot become bare skin\nPASS duplicate armour instance cannot absorb twice\nPASS invalid live armour condition produces no preview\nPASS current 3U1 owned-step range stays diagnostic only\nPASS 10000 shadow previews are deterministic and budget independent\nPASS diagnostic status names are stable\nRESULT checks=48 failures=0 gameplay_writes=0 runtime_integrated=0 synthetic_profiles=1"
+    },
+    "response": {
+      "checks": 243,
+      "result": "PASS 243 checks; 10000 deterministic selections; synthetic definitions only; gameplay authority 0"
+    }
+  },
+  "source_inputs": [
+    {
+      "path": "native/NVOCombatModel/ArmourModel.hpp",
+      "bytes": 4323,
+      "sha256": "070ed94fd6c9a488d4fb7b623773d08d8ff4ad5f1721a20a7e6ac7da4248da79"
+    },
+    {
+      "path": "native/NVOCombatModel/ArmourModel.cpp",
+      "bytes": 7923,
+      "sha256": "00ccf08df48c49b807d8efcef4c486e6ee9630f9e63bfabf485644c5af113867"
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.hpp",
+      "bytes": 3419,
+      "sha256": "85eae3a794a3d34842c9eefd262fde10771b691b986c86536f4585eddb2ce4f7"
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.cpp",
+      "bytes": 8156,
+      "sha256": "38960b40b95519075e2595024f02a6edeaadee7a62a06e7a563c8339d94379c4"
+    },
+    {
+      "path": "native/NVOCombatModel/ResponseDefinitions.hpp",
+      "bytes": 5141,
+      "sha256": "a2b199deb370ce083766d3bd29db0b6dd37391df006087cbdbf8d9696994410a"
+    },
+    {
+      "path": "native/NVOCombatModel/ResponseDefinitions.cpp",
+      "bytes": 11570,
+      "sha256": "76367c6ec4eaaac5092c0e9f054b28d7829702f3d2f35083936baaeac0ed325b"
+    },
+    {
+      "path": "native/NVOCombatModel/MaterialPreview.hpp",
+      "bytes": 4424,
+      "sha256": "f2978bdf2e09fb9f3a3bfa7e7c6642cebb0df28e68c2598b9a8c10340bc9db57"
+    },
+    {
+      "path": "native/NVOCombatModel/MaterialPreview.cpp",
+      "bytes": 12134,
+      "sha256": "8cb4664be16fdee7c329f6f53a42deaadc96475564880f9859b8db13d3894abb"
+    },
+    {
+      "path": "native/NVOCombatModel/tests.cpp",
+      "bytes": 10662,
+      "sha256": "1845a86fc1ff74a0c7a05218f963d2d8f6c55cf8be816047386481908a61dc40"
+    },
+    {
+      "path": "native/NVOCombatModel/shadow_adapter_tests.cpp",
+      "bytes": 13386,
+      "sha256": "7acf2dea5481dc79fa96565534435f5fe0da123606035cba97db0b4a44cc06b4"
+    },
+    {
+      "path": "native/NVOCombatModel/response_definition_tests.cpp",
+      "bytes": 14662,
+      "sha256": "d4eb3b6bdef6b477d38ecff8ec435d3116d3bd9e65303fe4e271494afe704f9f"
+    },
+    {
+      "path": "native/NVOCombatModel/material_preview_tests.cpp",
+      "bytes": 30115,
+      "sha256": "b0b48db7e03e4f681c2c4559bd7158eedee5fa16ef8b789bc72cf18bb6fe2363"
+    },
+    {
+      "path": "native/NVOCombatModel/run_material_checks.cmd",
+      "bytes": 2498,
+      "sha256": "848e300f70c33bb60f5daf2e3c53695ec403e4009ffb269f037c322321b21604"
+    }
+  ],
+  "existing_native_files_unchanged": 110,
+  "refactored_offline_sources": [
+    {
+      "before_sha256": "e2cdb3a954941b71909ab1e3875e91eea7fac1c9b05b12c77aec006e0b0f39e4",
+      "after": {
+        "path": "native/NVOCombatModel/ArmourModel.cpp",
+        "bytes": 7923,
+        "sha256": "00ccf08df48c49b807d8efcef4c486e6ee9630f9e63bfabf485644c5af113867"
+      }
+    },
+    {
+      "before_sha256": "5d1470e5649202f010f756377efd7f778c82f4efaca78fc7b1f24569c0ce0efa",
+      "after": {
+        "path": "native/NVOCombatModel/ArmourModel.hpp",
+        "bytes": 4323,
+        "sha256": "070ed94fd6c9a488d4fb7b623773d08d8ff4ad5f1721a20a7e6ac7da4248da79"
+      }
+    },
+    {
+      "before_sha256": "058d924f820fa9561caf23b93dd9f4555af530ccb511a9a1e6184b56b7c64e78",
+      "after": {
+        "path": "native/NVOCombatModel/ShadowAdapter.cpp",
+        "bytes": 8156,
+        "sha256": "38960b40b95519075e2595024f02a6edeaadee7a62a06e7a563c8339d94379c4"
+      }
+    },
+    {
+      "before_sha256": "497973c3883ba060328984b7adf24a43e3d77fd6069fefa81542c6785088a6c7",
+      "after": {
+        "path": "native/NVOCombatModel/ShadowAdapter.hpp",
+        "bytes": 3419,
+        "sha256": "85eae3a794a3d34842c9eefd262fde10771b691b986c86536f4585eddb2ce4f7"
+      }
+    }
+  ],
+  "executable_hashes": [
+    {
+      "path": "native/NVOCombatModel/out-material/material_checks.exe",
+      "bytes": 247808,
+      "sha256": "926286ec4a7762b7a7cd15cfc75f1965593460cbacd112c28ef8bd97cbb43b6e"
+    },
+    {
+      "path": "native/NVOCombatModel/out-material/model_checks.exe",
+      "bytes": 149504,
+      "sha256": "0bf82fe5529b1a41e59cf2dc2c49c4d0efb3ee3f5c9753e30b8443e24ea777b3"
+    },
+    {
+      "path": "native/NVOCombatModel/out-material/shadow_checks.exe",
+      "bytes": 142848,
+      "sha256": "5a2a8d687f20ea33db77510fa0dfb67f66a2f96ca71e9b02030167e072828c4e"
+    },
+    {
+      "path": "native/NVOCombatModel/out-material/response_checks.exe",
+      "bytes": 257536,
+      "sha256": "6201390f6b74b3b64dfcdc59df5af1748a4e6fb89e6cb27352487fb046d789ce"
+    }
+  ],
+  "limitations": [
+    "Synthetic numeric profiles/evidence only; no production armour or creature mappings.",
+    "Scalar stopping and direct-to-target transmission surrogate, not calibrated material physics.",
+    "Other ten families explicitly unsupported by the new numerical bridge.",
+    "No live impact-speed/snapshot authority, engine writes, or stress performance measured.",
+    "Installed game files were not inspected or changed; source evidence is not live acceptance."
+  ]
+}

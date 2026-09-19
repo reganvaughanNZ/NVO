@@ -1,0 +1,288 @@
+{
+  "packet": "4H",
+  "status": "PREPARED_OFFLINE",
+  "verified_utc": "2026-09-19T06:52:49.691953+00:00",
+  "native_source_version": 327,
+  "material_contract_version": 2,
+  "binding_contract_version": 1,
+  "runtime_integrated": false,
+  "gameplay_writes": false,
+  "dll_built": false,
+  "installed": false,
+  "game_accessed": false,
+  "new_runtime_dependencies": [],
+  "compiler": "MSVC x86 /std:c++17 /W4 /WX /permissive-",
+  "checks_total": 524,
+  "suites": {
+    "binding": {
+      "checks": 80,
+      "result": "RESULT checks=80 failures=0 suite=impact_binding"
+    },
+    "material": {
+      "checks": 108,
+      "result": "SAMPLE synthetic baseline: incident=800.000 J residual=500.000 J stopped=300.000 J transmitted=125.000 J retained=175.000 J biological_hp=42.500 regional_loss=12.750 worn_loss=0.100 natural_loss=0.200\nPASS material preview checks: 108"
+    },
+    "model": {
+      "checks": 45,
+      "result": "PASS bare kinetic preview with explicit SI inputs\nPASS layer separates residual wound energy from transmitted blunt energy\nPASS limb and instance-specific wear remain separate preview fields\nPASS stopped HP can transmit blunt trauma but cannot deliver wound poison\nPASS explicit AP Ball HP response distinctions\nPASS body armour does not cover head\nPASS helmet covers reported head separately\nPASS damaged fixture armour offers less resistance\nPASS zero condition has no fixture resistance or further wear\nPASS layers absorb without increasing incident energy\nPASS robot receives mechanical preview without biological payload\nPASS pure model has identical VATS and real-time armour rules\nPASS laser plasma blast select different authored responses\nPASS non-kinetic dose is not joules or bullet penetration\nPASS unmodelled non-kinetic wound payload is rejected rather than discarded\nPASS fixed-state flame dose independent of interval partition\nPASS three distinct beam previews preserve component multiplicity\nPASS per-pellet mass conserves total fixture energy\nPASS zero incident is not a wound\nPASS invalid mass rejected without partial result\nPASS invalid mass rejected without partial result\nPASS invalid mass rejected without partial result\nPASS mixed units rejected\nPASS missing speed is not zero or muzzle speed\nPASS geometry-rejected contact cannot acquire authority\nPASS uncalibrated game units rejected\nPASS incident arithmetic overflow rejected\nPASS unknown actual region is not torso\nPASS unknown VATS mode rejected\nPASS unowned critical or difficulty modifier rejects preview\nPASS missing armour snapshot is not bare skin\nPASS condition outside normalized domain rejected\nPASS unknown worn armour is unsupported\nPASS duplicate armour instance cannot absorb twice\nPASS material and incident units must agree\nPASS amplifying shield fraction rejected\nPASS wear is capped by remaining condition\nPASS late invalid layer returns no earlier partial result\nPASS flame duration requires simulated seconds\nPASS unsupported family cannot become a bullet\nPASS out of range family rejected before array access\nPASS HP overflow returns no partial result\nPASS 4000 seeded layered cases conserve energy\nPASS 4000 seeded cases retain more energy through weaker fixture armour\nPASS 10000 previews unchanged with no diagnostic budget dependency\nRESULT checks=45 failures=0 gameplay_writes=0 synthetic_fixtures=1"
+    },
+    "shadow": {
+      "checks": 48,
+      "result": "PASS complete exact evidence produces preview only\nPASS adapter preserves agreed region and pure resolver output\nPASS complete instance layer reaches pure preview\nPASS instance identity remains in preview wear field\nPASS body layer does not silently become helmet coverage\nPASS verified VATS uses the same pure armour rule\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing identity cannot become a preview\nPASS missing component identity is explicit\nPASS missing application identity is explicit\nPASS unverified engine path cannot preview\nPASS unknown real-time or VATS mode cannot preview\nPASS one region producer is insufficient\nPASS region disagreement remains disagreement\nPASS unknown region is not torso\nPASS unowned difficulty critical or VATS scaling blocks preview\nPASS incomplete equipped-item enumeration is not bare skin\nPASS unproven region coverage is not bare skin\nPASS unverified layer order blocks preview\nPASS armour list not coherently captured at impact blocks preview\nPASS empty layer list requires verified bare region\nPASS bare and armoured claims cannot coexist\nPASS kinetic adapter does not invent laser slug physics\nPASS unmapped weapon and ammunition stay unsupported\nPASS profile identity must match the hit snapshot\nPASS unknown ammunition construction stays unsupported\nPASS mixed cartridge units are rejected before the resolver\nPASS missing speed remains unavailable\nPASS ambiguous speed remains unavailable\nPASS valid speed interval is represented without midpoint promotion\nPASS reversed speed interval is invalid\nPASS unverified scalar speed is not exact\nPASS unverified contact producer blocks preview\nPASS unverified speed producer blocks preview\nPASS authored unit convention is not silently called calibrated\nPASS missing target anatomy profile stays unsupported\nPASS unknown worn armour cannot become bare skin\nPASS duplicate armour instance cannot absorb twice\nPASS invalid live armour condition produces no preview\nPASS current 3U1 owned-step range stays diagnostic only\nPASS 10000 shadow previews are deterministic and budget independent\nPASS diagnostic status names are stable\nRESULT checks=48 failures=0 gameplay_writes=0 runtime_integrated=0 synthetic_profiles=1"
+    },
+    "response": {
+      "checks": 243,
+      "result": "PASS 243 checks; 10000 deterministic selections; synthetic definitions only; gameplay authority 0"
+    }
+  },
+  "source_inputs": [
+    {
+      "path": "native/NVOCombatModel/ArmourModel.hpp",
+      "bytes": 4323,
+      "sha256": "070ed94fd6c9a488d4fb7b623773d08d8ff4ad5f1721a20a7e6ac7da4248da79"
+    },
+    {
+      "path": "native/NVOCombatModel/ArmourModel.cpp",
+      "bytes": 7923,
+      "sha256": "00ccf08df48c49b807d8efcef4c486e6ee9630f9e63bfabf485644c5af113867"
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.hpp",
+      "bytes": 3419,
+      "sha256": "85eae3a794a3d34842c9eefd262fde10771b691b986c86536f4585eddb2ce4f7"
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.cpp",
+      "bytes": 8156,
+      "sha256": "38960b40b95519075e2595024f02a6edeaadee7a62a06e7a563c8339d94379c4"
+    },
+    {
+      "path": "native/NVOCombatModel/ResponseDefinitions.hpp",
+      "bytes": 5141,
+      "sha256": "a2b199deb370ce083766d3bd29db0b6dd37391df006087cbdbf8d9696994410a"
+    },
+    {
+      "path": "native/NVOCombatModel/ResponseDefinitions.cpp",
+      "bytes": 11570,
+      "sha256": "76367c6ec4eaaac5092c0e9f054b28d7829702f3d2f35083936baaeac0ed325b"
+    },
+    {
+      "path": "native/NVOCombatModel/MaterialPreview.hpp",
+      "bytes": 4678,
+      "sha256": "c4a2a7c74fd778c231df567f310257329fbbde39018dd5a58579d730d01c052f"
+    },
+    {
+      "path": "native/NVOCombatModel/MaterialPreview.cpp",
+      "bytes": 12445,
+      "sha256": "7344f6f1f6288e811a1b5a3ffc89f553a67371c87430c26d7274eab34fd8e676"
+    },
+    {
+      "path": "native/NVOCombatModel/tests.cpp",
+      "bytes": 10662,
+      "sha256": "1845a86fc1ff74a0c7a05218f963d2d8f6c55cf8be816047386481908a61dc40"
+    },
+    {
+      "path": "native/NVOCombatModel/shadow_adapter_tests.cpp",
+      "bytes": 13386,
+      "sha256": "7acf2dea5481dc79fa96565534435f5fe0da123606035cba97db0b4a44cc06b4"
+    },
+    {
+      "path": "native/NVOCombatModel/response_definition_tests.cpp",
+      "bytes": 14662,
+      "sha256": "d4eb3b6bdef6b477d38ecff8ec435d3116d3bd9e65303fe4e271494afe704f9f"
+    },
+    {
+      "path": "native/NVOCombatModel/material_preview_tests.cpp",
+      "bytes": 39018,
+      "sha256": "056e9c623ca1bfc60b6dee4e6eeee560b6bf9ce949d2c00acba291a1229347c4"
+    },
+    {
+      "path": "native/NVOCombatModel/run_material_checks.cmd",
+      "bytes": 2516,
+      "sha256": "79429d5c2dfb60734d6f4659bdded3cf3bdd85c210ba0ed2d1ac6e7bcf9955fd"
+    },
+    {
+      "path": "native/NVOCombatModel/ImpactBinding.hpp",
+      "bytes": 2132,
+      "sha256": "99bcfd48fae6dfab226e940cad8818a9b88d009b8cb8056918a3cdc40d900dca"
+    },
+    {
+      "path": "native/NVOCombatModel/ImpactBinding.cpp",
+      "bytes": 3350,
+      "sha256": "efe44dd4a30bb7cfb56b578ee4df69855caaf956aafd4bc6c391270d108adba5"
+    },
+    {
+      "path": "native/NVOCombatModel/impact_binding_tests.cpp",
+      "bytes": 7870,
+      "sha256": "289709a54cafce6b74ca54aabd7cef3107f2b395689ffc539fdd04325bd395fe"
+    },
+    {
+      "path": "native/NVOCombatModel/run_binding_checks.cmd",
+      "bytes": 1280,
+      "sha256": "e3adedc015bc215c949fb6d461cf9000796a6437453e9faf89b521100bcdf3b0"
+    }
+  ],
+  "document_inputs": [
+    {
+      "path": "source/combat/step4h/README.md",
+      "bytes": 4034,
+      "sha256": "7e4f51f14c23b5af96f9f2a06a56f7cc216309c350a8820cc9a6164b4ca95ee6"
+    },
+    {
+      "path": "source/combat/step4h/INPUT-AUDIT.md",
+      "bytes": 9899,
+      "sha256": "3456d200f53da8b94e35b7550875816e152caff11bdd6dd15e6b0743f1bc7b6c"
+    },
+    {
+      "path": "source/combat/step4h/BINDING-CONTRACT.md",
+      "bytes": 4318,
+      "sha256": "f6a6b7d0fef6c418b96a6f8824c60f48b63a9a6ebc5f550d58bd38d5976e0b92"
+    },
+    {
+      "path": "source/combat/step4h/REVIEW.md",
+      "bytes": 1512,
+      "sha256": "360d661faede50465c5e7bb26f5ccd64d433d768a2ce68c42084e4ec5285da50"
+    },
+    {
+      "path": "source/combat/step4h/START-HERE.html",
+      "bytes": 1999,
+      "sha256": "4fb2ff98b6fe10b336ea24199fc4b0aa9f025fcff2f521729d54b3ea26231bc6"
+    }
+  ],
+  "audit_references": [
+    {
+      "path": "native/NVOCombatCore/include/ArmourSnapshotReader.hpp",
+      "bytes": 2538,
+      "sha256": "748008bdcc84c296dc66953f66c69634c9671dbf1b1058c455fbaab556ec5641"
+    },
+    {
+      "path": "native/NVOCombatCore/include/FlightPhysics.hpp",
+      "bytes": 1446,
+      "sha256": "68568bdb227c220119d5af13f6c171e15c03427b1e688708aae3c551caa19419"
+    },
+    {
+      "path": "native/NVOCombatCore/src/ArmourCoverage.cpp",
+      "bytes": 6522,
+      "sha256": "0d8c4e355339e9e55eaa8c9b91afaec2f926530c14992d6e49f1d63ba853d3c9"
+    },
+    {
+      "path": "native/NVOCombatCore/src/ArmourSnapshot.cpp",
+      "bytes": 10379,
+      "sha256": "374e343e866f28804fa6657b11a065952a383d4703217c3b6634d78afb78ed25"
+    },
+    {
+      "path": "native/NVOCombatCore/src/CurrentHit.cpp",
+      "bytes": 9137,
+      "sha256": "8a64cc737fb22b44a689584e499bd3e996067bf3bc4dc40f8ea135f4da9c8504"
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightContactSpeed.inl",
+      "bytes": 6096,
+      "sha256": "9753f62ef37f5aa65cdc769beb2209603ecc95957fd46f73c6ef58a49ed9278e"
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightImpact.inl",
+      "bytes": 14259,
+      "sha256": "36b68a840fd6e0747db02ca8bf27967667aa5b580e8d04c08c9af9b7930e90bc"
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightImpactJoin.inl",
+      "bytes": 5694,
+      "sha256": "5ac90b991e68e2cbbb97db35ed268d803390b51f0d0bd7a12356add30aa0bb04"
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightImpactModel.inl",
+      "bytes": 2772,
+      "sha256": "87676175e0c9b306a5a3072effd1c1f4a351484f0739fdab4bc8c768c2000302"
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightPhysics.cpp",
+      "bytes": 65077,
+      "sha256": "662f6721f80869b55988b753f829b51c42be8058b962f45e6d343f395e1e01d5"
+    },
+    {
+      "path": "native/NVOCombatCore/src/HitTransaction.cpp",
+      "bytes": 20655,
+      "sha256": "603e591dd1d28ad516ec8627e4f3b4190804366c9c92ba2a6d2ed37a4d7972dc"
+    },
+    {
+      "path": "native/NVOCombatCore/src/NativeObserver.cpp",
+      "bytes": 20885,
+      "sha256": "15d48c369741069fc6259b34fb469bfbc7110ae6ec5698c44e652caa59163d5c"
+    },
+    {
+      "path": "source/combat/step3v/AUDIT.md",
+      "bytes": 9015,
+      "sha256": "2cac7c739d75b1322578901f4d039a04bf58c6ee16664b3e61492729b42f40d5"
+    }
+  ],
+  "existing_native_and_offline_files_unchanged": 114,
+  "changed_4g_inputs": [
+    {
+      "before_sha256": "f2978bdf2e09fb9f3a3bfa7e7c6642cebb0df28e68c2598b9a8c10340bc9db57",
+      "after": {
+        "path": "native/NVOCombatModel/MaterialPreview.hpp",
+        "bytes": 4678,
+        "sha256": "c4a2a7c74fd778c231df567f310257329fbbde39018dd5a58579d730d01c052f"
+      }
+    },
+    {
+      "before_sha256": "8cb4664be16fdee7c329f6f53a42deaadc96475564880f9859b8db13d3894abb",
+      "after": {
+        "path": "native/NVOCombatModel/MaterialPreview.cpp",
+        "bytes": 12445,
+        "sha256": "7344f6f1f6288e811a1b5a3ffc89f553a67371c87430c26d7274eab34fd8e676"
+      }
+    },
+    {
+      "before_sha256": "b0b48db7e03e4f681c2c4559bd7158eedee5fa16ef8b789bc72cf18bb6fe2363",
+      "after": {
+        "path": "native/NVOCombatModel/material_preview_tests.cpp",
+        "bytes": 39018,
+        "sha256": "056e9c623ca1bfc60b6dee4e6eeee560b6bf9ce949d2c00acba291a1229347c4"
+      }
+    },
+    {
+      "before_sha256": "848e300f70c33bb60f5daf2e3c53695ec403e4009ffb269f037c322321b21604",
+      "after": {
+        "path": "native/NVOCombatModel/run_material_checks.cmd",
+        "bytes": 2516,
+        "sha256": "79429d5c2dfb60734d6f4659bdded3cf3bdd85c210ba0ed2d1ac6e7bcf9955fd"
+      }
+    }
+  ],
+  "executable_hashes": [
+    {
+      "path": "native/NVOCombatModel/out-binding/binding_checks.exe",
+      "bytes": 132608,
+      "sha256": "b3361dfb5371bf94fb6be8b78311e55706ec2069add9b9ca98d8bfc5131d31d3"
+    },
+    {
+      "path": "native/NVOCombatModel/out-material/material_checks.exe",
+      "bytes": 259584,
+      "sha256": "0f3fb1715aecda544647eb305e1648f4753aa9d64c1252b0be03b85ef9a4e566"
+    },
+    {
+      "path": "native/NVOCombatModel/out-material/model_checks.exe",
+      "bytes": 149504,
+      "sha256": "f3a19e7ad8420adaaf0998c4912ae4fdfe68a5ab6fd3e8589a64ba6f80f9ef0a"
+    },
+    {
+      "path": "native/NVOCombatModel/out-material/shadow_checks.exe",
+      "bytes": 142848,
+      "sha256": "e6d1652c642eaa2258409f065a016f54e424cf2fed3ab11668797b2d9a8e6f4f"
+    },
+    {
+      "path": "native/NVOCombatModel/out-material/response_checks.exe",
+      "bytes": 257536,
+      "sha256": "1966505ee3e03b0d52092824441e01556e468f2c1b94a51e95aadeec18ac8978"
+    }
+  ],
+  "limitations": [
+    "Synthetic exact/at-impact producer assertions only; no current native producer qualifies.",
+    "Matching stamps cannot validate three identically stale or falsely relabelled payloads.",
+    "Exact contact speed, calibrated units and coherent component-bound impact state remain open.",
+    "No production profiles, engine-hook integration, gameplay writes or performance measurement.",
+    "Installed game state was not inspected; this is offline preparation, not live acceptance."
+  ]
+}

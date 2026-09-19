@@ -16,5 +16,7 @@ void EmitNotice(const nvse::ConsolePrefix* console) noexcept;
 void Suspend(const char* reason) noexcept;
 void Create(void* projectile, std::uint32_t source, std::uint32_t weapon,
     std::uint32_t ammo, unsigned long long lifetime, bool tracked, bool admitted) noexcept;
-void EndSample(void* projectile, unsigned long long lifetime, bool destroyed) noexcept;
+// Cleanup remains necessary after identity ambiguity. In that case suppress
+// fresh travel/range interpretation while retiring the existing owned state.
+void EndSample(void* projectile, unsigned long long lifetime, bool destroyed, bool identityAvailable=true) noexcept;
 } // namespace nvo::flight

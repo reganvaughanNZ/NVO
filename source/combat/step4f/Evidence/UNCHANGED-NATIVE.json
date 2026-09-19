@@ -1,0 +1,555 @@
+{
+  "baseline": "4D",
+  "files": [
+    {
+      "path": "native/NVOCombatCore/BUILD-ATTEMPT.md",
+      "sha256": "a1438129eb1a477c78540c7a394dc1ee5bcb3d24808b1d16b782d049c1fe01f1",
+      "bytes": 709
+    },
+    {
+      "path": "native/NVOCombatCore/BUILD-RESULT.md",
+      "sha256": "83ae15cd3a362914d9f920455c39fc565cb7afc3bd84653d2f69b61df0028eb7",
+      "bytes": 1031
+    },
+    {
+      "path": "native/NVOCombatCore/BUILD.cmd",
+      "sha256": "a47b63e2ce788099cef17a7c66c3090d5675e50ca61268577fe8cd6f20831512",
+      "bytes": 4370
+    },
+    {
+      "path": "native/NVOCombatCore/CMakeLists.txt",
+      "sha256": "27f92604f8923d0652194b0b365db6f489e49ffc0e3add95fee60a006b552e42",
+      "bytes": 1723
+    },
+    {
+      "path": "native/NVOCombatCore/CONTRACT.md",
+      "sha256": "5bb883546ef55ebaf21d3460990f7f1611059b1721184cc35c6de20e3b6da1ee",
+      "bytes": 3943
+    },
+    {
+      "path": "native/NVOCombatCore/CREDITS-BALLISTX.md",
+      "sha256": "5d6889d86aa9e1b9e9db12d688875496e444e77a393f7579cb76d6d61d562126",
+      "bytes": 1261
+    },
+    {
+      "path": "native/NVOCombatCore/LICENSE-GPL-3.0.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149
+    },
+    {
+      "path": "native/NVOCombatCore/LICENSE-ITR-MIT.txt",
+      "sha256": "9c5aefc9fb91a60745bb26db7d76f33837069f2a1de86545acc66f96bcb11c4b",
+      "bytes": 1084
+    },
+    {
+      "path": "native/NVOCombatCore/manifest.json",
+      "sha256": "0ad3b559458d4e79826c02869d45180364ba4ac8502b8c7dd9795905beb069bc",
+      "bytes": 1057
+    },
+    {
+      "path": "native/NVOCombatCore/PROGRESS.md",
+      "sha256": "7a43bdc3c7dc75e035b32418200f82adcaf7c9d3d03abe359883810dbb5b0554",
+      "bytes": 279
+    },
+    {
+      "path": "native/NVOCombatCore/README.md",
+      "sha256": "d520d55b81bc2184e0e7bcf2f15331c933526bca17132de9a0ffcf3f5000bc17",
+      "bytes": 3720
+    },
+    {
+      "path": "native/NVOCombatCore/SDK-BOUNDARY.md",
+      "sha256": "a6b4f047950f55009d03abb5246f705447f9dcbc7f2b53384b31762f75d57f4d",
+      "bytes": 33337
+    },
+    {
+      "path": "native/NVOCombatCore/sdk-reference.json",
+      "sha256": "19a681604127ec58864f1d048ceaee6b66149f293f821155ff75f2c05000fa16",
+      "bytes": 8262
+    },
+    {
+      "path": "native/NVOCombatCore/START-HERE.html",
+      "sha256": "044e6c50940396ce2fa9db1edcd91e54be8fd9d312013997c6fcfef11df4a802",
+      "bytes": 2257
+    },
+    {
+      "path": "native/NVOCombatCore/THIRD-PARTY-NOTICES.md",
+      "sha256": "697bd275576b66135b7c115633adef9a85a0acdefe3edc06b702cbdb381259f1",
+      "bytes": 3576
+    },
+    {
+      "path": "native/NVOCombatCore/config/NVOFlightPhysics.ini",
+      "sha256": "6d5f58aee3b2306e7c7fd0ee5205bd5eb2540854a7932d6e71e3f4d6d940fdac",
+      "bytes": 199
+    },
+    {
+      "path": "native/NVOCombatCore/config/NVOFlightPreview.ini",
+      "sha256": "f90c540d9201c492f699f05a9a02a13954fad8b3e45c3b750304b9b36bad5af4",
+      "bytes": 3595
+    },
+    {
+      "path": "native/NVOCombatCore/include/ActorValueObserver.hpp",
+      "sha256": "542cd961e33b8e3ba89867a2b1651c9231195bf4e9b61695a1cb9a8acc105237",
+      "bytes": 181
+    },
+    {
+      "path": "native/NVOCombatCore/include/ArmourCoverage.hpp",
+      "sha256": "37d3c7d7171459d607344d35bdd66481d8bedf6c170ce6bb9c5da8ea704596e8",
+      "bytes": 391
+    },
+    {
+      "path": "native/NVOCombatCore/include/ArmourCoverageConfig.hpp",
+      "sha256": "743c6266ee8c6897e6aff08502726b3c2ae6b29647294ff9283b8edf9fa14d9a",
+      "bytes": 889
+    },
+    {
+      "path": "native/NVOCombatCore/include/ArmourOrigin.hpp",
+      "sha256": "3b4a50e03893516e0ac60019618b4ce6de4ec2655f9aca5b4f5b4753d1e5f4a8",
+      "bytes": 731
+    },
+    {
+      "path": "native/NVOCombatCore/include/ArmourSnapshot.hpp",
+      "sha256": "6f82d85d918fbd9d8d64e2acbf8b5fabd98c3066d18c407cc627f304fd9167aa",
+      "bytes": 526
+    },
+    {
+      "path": "native/NVOCombatCore/include/ArmourSnapshotReader.hpp",
+      "sha256": "748008bdcc84c296dc66953f66c69634c9671dbf1b1058c455fbaab556ec5641",
+      "bytes": 2538
+    },
+    {
+      "path": "native/NVOCombatCore/include/CurrentHit.hpp",
+      "sha256": "411beb0b042434fb7593854e063dca60b2bc9831de6ca6b6a26f7de7cbbf57bd",
+      "bytes": 1536
+    },
+    {
+      "path": "native/NVOCombatCore/include/DamageEvents.hpp",
+      "sha256": "a0a19f266116ae4a43a4a0e80f0c5d787e0363126cf9b5b15565417fcbd5f104",
+      "bytes": 384
+    },
+    {
+      "path": "native/NVOCombatCore/include/FlightAdmission.hpp",
+      "sha256": "1320921962d674e322b5216bd1984aa68160c16c80e538949334bd5232332460",
+      "bytes": 3382
+    },
+    {
+      "path": "native/NVOCombatCore/include/FlightCapacityProbe.hpp",
+      "sha256": "df8d475eecca2f68747d1c7a629bf7c50527ff58a8a13f0cd667809aaa321670",
+      "bytes": 1745
+    },
+    {
+      "path": "native/NVOCombatCore/include/FlightDragData.hpp",
+      "sha256": "2efffb921d8553ec59d952dac0ba7b3836b0871459ee1f3e1816c59e4cfcd202",
+      "bytes": 1020
+    },
+    {
+      "path": "native/NVOCombatCore/include/FlightPhysics.hpp",
+      "sha256": "68568bdb227c220119d5af13f6c171e15c03427b1e688708aae3c551caa19419",
+      "bytes": 1446
+    },
+    {
+      "path": "native/NVOCombatCore/include/FlightPreview.hpp",
+      "sha256": "86a9f4067292d724f947d3e696a08f28e030d7021eec23d1c38f0259b8fbb246",
+      "bytes": 1180
+    },
+    {
+      "path": "native/NVOCombatCore/include/FlightTiming.hpp",
+      "sha256": "bbbf2eba85b7cad5f81d150871df89650dd80bfafdba51d6e7e18db50b81db61",
+      "bytes": 776
+    },
+    {
+      "path": "native/NVOCombatCore/include/HitTransaction.hpp",
+      "sha256": "6846e7f707dbd3ec24ec756e087fa87c402cc88d45153f2c8ccb84dae350a630",
+      "bytes": 1220
+    },
+    {
+      "path": "native/NVOCombatCore/include/NativeLog.hpp",
+      "sha256": "2a1c8088364505f6a4c6c0748c86099c5973e012d91163cd74d03a0db5c21aea",
+      "bytes": 261
+    },
+    {
+      "path": "native/NVOCombatCore/include/NativeObserver.hpp",
+      "sha256": "3c1956106079f5b2eb281928fe577c7a1806fe767c61d52b74ce126041c3b436",
+      "bytes": 2372
+    },
+    {
+      "path": "native/NVOCombatCore/include/NvseBootstrapApi.hpp",
+      "sha256": "f39f9851281cc48b80a925b2b0783ee55b7da83bf64f35c66b5282737d1d488d",
+      "bytes": 3000
+    },
+    {
+      "path": "native/NVOCombatCore/include/SpawnBoundary.hpp",
+      "sha256": "c7aa6dc86ff778a45df41b79d03b4a5079ac32481677b0301d436757f1e23dc1",
+      "bytes": 497
+    },
+    {
+      "path": "native/NVOCombatCore/include/SpawnCall.hpp",
+      "sha256": "f185722d0dba518236316006addac7a1ec7196d2ff0bc983d566fe14c11427be",
+      "bytes": 1337
+    },
+    {
+      "path": "native/NVOCombatCore/reference/CONTROLLER-LOCAL-Z-CORRECTION.json",
+      "sha256": "f43ad77280e7869255c3ab4ab44a73e30d1c97532c21e5e64d1444c0424320d4",
+      "bytes": 1037
+    },
+    {
+      "path": "native/NVOCombatCore/reference/CONTROLLER-REQUEST-DIAGNOSTICS.json",
+      "sha256": "d4869ef28ebd71f003b78ebc71d5cad7b16276a7fdd7d00b4afa4e1db74a985e",
+      "bytes": 877
+    },
+    {
+      "path": "native/NVOCombatCore/reference/CREDITS.md",
+      "sha256": "f73a9b44dfb5b0f5c0879a22b28f5e5785ccf21bcb23eda5a82ef5a273d77485",
+      "bytes": 1175
+    },
+    {
+      "path": "native/NVOCombatCore/reference/FIRING-RANGE-NOTES.md",
+      "sha256": "a5116582ddb6cd7738489f99add9616e574c7bff2d39a9da055b3683dd040a0d",
+      "bytes": 1960
+    },
+    {
+      "path": "native/NVOCombatCore/reference/FLIGHT-BOUNDARY-DIAGNOSTICS.json",
+      "sha256": "9eded8dd7c854de4be79c1010c38f065aaffec6dbcd6c4352fa0c4b691a646f2",
+      "bytes": 1093
+    },
+    {
+      "path": "native/NVOCombatCore/reference/FLIGHT-MOVEMENT-ARGUMENT.json",
+      "sha256": "83bb5038c5a22c7323a2be22cec18fe06c7678aaedbc7fa248ad9a5b6f56595e",
+      "bytes": 1060
+    },
+    {
+      "path": "native/NVOCombatCore/reference/FLIGHT-PHYSICS-SOURCE.json",
+      "sha256": "fedb15997f7b84b321f61c27801de18501756920b5eed51741165ab0a51ea3bb",
+      "bytes": 1651
+    },
+    {
+      "path": "native/NVOCombatCore/reference/FLIGHT-ROUTE-CHECKPOINT.json",
+      "sha256": "00b21fc32d300c3e4ba7eca513e2403befe07f8fab369ab383e706b066fb1779",
+      "bytes": 772
+    },
+    {
+      "path": "native/NVOCombatCore/reference/FLIGHT-TIMING-HOOK.json",
+      "sha256": "90d3ce42701dba1f49edeb2bb1b5601af5eadb0ea22e09c5800bd065beb0de7a",
+      "bytes": 1354
+    },
+    {
+      "path": "native/NVOCombatCore/reference/FLIGHT-TIMING-THREADS.json",
+      "sha256": "42644a2246c054b23e4033a374c489be99546bd08fefe327be39f1ff8164cea3",
+      "bytes": 1016
+    },
+    {
+      "path": "native/NVOCombatCore/reference/IMPACT-HIT-NOTES.md",
+      "sha256": "b29014bc5e8b35d9c31896cbe377d469e8209ce2f1a6103182695e6adbbcda06",
+      "bytes": 1067
+    },
+    {
+      "path": "native/NVOCombatCore/reference/IMPACT-SPEED-NOTES.md",
+      "sha256": "47c790e2675654af3dc1d066092c6cc522e07d1baa6195644ab7180db685486d",
+      "bytes": 1420
+    },
+    {
+      "path": "native/NVOCombatCore/reference/NVO-Flight-Pilot.json",
+      "sha256": "a1cbc26838d325edb9a2ebc08ff406708c28081f396c53e41713d7e30ae684c8",
+      "bytes": 11161
+    },
+    {
+      "path": "native/NVOCombatCore/reference/PROVENANCE.json",
+      "sha256": "851b0fcaae6c02e3e52be771d01a977b85f2a4e9803d240f4dd82d1379b4edf1",
+      "bytes": 1244
+    },
+    {
+      "path": "native/NVOCombatCore/reference/TERRAIN-QUERY-NOTES.md",
+      "sha256": "9637dfd2d80928c0c917ed2b86838df5ce3b050c7242456e22b35038df2ec16c",
+      "bytes": 2546
+    },
+    {
+      "path": "native/NVOCombatCore/src/ActorValueGuards.inl",
+      "sha256": "bdaec11a5c814b4ebe3dad6a47f14c6a94aa170c081d695eb0698e3c50bf8c72",
+      "bytes": 1043
+    },
+    {
+      "path": "native/NVOCombatCore/src/ActorValueObserver.cpp",
+      "sha256": "6f9fb4ba3c9da056415fdc4651768a3b28f14e05a33b1d49b2502a8915eb8812",
+      "bytes": 15746
+    },
+    {
+      "path": "native/NVOCombatCore/src/ArmourCoverage.cpp",
+      "sha256": "0d8c4e355339e9e55eaa8c9b91afaec2f926530c14992d6e49f1d63ba853d3c9",
+      "bytes": 6522
+    },
+    {
+      "path": "native/NVOCombatCore/src/ArmourCoverageConfig.cpp",
+      "sha256": "a0c889f69e8eb3d069bc78249433887813980cd7db617a16ad319e783eb27d98",
+      "bytes": 3191
+    },
+    {
+      "path": "native/NVOCombatCore/src/ArmourOrigin.cpp",
+      "sha256": "f67c921aef54c87ba8b6d7203ae4dec2804c92585d681bbdc4c45f663660c698",
+      "bytes": 3489
+    },
+    {
+      "path": "native/NVOCombatCore/src/ArmourSnapshot.cpp",
+      "sha256": "374e343e866f28804fa6657b11a065952a383d4703217c3b6634d78afb78ed25",
+      "bytes": 10379
+    },
+    {
+      "path": "native/NVOCombatCore/src/ArmourSnapshotReader.cpp",
+      "sha256": "d5a41b2ebeddd46ce6ebcb5dd81cdaf1cdf9f4e2fe9a0030871f6b38773df36b",
+      "bytes": 24599
+    },
+    {
+      "path": "native/NVOCombatCore/src/CurrentHit.cpp",
+      "sha256": "8a64cc737fb22b44a689584e499bd3e996067bf3bc4dc40f8ea135f4da9c8504",
+      "bytes": 9137
+    },
+    {
+      "path": "native/NVOCombatCore/src/DamageEvents.cpp",
+      "sha256": "181486179cc57f25a2b9129c0feb44ffd4c617556288a00a9eedc190c2dbe0e8",
+      "bytes": 8750
+    },
+    {
+      "path": "native/NVOCombatCore/src/Exports.def",
+      "sha256": "3d4893c7aba7fa85ef8f6cb553fbd2a1eb4d206e380b8000521e339213b1929f",
+      "bytes": 71
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightContactSpeed.inl",
+      "sha256": "9753f62ef37f5aa65cdc769beb2209603ecc95957fd46f73c6ef58a49ed9278e",
+      "bytes": 6096
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightImpact.inl",
+      "sha256": "36b68a840fd6e0747db02ca8bf27967667aa5b580e8d04c08c9af9b7930e90bc",
+      "bytes": 14259
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightImpactJoin.inl",
+      "sha256": "5ac90b991e68e2cbbb97db35ed268d803390b51f0d0bd7a12356add30aa0bb04",
+      "bytes": 5694
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightImpactModel.inl",
+      "sha256": "87676175e0c9b306a5a3072effd1c1f4a351484f0739fdab4bc8c768c2000302",
+      "bytes": 2772
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightPhysics.cpp",
+      "sha256": "662f6721f80869b55988b753f829b51c42be8058b962f45e6d343f395e1e01d5",
+      "bytes": 65077
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightPreview.cpp",
+      "sha256": "233696743a2f66dad1c96217069421be19b9ed4a4b0c10b4887231cd019d9d08",
+      "bytes": 37080
+    },
+    {
+      "path": "native/NVOCombatCore/src/FlightTiming.cpp",
+      "sha256": "1c96271b23065d94cf30101a88d347ba72841394bda619a30163b43cde30b5d0",
+      "bytes": 18846
+    },
+    {
+      "path": "native/NVOCombatCore/src/HitTransaction.cpp",
+      "sha256": "603e591dd1d28ad516ec8627e4f3b4190804366c9c92ba2a6d2ed37a4d7972dc",
+      "bytes": 20655
+    },
+    {
+      "path": "native/NVOCombatCore/src/HitTransactionGuards.inl",
+      "sha256": "c2972d627189eff7ffc814ff8019ed823c03c41bb96ad8131e14794dca9d4e4e",
+      "bytes": 595
+    },
+    {
+      "path": "native/NVOCombatCore/src/NativeLog.cpp",
+      "sha256": "95fe3fb1c804c1a96a6122d72ffc190fb8ea82e114a5b049df7071fd3b5a69bd",
+      "bytes": 3354
+    },
+    {
+      "path": "native/NVOCombatCore/src/NativeObserver.cpp",
+      "sha256": "15d48c369741069fc6259b34fb469bfbc7110ae6ec5698c44e652caa59163d5c",
+      "bytes": 20885
+    },
+    {
+      "path": "native/NVOCombatCore/src/Plugin.cpp",
+      "sha256": "221467162b9a3fcbfa3f7921272aaa32a45130eed66bb262e0b312052563841d",
+      "bytes": 8607
+    },
+    {
+      "path": "native/NVOCombatCore/src/SpawnBoundary.cpp",
+      "sha256": "bb51c7067df39650fb74790291fc37521f1c9246eb53bcde634a9aa77898cc78",
+      "bytes": 13323
+    },
+    {
+      "path": "native/NVOCombatCore/tests/ArmourCoverageIntegrationTests.cpp",
+      "sha256": "f0946e2380589372997f6d38f6950569db5a71966a8115395cd2b493c40d2709",
+      "bytes": 7497
+    },
+    {
+      "path": "native/NVOCombatCore/tests/ArmourCoverageTests.cpp",
+      "sha256": "1526f388ae4f5b83cedaa136525950a0e64e6941cbef01d3b0928dc7b9db4334",
+      "bytes": 8440
+    },
+    {
+      "path": "native/NVOCombatCore/tests/ArmourSnapshotReaderTests.cpp",
+      "sha256": "7505eeeba4eb6aa9b22020f432fac7643d5932d0ea34c72692ce5460b614e4f5",
+      "bytes": 23826
+    },
+    {
+      "path": "native/NVOCombatCore/tests/contact_speed_checks.inl",
+      "sha256": "b04714383697068d1efeec7980861fd3db5724f561190b67cf8bab4bea370cee",
+      "bytes": 9626
+    },
+    {
+      "path": "native/NVOCombatCore/tests/FlightAdmissionTests.cpp",
+      "sha256": "430bab2a3e35aca18736652d209c6334905abf405f49e87c747d617899652405",
+      "bytes": 5726
+    },
+    {
+      "path": "native/NVOCombatCore/tests/FlightCapacityProbeTests.cpp",
+      "sha256": "05b68efb3b18b546bdceacc1f3fa170c63955eabd755a32723e7c91a77e9a0de",
+      "bytes": 3264
+    },
+    {
+      "path": "native/NVOCombatCore/tests/RUN-ADMISSION-CHECKS.cmd",
+      "sha256": "330a00713880206915a60219270aae2a7ceeed09f3e98bb895b9c311df8df161",
+      "bytes": 664
+    },
+    {
+      "path": "native/NVOCombatCore/tests/RUN-ARMOUR-COVERAGE-CHECKS.cmd",
+      "sha256": "5d9952c92d767c2c613080fc2f5d85effa97450d39428880d4a1d87637a66fc8",
+      "bytes": 635
+    },
+    {
+      "path": "native/NVOCombatCore/tests/RUN-ARMOUR-COVERAGE-INTEGRATION.cmd",
+      "sha256": "c244f6c66b6fef87f9ff7011bde34543384053ecdb1599bd6ba6c9c06d4261c6",
+      "bytes": 799
+    },
+    {
+      "path": "native/NVOCombatCore/tests/RUN-ARMOUR-SNAPSHOT-CHECKS.cmd",
+      "sha256": "f3949cdab57674949cc4cb05a502ce68e60b4e1ec5c063cd0e13bd3363c63d59",
+      "bytes": 1070
+    },
+    {
+      "path": "native/NVOCombatCore/tests/RUN-CAPACITY-CHECKS.cmd",
+      "sha256": "fa8503dcfba82503aad263dffc69991d95f59da643a0e9203f0b690d7c4c03c5",
+      "bytes": 676
+    },
+    {
+      "path": "native/NVOCombatCore/tests/RUN-SPAWN-CHECKS.cmd",
+      "sha256": "601b8ced8724ffb4957867e6a148dedd1f022667b146f46b01c13ea14f85211e",
+      "bytes": 600
+    },
+    {
+      "path": "native/NVOCombatCore/tests/SpawnCallTests.cpp",
+      "sha256": "20ed0761238a625ce7c8dc6c9923691501e864acd216a0f95e4a9401f60a408d",
+      "bytes": 2887
+    },
+    {
+      "path": "native/NVOCombatModel/AdmissionLedger.cpp",
+      "sha256": "7987290b3a0070fe069506546df604309aa7c15382ecacdd86b951e3a7d0a2f1",
+      "bytes": 8319
+    },
+    {
+      "path": "native/NVOCombatModel/AdmissionLedger.hpp",
+      "sha256": "f45ee534a675e3887a61d39e21684fcabfc1c84aecff99e37de96d3c312a4546",
+      "bytes": 2882
+    },
+    {
+      "path": "native/NVOCombatModel/AdmissionLedger.md",
+      "sha256": "2283e20715503402c333e5c4c886482cfffa388fa229bcff49e637b17dd67e59",
+      "bytes": 4946
+    },
+    {
+      "path": "native/NVOCombatModel/admission_tests.cpp",
+      "sha256": "a29043c39bce07ae57456be4dac5b0c73ca2f9b763ab0e34d72d86794ab101f9",
+      "bytes": 11834
+    },
+    {
+      "path": "native/NVOCombatModel/ArmourModel.cpp",
+      "sha256": "e2cdb3a954941b71909ab1e3875e91eea7fac1c9b05b12c77aec006e0b0f39e4",
+      "bytes": 5577
+    },
+    {
+      "path": "native/NVOCombatModel/ArmourModel.hpp",
+      "sha256": "5d1470e5649202f010f756377efd7f778c82f4efaca78fc7b1f24569c0ce0efa",
+      "bytes": 3473
+    },
+    {
+      "path": "native/NVOCombatModel/CoverageFixtures.inl",
+      "sha256": "2bda274d1fdc7a372c9078dbc56681cca58b9e9459aed97331127a9c43a62ca7",
+      "bytes": 29285
+    },
+    {
+      "path": "native/NVOCombatModel/CoverageProfiles.cpp",
+      "sha256": "8076636bd4d0f99b33323df325cd499e6907dc1a1e68e4398bcc9d5ac165c8e8",
+      "bytes": 5671
+    },
+    {
+      "path": "native/NVOCombatModel/CoverageProfiles.hpp",
+      "sha256": "17be67d8154c25cd8cbad43b8e00de21b6a794af492c2fdd4ec4434a1860f29f",
+      "bytes": 3705
+    },
+    {
+      "path": "native/NVOCombatModel/coverage_tests.cpp",
+      "sha256": "df84d24b5ea3f6f33695ff2deb72fbf98983fa2b7078287b1f34f552d7c579b0",
+      "bytes": 9359
+    },
+    {
+      "path": "native/NVOCombatModel/ImpactEnergy.cpp",
+      "sha256": "9db9795bd990e90199a863f99a1f8baf1d1a919dac0ee2a668c4b371e86b0252",
+      "bytes": 3625
+    },
+    {
+      "path": "native/NVOCombatModel/ImpactEnergy.hpp",
+      "sha256": "3454533b1205c2620ee8432e9fe4959019f2951baae3dd5a4b7d00ad9ddf9546",
+      "bytes": 2417
+    },
+    {
+      "path": "native/NVOCombatModel/ImpactEnergyProfiles.inl",
+      "sha256": "80c953c6e6bb1281f31d937bd213dd34d2425f5d573ea64b517cbe78d0d34af0",
+      "bytes": 460
+    },
+    {
+      "path": "native/NVOCombatModel/impact_energy_tests.cpp",
+      "sha256": "a52d31e89c19ce8eb62aaa7e370ed027464117c978f4872ca4c3d51913d7a020",
+      "bytes": 5644
+    },
+    {
+      "path": "native/NVOCombatModel/run_admission_checks.cmd",
+      "sha256": "c4a2ff1fd44e7396808e6fe3caeeebb4c85a28ad101893370a3905e1d6d73b60",
+      "bytes": 599
+    },
+    {
+      "path": "native/NVOCombatModel/run_checks.cmd",
+      "sha256": "aa6f8c6d2c4b5844ce31423ab59a462c9b83063c64ae2da094428315998d49cf",
+      "bytes": 481
+    },
+    {
+      "path": "native/NVOCombatModel/run_coverage_checks.cmd",
+      "sha256": "c789ebc0ae7e1ae4e2a199bf16d21d284efce1d3cca5d256be2308e2bc884f21",
+      "bytes": 573
+    },
+    {
+      "path": "native/NVOCombatModel/run_shadow_checks.cmd",
+      "sha256": "083b7283b059284e1a3148d98a0a9fdab64b3e16258ff94359a9aaa0399a5134",
+      "bytes": 553
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.cpp",
+      "sha256": "058d924f820fa9561caf23b93dd9f4555af530ccb511a9a1e6184b56b7c64e78",
+      "bytes": 7551
+    },
+    {
+      "path": "native/NVOCombatModel/ShadowAdapter.hpp",
+      "sha256": "497973c3883ba060328984b7adf24a43e3d77fd6069fefa81542c6785088a6c7",
+      "bytes": 2868
+    },
+    {
+      "path": "native/NVOCombatModel/shadow_adapter_tests.cpp",
+      "sha256": "7acf2dea5481dc79fa96565534435f5fe0da123606035cba97db0b4a44cc06b4",
+      "bytes": 13386
+    },
+    {
+      "path": "native/NVOCombatModel/tests.cpp",
+      "sha256": "1845a86fc1ff74a0c7a05218f963d2d8f6c55cf8be816047386481908a61dc40",
+      "bytes": 10662
+    }
+  ]
+}

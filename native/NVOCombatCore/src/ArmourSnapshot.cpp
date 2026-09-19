@@ -28,6 +28,7 @@ struct Permit {
     U64 epoch{};
     unsigned session{}, ordinal{};
     bool valid{};
+    nvo::capture::ArmourStatus refusal{nvo::capture::ArmourStatus::NotObserved};
 };
 struct SummaryData {
     unsigned session{}, attempts{}, completed{}, noArmour{}, rejected{}, unstable{};
@@ -70,7 +71,8 @@ bool Eligible(const nvo::transaction::CopyScope& scope) noexcept
 {
     const Lock lock;
     if (!gActive || scope.session != gSession) return false;
-    if (!scope.valid || !scope.mainThread || scope.tainted) {
+    if (!scope.valid || !scope.mainThread || scope.tainted
+        || !nvo::capture::Complete(nvo::transaction::CaptureKey(scope))) {
         ++gCounts.scopeRejected;
         return false;
     }
@@ -88,12 +90,13 @@ Permit Reserve(const nvo::transaction::CopyScope& scope) noexcept
     const Lock lock;
     if (!scope.valid || !scope.mainThread || scope.tainted) {
         if (gActive) ++gCounts.scopeRejected;
-        return {};
+        return {0,0,0,false,nvo::capture::ArmourStatus::ScopeRejected};
     }
-    if (!gActive || scope.session != gSession) return {};
+    if (!gActive || scope.session != gSession)
+        return {0,0,0,false,nvo::capture::ArmourStatus::Stale};
     if (gCounts.attempts == kSnapshotLimit) {
         ++gCounts.omitted;
-        return {};
+        return {0,0,0,false,nvo::capture::ArmourStatus::LimitReached};
     }
     ++gCounts.attempts;
     return {gEpoch, gSession, gCounts.attempts, true};
@@ -207,34 +210,39 @@ void nvo::armour::Suspend(const char* reason) noexcept
     nvo::armour::coverage_log::Suspend(reason);
 }
 
-void nvo::armour::Observe(const nvo::hit::Data* input, void* process,
+nvo::capture::ArmourReceipt nvo::armour::Observe(const nvo::hit::Data* input, void* process,
     const nvo::transaction::CopyScope& scope) noexcept
 {
     const ErrorGuard error;
     RecursionGuard recursion;
-    if (!recursion.outer) return;
-    if (!Eligible(scope)) return;
+    using Status = nvo::capture::ArmourStatus;
+    nvo::capture::ArmourReceipt receipt{};
+    if (!recursion.outer) { receipt.status=Status::Reentrant; return receipt; }
+    if (!Eligible(scope)) { receipt.status=Status::ScopeRejected; return receipt; }
+    receipt.key=nvo::transaction::CaptureKey(scope);
 
     hit::Data before{};
     hit::Form target{};
     if (!BoundaryMatches(input, process, scope, before, target)) {
         const Permit permit = Reserve(scope);
-        if (!permit.valid) return;
-        Commit(permit, reader::Code::InvalidArgument);
+        if (!permit.valid) { receipt.status=permit.refusal; return receipt; }
+        receipt.readerEpoch=permit.epoch; receipt.sequence=permit.ordinal;
+        const bool committed=Commit(permit, reader::Code::InvalidArgument);
         LogRejected(permit, scope, "boundary_identity_rejected");
-        return;
+        receipt.status=committed?Status::BoundaryRejected:Status::Stale; return receipt;
     }
     if (target.type != 0x3B) {
         SkipUnsupported(scope);
-        return;
+        receipt.status=Status::UnsupportedTarget; return receipt;
     }
 
     const Permit permit = Reserve(scope);
-    if (!permit.valid) return;
+    if (!permit.valid) { receipt.status=permit.refusal; return receipt; }
+    receipt.readerEpoch=permit.epoch; receipt.sequence=permit.ordinal;
     if (GetCurrentThreadId() != gMainThread || GetCurrentThreadId() != scope.thread) {
-        Commit(permit, reader::Code::UnsupportedTarget);
+        const bool committed=Commit(permit, reader::Code::UnsupportedTarget);
         LogRejected(permit, scope, "foreign_thread");
-        return;
+        receipt.status=committed?Status::ForeignThread:Status::Stale; return receipt;
     }
 
     const reader::Memory memory{nullptr, RuntimeRead};
@@ -251,14 +259,19 @@ void nvo::armour::Observe(const nvo::hit::Data* input, void* process,
 
     if (!Commit(permit, snapshot.code)) {
         LogRejected(permit, scope, "lifecycle_epoch_changed");
-        return;
+        receipt.status=Status::Stale; return receipt;
     }
     nvo::log::Write("ARMOUR_SNAPSHOT session=%u seq=%u tx=%llu target=%08X phase=copy_input status=%s stable_double_read=%u enumeration_complete=%u equipped_armour_count=%u entries=%u instances=%u extras=%u region_coverage_complete=0 layer_order_verified=0 impact_snapshot_verified=0 bare_region_verified=0 snapshot_authority=0 armour_preview=0 gameplay_writes=0",
         permit.session, permit.ordinal, scope.id, scope.target, reader::Name(snapshot.code),
         snapshot.stableDoubleRead ? 1u : 0u, snapshot.enumerationComplete ? 1u : 0u,
         snapshot.itemCount, snapshot.entriesVisited, snapshot.instancesVisited,
         snapshot.extrasVisited);
-    if (!reader::Complete(snapshot.code)) return;
+    nvo::log::Write("ARMOUR_COPY_SCOPE session=%u seq=%u generation=%llu tx=%llu copy=%llu reader_epoch=%llu lifetime=%llu source=%08X target=%08X carrier=%08X weapon=%08X ammo=%08X hit_region=%d component_verified=0 application_verified=0 impact_snapshot_verified=0 gameplay_writes=0",
+        scope.session,permit.ordinal,scope.generation,scope.id,scope.copyOrdinal,permit.epoch,scope.lifetime,
+        scope.source,scope.target,scope.carrier,scope.weapon,scope.ammo,scope.region);
+    if (!reader::Complete(snapshot.code)) { receipt.status=Status::ReaderRejected; return receipt; }
+    receipt.status=Status::Complete; receipt.items=snapshot.itemCount;
+    receipt.enumerationComplete=snapshot.enumerationComplete; receipt.stableDoubleRead=snapshot.stableDoubleRead;
     for (unsigned i = 0; i < snapshot.itemCount; ++i) {
         const auto& item = snapshot.items[i];
         nvo::log::Write("ARMOUR_ITEM session=%u seq=%u item=%u instance=%016llX form=%08X part_mask=%08X base_health=%u current_health=%.9g explicit_health=%u condition_ratio=%.9g armour_rating_raw=%u damage_threshold=%.9g biped_flags=%08X armour_flags=%02X traversal_order_is_layer_order=0 region_coverage_known=0 gameplay_writes=0",
@@ -269,6 +282,7 @@ void nvo::armour::Observe(const nvo::hit::Data* input, void* process,
             static_cast<unsigned>(item.bipedFlags), static_cast<unsigned>(item.armourFlags));
     }
     nvo::armour::coverage_log::Observe(permit.session, permit.ordinal, scope.id, snapshot);
+    return receipt;
 }
 
 static_assert(!nvo::armour::kGameplayWrites);

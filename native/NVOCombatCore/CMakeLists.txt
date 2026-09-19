@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(NVOCombatCore VERSION 0.3.27 LANGUAGES CXX)
+project(NVOCombatCore VERSION 0.3.31 LANGUAGES CXX)
 
 if(NOT WIN32 OR NOT MSVC)
     message(FATAL_ERROR "NVOCombatCore requires Windows and the MSVC C++ toolchain.")

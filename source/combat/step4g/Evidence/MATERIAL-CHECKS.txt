@@ -1,0 +1,2 @@
+SAMPLE synthetic baseline: incident=800.000 J residual=500.000 J stopped=300.000 J transmitted=125.000 J retained=175.000 J biological_hp=42.500 regional_loss=12.750 worn_loss=0.100 natural_loss=0.200
+PASS material preview checks: 80

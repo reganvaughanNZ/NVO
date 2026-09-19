@@ -1,0 +1,5 @@
+# Verification manifests pin exact source bytes. Keep line endings unchanged
+# across GitHub and local checkouts; retain normal text diffs for these files.
+native/** -text
+source/** -text
+tools/** -text

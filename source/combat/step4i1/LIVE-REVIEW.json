@@ -1,0 +1,427 @@
+{
+  "packet": "4I1",
+  "status": "CALLBACK_SURVIVAL_PASSED",
+  "reviewed_utc": "2026-09-19T08:59:59.754171+00:00",
+  "capture": {
+    "path": "source/combat/step4i1/Evidence/LIVE-4I1-20260919.log",
+    "sha256": "2c04f852df0896178b71129e2e15ade1ed4b02c27ee0f1582b9215608ea45857",
+    "bytes": 82781,
+    "lines": 343
+  },
+  "hits": [
+    {
+      "session": "1",
+      "generation": "3",
+      "tx": "1",
+      "copy": "1",
+      "context": "1",
+      "lifetime": "1",
+      "target": "0011A8D9",
+      "region": "0",
+      "armour_sequence": "1",
+      "reader_epoch": "4",
+      "forms": [
+        "00020426",
+        "00020420"
+      ],
+      "instance_tokens": [
+        "0011A8D9124FC8E0",
+        "0011A8D9124F61C0"
+      ],
+      "speed_kind": "observed_engine_segment",
+      "speed_authority": "0",
+      "lines": {
+        "HIT_TX_STAGE": 81,
+        "ARMOUR_COPY_SCOPE": 83,
+        "HIT_COPY_CAPTURE": 91,
+        "HIT_CONTEXT": 92,
+        "IMPACT_HIT": 93,
+        "IMPACT_COPY_CAPTURE": 96,
+        "HIT_TX_RETURN": 107,
+        "DAMAGE_INPUT": 80,
+        "HEALTH_INPUT": 103
+      }
+    },
+    {
+      "session": "2",
+      "generation": "6",
+      "tx": "2",
+      "copy": "1",
+      "context": "1",
+      "lifetime": "2",
+      "target": "0011A8D9",
+      "region": "0",
+      "armour_sequence": "1",
+      "reader_epoch": "7",
+      "forms": [
+        "00020426",
+        "00020420"
+      ],
+      "instance_tokens": [
+        "0011A8D9123DD500",
+        "0011A8D9123DD2A0"
+      ],
+      "speed_kind": "observed_engine_segment",
+      "speed_authority": "0",
+      "lines": {
+        "HIT_TX_STAGE": 211,
+        "ARMOUR_COPY_SCOPE": 213,
+        "HIT_COPY_CAPTURE": 221,
+        "HIT_CONTEXT": 222,
+        "IMPACT_HIT": 223,
+        "IMPACT_COPY_CAPTURE": 226,
+        "HIT_TX_RETURN": 237,
+        "DAMAGE_INPUT": 210,
+        "HEALTH_INPUT": 233
+      }
+    },
+    {
+      "session": "2",
+      "generation": "6",
+      "tx": "3",
+      "copy": "1",
+      "context": "2",
+      "lifetime": "3",
+      "target": "0011A8D9",
+      "region": "0",
+      "armour_sequence": "2",
+      "reader_epoch": "7",
+      "forms": [
+        "00020426",
+        "00020420"
+      ],
+      "instance_tokens": [
+        "0011A8D9123DD500",
+        "0011A8D9123DD2A0"
+      ],
+      "speed_kind": "observed_engine_segment",
+      "speed_authority": "0",
+      "lines": {
+        "HIT_TX_STAGE": 282,
+        "ARMOUR_COPY_SCOPE": 284,
+        "HIT_COPY_CAPTURE": 292,
+        "HIT_CONTEXT": 293,
+        "IMPACT_HIT": 294,
+        "IMPACT_COPY_CAPTURE": 297,
+        "HIT_TX_RETURN": 307,
+        "DAMAGE_INPUT": 281,
+        "HEALTH_INPUT": 303
+      }
+    }
+  ],
+  "callback_summaries": [
+    {
+      "session": "1",
+      "reason": "pre_load_game",
+      "hit_callbacks": "1",
+      "hit_rows": "1",
+      "health_callbacks": "1",
+      "health_rows": "1",
+      "invalid": "0",
+      "registry_checks": "4",
+      "gap_requests": "0",
+      "damage_replacement": "0",
+      "damage_applications": "unverified",
+      "event": "DAMAGE_EVENT_SUMMARY",
+      "line": 142
+    },
+    {
+      "session": "2",
+      "reason": "exit_game",
+      "hit_callbacks": "2",
+      "hit_rows": "2",
+      "health_callbacks": "2",
+      "health_rows": "2",
+      "invalid": "0",
+      "registry_checks": "4",
+      "gap_requests": "0",
+      "damage_replacement": "0",
+      "damage_applications": "unverified",
+      "event": "DAMAGE_EVENT_SUMMARY",
+      "line": 342
+    }
+  ],
+  "callback_gaps": [],
+  "registry_checks": [
+    {
+      "session": "1",
+      "generation": "2",
+      "check": "1",
+      "loop": "0",
+      "reason": "post_load_game",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "unverified",
+      "hit_set": "added_or_revived",
+      "hit_after": "present",
+      "health_before": "unverified",
+      "health_set": "added_or_revived",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 38
+    },
+    {
+      "session": "1",
+      "generation": "2",
+      "check": "2",
+      "loop": "2",
+      "reason": "registration_survival",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "present",
+      "hit_set": "unchanged_or_refused",
+      "hit_after": "present",
+      "health_before": "present",
+      "health_set": "unchanged_or_refused",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 44
+    },
+    {
+      "session": "1",
+      "generation": "2",
+      "check": "3",
+      "loop": "32",
+      "reason": "registration_survival",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "present",
+      "hit_set": "unchanged_or_refused",
+      "hit_after": "present",
+      "health_before": "present",
+      "health_set": "unchanged_or_refused",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 45
+    },
+    {
+      "session": "1",
+      "generation": "2",
+      "check": "4",
+      "loop": "64",
+      "reason": "registration_survival",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "present",
+      "hit_set": "unchanged_or_refused",
+      "hit_after": "present",
+      "health_before": "present",
+      "health_set": "unchanged_or_refused",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 46
+    },
+    {
+      "session": "2",
+      "generation": "4",
+      "check": "1",
+      "loop": "0",
+      "reason": "post_load_game",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "unverified",
+      "hit_set": "added_or_revived",
+      "hit_after": "present",
+      "health_before": "unverified",
+      "health_set": "added_or_revived",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 168
+    },
+    {
+      "session": "2",
+      "generation": "4",
+      "check": "2",
+      "loop": "2",
+      "reason": "registration_survival",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "present",
+      "hit_set": "unchanged_or_refused",
+      "hit_after": "present",
+      "health_before": "present",
+      "health_set": "unchanged_or_refused",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 174
+    },
+    {
+      "session": "2",
+      "generation": "4",
+      "check": "3",
+      "loop": "32",
+      "reason": "registration_survival",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "present",
+      "hit_set": "unchanged_or_refused",
+      "hit_after": "present",
+      "health_before": "present",
+      "health_set": "unchanged_or_refused",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 175
+    },
+    {
+      "session": "2",
+      "generation": "4",
+      "check": "4",
+      "loop": "64",
+      "reason": "registration_survival",
+      "tx": "0",
+      "tx_hit": "0",
+      "tx_health": "0",
+      "hit_before": "present",
+      "hit_set": "unchanged_or_refused",
+      "hit_after": "present",
+      "health_before": "present",
+      "health_set": "unchanged_or_refused",
+      "health_after": "present",
+      "hit_callbacks": "0",
+      "health_callbacks": "0",
+      "provider_emission": "unverified",
+      "observer_writes": "0",
+      "event": "DAMAGE_EVENT_REGISTRY",
+      "line": 176
+    }
+  ],
+  "recovery_needed": false,
+  "original_gap_cause_established": false,
+  "installed": [
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.dll",
+      "sha256": "45c1713b57c13c48ef6f35ab40c51398e6e332ef1403a59fa2ed89139debea2f"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOCombatCore.pdb",
+      "sha256": "1664369aeaa0a54dbbffdcacff595b9144d0f430f9e9d6bff81e4e7c5c3e28c4"
+    }
+  ],
+  "protected_records_and_config": [
+    {
+      "path": "Data/nvse/plugins/itr-nvse.dll",
+      "sha256": "31f5abad415750141906efbe810a32eb35ac714335e65e806215655c72c7fc0c"
+    },
+    {
+      "path": "Data/nvse/plugins/kNVSE.dll",
+      "sha256": "90b7f3ed995ccd76027fa2ba4f594ad20c6e09334b4071da2534a90d079bea55"
+    },
+    {
+      "path": "Data/MercenaryPack.esm",
+      "sha256": "73e76bcadbf326818af7b58c315773a2d86fe3a8186a778e84a68916cb830c59"
+    },
+    {
+      "path": "Data/NVO.esm",
+      "sha256": "ff7abd370ca67ca6868cef070c76e79450432b280ab4e391a64102bb7099c31e"
+    },
+    {
+      "path": "Data/OldWorldBlues.esm",
+      "sha256": "fd6cc6e582582ec035277150e106d12b6d78c7c60cbb506545e06d1fa7212295"
+    },
+    {
+      "path": "Data/ClassicPack.esm",
+      "sha256": "3b31928dfdac46028f2e12f25b0dbdd0e809d4d74ac04fb7783e0063e912760b"
+    },
+    {
+      "path": "Data/nvse/plugins/ZeGaryHax.dll",
+      "sha256": "d1d1ae881f46c6fdb91b17f37a9f74ac803c8f80324f8a542fb5f073830e09db"
+    },
+    {
+      "path": "Data/CaravanPack.esm",
+      "sha256": "0473cff52d375a77d6585f203a914445fa5a9e6ba726818aa7d8d48cb177ec82"
+    },
+    {
+      "path": "Data/DeadMoney.esm",
+      "sha256": "076428d59515d554b7830c7ebbc3fe3e5487e888ef07d2c4ec6d375c44feda59"
+    },
+    {
+      "path": "Data/LonesomeRoad.esm",
+      "sha256": "8516a98d6652bed6824699d807b86f2fde5f1c1873b6e36a832e94863968cf92"
+    },
+    {
+      "path": "Data/NVSE/Plugins/NVOArmourCoverage.tsv",
+      "sha256": "0e25e3aafbd0aadf52fb58fb38b19cb079280d96006b0ee84f927fdd860973aa"
+    },
+    {
+      "path": "Data/nvse/plugins/ShowOffNVSE.dll",
+      "sha256": "37cb22c5288fedd0d57196c8c2f6bbaba5a1dafd9ce58f14dac9410dbee7ef3e"
+    },
+    {
+      "path": "Data/TribalPack.esm",
+      "sha256": "342f42ce9835f57ee19be09f12ad0ba2c6182e86740338202fcea9011d62f328"
+    },
+    {
+      "path": "Data/NVOFlightPilot.esp",
+      "sha256": "bc522fba37ff5f7c5b622bf3a7cb53235d8daac587735d9ae920b042d0c7fe8f"
+    },
+    {
+      "path": "Data/FalloutNV.esm",
+      "sha256": "44e654569d47fcf8ceddc576c26dd11a32f207e60b1fd23cd6089e1e5f8fa84b"
+    },
+    {
+      "path": "Data/nvse/plugins/AnhNVSE.dll",
+      "sha256": "c9f664139991ef76ac66939f8ac82d3da3b9be7974880620a9e67a005ba545f2"
+    },
+    {
+      "path": "Data/nvse/plugins/johnnyguitar.dll",
+      "sha256": "b2d54e12baffda40381074153c525a1643f47885978dfa681dc6201dd8839b92"
+    },
+    {
+      "path": "Data/HonestHearts.esm",
+      "sha256": "db4b7017dd6e1cd6f74e08fc151862960196c57f6373ce4e38522fa9677f17aa"
+    },
+    {
+      "path": "Data/nvse/plugins/jip_nvse.dll",
+      "sha256": "9d2779647ed0ce63043390f47fc978e3234af8e558dc6cb6bcb231478a2d74d4"
+    },
+    {
+      "path": "Data/GunRunnersArsenal.esm",
+      "sha256": "46494d52a76af9489d3e823f345c4efe873fe29114db25b5d566298365805cb7"
+    },
+    {
+      "path": "Data/nvse/plugins/supNVSE.dll",
+      "sha256": "61b0f1760a643ee749c785bf989f22b18f7b445891d2595f55445281c8a22e6c"
+    }
+  ],
+  "normal_exit": true,
+  "startup_banners": 1,
+  "gameplay_writes": false,
+  "game_modified": false,
+  "scope": "Three standard9mm humanoid torso copies across one reload. No exact speed/atomic snapshot/component/application acceptance.",
+  "next": "Ask before returning to native component/application diagnostics; keep damage authority disabled. No unchanged repeat of this callback check required."
+}

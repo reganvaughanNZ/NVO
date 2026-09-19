@@ -1,0 +1,36 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameObjects.h",
+      "sha256": "3f16c3c9b58bdd55026d413eb94a340f11b49b27dc5b4eaacba6e33b2b38ff31",
+      "bytes": 46361,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.h",
+      "sha256": "96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8",
+      "bytes": 156678,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\ShowOff-NVSE-main\\SHOWOFF-NVSE\\Events\\ShowOffEvents.h",
+      "sha256": "5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270",
+      "bytes": 72186,
+      "prior_pin": true
+    }
+  ],
+  "retained_live_capture": {
+    "path": "source/combat/step4j/Evidence/LIVE-4J-20260919-094727.log",
+    "bytes": 181002,
+    "sha256": "8e079a12b768f5b2ae25b56e0ddc378092f73ee51efec4e3239cd2903ebb3d30"
+  },
+  "user_document_receipt": {
+    "path": "source/combat/step4j1/Evidence/USER-DOCUMENT.json",
+    "bytes": 407,
+    "sha256": "c46946473f2e96aea7b598d1a04cb5c96973adf9c33e7457b07f5add71f0e8a9"
+  },
+  "copied_donor_implementation": false,
+  "new_engine_hooks": 0,
+  "game_files_read": false,
+  "note": "Retained evidence and local donor source only. Repeated CREATE notifications do not establish unique physical projectiles, components or damage applications."
+}

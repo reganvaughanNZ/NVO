@@ -27,3 +27,25 @@ Packet 3T settles the authored 70-units/metre convention and the parent projecti
 Valid speed intervals are represented but deliberately not collapsed to a midpoint or endpoint. The current 3U1 owned-step range therefore remains diagnostic and cannot enter `ArmourModel::Resolve`. Empty layers count as bare only after complete equipment and regional-coverage enumeration explicitly verifies the region as bare. Unknown worn armour cannot become bare skin.
 
 `run_shadow_checks.cmd` builds a standalone x86 executable with `/W4 /WX` and runs 48 focused checks plus 10,000 deterministic preview repetitions. All profiles and coefficients in those checks are synthetic. There is no DLL, engine reader, runtime logger, install target, mutation path, or gameplay authority in Packet 4A.
+
+## Packet 4F companion
+
+`ResponseDefinitions.hpp/.cpp` is an independent offline catalogue validator and symbolic definition selector for eleven interaction families and eight delivery categories. `run_response_checks.cmd` discovers installed MSVC tools and builds/runs only its standalone x86 fixtures. No numerical material functions, real game profiles, impact proof or engine application is supplied. Definitions distinguish worn/natural/structural surfaces, mapped biological/mechanical tissue, condition policy and provenance. Missing evidence holds selection; a complete selection returns `DefinitionsOnly` with no damage, wear or stagger quantities.
+
+Do not cast its family enum into ArmourModel's five-family arrays or bypass ShadowAdapter's kinetic evidence requirements. There is no integration between those modules in 4F. Native327 is unchanged. See `source/combat/step4f/RESPONSE-DESIGN.md` for the shared downstream component/ownership contract and future game-profile requirements.
+
+## Packet 4G companion
+
+`MaterialPreview.hpp/.cpp` adds the explicit offline numerical bridge. It uses 4F definition selection, verified region/instance evidence, numeric definition bindings and condition curves. `ArmourModel::ResolveKineticLayers` now owns common stopping/transmission/condition-loss arithmetic for the old kinetic preview and 4G. `ShadowAdapter` exposes its existing identity/mode and kinetic-input gates so both adapters use the same predicates. The original adapter still uses its six-region evidence type; 4G retains literal authored engine region IDs without mapping creatures to a surrogate humanoid region.
+
+Outputs preserve component identity and separate biological/mechanical health/regional channels from worn-item, natural-protection and chassis losses. These are synthetic previews, not game writes or calibrated physics. Transmitted energy remains a subset of stopped energy and is not force/impulse/stagger. The legacy direct-to-target transfer approximation is retained explicitly; downstream layer attenuation of transferred impact is not simulated. The shared kernel bounds input to 64 contacted surfaces. Other attack families remain unsupported through the new bridge.
+
+`run_material_checks.cmd` builds/runs the new bridge fixtures plus the existing model, shadow and definition checks, all standalone x86. `source/combat/step4g/` records current evidence and limits. Native327 and its runtime build inputs remain unchanged. Do not treat passing offline checks as proof of authoritative contact speed or coherent impact snapshots.
+
+## Packet 4H companion
+
+`ImpactBinding.hpp/.cpp` binds independently captured contact and snapshot stamps to the consumer's current scope before MaterialPreview arithmetic. MaterialPreview is now contract version 2 and returns scope alongside call-local surface tokens. Existing interval, unit, anatomy, snapshot, modifier and definition gates remain mandatory. The new gate is standalone scalar comparison with no engine reads, cached state or application API.
+
+Current native segment means, owned-step intervals, point estimates and stable equipment copies do not satisfy its reserved exact-contact/at-impact producer contracts. Synthetic fixtures exercise the future contract only. Never stamp old evidence with the current key or infer component/application identity from transaction/log adjacency. See `source/combat/step4h/INPUT-AUDIT.md` and `BINDING-CONTRACT.md` for remaining live work.
+
+`run_binding_checks.cmd` checks provenance rejection; `run_material_checks.cmd` checks direct integration and the prior numerical suites. `tools/prepare_combat_4h.py` runs and packages both without game access. Runtime327 build inputs and disabled authorities remain unchanged. The 4G paragraphs above describe its historical version-1 boundary; its numeric rules still apply.

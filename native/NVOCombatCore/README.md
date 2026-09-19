@@ -1,3 +1,34 @@
+# Packet 4J1 — flame lifecycle isolation
+
+Prepared native 0.3.31/331, not installed. Installed330 passed its bounded route/callback check but repeated flame creation notifications blocked subsequent custom flight. Positively matching, observation-only flame repeats now quarantine diagnostic identity without creating a new lifetime or blocking unrelated admission. Claimed admission, inconsistent/unknown/changed identity and other projectile repeats retain process-wide faults across reload.
+
+NativeObserver retains raw cleanup ownership separately from public identity. FlightPreview/FlightPhysics suppress fresh ambiguous contact/travel interpretation while preserving impact stop and destruction cleanup. No damage, wear or stagger authority, new hook, dependency, profile or model linkage is added. Actual damage components/applications remain unresolved. Read source/combat/step4j1/README.md, DOCUMENT-REVIEW.md and the fresh Evidence/VERIFICATION.json. Production observer fixtures use synthetic dependencies; actual preview/physics cleanup is compiled and source-reviewed. Installation and live acceptance remain separate.
+
+The following sections describe earlier preparation checkpoints.
+# Packet 4J — damage route diagnostics
+
+Prepared source is native0.3.30/330, not installed. Installed329 passed its bounded callback/copy checkpoint. ActorValueObserver now reports guarded caller routes, original transaction carrier/flag context and a real pre-health callback's match to its active AV call. Values before/after a call remain net observations, not unique damage applications. Nested windows are inclusive and non-additive. No total damage, component ID, deduplication authority or primary/secondary guess is fabricated.
+
+DamageAttribution.hpp fingerprints three retained, manifest-verified engine call-setup windows. A failed/missing window produces an unclassified route and preserves the original call. MatchScope carries original scalar context with generation and copy-attempt counts; those counts do not bind a particular copy to an AV call. AV generation/counter cancellation now survives same-session reactivation and callback/getter reentrancy. See source/combat/step4j/README.md and SOURCE-TRACE.md. Fresh standalone suites are recorded by tools/prepare_combat_4j.py. Runtime hooks and assembly remain unchanged; damage/model authority stays disabled.
+
+The following describes the retained callback and copy paths at their preparation checkpoints.
+
+# Packet 4I1 — bounded callback survival diagnostics
+
+Current prepared source is native 0.3.29/329. Installed native328 passed its copy-association check but lost both ITR callback streams after reload. 4I1 replaces remove/readd with bounded idempotent registration, positive-only public registry witnesses, separate first-emission rows, and lifecycle cancellation. A copied transaction missing either callback can queue a main-loop check; it never changes registry state inside the hit. No fabricated events or private ITR memory accesses are used. Registration success is not emission proof; the prior live cause remains unestablished.
+
+See `source/combat/step4i1/README.md` and `SOURCE-TRACE.md`. `tests/RUN-DAMAGE-EVENT-CHECKS.cmd` exercises the production callback lifecycle with synthetic API/PE/form fixtures. `RUN-HIT-SCOPE-CHECKS.cmd` checks the transaction notice, and `RUN-COPY-CAPTURE-CHECKS.cmd` retains receipt regressions. The existing xNVSE6.4.8/ITR2.2.2 requirements remain. No new engine hook or damage/model linkage. Preparation is not installation or live acceptance.
+
+The following describes the retained Packet4I copy path.
+
+# Packet 4I — native diagnostic copy capture
+
+Native0.3.28/328 passed its bounded copy-association checkpoint. CopyCapture.hpp defines a generation/transaction/copy/session key and scalar armour receipt. CurrentHit passes one scope through armour and current-hit observation; NativeObserver independently verifies identity and forwards the original receipt to the flight query. HitTransaction revalidates generation across unlocked reads and old-frame returns. No new hook or movement logic is added. This is diagnostic copy association, not a verified component/application or coherent impact snapshot.
+
+See `source/combat/step4i/README.md` for log semantics, fresh evidence and deployment limits. `tests/RUN-COPY-CAPTURE-CHECKS.cmd` and `tests/RUN-HIT-SCOPE-CHECKS.cmd` exercise the changed production paths with synthetic stubs; `RUN-ARMOUR-SNAPSHOT-CHECKS.cmd` checks the underlying reader. No test loads the native DLL. MaterialPreview and its evidence/model modules remain offline. Damage, wear and stagger remain disabled. Preparation does not install the build.
+
+The following describes the original 4B reader, retained for its contract and historical validation.
+
 # Packet 4B — guarded equipped-armour snapshot reader
 
 Step 4B adds a bounded, read-only inventory reader to the existing exact JIP `CopyHitData` observation boundary. It records the exact worn `ARMO` instances found on a hit target, their raw equip-slot mask, record fields, and per-instance condition. It does not calculate protection or change damage.

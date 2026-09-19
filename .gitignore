@@ -30,7 +30,8 @@ out-*/
 /tools/.video-reader/
 /tools/xedit-4.1.5f/
 /reference/donor-scripts/
-/reference/titans-2.1.51d/
+/reference/titans-2.1.51d/*
+!/reference/titans-2.1.51d/ASSESSMENT.md
 /reference/ballistics-donors-20260915/
 /source/combat/step3j/xedit-work/
 *disassembly*.txt
@@ -39,6 +40,12 @@ out-*/
 /reference/*inventory.json
 /reference/installed-NVO-files.json
 /reference/source-folder-inventory.json
+!/reference/source-folder-inventory.json
+
+# Full user-reference extracts stay local; assessments and receipts are versioned.
+/source/combat/step4j1/Evidence/USER-DOCUMENT.txt
+/source/combat/step4j1/references/*.txt
+/source/combat/step4j1/references/FNV_*.json
 
 # Local caches, editor state, and credentials
 __pycache__/

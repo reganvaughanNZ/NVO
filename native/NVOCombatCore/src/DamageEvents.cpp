@@ -1,6 +1,7 @@
 #include "DamageEvents.hpp"
 #include "NativeLog.hpp"
 #include "HitTransaction.hpp"
+#include "ActorValueObserver.hpp"
 #include <Windows.h>
 #include <cmath>
 #include <cstring>
@@ -25,15 +26,20 @@ public:
     ~PreserveError() { SetLastError(value); }
 };
 bool gActive{}, gPending{}, gWarned{};
+bool gChecking{}, gCheckPending{};
+bool gEpochValid{};
 unsigned gSession{}, gRequestedSession{};
+unsigned gMainThread{}, gLoops{}, gChecks{}, gGapRequests{};
+unsigned gGapHit{}, gGapHealth{};
+unsigned long long gGeneration{}, gGapTransaction{};
 const char* gReason = "unknown";
 unsigned long long gHitCalls{}, gHealthCalls{};
 unsigned gHitRows{}, gHealthRows{}, gInvalid{};
 
 void Summary(const char* reason) noexcept
 {
-    nvo::log::Write("DAMAGE_EVENT_SUMMARY session=%u reason=%s hit_callbacks=%llu hit_rows=%u health_callbacks=%llu health_rows=%u invalid=%u damage_replacement=0 damage_applications=unverified",
-        gSession, reason, gHitCalls, gHitRows, gHealthCalls, gHealthRows, gInvalid);
+    nvo::log::Write("DAMAGE_EVENT_SUMMARY session=%u reason=%s hit_callbacks=%llu hit_rows=%u health_callbacks=%llu health_rows=%u invalid=%u registry_checks=%u gap_requests=%u damage_replacement=0 damage_applications=unverified",
+        gSession, reason, gHitCalls, gHitRows, gHealthCalls, gHealthRows, gInvalid, gChecks, gGapRequests);
 }
 
 bool IsActor(const nvo::hit::Form& form) noexcept
@@ -67,6 +73,7 @@ void __cdecl OnHitInput(void* thisObj, void* params) noexcept
     const Lock lock;
     if (!gActive) return;
     ++gHitCalls;
+    if (gHitCalls == 1) nvo::log::Write("DAMAGE_EVENT_EMISSION session=%u stream=pre_hit observed=1 damage_replacement=0", gSession);
     if (gHitRows >= kLimit) return;
     ++gHitRows;
     // Intentionally do not read argument 5, the mutable multiplier pointer.
@@ -99,9 +106,11 @@ void __cdecl OnHealthInput(void* thisObj, void* params) noexcept
 {
     const PreserveError error;
     nvo::transaction::HealthEvent(thisObj, params);
+    nvo::avobserve::HealthEvent(thisObj, params);
     const Lock lock;
     if (!gActive) return;
     ++gHealthCalls;
+    if (gHealthCalls == 1) nvo::log::Write("DAMAGE_EVENT_EMISSION session=%u stream=pre_health observed=1 damage_replacement=0", gSession);
     if (gHealthRows >= kLimit) return;
     ++gHealthRows;
     // Argument 3 (mutable multiplier) is deliberately not read or written.
@@ -138,12 +147,25 @@ bool ProviderMatches() noexcept
         && nt.OptionalHeader.Magic == IMAGE_NT_OPTIONAL_HDR32_MAGIC
         && nt.FileHeader.TimeDateStamp == 0x6A948FDD && nt.OptionalHeader.SizeOfImage == 0xB3000;
 }
-void Unbind() noexcept
+bool Current(unsigned long long generation) noexcept
 {
-    if (gApi && gApi->RemoveNativeEventHandler) {
-        gApi->RemoveNativeEventHandler(kHitEvent, OnHitInput);
-        gApi->RemoveNativeEventHandler(kHealthEvent, OnHealthInput);
-    }
+    const Lock lock;
+    return gEpochValid && generation == gGeneration;
+}
+struct Registration { bool before{}, added{}, after{}; };
+Registration Ensure(const char* event, nvo::observer::Handler callback,
+    unsigned long long generation) noexcept
+{
+    Registration r{};
+    if (!Current(generation)) return r;
+    r.before = gApi->IsEventHandlerFirst(event, callback, 1, nullptr, 0, nullptr, 0, nullptr, 0);
+    if (!Current(generation)) return r;
+    // xNVSE Set is idempotent: true only adds/revives; an active duplicate
+    // returns false. Never remove a healthy handler to "refresh" it.
+    r.added = gApi->SetNativeEventHandler(event, callback);
+    if (!Current(generation)) return r;
+    r.after = gApi->IsEventHandlerFirst(event, callback, 1, nullptr, 0, nullptr, 0, nullptr, 0);
+    return r;
 }
 void Disabled(const char* reason) noexcept
 {
@@ -159,12 +181,15 @@ void nvo::damage::Initialize(nvo::observer::EventApiPrefix* api, const nvo::nvse
 {
     gApi = api;
     gConsole = console;
+    gMainThread = GetCurrentThreadId();
 }
 void nvo::damage::QueueCapture(const char* reason, unsigned session) noexcept
 {
     const Lock lock;
     gActive = false;
-    gPending = true;
+    gEpochValid = nvo::capture::Advance(gGeneration);
+    gPending = gEpochValid;
+    gCheckPending = false;
     gReason = reason;
     gRequestedSession = session;
 }
@@ -172,42 +197,85 @@ void nvo::damage::Suspend(const char* reason) noexcept
 {
     const Lock lock;
     gPending = false;
+    gCheckPending = false;
     if (gActive) Summary(reason);
     gActive = false;
+    gEpochValid = false;
+    nvo::capture::Advance(gGeneration);
+}
+void nvo::damage::QueueCheck(unsigned session, unsigned long long transaction,
+    unsigned hitCallbacks, unsigned healthCallbacks) noexcept
+{
+    const Lock lock;
+    if (GetCurrentThreadId() != gMainThread || !gActive || session != gSession
+        || !transaction || (hitCallbacks && healthCallbacks) || gCheckPending || gGapRequests >= 3) return;
+    ++gGapRequests;
+    gCheckPending = true;
+    gGapTransaction = transaction; gGapHit = hitCallbacks; gGapHealth = healthCallbacks;
 }
 void nvo::damage::Tick() noexcept
 {
+    const PreserveError error;
+    if (GetCurrentThreadId() != gMainThread) return;
     unsigned session{};
+    unsigned loop{}, gapHit{}, gapHealth{};
+    unsigned long long generation{}, transaction{};
+    bool initial{};
     const char* reason{};
     {
         const Lock lock;
-        if (!gPending) return;
-        gPending = false;
-        session = gRequestedSession;
-        reason = gReason;
+        if (gChecking || (!gPending && !gActive)) return;
+        initial = gPending;
+        if (initial) {
+            gPending = false;
+            session = gRequestedSession;
+            reason = gReason;
+            gLoops = gChecks = gGapRequests = 0;
+            gHitCalls = gHealthCalls = 0;
+            gHitRows = gHealthRows = gInvalid = 0;
+            gSession = session;
+        } else {
+            if (gLoops < 65) ++gLoops;
+            const bool scheduled = gLoops == 2 || gLoops == 32 || gLoops == 64;
+            // Saturate beyond the final scheduled check; never wrap/repeat it.
+            if (!gCheckPending && !scheduled) return;
+            session = gSession;
+            reason = gCheckPending ? "copied_transaction_callback_gap" : "registration_survival";
+            if (gCheckPending) {
+                transaction = gGapTransaction; gapHit = gGapHit; gapHealth = gGapHealth;
+                gCheckPending = false;
+            }
+        }
+        generation = gGeneration;
+        loop = gLoops;
+        gChecking = true;
     }
-    // Keep event API calls outside our lock; callbacks use it too.
-    if (!gApi || !gApi->SetNativeEventHandler || !gApi->RemoveNativeEventHandler) {
-        Disabled("event_interface_unavailable");
-        return;
+    // Public API only, no fabricated damage event and no private provider reads.
+    // Outside our lock; reentrant lifecycle changes invalidate this attempt.
+    const char* failure = nullptr;
+    if (!gApi || !gApi->SetNativeEventHandler || !gApi->IsEventHandlerFirst)
+        failure = "event_interface_unavailable";
+    else if (!ProviderMatches()) failure = "itr_build_missing_or_unrecognized";
+    Registration hit{}, health{};
+    if (!failure) {
+        hit = Ensure(kHitEvent, OnHitInput, generation);
+        health = Ensure(kHealthEvent, OnHealthInput, generation);
     }
-    Unbind();
-    if (!ProviderMatches()) {
-        Disabled("itr_build_missing_or_unrecognized");
-        return;
-    }
-    const bool hit = gApi->SetNativeEventHandler(kHitEvent, OnHitInput);
-    const bool health = gApi->SetNativeEventHandler(kHealthEvent, OnHealthInput);
-    if (!hit || !health) {
-        Unbind();
-        Disabled("provider_event_registration_failed");
-        return;
-    }
+    {
     const Lock lock;
-    gSession = session;
-    gHitCalls = gHealthCalls = 0;
-    gHitRows = gHealthRows = gInvalid = 0;
+    gChecking = false;
+    if (!gEpochValid || generation != gGeneration) return;
+    if (failure) { gActive = false; }
+    else {
+    ++gChecks;
     gActive = true;
-    nvo::log::Write("DAMAGE_EVENTS_READY session=%u reason=%s provider=ITR20202 handlers=2 hit_limit=%u health_limit=%u observer_writes=0 provider_emission=unverified",
-        gSession, reason, kLimit, kLimit);
+    nvo::log::Write("DAMAGE_EVENT_REGISTRY session=%u generation=%llu check=%u loop=%u reason=%s tx=%llu tx_hit=%u tx_health=%u hit_before=%s hit_set=%s hit_after=%s health_before=%s health_set=%s health_after=%s hit_callbacks=%llu health_callbacks=%llu provider_emission=unverified observer_writes=0",
+        session, generation, gChecks, loop, reason, transaction, gapHit, gapHealth,
+        hit.before ? "present" : "unverified", hit.added ? "added_or_revived" : "unchanged_or_refused", hit.after ? "present" : "unverified",
+        health.before ? "present" : "unverified", health.added ? "added_or_revived" : "unchanged_or_refused", health.after ? "present" : "unverified", gHitCalls, gHealthCalls);
+    if (initial) nvo::log::Write("DAMAGE_EVENTS_CAPTURE session=%u provider=ITR20202 registry_witness=positive_only survival_checks=3 gap_checks_max=3 hit_limit=%u health_limit=%u damage_replacement=0 provider_emission=unverified",
+        session, kLimit, kLimit);
+    }
+    }
+    if (failure) Disabled(failure); // Console API must also stay outside gLock.
 }

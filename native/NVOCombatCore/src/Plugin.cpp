@@ -10,7 +10,7 @@
 
 namespace {
 constexpr char kPluginName[] = "NVOCombatCore";
-constexpr std::uint32_t kPluginVersion = 327; // 0.3.27, packet 4D origin and coverage diagnostics
+constexpr std::uint32_t kPluginVersion = 331; // 0.3.31, packet 4J1 flame lifecycle isolation
 constexpr bool kHitHooksImplemented = false;
 constexpr bool kDamageReplacementEnabled = false;
 bool gLoaded = false;
@@ -25,8 +25,8 @@ void EmitStartupBanner() noexcept
     gStartupBannerAttempted = true; // Set before calling out, including any reentrant callback.
     gStartupBannerPending = false;
     const bool submitted = gConsole && gConsole->version >= 2 && gConsole->RunScriptLine
-        && gConsole->RunScriptLine("PrintC \"NVO [0.3.27] - The Mojave is yours.\"", nullptr);
-    nvo::log::Write("STARTUP_BANNER version=0.3.27 submitted=%u once_per_process=1", submitted ? 1u : 0u);
+        && gConsole->RunScriptLine("PrintC \"NVO [0.3.31] - The Mojave is yours.\"", nullptr);
+    nvo::log::Write("STARTUP_BANNER version=0.3.31 submitted=%u once_per_process=1", submitted ? 1u : 0u);
 }
 
 bool SupportsHost(const nvo::nvse::InterfacePrefix* host) noexcept
@@ -154,7 +154,7 @@ extern "C" bool __cdecl NVSEPlugin_Query(
         OutputDebugStringA("NVOCombatCore: cannot create NVOCombatCore.log in the game directory. Query rejected.\n");
         return false;
     }
-    nvo::log::Write("NVOCombatCore 0.3.27 | phase=4D | coverage_classification_pending=1 | raw_armour_reader_pending=1 | snapshot_authority=0 | armour_preview=0 | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
+    nvo::log::Write("NVOCombatCore 0.3.31 | phase=4J1 | flame_lifecycle_check_pending=1 | damage_route_diagnostics_pending=1 | callback_survival_pending=1 | copy_capture_pending=1 | coverage_classification_pending=1 | raw_armour_reader_pending=1 | snapshot_authority=0 | armour_preview=0 | actor_value_observer_pending=1 | hit_transaction_observer_pending=1 | native_events=1 | current_hit_observer_pending=1 | itr_damage_events_pending=1 | flight_preview=1 | flight_timing_pending=1 | native_physics_pending=1 | per_shot_selection=1 | movement_argument_pilot=1 | isolated_record_flight_pilot=1 | damage_hooks=0 | damage_replacement=0");
 #ifdef NVO_ADMISSION_CAPACITY_PROBE
     nvo::log::Write("CAPACITY_PROBE_BUILD enabled=1 player_standard_9mm_smg_only=1 synthetic_slots=127 process_once=1 damage_replacement=0");
 #else

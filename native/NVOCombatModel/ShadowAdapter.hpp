@@ -91,6 +91,17 @@ struct Result {
     static constexpr bool gameplayWrites = false;
 };
 
+// Reusable region-independent evidence gates. Passing a gate is not a preview
+// or an admission token. Both callers must still validate their own region,
+// complete at-impact surface snapshot, modifier ownership and target bindings.
+struct EvidenceCheck {
+    bool ready{};
+    Status status{Status::WaitingForEvidence};
+    Reason reason{Reason::Identity};
+};
+EvidenceCheck CheckIdentityAndMode(const IdentityEvidence&, const ModeEvidence&);
+EvidenceCheck CheckKineticInputs(const IdentityEvidence&, const KineticProfile&, const SpeedEvidence&);
+
 Result Evaluate(const Input&);
 const char* StatusName(Status) noexcept;
 const char* ReasonName(Reason) noexcept;

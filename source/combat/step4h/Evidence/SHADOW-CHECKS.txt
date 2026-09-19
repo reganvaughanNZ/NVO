@@ -1,0 +1,49 @@
+PASS complete exact evidence produces preview only
+PASS adapter preserves agreed region and pure resolver output
+PASS complete instance layer reaches pure preview
+PASS instance identity remains in preview wear field
+PASS body layer does not silently become helmet coverage
+PASS verified VATS uses the same pure armour rule
+PASS missing identity cannot become a preview
+PASS missing identity cannot become a preview
+PASS missing identity cannot become a preview
+PASS missing identity cannot become a preview
+PASS missing identity cannot become a preview
+PASS missing identity cannot become a preview
+PASS missing identity cannot become a preview
+PASS missing identity cannot become a preview
+PASS missing component identity is explicit
+PASS missing application identity is explicit
+PASS unverified engine path cannot preview
+PASS unknown real-time or VATS mode cannot preview
+PASS one region producer is insufficient
+PASS region disagreement remains disagreement
+PASS unknown region is not torso
+PASS unowned difficulty critical or VATS scaling blocks preview
+PASS incomplete equipped-item enumeration is not bare skin
+PASS unproven region coverage is not bare skin
+PASS unverified layer order blocks preview
+PASS armour list not coherently captured at impact blocks preview
+PASS empty layer list requires verified bare region
+PASS bare and armoured claims cannot coexist
+PASS kinetic adapter does not invent laser slug physics
+PASS unmapped weapon and ammunition stay unsupported
+PASS profile identity must match the hit snapshot
+PASS unknown ammunition construction stays unsupported
+PASS mixed cartridge units are rejected before the resolver
+PASS missing speed remains unavailable
+PASS ambiguous speed remains unavailable
+PASS valid speed interval is represented without midpoint promotion
+PASS reversed speed interval is invalid
+PASS unverified scalar speed is not exact
+PASS unverified contact producer blocks preview
+PASS unverified speed producer blocks preview
+PASS authored unit convention is not silently called calibrated
+PASS missing target anatomy profile stays unsupported
+PASS unknown worn armour cannot become bare skin
+PASS duplicate armour instance cannot absorb twice
+PASS invalid live armour condition produces no preview
+PASS current 3U1 owned-step range stays diagnostic only
+PASS 10000 shadow previews are deterministic and budget independent
+PASS diagnostic status names are stable
+RESULT checks=48 failures=0 gameplay_writes=0 runtime_integrated=0 synthetic_profiles=1

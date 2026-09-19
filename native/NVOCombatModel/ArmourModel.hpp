@@ -59,6 +59,24 @@ struct TargetProfile {
     double tissueCoupling{unknown}; // [0,1], not another difficulty multiplier
 };
 struct Wear { std::uint64_t instance{}; double loss{}; };
+// Region/owner-neutral kinetic arithmetic shared by the legacy preview and 4G.
+// Caller supplies complete ordered contacted surfaces and already-evaluated
+// stopping capacities. Transmitted energy is a SUBSET of stopped energy.
+struct KineticLayer {
+    std::uint64_t key{};
+    double stoppingJ{unknown}, condition{unknown}, transmittedFraction{unknown}, lossPerStoppedJ{unknown};
+};
+struct KineticLayerResult {
+    std::uint64_t key{};
+    double incomingJ{}, stoppedJ{}, outgoingJ{}, transmittedJ{}, retainedJ{}, conditionLoss{};
+};
+struct KineticBudget {
+    Status status{Status::InvalidInput};
+    Reason reason{Reason::Layer};
+    double incidentJ{}, residualJ{}, stoppedJ{}, transmittedJ{}, retainedJ{};
+    std::vector<KineticLayerResult> layers;
+};
+KineticBudget ResolveKineticLayers(double incidentJ, const std::vector<KineticLayer>&);
 struct Preview {
     Status status{Status::Unsupported}; Reason reason{Reason::Context};
     Unit unit{Unit::Unknown};

@@ -1,0 +1,71 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameProcess.h",
+      "sha256": "9d544e263d3cbf592815194b3db00d20330f55ee024126c92404ccef709d5fb2",
+      "bytes": 58917,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameObjects.h",
+      "sha256": "3f16c3c9b58bdd55026d413eb94a340f11b49b27dc5b4eaacba6e33b2b38ff31",
+      "bytes": 46361,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.h",
+      "sha256": "96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8",
+      "bytes": 156678,
+      "prior_pin": true
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\itr-nvse-master\\itr-nvse\\handlers\\OnPreDamageHandler.cpp",
+      "sha256": "732dae3ad501b4f10b042488451782fd25a397194fcc4deadf269444a71a31bd",
+      "bytes": 9765,
+      "prior_pin": true
+    }
+  ],
+  "retained_captures": [
+    {
+      "path": "source/combat/step3k/runtime-20260916-100050/hitme-0089A760.bin",
+      "bytes": 6144,
+      "sha256": "fe7630d6076ac3fe6e19827eb79c00d9e4a128081fd5db48222221f5cd78d515",
+      "base": "0089A760",
+      "windows": [
+        {
+          "caller": "0089BDD8",
+          "start": "0089BDAF",
+          "bytes": 41,
+          "fnv1a64": "0F240085048900B4",
+          "sha256": "d2c3c73adb7bcbc3f44935be6eb08853401f27cb9a5dcaf58783a7ba276fa55e"
+        },
+        {
+          "caller": "0089BB8E",
+          "start": "0089BB65",
+          "bytes": 41,
+          "fnv1a64": "907658F5F564234C",
+          "sha256": "5ca853ce8873e7447732264e84915cff051262e3ea5b571d0d65af4feae8f328"
+        }
+      ]
+    },
+    {
+      "path": "source/combat/step3l/runtime-20260916-123509/hitme_tail_and_health_apply-0089BF60.bin",
+      "bytes": 8704,
+      "sha256": "3e1f757cf838f959bc358f87383b076679fd7f198fbcafc9eb99cd7bd492c2b1",
+      "base": "0089BF60",
+      "windows": [
+        {
+          "caller": "0089D82D",
+          "start": "0089D80E",
+          "bytes": 31,
+          "fnv1a64": "BA8F8D907EB3EA79",
+          "sha256": "e06f2b004b81d90cd959c7443ce4d53884dfb8341ddbfb4b3ce39bab3e64143e"
+        }
+      ]
+    }
+  ],
+  "new_engine_hooks": 0,
+  "damage_components_verified": false,
+  "copied_donor_implementation": false,
+  "note": "Guarded caller routes and original hit metadata; neither proves primary/secondary ownership."
+}

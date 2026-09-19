@@ -21,9 +21,10 @@ bool gAttempted{}, gInstalled{};
 void __cdecl Capture(const nvo::hit::Data* data, void* process, const void* caller) noexcept
 {
     const DWORD error = GetLastError();
-    const auto scope = nvo::transaction::CopyInput(data, process);
-    nvo::armour::Observe(data, process, scope);
-    nvo::observer::CurrentHit(data, process, caller);
+    auto scope = nvo::transaction::CopyInput(data, process);
+    const auto armour = nvo::armour::Observe(data, process, scope);
+    scope.valid = scope.valid && nvo::transaction::IsCurrent(scope);
+    nvo::observer::CurrentHit(data, process, caller, scope, armour);
     SetLastError(error);
 }
 

@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NVO Packet 4F - Material and target definitions</title>
+<style>body{margin:0;background:#101818;color:#e2ebe7;font:18px/1.6 system-ui,sans-serif}main{max-width:900px;margin:50px auto;padding:0 25px}h1,h2{line-height:1.2;color:#9ad7ad}a{color:#aad8ff}.note{padding:18px 22px;background:#1c3029;border-left:4px solid #9ad7ad}li{margin:.5em 0}code{color:#d9cb9c}small{color:#a8b8b0}</style>
+<main><small>NVO development / Packet 4F / Offline only</small>
+<h1>One response structure for every attack family</h1>
+<p class="note">Prepared for review. Nothing to install, compile in GECK or test in the game. The installed native core stays at 0.3.27.</p>
+<h2>Purpose</h2><p>Define how armour construction, natural protection and target anatomy will feed future damage, wear and stagger calculations. This packet selects definitions; it does not calculate or apply those effects.</p>
+<ul><li>Bullets, pellets and fragments; piercing, cutting, blunt and thrown attacks.</li><li>Blast and external heat; laser, plasma and flame; electrical attacks and EMP.</li><li>Worn armour, natural protection and robot structure kept distinct.</li><li>Unknown profiles stay unresolved. Test definitions are synthetic, not game balance.</li></ul>
+<h2>Review</h2><p><a href="README.md">Packet instructions and reversal</a><br><a href="RESPONSE-DESIGN.md">Family matrix, materials, creatures and damage/stagger design</a><br><a href="Evidence/VERIFICATION.json">Fresh verification evidence</a><br><a href="Evidence/CHECKS.txt">Standalone check result</a></p>
+<h2>Next, after approval</h2><p>Connect the definitions to the disabled numeric preview, beginning with reviewed kinetic material/condition rules and separate tissue/structure outputs. Other numeric family rules will be added explicitly. Runtime damage stays disabled until its own checkpoint.</p>
+<p>No game files were supplied or changed. Reversal requires no game action.</p></main></html>

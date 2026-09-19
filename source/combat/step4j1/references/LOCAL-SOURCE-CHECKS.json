@@ -1,0 +1,75 @@
+{
+  "review": "Source contracts only; no game records or installed binaries read",
+  "sources": [
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameForms.h",
+      "bytes": 156678,
+      "sha256": "96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8",
+      "lines": "712-800;925-978;1129-1153;2297-2340;3076-3138",
+      "finding": "Separate equip mask/model flags, actor effects and template inheritance, container/model/body-part data; no actual record or species-level wearability verification"
+    },
+    {
+      "path": "C:\\Users\\regan\\Desktop\\NVO Mod References (Open Source)\\JIP-LN-NVSE-main\\nvse\\GameProcess.h",
+      "bytes": 58917,
+      "sha256": "9d544e263d3cbf592815194b3db00d20330f55ee024126c92404ccef709d5fb2",
+      "lines": "20-65",
+      "finding": "Separate carrier union, damage fields, critical-effect reference and flags; no component/application proof"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatModel\\CoverageProfiles.cpp",
+      "bytes": 5671,
+      "sha256": "8076636bd4d0f99b33323df325cd499e6907dc1a1e68e4398bcc9d5ac165c8e8",
+      "lines": "52-97;117",
+      "finding": "Creature/unknown refusal, exact identity/mask matching, independent authored extents and disabled authority"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatCore\\src\\ArmourSnapshot.cpp",
+      "bytes": 12197,
+      "sha256": "ecfa92da2bca5f61e1fc8abd994bfeaaa7a6d8df833fe52695306430028c3e99",
+      "lines": "234-237",
+      "finding": "Current reader Character-only eligibility returns unsupported target, not uncovered"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatModel\\ResponseDefinitions.hpp",
+      "bytes": 5141,
+      "sha256": "a2b199deb370ce083766d3bd29db0b6dd37391df006087cbdbf8d9696994410a",
+      "lines": "14-37;59-76;96-122",
+      "finding": "Separate family/delivery, surface/tissue/equipment policy and exact region maps; no material coefficient or resolved hit"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatModel\\MaterialPreview.hpp",
+      "bytes": 4678,
+      "sha256": "c4a2a7c74fd778c231df567f310257329fbbde39018dd5a58579d730d01c052f",
+      "lines": "31-92",
+      "finding": "Separate surface ownership and worn/natural/mechanical loss outputs; offline contract"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatModel\\ImpactBinding.hpp",
+      "bytes": 2132,
+      "sha256": "99bcfd48fae6dfab226e940cad8818a9b88d009b8cb8056918a3cdc40d900dca",
+      "lines": "9-30",
+      "finding": "Separate component/application identity and reserved qualified producer contracts"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\native\\NVOCombatCore\\src\\ArmourOrigin.cpp",
+      "bytes": 3489,
+      "sha256": "f67c921aef54c87ba8b6d7203ae4dec2804c92585d681bbdc4c45f663660c698",
+      "lines": "50-63",
+      "finding": "Owning plugin/local ID resolution is not winning override verification"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\tools\\resolve_armour_profiles.py",
+      "bytes": 8869,
+      "sha256": "893aebc620eb75c1b90b18857beaaa68dd846dcb485435466c0a8c0fa2f6ec0a",
+      "lines": "52-108",
+      "finding": "Reusable definitions with explicit bindings, conflict rejection and record exceptions; coverage-only export"
+    },
+    {
+      "path": "C:\\Users\\regan\\Documents\\ChatGPT\\NVO\\source\\combat\\step4e\\profiles\\armour-tags.json",
+      "bytes": 1944,
+      "sha256": "df6e444909aa2970dd5dd8488411c781866152b0e48129aaa39f46ae274e03a5",
+      "lines": "entire file",
+      "finding": "Only two retained exact bindings: Combat Armor and Combat Helmet"
+    }
+  ]
+}

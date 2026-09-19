@@ -1,0 +1,7 @@
+# Review outcome
+
+Independent source review found and corrected two cleanup hazards during preparation: hiding an ambiguous identity could suppress an admitted projectile's impact retirement, and forwarding its cleanup serial through the old preview path could still read and interpret fresh contact evidence. The final path preserves cleanup but suppresses that interpretation. Initial form classification also requires consistent form/ref IDs.
+
+The final source review found no remaining critical issue within this packet's scope. Tests execute production NativeObserver with synthetic dependencies, covering qualified repeated flames; missing/changed/inconsistent identities; retained and incoming admission conflicts; attachment/completion failures; ambiguous impact/destroy cleanup arguments; new 9mm admission before/after reset; real fault persistence; capacity exhaustion; stale completion; counter exhaustion; and failed/exhausted logging. The pool/receipt suite is a separate bounded regression check. Actual preview/physics implementations are compiled and source-reviewed, not executed by the observer fixture.
+
+See `Evidence/VERIFICATION.json` for fresh results and binary hashes. No game, GECK, DLL or provider was launched or loaded. No installed game files, load order or gameplay authority were changed. The original 4I callback-gap cause, secondary effects and component/application identity remain unresolved; no broad combat acceptance follows from these offline checks.

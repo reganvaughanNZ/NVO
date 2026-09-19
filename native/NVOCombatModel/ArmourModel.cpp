@@ -11,6 +11,38 @@ bool Measure(const Measurement& m, Unit u, bool positive = false) {
 }
 Preview Reject(Status s, Reason r) { Preview p; p.status = s; p.reason = r; return p; }
 }
+KineticBudget ResolveKineticLayers(double incidentJ, const std::vector<KineticLayer>& layers) {
+    auto reject = [](Reason reason) { KineticBudget b; b.reason = reason; return b; };
+    if (!Nonnegative(incidentJ)) return reject(Reason::Arithmetic);
+    if (layers.size() > 64) return reject(Reason::Layer);
+    for (std::size_t i = 0; i < layers.size(); ++i) {
+        const auto& l = layers[i];
+        if (!l.key || !Nonnegative(l.stoppingJ) || !Fraction(l.condition)
+            || !Fraction(l.transmittedFraction) || !Nonnegative(l.lossPerStoppedJ))
+            return reject(Reason::Layer);
+        for (std::size_t j = 0; j < i; ++j)
+            if (layers[j].key == l.key) return reject(Reason::Layer);
+    }
+    KineticBudget b;
+    b.incidentJ = incidentJ; b.residualJ = incidentJ;
+    for (const auto& l : layers) {
+        const double stopped = std::min(b.residualJ, l.stoppingJ);
+        const double transmitted = stopped * l.transmittedFraction;
+        const double loss = stopped * l.lossPerStoppedJ;
+        if (!Nonnegative(loss)) return reject(Reason::Arithmetic);
+        b.layers.push_back({l.key, b.residualJ, stopped, b.residualJ - stopped,
+                           transmitted, stopped - transmitted, std::min(l.condition, loss)});
+        b.residualJ -= stopped;
+        b.stoppedJ += stopped;
+        b.transmittedJ += transmitted;
+        b.retainedJ += stopped - transmitted;
+    }
+    if (!Nonnegative(b.residualJ) || !Nonnegative(b.stoppedJ) || !Nonnegative(b.transmittedJ)
+        || !Nonnegative(b.retainedJ) || b.residualJ > incidentJ || b.transmittedJ > b.stoppedJ)
+        return reject(Reason::Arithmetic);
+    b.status = Status::PreviewOnly; b.reason = Reason::None;
+    return b;
+}
 Preview Resolve(const Context& c, const Threat& t, const TargetProfile& a, const std::vector<Layer>& layers) {
     if (!c.session || !c.component || !c.application || !c.source || !c.target ||
         !c.identitiesVerified || !c.pathVerified || !c.modifierOwnershipVerified || !c.armourComplete ||
@@ -62,14 +94,24 @@ Preview Resolve(const Context& c, const Threat& t, const TargetProfile& a, const
     }
     Preview p;
     p.unit = unit; p.incident = incident; p.residual = incident;
-    for (const auto& l : layers) {
+    if (kinetic) {
+        std::vector<KineticLayer> contacts;
+        for (const auto& l : layers) {
+            if (!(l.coverage & Cover(c.actualRegion))) continue;
+            const auto& r = l.response[static_cast<unsigned>(Family::Kinetic)];
+            contacts.push_back({l.instance, r.resistanceJ[static_cast<unsigned>(t.construction)] * l.condition,
+                                l.condition, r.bluntFraction, r.wearPerAbsorbedUnit});
+        }
+        const auto budget = ResolveKineticLayers(incident, contacts);
+        if (budget.status != Status::PreviewOnly) return Reject(budget.status, budget.reason);
+        p.residual = budget.residualJ; p.absorbed = budget.stoppedJ; p.bluntJoules = budget.transmittedJ;
+        for (const auto& row : budget.layers) p.wear.push_back({row.key, row.conditionLoss});
+    } else for (const auto& l : layers) {
         if (!(l.coverage & Cover(c.actualRegion))) continue;
         const auto& r = l.response[static_cast<unsigned>(t.family)];
-        const double absorbed = kinetic ? std::min(p.residual, r.resistanceJ[static_cast<unsigned>(t.construction)] * l.condition)
-                                        : p.residual * (r.shieldFraction * l.condition);
+        const double absorbed = p.residual * (r.shieldFraction * l.condition);
         p.residual -= absorbed;
         p.absorbed += absorbed;
-        if (kinetic) p.bluntJoules += absorbed * r.bluntFraction;
         const double wear = absorbed * r.wearPerAbsorbedUnit;
         if (!Nonnegative(wear)) return Reject(Status::InvalidInput, Reason::Arithmetic);
         p.wear.push_back({l.instance, std::min(l.condition, wear)});

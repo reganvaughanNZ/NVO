@@ -1,0 +1,52 @@
+{
+  "packet": "4G",
+  "scope": "DOCUMENTATION_ONLY",
+  "reviewed_utc": "2026-09-19T06:36:47.681439+00:00",
+  "families": [
+    "Ballistic",
+    "Piercing",
+    "Cutting",
+    "Blunt",
+    "Blast",
+    "Laser",
+    "Plasma",
+    "Flame",
+    "ExternalHeat",
+    "Electrical",
+    "EMP"
+  ],
+  "attack_family_count": 11,
+  "non_ballistic_count": 10,
+  "family_enum": "nvo::responses::Family",
+  "delivery_enum": "nvo::responses::Delivery",
+  "source_inputs_verified_unchanged": 13,
+  "compilation_rerun": false,
+  "tests_rerun": false,
+  "original_verification_sha256": "786bee335aa78e1d4ae5d55ae7a0f815952ac7d45be75145871db909fbbd323c",
+  "original_test_timestamp": "2026-09-19T06:24:48.675874+00:00",
+  "game_accessed": false,
+  "docs": [
+    {
+      "path": "README.md",
+      "sha256": "c555fc6775588c38949ef9eb68c4227e49703a0054040196bae915c4b1b31f12"
+    },
+    {
+      "path": "MODEL-RULES.md",
+      "sha256": "e490864113b11055490bec4ed09504ac92f5ccdc66c801f9b801288a5781d89e"
+    },
+    {
+      "path": "REVIEW.md",
+      "sha256": "88b64f7a3bb96023d81474ede787b5900438b29c39190ca4190c6a8000a64acb"
+    },
+    {
+      "path": "START-HERE.html",
+      "sha256": "741514cdbae0316d14fb569e08ac240be3fd9d26b5974232bc5dacfd5c7a0fee"
+    }
+  ],
+  "findings": [
+    "Corrected delivery categories incorrectly listed as attack families.",
+    "Clarified false penetration flag and legacy/new flag semantic difference.",
+    "Clarified neither calculation path forces item condition to one.",
+    "Read-only formula/fixture inspection agrees with MODEL-RULES."
+  ]
+}

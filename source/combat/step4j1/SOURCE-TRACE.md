@@ -1,0 +1,12 @@
+# Source trace and scope
+
+The local sources below are read as technical evidence. Their notices and existing NVO credits are preserved; this packet does not copy a new donor implementation. `Evidence/SOURCE-TRACE.json` records the checked paths and hashes.
+
+- ShowOff `SHOWOFF-NVSE/Events/ShowOffEvents.h:935–960`: the CREATE hook at `0x9BD51D` reads the live projectile from `[ebp-0x14]` and dispatches without a fresh-allocation or uniqueness guarantee. Lines 905–927 emit destroy before `Projectile_Free`; lines 1006–1035 dispatch an observed new impact. SHA256 `5c7f69c550a341124fc408fa9a2010e75dadcb0a360e51974fd46c62ef489270`.
+- JIP `nvse/GameForms.h:69` labels form type `0x40` as FlameProjectile. SHA256 `96a9eede3b33ee47a4635f9908bc5b82dd853a7739ed2c9e511a46362215b4a8`. `GameObjects.h:1241–1247` supplies a layout, not component or notification semantics; SHA256 `3f16c3c9b58bdd55026d413eb94a340f11b49b27dc5b4eaacba6e33b2b38ff31`.
+- Retained `source/combat/step4j/Evidence/LIVE-4J-20260919-094727.log`: initial flame CREATE at line 206, twelve repeats at 246–566, followed by process fault 6 and blocked later 9mm admission. SHA256 `8e079a12b768f5b2ae25b56e0ddc378092f73ee51efec4e3239cd2903ebb3d30`. This is evidence from installed 330, not a 331 test.
+- Active `NativeObserver.cpp`: reservation receipt processing stays first. A new retained admission claim distinguishes reserved/bound/faulted/committed ownership from ordinary observations; pool phase alone cannot do that. Quarantine does not manufacture a new lifetime. Lookup/current-hit linkage remain unavailable after ambiguity.
+- Active `FlightPreview.cpp`: supported snapshots are missile references, not flame references. Qualified observer-only flame repeats cannot own its missile flight preview/timing cache. Cleanup now explicitly withholds fresh travel/range interpretation when identity is ambiguous.
+- Active `FlightPhysics.cpp`: ambiguous cleanup skips `ImpactEvent` and its `ReadImpact` calls, retaining the existing stop/destroy bookkeeping. `FlightTiming::Event` uses cached counters and retirement only. Existing movement hooks, assembly bridges and provider chaining remain unchanged.
+
+The independently reviewed change preserves impact cleanup after public identity is hidden. It also requires consistent initial form/ref reads before the flame exception can qualify. All new observations retain disabled damage authority; this trace establishes no unique damage component or committed application.

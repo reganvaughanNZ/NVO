@@ -17,7 +17,7 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def inspect_pair(build):
+def inspect_pair(build, expected_banner=b'NVOCombatCore 0.3.2 | phase=3B2'):
     dll = (build / 'NVOCombatCore.dll').read_bytes()
     pe = struct.unpack_from('<I', dll, 0x3c)[0]
     assert dll[pe:pe + 4] == b'PE\0\0'
@@ -74,7 +74,7 @@ def inspect_pair(build):
     assert sorted(exports) == ['NVSEPlugin_Load', 'NVSEPlugin_Query']
     log = (build / 'build.log').read_text(errors='replace')
     assert not re.search(r'\b(?:warning|error) [A-Z]+\d+', log, re.I)
-    assert b'NVOCombatCore 0.3.2 | phase=3B2' in dll
+    assert expected_banner in dll
     return {'machine': 'PE32 x86', 'exports': exports, 'warnings': 0,
             'dll_sha256': digest(build / 'NVOCombatCore.dll'), 'pdb_sha256': digest(build / 'NVOCombatCore.pdb'),
             'codeview_pdb_guid': str(uuid.UUID(bytes_le=codeview[0])), 'pdb_age': codeview[1], 'pdb_pair_verified': True,

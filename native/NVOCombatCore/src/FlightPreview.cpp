@@ -553,6 +553,7 @@ void nvo::flight::Create(void* projectile, U32 source, U32 weapon, U32 ammo, uns
     const ErrorGuard guard;
     if (!gActive) return;
     ++gSeen;
+    if (admission::Blocked()) { Skip("process_fault",weapon,ammo,0); return; }
     bool weaponKnown = false;
     for (unsigned i = 0; i < gProfileCount; ++i) if (gProfiles[i].weapon.resolved == weapon) weaponKnown = true;
     if (!weaponKnown) { Skip("unprofiled_weapon", weapon, ammo, 0); return; }
@@ -585,14 +586,18 @@ void nvo::flight::Create(void* projectile, U32 source, U32 weapon, U32 ammo, uns
     slot->launchRange = ReadRange(projectile);
     LogRange(*slot, state, slot->launchRange, "create");
 }
-void nvo::flight::EndSample(void* projectile, unsigned long long lifetime, bool destroyed) noexcept
+void nvo::flight::EndSample(void* projectile, unsigned long long lifetime, bool destroyed, bool identityAvailable) noexcept
 {
     const ErrorGuard guard;
-    nvo::physics::Event(projectile, lifetime, destroyed);
+    nvo::physics::Event(projectile, lifetime, destroyed,identityAvailable);
     nvo::timing::Event(projectile, lifetime, destroyed);
     if (!gActive || !lifetime) return;
     Shot* shot = nullptr;
     for (auto& s : gShots) if (s.serial == lifetime) { shot = &s; break; }
+    if (!identityAvailable) {
+        if (shot) *shot={};
+        return; // No ambiguous end snapshot or travel interpretation.
+    }
     if (!shot || (!destroyed && shot->impacted)) return;
     Snapshot state{};
     if (!SnapshotOf(projectile, state)) {
